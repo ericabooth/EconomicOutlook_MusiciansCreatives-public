@@ -375,7 +375,7 @@ footer p{margin:6px 0}
     <h2 class="lede fade d1" style="font-size:clamp(1.5rem,3.6vw,2.4rem)">The conditions that shape Austin's live-music economy are mostly a downtown story.</h2>
     <p class="sub fade d2" style="margin-top:14px">District 9 is central Austin &mdash; downtown and the near-in corridors. Three in four of the city's outdoor-music-venue permits sit inside it, so downtown property values, downtown noise rules, and downtown parking press on this workforce harder than they do anywhere else in the city.</p>
     <div class="chartbox fade d3" style="background:#fff;border-color:#e3e8f0;margin-top:26px;max-width:780px;margin-left:auto;margin-right:auto">
-      <img src="district_permits_map.png" alt="Choropleth map of Austin's ten city council districts shaded by the number of outdoor music venue sound permits issued 2009 to 2018. District 9, covering downtown and central Austin, is by far the darkest, holding 764 of the 1,029 permits; surrounding central districts 3 and 5 are next, and outlying districts are nearly empty." style="width:100%;height:auto;display:block;border-radius:8px">
+      <img src="https://ericabooth.github.io/EconomicOutlook_MusiciansCreatives-public/district_permits_map.png" alt="Choropleth map of Austin's ten city council districts shaded by the number of outdoor music venue sound permits issued 2009 to 2018. District 9, covering downtown and central Austin, is by far the darkest, holding 764 of the 1,029 permits; surrounding central districts 3 and 5 are next, and outlying districts are nearly empty." style="width:100%;height:auto;display:block;border-radius:8px">
       <p class="note" style="color:var(--muted);margin-top:10px">Source: City of Austin sound-ordinance permits (Outdoor Music Venue permits, 2009&ndash;2018), geocoded to council district. District 9 holds 764 of the 1,029 permits.</p>
     </div>
   </div>
@@ -486,7 +486,7 @@ footer p{margin:6px 0}
     <div class="calc">
       <div class="calc__head">
         <h3>The Austin Working-Musician Calculator</h3>
-        <p>Simulates one solo musician's year using anchors from the study. <a id="pdfLink" href="#" style="color:#f4a672;text-decoration:underline">Read the full working paper (PDF)</a>.</p>
+        <p>Simulates one solo musician's year using anchors from the study. <a id="pdfLink" href="https://ericabooth.github.io/EconomicOutlook_MusiciansCreatives-public/05_report/musicians_austin.pdf" target="_blank" rel="noopener" style="color:#f4a672;text-decoration:underline">Read the full working paper (PDF)</a>.</p>
       </div>
       <div class="calc__presets">
         <p class="plead">Start with a scenario, then adjust the sliders</p>
@@ -794,7 +794,7 @@ footer p{margin:6px 0}
     <p><b>HAAM:</b> Health Alliance for Austin Musicians annual reports 2005&ndash;2025, at myhaam.org.</p>
 
     <h5>How to read this</h5>
-    <p>This is a companion to the working paper &ldquo;<a id="pdfLinkFooter" href="#">Economic Opportunity for Musicians and Creative Workers: Austin in State and National Context</a>.&rdquo; The paper carries the full methodology, the margins of error, and the qualifiers that this scrollytelling shortens. Every figure quoted here is registered in the paper's numbers ledger and traceable to the code and source that produced it.</p>
+    <p>This is a companion to the working paper &ldquo;<a id="pdfLinkFooter" href="https://ericabooth.github.io/EconomicOutlook_MusiciansCreatives-public/05_report/musicians_austin.pdf" target="_blank" rel="noopener">Economic Opportunity for Musicians and Creative Workers: Austin in State and National Context</a>.&rdquo; The paper carries the full methodology, the margins of error, and the qualifiers that this scrollytelling shortens. Every figure quoted here is registered in the paper's numbers ledger and traceable to the code and source that produced it.</p>
 
     <p style="margin-top:22px;color:#5f7091;font-size:.8rem">Prepared by Eric&nbsp;A.&nbsp;Booth. Working paper, August 2026. Data pulls retrieved 1&ndash;2 August 2026. This calculator is a scenario tool; it is not a projection and no dollar figure it produces should be read as a forecast for any individual musician.</p>
   </div>
@@ -840,10 +840,10 @@ footer p{margin:6px 0}
   document.querySelectorAll('[data-act]').forEach(function(s){ io.observe(s); });
 
   // ----- PDF LINK -----
-  // The report PDF will live on GitHub Pages next to this file.
-  // Point to the raw file inside the same site; users can edit this URL when the
-  // repo layout changes without touching anything else.
-  var PDF_URL = 'musicians_austin.pdf';
+  // Absolute link to the working paper as served by GitHub Pages, so it resolves
+  // for anyone on the hosted site no matter where the page is opened from.
+  // If the repo name or the file location changes, update this one URL.
+  var PDF_URL = 'https://ericabooth.github.io/EconomicOutlook_MusiciansCreatives-public/05_report/musicians_austin.pdf';
   var l1 = document.getElementById('pdfLink'); if(l1) l1.href = PDF_URL;
   var l2 = document.getElementById('pdfLinkFooter'); if(l2) l2.href = PDF_URL;
 
