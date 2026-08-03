@@ -1,0 +1,115 @@
+venue_key,venue_name,district,tier,first_month,last_month,n_months,still_reporting_2026_06,real_2013,real_2019,real_2024,real_2025,pct_change_real_2019_2025,pct_change_real_2019_2024,total_real_all_years_ex_festival,cover_charge_share_pct
+blindpig,Blind Pig Pub,Downtown/6th,live_music_adjacent,2007-01,2026-06,234,yes,5699453.47,5327744.36,3293571.6,2498695.67,-53.1,-38.2,81797912.47,0.11
+moodycenter,Moody Center (UT),UT/Campus,large_venue,2022-03,2026-06,52,yes,0,0,19285295.42,5113537.68,,,68781552.94,1.23
+stubbs,Stubb's Bar-B-Q,Red River Cultural District,core_live_music,2007-01,2026-06,234,yes,4125638.83,4191488.42,3008853.51,2843844.4,-32.2,-28.2,68593170.26,0.0
+swandive,Barbarella / Swan Dive,Red River Cultural District,core_live_music,2009-12,2026-06,199,yes,2548334.24,3532204.64,3340766.74,3337256.29,-5.5,-5.4,48678993.94,0.04
+hotelvegas,Hotel Vegas / Volstead Lounge,East Austin,core_live_music,2011-03,2026-06,184,yes,2014973.82,3520261.96,4002808.93,4993323.22,41.8,13.7,46558883.89,0.07
+speakeasy,Speakeasy,Downtown,core_live_music,2007-01,2026-06,234,yes,2054293.29,1948967.89,2018477.01,2148755.56,10.3,3.6,44931972.73,0.0
+maggiemaes,Maggie Mae's,Downtown/6th,live_music_adjacent,2007-01,2026-06,234,yes,3172352.33,2676899.2,467561.61,279863.17,-89.5,-82.5,44426495.84,0.0
+moontower,Moon Tower Saloon,South Austin,live_music_adjacent,2012-04,2026-06,171,yes,4345714.22,3399608.68,1872722.42,1729901.36,-49.1,-44.9,43206520.06,0.0
+containerbar,Container Bar,Rainey Street,live_music_adjacent,2013-12,2024-01,122,no,0.0,6132146.11,0.0,0,,,37863421.38,0.0
+whitehorse,The White Horse,East Austin,core_live_music,2011-12,2026-06,175,yes,3068908.0,2823044.41,2719061.33,2747452.77,-2.7,-3.7,36321397.62,0.01
+continental,The Continental Club,South Congress,core_live_music,2007-01,2026-06,234,yes,2298621.78,1905621.03,1689643.53,1580297.46,-17.1,-11.3,36256075.94,0.0
+clivebar,Clive Bar,Rainey Street,live_music_adjacent,2009-09,2026-06,186,yes,2364919.27,2318449.23,1302178.75,678452.58,-70.7,-43.8,34093311.46,0.0
+mohawk,Mohawk,Red River Cultural District,core_live_music,2007-01,2026-06,234,yes,1904060.48,1976670.37,1294790.38,1259873.28,-36.3,-34.5,28561701.19,0.0
+haymaker,Haymaker,Manor Rd,live_music_adjacent,2013-08,2026-06,155,yes,694736.95,2637645.78,2045600.4,1641624.3,-37.8,-22.4,28372529.28,0.0
+spiderhouse,Spider House Ballroom,UT/North Campus,core_live_music,2007-01,2025-06,222,no,2125574.48,1640109.66,352296.31,200597.61,-87.8,-78.5,27793840.76,0.0
+emoseast,Emo's East,Southeast Austin,large_venue,2011-10,2026-06,177,yes,1687226.43,2231435.07,1349768.37,2020403.35,-9.5,-39.5,27091220.99,0.0
+yellowjacket,Yellow Jacket Social Club,East Austin,live_music_adjacent,2010-06,2026-06,193,yes,1935308.3,2002136.16,1450079.8,1398148.43,-30.2,-27.6,26419255.55,0.0
+littledarlin,The Little Darlin',South Austin,live_music_adjacent,2016-04,2026-06,123,yes,0,2654563.81,2575417.09,2386734.15,-10.1,-3.0,24922530.28,0.0
+thegatsby,The Gatsby / Mala Vida (708 E 6th),Downtown/6th,live_music_adjacent,2013-06,2026-06,157,yes,225649.98,1204845.55,4161623.65,3482127.88,189.0,245.4,24616041.74,16.45
+cosmic,Cosmic Coffee & Beer Garden,South Austin,live_music_adjacent,2014-05,2026-06,146,yes,0,3303533.97,2265715.69,1641599.1,-50.3,-31.4,24407252.98,0.0
+saxon,The Saxon Pub,South Lamar,core_live_music,2007-01,2026-06,234,yes,1420318.18,1275298.72,1215319.05,1113378.18,-12.7,-4.7,23997701.68,0.0
+belmont,The Belmont,Downtown,live_music_adjacent,2007-01,2026-04,227,no,1441899.59,624514.52,312983.59,211633.65,-66.1,-49.9,23925888.75,0.0
+acl_moody,ACL Live at Moody Theater / 3TEN (Block 21),Downtown,large_venue,2016-03,2026-06,124,yes,0,667719.97,5638958.09,5227663.54,682.9,744.5,23730819.69,0.0
+bartonsprings,Barton Springs Saloon,South Central,live_music_adjacent,2007-01,2026-06,234,yes,1244573.25,1251961.14,1715571.09,1770481.53,41.4,37.0,23708811.54,0.0
+elephantroom,Elephant Room,Downtown,core_live_music,2007-01,2026-06,234,yes,1029053.21,1270679.31,2053225.47,2088357.8,64.3,61.6,23587609.76,8.52
+shadygrove,Shady Grove,South Central,live_music_adjacent,2007-01,2020-10,166,no,1765645.4,1517341.09,0,0,,,23573038.0,0.0
+antones,Antone's,Downtown,core_live_music,2007-01,2026-06,208,yes,278057.95,1638285.37,1467207.32,1437513.06,-12.3,-10.4,23264817.18,0.0
+halfstep,Half Step,Rainey Street,live_music_adjacent,2012-08,2026-06,167,yes,0.0,2728018.82,1912808.04,1943766.39,-28.7,-29.9,23257087.59,0.01
+cheerup,Cheer Up Charlies,Red River Cultural District,core_live_music,2010-12,2026-06,187,yes,1668226.85,1908853.32,1748452.5,1352801.85,-29.1,-8.4,22985780.5,0.0
+holeinwall,Hole in the Wall,UT/Guadalupe,core_live_music,2007-01,2026-06,234,yes,1601223.15,1052380.67,776202.05,759793.36,-27.8,-26.2,22714592.25,0.0
+longcenter,Long Center for the Performing Arts,South Central,large_venue,2008-04,2026-06,219,yes,1045523.42,930734.73,1319506.43,1281156.76,37.7,41.8,19246515.74,0.0
+nuttybrown,Nutty Brown Cafe,Hill Country / W Travis,core_live_music,2007-01,2026-06,234,yes,490612.21,700312.23,546008.72,276887.58,-60.5,-22.0,19122452.13,0.0
+donns,Donn's Depot,Central/West,core_live_music,2007-01,2026-06,234,yes,877916.26,1012338.32,1254554.22,1475664.61,45.8,23.9,18709066.36,0.0
+lalas,Lala's Little Nugget,North Austin,live_music_adjacent,2007-01,2026-06,234,yes,402434.4,1683518.53,1478603.64,1438981.8,-14.5,-12.2,18122665.66,0.0
+concourse,The Concourse Project,Southeast Austin,large_venue,2021-05,2026-06,62,yes,0,0,4422671.96,5292507.36,,,17948338.66,0.0
+summit,Summit (120 W 5th),Downtown,core_live_music,2013-09,2020-06,82,no,720930.38,1732693.42,0,0,,,17802156.3,0.0
+nomad,Nomad Bar,Northeast/Corona,core_live_music,2008-03,2026-06,220,yes,1168608.92,1248290.04,338261.08,288749.99,-76.9,-72.9,17475649.75,0.0
+shoalcreek,Shoal Creek Saloon,Central,live_music_adjacent,2007-01,2026-06,234,yes,874994.72,775523.02,881909.09,958858.58,23.6,13.7,17093770.79,0.0
+paramount,Paramount Theatre,Downtown,large_venue,2007-01,2026-06,234,yes,631421.18,1120037.46,1519283.47,1584037.3,41.4,35.6,17028605.96,0.0
+brokenspoke,Broken Spoke,South Lamar,core_live_music,2007-01,2026-06,234,yes,926011.12,1000727.79,891829.97,911783.92,-8.9,-10.9,16960265.94,0.02
+sevengrand,Seven Grand,Downtown/East,live_music_adjacent,2015-03,2026-06,136,yes,0,2121542.65,2424255.25,2022662.03,-4.7,14.3,16847187.71,0.0
+empire,Empire Control Room & Garage,East Austin,core_live_music,2013-05,2026-06,158,yes,255377.76,1333918.04,953911.95,870416.93,-34.7,-28.5,16333111.49,0.06
+vulcan,Vulcan Gas Company,Downtown/6th,core_live_music,2014-02,2026-06,149,yes,0,978738.52,853695.0,734475.88,-25.0,-12.8,14914822.62,0.08
+moodyamph,Moody Amphitheater at Waterloo Greenway,Downtown,large_venue,2022-03,2026-06,52,yes,0,0,2211501.16,6666379.11,,,14838581.79,0.0
+blackheart,The Blackheart,Rainey Street,core_live_music,2011-03,2018-06,88,no,1868822.88,0,0,0,,,14631454.75,0.0
+scootinn,Historic Scoot Inn,East Austin,core_live_music,2007-06,2026-06,229,yes,842648.02,1054650.01,1262509.07,666809.63,-36.8,19.7,14277718.6,0.01
+o4lounge,The 04 Lounge,South Austin,live_music_adjacent,2008-09,2026-06,214,yes,868938.37,751664.62,711330.37,724029.89,-3.7,-5.4,14256872.81,0.0
+vortex,The Vortex / Butterfly Bar,Manor Rd,core_live_music,2013-03,2026-06,160,yes,474882.17,1336302.79,1013411.37,954697.62,-28.6,-24.2,13442287.99,0.0
+cboys,C-Boy's Heart & Soul,South Congress,core_live_music,2012-08,2026-06,167,yes,12284.84,1088882.07,1203568.44,1164621.58,7.0,10.5,12563244.52,0.0
+poodies,Poodie's Hilltop Roadhouse,Hill Country / W Travis,core_live_music,2007-07,2026-06,228,yes,608208.92,822824.25,795380.1,715187.81,-13.1,-3.3,12470974.74,0.0
+sabg,South Austin Beer Garden,South Austin,live_music_adjacent,2019-01,2026-06,90,yes,0,1482934.71,1736842.78,1491197.73,0.6,17.1,12169046.89,0.0
+elysium,Elysium,Red River Cultural District,core_live_music,2007-01,2026-06,234,yes,685160.97,690303.08,529290.57,535496.17,-22.4,-23.3,12093925.47,0.0
+threadgills_s,Threadgill's South (Riverside),South Central,core_live_music,2007-01,2019-10,154,no,974022.24,0.0,0,0,,,11587153.24,0.0
+coralsnake,The Coral Snake / Steely's Lodge,East Austin,core_live_music,2015-01,2026-06,135,yes,0,1415295.97,460006.86,356651.35,-74.8,-67.5,11438842.29,0.0
+highball,The Highball,South Lamar,core_live_music,2009-10,2012-12,39,no,0,0,0,0,,,11364365.53,0.0
+radiocoffee,Radio Coffee & Beer,South Austin,live_music_adjacent,2018-03,2026-06,100,yes,0,1630264.48,1231530.76,1043035.14,-36.0,-24.5,11183639.04,0.01
+goodnight,The Goodnight,North Austin,live_music_adjacent,2012-10,2018-10,73,no,2284873.58,0,0,0,,,11164290.23,0.0
+dirtydog,Dirty Dog Bar,Downtown/6th,core_live_music,2007-01,2022-03,183,no,1071639.63,608209.68,0,0,,,11078535.07,0.0
+esthers,Esther's Follies / Velveeta Room,Downtown/6th,live_music_adjacent,2007-01,2026-06,234,yes,598584.27,734289.91,438492.57,475687.13,-35.2,-40.3,10171483.42,0.0
+red7,Red 7,East Austin,core_live_music,2007-01,2015-10,106,no,2227746.32,0,0,0,,,10087172.28,0.0
+farout,The Far Out Lounge,South Congress,core_live_music,2018-10,2026-06,93,yes,0,475486.86,1242784.58,1205615.21,153.6,161.4,9520777.22,0.0
+lostwell,The Lost Well,East Austin,core_live_music,2011-07,2026-06,178,yes,440846.78,770556.45,614267.76,141144.38,-81.7,-20.3,8804425.13,0.0
+riorita,Rio Rita,East Austin,core_live_music,2007-06,2022-11,186,no,942258.16,153184.74,0,0,,,8794052.09,0.0
+kingdom,Kingdom Nightclub,Downtown/East,core_live_music,2011-05,2026-06,136,yes,593033.9,0,586794.83,700290.86,,,8040844.2,1.29
+cati,Come and Take It Live,Southeast Austin,core_live_music,2017-03,2026-06,112,yes,0,1074517.22,734712.15,651713.98,-39.3,-31.6,7438075.75,0.0
+one2one,One-2-One Bar,South Lamar / Downtown,core_live_music,2007-01,2023-02,192,no,485060.51,563241.22,0,0,,,7353058.89,0.3
+redshed,Red Shed Tavern (Far Out predecessor),South Congress,core_live_music,2008-11,2018-05,115,no,871538.74,0,0,0,,,7115243.33,0.01
+sagebrush,Sagebrush,South Congress,core_live_music,2020-05,2026-06,74,yes,0,0,1048761.75,1148211.39,,,6866234.12,0.0
+buzzmill,Buzz Mill,Southeast Austin,live_music_adjacent,2013-09,2026-06,154,yes,121853.38,1187183.11,288593.16,230824.8,-80.6,-75.7,6776411.1,0.12
+sahara,The Sahara Lounge,East Austin,core_live_music,2011-07,2026-06,180,yes,397396.97,517283.44,613137.36,526311.9,1.7,18.5,6709873.78,7.69
+parishroom,The Parish Room (214 E 6th),Downtown/6th,core_live_music,2009-12,2017-12,97,no,989035.62,0,0,0,,,6650950.12,0.12
+flamingo,Flamingo Cantina,Downtown/6th,core_live_music,2007-01,2026-06,234,yes,384919.69,355958.35,211100.0,349729.09,-1.7,-40.7,6411619.56,0.0
+longbranch,Longbranch Inn,East Austin,core_live_music,2007-01,2016-07,115,no,578457.67,0,0,0,,,6298601.21,0.0
+austinmusichall,Austin Music Hall,Downtown,large_venue,2007-01,2012-05,65,no,0,0,0,0,,,6243179.84,0.0
+giddyups,Giddy Ups,South Austin,core_live_music,2013-09,2026-06,135,yes,126226.42,702971.86,433660.95,0,,-38.3,5888852.45,0.0
+creekcave,The Creek and the Cave (611 E 7th successor),East Austin,core_live_music,2021-03,2026-06,64,yes,0,0,1172066.47,1055678.78,,,5675969.96,0.0
+indianroller,Indian Roller,South Austin,live_music_adjacent,2014-03,2023-02,108,no,0,889279.34,0,0,,,5574425.84,0.08
+holymtn,Holy Mountain,East Austin,core_live_music,2007-01,2015-10,106,no,662118.62,0,0,0,,,5546943.75,0.26
+northdoor,The North Door / ND Austin,East Austin,core_live_music,2011-07,2023-06,144,no,572304.0,677894.13,0,0,,,5414501.82,0.0
+dozenst,Dozen Street / Outer Heaven,East Austin,core_live_music,2014-09,2025-07,123,no,0,321189.28,734379.14,289056.53,-10.0,128.6,5226553.58,0.0
+clubdeville,Club de Ville,Red River Cultural District,core_live_music,2007-01,2013-12,84,no,362020.91,0,0,0,,,5174512.74,0.0
+valhalla,Valhalla (711 Red River),Red River Cultural District,core_live_music,2009-12,2026-06,199,yes,378112.61,326529.45,296495.11,290969.02,-10.9,-9.2,5006490.38,0.0
+lazonarosa,La Zona Rosa,Downtown,large_venue,2007-01,2011-10,58,no,0,0,0,0,,,4980136.3,0.0
+redeyedfly,Red Eyed Fly,Red River Cultural District,core_live_music,2007-01,2015-02,98,no,430701.56,0,0,0,,,4832331.06,0.0
+plush,Plush,Red River Cultural District,core_live_music,2007-01,2021-03,171,no,465766.82,240857.48,0,0,,,4586000.38,0.0
+beerland,Beerland,Red River Cultural District,core_live_music,2007-01,2020-02,158,no,382890.97,180965.15,0,0,,,4585669.92,0.36
+creekside,The Creekside Lounge / Lipstick24 (606 E 7th predecessor),East Austin,core_live_music,2007-01,2013-05,77,no,198609.94,0,0,0,,,4440414.25,0.02
+parker,Parker Jazz Club,Downtown,core_live_music,2017-10,2026-06,105,yes,0,565078.11,559918.72,541317.3,-4.2,-0.9,4235422.3,0.02
+barracuda,Barracuda,East Austin,core_live_music,2015-11,2021-03,65,no,0,1083268.24,0,0,,,4150654.32,0.53
+gands,G&S Lounge,South Austin,core_live_music,2007-01,2026-06,234,yes,210843.83,151026.01,70401.27,77944.47,-48.4,-53.4,3695467.65,0.0
+emos_orig,"Emo's (original, 603 Red River)",Red River Cultural District,core_live_music,2007-01,2011-12,60,no,0,0,0,0,,,3386147.16,0.03
+samstown,Sam's Town Point,South Austin,core_live_music,2020-03,2026-06,76,yes,0,0,680297.15,646936.58,,,3198385.03,2.7
+threadgills_n,Threadgill's North (N Lamar),North Austin,core_live_music,2007-01,2021-01,169,no,238107.62,269203.06,0,0,,,3029794.52,0.0
+skylark,Skylark Lounge,Airport Blvd,core_live_music,2014-12,2025-05,126,no,0,399453.59,178190.92,55734.59,-86.0,-55.4,2991297.19,0.49
+parish_ih35,The Parish (501 N IH-35),East Austin,core_live_music,2018-03,2025-07,89,no,0,629972.09,578254.5,167078.39,-73.5,-8.2,2954006.73,0.0
+kickbutt,Kick Butt Coffee,Airport Blvd,core_live_music,2008-01,2026-06,222,yes,60902.46,322300.39,202008.64,174147.61,-46.0,-37.3,2709761.13,0.0
+hardluck,Hard Luck Lounge,East Austin,core_live_music,2013-12,2020-02,75,no,10143.99,583104.28,0,0,,,2623004.66,0.0
+frontpage,The Front Page (Springdale),East Austin,live_music_adjacent,2019-01,2026-06,90,yes,0,210032.94,387101.94,473324.38,125.4,84.3,2449971.61,0.0
+redriverhosp,Beerland successor (Red River Hospitality),Red River Cultural District,core_live_music,2020-02,2026-06,77,yes,0,0,408752.29,368631.63,,,2091583.6,0.0
+stateside,Stateside at the Paramount (State Theater Co),Downtown,large_venue,2013-04,2026-06,159,yes,106261.18,130797.18,195408.33,96261.06,-26.4,49.4,1871491.15,0.0
+littlelonghorn,Ginny's Little Longhorn Saloon,North Austin/Burnet,core_live_music,2023-04,2026-06,39,yes,0,0,634845.62,557274.38,,,1840557.31,0.01
+scratchouse,Scratchouse (617 E 7th successor),East Austin,core_live_music,2015-11,2022-06,80,no,0,457530.91,0,0,,,1712072.23,0.0
+abgb,The ABGB,South Austin,live_music_adjacent,2025-01,2026-06,18,yes,0,0,0,1139871.14,,,1709456.06,0.0
+jovitas,Jovita's,South Austin,core_live_music,2007-01,2013-05,77,no,0.0,0,0,0,,,1589339.14,0.0
+sidewinder,Sidewinder,Red River Cultural District,core_live_music,2015-02,2018-05,40,no,0,0,0,0,,,1573767.5,0.0
+midway,Midway Field House (CATI predecessor),Southeast Austin,core_live_music,2012-01,2017-03,63,no,253321.24,0,0,0,,,1562801.11,0.0
+room710,Room 710,Red River Cultural District,core_live_music,2007-01,2009-09,33,no,0,0,0,0,,,1475206.52,0.0
+lastchance,Last Chance Bar & Dancehall,Hill Country / W Travis,core_live_music,2019-08,2023-06,47,no,0,188145.46,0,0,,,1443701.8,2.15
+wonderland,Wonderland (1104 E 6th successor),East Austin,core_live_music,2014-02,2019-04,63,no,0,0.0,0,0,,,991994.43,0.0
+mercer,Mercer St. Taproom (Dripping/W Travis),Hill Country / W Travis,core_live_music,2021-11,2026-06,56,yes,0,0,51071.62,308448.19,,,849899.52,0.0
+chessclub,Chess Club,Red River Cultural District,core_live_music,2022-08,2026-06,47,yes,0,0,184919.36,177125.47,,,781276.93,0.34
+marchesa,The Marchesa Hall & Theatre,North Austin,core_live_music,2013-08,2016-05,34,no,38272.81,0,0,0,,,393642.96,0.0
+brushy,Brushy Street Commons (501 N IH-35 successor),East Austin,core_live_music,2025-07,2026-06,12,yes,0,0,0,129965.0,,,327800.39,0.0
+o4center,The 04 Center,South Lamar,core_live_music,2024-09,2026-06,22,yes,0,0,72673.84,158899.95,,,316171.8,0.0

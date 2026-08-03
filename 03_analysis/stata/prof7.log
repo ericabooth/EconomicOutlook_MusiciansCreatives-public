@@ -1,0 +1,603 @@
+
+  ___  ____  ____  ____  ____ ®
+ /__    /   ____/   /   ____/      StataNow 19.5
+___/   /   /___/   /   /___/       MP—Parallel Edition
+
+ Statistics and Data Science       Copyright 1985-2025 StataCorp LLC
+                                   StataCorp
+                                   4905 Lakeway Drive
+                                   College Station, Texas 77845 USA
+                                   800-782-8272        https://www.stata.com
+                                   979-696-4600        service@stata.com
+
+Stata license: 4-user 4-core network, expiring  6 May 2027
+Serial number: 501909369296
+  Licensed to: Eric Booth
+               Texas 2036
+
+Notes:
+      1. Stata is running in batch mode.
+      2. Unicode is supported; see help unicode_advice.
+      3. More than 2 billion observations are allowed; see help obs_advice.
+      4. Maximum number of variables is set to 5,000 but can be increased;
+          see help set_maxvar.
+
+
+Running /Users/ericbooth/Documents/Stata/ado/personal/profile.do ...
+-------------------------------------------------------------------------------
+  [1]  (BASE)      "/Applications/StataNow/ado/base/"
+  [2]  (SITE)      "/_codeshare/"
+  [3]              "."
+  [4]  (PERSONAL)  "/Users/ericbooth/Documents/Stata/ado/personal/"
+  [5]  (PLUS)      "/Users/ericbooth/Library/Application Support/Stata/ado/plus
+> /"
+  [6]  (OLDPLACE)  "~/ado/"
+ [view] [edit] [do]  10_pums_earnings.do 
+ [view] [edit] [do]  20_wages_industry.do 
+ [view] [edit] [do]  30_venues.do 
+ [view] [edit] [do]  _setup.do 
+ [view] [edit] [do]  build_numbers.do 
+ [view] [edit] [do]  run_all.do 
+
+Click [here] for other links
+-------------------------------------------------------------------------------
+
+. do /private/tmp/claude-502/-Users-ericbooth/b82e73b7-d01f-4d49-8e77-d52634591
+> 7a3/scratchpad/prof7.do 
+
+. clear all
+
+. do "_setup.do"
+
+. *! _setup.do - shared foundation for the Austin musician/creative-worker anal
+> ysis.
+. *! Every module do-file starts with:  do "_setup.do"
+. *!
+. *! WHAT THIS DOES
+. *!   1. Finds the project root by searching upward for a sentinel file, so th
+> e
+. *!      whole folder can be zipped, moved to another machine, and run without
+. *!      editing a single path.
+. *!   2. Points Stata at the project-local ado library, so reghdfe, estout,
+. *!      spmap and the rest travel with the folder. No ssc install needed on a
+. *!      new machine.
+. *!   3. Builds a CPI-U deflator once and stores it, so every dollar figure in
+. *!      the report sits in the same base year (2025).
+. *!   4. Defines the report palette and graph styling, matched to the LaTeX fi
+> le.
+. *!   5. Defines two helper programs: numadd (register a number the report wil
+> l
+. *!      quote) and figsave (export a figure at consistent size).
+. *!
+. *! CONVENTIONS FOR MODULE AUTHORS
+. *!   - Set  global CURMODULE "<name>"  then call  numinit  before registering
+> .
+. *!   - Figure titles state the FINDING; subtitles qualify it. Source notes an
+> d
+. *!     caveats do NOT go in the image; they go in the LaTeX caption.
+. *!   - All dollars real, 2025 base, via the cpi_annual lookup.
+. 
+. version 17
+
+. set more off
+
+. set varabbrev off
+
+. 
+. * ---------------------------------------------------------------- 1. ROOT --
+. * Search the working directory and its parents for a file that only exists in
+. * this project. Whichever candidate contains it is the project root.
+. local sentinel "01_evidence/01_wages_oews_qcew/_sources.md"
+
+. local found 0
+
+. foreach cand in "`c(pwd)'" "`c(pwd)'/.." "`c(pwd)'/../.." "`c(pwd)'/../../.."
+>  {
+  2.     capture confirm file "`cand'/`sentinel'"
+  3.     if (_rc == 0) & (`found' == 0) {
+  4.         global PROJ "`cand'"
+  5.         local found 1
+  6.     }
+  7. }
+
+. if `found' == 0 {
+.     display as error "_setup.do could not locate the project root."
+.     display as error "Run Stata from 03_analysis/stata/ (or the project root)
+>  and try again."
+.     display as error "Current directory: `c(pwd)'"
+.     exit 601
+. }
+
+. 
+. global EVID     "${PROJ}/01_evidence"
+
+. global ANALYSIS "${PROJ}/03_analysis"
+
+. global DATAX    "${ANALYSIS}/data/external"
+
+. global OUT      "${ANALYSIS}/out"
+
+. global NUMDIR   "${OUT}/numbers"
+
+. global TABDIR   "${OUT}/tables"
+
+. global FIGS     "${PROJ}/04_figures"
+
+. global STATADIR "${ANALYSIS}/stata"
+
+. 
+. * Evidence subfolders, named for the workstream each one came from.
+. global EV_WAGES  "${EVID}/01_wages_oews_qcew"
+
+. global EV_PUMS   "${EVID}/02_pums_nes_microdata"
+
+. global EV_BEA    "${EVID}/03_creative_economy_bea"
+
+. global EV_CITY   "${EVID}/04_city_programs_lmf"
+
+. global EV_SURVEY "${EVID}/05_music_census_pay_surveys"
+
+. global EV_STATE  "${EVID}/06_state_policy_benchmark"
+
+. global EV_SVOG   "${EVID}/07_svog_federal_relief"
+
+. global EV_VENUE  "${EVID}/08_venues_ecosystem"
+
+. global EV_COL    "${EVID}/09_cost_of_living"
+
+. global EV_APP    "${EVID}/10_apprenticeship_workforce"
+
+. global EV_STREAM "${EVID}/11_streaming_royalties"
+
+. 
+. capture mkdir "${OUT}"
+
+. capture mkdir "${NUMDIR}"
+
+. capture mkdir "${TABDIR}"
+
+. capture mkdir "${FIGS}"
+
+. 
+. * ------------------------------------------------------------- 2. ADO PATH -
+> -
+. * Prepend the project-local library. Using adopath rather than sysdir set PLU
+> S
+. * keeps any packages already installed on this machine visible as a fallback,
+. * while guaranteeing the bundled copies win.
+. adopath ++ "${STATADIR}/ado/s"
+  [1]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/s"
+  [2]  (BASE)      "/Applications/StataNow/ado/base/"
+  [3]  (SITE)      "/_codeshare/"
+  [4]              "."
+  [5]  (PERSONAL)  "/Users/ericbooth/Documents/Stata/ado/personal/"
+  [6]  (PLUS)      "/Users/ericbooth/Library/Application Support/Stata/ado/plus
+> /"
+  [7]  (OLDPLACE)  "~/ado/"
+
+. adopath ++ "${STATADIR}/ado/plus"
+  [1]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/plus"
+  [2]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/s"
+  [3]  (BASE)      "/Applications/StataNow/ado/base/"
+  [4]  (SITE)      "/_codeshare/"
+  [5]              "."
+  [6]  (PERSONAL)  "/Users/ericbooth/Documents/Stata/ado/personal/"
+  [7]  (PLUS)      "/Users/ericbooth/Library/Application Support/Stata/ado/plus
+> /"
+  [8]  (OLDPLACE)  "~/ado/"
+
+. adopath ++ "${STATADIR}/ado"
+  [1]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado"
+  [2]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/plus"
+  [3]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/s"
+  [4]  (BASE)      "/Applications/StataNow/ado/base/"
+  [5]  (SITE)      "/_codeshare/"
+  [6]              "."
+  [7]  (PERSONAL)  "/Users/ericbooth/Documents/Stata/ado/personal/"
+  [8]  (PLUS)      "/Users/ericbooth/Library/Application Support/Stata/ado/plus
+> /"
+  [9]  (OLDPLACE)  "~/ado/"
+
+. 
+. * --------------------------------------------------------- 3. CPI DEFLATOR -
+> -
+. * Base year for every real-dollar figure in the report.
+. global BASEYEAR 2025
+
+. 
+. * Build the annual CPI lookup once. Rebuilt only if missing, so modules that
+. * run in sequence do not each redo it.
+. capture confirm file "${OUT}/cpi_annual.dta"
+
+. if _rc != 0 {
+.     preserve
+.     use "${DATAX}/BLS_CPI.dta", clear
+.     keep if area_name == "U.S. city average" & item_name == "All items"
+.     keep if is_annualavg == 0 & seas_adj == 0 & !missing(month)
+.     keep year month cpi
+.     duplicates drop year month, force
+. 
+.     * BLS never published a CPI-U value for October 2025 because the federal
+.     * funding lapse suspended collection. Fill that single month by averaging
+.     * September and November and flag it. October matters here because it is
+.     * the month of the Austin City Limits festival, so leaving a hole would
+.     * distort the venue-receipts series specifically.
+.     generate byte cpi_imputed = 0
+.     sort year month
+.     quietly count if year == 2025 & month == 10 & missing(cpi)
+.     if r(N) > 0 {
+.         quietly summarize cpi if year == 2025 & month == 9, meanonly
+.         local sep = r(mean)
+.         quietly summarize cpi if year == 2025 & month == 11, meanonly
+.         local nov = r(mean)
+.         quietly replace cpi = (`sep' + `nov') / 2 if year == 2025 & month == 
+> 10
+.         quietly replace cpi_imputed = 1 if year == 2025 & month == 10
+.     }
+.     drop if missing(cpi)
+. 
+.     * Keep only years with a full twelve months, so a partial year (2026 at t
+> he
+.     * time of writing) never masquerades as an annual average.
+.     bysort year: generate byte nmon = _N
+.     keep if nmon == 12
+.     collapse (mean) cpi (max) cpi_imputed, by(year)
+. 
+.     quietly summarize cpi if year == ${BASEYEAR}, meanonly
+.     local base = r(mean)
+.     generate double defl = `base' / cpi
+.     label variable defl "Multiply nominal dollars of `year' by this to get ${
+> BASEYEAR} dollars"
+.     label variable cpi_imputed "1 = annual average uses an imputed month"
+.     sort year
+.     save "${OUT}/cpi_annual.dta", replace
+.     restore
+. }
+
+. 
+. * Convenience: put the base-year CPI in a global for ad hoc use.
+. preserve
+
+. use "${OUT}/cpi_annual.dta", clear
+
+. quietly summarize cpi if year == ${BASEYEAR}, meanonly
+
+. global CPIBASE = r(mean)
+
+. restore
+
+. 
+. * ------------------------------------------------------------- 4. PALETTE --
+. * RGB triples matching 05_report/style/austinmusic.sty, so figures and docume
+> nt
+. * agree without anyone re-typing hex codes.
+. global NAVY    "27 45 85"
+
+. global ORANGE  "212 69 0"
+
+. global BLUE    "43 108 176"
+
+. global MUTED   "108 122 141"
+
+. global LIGHTBG "245 247 250"
+
+. global BORDER  "222 226 230"
+
+. global GREEN   "46 125 87"
+
+. global GOLD    "200 137 27"
+
+. global RED     "192 57 43"
+
+. global TEXTC   "26 26 46"
+
+. 
+. * Orange marks the musician or Austin series throughout; navy and muted mark
+. * comparison series. Keeping that constant across figures means a reader lear
+> ns
+. * the convention once.
+. global SERIES1 "${NAVY}"
+
+. global SERIES2 "${ORANGE}"
+
+. global SERIES3 "${BLUE}"
+
+. global SERIES4 "${GREEN}"
+
+. global SERIES5 "${GOLD}"
+
+. global SERIES6 "${MUTED}"
+
+. 
+. * Standard title and subtitle options. Modules pass these straight through:
+. *   twoway ... , title("Finding", $TITLEOPT) subtitle("Qualifier", $SUBOPT)
+. global TITLEOPT `"size(4.1) color("${NAVY}") justification(left) position(11)
+>  span margin(b=1)"'
+
+. global SUBOPT   `"size(3.0) color("${MUTED}") justification(left) position(11
+> ) span margin(b=3)"'
+
+. global XTOPT    `"size(3.0)"'
+
+. global YTOPT    `"size(3.0)"'
+
+. global LEGOPT   `"size(3.0) region(lstyle(none)) symxsize(6)"'
+
+. 
+. capture grstyle init
+
+. capture grstyle set plain, horizontal
+
+. capture grstyle set color "${TEXTC}": p1lineplot
+
+. capture grstyle set legend 6, nobox
+
+. 
+. * ------------------------------------------------------------ 5. PROGRAMS --
+. capture program drop numinit
+
+. program define numinit
+  1.     * Start (or restart) this module's number ledger. Called once per modu
+> le so
+.     * re-running a module replaces its own rows rather than appending duplica
+> tes.
+.     if "$CURMODULE" == "" {
+  2.         display as error "numinit: set  global CURMODULE  first"
+  3.         exit 198
+  4.     }
+  5.     quietly {
+  6.         local f "${NUMDIR}/numbers_${CURMODULE}.csv"
+  7.         capture erase "`f'"
+  8.         file open nh using "`f'", write text replace
+  9.         file write nh "key,value,formatted,unit,source,note,module" _n
+ 10.         file close nh
+ 11.     }
+ 12.     display as text "  ledger started: numbers_${CURMODULE}.csv"
+ 13. end
+
+. 
+. capture program drop numadd
+
+. program define numadd
+  1.     * Register one number the written report will quote.
+.     *
+.     *   numadd, key(pums_median_earnings_tx) value(22800) ///
+>     *           formatted("\$22,800") unit("2025 dollars") ///
+>     *           source("01_evidence/02_pums.../pums_...csv") ///
+>     *           note("ACS PUMS 2020-2024 5-yr, OCCP 2752, PWGTP-weighted medi
+> an")
+.     *
+.     * key becomes a LaTeX macro, so use letters, digits and underscores only.
+.     * note must let a reader reproduce the number: population, filter, weight
+> ,
+.     * vintage, and any caveat.
+.     syntax , KEY(string) VALUE(string) [FORMATTED(string) UNIT(string) ///
+>              SOURCE(string) NOTE(string)]
+  2.     if "$CURMODULE" == "" {
+  3.         display as error "numadd: set  global CURMODULE  and call numinit 
+> first"
+  4.         exit 198
+  5.     }
+  6.     if "`formatted'" == "" {
+  7.         local formatted "`value'"
+  8.     }
+  9.     * Replace any embedded double quote with an apostrophe. These fields a
+> re
+.     * descriptive text, never data, so substituting is safer than escaping an
+> d
+.     * keeps the ledger readable by any CSV parser.
+.     foreach v in formatted unit source note {
+ 10.         local `v' : subinstr local `v' `"""' "'", all
+ 11.     }
+ 12.     quietly {
+ 13.         file open nh using "${NUMDIR}/numbers_${CURMODULE}.csv", write tex
+> t append
+ 14.         file write nh `""`key'","`value'","`formatted'","`unit'","`source'
+> ","`note'","${CURMODULE}""' _n
+ 15.         file close nh
+ 16.     }
+ 17. end
+
+. 
+. capture program drop figsave
+
+. program define figsave
+  1.     * Export the current graph to 04_figures at a consistent size.
+.     * Width 2000px at the report's 6.5 inch text width is about 300 dpi.
+.     syntax , NAME(string) [WIDTH(integer 2000)]
+  2.     quietly graph export "${FIGS}/`name'.png", replace width(`width')
+  3.     display as text "  figure -> 04_figures/`name'.png"
+  4. end
+
+. 
+. capture program drop requirefile
+
+. program define requirefile
+  1.     * Fail early and legibly when an expected input is absent, rather than
+.     * producing a confusing error deeper in a module.
+.     *
+.     * This project's paths contain spaces ("My Drive", the Google Drive mount
+.     * point), so the argument is taken from `0' as a whole rather than parsed
+.     * into tokens, stripped of any quotes the caller supplied, and then
+.     * compound-quoted for `confirm'. Passing an unquoted path with spaces to
+.     * `confirm file' is what makes this fail with a misleading r(601).
+.     local fn `0'
+  2.     local fn : subinstr local fn `"""' "", all
+  3.     local fn = trim("`fn'")
+  4.     capture confirm file `"`fn'"'
+  5.     if _rc != 0 {
+  6.         display as error "Required input not found: `fn'"
+  7.         exit 601
+  8.     }
+  9. end
+
+. 
+. display as text "_setup.do ready. Root: ${PROJ}"
+_setup.do ready. Root: /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.b
+> ooth@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_an
+> alysis/stata/../..
+
+. display as text "  base year ${BASEYEAR}, CPI ${CPIBASE}"
+  base year 2025, CPI 322.1528333333334
+
+. 
+end of do-file
+
+. import delimited using "${EV_VENUE}/austin_music_census_2022_details_an3p-3yq
+> x.csv", ///
+>     clear varnames(1) encoding("utf-8") case(preserve) stringcols(_all)
+(107 vars, 2,227 obs)
+
+. foreach v of varlist _all {
+  2.     quietly replace `v' = trim(`v')
+  3. }
+
+. local k = 0
+
+. foreach v in presenter_ranking_of_pressures presenter_ranking_of_pressures_1 
+> presenter_ranking_of_pressures_2 ///
+>              presenter_ranking_of_pressures_3 presenter_ranking_of_pressures_
+> 4 presenter_ranking_of_pressures_5 ///
+>              presenter_ranking_of_pressures_6 presenter_ranking_of_pressures_
+> 7 presenter_ranking_of_pressures_8 {
+  2.     local ++k
+  3.     quietly generate double r`k' = real(`v')
+  4.     quietly count if r`k' == 1
+  5.     local n1 = r(N)
+  6.     quietly count if inrange(r`k',1,3)
+  7.     local n3 = r(N)
+  8.     quietly summarize r`k', meanonly
+  9.     display "var`k'  rank1=`n1' (" %5.1f 100*`n1'/177 "%)  top3=`n3' (" %5
+> .1f 100*`n3'/177 "%)  meanrank=" %5.2f r(mean)
+ 10. }
+var1  rank1=24 ( 13.6%)  top3=68 ( 38.4%)  meanrank= 4.95
+var2  rank1=19 ( 10.7%)  top3=56 ( 31.6%)  meanrank= 5.13
+var3  rank1=20 ( 11.3%)  top3=63 ( 35.6%)  meanrank= 4.82
+var4  rank1=36 ( 20.3%)  top3=78 ( 44.1%)  meanrank= 4.63
+var5  rank1=7 (  4.0%)  top3=34 ( 19.2%)  meanrank= 5.64
+var6  rank1=22 ( 12.4%)  top3=59 ( 33.3%)  meanrank= 4.97
+var7  rank1=20 ( 11.3%)  top3=60 ( 33.9%)  meanrank= 4.64
+var8  rank1=15 (  8.5%)  top3=57 ( 32.2%)  meanrank= 5.34
+var9  rank1=14 (  7.9%)  top3=56 ( 31.6%)  meanrank= 4.87
+
+. * continue and stay by tenure
+. generate byte stay = .
+(2,227 missing values generated)
+
+. replace stay = 1 if inlist(intent_to_stay_in_austin,"Definitely Yes","Maybe Y
+> es")
+(1,218 real changes made)
+
+. replace stay = 0 if inlist(intent_to_stay_in_austin,"Unsure","Maybe No","Defi
+> nitely No")
+(682 real changes made)
+
+. generate byte cont = .
+(2,227 missing values generated)
+
+. replace cont = 1 if inlist(intent_to_continue_music,"Definitely Yes","Maybe Y
+> es")
+(1,687 real changes made)
+
+. replace cont = 0 if inlist(intent_to_continue_music,"Unsure","Maybe No","Defi
+> nitely No")
+(213 real changes made)
+
+. generate byte tenure = .
+(2,227 missing values generated)
+
+. replace tenure = 1 if strpos(current_housing,"Homeowner")
+(758 real changes made)
+
+. replace tenure = 2 if strpos(current_housing,"Renter") & tenure>=.
+(688 real changes made)
+
+. replace tenure = 3 if current_housing!="" & tenure>=.
+(174 real changes made)
+
+. tabulate tenure cont, row
+
++----------------+
+| Key            |
+|----------------|
+|   frequency    |
+| row percentage |
++----------------+
+
+           |         cont
+    tenure |         0          1 |     Total
+-----------+----------------------+----------
+         1 |        61        697 |       758 
+           |      8.05      91.95 |    100.00 
+-----------+----------------------+----------
+         2 |        96        592 |       688 
+           |     13.95      86.05 |    100.00 
+-----------+----------------------+----------
+         3 |        16        158 |       174 
+           |      9.20      90.80 |    100.00 
+-----------+----------------------+----------
+     Total |       173      1,447 |     1,620 
+           |     10.68      89.32 |    100.00 
+
+. tabulate tenure stay, row chi2
+
++----------------+
+| Key            |
+|----------------|
+|   frequency    |
+| row percentage |
++----------------+
+
+           |         stay
+    tenure |         0          1 |     Total
+-----------+----------------------+----------
+         1 |       186        572 |       758 
+           |     24.54      75.46 |    100.00 
+-----------+----------------------+----------
+         2 |       328        360 |       688 
+           |     47.67      52.33 |    100.00 
+-----------+----------------------+----------
+         3 |        64        110 |       174 
+           |     36.78      63.22 |    100.00 
+-----------+----------------------+----------
+     Total |       578      1,042 |     1,620 
+           |     35.68      64.32 |    100.00 
+
+          Pearson chi2(2) =  84.2246   Pr = 0.000
+
+. * income concentration ordering check
+. foreach v in creatives_income_from_live creatives_income_from_live_1 creative
+> s_income_related ///
+>              creatives_income_related_1 creatives_income_related_2 creatives_
+> income_related_3 creatives_income_related_4 {
+  2.     quietly count if `v' != ""
+  3.     local n = r(N)
+  4.     quietly count if inlist(`v',"All","Most")
+  5.     local am = r(N)
+  6.     quietly count if `v' != "None" & `v' != ""
+  7.     local any = r(N)
+  8.     display "`v'  n=`n'  AllMost=" %5.1f 100*`am'/`n' "%  Any=" %5.1f 100*
+> `any'/`n' "%"
+  9. }
+creatives_income_from_live  n=1119  AllMost= 50.8%  Any= 92.4%
+creatives_income_from_live_1  n=948  AllMost= 12.0%  Any= 75.3%
+creatives_income_related  n=928  AllMost=  5.6%  Any= 70.7%
+creatives_income_related_1  n=859  AllMost=  3.8%  Any= 51.0%
+creatives_income_related_2  n=929  AllMost=  7.9%  Any= 57.8%
+creatives_income_related_3  n=839  AllMost=  3.9%  Any= 56.1%
+creatives_income_related_4  n=903  AllMost= 13.6%  Any= 41.0%
+
+. 
+end of do-file

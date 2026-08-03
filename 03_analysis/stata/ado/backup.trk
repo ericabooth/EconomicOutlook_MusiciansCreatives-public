@@ -1,0 +1,480 @@
+* 00000010
+*! version 1.0.0
+* Do not erase or edit this file
+* It is used by Stata to track the ado and help
+* files you have installed.
+
+S http://fmwww.bc.edu/repec/bocode/f
+N ftools.pkg
+D  2 Aug 2026
+U 1
+d 'FTOOLS': module to provide alternatives to common Stata commands optimized for large datasets
+d 
+d  ftools consists of a Mata file and several Stata commands: The
+d Mata file creates identifiers (factors) from variables by using
+d hash functions instead of sorting the data, so it runs in time
+d O(N) and not in O(N log N). The Stata commands exploit this to
+d avoid sort operations,  at the cost of being slower for small
+d datasets (mainly because of the cost involved in moving data from
+d Stata to Mata). Implemented commands are fcollapse, fegen group,
+d and fsort. Note that most of the capabilities of levels and
+d contract are already supported by these commands. Possible
+d commands include more egen functions and merge and reshape
+d alternatives.
+d 
+d KW: levels
+d KW: collapse
+d KW: contract
+d KW: egen
+d KW: sort
+d KW: factor variables
+d KW: Mata
+d 
+d Requires: Stata version 11.2 (Stata 12 or older also require boottest from SSC)
+d 
+d Distribution-Date: 20260111
+d 
+d Author: Sergio Correia, Board of Governors of the Federal Reserve System
+d Support: email sergio.correia@@gmail.com
+d 
+f f/ftools.ado
+f f/ftools.mata
+f f/ftools.sthlp
+f f/fcollapse.ado
+f f/fcollapse.sthlp
+f f/fegen.ado
+f f/fegen_group.ado
+f f/fegen.sthlp
+f f/fisid.ado
+f f/fisid.sthlp
+f f/flevelsof.ado
+f f/flevelsof.sthlp
+f f/fmerge.ado
+f f/fmerge.sthlp
+f f/freshape.ado
+f f/fsort.ado
+f f/fsort.sthlp
+f f/ftab.ado
+f j/join.ado
+f j/join.sthlp
+f l/local_inlist.ado
+f l/local_inlist.sthlp
+f f/fcollapse_functions.mata
+f f/fcollapse_main.mata
+f f/ftools_type_aliases.mata
+f f/ftools.mata
+f f/ftools_common.mata
+f f/ftools_hash1.mata
+f f/ftools_main.mata
+f f/ftools_experimental.mata
+f f/ftools_plugin.mata
+f f/ftools_type_aliases.mata
+f m/ms_compile_mata.ado
+f m/ms_expand_varlist.ado
+f m/ms_fvstrip.ado
+f m/ms_fvstrip.sthlp
+f m/ms_fvunab.ado
+f m/ms_get_version.ado
+f m/ms_parse_absvars.ado
+f m/ms_parse_depvar.ado
+f m/ms_parse_varlist.ado
+f m/ms_parse_vce.ado
+f m/ms_add_comma.ado
+f p/parallel_map_template.do.ado
+f p/parallel_map.ado
+f p/parallel_map.sthlp
+e
+S http://fmwww.bc.edu/repec/bocode/r
+N reghdfe.pkg
+D  2 Aug 2026
+U 2
+d 'REGHDFE': module to perform linear or instrumental-variable regression absorbing any number of high-dimensional fixed effects
+d 
+d  reghdfe fits a linear or instrumental-variable regression
+d absorbing an arbitrary number of categorical factors and
+d factorial interactions Optionally, it saves the estimated fixed
+d effects.
+d 
+d KW: regression
+d KW: instrumental variables
+d KW: fixed effects
+d KW: high dimension fixed effects
+d 
+d Requires: Stata version 11.2 and ftools from SSC (q.v.)
+d 
+d Distribution-Date: 20260111
+d 
+d Author: Sergio Correia, Board of Governors of the Federal Reserve System
+d Support: email sergio.correia@@gmail.com
+d 
+d Author: Noah Constantine, Board of Governors of the Federal Reserve System
+d Support: email
+d 
+f r/reghdfe.ado
+f r/reghdfe.mata
+f r/reghdfe5.mata
+f r/reghdfe3.ado
+f r/reghdfe_p.ado
+f r/reghdfe3_p.ado
+f r/reghdfe5.ado
+f r/reghdfe5_p.ado
+f r/reghdfe_estat.ado
+f r/reghdfe3_estat.ado
+f r/reghdfe5_estat.ado
+f r/reghdfe5_parse.ado
+f r/reghdfe_footnote.ado
+f r/reghdfe3_footnote.ado
+f r/reghdfe5_footnote.ado
+f e/estfe.ado
+f r/reghdfe_header.ado
+f r/reghdfe5_header.ado
+f r/reghdfe5_parse.ado
+f r/reghdfe.sthlp
+f r/reghdfe3.sthlp
+f r/reghdfe5.sthlp
+f r/reghdfe.mata
+f r/reghdfe_programming.sthlp
+e
+S http://fmwww.bc.edu/repec/bocode/g
+N gtools.pkg
+D  2 Aug 2026
+U 3
+d 'GTOOLS': module to provide a fast implementation of common group commands
+d 
+d    gtools is a Stata package that provides a fast implementation
+d of common group commands like    collapse, egen, isid, levelsof,
+d contract, distinct, and so on using C plugins for a massive
+d speed improvement.
+d 
+d KW:  data management
+d KW: collapse
+d KW: egen
+d KW: isid
+d KW: levelsof
+d KW: contract
+d KW: distinct
+d KW: plugins
+d KW: hash
+d 
+d Requires: Stata version 13.1
+d 
+d Distribution-Date: 20221205
+d 
+d Author: Mauricio Caceres Bravo
+d Support: email mauricio.caceres.bravo@@gmail.com
+d 
+f g/gcollapse.ado
+f g/gcollapse.sthlp
+f g/gcontract.ado
+f g/gcontract.sthlp
+f g/gdistinct.ado
+f g/gdistinct.sthlp
+f g/gduplicates.ado
+f g/gduplicates.sthlp
+f g/gegen.ado
+f g/gegen.sthlp
+f g/gglm.ado
+f g/gglm.sthlp
+f g/gisid.ado
+f g/gisid.sthlp
+f g/givregress.ado
+f g/givregress.sthlp
+f g/glevelsof.ado
+f g/glevelsof.sthlp
+f g/gpoisson.ado
+f g/gquantiles.ado
+f g/gquantiles.sthlp
+f g/greg.ado
+f g/greg.sthlp
+f g/gregress.ado
+f g/gregress.sthlp
+f g/greshape.ado
+f g/greshape.sthlp
+f g/gstats.ado
+f g/gstats.sthlp
+f g/gstats_hdfe.sthlp
+f g/gstats_moving.sthlp
+f g/gstats_range.sthlp
+f g/gstats_residualize.sthlp
+f g/gstats_sum.sthlp
+f g/gstats_summarize.sthlp
+f g/gstats_tab.sthlp
+f g/gstats_transform.sthlp
+f g/gstats_winsor.sthlp
+f g/gtools.ado
+f g/gtools.sthlp
+f g/gtools_macosx_v2.plugin
+f g/gtools_macosx_v3.plugin
+f g/gtools_unix_v2.plugin
+f g/gtools_unix_v3.plugin
+f g/gtools_windows_v2.plugin
+f g/gtools_windows_v3.plugin
+f g/gtop.ado
+f g/gtop.sthlp
+f g/gtoplevelsof.ado
+f g/gtoplevelsof.sthlp
+f g/gunique.ado
+f g/gunique.sthlp
+f _/_gtools_internal.ado
+f _/_gtools_internal.mata
+f f/fasterxtile.ado
+f f/fasterxtile.sthlp
+f h/hashsort.ado
+f h/hashsort.sthlp
+f l/lgtools.mlib
+e
+S http://fmwww.bc.edu/repec/bocode/g
+N grstyle.pkg
+D  2 Aug 2026
+U 4
+d 'GRSTYLE': module to customize the overall look of graphs
+d 
+d  grstyle allows you to customize the overall look of graphs from
+d within a do-file without having to fiddle around with external
+d scheme files. The advantage of grstyle over manually editing a
+d scheme file is that everything needed to reproduce your graphs
+d can be included in a single do-file.
+d 
+d KW: graphics
+d KW: scheme files
+d KW: custom graphics
+d KW: plot
+d 
+d Requires: Stata version 9.2 and palettes from SSC (q.v.)
+d 
+d Distribution-Date: 20200919
+d 
+d Author: Ben Jann, University of Bern
+d Support: email jann@@soz.unibe.ch
+d 
+f g/grstyle.ado
+f g/grstyle.hlp
+f g/grstyle_set.ado
+f g/grstyle_set.hlp
+e
+S http://fmwww.bc.edu/repec/bocode/c
+N colrspace.pkg
+D  2 Aug 2026
+U 5
+d 'COLRSPACE': module providing a class-based color management system in Mata
+d 
+d   The colrspace module provides a class-based color management
+d system implemented in Mata. It supports a wide variety of color
+d spaces and translations among them, provides color generators and
+d a large collection of named palettes, and features functionality
+d such as color interpolation, grayscale conversion, or color
+d vision deficiency simulation.
+d 
+d KW: graphics
+d KW: color management
+d 
+d Requires: Stata version 14.2
+d 
+d Distribution-Date: 20251213
+d 
+d Author: Ben Jann, University of Bern
+d Support: email jann@@soz.unibe.ch
+d 
+f c/colrspace.sthlp
+f c/colrspace_source.sthlp
+f c/colrspace_library_generators.sthlp
+f c/colrspace_library_namedcolors.sthlp
+f c/colrspace_library_palettes.sthlp
+f c/colrspace_library_lsmaps.sthlp
+f c/colrspace_library_rgbmaps.sthlp
+f l/lcolrspace.mlib
+e
+S http://fmwww.bc.edu/repec/bocode/p
+N palettes.pkg
+D  2 Aug 2026
+U 6
+d 'PALETTES': module to provide color palettes, symbol palettes, and line pattern palettes
+d 
+d  The palettes module contains three commands: colorpalette,
+d symbolpalette, and linepalette. The commands provide color,
+d symbol, and line pattern palettes for use in Stata graphs.
+d 
+d KW: graphics
+d KW: colors
+d KW: marker symbols
+d KW: line patterns
+d 
+d Requires: Stata version 14.2 and colrspace from SSC (q.v.); (version 9.2 for colorpalette9)
+d 
+d Distribution-Date: 20251213
+d 
+d Author: Ben Jann, University of Bern
+d Support: email jann@@soz.unibe.ch
+d 
+f p/palettes.hlp
+f c/colorpalette.ado
+f c/colorpalette.sthlp
+f c/colorpalette9.ado
+f c/colorpalette9.hlp
+f l/linepalette.ado
+f l/linepalette.hlp
+f s/symbolpalette.ado
+f s/symbolpalette.hlp
+f c/colorcheck.ado
+f c/colorcheck.sthlp
+e
+S http://fmwww.bc.edu/repec/bocode/e
+N estout.pkg
+D  2 Aug 2026
+U 7
+d 'ESTOUT': module to make regression tables
+d 
+d  estout produces a table of regression results from one or
+d several models for use with spreadsheets, LaTeX, HTML, or a
+d word-processor table. eststo stores a quick copy of the active
+d estimation results for later tabulation. esttab is a wrapper for
+d estout. It displays a pretty looking publication-style regression
+d table without much typing. estadd adds additional results to the
+d e()-returns for one or several models previously fitted and
+d stored. This package subsumes the previously circulated esto,
+d esta, estadd,  and estadd_plus. An earlier version of estout is
+d available  as estout1.
+d 
+d KW: estimates
+d KW: LaTeX
+d KW: HTML
+d KW: word processor
+d KW: output
+d 
+d Requires: Stata version 8.2
+d 
+d Distribution-Date: 20260413
+d 
+d Author: Ben Jann, University of Bern
+d Support: email jann@@soz.unibe.ch
+d 
+f _/_eststo.ado
+f _/_eststo.hlp
+f e/estadd.ado
+f e/estadd.hlp
+f e/estout.ado
+f e/estout.hlp
+f e/eststo.ado
+f e/eststo.hlp
+f e/estpost.ado
+f e/estpost.hlp
+f e/esttab.ado
+f e/esttab.hlp
+e
+S http://fmwww.bc.edu/repec/bocode/s
+N spmap.pkg
+D  2 Aug 2026
+U 8
+d 'SPMAP': module to visualize spatial data
+d 
+d   spmap is aimed at visualizing several kinds of spatial data,
+d and is particularly suited for drawing thematic maps and
+d displaying the results of spatial data analyses. Proper
+d specification of spmap options and suboptions, combined with the
+d availability of properly formatted spatial data, allows the user
+d to draw several kinds of maps, including choropleth maps,
+d proportional symbol maps, pin maps, pie chart maps, and
+d noncontiguous area cartograms. spmap completely supersedes its
+d predecessor tmap.
+d 
+d KW: maps
+d KW: thematic
+d KW: spatial data
+d KW: choropleth
+d 
+d Requires: Stata version 9.2
+d 
+d Distribution-Date: 20180118
+d 
+d Author: Maurizio Pisati, University of Milano Bicocca - Italy
+d Support: email maurizio.pisati@@unimib.it
+d 
+f s/spmap.ado
+f s/spmap.hlp
+f s/spmap_arrow.ado
+f s/spmap_color.ado
+f s/spmap_diagram.ado
+f s/spmap_examples.ado
+f s/spmap_label.ado
+f s/spmap_line.ado
+f s/spmap_point.ado
+f s/spmap_polygon.ado
+f s/spmap_psl.ado
+f s/spmap_scalebar.ado
+e
+S http://fmwww.bc.edu/repec/bocode/s
+N shp2dta.pkg
+D  2 Aug 2026
+U 9
+d 'SHP2DTA': module to converts shape boundary files to Stata datasets
+d 
+d  shp2dta reads a shape (.shp) and dbase (.dbf) file from disk and
+d converts them into Stata datasets.  The shape and dbase files
+d must have the same name and be saved in the same directory.  The
+d user-written command tmap can use the two datasets that shp2dta
+d creates. shp2dta can convert only polygon shapefiles (type 5).
+d 
+d KW: tmap
+d KW: shape files
+d KW: maps
+d 
+d Requires: Stata version 9.1
+d 
+d Distribution-Date: 20150717
+d 
+d Author: Kevin Crow , StataCorp LP
+d Support: email kcrow@@stata.com
+d 
+f s/shp2dta.ado
+f s/shp2dta.hlp
+f s/shp2dta.dlg
+e
+S http://fmwww.bc.edu/repec/bocode/m
+N mylabels.pkg
+D  2 Aug 2026
+U 10
+d 'MYLABELS': module for axis labels or ticks on transformed scales or for daily dates
+d 
+d  mylabels and myticks generate axis labels and ticks on
+d transformed scales. Their use is best explained by example. You
+d draw a graph and one axis is on a transformed square root scale.
+d You wish the axis labels to show untransformed values. For some
+d values this is easy; for example, ylabel(0 1 2 "4" 3 "9" 4 "16" 5
+d "25") says use "4" as label for 2, and so forth. For other values
+d and/or other transformations the conversion may be more difficult
+d to do in your head. The idea behind mylabels is that you feed it
+d the numeric labels you want shown and the transformation being
+d used. It will then place the appropriate specification in a local
+d macro which you name. You may then use that local macro as part
+d of a later graphics command. The idea behind myticks is similar.
+d  mydays displays a formatted list of specified days that lie
+d within the range of a tsset daily date variable describing a time
+d series and puts the numeric version of that list in a specified
+d local macro. The result may be useful for specifying axis label
+d or tick positions on graphs of time series. mydays requires Stata
+d 9.0.
+d 
+d KW: graphics
+d KW: transformations
+d KW: axis labels
+d KW: axis ticks
+d KW: daily dates
+d KW: time series
+d 
+d Requires: Stata version 8.0 (9.0 for mydays)
+d 
+d Distribution-Date: 20220515
+d 
+d Author: Nicholas J. Cox, Durham University
+d Support: email N.J.Cox@@durham.ac.uk
+d 
+d Author: Scott Merryman
+d Support: email scott.merryman@@gmail.com
+d 
+f m/mylabels.ado
+f m/mylabels.sthlp
+f m/myticks.ado
+f m/myticks.hlp
+f m/mydays.ado
+f m/mydays.hlp
+e

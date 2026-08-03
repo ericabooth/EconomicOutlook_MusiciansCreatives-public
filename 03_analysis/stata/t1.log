@@ -1,0 +1,123 @@
+
+  ___  ____  ____  ____  ____ ®
+ /__    /   ____/   /   ____/      StataNow 19.5
+___/   /   /___/   /   /___/       MP—Parallel Edition
+
+ Statistics and Data Science       Copyright 1985-2025 StataCorp LLC
+                                   StataCorp
+                                   4905 Lakeway Drive
+                                   College Station, Texas 77845 USA
+                                   800-782-8272        https://www.stata.com
+                                   979-696-4600        service@stata.com
+
+Stata license: 4-user 4-core network, expiring  6 May 2027
+Serial number: 501909369296
+  Licensed to: Eric Booth
+               Texas 2036
+
+Notes:
+      1. Stata is running in batch mode.
+      2. Unicode is supported; see help unicode_advice.
+      3. More than 2 billion observations are allowed; see help obs_advice.
+      4. Maximum number of variables is set to 5,000 but can be increased;
+          see help set_maxvar.
+
+
+Running /Users/ericbooth/Documents/Stata/ado/personal/profile.do ...
+-------------------------------------------------------------------------------
+  [1]  (BASE)      "/Applications/StataNow/ado/base/"
+  [2]  (SITE)      "/_codeshare/"
+  [3]              "."
+  [4]  (PERSONAL)  "/Users/ericbooth/Documents/Stata/ado/personal/"
+  [5]  (PLUS)      "/Users/ericbooth/Library/Application Support/Stata/ado/plus
+> /"
+  [6]  (OLDPLACE)  "~/ado/"
+ [view] [edit] [do]  10_pums_earnings.do 
+ [view] [edit] [do]  20_wages_industry.do 
+ [view] [edit] [do]  30_venues.do 
+ [view] [edit] [do]  40_city_money.do 
+ [view] [edit] [do]  50_state_national.do 
+ [view] [edit] [do]  60_cost_of_living.do 
+ [view] [edit] [do]  70_quasi_experiments.do 
+ [view] [edit] [do]  80_census_microdata.do 
+ [view] [edit] [do]  _setup.do 
+ [view] [edit] [do]  build_numbers.do 
+ [view] [edit] [do]  run_all.do 
+
+Click [here] for other links
+-------------------------------------------------------------------------------
+
+. do /private/tmp/claude-502/-Users-ericbooth/b82e73b7-d01f-4d49-8e77-d52634591
+> 7a3/scratchpad/t1.do 
+
+. clear all
+
+. set more off
+
+. clear
+
+. set obs 4
+Number of observations (_N) was 0, now 4.
+
+. generate int fy = 2022 + _n
+
+. generate double awards = .
+(4 missing values generated)
+
+. replace awards = 369 in 1
+(1 real change made)
+
+. replace awards = 136 in 2
+(1 real change made)
+
+. replace awards = 0   in 3
+(1 real change made)
+
+. replace awards = 399 in 4
+(1 real change made)
+
+. generate double avg_award = .
+(4 missing values generated)
+
+. replace avg_award = 9458  in 1
+(1 real change made)
+
+. replace avg_award = 32096 in 2
+(1 real change made)
+
+. replace avg_award = 17895 in 4
+(1 real change made)
+
+. generate double avg_bridge = avg_award if inlist(fy,2024,2026)
+(2 missing values generated)
+
+. 
+. twoway ///
+>   (bar awards fy, barwidth(0.6) color("212 69 0%80") lcolor("212 69 0") yaxis
+> (1)) ///
+>   (line avg_bridge fy, yaxis(2) lcolor("27 45 85") lwidth(medium) lpattern(da
+> sh)) ///
+>   (connected avg_award fy, yaxis(2) lcolor("27 45 85") lwidth(medthick) mcolo
+> r("27 45 85") msymbol(O) msize(small) cmissing(n)) ///
+>   , ylabel(0(100)500, axis(1)) ylabel(0(10000)40000, axis(2) format(%9.0fc)) 
+> ///
+>     xlabel(2023(1)2026) xscale(range(2022.5 2026.5)) ///
+>     text(9458 2023 "\$9,458", yaxis(2) placement(n) size(2.6) color("27 45 85
+> ") box bcolor(white) blcolor(white) bmargin(small)) ///
+>     text(32096 2024 "\$32,096", yaxis(2) placement(n) size(2.6) color("27 45 
+> 85")) ///
+>     legend(order(1 "Awards" 3 "Average award")) ///
+>     graphregion(color(white)) name(t1, replace)
+
+. graph export "/private/tmp/claude-502/-Users-ericbooth/b82e73b7-d01f-4d49-8e7
+> 7-d526345917a3/scratchpad/t1.png", replace width(1400)
+(file /private/tmp/claude-502/-Users-ericbooth/b82e73b7-d01f-4d49-8e77-d5263459
+> 17a3/scratchpad/t1.png not found)
+file /private/tmp/claude-502/-Users-ericbooth/b82e73b7-d01f-4d49-8e77-d52634591
+> 7a3/scratchpad/t1.png written in PNG format
+
+. display "TEST1 OK"
+TEST1 OK
+
+. 
+end of do-file

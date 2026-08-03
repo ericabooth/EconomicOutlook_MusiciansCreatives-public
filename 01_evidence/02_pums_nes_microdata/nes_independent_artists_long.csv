@@ -1,0 +1,1074 @@
+year,geo_level,st_fips,cty_fips,county_name,naics,estab_flag,estab,rcptot_not_avail_flag,rcptot_flag,rcptot_thousands
+2012,county,48,021,Bastrop,00,,5511,G,,232712
+2012,county,48,021,Bastrop,71,,260,G,,6113
+2012,county,48,021,Bastrop,711,,225,G,,4594
+2012,county,48,021,Bastrop,7111,,13,H,,173
+2012,county,48,021,Bastrop,7112,,30,G,,834
+2012,county,48,021,Bastrop,7113,,15,H,,272
+2012,county,48,021,Bastrop,7114,D,0,D,D,0
+2012,county,48,021,Bastrop,7115,,162,G,,2949
+2012,county,48,021,Bastrop,71151,,162,G,,2949
+2012,county,48,029,Bexar,00,,118460,G,,5170560
+2012,county,48,029,Bexar,71,,5633,G,,105025
+2012,county,48,029,Bexar,711,,4870,G,,80659
+2012,county,48,029,Bexar,7111,,376,G,,7087
+2012,county,48,029,Bexar,7112,,819,G,,9807
+2012,county,48,029,Bexar,7113,,225,G,,8233
+2012,county,48,029,Bexar,7114,,189,G,,3609
+2012,county,48,029,Bexar,7115,,3261,G,,51923
+2012,county,48,029,Bexar,71151,,3261,G,,51923
+2012,county,48,055,Caldwell,00,,2499,G,,111932
+2012,county,48,055,Caldwell,71,,105,G,,1681
+2012,county,48,055,Caldwell,711,,85,G,,1204
+2012,county,48,055,Caldwell,7111,,6,G,,142
+2012,county,48,055,Caldwell,7112,D,0,D,D,0
+2012,county,48,055,Caldwell,7113,,7,H,,120
+2012,county,48,055,Caldwell,7114,D,0,D,D,0
+2012,county,48,055,Caldwell,7115,,54,G,,774
+2012,county,48,055,Caldwell,71151,,54,G,,774
+2012,county,48,113,Dallas,00,,207967,G,,11222491
+2012,county,48,113,Dallas,71,,9192,G,,225475
+2012,county,48,113,Dallas,711,,8131,G,,171781
+2012,county,48,113,Dallas,7111,,517,G,,8087
+2012,county,48,113,Dallas,7112,,1209,G,,22543
+2012,county,48,113,Dallas,7113,,577,G,,14749
+2012,county,48,113,Dallas,7114,,455,G,,21325
+2012,county,48,113,Dallas,7115,,5373,G,,105077
+2012,county,48,113,Dallas,71151,,5373,G,,105077
+2012,county,48,201,Harris,00,,362606,G,,18213672
+2012,county,48,201,Harris,71,,12933,G,,285346
+2012,county,48,201,Harris,711,,11309,G,,222812
+2012,county,48,201,Harris,7111,,998,G,,18604
+2012,county,48,201,Harris,7112,,1529,G,,31238
+2012,county,48,201,Harris,7113,,790,G,,27127
+2012,county,48,201,Harris,7114,,522,G,,13610
+2012,county,48,201,Harris,7115,,7470,G,,132233
+2012,county,48,201,Harris,71151,,7470,G,,132233
+2012,county,48,209,Hays,00,,13213,G,,594892
+2012,county,48,209,Hays,71,,888,G,,18969
+2012,county,48,209,Hays,711,,791,G,,15014
+2012,county,48,209,Hays,7111,,60,G,,1549
+2012,county,48,209,Hays,7112,,115,G,,1090
+2012,county,48,209,Hays,7113,,30,G,,901
+2012,county,48,209,Hays,7114,,23,H,,940
+2012,county,48,209,Hays,7115,,563,G,,10534
+2012,county,48,209,Hays,71151,,563,G,,10534
+2012,county,48,439,Tarrant,00,,149232,G,,6794599
+2012,county,48,439,Tarrant,71,,7144,G,,139736
+2012,county,48,439,Tarrant,711,,6175,G,,106630
+2012,county,48,439,Tarrant,7111,,451,G,,8077
+2012,county,48,439,Tarrant,7112,,1189,H,,15998
+2012,county,48,439,Tarrant,7113,,368,G,,11039
+2012,county,48,439,Tarrant,7114,,299,G,,8273
+2012,county,48,439,Tarrant,7115,,3868,G,,63243
+2012,county,48,439,Tarrant,71151,,3868,G,,63243
+2012,county,48,453,Travis,00,,98126,G,,5415837
+2012,county,48,453,Travis,71,,7675,G,,198893
+2012,county,48,453,Travis,711,,7024,G,,167031
+2012,county,48,453,Travis,7111,,530,G,,11745
+2012,county,48,453,Travis,7112,,566,G,,12832
+2012,county,48,453,Travis,7113,,308,H,,13641
+2012,county,48,453,Travis,7114,,238,H,,12680
+2012,county,48,453,Travis,7115,,5382,G,,116133
+2012,county,48,453,Travis,71151,,5382,G,,116133
+2012,county,48,491,Williamson,00,,33398,G,,1432026
+2012,county,48,491,Williamson,71,,1852,G,,32264
+2012,county,48,491,Williamson,711,,1570,G,,23741
+2012,county,48,491,Williamson,7111,,109,G,,1799
+2012,county,48,491,Williamson,7112,,321,G,,3542
+2012,county,48,491,Williamson,7113,,59,H,,942
+2012,county,48,491,Williamson,7114,,56,H,,1453
+2012,county,48,491,Williamson,7115,,1025,G,,16005
+2012,county,48,491,Williamson,71151,,1025,G,,16005
+2012,state,48,000,Texas (statewide),00,,2014124,G,,97102154
+2012,state,48,000,Texas (statewide),71,,82709,G,,1813794
+2012,state,48,000,Texas (statewide),711,,70440,G,,1342238
+2012,state,48,000,Texas (statewide),7111,,5345,G,,94557
+2012,state,48,000,Texas (statewide),7112,,13081,G,,222158
+2012,state,48,000,Texas (statewide),7113,,4088,G,,142299
+2012,state,48,000,Texas (statewide),7114,,2905,G,,95498
+2012,state,48,000,Texas (statewide),7115,,45021,G,,787726
+2012,state,48,000,Texas (statewide),71151,,45021,G,,787726
+2013,county,48,021,Bastrop,00,,5561,G,,227367
+2013,county,48,021,Bastrop,71,,252,G,,5765
+2013,county,48,021,Bastrop,711,,221,G,,4669
+2013,county,48,021,Bastrop,7111,,14,G,,165
+2013,county,48,021,Bastrop,7112,,29,H,,1014
+2013,county,48,021,Bastrop,7113,,10,H,,252
+2013,county,48,021,Bastrop,7114,D,0,D,D,0
+2013,county,48,021,Bastrop,7115,,165,G,,2803
+2013,county,48,021,Bastrop,71151,,165,G,,2803
+2013,county,48,029,Bexar,00,,120595,G,,5437644
+2013,county,48,029,Bexar,71,,5741,G,,104799
+2013,county,48,029,Bexar,711,,4997,G,,81455
+2013,county,48,029,Bexar,7111,,481,G,,7886
+2013,county,48,029,Bexar,7112,,811,H,,9817
+2013,county,48,029,Bexar,7113,,266,G,,12353
+2013,county,48,029,Bexar,7114,,192,G,,3568
+2013,county,48,029,Bexar,7115,,3247,G,,47831
+2013,county,48,029,Bexar,71151,,3247,G,,47831
+2013,county,48,055,Caldwell,00,,2489,G,,114795
+2013,county,48,055,Caldwell,71,,107,G,,1713
+2013,county,48,055,Caldwell,711,,88,G,,1225
+2013,county,48,055,Caldwell,7111,D,0,D,D,0
+2013,county,48,055,Caldwell,7112,,19,H,,106
+2013,county,48,055,Caldwell,7113,,7,H,,276
+2013,county,48,055,Caldwell,7114,D,0,D,D,0
+2013,county,48,055,Caldwell,7115,,54,G,,596
+2013,county,48,055,Caldwell,71151,,54,G,,596
+2013,county,48,113,Dallas,00,,210881,G,,11381586
+2013,county,48,113,Dallas,71,,9159,G,,226376
+2013,county,48,113,Dallas,711,,8118,G,,178922
+2013,county,48,113,Dallas,7111,,648,G,,8786
+2013,county,48,113,Dallas,7112,,1147,G,,22846
+2013,county,48,113,Dallas,7113,,577,H,,21190
+2013,county,48,113,Dallas,7114,,410,G,,21114
+2013,county,48,113,Dallas,7115,,5336,G,,104986
+2013,county,48,113,Dallas,71151,,5336,G,,104986
+2013,county,48,201,Harris,00,,367449,G,,18502191
+2013,county,48,201,Harris,71,,13003,G,,285512
+2013,county,48,201,Harris,711,,11383,G,,223464
+2013,county,48,201,Harris,7111,,1124,G,,19194
+2013,county,48,201,Harris,7112,,1518,G,,28690
+2013,county,48,201,Harris,7113,,823,G,,31498
+2013,county,48,201,Harris,7114,,512,G,,13982
+2013,county,48,201,Harris,7115,,7406,G,,130100
+2013,county,48,201,Harris,71151,,7406,G,,130100
+2013,county,48,209,Hays,00,,13750,G,,616906
+2013,county,48,209,Hays,71,,931,G,,20383
+2013,county,48,209,Hays,711,,826,G,,15876
+2013,county,48,209,Hays,7111,,66,H,,905
+2013,county,48,209,Hays,7112,,111,G,,1516
+2013,county,48,209,Hays,7113,,30,H,,1506
+2013,county,48,209,Hays,7114,,28,G,,516
+2013,county,48,209,Hays,7115,,591,G,,11433
+2013,county,48,209,Hays,71151,,591,G,,11433
+2013,county,48,439,Tarrant,00,,151025,G,,6958573
+2013,county,48,439,Tarrant,71,,7109,G,,139749
+2013,county,48,439,Tarrant,711,,6163,G,,108341
+2013,county,48,439,Tarrant,7111,,525,G,,8946
+2013,county,48,439,Tarrant,7112,,1147,G,,18876
+2013,county,48,439,Tarrant,7113,,399,G,,12380
+2013,county,48,439,Tarrant,7114,,257,G,,5916
+2013,county,48,439,Tarrant,7115,,3835,G,,62223
+2013,county,48,439,Tarrant,71151,,3835,G,,62223
+2013,county,48,453,Travis,00,,101952,G,,5576033
+2013,county,48,453,Travis,71,,8082,G,,208385
+2013,county,48,453,Travis,711,,7435,G,,177964
+2013,county,48,453,Travis,7111,,649,G,,11941
+2013,county,48,453,Travis,7112,,556,H,,13114
+2013,county,48,453,Travis,7113,,316,H,,20862
+2013,county,48,453,Travis,7114,,226,G,,11004
+2013,county,48,453,Travis,7115,,5688,G,,121043
+2013,county,48,453,Travis,71151,,5688,G,,121043
+2013,county,48,491,Williamson,00,,34913,G,,1521017
+2013,county,48,491,Williamson,71,,1983,G,,35132
+2013,county,48,491,Williamson,711,,1686,G,,25650
+2013,county,48,491,Williamson,7111,,137,G,,2395
+2013,county,48,491,Williamson,7112,,324,G,,3267
+2013,county,48,491,Williamson,7113,,61,H,,1260
+2013,county,48,491,Williamson,7114,,58,G,,1027
+2013,county,48,491,Williamson,7115,,1106,G,,17701
+2013,county,48,491,Williamson,71151,,1106,G,,17701
+2013,state,48,000,Texas (statewide),00,,2039732,G,,98800748
+2013,state,48,000,Texas (statewide),71,,83735,G,,1851870
+2013,state,48,000,Texas (statewide),711,,71699,G,,1395789
+2013,state,48,000,Texas (statewide),7111,,6447,G,,103598
+2013,state,48,000,Texas (statewide),7112,,12752,G,,223932
+2013,state,48,000,Texas (statewide),7113,,4167,G,,173150
+2013,state,48,000,Texas (statewide),7114,,2781,G,,91767
+2013,state,48,000,Texas (statewide),7115,,45552,G,,803342
+2013,state,48,000,Texas (statewide),71151,,45552,G,,803342
+2014,county,48,021,Bastrop,00,,5947,G,,268570
+2014,county,48,021,Bastrop,71,,268,G,,6219
+2014,county,48,021,Bastrop,711,,234,G,,4799
+2014,county,48,021,Bastrop,7111,,18,G,,208
+2014,county,48,021,Bastrop,7112,,36,G,,1082
+2014,county,48,021,Bastrop,7113,,11,H,,145
+2014,county,48,021,Bastrop,7114,D,0,D,D,0
+2014,county,48,021,Bastrop,7115,,167,G,,3054
+2014,county,48,021,Bastrop,71151,,167,G,,3054
+2014,county,48,029,Bexar,00,,127915,G,,5897440
+2014,county,48,029,Bexar,71,,5844,G,,106155
+2014,county,48,029,Bexar,711,,5077,G,,80811
+2014,county,48,029,Bexar,7111,,533,G,,8840
+2014,county,48,029,Bexar,7112,,835,G,,9140
+2014,county,48,029,Bexar,7113,,262,H,,9187
+2014,county,48,029,Bexar,7114,,184,H,,4516
+2014,county,48,029,Bexar,7115,,3263,G,,49128
+2014,county,48,029,Bexar,71151,,3263,G,,49128
+2014,county,48,055,Caldwell,00,,2648,G,,123489
+2014,county,48,055,Caldwell,71,,107,G,,2038
+2014,county,48,055,Caldwell,711,,83,G,,1305
+2014,county,48,055,Caldwell,7111,D,0,D,D,0
+2014,county,48,055,Caldwell,7112,D,0,D,D,0
+2014,county,48,055,Caldwell,7113,,4,G,,51
+2014,county,48,055,Caldwell,7114,D,0,D,D,0
+2014,county,48,055,Caldwell,7115,,55,G,,777
+2014,county,48,055,Caldwell,71151,,55,G,,777
+2014,county,48,113,Dallas,00,,221267,G,,12351030
+2014,county,48,113,Dallas,71,,9478,G,,242091
+2014,county,48,113,Dallas,711,,8433,G,,191057
+2014,county,48,113,Dallas,7111,,731,G,,10663
+2014,county,48,113,Dallas,7112,,1132,G,,22105
+2014,county,48,113,Dallas,7113,,596,G,,22696
+2014,county,48,113,Dallas,7114,,412,G,,20851
+2014,county,48,113,Dallas,7115,,5562,G,,114742
+2014,county,48,113,Dallas,71151,,5562,G,,114742
+2014,county,48,201,Harris,00,,387455,G,,20157499
+2014,county,48,201,Harris,71,,13406,G,,301762
+2014,county,48,201,Harris,711,,11733,G,,235822
+2014,county,48,201,Harris,7111,,1204,G,,17168
+2014,county,48,201,Harris,7112,,1598,G,,32485
+2014,county,48,201,Harris,7113,,755,G,,33150
+2014,county,48,201,Harris,7114,,525,G,,15703
+2014,county,48,201,Harris,7115,,7651,G,,137316
+2014,county,48,201,Harris,71151,,7651,G,,137316
+2014,county,48,209,Hays,00,,15174,G,,715396
+2014,county,48,209,Hays,71,,1029,G,,25916
+2014,county,48,209,Hays,711,,923,G,,21379
+2014,county,48,209,Hays,7111,,82,G,,1508
+2014,county,48,209,Hays,7112,,138,H,,2185
+2014,county,48,209,Hays,7113,,35,H,,3276
+2014,county,48,209,Hays,7114,,41,G,,1423
+2014,county,48,209,Hays,7115,,627,G,,12987
+2014,county,48,209,Hays,71151,,627,G,,12987
+2014,county,48,439,Tarrant,00,,158872,G,,7546137
+2014,county,48,439,Tarrant,71,,7314,G,,150348
+2014,county,48,439,Tarrant,711,,6377,G,,116628
+2014,county,48,439,Tarrant,7111,,585,G,,10410
+2014,county,48,439,Tarrant,7112,,1174,G,,24541
+2014,county,48,439,Tarrant,7113,,397,G,,12751
+2014,county,48,439,Tarrant,7114,,280,H,,6092
+2014,county,48,439,Tarrant,7115,,3941,G,,62834
+2014,county,48,439,Tarrant,71151,,3941,G,,62834
+2014,county,48,453,Travis,00,,110302,G,,6131155
+2014,county,48,453,Travis,71,,8907,G,,243720
+2014,county,48,453,Travis,711,,8163,G,,204687
+2014,county,48,453,Travis,7111,,699,G,,13811
+2014,county,48,453,Travis,7112,,583,G,,14124
+2014,county,48,453,Travis,7113,,365,H,,20290
+2014,county,48,453,Travis,7114,,239,H,,12448
+2014,county,48,453,Travis,7115,,6277,G,,144014
+2014,county,48,453,Travis,71151,,6277,G,,144014
+2014,county,48,491,Williamson,00,,38266,G,,1717806
+2014,county,48,491,Williamson,71,,2136,G,,42765
+2014,county,48,491,Williamson,711,,1851,G,,30528
+2014,county,48,491,Williamson,7111,,168,G,,2429
+2014,county,48,491,Williamson,7112,,348,G,,4439
+2014,county,48,491,Williamson,7113,,74,G,,2776
+2014,county,48,491,Williamson,7114,,51,G,,1302
+2014,county,48,491,Williamson,7115,,1210,G,,19582
+2014,county,48,491,Williamson,71151,,1210,G,,19582
+2014,state,48,000,Texas (statewide),00,,2150702,G,,107536923
+2014,state,48,000,Texas (statewide),71,,87439,G,,2041563
+2014,state,48,000,Texas (statewide),711,,75077,G,,1529341
+2014,state,48,000,Texas (statewide),7111,,7105,G,,114717
+2014,state,48,000,Texas (statewide),7112,,13350,G,,246726
+2014,state,48,000,Texas (statewide),7113,,4281,G,,185465
+2014,state,48,000,Texas (statewide),7114,,2879,G,,95843
+2014,state,48,000,Texas (statewide),7115,,47462,G,,886590
+2014,state,48,000,Texas (statewide),71151,,47462,G,,886590
+2015,county,48,021,Bastrop,00,,6110,G,,286927
+2015,county,48,021,Bastrop,71,,257,G,,6103
+2015,county,48,021,Bastrop,711,,223,G,,5105
+2015,county,48,021,Bastrop,7111,,17,H,,259
+2015,county,48,021,Bastrop,7112,,26,G,,983
+2015,county,48,021,Bastrop,7113,,12,H,,147
+2015,county,48,021,Bastrop,7114,,5,H,,487
+2015,county,48,021,Bastrop,7115,,163,G,,3229
+2015,county,48,021,Bastrop,71151,,163,G,,3229
+2015,county,48,029,Bexar,00,,131716,G,,6106186
+2015,county,48,029,Bexar,71,,6021,G,,110527
+2015,county,48,029,Bexar,711,,5263,G,,86064
+2015,county,48,029,Bexar,7111,,586,G,,9730
+2015,county,48,029,Bexar,7112,,805,G,,9640
+2015,county,48,029,Bexar,7113,,236,G,,9657
+2015,county,48,029,Bexar,7114,,203,G,,4875
+2015,county,48,029,Bexar,7115,,3433,G,,52162
+2015,county,48,029,Bexar,71151,,3433,G,,52162
+2015,county,48,055,Caldwell,00,,2744,G,,125150
+2015,county,48,055,Caldwell,71,,114,G,,2991
+2015,county,48,055,Caldwell,711,,91,G,,1716
+2015,county,48,055,Caldwell,7111,,10,H,,165
+2015,county,48,055,Caldwell,7112,,18,G,,207
+2015,county,48,055,Caldwell,7113,,7,J,,366
+2015,county,48,055,Caldwell,7114,,3,J,,179
+2015,county,48,055,Caldwell,7115,,53,G,,799
+2015,county,48,055,Caldwell,71151,,53,G,,799
+2015,county,48,113,Dallas,00,,224664,G,,12502875
+2015,county,48,113,Dallas,71,,9662,G,,250195
+2015,county,48,113,Dallas,711,,8599,G,,197289
+2015,county,48,113,Dallas,7111,,790,G,,11892
+2015,county,48,113,Dallas,7112,,1093,G,,24099
+2015,county,48,113,Dallas,7113,,619,G,,24036
+2015,county,48,113,Dallas,7114,,414,G,,22352
+2015,county,48,113,Dallas,7115,,5683,G,,114910
+2015,county,48,113,Dallas,71151,,5683,G,,114910
+2015,county,48,201,Harris,00,,394410,G,,20183406
+2015,county,48,201,Harris,71,,13608,G,,314666
+2015,county,48,201,Harris,711,,11894,G,,240185
+2015,county,48,201,Harris,7111,,1231,G,,21182
+2015,county,48,201,Harris,7112,,1558,G,,32835
+2015,county,48,201,Harris,7113,,807,G,,31710
+2015,county,48,201,Harris,7114,,494,G,,13767
+2015,county,48,201,Harris,7115,,7804,G,,140691
+2015,county,48,201,Harris,71151,,7804,G,,140691
+2015,county,48,209,Hays,00,,16320,G,,765457
+2015,county,48,209,Hays,71,,1076,G,,27413
+2015,county,48,209,Hays,711,,970,G,,23495
+2015,county,48,209,Hays,7111,,82,G,,1366
+2015,county,48,209,Hays,7112,,126,G,,2031
+2015,county,48,209,Hays,7113,,44,H,,3825
+2015,county,48,209,Hays,7114,,41,G,,2049
+2015,county,48,209,Hays,7115,,677,G,,14224
+2015,county,48,209,Hays,71151,,677,G,,14224
+2015,county,48,439,Tarrant,00,,162998,G,,7691090
+2015,county,48,439,Tarrant,71,,7342,G,,153671
+2015,county,48,439,Tarrant,711,,6411,G,,120122
+2015,county,48,439,Tarrant,7111,,613,G,,11493
+2015,county,48,439,Tarrant,7112,,1153,G,,22090
+2015,county,48,439,Tarrant,7113,,385,G,,12257
+2015,county,48,439,Tarrant,7114,,259,H,,7655
+2015,county,48,439,Tarrant,7115,,4001,G,,66627
+2015,county,48,439,Tarrant,71151,,4001,G,,66627
+2015,county,48,453,Travis,00,,116321,G,,6322582
+2015,county,48,453,Travis,71,,9138,G,,247553
+2015,county,48,453,Travis,711,,8419,G,,208034
+2015,county,48,453,Travis,7111,,749,G,,14974
+2015,county,48,453,Travis,7112,,584,G,,13178
+2015,county,48,453,Travis,7113,,373,H,,20485
+2015,county,48,453,Travis,7114,,251,G,,11402
+2015,county,48,453,Travis,7115,,6462,G,,147995
+2015,county,48,453,Travis,71151,,6462,G,,147995
+2015,county,48,491,Williamson,00,,41059,G,,1840553
+2015,county,48,491,Williamson,71,,2265,G,,42781
+2015,county,48,491,Williamson,711,,1993,G,,33571
+2015,county,48,491,Williamson,7111,,172,G,,2792
+2015,county,48,491,Williamson,7112,,365,G,,5182
+2015,county,48,491,Williamson,7113,,84,G,,2512
+2015,county,48,491,Williamson,7114,,56,G,,1341
+2015,county,48,491,Williamson,7115,,1316,G,,21744
+2015,county,48,491,Williamson,71151,,1316,G,,21744
+2015,state,48,000,Texas (statewide),00,,2205149,G,,108490586
+2015,state,48,000,Texas (statewide),71,,89511,G,,2115150
+2015,state,48,000,Texas (statewide),711,,77130,G,,1584686
+2015,state,48,000,Texas (statewide),7111,,7650,G,,126713
+2015,state,48,000,Texas (statewide),7112,,13333,G,,245113
+2015,state,48,000,Texas (statewide),7113,,4463,G,,196085
+2015,state,48,000,Texas (statewide),7114,,2816,G,,98120
+2015,state,48,000,Texas (statewide),7115,,48868,G,,918655
+2015,state,48,000,Texas (statewide),71151,,48868,G,,918655
+2016,county,48,021,Bastrop,00,,6202,G,,288919
+2016,county,48,021,Bastrop,71,,277,G,,6720
+2016,county,48,021,Bastrop,711,,241,G,,5736
+2016,county,48,021,Bastrop,7111,,22,H,,1086
+2016,county,48,021,Bastrop,7112,,26,G,,543
+2016,county,48,021,Bastrop,7113,,12,H,,281
+2016,county,48,021,Bastrop,7114,,5,G,,535
+2016,county,48,021,Bastrop,7115,,176,G,,3291
+2016,county,48,021,Bastrop,71151,,176,G,,3291
+2016,county,48,029,Bexar,00,,137240,G,,6291442
+2016,county,48,029,Bexar,71,,6249,G,,110052
+2016,county,48,029,Bexar,711,,5484,G,,86774
+2016,county,48,029,Bexar,7111,,548,G,,8247
+2016,county,48,029,Bexar,7112,,871,G,,9010
+2016,county,48,029,Bexar,7113,,282,G,,11446
+2016,county,48,029,Bexar,7114,,196,G,,5411
+2016,county,48,029,Bexar,7115,,3587,G,,52660
+2016,county,48,029,Bexar,71151,,3587,G,,52660
+2016,county,48,055,Caldwell,00,,2869,G,,123132
+2016,county,48,055,Caldwell,71,,118,G,,1922
+2016,county,48,055,Caldwell,711,,95,G,,1306
+2016,county,48,055,Caldwell,7111,,7,G,,274
+2016,county,48,055,Caldwell,7112,,15,H,,131
+2016,county,48,055,Caldwell,7113,,9,G,,163
+2016,county,48,055,Caldwell,7114,,3,J,,73
+2016,county,48,055,Caldwell,7115,,61,G,,665
+2016,county,48,055,Caldwell,71151,,61,G,,665
+2016,county,48,113,Dallas,00,,233530,G,,12770565
+2016,county,48,113,Dallas,71,,10048,G,,265518
+2016,county,48,113,Dallas,711,,9060,G,,215845
+2016,county,48,113,Dallas,7111,,771,G,,11427
+2016,county,48,113,Dallas,7112,,1246,G,,30246
+2016,county,48,113,Dallas,7113,,645,G,,24286
+2016,county,48,113,Dallas,7114,,382,G,,23922
+2016,county,48,113,Dallas,7115,,6016,G,,125964
+2016,county,48,113,Dallas,71151,,6016,G,,125964
+2016,county,48,201,Harris,00,,390881,G,,17812970
+2016,county,48,201,Harris,71,,13865,G,,275802
+2016,county,48,201,Harris,711,,12330,G,,217366
+2016,county,48,201,Harris,7111,,1280,G,,20928
+2016,county,48,201,Harris,7112,,1743,G,,30227
+2016,county,48,201,Harris,7113,,875,G,,26160
+2016,county,48,201,Harris,7114,,513,G,,15852
+2016,county,48,201,Harris,7115,,7919,G,,124199
+2016,county,48,201,Harris,71151,,7919,G,,124199
+2016,county,48,209,Hays,00,,17132,G,,801958
+2016,county,48,209,Hays,71,,1125,G,,27085
+2016,county,48,209,Hays,711,,1009,G,,23086
+2016,county,48,209,Hays,7111,,86,G,,1488
+2016,county,48,209,Hays,7112,,138,H,,2542
+2016,county,48,209,Hays,7113,,47,G,,1694
+2016,county,48,209,Hays,7114,,37,G,,1319
+2016,county,48,209,Hays,7115,,701,G,,16043
+2016,county,48,209,Hays,71151,,701,G,,16043
+2016,county,48,439,Tarrant,00,,170222,G,,7982655
+2016,county,48,439,Tarrant,71,,7716,G,,161533
+2016,county,48,439,Tarrant,711,,6774,G,,125404
+2016,county,48,439,Tarrant,7111,,650,G,,12035
+2016,county,48,439,Tarrant,7112,,1269,G,,23420
+2016,county,48,439,Tarrant,7113,,430,G,,14734
+2016,county,48,439,Tarrant,7114,,242,H,,7147
+2016,county,48,439,Tarrant,7115,,4183,G,,68068
+2016,county,48,439,Tarrant,71151,,4183,G,,68068
+2016,county,48,453,Travis,00,,118984,G,,6531341
+2016,county,48,453,Travis,71,,9704,G,,265625
+2016,county,48,453,Travis,711,,8973,G,,226757
+2016,county,48,453,Travis,7111,,704,G,,13480
+2016,county,48,453,Travis,7112,,701,H,,15101
+2016,county,48,453,Travis,7113,,438,G,,20636
+2016,county,48,453,Travis,7114,,233,G,,18650
+2016,county,48,453,Travis,7115,,6897,G,,158890
+2016,county,48,453,Travis,71151,,6897,G,,158890
+2016,county,48,491,Williamson,00,,43039,G,,1924123
+2016,county,48,491,Williamson,71,,2448,G,,48046
+2016,county,48,491,Williamson,711,,2143,G,,38818
+2016,county,48,491,Williamson,7111,,167,G,,3755
+2016,county,48,491,Williamson,7112,,422,G,,5230
+2016,county,48,491,Williamson,7113,,87,G,,2755
+2016,county,48,491,Williamson,7114,,54,G,,1307
+2016,county,48,491,Williamson,7115,,1413,G,,25771
+2016,county,48,491,Williamson,71151,,1413,G,,25771
+2016,state,48,000,Texas (statewide),00,,2251787,G,,106276412
+2016,state,48,000,Texas (statewide),71,,93153,G,,2099128
+2016,state,48,000,Texas (statewide),711,,81166,G,,1605830
+2016,state,48,000,Texas (statewide),7111,,7545,G,,125541
+2016,state,48,000,Texas (statewide),7112,,14765,G,,262603
+2016,state,48,000,Texas (statewide),7113,,4877,G,,185079
+2016,state,48,000,Texas (statewide),7114,,2734,G,,110041
+2016,state,48,000,Texas (statewide),7115,,51245,G,,922566
+2016,state,48,000,Texas (statewide),71151,,51245,G,,922566
+2017,county,48,021,Bastrop,00,,6744,G,,328162
+2017,county,48,021,Bastrop,71,,327,G,,6876
+2017,county,48,021,Bastrop,711,,292,G,,5483
+2017,county,48,021,Bastrop,7111,,21,H,,485
+2017,county,48,021,Bastrop,7112,,45,G,,974
+2017,county,48,021,Bastrop,7113,,14,G,,245
+2017,county,48,021,Bastrop,7114,,7,H,,404
+2017,county,48,021,Bastrop,7115,,205,G,,3375
+2017,county,48,021,Bastrop,71151,,205,G,,3375
+2017,county,48,029,Bexar,00,,144880,G,,6728698
+2017,county,48,029,Bexar,71,,6618,G,,120201
+2017,county,48,029,Bexar,711,,5851,G,,95212
+2017,county,48,029,Bexar,7111,,433,G,,8538
+2017,county,48,029,Bexar,7112,,1032,G,,12057
+2017,county,48,029,Bexar,7113,,320,G,,11109
+2017,county,48,029,Bexar,7114,,187,G,,5410
+2017,county,48,029,Bexar,7115,,3879,G,,58098
+2017,county,48,029,Bexar,71151,,3879,G,,58098
+2017,county,48,055,Caldwell,00,,3056,G,,138648
+2017,county,48,055,Caldwell,71,,123,G,,1948
+2017,county,48,055,Caldwell,711,,103,G,,1248
+2017,county,48,055,Caldwell,7111,,9,H,,240
+2017,county,48,055,Caldwell,7112,,21,H,,157
+2017,county,48,055,Caldwell,7113,,7,H,,73
+2017,county,48,055,Caldwell,7115,,66,G,,778
+2017,county,48,055,Caldwell,71151,,66,G,,778
+2017,county,48,113,Dallas,00,,242682,G,,13379513
+2017,county,48,113,Dallas,71,,10357,G,,262424
+2017,county,48,113,Dallas,711,,9378,G,,214936
+2017,county,48,113,Dallas,7111,,700,G,,12812
+2017,county,48,113,Dallas,7112,,1420,G,,27937
+2017,county,48,113,Dallas,7113,,654,G,,23603
+2017,county,48,113,Dallas,7114,,370,G,,20899
+2017,county,48,113,Dallas,7115,,6234,G,,129685
+2017,county,48,113,Dallas,71151,,6234,G,,129685
+2017,county,48,201,Harris,00,,433244,G,,21543121
+2017,county,48,201,Harris,71,,14840,G,,329663
+2017,county,48,201,Harris,711,,13237,G,,259083
+2017,county,48,201,Harris,7111,,1126,G,,20422
+2017,county,48,201,Harris,7112,,2061,G,,35630
+2017,county,48,201,Harris,7113,,1008,G,,35258
+2017,county,48,201,Harris,7114,,504,G,,14971
+2017,county,48,201,Harris,7115,,8538,G,,152802
+2017,county,48,201,Harris,71151,,8538,G,,152802
+2017,county,48,209,Hays,00,,18260,G,,871521
+2017,county,48,209,Hays,71,,1248,G,,29899
+2017,county,48,209,Hays,711,,1128,G,,26049
+2017,county,48,209,Hays,7111,,65,G,,1534
+2017,county,48,209,Hays,7112,,187,H,,3841
+2017,county,48,209,Hays,7113,,64,H,,2031
+2017,county,48,209,Hays,7114,,30,G,,1085
+2017,county,48,209,Hays,7115,,782,G,,17558
+2017,county,48,209,Hays,71151,,782,G,,17558
+2017,county,48,439,Tarrant,00,,178338,G,,8557399
+2017,county,48,439,Tarrant,71,,8018,G,,181060
+2017,county,48,439,Tarrant,711,,7106,G,,147533
+2017,county,48,439,Tarrant,7111,,513,G,,11297
+2017,county,48,439,Tarrant,7112,,1453,G,,29028
+2017,county,48,439,Tarrant,7113,,517,G,,19763
+2017,county,48,439,Tarrant,7114,,221,H,,6867
+2017,county,48,439,Tarrant,7115,,4402,G,,80578
+2017,county,48,439,Tarrant,71151,,4402,G,,80578
+2017,county,48,453,Travis,00,,125798,G,,7015875
+2017,county,48,453,Travis,71,,9936,G,,289776
+2017,county,48,453,Travis,711,,9215,G,,243685
+2017,county,48,453,Travis,7111,,610,G,,14930
+2017,county,48,453,Travis,7112,,814,G,,18750
+2017,county,48,453,Travis,7113,,560,G,,24567
+2017,county,48,453,Travis,7114,,211,G,,15913
+2017,county,48,453,Travis,7115,,7020,G,,169525
+2017,county,48,453,Travis,71151,,7020,G,,169525
+2017,county,48,491,Williamson,00,,46518,G,,2079703
+2017,county,48,491,Williamson,71,,2680,G,,49961
+2017,county,48,491,Williamson,711,,2377,G,,39827
+2017,county,48,491,Williamson,7111,,114,H,,1298
+2017,county,48,491,Williamson,7112,,563,G,,6602
+2017,county,48,491,Williamson,7113,,139,H,,3097
+2017,county,48,491,Williamson,7114,,53,H,,1866
+2017,county,48,491,Williamson,7115,,1508,G,,26964
+2017,county,48,491,Williamson,71151,,1508,G,,26964
+2017,state,48,000,Texas (statewide),00,,2399267,G,,118273287
+2017,state,48,000,Texas (statewide),71,,98383,G,,2277731
+2017,state,48,000,Texas (statewide),711,,86273,G,,1747742
+2017,state,48,000,Texas (statewide),7111,,6430,G,,122832
+2017,state,48,000,Texas (statewide),7112,,17000,G,,295335
+2017,state,48,000,Texas (statewide),7113,,5553,G,,201625
+2017,state,48,000,Texas (statewide),7114,,2566,G,,106454
+2017,state,48,000,Texas (statewide),7115,,54724,G,,1021496
+2017,state,48,000,Texas (statewide),71151,,54724,G,,1021496
+2018,county,48,021,Bastrop,00,,7100,G,,352522
+2018,county,48,021,Bastrop,71,,346,G,,7929
+2018,county,48,021,Bastrop,711,,313,G,,6447
+2018,county,48,021,Bastrop,7111,,27,H,,636
+2018,county,48,021,Bastrop,7112,,43,H,,971
+2018,county,48,021,Bastrop,7113,,16,G,,255
+2018,county,48,021,Bastrop,7114,,6,J,,501
+2018,county,48,021,Bastrop,7115,,221,G,,4084
+2018,county,48,021,Bastrop,71151,,221,G,,4084
+2018,county,48,029,Bexar,00,,151882,G,,7105547
+2018,county,48,029,Bexar,71,,6981,G,,128109
+2018,county,48,029,Bexar,711,,6230,G,,104434
+2018,county,48,029,Bexar,7111,,448,G,,8694
+2018,county,48,029,Bexar,7112,,1024,G,,12665
+2018,county,48,029,Bexar,7113,,361,G,,11358
+2018,county,48,029,Bexar,7114,,196,G,,6305
+2018,county,48,029,Bexar,7115,,4201,G,,65412
+2018,county,48,029,Bexar,71151,,4201,G,,65412
+2018,county,48,055,Caldwell,00,,3089,G,,149853
+2018,county,48,055,Caldwell,71,,116,G,,1836
+2018,county,48,055,Caldwell,711,,94,G,,1396
+2018,county,48,055,Caldwell,7111,,5,H,,61
+2018,county,48,055,Caldwell,7112,,15,H,,389
+2018,county,48,055,Caldwell,7113,,7,J,,116
+2018,county,48,055,Caldwell,7115,,67,G,,830
+2018,county,48,055,Caldwell,71151,,67,G,,830
+2018,county,48,113,Dallas,00,,252821,G,,14027182
+2018,county,48,113,Dallas,71,,11001,G,,284802
+2018,county,48,113,Dallas,711,,10011,G,,239405
+2018,county,48,113,Dallas,7111,,724,G,,12032
+2018,county,48,113,Dallas,7112,,1421,G,,33815
+2018,county,48,113,Dallas,7113,,675,G,,24968
+2018,county,48,113,Dallas,7114,,400,G,,20544
+2018,county,48,113,Dallas,7115,,6791,G,,148046
+2018,county,48,113,Dallas,71151,,6791,G,,148046
+2018,county,48,201,Harris,00,,456877,G,,22852468
+2018,county,48,201,Harris,71,,15691,G,,352846
+2018,county,48,201,Harris,711,,14104,G,,275821
+2018,county,48,201,Harris,7111,,1169,G,,21794
+2018,county,48,201,Harris,7112,,2203,G,,38108
+2018,county,48,201,Harris,7113,,1064,G,,29717
+2018,county,48,201,Harris,7114,,482,G,,14213
+2018,county,48,201,Harris,7115,,9186,G,,171989
+2018,county,48,201,Harris,71151,,9186,G,,171989
+2018,county,48,209,Hays,00,,19461,G,,962417
+2018,county,48,209,Hays,71,,1320,G,,37464
+2018,county,48,209,Hays,711,,1220,G,,34293
+2018,county,48,209,Hays,7111,,71,G,,1554
+2018,county,48,209,Hays,7112,,167,H,,4626
+2018,county,48,209,Hays,7113,,58,H,,2520
+2018,county,48,209,Hays,7114,,23,H,,751
+2018,county,48,209,Hays,7115,,901,G,,24842
+2018,county,48,209,Hays,71151,,901,G,,24842
+2018,county,48,439,Tarrant,00,,186406,G,,9101740
+2018,county,48,439,Tarrant,71,,8531,G,,191943
+2018,county,48,439,Tarrant,711,,7618,G,,154698
+2018,county,48,439,Tarrant,7111,,516,G,,11278
+2018,county,48,439,Tarrant,7112,,1550,G,,28474
+2018,county,48,439,Tarrant,7113,,541,G,,18600
+2018,county,48,439,Tarrant,7114,,242,H,,7669
+2018,county,48,439,Tarrant,7115,,4769,G,,88677
+2018,county,48,439,Tarrant,71151,,4769,G,,88677
+2018,county,48,453,Travis,00,,132806,G,,7475907
+2018,county,48,453,Travis,71,,10781,G,,310543
+2018,county,48,453,Travis,711,,10010,G,,266440
+2018,county,48,453,Travis,7111,,645,G,,12132
+2018,county,48,453,Travis,7112,,877,G,,22296
+2018,county,48,453,Travis,7113,,576,G,,22346
+2018,county,48,453,Travis,7114,,223,G,,13047
+2018,county,48,453,Travis,7115,,7689,G,,196619
+2018,county,48,453,Travis,71151,,7689,G,,196619
+2018,county,48,491,Williamson,00,,50155,G,,2266950
+2018,county,48,491,Williamson,71,,2949,G,,57330
+2018,county,48,491,Williamson,711,,2645,G,,45688
+2018,county,48,491,Williamson,7111,,132,H,,1883
+2018,county,48,491,Williamson,7112,,593,G,,7557
+2018,county,48,491,Williamson,7113,,139,H,,3319
+2018,county,48,491,Williamson,7114,,48,G,,1490
+2018,county,48,491,Williamson,7115,,1733,G,,31439
+2018,county,48,491,Williamson,71151,,1733,G,,31439
+2018,state,48,000,Texas (statewide),00,,2514301,G,,125732770
+2018,state,48,000,Texas (statewide),71,,105363,G,,2469507
+2018,state,48,000,Texas (statewide),711,,93145,G,,1923028
+2018,state,48,000,Texas (statewide),7111,,6673,G,,130194
+2018,state,48,000,Texas (statewide),7112,,18080,G,,319277
+2018,state,48,000,Texas (statewide),7113,,5839,G,,205605
+2018,state,48,000,Texas (statewide),7114,,2673,G,,100877
+2018,state,48,000,Texas (statewide),7115,,59880,G,,1167075
+2018,state,48,000,Texas (statewide),71151,,59880,G,,1167075
+2019,county,48,021,Bastrop,00,,8032,G,,410908
+2019,county,48,021,Bastrop,71,,399,G,,8439
+2019,county,48,021,Bastrop,711,,360,G,,6954
+2019,county,48,021,Bastrop,7111,,34,G,,850
+2019,county,48,021,Bastrop,7112,,53,H,,1193
+2019,county,48,021,Bastrop,7113,,22,G,,527
+2019,county,48,021,Bastrop,7114,,4,J,,146
+2019,county,48,021,Bastrop,7115,,247,G,,4238
+2019,county,48,021,Bastrop,71151,,247,G,,4238
+2019,county,48,029,Bexar,00,,161301,G,,7453334
+2019,county,48,029,Bexar,71,,7319,G,,143868
+2019,county,48,029,Bexar,711,,6607,G,,112939
+2019,county,48,029,Bexar,7111,,424,H,,7489
+2019,county,48,029,Bexar,7112,,1128,G,,14206
+2019,county,48,029,Bexar,7113,,400,G,,15695
+2019,county,48,029,Bexar,7114,,195,G,,5618
+2019,county,48,029,Bexar,7115,,4460,G,,69931
+2019,county,48,029,Bexar,71151,,4460,G,,69931
+2019,county,48,055,Caldwell,00,,3405,G,,180253
+2019,county,48,055,Caldwell,71,,153,G,,4159
+2019,county,48,055,Caldwell,711,,129,G,,2869
+2019,county,48,055,Caldwell,7111,,9,H,,428
+2019,county,48,055,Caldwell,7112,,16,H,,445
+2019,county,48,055,Caldwell,7113,,5,J,,34
+2019,county,48,055,Caldwell,7115,,98,G,,1955
+2019,county,48,055,Caldwell,71151,,98,G,,1955
+2019,county,48,113,Dallas,00,,263060,G,,14554110
+2019,county,48,113,Dallas,71,,11530,G,,306905
+2019,county,48,113,Dallas,711,,10505,G,,253995
+2019,county,48,113,Dallas,7111,,814,G,,13700
+2019,county,48,113,Dallas,7112,,1455,G,,32503
+2019,county,48,113,Dallas,7113,,743,G,,30809
+2019,county,48,113,Dallas,7114,,423,G,,24728
+2019,county,48,113,Dallas,7115,,7070,G,,152255
+2019,county,48,113,Dallas,71151,,7070,G,,152255
+2019,county,48,201,Harris,00,,480259,G,,24134151
+2019,county,48,201,Harris,71,,16608,G,,386938
+2019,county,48,201,Harris,711,,14937,G,,304319
+2019,county,48,201,Harris,7111,,1244,G,,24768
+2019,county,48,201,Harris,7112,,2264,G,,39304
+2019,county,48,201,Harris,7113,,1153,G,,39342
+2019,county,48,201,Harris,7114,,534,G,,17371
+2019,county,48,201,Harris,7115,,9742,G,,183534
+2019,county,48,201,Harris,71151,,9742,G,,183534
+2019,county,48,209,Hays,00,,21437,G,,1062442
+2019,county,48,209,Hays,71,,1545,G,,44372
+2019,county,48,209,Hays,711,,1428,G,,40124
+2019,county,48,209,Hays,7111,,72,G,,2169
+2019,county,48,209,Hays,7112,,215,G,,4912
+2019,county,48,209,Hays,7113,,81,H,,5048
+2019,county,48,209,Hays,7114,,35,G,,998
+2019,county,48,209,Hays,7115,,1025,G,,26997
+2019,county,48,209,Hays,71151,,1025,G,,26997
+2019,county,48,439,Tarrant,00,,194151,G,,9398198
+2019,county,48,439,Tarrant,71,,8816,G,,205725
+2019,county,48,439,Tarrant,711,,7942,G,,163526
+2019,county,48,439,Tarrant,7111,,559,G,,12260
+2019,county,48,439,Tarrant,7112,,1643,G,,31747
+2019,county,48,439,Tarrant,7113,,557,G,,20852
+2019,county,48,439,Tarrant,7114,,247,G,,7201
+2019,county,48,439,Tarrant,7115,,4936,G,,91466
+2019,county,48,439,Tarrant,71151,,4936,G,,91466
+2019,county,48,453,Travis,00,,138601,G,,7944144
+2019,county,48,453,Travis,71,,11279,G,,333588
+2019,county,48,453,Travis,711,,10474,G,,289116
+2019,county,48,453,Travis,7111,,636,G,,15508
+2019,county,48,453,Travis,7112,,910,G,,19831
+2019,county,48,453,Travis,7113,,671,G,,27241
+2019,county,48,453,Travis,7114,,210,H,,17069
+2019,county,48,453,Travis,7115,,8047,G,,209467
+2019,county,48,453,Travis,71151,,8047,G,,209467
+2019,county,48,491,Williamson,00,,55704,G,,2570635
+2019,county,48,491,Williamson,71,,3407,G,,70474
+2019,county,48,491,Williamson,711,,3078,G,,55661
+2019,county,48,491,Williamson,7111,,161,G,,2552
+2019,county,48,491,Williamson,7112,,687,H,,7676
+2019,county,48,491,Williamson,7113,,149,G,,5223
+2019,county,48,491,Williamson,7114,,58,G,,2304
+2019,county,48,491,Williamson,7115,,2023,G,,37906
+2019,county,48,491,Williamson,71151,,2023,G,,37906
+2019,state,48,000,Texas (statewide),00,,2658054,G,,133580403
+2019,state,48,000,Texas (statewide),71,,112681,G,,2765785
+2019,state,48,000,Texas (statewide),711,,100009,G,,2152440
+2019,state,48,000,Texas (statewide),7111,,7259,G,,148326
+2019,state,48,000,Texas (statewide),7112,,19395,G,,371278
+2019,state,48,000,Texas (statewide),7113,,6512,G,,248887
+2019,state,48,000,Texas (statewide),7114,,2832,G,,122094
+2019,state,48,000,Texas (statewide),7115,,64011,G,,1261855
+2019,state,48,000,Texas (statewide),71151,,64011,G,,1261855
+2020,county,48,021,Bastrop,00,,8397,G,,445184
+2020,county,48,021,Bastrop,71,,352,G,,7296
+2020,county,48,021,Bastrop,711,,315,G,,6365
+2020,county,48,021,Bastrop,7111,,16,H,,755
+2020,county,48,021,Bastrop,7112,,40,G,,912
+2020,county,48,021,Bastrop,7113,,18,G,,372
+2020,county,48,021,Bastrop,7114,,6,J,,141
+2020,county,48,021,Bastrop,7115,,235,G,,4185
+2020,county,48,021,Bastrop,71151,,235,G,,4185
+2020,county,48,029,Bexar,00,,164111,G,,7668853
+2020,county,48,029,Bexar,71,,6312,G,,114063
+2020,county,48,029,Bexar,711,,5746,G,,89092
+2020,county,48,029,Bexar,7111,,344,G,,6123
+2020,county,48,029,Bexar,7112,,876,G,,11313
+2020,county,48,029,Bexar,7113,,307,G,,8277
+2020,county,48,029,Bexar,7114,,171,G,,4519
+2020,county,48,029,Bexar,7115,,4048,G,,58860
+2020,county,48,029,Bexar,71151,,4048,G,,58860
+2020,county,48,055,Caldwell,00,,3521,G,,173849
+2020,county,48,055,Caldwell,71,,126,G,,2248
+2020,county,48,055,Caldwell,711,,108,G,,1987
+2020,county,48,055,Caldwell,7111,,8,G,,100
+2020,county,48,055,Caldwell,7112,,14,G,,466
+2020,county,48,055,Caldwell,7113,,4,G,,172
+2020,county,48,055,Caldwell,7115,,82,G,,1249
+2020,county,48,055,Caldwell,71151,,82,G,,1249
+2020,county,48,113,Dallas,00,,264465,G,,14766490
+2020,county,48,113,Dallas,71,,10121,G,,253207
+2020,county,48,113,Dallas,711,,9274,G,,203855
+2020,county,48,113,Dallas,7111,,601,G,,9640
+2020,county,48,113,Dallas,7112,,1188,G,,26173
+2020,county,48,113,Dallas,7113,,638,G,,19619
+2020,county,48,113,Dallas,7114,,392,G,,17421
+2020,county,48,113,Dallas,7115,,6455,G,,131002
+2020,county,48,113,Dallas,71151,,6455,G,,131002
+2020,county,48,201,Harris,00,,489867,G,,23535156
+2020,county,48,201,Harris,71,,15042,G,,328661
+2020,county,48,201,Harris,711,,13678,G,,269824
+2020,county,48,201,Harris,7111,,953,G,,18595
+2020,county,48,201,Harris,7112,,1847,G,,35976
+2020,county,48,201,Harris,7113,,1142,G,,31683
+2020,county,48,201,Harris,7114,,521,G,,13943
+2020,county,48,201,Harris,7115,,9215,G,,169627
+2020,county,48,201,Harris,71151,,9215,G,,169627
+2020,county,48,209,Hays,00,,21806,G,,1118783
+2020,county,48,209,Hays,71,,1362,G,,36621
+2020,county,48,209,Hays,711,,1254,G,,31090
+2020,county,48,209,Hays,7111,,52,H,,1271
+2020,county,48,209,Hays,7112,,156,G,,6421
+2020,county,48,209,Hays,7113,,66,H,,2000
+2020,county,48,209,Hays,7114,,30,G,,957
+2020,county,48,209,Hays,7115,,950,G,,20441
+2020,county,48,209,Hays,71151,,950,G,,20441
+2020,county,48,439,Tarrant,00,,196851,G,,9417061
+2020,county,48,439,Tarrant,71,,7860,G,,174136
+2020,county,48,439,Tarrant,711,,7112,G,,142771
+2020,county,48,439,Tarrant,7111,,383,G,,8047
+2020,county,48,439,Tarrant,7112,,1323,G,,30802
+2020,county,48,439,Tarrant,7113,,475,G,,15821
+2020,county,48,439,Tarrant,7114,,263,G,,7116
+2020,county,48,439,Tarrant,7115,,4668,G,,80985
+2020,county,48,439,Tarrant,71151,,4668,G,,80985
+2020,county,48,453,Travis,00,,135500,G,,7832765
+2020,county,48,453,Travis,71,,9771,G,,275513
+2020,county,48,453,Travis,711,,9142,G,,236930
+2020,county,48,453,Travis,7111,,442,G,,9128
+2020,county,48,453,Travis,7112,,706,G,,17544
+2020,county,48,453,Travis,7113,,444,G,,13210
+2020,county,48,453,Travis,7114,,199,G,,7943
+2020,county,48,453,Travis,7115,,7351,G,,189105
+2020,county,48,453,Travis,71151,,7351,G,,189105
+2020,county,48,491,Williamson,00,,56184,G,,2631750
+2020,county,48,491,Williamson,71,,3050,G,,68664
+2020,county,48,491,Williamson,711,,2782,G,,56630
+2020,county,48,491,Williamson,7111,,137,G,,2095
+2020,county,48,491,Williamson,7112,,529,G,,8590
+2020,county,48,491,Williamson,7113,,124,G,,4587
+2020,county,48,491,Williamson,7114,,59,H,,1316
+2020,county,48,491,Williamson,7115,,1933,G,,40042
+2020,county,48,491,Williamson,71151,,1933,G,,40042
+2020,state,48,000,Texas (statewide),00,,2699864,G,,134698973
+2020,state,48,000,Texas (statewide),71,,100034,G,,2328575
+2020,state,48,000,Texas (statewide),711,,89241,G,,1823643
+2020,state,48,000,Texas (statewide),7111,,5370,G,,102971
+2020,state,48,000,Texas (statewide),7112,,15817,G,,321732
+2020,state,48,000,Texas (statewide),7113,,5517,G,,171294
+2020,state,48,000,Texas (statewide),7114,,2691,G,,87852
+2020,state,48,000,Texas (statewide),7115,,59846,G,,1139794
+2020,state,48,000,Texas (statewide),71151,,59846,G,,1139794
+2021,county,48,021,Bastrop,00,,8761,G,,505167
+2021,county,48,021,Bastrop,71,,404,G,,9932
+2021,county,48,021,Bastrop,711,,365,G,,8867
+2021,county,48,021,Bastrop,7111,,23,J,,1091
+2021,county,48,021,Bastrop,7112,,42,H,,1347
+2021,county,48,021,Bastrop,7113,,26,G,,690
+2021,county,48,021,Bastrop,7114,,3,H,,324
+2021,county,48,021,Bastrop,7115,,271,G,,5415
+2021,county,48,021,Bastrop,71151,,271,G,,5415
+2021,county,48,029,Bexar,00,,172814,G,,8469518
+2021,county,48,029,Bexar,71,,7406,G,,162229
+2021,county,48,029,Bexar,711,,6697,G,,130243
+2021,county,48,029,Bexar,7111,,383,G,,7503
+2021,county,48,029,Bexar,7112,,1071,G,,15747
+2021,county,48,029,Bexar,7113,,388,G,,17102
+2021,county,48,029,Bexar,7114,,173,G,,6454
+2021,county,48,029,Bexar,7115,,4682,G,,83437
+2021,county,48,029,Bexar,71151,,4682,G,,83437
+2021,county,48,055,Caldwell,00,,3731,G,,198866
+2021,county,48,055,Caldwell,71,,156,G,,4622
+2021,county,48,055,Caldwell,711,,138,G,,4102
+2021,county,48,055,Caldwell,7111,,5,J,,92
+2021,county,48,055,Caldwell,7112,,27,H,,267
+2021,county,48,055,Caldwell,7113,,4,J,,1536
+2021,county,48,055,Caldwell,7115,,101,H,,2204
+2021,county,48,055,Caldwell,71151,,101,H,,2204
+2021,county,48,113,Dallas,00,,277506,G,,16603315
+2021,county,48,113,Dallas,71,,11396,G,,350663
+2021,county,48,113,Dallas,711,,10467,G,,300536
+2021,county,48,113,Dallas,7111,,698,G,,19047
+2021,county,48,113,Dallas,7112,,1331,G,,34272
+2021,county,48,113,Dallas,7113,,748,G,,32404
+2021,county,48,113,Dallas,7114,,498,G,,29549
+2021,county,48,113,Dallas,7115,,7192,G,,185264
+2021,county,48,113,Dallas,71151,,7192,G,,185264
+2021,county,48,201,Harris,00,,518100,G,,26699063
+2021,county,48,201,Harris,71,,17275,G,,465258
+2021,county,48,201,Harris,711,,15670,G,,380010
+2021,county,48,201,Harris,7111,,1029,G,,21598
+2021,county,48,201,Harris,7112,,2195,G,,45880
+2021,county,48,201,Harris,7113,,1667,G,,62356
+2021,county,48,201,Harris,7114,,642,G,,21519
+2021,county,48,201,Harris,7115,,10137,G,,228657
+2021,county,48,201,Harris,71151,,10137,G,,228657
+2021,county,48,209,Hays,00,,23697,G,,1294817
+2021,county,48,209,Hays,71,,1578,G,,44526
+2021,county,48,209,Hays,711,,1460,G,,37664
+2021,county,48,209,Hays,7111,,71,H,,1903
+2021,county,48,209,Hays,7112,,203,G,,4834
+2021,county,48,209,Hays,7113,,88,H,,5433
+2021,county,48,209,Hays,7114,,28,G,,1123
+2021,county,48,209,Hays,7115,,1070,G,,24371
+2021,county,48,209,Hays,71151,,1070,G,,24371
+2021,county,48,439,Tarrant,00,,214630,G,,10729568
+2021,county,48,439,Tarrant,71,,9034,G,,232372
+2021,county,48,439,Tarrant,711,,8170,G,,184375
+2021,county,48,439,Tarrant,7111,,446,G,,11457
+2021,county,48,439,Tarrant,7112,,1603,G,,33572
+2021,county,48,439,Tarrant,7113,,561,G,,27498
+2021,county,48,439,Tarrant,7114,,310,G,,8492
+2021,county,48,439,Tarrant,7115,,5250,G,,103356
+2021,county,48,439,Tarrant,71151,,5250,G,,103356
+2021,county,48,453,Travis,00,,141610,G,,9036383
+2021,county,48,453,Travis,71,,10630,G,,349156
+2021,county,48,453,Travis,711,,9963,G,,301553
+2021,county,48,453,Travis,7111,,493,G,,13854
+2021,county,48,453,Travis,7112,,845,G,,19286
+2021,county,48,453,Travis,7113,,531,G,,16796
+2021,county,48,453,Travis,7114,,200,G,,16094
+2021,county,48,453,Travis,7115,,7894,G,,235523
+2021,county,48,453,Travis,71151,,7894,G,,235523
+2021,county,48,491,Williamson,00,,60737,G,,3144264
+2021,county,48,491,Williamson,71,,3460,G,,91276
+2021,county,48,491,Williamson,711,,3156,G,,77990
+2021,county,48,491,Williamson,7111,,160,H,,3983
+2021,county,48,491,Williamson,7112,,623,G,,13971
+2021,county,48,491,Williamson,7113,,141,G,,5901
+2021,county,48,491,Williamson,7114,,62,H,,2567
+2021,county,48,491,Williamson,7115,,2170,G,,51568
+2021,county,48,491,Williamson,71151,,2170,G,,51568
+2021,state,48,000,Texas (statewide),00,,2865697,G,,152059430
+2021,state,48,000,Texas (statewide),71,,113938,G,,3127060
+2021,state,48,000,Texas (statewide),711,,101922,G,,2471290
+2021,state,48,000,Texas (statewide),7111,,6121,G,,143483
+2021,state,48,000,Texas (statewide),7112,,18697,G,,394461
+2021,state,48,000,Texas (statewide),7113,,6963,G,,285121
+2021,state,48,000,Texas (statewide),7114,,3156,G,,142193
+2021,state,48,000,Texas (statewide),7115,,66985,G,,1506032
+2021,state,48,000,Texas (statewide),71151,,66985,G,,1506032
+2022,county,48,021,Bastrop,00,,9522,G,,619584
+2022,county,48,021,Bastrop,71,,451,G,,11294
+2022,county,48,021,Bastrop,711,,410,G,,9728
+2022,county,48,021,Bastrop,7111,,22,J,,948
+2022,county,48,021,Bastrop,7112,,51,G,,1461
+2022,county,48,021,Bastrop,7113,,27,G,,793
+2022,county,48,021,Bastrop,7114,,4,G,,427
+2022,county,48,021,Bastrop,7115,,306,G,,6099
+2022,county,48,021,Bastrop,71151,,306,G,,6099
+2022,county,48,029,Bexar,00,,184893,G,,9856634
+2022,county,48,029,Bexar,71,,8457,G,,195785
+2022,county,48,029,Bexar,711,,7633,G,,157368
+2022,county,48,029,Bexar,7111,,425,G,,9209
+2022,county,48,029,Bexar,7112,,1202,G,,20715
+2022,county,48,029,Bexar,7113,,460,G,,17067
+2022,county,48,029,Bexar,7114,,238,G,,8651
+2022,county,48,029,Bexar,7115,,5308,G,,101726
+2022,county,48,029,Bexar,71151,,5308,G,,101726
+2022,county,48,055,Caldwell,00,,4095,G,,244319
+2022,county,48,055,Caldwell,71,,182,H,,8572
+2022,county,48,055,Caldwell,711,,161,G,,3500
+2022,county,48,055,Caldwell,7111,,4,J,,256
+2022,county,48,055,Caldwell,7112,,21,H,,300
+2022,county,48,055,Caldwell,7113,,6,J,,92
+2022,county,48,055,Caldwell,7115,,129,G,,2836
+2022,county,48,055,Caldwell,71151,,129,G,,2836
+2022,county,48,113,Dallas,00,,287240,G,,19003751
+2022,county,48,113,Dallas,71,,12091,G,,404480
+2022,county,48,113,Dallas,711,,11050,G,,340366
+2022,county,48,113,Dallas,7111,,751,G,,19054
+2022,county,48,113,Dallas,7112,,1419,G,,49526
+2022,county,48,113,Dallas,7113,,859,G,,39441
+2022,county,48,113,Dallas,7114,,474,G,,27052
+2022,county,48,113,Dallas,7115,,7547,G,,205293
+2022,county,48,113,Dallas,71151,,7547,G,,205293
+2022,county,48,201,Harris,00,,547487,G,,32124257
+2022,county,48,201,Harris,71,,18922,G,,602874
+2022,county,48,201,Harris,711,,17085,G,,485134
+2022,county,48,201,Harris,7111,,1172,G,,31644
+2022,county,48,201,Harris,7112,,2408,G,,59906
+2022,county,48,201,Harris,7113,,1524,G,,96508
+2022,county,48,201,Harris,7114,,755,G,,29093
+2022,county,48,201,Harris,7115,,11226,G,,267983
+2022,county,48,201,Harris,71151,,11226,G,,267983
+2022,county,48,209,Hays,00,,25333,G,,1490026
+2022,county,48,209,Hays,71,,1808,G,,56084
+2022,county,48,209,Hays,711,,1690,G,,50568
+2022,county,48,209,Hays,7111,,90,H,,2120
+2022,county,48,209,Hays,7112,,222,G,,4712
+2022,county,48,209,Hays,7113,,102,G,,7815
+2022,county,48,209,Hays,7114,,34,G,,2218
+2022,county,48,209,Hays,7115,,1242,G,,33703
+2022,county,48,209,Hays,71151,,1242,G,,33703
+2022,county,48,439,Tarrant,00,,223153,G,,12332823
+2022,county,48,439,Tarrant,71,,10040,G,,274012
+2022,county,48,439,Tarrant,711,,9037,G,,215242
+2022,county,48,439,Tarrant,7111,,519,G,,12239
+2022,county,48,439,Tarrant,7112,,1643,G,,30198
+2022,county,48,439,Tarrant,7113,,653,G,,34175
+2022,county,48,439,Tarrant,7114,,319,G,,9768
+2022,county,48,439,Tarrant,7115,,5903,G,,128862
+2022,county,48,439,Tarrant,71151,,5903,G,,128862
+2022,county,48,453,Travis,00,,147031,G,,10206904
+2022,county,48,453,Travis,71,,11875,G,,437004
+2022,county,48,453,Travis,711,,11038,G,,373663
+2022,county,48,453,Travis,7111,,559,G,,16777
+2022,county,48,453,Travis,7112,,941,G,,20098
+2022,county,48,453,Travis,7113,,670,G,,33622
+2022,county,48,453,Travis,7114,,236,G,,20543
+2022,county,48,453,Travis,7115,,8632,G,,282623
+2022,county,48,453,Travis,71151,,8632,G,,282623
+2022,county,48,491,Williamson,00,,64798,G,,3632856
+2022,county,48,491,Williamson,71,,3959,G,,107465
+2022,county,48,491,Williamson,711,,3600,G,,91092
+2022,county,48,491,Williamson,7111,,204,G,,3978
+2022,county,48,491,Williamson,7112,,674,H,,14800
+2022,county,48,491,Williamson,7113,,195,G,,7966
+2022,county,48,491,Williamson,7114,,62,J,,4028
+2022,county,48,491,Williamson,7115,,2465,G,,60320
+2022,county,48,491,Williamson,71151,,2465,G,,60320
+2022,state,48,000,Texas (statewide),00,,3023525,G,,179150880
+2022,state,48,000,Texas (statewide),71,,126451,G,,3832371
+2022,state,48,000,Texas (statewide),711,,112988,G,,3046381
+2022,state,48,000,Texas (statewide),7111,,6952,G,,174447
+2022,state,48,000,Texas (statewide),7112,,20479,G,,482788
+2022,state,48,000,Texas (statewide),7113,,7820,G,,422679
+2022,state,48,000,Texas (statewide),7114,,3585,G,,169258
+2022,state,48,000,Texas (statewide),7115,,74152,G,,1797209
+2022,state,48,000,Texas (statewide),71151,,74152,G,,1797209
+2023,county,48,021,Bastrop,00,,9752,G,,607385
+2023,county,48,021,Bastrop,71,,487,G,,14195
+2023,county,48,021,Bastrop,711,,439,G,,11809
+2023,county,48,021,Bastrop,7111,,28,J,,833
+2023,county,48,021,Bastrop,7112,,50,H,,1579
+2023,county,48,021,Bastrop,7113,,33,G,,870
+2023,county,48,021,Bastrop,7114,,4,H,,418
+2023,county,48,021,Bastrop,7115,,324,G,,8109
+2023,county,48,021,Bastrop,71151,,324,G,,8109
+2023,county,48,029,Bexar,00,,189976,G,,9951676
+2023,county,48,029,Bexar,71,,8610,G,,204882
+2023,county,48,029,Bexar,711,,7792,G,,166739
+2023,county,48,029,Bexar,7111,,444,G,,8618
+2023,county,48,029,Bexar,7112,,1295,G,,22825
+2023,county,48,029,Bexar,7113,,508,G,,21951
+2023,county,48,029,Bexar,7114,,267,G,,6745
+2023,county,48,029,Bexar,7115,,5278,G,,106600
+2023,county,48,029,Bexar,71151,,5278,G,,106600
+2023,county,48,055,Caldwell,00,,4161,G,,268373
+2023,county,48,055,Caldwell,71,,215,G,,5812
+2023,county,48,055,Caldwell,711,,198,G,,5063
+2023,county,48,055,Caldwell,7111,,9,G,,142
+2023,county,48,055,Caldwell,7112,,23,H,,429
+2023,county,48,055,Caldwell,7113,,12,G,,809
+2023,county,48,055,Caldwell,7115,,152,G,,3665
+2023,county,48,055,Caldwell,71151,,152,G,,3665
+2023,county,48,113,Dallas,00,,295167,G,,19246653
+2023,county,48,113,Dallas,71,,12371,G,,438726
+2023,county,48,113,Dallas,711,,11306,G,,373618
+2023,county,48,113,Dallas,7111,,791,G,,19467
+2023,county,48,113,Dallas,7112,,1549,G,,54020
+2023,county,48,113,Dallas,7113,,906,H,,46532
+2023,county,48,113,Dallas,7114,,509,G,,39148
+2023,county,48,113,Dallas,7115,,7551,G,,214451
+2023,county,48,113,Dallas,71151,,7551,G,,214451
+2023,county,48,201,Harris,00,,553646,G,,30496957
+2023,county,48,201,Harris,71,,19062,G,,556985
+2023,county,48,201,Harris,711,,17221,G,,467632
+2023,county,48,201,Harris,7111,,1182,G,,30383
+2023,county,48,201,Harris,7112,,2588,G,,64908
+2023,county,48,201,Harris,7113,,1639,G,,80332
+2023,county,48,201,Harris,7114,,745,G,,32342
+2023,county,48,201,Harris,7115,,11067,G,,259667
+2023,county,48,201,Harris,71151,,11067,G,,259667
+2023,county,48,209,Hays,00,,25793,G,,1487976
+2023,county,48,209,Hays,71,,1854,G,,63763
+2023,county,48,209,Hays,711,,1726,G,,56665
+2023,county,48,209,Hays,7111,,111,H,,2697
+2023,county,48,209,Hays,7112,,224,H,,5876
+2023,county,48,209,Hays,7113,,120,G,,6052
+2023,county,48,209,Hays,7114,,35,G,,1859
+2023,county,48,209,Hays,7115,,1236,G,,40181
+2023,county,48,209,Hays,71151,,1236,G,,40181
+2023,county,48,439,Tarrant,00,,227943,G,,12560363
+2023,county,48,439,Tarrant,71,,10235,G,,291421
+2023,county,48,439,Tarrant,711,,9196,G,,229665
+2023,county,48,439,Tarrant,7111,,579,G,,15244
+2023,county,48,439,Tarrant,7112,,1827,G,,40463
+2023,county,48,439,Tarrant,7113,,700,G,,34426
+2023,county,48,439,Tarrant,7114,,338,G,,16493
+2023,county,48,439,Tarrant,7115,,5752,G,,123039
+2023,county,48,439,Tarrant,71151,,5752,G,,123039
+2023,county,48,453,Travis,00,,152472,G,,10448205
+2023,county,48,453,Travis,71,,12283,G,,467316
+2023,county,48,453,Travis,711,,11439,G,,400232
+2023,county,48,453,Travis,7111,,659,G,,18696
+2023,county,48,453,Travis,7112,,1055,G,,28106
+2023,county,48,453,Travis,7113,,776,G,,37754
+2023,county,48,453,Travis,7114,,253,G,,17021
+2023,county,48,453,Travis,7115,,8696,G,,298655
+2023,county,48,453,Travis,71151,,8696,G,,298655
+2023,county,48,491,Williamson,00,,68073,G,,3753323
+2023,county,48,491,Williamson,71,,4061,G,,126551
+2023,county,48,491,Williamson,711,,3716,G,,106496
+2023,county,48,491,Williamson,7111,,182,G,,4000
+2023,county,48,491,Williamson,7112,,730,H,,14795
+2023,county,48,491,Williamson,7113,,226,G,,8596
+2023,county,48,491,Williamson,7114,,75,H,,4146
+2023,county,48,491,Williamson,7115,,2503,G,,74959
+2023,county,48,491,Williamson,71151,,2503,G,,74959
+2023,state,48,000,Texas (statewide),00,,3092631,G,,178503812
+2023,state,48,000,Texas (statewide),71,,130718,G,,4007074
+2023,state,48,000,Texas (statewide),711,,116803,G,,3192832
+2023,state,48,000,Texas (statewide),7111,,7418,G,,184481
+2023,state,48,000,Texas (statewide),7112,,22252,G,,543050
+2023,state,48,000,Texas (statewide),7113,,8509,G,,415991
+2023,state,48,000,Texas (statewide),7114,,3790,G,,189303
+2023,state,48,000,Texas (statewide),7115,,74834,G,,1860007
+2023,state,48,000,Texas (statewide),71151,,74834,G,,1860007

@@ -1,0 +1,691 @@
+geo,date,value,series
+"Austin, TX",2015-01-31,1227.7823567897267,ZORI_smoothed_seasadj
+"Austin, TX",2015-02-28,1236.1336867715381,ZORI_smoothed_seasadj
+"Austin, TX",2015-03-31,1238.435870469767,ZORI_smoothed_seasadj
+"Austin, TX",2015-04-30,1239.1635538238522,ZORI_smoothed_seasadj
+"Austin, TX",2015-05-31,1241.276685661393,ZORI_smoothed_seasadj
+"Austin, TX",2015-06-30,1246.76392065132,ZORI_smoothed_seasadj
+"Austin, TX",2015-07-31,1253.3569629677677,ZORI_smoothed_seasadj
+"Austin, TX",2015-08-31,1262.0717046244315,ZORI_smoothed_seasadj
+"Austin, TX",2015-09-30,1268.3074335965766,ZORI_smoothed_seasadj
+"Austin, TX",2015-10-31,1275.1693745614875,ZORI_smoothed_seasadj
+"Austin, TX",2015-11-30,1279.5565939093483,ZORI_smoothed_seasadj
+"Austin, TX",2015-12-31,1285.0826330667567,ZORI_smoothed_seasadj
+"Austin, TX",2016-01-31,1287.6575142504505,ZORI_smoothed_seasadj
+"Austin, TX",2016-02-29,1286.3189110694436,ZORI_smoothed_seasadj
+"Austin, TX",2016-03-31,1284.05452210768,ZORI_smoothed_seasadj
+"Austin, TX",2016-04-30,1287.1165589390878,ZORI_smoothed_seasadj
+"Austin, TX",2016-05-31,1291.5606865003126,ZORI_smoothed_seasadj
+"Austin, TX",2016-06-30,1296.5382543439725,ZORI_smoothed_seasadj
+"Austin, TX",2016-07-31,1299.588329625977,ZORI_smoothed_seasadj
+"Austin, TX",2016-08-31,1302.00776214014,ZORI_smoothed_seasadj
+"Austin, TX",2016-09-30,1304.6278861264661,ZORI_smoothed_seasadj
+"Austin, TX",2016-10-31,1305.1352046427855,ZORI_smoothed_seasadj
+"Austin, TX",2016-11-30,1306.2638127234682,ZORI_smoothed_seasadj
+"Austin, TX",2016-12-31,1308.8803554019664,ZORI_smoothed_seasadj
+"Austin, TX",2017-01-31,1313.5918583368652,ZORI_smoothed_seasadj
+"Austin, TX",2017-02-28,1319.9462193964655,ZORI_smoothed_seasadj
+"Austin, TX",2017-03-31,1328.4347718115723,ZORI_smoothed_seasadj
+"Austin, TX",2017-04-30,1332.5771988699169,ZORI_smoothed_seasadj
+"Austin, TX",2017-05-31,1334.3803685715375,ZORI_smoothed_seasadj
+"Austin, TX",2017-06-30,1334.7140985554947,ZORI_smoothed_seasadj
+"Austin, TX",2017-07-31,1334.1519617969054,ZORI_smoothed_seasadj
+"Austin, TX",2017-08-31,1333.3395685821006,ZORI_smoothed_seasadj
+"Austin, TX",2017-09-30,1333.0636375228523,ZORI_smoothed_seasadj
+"Austin, TX",2017-10-31,1334.4021665158455,ZORI_smoothed_seasadj
+"Austin, TX",2017-11-30,1339.589382350453,ZORI_smoothed_seasadj
+"Austin, TX",2017-12-31,1342.253355929427,ZORI_smoothed_seasadj
+"Austin, TX",2018-01-31,1343.661755754391,ZORI_smoothed_seasadj
+"Austin, TX",2018-02-28,1348.3796080314303,ZORI_smoothed_seasadj
+"Austin, TX",2018-03-31,1349.2447073483163,ZORI_smoothed_seasadj
+"Austin, TX",2018-04-30,1354.2153840608164,ZORI_smoothed_seasadj
+"Austin, TX",2018-05-31,1357.087313668499,ZORI_smoothed_seasadj
+"Austin, TX",2018-06-30,1364.840658036823,ZORI_smoothed_seasadj
+"Austin, TX",2018-07-31,1370.646179567936,ZORI_smoothed_seasadj
+"Austin, TX",2018-08-31,1376.058924565741,ZORI_smoothed_seasadj
+"Austin, TX",2018-09-30,1380.8898733153383,ZORI_smoothed_seasadj
+"Austin, TX",2018-10-31,1387.7065763552216,ZORI_smoothed_seasadj
+"Austin, TX",2018-11-30,1396.5556249914664,ZORI_smoothed_seasadj
+"Austin, TX",2018-12-31,1401.5604190167078,ZORI_smoothed_seasadj
+"Austin, TX",2019-01-31,1405.1121848624189,ZORI_smoothed_seasadj
+"Austin, TX",2019-02-28,1408.8481589562339,ZORI_smoothed_seasadj
+"Austin, TX",2019-03-31,1414.6584806338294,ZORI_smoothed_seasadj
+"Austin, TX",2019-04-30,1418.4758254623907,ZORI_smoothed_seasadj
+"Austin, TX",2019-05-31,1424.923436701929,ZORI_smoothed_seasadj
+"Austin, TX",2019-06-30,1428.1398136352593,ZORI_smoothed_seasadj
+"Austin, TX",2019-07-31,1433.8059920140092,ZORI_smoothed_seasadj
+"Austin, TX",2019-08-31,1440.05032174145,ZORI_smoothed_seasadj
+"Austin, TX",2019-09-30,1446.601148800916,ZORI_smoothed_seasadj
+"Austin, TX",2019-10-31,1451.256735426752,ZORI_smoothed_seasadj
+"Austin, TX",2019-11-30,1452.3921559821772,ZORI_smoothed_seasadj
+"Austin, TX",2019-12-31,1457.555842693967,ZORI_smoothed_seasadj
+"Austin, TX",2020-01-31,1464.2358227779534,ZORI_smoothed_seasadj
+"Austin, TX",2020-02-29,1468.9673635112958,ZORI_smoothed_seasadj
+"Austin, TX",2020-03-31,1474.6212125464622,ZORI_smoothed_seasadj
+"Austin, TX",2020-04-30,1467.1042305894669,ZORI_smoothed_seasadj
+"Austin, TX",2020-05-31,1456.1008719073666,ZORI_smoothed_seasadj
+"Austin, TX",2020-06-30,1443.442408890108,ZORI_smoothed_seasadj
+"Austin, TX",2020-07-31,1437.6884158042371,ZORI_smoothed_seasadj
+"Austin, TX",2020-08-31,1434.6995328897633,ZORI_smoothed_seasadj
+"Austin, TX",2020-09-30,1432.5977512163695,ZORI_smoothed_seasadj
+"Austin, TX",2020-10-31,1435.6705770460708,ZORI_smoothed_seasadj
+"Austin, TX",2020-11-30,1444.70139948276,ZORI_smoothed_seasadj
+"Austin, TX",2020-12-31,1454.8552539852835,ZORI_smoothed_seasadj
+"Austin, TX",2021-01-31,1470.4915597929698,ZORI_smoothed_seasadj
+"Austin, TX",2021-02-28,1485.1768281867364,ZORI_smoothed_seasadj
+"Austin, TX",2021-03-31,1503.0167794534314,ZORI_smoothed_seasadj
+"Austin, TX",2021-04-30,1526.118881076536,ZORI_smoothed_seasadj
+"Austin, TX",2021-05-31,1558.82035775461,ZORI_smoothed_seasadj
+"Austin, TX",2021-06-30,1597.7356392506886,ZORI_smoothed_seasadj
+"Austin, TX",2021-07-31,1637.16987937989,ZORI_smoothed_seasadj
+"Austin, TX",2021-08-31,1679.265788831504,ZORI_smoothed_seasadj
+"Austin, TX",2021-09-30,1716.1114707165723,ZORI_smoothed_seasadj
+"Austin, TX",2021-10-31,1742.4742122672433,ZORI_smoothed_seasadj
+"Austin, TX",2021-11-30,1757.591801585352,ZORI_smoothed_seasadj
+"Austin, TX",2021-12-31,1773.4213430541597,ZORI_smoothed_seasadj
+"Austin, TX",2022-01-31,1782.3009144027033,ZORI_smoothed_seasadj
+"Austin, TX",2022-02-28,1796.5204691842966,ZORI_smoothed_seasadj
+"Austin, TX",2022-03-31,1804.4855796400366,ZORI_smoothed_seasadj
+"Austin, TX",2022-04-30,1821.2094188502028,ZORI_smoothed_seasadj
+"Austin, TX",2022-05-31,1832.4363567959958,ZORI_smoothed_seasadj
+"Austin, TX",2022-06-30,1845.7375960721265,ZORI_smoothed_seasadj
+"Austin, TX",2022-07-31,1854.3402925542161,ZORI_smoothed_seasadj
+"Austin, TX",2022-08-31,1853.7128291037347,ZORI_smoothed_seasadj
+"Austin, TX",2022-09-30,1851.5514257837247,ZORI_smoothed_seasadj
+"Austin, TX",2022-10-31,1845.7835150816654,ZORI_smoothed_seasadj
+"Austin, TX",2022-11-30,1841.5323377226644,ZORI_smoothed_seasadj
+"Austin, TX",2022-12-31,1837.8175987036548,ZORI_smoothed_seasadj
+"Austin, TX",2023-01-31,1839.007229874996,ZORI_smoothed_seasadj
+"Austin, TX",2023-02-28,1839.9702929673279,ZORI_smoothed_seasadj
+"Austin, TX",2023-03-31,1844.7580803517058,ZORI_smoothed_seasadj
+"Austin, TX",2023-04-30,1837.8154490359138,ZORI_smoothed_seasadj
+"Austin, TX",2023-05-31,1830.8214994453147,ZORI_smoothed_seasadj
+"Austin, TX",2023-06-30,1816.3837639078681,ZORI_smoothed_seasadj
+"Austin, TX",2023-07-31,1806.742340699688,ZORI_smoothed_seasadj
+"Austin, TX",2023-08-31,1797.652961759697,ZORI_smoothed_seasadj
+"Austin, TX",2023-09-30,1788.5306627915409,ZORI_smoothed_seasadj
+"Austin, TX",2023-10-31,1785.8313243010225,ZORI_smoothed_seasadj
+"Austin, TX",2023-11-30,1786.7239623576338,ZORI_smoothed_seasadj
+"Austin, TX",2023-12-31,1787.0528252390418,ZORI_smoothed_seasadj
+"Austin, TX",2024-01-31,1781.32276211452,ZORI_smoothed_seasadj
+"Austin, TX",2024-02-29,1771.694378397007,ZORI_smoothed_seasadj
+"Austin, TX",2024-03-31,1762.158799968471,ZORI_smoothed_seasadj
+"Austin, TX",2024-04-30,1756.7471924734746,ZORI_smoothed_seasadj
+"Austin, TX",2024-05-31,1751.7464383305853,ZORI_smoothed_seasadj
+"Austin, TX",2024-06-30,1746.2187507695703,ZORI_smoothed_seasadj
+"Austin, TX",2024-07-31,1740.5857924294232,ZORI_smoothed_seasadj
+"Austin, TX",2024-08-31,1733.9623765921187,ZORI_smoothed_seasadj
+"Austin, TX",2024-09-30,1729.1605294931219,ZORI_smoothed_seasadj
+"Austin, TX",2024-10-31,1722.07793709959,ZORI_smoothed_seasadj
+"Austin, TX",2024-11-30,1717.093038829505,ZORI_smoothed_seasadj
+"Austin, TX",2024-12-31,1712.0902287785987,ZORI_smoothed_seasadj
+"Austin, TX",2025-01-31,1708.646294991204,ZORI_smoothed_seasadj
+"Austin, TX",2025-02-28,1704.0757733726819,ZORI_smoothed_seasadj
+"Austin, TX",2025-03-31,1700.4900183208676,ZORI_smoothed_seasadj
+"Austin, TX",2025-04-30,1695.4292581438062,ZORI_smoothed_seasadj
+"Austin, TX",2025-05-31,1692.2631906235663,ZORI_smoothed_seasadj
+"Austin, TX",2025-06-30,1684.7789789116187,ZORI_smoothed_seasadj
+"Austin, TX",2025-07-31,1681.666039102816,ZORI_smoothed_seasadj
+"Austin, TX",2025-08-31,1680.3588730738434,ZORI_smoothed_seasadj
+"Austin, TX",2025-09-30,1678.041836554215,ZORI_smoothed_seasadj
+"Austin, TX",2025-10-31,1675.4391398570508,ZORI_smoothed_seasadj
+"Austin, TX",2025-11-30,1669.8012204263314,ZORI_smoothed_seasadj
+"Austin, TX",2025-12-31,1664.391878594518,ZORI_smoothed_seasadj
+"Austin, TX",2026-01-31,1659.945488681042,ZORI_smoothed_seasadj
+"Austin, TX",2026-02-28,1658.1036130553553,ZORI_smoothed_seasadj
+"Austin, TX",2026-03-31,1655.2477029862196,ZORI_smoothed_seasadj
+"Austin, TX",2026-04-30,1653.7392833455026,ZORI_smoothed_seasadj
+"Austin, TX",2026-05-31,1651.0879328923982,ZORI_smoothed_seasadj
+"Austin, TX",2026-06-30,1653.2886334350471,ZORI_smoothed_seasadj
+"Dallas, TX",2015-01-31,1076.3300016323421,ZORI_smoothed_seasadj
+"Dallas, TX",2015-02-28,1079.9078851257082,ZORI_smoothed_seasadj
+"Dallas, TX",2015-03-31,1083.8097158096875,ZORI_smoothed_seasadj
+"Dallas, TX",2015-04-30,1090.0149423539376,ZORI_smoothed_seasadj
+"Dallas, TX",2015-05-31,1094.3507771666343,ZORI_smoothed_seasadj
+"Dallas, TX",2015-06-30,1099.3117875457215,ZORI_smoothed_seasadj
+"Dallas, TX",2015-07-31,1104.1147032396661,ZORI_smoothed_seasadj
+"Dallas, TX",2015-08-31,1108.656144885358,ZORI_smoothed_seasadj
+"Dallas, TX",2015-09-30,1113.6875564658947,ZORI_smoothed_seasadj
+"Dallas, TX",2015-10-31,1117.783659440267,ZORI_smoothed_seasadj
+"Dallas, TX",2015-11-30,1122.9684245632552,ZORI_smoothed_seasadj
+"Dallas, TX",2015-12-31,1128.2416295112005,ZORI_smoothed_seasadj
+"Dallas, TX",2016-01-31,1132.1622136534384,ZORI_smoothed_seasadj
+"Dallas, TX",2016-02-29,1137.0159330893232,ZORI_smoothed_seasadj
+"Dallas, TX",2016-03-31,1140.5891140065983,ZORI_smoothed_seasadj
+"Dallas, TX",2016-04-30,1145.8992402228207,ZORI_smoothed_seasadj
+"Dallas, TX",2016-05-31,1149.312783460737,ZORI_smoothed_seasadj
+"Dallas, TX",2016-06-30,1153.5943072228613,ZORI_smoothed_seasadj
+"Dallas, TX",2016-07-31,1157.0699664169433,ZORI_smoothed_seasadj
+"Dallas, TX",2016-08-31,1161.980950347091,ZORI_smoothed_seasadj
+"Dallas, TX",2016-09-30,1166.497498368767,ZORI_smoothed_seasadj
+"Dallas, TX",2016-10-31,1172.2038552927122,ZORI_smoothed_seasadj
+"Dallas, TX",2016-11-30,1175.6149895728634,ZORI_smoothed_seasadj
+"Dallas, TX",2016-12-31,1179.6040548698952,ZORI_smoothed_seasadj
+"Dallas, TX",2017-01-31,1185.4728206090972,ZORI_smoothed_seasadj
+"Dallas, TX",2017-02-28,1190.0664068195742,ZORI_smoothed_seasadj
+"Dallas, TX",2017-03-31,1197.5575503496689,ZORI_smoothed_seasadj
+"Dallas, TX",2017-04-30,1201.412498218504,ZORI_smoothed_seasadj
+"Dallas, TX",2017-05-31,1209.2871376568407,ZORI_smoothed_seasadj
+"Dallas, TX",2017-06-30,1212.6086881380113,ZORI_smoothed_seasadj
+"Dallas, TX",2017-07-31,1216.9451701902722,ZORI_smoothed_seasadj
+"Dallas, TX",2017-08-31,1220.3868386074391,ZORI_smoothed_seasadj
+"Dallas, TX",2017-09-30,1224.504545511844,ZORI_smoothed_seasadj
+"Dallas, TX",2017-10-31,1226.3943031267183,ZORI_smoothed_seasadj
+"Dallas, TX",2017-11-30,1231.8058070532622,ZORI_smoothed_seasadj
+"Dallas, TX",2017-12-31,1235.4287100273452,ZORI_smoothed_seasadj
+"Dallas, TX",2018-01-31,1240.7329512578742,ZORI_smoothed_seasadj
+"Dallas, TX",2018-02-28,1244.9230056478498,ZORI_smoothed_seasadj
+"Dallas, TX",2018-03-31,1246.651049618645,ZORI_smoothed_seasadj
+"Dallas, TX",2018-04-30,1249.8355158246268,ZORI_smoothed_seasadj
+"Dallas, TX",2018-05-31,1250.5733242279234,ZORI_smoothed_seasadj
+"Dallas, TX",2018-06-30,1255.3988933726416,ZORI_smoothed_seasadj
+"Dallas, TX",2018-07-31,1259.2938198728327,ZORI_smoothed_seasadj
+"Dallas, TX",2018-08-31,1262.3613621772627,ZORI_smoothed_seasadj
+"Dallas, TX",2018-09-30,1264.6273683360516,ZORI_smoothed_seasadj
+"Dallas, TX",2018-10-31,1270.4388355570718,ZORI_smoothed_seasadj
+"Dallas, TX",2018-11-30,1275.579135892675,ZORI_smoothed_seasadj
+"Dallas, TX",2018-12-31,1282.214616624752,ZORI_smoothed_seasadj
+"Dallas, TX",2019-01-31,1284.7683132094476,ZORI_smoothed_seasadj
+"Dallas, TX",2019-02-28,1286.9518628331073,ZORI_smoothed_seasadj
+"Dallas, TX",2019-03-31,1291.268546192794,ZORI_smoothed_seasadj
+"Dallas, TX",2019-04-30,1295.6905279478694,ZORI_smoothed_seasadj
+"Dallas, TX",2019-05-31,1300.3292210344136,ZORI_smoothed_seasadj
+"Dallas, TX",2019-06-30,1303.7250540790858,ZORI_smoothed_seasadj
+"Dallas, TX",2019-07-31,1307.366609596059,ZORI_smoothed_seasadj
+"Dallas, TX",2019-08-31,1311.6247499820902,ZORI_smoothed_seasadj
+"Dallas, TX",2019-09-30,1316.069534714878,ZORI_smoothed_seasadj
+"Dallas, TX",2019-10-31,1318.4655238866412,ZORI_smoothed_seasadj
+"Dallas, TX",2019-11-30,1319.9427960942603,ZORI_smoothed_seasadj
+"Dallas, TX",2019-12-31,1320.868482867253,ZORI_smoothed_seasadj
+"Dallas, TX",2020-01-31,1323.59631632868,ZORI_smoothed_seasadj
+"Dallas, TX",2020-02-29,1327.226001928582,ZORI_smoothed_seasadj
+"Dallas, TX",2020-03-31,1333.0571575310278,ZORI_smoothed_seasadj
+"Dallas, TX",2020-04-30,1331.8030177396304,ZORI_smoothed_seasadj
+"Dallas, TX",2020-05-31,1328.3971482273037,ZORI_smoothed_seasadj
+"Dallas, TX",2020-06-30,1324.0118392431093,ZORI_smoothed_seasadj
+"Dallas, TX",2020-07-31,1323.8708141077873,ZORI_smoothed_seasadj
+"Dallas, TX",2020-08-31,1325.8667345496558,ZORI_smoothed_seasadj
+"Dallas, TX",2020-09-30,1330.7585563434877,ZORI_smoothed_seasadj
+"Dallas, TX",2020-10-31,1337.6905952033962,ZORI_smoothed_seasadj
+"Dallas, TX",2020-11-30,1344.9401996477973,ZORI_smoothed_seasadj
+"Dallas, TX",2020-12-31,1354.4151841718788,ZORI_smoothed_seasadj
+"Dallas, TX",2021-01-31,1365.5479348456302,ZORI_smoothed_seasadj
+"Dallas, TX",2021-02-28,1377.259573555231,ZORI_smoothed_seasadj
+"Dallas, TX",2021-03-31,1387.0302166085057,ZORI_smoothed_seasadj
+"Dallas, TX",2021-04-30,1401.8922561733107,ZORI_smoothed_seasadj
+"Dallas, TX",2021-05-31,1420.5635795109804,ZORI_smoothed_seasadj
+"Dallas, TX",2021-06-30,1444.2328428152437,ZORI_smoothed_seasadj
+"Dallas, TX",2021-07-31,1469.007353896018,ZORI_smoothed_seasadj
+"Dallas, TX",2021-08-31,1496.0858796926204,ZORI_smoothed_seasadj
+"Dallas, TX",2021-09-30,1521.3218492230392,ZORI_smoothed_seasadj
+"Dallas, TX",2021-10-31,1542.8427856980477,ZORI_smoothed_seasadj
+"Dallas, TX",2021-11-30,1561.708502005566,ZORI_smoothed_seasadj
+"Dallas, TX",2021-12-31,1579.0537897366598,ZORI_smoothed_seasadj
+"Dallas, TX",2022-01-31,1593.4905057388933,ZORI_smoothed_seasadj
+"Dallas, TX",2022-02-28,1606.2802465708517,ZORI_smoothed_seasadj
+"Dallas, TX",2022-03-31,1616.8043726990222,ZORI_smoothed_seasadj
+"Dallas, TX",2022-04-30,1631.5814101348474,ZORI_smoothed_seasadj
+"Dallas, TX",2022-05-31,1645.9669940429753,ZORI_smoothed_seasadj
+"Dallas, TX",2022-06-30,1663.1008415006013,ZORI_smoothed_seasadj
+"Dallas, TX",2022-07-31,1673.3340784136738,ZORI_smoothed_seasadj
+"Dallas, TX",2022-08-31,1676.9966749986797,ZORI_smoothed_seasadj
+"Dallas, TX",2022-09-30,1675.7909961843973,ZORI_smoothed_seasadj
+"Dallas, TX",2022-10-31,1672.198534898284,ZORI_smoothed_seasadj
+"Dallas, TX",2022-11-30,1672.159065261616,ZORI_smoothed_seasadj
+"Dallas, TX",2022-12-31,1673.5657857238848,ZORI_smoothed_seasadj
+"Dallas, TX",2023-01-31,1676.5487783286346,ZORI_smoothed_seasadj
+"Dallas, TX",2023-02-28,1679.3582130020588,ZORI_smoothed_seasadj
+"Dallas, TX",2023-03-31,1685.8693584173266,ZORI_smoothed_seasadj
+"Dallas, TX",2023-04-30,1685.0427635077574,ZORI_smoothed_seasadj
+"Dallas, TX",2023-05-31,1684.7764062403287,ZORI_smoothed_seasadj
+"Dallas, TX",2023-06-30,1677.81063789144,ZORI_smoothed_seasadj
+"Dallas, TX",2023-07-31,1678.1510559567128,ZORI_smoothed_seasadj
+"Dallas, TX",2023-08-31,1676.6295665920795,ZORI_smoothed_seasadj
+"Dallas, TX",2023-09-30,1677.3786786754652,ZORI_smoothed_seasadj
+"Dallas, TX",2023-10-31,1677.7929939733328,ZORI_smoothed_seasadj
+"Dallas, TX",2023-11-30,1679.2696568087526,ZORI_smoothed_seasadj
+"Dallas, TX",2023-12-31,1678.5398840581488,ZORI_smoothed_seasadj
+"Dallas, TX",2024-01-31,1678.142790476006,ZORI_smoothed_seasadj
+"Dallas, TX",2024-02-29,1675.4804222586513,ZORI_smoothed_seasadj
+"Dallas, TX",2024-03-31,1672.6237434462244,ZORI_smoothed_seasadj
+"Dallas, TX",2024-04-30,1670.8857405666347,ZORI_smoothed_seasadj
+"Dallas, TX",2024-05-31,1670.4570942270157,ZORI_smoothed_seasadj
+"Dallas, TX",2024-06-30,1671.0951195739985,ZORI_smoothed_seasadj
+"Dallas, TX",2024-07-31,1671.523421207247,ZORI_smoothed_seasadj
+"Dallas, TX",2024-08-31,1672.3095063237126,ZORI_smoothed_seasadj
+"Dallas, TX",2024-09-30,1671.724997967554,ZORI_smoothed_seasadj
+"Dallas, TX",2024-10-31,1672.7054809022675,ZORI_smoothed_seasadj
+"Dallas, TX",2024-11-30,1671.5329969540721,ZORI_smoothed_seasadj
+"Dallas, TX",2024-12-31,1671.6109084981335,ZORI_smoothed_seasadj
+"Dallas, TX",2025-01-31,1671.6878273159734,ZORI_smoothed_seasadj
+"Dallas, TX",2025-02-28,1673.8842993924702,ZORI_smoothed_seasadj
+"Dallas, TX",2025-03-31,1676.396739741769,ZORI_smoothed_seasadj
+"Dallas, TX",2025-04-30,1677.6367597510598,ZORI_smoothed_seasadj
+"Dallas, TX",2025-05-31,1676.651409581485,ZORI_smoothed_seasadj
+"Dallas, TX",2025-06-30,1674.4363234495925,ZORI_smoothed_seasadj
+"Dallas, TX",2025-07-31,1673.05643082569,ZORI_smoothed_seasadj
+"Dallas, TX",2025-08-31,1673.1551555405963,ZORI_smoothed_seasadj
+"Dallas, TX",2025-09-30,1673.9539753683841,ZORI_smoothed_seasadj
+"Dallas, TX",2025-10-31,1674.0569436142828,ZORI_smoothed_seasadj
+"Dallas, TX",2025-11-30,1674.473631448339,ZORI_smoothed_seasadj
+"Dallas, TX",2025-12-31,1674.5548738628133,ZORI_smoothed_seasadj
+"Dallas, TX",2026-01-31,1674.0877572202382,ZORI_smoothed_seasadj
+"Dallas, TX",2026-02-28,1673.0020139785518,ZORI_smoothed_seasadj
+"Dallas, TX",2026-03-31,1671.0168142830669,ZORI_smoothed_seasadj
+"Dallas, TX",2026-04-30,1670.6833522656366,ZORI_smoothed_seasadj
+"Dallas, TX",2026-05-31,1671.2768519725907,ZORI_smoothed_seasadj
+"Dallas, TX",2026-06-30,1673.4478800926252,ZORI_smoothed_seasadj
+"Houston, TX",2015-01-31,1223.0478433639623,ZORI_smoothed_seasadj
+"Houston, TX",2015-02-28,1225.4317973271043,ZORI_smoothed_seasadj
+"Houston, TX",2015-03-31,1229.864389364579,ZORI_smoothed_seasadj
+"Houston, TX",2015-04-30,1232.601474979385,ZORI_smoothed_seasadj
+"Houston, TX",2015-05-31,1234.160776218933,ZORI_smoothed_seasadj
+"Houston, TX",2015-06-30,1236.4002890601105,ZORI_smoothed_seasadj
+"Houston, TX",2015-07-31,1238.7759275282651,ZORI_smoothed_seasadj
+"Houston, TX",2015-08-31,1242.7778820403864,ZORI_smoothed_seasadj
+"Houston, TX",2015-09-30,1244.120127095977,ZORI_smoothed_seasadj
+"Houston, TX",2015-10-31,1245.5034207753843,ZORI_smoothed_seasadj
+"Houston, TX",2015-11-30,1246.8582604239375,ZORI_smoothed_seasadj
+"Houston, TX",2015-12-31,1247.7798103657908,ZORI_smoothed_seasadj
+"Houston, TX",2016-01-31,1249.9237000798892,ZORI_smoothed_seasadj
+"Houston, TX",2016-02-29,1249.6844020387448,ZORI_smoothed_seasadj
+"Houston, TX",2016-03-31,1251.595142431018,ZORI_smoothed_seasadj
+"Houston, TX",2016-04-30,1250.395336415782,ZORI_smoothed_seasadj
+"Houston, TX",2016-05-31,1248.7269219421885,ZORI_smoothed_seasadj
+"Houston, TX",2016-06-30,1247.456030979578,ZORI_smoothed_seasadj
+"Houston, TX",2016-07-31,1248.119121499738,ZORI_smoothed_seasadj
+"Houston, TX",2016-08-31,1249.3446832620464,ZORI_smoothed_seasadj
+"Houston, TX",2016-09-30,1246.848334534284,ZORI_smoothed_seasadj
+"Houston, TX",2016-10-31,1245.3551382413198,ZORI_smoothed_seasadj
+"Houston, TX",2016-11-30,1241.9254638062225,ZORI_smoothed_seasadj
+"Houston, TX",2016-12-31,1242.4871619103276,ZORI_smoothed_seasadj
+"Houston, TX",2017-01-31,1243.9586944880305,ZORI_smoothed_seasadj
+"Houston, TX",2017-02-28,1249.6821506052386,ZORI_smoothed_seasadj
+"Houston, TX",2017-03-31,1254.8790988741127,ZORI_smoothed_seasadj
+"Houston, TX",2017-04-30,1256.0891586397845,ZORI_smoothed_seasadj
+"Houston, TX",2017-05-31,1259.8385855449803,ZORI_smoothed_seasadj
+"Houston, TX",2017-06-30,1259.2379227862855,ZORI_smoothed_seasadj
+"Houston, TX",2017-07-31,1260.8138075711522,ZORI_smoothed_seasadj
+"Houston, TX",2017-08-31,1259.8797637575478,ZORI_smoothed_seasadj
+"Houston, TX",2017-09-30,1270.3182254594988,ZORI_smoothed_seasadj
+"Houston, TX",2017-10-31,1280.274690547331,ZORI_smoothed_seasadj
+"Houston, TX",2017-11-30,1292.0408258814718,ZORI_smoothed_seasadj
+"Houston, TX",2017-12-31,1298.6059136960857,ZORI_smoothed_seasadj
+"Houston, TX",2018-01-31,1302.4762157114278,ZORI_smoothed_seasadj
+"Houston, TX",2018-02-28,1307.2881035003331,ZORI_smoothed_seasadj
+"Houston, TX",2018-03-31,1306.2809817741934,ZORI_smoothed_seasadj
+"Houston, TX",2018-04-30,1309.904293995234,ZORI_smoothed_seasadj
+"Houston, TX",2018-05-31,1308.376729617925,ZORI_smoothed_seasadj
+"Houston, TX",2018-06-30,1311.4452963906847,ZORI_smoothed_seasadj
+"Houston, TX",2018-07-31,1312.3945713883581,ZORI_smoothed_seasadj
+"Houston, TX",2018-08-31,1315.2225548001966,ZORI_smoothed_seasadj
+"Houston, TX",2018-09-30,1315.5820668095976,ZORI_smoothed_seasadj
+"Houston, TX",2018-10-31,1317.2969985241996,ZORI_smoothed_seasadj
+"Houston, TX",2018-11-30,1319.9717593159617,ZORI_smoothed_seasadj
+"Houston, TX",2018-12-31,1320.0746681097203,ZORI_smoothed_seasadj
+"Houston, TX",2019-01-31,1321.1242937491936,ZORI_smoothed_seasadj
+"Houston, TX",2019-02-28,1318.482000434453,ZORI_smoothed_seasadj
+"Houston, TX",2019-03-31,1322.2394332173876,ZORI_smoothed_seasadj
+"Houston, TX",2019-04-30,1325.0816951826357,ZORI_smoothed_seasadj
+"Houston, TX",2019-05-31,1330.698983553053,ZORI_smoothed_seasadj
+"Houston, TX",2019-06-30,1334.788825538036,ZORI_smoothed_seasadj
+"Houston, TX",2019-07-31,1339.0043712346496,ZORI_smoothed_seasadj
+"Houston, TX",2019-08-31,1342.8477439671208,ZORI_smoothed_seasadj
+"Houston, TX",2019-09-30,1343.8120654385325,ZORI_smoothed_seasadj
+"Houston, TX",2019-10-31,1343.9390999796499,ZORI_smoothed_seasadj
+"Houston, TX",2019-11-30,1343.0542600098731,ZORI_smoothed_seasadj
+"Houston, TX",2019-12-31,1346.0996085444153,ZORI_smoothed_seasadj
+"Houston, TX",2020-01-31,1349.7216827150125,ZORI_smoothed_seasadj
+"Houston, TX",2020-02-29,1355.0414983501698,ZORI_smoothed_seasadj
+"Houston, TX",2020-03-31,1360.9175834297794,ZORI_smoothed_seasadj
+"Houston, TX",2020-04-30,1356.9125122210482,ZORI_smoothed_seasadj
+"Houston, TX",2020-05-31,1349.0541350966832,ZORI_smoothed_seasadj
+"Houston, TX",2020-06-30,1341.2622556931433,ZORI_smoothed_seasadj
+"Houston, TX",2020-07-31,1341.6639016856966,ZORI_smoothed_seasadj
+"Houston, TX",2020-08-31,1344.7510404136403,ZORI_smoothed_seasadj
+"Houston, TX",2020-09-30,1348.3151418571117,ZORI_smoothed_seasadj
+"Houston, TX",2020-10-31,1353.7403185947899,ZORI_smoothed_seasadj
+"Houston, TX",2020-11-30,1359.8236395760243,ZORI_smoothed_seasadj
+"Houston, TX",2020-12-31,1364.2967265900393,ZORI_smoothed_seasadj
+"Houston, TX",2021-01-31,1371.006146932335,ZORI_smoothed_seasadj
+"Houston, TX",2021-02-28,1374.1629261891555,ZORI_smoothed_seasadj
+"Houston, TX",2021-03-31,1381.2917397207807,ZORI_smoothed_seasadj
+"Houston, TX",2021-04-30,1392.1095921492688,ZORI_smoothed_seasadj
+"Houston, TX",2021-05-31,1409.9089822763988,ZORI_smoothed_seasadj
+"Houston, TX",2021-06-30,1431.017595170585,ZORI_smoothed_seasadj
+"Houston, TX",2021-07-31,1449.815484148665,ZORI_smoothed_seasadj
+"Houston, TX",2021-08-31,1469.0811813696505,ZORI_smoothed_seasadj
+"Houston, TX",2021-09-30,1485.653730864655,ZORI_smoothed_seasadj
+"Houston, TX",2021-10-31,1498.5769897344453,ZORI_smoothed_seasadj
+"Houston, TX",2021-11-30,1509.166666448088,ZORI_smoothed_seasadj
+"Houston, TX",2021-12-31,1518.690746504648,ZORI_smoothed_seasadj
+"Houston, TX",2022-01-31,1526.8628033711116,ZORI_smoothed_seasadj
+"Houston, TX",2022-02-28,1537.17675304584,ZORI_smoothed_seasadj
+"Houston, TX",2022-03-31,1544.457839622483,ZORI_smoothed_seasadj
+"Houston, TX",2022-04-30,1555.5985609287545,ZORI_smoothed_seasadj
+"Houston, TX",2022-05-31,1562.1058991070972,ZORI_smoothed_seasadj
+"Houston, TX",2022-06-30,1570.203568592031,ZORI_smoothed_seasadj
+"Houston, TX",2022-07-31,1574.9218867389152,ZORI_smoothed_seasadj
+"Houston, TX",2022-08-31,1578.3630706948277,ZORI_smoothed_seasadj
+"Houston, TX",2022-09-30,1580.1452799726508,ZORI_smoothed_seasadj
+"Houston, TX",2022-10-31,1581.591757815567,ZORI_smoothed_seasadj
+"Houston, TX",2022-11-30,1582.6057282470774,ZORI_smoothed_seasadj
+"Houston, TX",2022-12-31,1586.5330906229233,ZORI_smoothed_seasadj
+"Houston, TX",2023-01-31,1591.1368804879335,ZORI_smoothed_seasadj
+"Houston, TX",2023-02-28,1597.9425377879177,ZORI_smoothed_seasadj
+"Houston, TX",2023-03-31,1605.8741435308984,ZORI_smoothed_seasadj
+"Houston, TX",2023-04-30,1608.0536323238066,ZORI_smoothed_seasadj
+"Houston, TX",2023-05-31,1611.23941038324,ZORI_smoothed_seasadj
+"Houston, TX",2023-06-30,1611.6227914952344,ZORI_smoothed_seasadj
+"Houston, TX",2023-07-31,1613.7299681301565,ZORI_smoothed_seasadj
+"Houston, TX",2023-08-31,1613.4596860279028,ZORI_smoothed_seasadj
+"Houston, TX",2023-09-30,1612.2305412015428,ZORI_smoothed_seasadj
+"Houston, TX",2023-10-31,1613.476719688981,ZORI_smoothed_seasadj
+"Houston, TX",2023-11-30,1616.3776128867971,ZORI_smoothed_seasadj
+"Houston, TX",2023-12-31,1619.9556220026955,ZORI_smoothed_seasadj
+"Houston, TX",2024-01-31,1623.471644209217,ZORI_smoothed_seasadj
+"Houston, TX",2024-02-29,1625.7795240573626,ZORI_smoothed_seasadj
+"Houston, TX",2024-03-31,1625.5324188292755,ZORI_smoothed_seasadj
+"Houston, TX",2024-04-30,1628.3030647486485,ZORI_smoothed_seasadj
+"Houston, TX",2024-05-31,1631.0378643577428,ZORI_smoothed_seasadj
+"Houston, TX",2024-06-30,1635.7824639344612,ZORI_smoothed_seasadj
+"Houston, TX",2024-07-31,1637.3576776938435,ZORI_smoothed_seasadj
+"Houston, TX",2024-08-31,1640.3602584743453,ZORI_smoothed_seasadj
+"Houston, TX",2024-09-30,1642.9252377307855,ZORI_smoothed_seasadj
+"Houston, TX",2024-10-31,1646.350100786992,ZORI_smoothed_seasadj
+"Houston, TX",2024-11-30,1648.3340954102782,ZORI_smoothed_seasadj
+"Houston, TX",2024-12-31,1649.1715645010547,ZORI_smoothed_seasadj
+"Houston, TX",2025-01-31,1650.4490490164985,ZORI_smoothed_seasadj
+"Houston, TX",2025-02-28,1653.1750044520275,ZORI_smoothed_seasadj
+"Houston, TX",2025-03-31,1657.1133276266198,ZORI_smoothed_seasadj
+"Houston, TX",2025-04-30,1657.457052972955,ZORI_smoothed_seasadj
+"Houston, TX",2025-05-31,1654.6683484768503,ZORI_smoothed_seasadj
+"Houston, TX",2025-06-30,1647.730212317749,ZORI_smoothed_seasadj
+"Houston, TX",2025-07-31,1648.2094887028245,ZORI_smoothed_seasadj
+"Houston, TX",2025-08-31,1648.6604146224256,ZORI_smoothed_seasadj
+"Houston, TX",2025-09-30,1649.997446559152,ZORI_smoothed_seasadj
+"Houston, TX",2025-10-31,1649.391822582211,ZORI_smoothed_seasadj
+"Houston, TX",2025-11-30,1648.9412613733136,ZORI_smoothed_seasadj
+"Houston, TX",2025-12-31,1648.2099259761967,ZORI_smoothed_seasadj
+"Houston, TX",2026-01-31,1646.8712945577686,ZORI_smoothed_seasadj
+"Houston, TX",2026-02-28,1644.334122577004,ZORI_smoothed_seasadj
+"Houston, TX",2026-03-31,1641.8496683223052,ZORI_smoothed_seasadj
+"Houston, TX",2026-04-30,1641.5574527896679,ZORI_smoothed_seasadj
+"Houston, TX",2026-05-31,1643.4752039871655,ZORI_smoothed_seasadj
+"Houston, TX",2026-06-30,1647.9509395365067,ZORI_smoothed_seasadj
+"Nashville, TN",2015-01-31,1143.0857680648667,ZORI_smoothed_seasadj
+"Nashville, TN",2015-02-28,1145.2052563085037,ZORI_smoothed_seasadj
+"Nashville, TN",2015-03-31,1153.912171786834,ZORI_smoothed_seasadj
+"Nashville, TN",2015-04-30,1158.0672200452568,ZORI_smoothed_seasadj
+"Nashville, TN",2015-05-31,1164.958380226183,ZORI_smoothed_seasadj
+"Nashville, TN",2015-06-30,1169.8627106225597,ZORI_smoothed_seasadj
+"Nashville, TN",2015-07-31,1176.3441839896423,ZORI_smoothed_seasadj
+"Nashville, TN",2015-08-31,1180.2682723843534,ZORI_smoothed_seasadj
+"Nashville, TN",2015-09-30,1184.5107675894226,ZORI_smoothed_seasadj
+"Nashville, TN",2015-10-31,1191.5307586070871,ZORI_smoothed_seasadj
+"Nashville, TN",2015-11-30,1196.0287879026282,ZORI_smoothed_seasadj
+"Nashville, TN",2015-12-31,1203.5386427338956,ZORI_smoothed_seasadj
+"Nashville, TN",2016-01-31,1209.3914797471027,ZORI_smoothed_seasadj
+"Nashville, TN",2016-02-29,1216.5694505133667,ZORI_smoothed_seasadj
+"Nashville, TN",2016-03-31,1219.325386810319,ZORI_smoothed_seasadj
+"Nashville, TN",2016-04-30,1221.160783297943,ZORI_smoothed_seasadj
+"Nashville, TN",2016-05-31,1225.9453544049315,ZORI_smoothed_seasadj
+"Nashville, TN",2016-06-30,1233.762893250212,ZORI_smoothed_seasadj
+"Nashville, TN",2016-07-31,1237.2447704263543,ZORI_smoothed_seasadj
+"Nashville, TN",2016-08-31,1243.2631435410888,ZORI_smoothed_seasadj
+"Nashville, TN",2016-09-30,1246.907739159673,ZORI_smoothed_seasadj
+"Nashville, TN",2016-10-31,1251.6354779635024,ZORI_smoothed_seasadj
+"Nashville, TN",2016-11-30,1253.4757918731764,ZORI_smoothed_seasadj
+"Nashville, TN",2016-12-31,1257.986513285987,ZORI_smoothed_seasadj
+"Nashville, TN",2017-01-31,1262.8900256460145,ZORI_smoothed_seasadj
+"Nashville, TN",2017-02-28,1270.2756203570966,ZORI_smoothed_seasadj
+"Nashville, TN",2017-03-31,1278.5575563145965,ZORI_smoothed_seasadj
+"Nashville, TN",2017-04-30,1286.4997984246102,ZORI_smoothed_seasadj
+"Nashville, TN",2017-05-31,1289.2454513256869,ZORI_smoothed_seasadj
+"Nashville, TN",2017-06-30,1287.3754278332308,ZORI_smoothed_seasadj
+"Nashville, TN",2017-07-31,1289.9077886176035,ZORI_smoothed_seasadj
+"Nashville, TN",2017-08-31,1294.7169138132278,ZORI_smoothed_seasadj
+"Nashville, TN",2017-09-30,1301.6831527774232,ZORI_smoothed_seasadj
+"Nashville, TN",2017-10-31,1301.1146775035515,ZORI_smoothed_seasadj
+"Nashville, TN",2017-11-30,1302.6080280230901,ZORI_smoothed_seasadj
+"Nashville, TN",2017-12-31,1304.0041772745458,ZORI_smoothed_seasadj
+"Nashville, TN",2018-01-31,1312.2619609145943,ZORI_smoothed_seasadj
+"Nashville, TN",2018-02-28,1316.8664338566557,ZORI_smoothed_seasadj
+"Nashville, TN",2018-03-31,1316.1331676088414,ZORI_smoothed_seasadj
+"Nashville, TN",2018-04-30,1316.3744725800334,ZORI_smoothed_seasadj
+"Nashville, TN",2018-05-31,1317.1018156243633,ZORI_smoothed_seasadj
+"Nashville, TN",2018-06-30,1324.7240605476331,ZORI_smoothed_seasadj
+"Nashville, TN",2018-07-31,1326.8079651362116,ZORI_smoothed_seasadj
+"Nashville, TN",2018-08-31,1330.860541401871,ZORI_smoothed_seasadj
+"Nashville, TN",2018-09-30,1331.6292052043864,ZORI_smoothed_seasadj
+"Nashville, TN",2018-10-31,1343.722214301065,ZORI_smoothed_seasadj
+"Nashville, TN",2018-11-30,1347.3318043995725,ZORI_smoothed_seasadj
+"Nashville, TN",2018-12-31,1352.6740021928338,ZORI_smoothed_seasadj
+"Nashville, TN",2019-01-31,1347.9847335655752,ZORI_smoothed_seasadj
+"Nashville, TN",2019-02-28,1352.0033266643359,ZORI_smoothed_seasadj
+"Nashville, TN",2019-03-31,1357.7548876760488,ZORI_smoothed_seasadj
+"Nashville, TN",2019-04-30,1363.28974949567,ZORI_smoothed_seasadj
+"Nashville, TN",2019-05-31,1370.492006631586,ZORI_smoothed_seasadj
+"Nashville, TN",2019-06-30,1374.1261285497292,ZORI_smoothed_seasadj
+"Nashville, TN",2019-07-31,1380.9186159381545,ZORI_smoothed_seasadj
+"Nashville, TN",2019-08-31,1384.6964419275398,ZORI_smoothed_seasadj
+"Nashville, TN",2019-09-30,1390.586752672033,ZORI_smoothed_seasadj
+"Nashville, TN",2019-10-31,1391.171094949461,ZORI_smoothed_seasadj
+"Nashville, TN",2019-11-30,1398.2582894807424,ZORI_smoothed_seasadj
+"Nashville, TN",2019-12-31,1403.6342262693413,ZORI_smoothed_seasadj
+"Nashville, TN",2020-01-31,1413.6622550930206,ZORI_smoothed_seasadj
+"Nashville, TN",2020-02-29,1418.4226553145909,ZORI_smoothed_seasadj
+"Nashville, TN",2020-03-31,1419.9938947881406,ZORI_smoothed_seasadj
+"Nashville, TN",2020-04-30,1419.6998615712769,ZORI_smoothed_seasadj
+"Nashville, TN",2020-05-31,1415.5212911121262,ZORI_smoothed_seasadj
+"Nashville, TN",2020-06-30,1412.609710058691,ZORI_smoothed_seasadj
+"Nashville, TN",2020-07-31,1410.0556448940702,ZORI_smoothed_seasadj
+"Nashville, TN",2020-08-31,1413.5227049511839,ZORI_smoothed_seasadj
+"Nashville, TN",2020-09-30,1414.3655671483646,ZORI_smoothed_seasadj
+"Nashville, TN",2020-10-31,1421.574464523113,ZORI_smoothed_seasadj
+"Nashville, TN",2020-11-30,1424.4779063457224,ZORI_smoothed_seasadj
+"Nashville, TN",2020-12-31,1431.7130435884774,ZORI_smoothed_seasadj
+"Nashville, TN",2021-01-31,1437.975736805449,ZORI_smoothed_seasadj
+"Nashville, TN",2021-02-28,1449.0888996826627,ZORI_smoothed_seasadj
+"Nashville, TN",2021-03-31,1459.646547182928,ZORI_smoothed_seasadj
+"Nashville, TN",2021-04-30,1476.356966379857,ZORI_smoothed_seasadj
+"Nashville, TN",2021-05-31,1497.2632916818973,ZORI_smoothed_seasadj
+"Nashville, TN",2021-06-30,1523.314284465699,ZORI_smoothed_seasadj
+"Nashville, TN",2021-07-31,1552.946301876757,ZORI_smoothed_seasadj
+"Nashville, TN",2021-08-31,1585.173155864571,ZORI_smoothed_seasadj
+"Nashville, TN",2021-09-30,1617.8238821514665,ZORI_smoothed_seasadj
+"Nashville, TN",2021-10-31,1643.9114264814652,ZORI_smoothed_seasadj
+"Nashville, TN",2021-11-30,1662.0221450166155,ZORI_smoothed_seasadj
+"Nashville, TN",2021-12-31,1681.321443911233,ZORI_smoothed_seasadj
+"Nashville, TN",2022-01-31,1694.5293230385998,ZORI_smoothed_seasadj
+"Nashville, TN",2022-02-28,1711.017667882429,ZORI_smoothed_seasadj
+"Nashville, TN",2022-03-31,1721.6048932086221,ZORI_smoothed_seasadj
+"Nashville, TN",2022-04-30,1735.8095669129657,ZORI_smoothed_seasadj
+"Nashville, TN",2022-05-31,1748.7340790071516,ZORI_smoothed_seasadj
+"Nashville, TN",2022-06-30,1763.3370765765276,ZORI_smoothed_seasadj
+"Nashville, TN",2022-07-31,1773.063525812238,ZORI_smoothed_seasadj
+"Nashville, TN",2022-08-31,1774.7504350109402,ZORI_smoothed_seasadj
+"Nashville, TN",2022-09-30,1772.7086044177963,ZORI_smoothed_seasadj
+"Nashville, TN",2022-10-31,1770.9740624979618,ZORI_smoothed_seasadj
+"Nashville, TN",2022-11-30,1777.8906632302355,ZORI_smoothed_seasadj
+"Nashville, TN",2022-12-31,1780.9731343393898,ZORI_smoothed_seasadj
+"Nashville, TN",2023-01-31,1788.0122240511776,ZORI_smoothed_seasadj
+"Nashville, TN",2023-02-28,1789.3902237179268,ZORI_smoothed_seasadj
+"Nashville, TN",2023-03-31,1795.9128761366414,ZORI_smoothed_seasadj
+"Nashville, TN",2023-04-30,1795.341792400568,ZORI_smoothed_seasadj
+"Nashville, TN",2023-05-31,1795.3674749709169,ZORI_smoothed_seasadj
+"Nashville, TN",2023-06-30,1790.0679077803304,ZORI_smoothed_seasadj
+"Nashville, TN",2023-07-31,1787.0891587525173,ZORI_smoothed_seasadj
+"Nashville, TN",2023-08-31,1782.5689263408453,ZORI_smoothed_seasadj
+"Nashville, TN",2023-09-30,1783.330309452689,ZORI_smoothed_seasadj
+"Nashville, TN",2023-10-31,1783.0982679706258,ZORI_smoothed_seasadj
+"Nashville, TN",2023-11-30,1783.701943703362,ZORI_smoothed_seasadj
+"Nashville, TN",2023-12-31,1782.33173122887,ZORI_smoothed_seasadj
+"Nashville, TN",2024-01-31,1786.4965779585716,ZORI_smoothed_seasadj
+"Nashville, TN",2024-02-29,1788.958263371053,ZORI_smoothed_seasadj
+"Nashville, TN",2024-03-31,1793.742334902611,ZORI_smoothed_seasadj
+"Nashville, TN",2024-04-30,1795.6550509558233,ZORI_smoothed_seasadj
+"Nashville, TN",2024-05-31,1798.478914156036,ZORI_smoothed_seasadj
+"Nashville, TN",2024-06-30,1799.1870621411913,ZORI_smoothed_seasadj
+"Nashville, TN",2024-07-31,1799.1834159843966,ZORI_smoothed_seasadj
+"Nashville, TN",2024-08-31,1800.3471810828648,ZORI_smoothed_seasadj
+"Nashville, TN",2024-09-30,1798.715868840904,ZORI_smoothed_seasadj
+"Nashville, TN",2024-10-31,1798.58539205546,ZORI_smoothed_seasadj
+"Nashville, TN",2024-11-30,1800.3461112641248,ZORI_smoothed_seasadj
+"Nashville, TN",2024-12-31,1804.012644849296,ZORI_smoothed_seasadj
+"Nashville, TN",2025-01-31,1803.8095253397112,ZORI_smoothed_seasadj
+"Nashville, TN",2025-02-28,1806.4195698212955,ZORI_smoothed_seasadj
+"Nashville, TN",2025-03-31,1807.9900589802485,ZORI_smoothed_seasadj
+"Nashville, TN",2025-04-30,1809.4168623534003,ZORI_smoothed_seasadj
+"Nashville, TN",2025-05-31,1805.76129848932,ZORI_smoothed_seasadj
+"Nashville, TN",2025-06-30,1803.6823910305188,ZORI_smoothed_seasadj
+"Nashville, TN",2025-07-31,1806.2759103606163,ZORI_smoothed_seasadj
+"Nashville, TN",2025-08-31,1809.7312285175212,ZORI_smoothed_seasadj
+"Nashville, TN",2025-09-30,1813.0716967265928,ZORI_smoothed_seasadj
+"Nashville, TN",2025-10-31,1815.5313128999496,ZORI_smoothed_seasadj
+"Nashville, TN",2025-11-30,1814.3221285579025,ZORI_smoothed_seasadj
+"Nashville, TN",2025-12-31,1813.0592459784982,ZORI_smoothed_seasadj
+"Nashville, TN",2026-01-31,1811.290733576891,ZORI_smoothed_seasadj
+"Nashville, TN",2026-02-28,1809.1179036327592,ZORI_smoothed_seasadj
+"Nashville, TN",2026-03-31,1805.72281846512,ZORI_smoothed_seasadj
+"Nashville, TN",2026-04-30,1804.973286855836,ZORI_smoothed_seasadj
+"Nashville, TN",2026-05-31,1807.4118037420624,ZORI_smoothed_seasadj
+"Nashville, TN",2026-06-30,1810.4521637115122,ZORI_smoothed_seasadj
+"San Antonio, TX",2015-01-31,1043.1666791858179,ZORI_smoothed_seasadj
+"San Antonio, TX",2015-02-28,1046.1632654452235,ZORI_smoothed_seasadj
+"San Antonio, TX",2015-03-31,1049.3739856587426,ZORI_smoothed_seasadj
+"San Antonio, TX",2015-04-30,1052.6722437852254,ZORI_smoothed_seasadj
+"San Antonio, TX",2015-05-31,1057.220065639223,ZORI_smoothed_seasadj
+"San Antonio, TX",2015-06-30,1060.8274352932578,ZORI_smoothed_seasadj
+"San Antonio, TX",2015-07-31,1062.864840165438,ZORI_smoothed_seasadj
+"San Antonio, TX",2015-08-31,1063.0526145486401,ZORI_smoothed_seasadj
+"San Antonio, TX",2015-09-30,1065.8201781359635,ZORI_smoothed_seasadj
+"San Antonio, TX",2015-10-31,1072.80620688765,ZORI_smoothed_seasadj
+"San Antonio, TX",2015-11-30,1077.6026637955565,ZORI_smoothed_seasadj
+"San Antonio, TX",2015-12-31,1081.6834604927908,ZORI_smoothed_seasadj
+"San Antonio, TX",2016-01-31,1082.4606223552107,ZORI_smoothed_seasadj
+"San Antonio, TX",2016-02-29,1084.8330110211255,ZORI_smoothed_seasadj
+"San Antonio, TX",2016-03-31,1087.811171332205,ZORI_smoothed_seasadj
+"San Antonio, TX",2016-04-30,1091.1519152787407,ZORI_smoothed_seasadj
+"San Antonio, TX",2016-05-31,1093.9307170019945,ZORI_smoothed_seasadj
+"San Antonio, TX",2016-06-30,1096.1644534278146,ZORI_smoothed_seasadj
+"San Antonio, TX",2016-07-31,1098.7820946778368,ZORI_smoothed_seasadj
+"San Antonio, TX",2016-08-31,1103.4679532440023,ZORI_smoothed_seasadj
+"San Antonio, TX",2016-09-30,1108.1342004575356,ZORI_smoothed_seasadj
+"San Antonio, TX",2016-10-31,1111.0205830707175,ZORI_smoothed_seasadj
+"San Antonio, TX",2016-11-30,1115.3299126652546,ZORI_smoothed_seasadj
+"San Antonio, TX",2016-12-31,1119.5799051143408,ZORI_smoothed_seasadj
+"San Antonio, TX",2017-01-31,1125.3159348778015,ZORI_smoothed_seasadj
+"San Antonio, TX",2017-02-28,1128.1221792560953,ZORI_smoothed_seasadj
+"San Antonio, TX",2017-03-31,1131.0930353339982,ZORI_smoothed_seasadj
+"San Antonio, TX",2017-04-30,1134.015757749195,ZORI_smoothed_seasadj
+"San Antonio, TX",2017-05-31,1137.012408361791,ZORI_smoothed_seasadj
+"San Antonio, TX",2017-06-30,1140.988410338148,ZORI_smoothed_seasadj
+"San Antonio, TX",2017-07-31,1143.686159968438,ZORI_smoothed_seasadj
+"San Antonio, TX",2017-08-31,1143.1234929821883,ZORI_smoothed_seasadj
+"San Antonio, TX",2017-09-30,1144.083249208856,ZORI_smoothed_seasadj
+"San Antonio, TX",2017-10-31,1144.2803260415208,ZORI_smoothed_seasadj
+"San Antonio, TX",2017-11-30,1146.6498840830536,ZORI_smoothed_seasadj
+"San Antonio, TX",2017-12-31,1148.6719587508937,ZORI_smoothed_seasadj
+"San Antonio, TX",2018-01-31,1151.514537780896,ZORI_smoothed_seasadj
+"San Antonio, TX",2018-02-28,1156.4114143671259,ZORI_smoothed_seasadj
+"San Antonio, TX",2018-03-31,1159.2947891943797,ZORI_smoothed_seasadj
+"San Antonio, TX",2018-04-30,1160.7396566886086,ZORI_smoothed_seasadj
+"San Antonio, TX",2018-05-31,1161.0862759179258,ZORI_smoothed_seasadj
+"San Antonio, TX",2018-06-30,1162.3844445988123,ZORI_smoothed_seasadj
+"San Antonio, TX",2018-07-31,1166.551293572269,ZORI_smoothed_seasadj
+"San Antonio, TX",2018-08-31,1171.1313582091911,ZORI_smoothed_seasadj
+"San Antonio, TX",2018-09-30,1174.8881166270423,ZORI_smoothed_seasadj
+"San Antonio, TX",2018-10-31,1178.303560716463,ZORI_smoothed_seasadj
+"San Antonio, TX",2018-11-30,1181.5527908588765,ZORI_smoothed_seasadj
+"San Antonio, TX",2018-12-31,1183.2138593058226,ZORI_smoothed_seasadj
+"San Antonio, TX",2019-01-31,1185.5452761368947,ZORI_smoothed_seasadj
+"San Antonio, TX",2019-02-28,1186.1053590409151,ZORI_smoothed_seasadj
+"San Antonio, TX",2019-03-31,1188.7320498166557,ZORI_smoothed_seasadj
+"San Antonio, TX",2019-04-30,1192.446072249656,ZORI_smoothed_seasadj
+"San Antonio, TX",2019-05-31,1197.081320615525,ZORI_smoothed_seasadj
+"San Antonio, TX",2019-06-30,1200.6647410163803,ZORI_smoothed_seasadj
+"San Antonio, TX",2019-07-31,1202.6041578112493,ZORI_smoothed_seasadj
+"San Antonio, TX",2019-08-31,1205.4407101768447,ZORI_smoothed_seasadj
+"San Antonio, TX",2019-09-30,1208.090533210137,ZORI_smoothed_seasadj
+"San Antonio, TX",2019-10-31,1211.661688394884,ZORI_smoothed_seasadj
+"San Antonio, TX",2019-11-30,1214.1453570478895,ZORI_smoothed_seasadj
+"San Antonio, TX",2019-12-31,1218.134609416215,ZORI_smoothed_seasadj
+"San Antonio, TX",2020-01-31,1221.0812708282483,ZORI_smoothed_seasadj
+"San Antonio, TX",2020-02-29,1225.0011699989016,ZORI_smoothed_seasadj
+"San Antonio, TX",2020-03-31,1227.0260325544616,ZORI_smoothed_seasadj
+"San Antonio, TX",2020-04-30,1226.4089071826065,ZORI_smoothed_seasadj
+"San Antonio, TX",2020-05-31,1222.1823575211852,ZORI_smoothed_seasadj
+"San Antonio, TX",2020-06-30,1220.0817199385565,ZORI_smoothed_seasadj
+"San Antonio, TX",2020-07-31,1222.5774119809582,ZORI_smoothed_seasadj
+"San Antonio, TX",2020-08-31,1224.385785971954,ZORI_smoothed_seasadj
+"San Antonio, TX",2020-09-30,1228.0379510435116,ZORI_smoothed_seasadj
+"San Antonio, TX",2020-10-31,1231.5868230386266,ZORI_smoothed_seasadj
+"San Antonio, TX",2020-11-30,1238.9722847917726,ZORI_smoothed_seasadj
+"San Antonio, TX",2020-12-31,1246.8468983553053,ZORI_smoothed_seasadj
+"San Antonio, TX",2021-01-31,1254.1205365820426,ZORI_smoothed_seasadj
+"San Antonio, TX",2021-02-28,1259.2374200369682,ZORI_smoothed_seasadj
+"San Antonio, TX",2021-03-31,1265.7944971759448,ZORI_smoothed_seasadj
+"San Antonio, TX",2021-04-30,1277.5737716196957,ZORI_smoothed_seasadj
+"San Antonio, TX",2021-05-31,1294.0800528694472,ZORI_smoothed_seasadj
+"San Antonio, TX",2021-06-30,1313.3022588549627,ZORI_smoothed_seasadj
+"San Antonio, TX",2021-07-31,1331.7939302982338,ZORI_smoothed_seasadj
+"San Antonio, TX",2021-08-31,1352.9469306400244,ZORI_smoothed_seasadj
+"San Antonio, TX",2021-09-30,1373.4172372014662,ZORI_smoothed_seasadj
+"San Antonio, TX",2021-10-31,1391.005952799491,ZORI_smoothed_seasadj
+"San Antonio, TX",2021-11-30,1404.0507459636049,ZORI_smoothed_seasadj
+"San Antonio, TX",2021-12-31,1414.6561846033044,ZORI_smoothed_seasadj
+"San Antonio, TX",2022-01-31,1423.283646483526,ZORI_smoothed_seasadj
+"San Antonio, TX",2022-02-28,1434.1734883121405,ZORI_smoothed_seasadj
+"San Antonio, TX",2022-03-31,1442.8960436157377,ZORI_smoothed_seasadj
+"San Antonio, TX",2022-04-30,1452.2681678976794,ZORI_smoothed_seasadj
+"San Antonio, TX",2022-05-31,1459.1380687725941,ZORI_smoothed_seasadj
+"San Antonio, TX",2022-06-30,1465.7052796598482,ZORI_smoothed_seasadj
+"San Antonio, TX",2022-07-31,1473.1625718990235,ZORI_smoothed_seasadj
+"San Antonio, TX",2022-08-31,1475.024262947729,ZORI_smoothed_seasadj
+"San Antonio, TX",2022-09-30,1473.5767761021661,ZORI_smoothed_seasadj
+"San Antonio, TX",2022-10-31,1470.41535036389,ZORI_smoothed_seasadj
+"San Antonio, TX",2022-11-30,1470.3580314595415,ZORI_smoothed_seasadj
+"San Antonio, TX",2022-12-31,1472.3087263223972,ZORI_smoothed_seasadj
+"San Antonio, TX",2023-01-31,1477.292063446563,ZORI_smoothed_seasadj
+"San Antonio, TX",2023-02-28,1478.7630846941845,ZORI_smoothed_seasadj
+"San Antonio, TX",2023-03-31,1483.8477712613624,ZORI_smoothed_seasadj
+"San Antonio, TX",2023-04-30,1482.003267067719,ZORI_smoothed_seasadj
+"San Antonio, TX",2023-05-31,1482.1811723041942,ZORI_smoothed_seasadj
+"San Antonio, TX",2023-06-30,1475.883330681958,ZORI_smoothed_seasadj
+"San Antonio, TX",2023-07-31,1469.4711457368073,ZORI_smoothed_seasadj
+"San Antonio, TX",2023-08-31,1464.6564715452637,ZORI_smoothed_seasadj
+"San Antonio, TX",2023-09-30,1463.5983042610374,ZORI_smoothed_seasadj
+"San Antonio, TX",2023-10-31,1465.9626084007757,ZORI_smoothed_seasadj
+"San Antonio, TX",2023-11-30,1468.1276649578917,ZORI_smoothed_seasadj
+"San Antonio, TX",2023-12-31,1468.0155681988817,ZORI_smoothed_seasadj
+"San Antonio, TX",2024-01-31,1465.597578097806,ZORI_smoothed_seasadj
+"San Antonio, TX",2024-02-29,1462.5528573296513,ZORI_smoothed_seasadj
+"San Antonio, TX",2024-03-31,1459.9253173568231,ZORI_smoothed_seasadj
+"San Antonio, TX",2024-04-30,1460.8633749535722,ZORI_smoothed_seasadj
+"San Antonio, TX",2024-05-31,1460.5835183380827,ZORI_smoothed_seasadj
+"San Antonio, TX",2024-06-30,1461.6071411494372,ZORI_smoothed_seasadj
+"San Antonio, TX",2024-07-31,1460.1235989451384,ZORI_smoothed_seasadj
+"San Antonio, TX",2024-08-31,1461.109824587298,ZORI_smoothed_seasadj
+"San Antonio, TX",2024-09-30,1459.4415490045196,ZORI_smoothed_seasadj
+"San Antonio, TX",2024-10-31,1455.2506560991421,ZORI_smoothed_seasadj
+"San Antonio, TX",2024-11-30,1450.8998795662967,ZORI_smoothed_seasadj
+"San Antonio, TX",2024-12-31,1450.230002605356,ZORI_smoothed_seasadj
+"San Antonio, TX",2025-01-31,1451.4747450010861,ZORI_smoothed_seasadj
+"San Antonio, TX",2025-02-28,1452.964700072202,ZORI_smoothed_seasadj
+"San Antonio, TX",2025-03-31,1450.6193055796143,ZORI_smoothed_seasadj
+"San Antonio, TX",2025-04-30,1448.8900326113462,ZORI_smoothed_seasadj
+"San Antonio, TX",2025-05-31,1446.5904232012763,ZORI_smoothed_seasadj
+"San Antonio, TX",2025-06-30,1444.4063817357742,ZORI_smoothed_seasadj
+"San Antonio, TX",2025-07-31,1445.1764004729857,ZORI_smoothed_seasadj
+"San Antonio, TX",2025-08-31,1443.8707020854602,ZORI_smoothed_seasadj
+"San Antonio, TX",2025-09-30,1443.0160263190867,ZORI_smoothed_seasadj
+"San Antonio, TX",2025-10-31,1442.440788378297,ZORI_smoothed_seasadj
+"San Antonio, TX",2025-11-30,1441.2704807413563,ZORI_smoothed_seasadj
+"San Antonio, TX",2025-12-31,1437.7344867923132,ZORI_smoothed_seasadj
+"San Antonio, TX",2026-01-31,1432.9855764653503,ZORI_smoothed_seasadj
+"San Antonio, TX",2026-02-28,1428.612366124576,ZORI_smoothed_seasadj
+"San Antonio, TX",2026-03-31,1426.0112300393037,ZORI_smoothed_seasadj
+"San Antonio, TX",2026-04-30,1422.3137802050799,ZORI_smoothed_seasadj
+"San Antonio, TX",2026-05-31,1418.992321412712,ZORI_smoothed_seasadj
+"San Antonio, TX",2026-06-30,1415.814536761187,ZORI_smoothed_seasadj

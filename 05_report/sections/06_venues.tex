@@ -1,0 +1,536 @@
+% Section 5: the venue panel, the report's original dataset, plus the
+% quasi-experimental tests. The key analytic move is separating the aggregate
+% decline (real) from per-venue performance (no different from other bars).
+\section{Austin's live-music capacity is shrinking through room loss rather than weaker trade}
+\label{sec:venues}
+
+Musicians need places to play, and Austin's rooms are measurable in a way
+musicians themselves are not. The Texas Comptroller of Public Accounts collects
+a monthly filing from every business in the state holding a mixed-beverage
+permit (the state's license to sell liquor by the drink), reports each
+location's gross receipts, and publishes the file on the state open data
+portal.\footnote{Texas Comptroller of Public Accounts, \textit{Mixed Beverage
+Gross Receipts}, Texas Open Data Portal dataset \texttt{naix-2893}, at
+\url{https://data.texas.gov/dataset/Mixed-Beverage-Gross-Receipts/naix-2893},
+retrieved 2 August 2026. The population is every permittee filing under the
+mixed-beverage permit categories (MB, BQ, PE and their subtypes); the file is
+refreshed monthly and the extract used here covers obligation end dates January
+2007 through August 2026. The dataset omits rooms operating on a beer-and-wine
+permit only, and it omits venues without a separable alcohol permit or folded
+into a hotel or nonprofit permit, so it undercounts several well-known Austin
+listening rooms; the panel construction below inherits those omissions. Every
+filing is a legal tax record rather than a survey response, which makes it a
+census of the licensed universe rather than a sample of it, and each row carries
+the permittee's taxpayer name, the location address and the reported gross
+receipts for the month.} This study matches those filings to named venues by
+taxpayer name and location address and follows a panel of
+\NVenuePanelIsCurated\ Austin live-music rooms monthly from January 2007
+through June 2026, tracked across changes of owner and legal name.\footnote{The panel is a
+\emph{curated} tracking set of named Austin live-music rooms, not a census of
+the licensed universe and not a probability sample of it. Rooms enter by name
+identification against a research list of Austin live-music venues, so the panel
+over-represents established rooms in the central city (Red River, downtown,
+East Austin and South Congress), and it excludes venues without a separable
+liquor permit, which removes several well-known listening rooms including
+Cactus Cafe, Bass Concert Hall, Central Presbyterian, Carousel Lounge,
+Meanwhile Brewing, Whip In and Geraldine's. Receipts also measure alcohol
+sales rather than music activity: a room's mixed-beverage receipts say nothing
+directly about what performers were paid, only what the bar took at the register
+that month. Ten festival concession venue-months, in which a festival company
+filed under a venue-linked entity name for a month at a scale more than three
+hundred times the host venue's median month, are excluded from every venue-level
+figure that follows and are worth \NVenueFestivalDollarsExcluded\ in nominal
+dollars; the citywide totals used for comparison keep them, because there the
+money is real Austin licensed-beverage activity and only its venue label is
+misleading. The panel is compared against the full Travis County and City of
+Austin licensed-beverage universe throughout this section, and each comparison
+names the two sides in matching terms.} With that panel this section asks
+whether the sector is contracting because surviving rooms trade worse than the
+rest of the licensed-beverage market, or because rooms close and no one replaces
+them.
+
+\subsection{Receipts fell at live-music rooms while the market around them added locations}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{fig09_venue_receipts_index.png}
+\caption{Real mixed-beverage receipts indexed to 2019, and the count of active
+permit locations, Travis County and City of Austin, 2013--2025, 2025 dollars.
+Source: Texas Comptroller of Public Accounts, \textit{Mixed Beverage Gross
+Receipts}, Texas Open Data Portal dataset \texttt{naix-2893}, matched to named
+venues by taxpayer name and location address and deflated with the national
+Consumer Price Index for All Urban Consumers (CPI-U, series
+\texttt{CUUR0000SA0}). How to read it: the upper panel compares three groups
+against their own 2019 level, so all three start at 100 by construction; the
+lower panel shows how many distinct permit locations filed receipts in each
+year. The three groups are the \NVenuePanelIsCurated-venue curated live-music
+panel; its core live-music tier of rooms whose main business is live
+performance; and the full Travis County and City of Austin mixed-beverage
+universe. Caveat: receipts measure alcohol sales, not attendance, ticket
+revenue or what performers were paid; the curated panel is not a census, so it
+is smaller and more central than the universe by construction.}
+\label{fig:venueindex}
+\end{figure}
+
+Real receipts fell between 2019 and 2025 at the rooms the curated panel
+tracks: \NVenuePanelPctTwoZeroOneNineTwoZeroTwoFive\ across the
+\NVenuePanelIsCurated-room panel and
+\NVenueCorePctTwoZeroOneNineTwoZeroTwoFive\ in its core live-music tier, the
+rooms whose main business is live performance.\footnote{Every filing is
+deflated before anything is added up:
+\(R^{\mathrm{real}}_{it} = R_{it} \times d_{y(t)}\), where \(R_{it}\) is venue
+\(i\)'s nominal receipts in month \(t\), \(y(t)\) is the calendar year
+containing that month, and \(d_y = C_{2025}/C_y\) is the ratio of national
+consumer price index annual averages. Group totals are
+\(S_{g,y} = \sum_{i \in g} \sum_{t \in y} R^{\mathrm{real}}_{it}\), and the
+change quoted is \(100\,(S_{g,2025}/S_{g,2019} - 1)\).
+Figure~\ref{fig:venueindex} plots the same totals rebased on 2019,
+\(I_{g,y} = 100 \times S_{g,y}/S_{g,2019}\), which is why all three lines
+start at 100. These are totals over an unbalanced set of filers, so a group
+can fall because rooms closed as well as because open rooms took less; that
+distinction is the subject of the next subsection. Restricted to the
+\NVenueBalancedN\ venues filing in both years, the change is
+\NVenueBalancedPctTwoZeroOneNineTwoZeroTwoFive, and
+\NVenueShrankBalancedN\ of them were smaller in real terms in 2025.} The full
+Travis County and City of Austin mixed-beverage universe moved in the opposite
+direction over the same six years, changing
+\NVenueCitywidePctTwoZeroOneNineTwoZeroTwoFive\ in real receipts, and the count
+of distinct permit locations filing during the year grew from
+\NVenueCitywidePermitsTwoZeroOneNine\ in 2019 to
+\NVenueCitywidePermitsTwoZeroTwoFive\ in 2025.\footnote{The two sides of that comparison
+are not built alike. The ten festival-aggregation venue-months are stripped out
+of every venue-level series but stay in the citywide market total, where the
+money is genuine licensed-beverage activity and only its venue label is wrong.
+On the same ex-festival basis the citywide change is about +1.6 percent rather
+than \NVenueCitywidePctTwoZeroOneNineTwoZeroTwoFive. The citywide total also
+absorbs \NVenueCitywidePermitsPctTwoZeroOneNineTwoZeroTwoFive\ more permit
+locations over the period, so it is not a per-room comparison; on a common
+basis, the tracked panel held \NVenuePanelShareTwoZeroOneNine\ of citywide
+receipts in 2019 and \NVenuePanelShareTwoZeroTwoFive\ in 2025.} Austin kept
+adding places to drink while its dedicated live-music rooms appeared to
+contract. Some live performance may also have shifted toward informal or
+non-dedicated settings this alcohol-tax panel cannot observe---coffee shops,
+restaurants, and breweries that host occasional acts---which typically pay
+performers less and less regularly, and are not where full-time musicians earn
+most of their income.
+
+A separate City of Austin administrative record moves the same
+direction.\footnote{City of Austin, \textit{Sound Ordinance Permits}, Socrata
+dataset \texttt{ryu3-tuin} at
+\url{https://data.austintexas.gov/resource/ryu3-tuin.csv}, retrieved 1 August
+2026. The Music \& Entertainment Division issues an Outdoor Music Venue (OMV)
+permit under City Code Chapter 9-2 to any establishment that presents amplified
+sound outdoors, and the by-year counts used here are annual issuances
+tabulated from that permit file. The series is independent of the Comptroller
+receipts data because it is a city licensing series rather than a state tax
+filing, and it moves in the same direction as the receipts panel; that
+concurrence is why it is reported here.} The Music \& Entertainment Division
+issued \NVenueOmvPeak\ Outdoor Music Venue permits in both 2014 and 2017 at
+the series peak and \NVenueOmvTwoZeroTwoFive\ in 2025, a change of
+\NVenueOmvPctFromPeak\ from the peak.\footnote{The change is
+\(100\,(P_{2025}/P_{\mathrm{peak}} - 1)\), where \(P_y\) is the count of
+outdoor music venue permits the City issued in calendar year \(y\). A permit
+count is not a dollar figure, so nothing is deflated, and one room can hold
+several permits across years, so the series measures permitted outdoor music
+activity rather than a count of distinct rooms.}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{fig11_venue_supply.png}
+\caption{Outdoor Music Venue permits issued by the City of Austin each
+calendar year, with net venue entries minus exits in the curated live-music
+panel. Sources: City of Austin, \textit{Sound Ordinance Permits}, Socrata
+dataset \texttt{ryu3-tuin}; Texas Comptroller of Public Accounts, \textit{Mixed
+Beverage Gross Receipts}, dataset \texttt{naix-2893}. How to read it: bars show
+permits issued on the left axis and the line shows net additions (entries
+minus exits) to the curated \NVenuePanelIsCurated-room panel on the right axis;
+the 2026 bar covers only the partial year available at extract. Caveat: a
+permit is not a venue, because one room may hold several across years, so the
+series measures permitted outdoor music activity rather than a count of rooms.}
+\label{fig:venuesupply}
+\end{figure}
+
+\subsection{Surviving rooms lost ground, but no more than the rest of the market did}
+
+The aggregate gap invites an obvious explanation, that live-music rooms are
+weaker businesses than other bars. Rooms that stayed open did trade down:
+among the \NVenueBalancedN\ venues filing in both 2019 and 2025, real receipts
+changed \NVenueBalancedPctTwoZeroOneNineTwoZeroTwoFive\ and
+\NVenueShrankBalancedN\ shrank. The 2019-to-2025 change by itself cannot tell
+whether the surviving live-music rooms fell further than the bars around them
+did, because the same 2019-to-2025 change at a citywide comparison group would
+carry the same seasonal weather, market-wide inflation and pandemic exposures
+that also hit the live-music rooms. The divergence test below strips those
+common shocks out, by holding each venue and each calendar month constant, and
+asks what is left after both sides have been controlled against themselves.
+
+Comparing the core live-music tier against the rest of the Travis County and
+City of Austin mixed-beverage market before and after March 2020, with each
+venue and each month held constant, gives an average difference of
+\NVenueDidPct, and the 95 percent interval runs from about 14 percent below
+the rest of the market to about 17 percent above it (coefficient
+\NVenueDidCoef\ log points, clustered standard error \NVenueDidSe, $p =$
+\NVenueDidP), across \NVenueDidN.\footnote{The specification is a two-way fixed-effects regression, meaning a
+linear regression that includes one intercept for every venue and one
+intercept for every calendar month, which together absorb any fixed
+characteristic of a room and any month common to the whole market. The
+dependent variable is log real monthly receipts, the regressor of interest is
+an indicator for core live-music venues interacted with the post-March-2020
+period, and standard errors are clustered by venue (that is, they allow the
+residuals from the same room to be correlated across months, and treat venues
+as the independent units):
+\[
+\ln R^{\mathrm{real}}_{it}
+  = \alpha_i + \tau_t
+  + \beta\,\bigl(\mathrm{Core}_i \times \mathrm{Post}_t\bigr)
+  + \varepsilon_{it},
+\]
+where \(R^{\mathrm{real}}_{it}\) is venue \(i\)'s mixed-beverage receipts in
+month \(t\) in 2025 dollars; \(\mathrm{Core}_i\) is one for a core live-music
+room and zero for other mixed-beverage permit locations in Travis County or the
+City of Austin; the panel's live-music-adjacent tier is dropped from the
+estimation sample rather than coded zero, because those rooms programme live
+music intermittently and belong to neither the treated group nor the
+comparison group; \(\mathrm{Post}_t\) is one from March 2020 onward; \(\alpha_i\) is a
+venue fixed effect that absorbs everything constant about that room including
+its size, address and tier; \(\tau_t\) is a year-month fixed effect that
+absorbs everything common to the whole market in that month including the
+pandemic, market-wide inflation and season; and \(\varepsilon_{it}\) is the
+residual. Only the interaction is estimable, because \(\alpha_i\) absorbs
+\(\mathrm{Core}_i\) and \(\tau_t\) absorbs \(\mathrm{Post}_t\). The
+interaction is built as an explicit product variable rather than entered
+factorially: entered factorially it is collinear with the absorbed effects and
+Stata's \texttt{reghdfe} drops the term of interest. Estimation covers
+\NVenueDidN\ from January 2013 to December 2025. Months with zero receipts
+leave a log specification, so the coefficient describes venues conditional on
+trading at all. It converts to a proportional difference as
+\(100\,(e^{\hat\beta} - 1)\). This is a descriptive divergence test: no policy
+switches on in March 2020 for one group and not the other, and nothing here is
+randomised. It is also a precise null rather than an absence of evidence: the
+95 percent interval runs from about $-13.7$ to $+16.5$ percent, so a
+difference between core live-music rooms and the rest of the mixed-beverage
+market much larger than that in either direction is not consistent with these
+data.} An event study, which is the same regression with a separate coefficient for
+each calendar year rather than one averaged post-March-2020 coefficient, gives
+the same reading year by year. Core live-music rooms dropped about 54 log
+points below the comparison group in 2020, returned to within statistical
+distance of it by 2022, and have tracked it since. The 2019 base is not a
+neutral reference, because the pre-2019 coefficients drift upward rather than
+sitting flat, so a counterfactual that continued that drift would sit above
+zero after 2022 rather than at it.\footnote{The event study replaces the
+single interaction with one term per calendar year:
+\[
+\ln R^{\mathrm{real}}_{it}
+  = \alpha_i + \tau_t
+  + \sum_{y \neq 2019} \beta_y\,
+    \bigl(\mathbf{1}\{\mathrm{year}(t) = y\} \times \mathrm{Core}_i\bigr)
+  + \varepsilon_{it},
+\]
+where \(\mathbf{1}\{\mathrm{year}(t) = y\}\) is one when month \(t\) falls in
+calendar year \(y\), 2019 is omitted, and every other symbol, the estimation
+sample and the clustering are as in the previous footnote. Each \(\beta_y\)
+therefore reads as the gap between core live-music rooms and the rest of the
+market in year \(y\), measured against their own 2019 gap, and the 2020 term is
+the one quoted above. The year terms are constructed as explicit products with
+2019 dropped by hand: asking the estimator to hold 2019 as the base is not
+honoured once venue and year-month effects absorb the alternatives, and it
+silently renormalises the whole path onto a different year. Pre-2019
+coefficients drift upward instead of sitting flat, so parallel trends do not
+hold cleanly and the design is descriptive, not causal. A fourth specification
+in the exported table replaces the log with the inverse hyperbolic sine, which
+keeps zero-receipt months in the sample, and it returns a large negative
+coefficient rather than a null; that column answers a different question,
+conditioning on nothing rather than on trading, and no number quoted here comes
+from it, but a reader should know it points the other way. The full
+coefficient path is in the technical appendix.}
+
+If the rooms that stay open trade no worse than other bars, the rest of the
+aggregate decline has to come from which rooms exist. \NVenueExitsTotal\ of the
+\NVenuePanelIsCurated\ tracked venues had stopped filing altogether by June
+2026. \NVenueExitsTwoZeroTwoZeroTwoZeroTwoSix\ of those last filings fall in
+2020 or later, and \NVenueExitsTwoZeroTwoZeroTwoZeroTwoSixCore\ of the post-2020
+exits were core live-music rooms. Net additions to the panel (entries minus
+exits) came to \NVenueNetAddsTwoZeroZeroSevenTwoZeroOneFive\ over 2007--2015 and
+\NVenueNetAddsTwoZeroOneSixTwoZeroTwoSix\ over 2016--2026.\footnote{The two
+net-add figures are not built alike. The Comptroller receipts file begins in
+January 2007, so the 44 venues already trading then all register as 2007
+entries; excluding 2007 entirely, the comparable 2008-to-2015 net is +36. The
+later figure is not left-censored but is right-truncated at June 2026. Ceasing
+to file usually means closure but can also mean a permit transfer, an entity
+restructuring, or a switch to a beer-and-wine permit, so these counts are
+stopped reporting rather than verified closures.}
+
+\begin{keyfinding}
+{\small\textbf{This distinction matters for policy.} Austin's live-music
+capacity is contracting because rooms stop filing and are not replaced, while
+the wider licensed-beverage market keeps adding permit locations. On
+receipts alone, rooms that stayed open trade at the same rate against 2019
+as comparable non-music bars; the gap that separates the panel from the
+citywide total is not a gap in per-room revenue among survivors. The
+receipts file records what bars sell, not what venues spend, so it cannot
+say whether operating margins hold; it says only that the aggregate decline
+tracks which rooms exist rather than how the open ones sold liquor.}
+\end{keyfinding}
+
+Panel venues with lower real receipts in 2025 than in 2019 appear in every
+part of Austin the panel can name (Figure~\ref{fig:venuedecline}). The ten
+largest dollar declines are concentrated where the panel's own coverage is
+concentrated: six sit downtown, on Rainey Street or in the Red River district,
+and the other four are in South Austin, in South Central and near the
+University of Texas campus. Because dollar size tracks venue size and the
+curated panel skews central by construction, that list of ten largest declines
+cannot be read as evidence about where decline is or is not spread within the
+city.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{fig10_venue_map.png}
+\caption{Venues in the curated \NVenuePanelIsCurated-room panel with lower
+real receipts in 2025 than in 2019, by part of Austin, and the ten largest
+dollar declines by venue name. Source: Texas Comptroller of Public Accounts,
+\textit{Mixed Beverage Gross Receipts}, dataset \texttt{naix-2893}, deflated
+with the national CPI-U. How to read it: each row on the left gives the number
+of panel venues that shrank against the number that filed in 2019, so the
+denominators differ by area and several rows rest on only three venues; the
+right panel shows the size of the ten largest dollar declines by venue name.
+Caveats: named parts of Austin are assigned from venue addresses and are
+descriptive groupings rather than official boundaries; panel venues that
+stopped filing count as zero in 2025 and so appear as declines, which covers 16
+of the 64 counted here, and three of the ten largest named declines are rooms
+with no 2025 receipts at all.}
+\label{fig:venuedecline}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.82\textwidth]{fig10b_district_map.png}
+\caption{Outdoor Music Venue sound permits issued by the City of Austin,
+2009--2018, by council district. Source: City of Austin, \textit{Sound
+Ordinance Permits, geographic extract}, Socrata dataset \texttt{g3rj-dfgm} at
+\url{https://data.austintexas.gov/resource/g3rj-dfgm.csv}, retrieved 1 August
+2026; council district boundaries from City of Austin open data. How to read
+it: darker districts issued more permits, and the class breaks are set by hand
+because the permit distribution is too concentrated in District 9 for equal
+intervals to separate anything. Caveats: annual renewals count as separate
+permits, so one room can appear many times and the map shows permitted
+activity, not distinct rooms; permits are assigned to the council district
+boundaries now in force, which took effect in January 2015, so the 2009-to-2014
+permits are mapped retrospectively onto districts that did not exist when they
+were issued; and the series stops at 2018 because the geocoded file contains
+only a partial extract for 2019 (13 rows against the 99 the City by-year count
+reports).}
+\label{fig:districtmap}
+\end{figure}
+
+Between 2009 and 2018, permitted outdoor music activity concentrated in
+Council District 9, which covers downtown Austin and the central corridors,
+and District 9 accounted for \NVenueOmvPermitsDistrictNineShare\ of the
+\NVenueOmvPermitsGeoTwoZeroZeroNineTwoZeroOneEight\ Outdoor Music Venue permits
+the City issued in those years. Citywide, the Music \& Entertainment Division's
+Outdoor Music Venue permits have since fallen \NVenueOmvPctFromPeak\ from
+their 2014--2017 peak, so the geography of permitted outdoor music activity may
+have moved since 2018. The curated receipts panel cannot test that
+distributional question independently, because its own coverage skews central
+by construction.
+
+A separate news-derived timeline of \NVenueClosuresDatedN\ Austin
+live-music venue closures reported between January 2015 and June 2026, coded
+by primary reason, puts property pressure level with the pandemic:
+\NVenueClosuresCovid\ closures cite COVID and
+\NVenueClosuresProperty\ cite a property cause, meaning a rent increase, a
+sale of the building, a lease expiry or redevelopment.\footnote{The timeline
+lists \NVenueClosuresDatedN\ Austin live-music venue closures dated between
+January 2015 and June 2026, coded by primary reason from local news coverage
+in \emph{Austin Chronicle}, \emph{Austin American-Statesman}, KUT/KUTX,
+\emph{Austin Monitor} and CultureMap Austin, plus follow-up items from
+\emph{Do512} and \emph{Texas Monthly}, compiled for this study and released
+as the project evidence file
+\texttt{01\_evidence/08\_venues\_ecosystem/venue\_timeline.csv}. Reasons are
+journalist-cited rather than audited, only the primary reason is coded when a
+venue reports more than one, and \NVenueClosuresNoReason\ closures have no
+reason stated in the sources examined. The timeline is a news-derived record
+rather than a register, so it misses venues the research team did not find
+coverage for, and an absence here means not found rather than nothing happened.
+A separate cross-check against the Comptroller mixed-beverage file found
+\NVenueClosureCrossvalContinue\ venues still filing receipts after their
+reported closure date, which usually means the programming ended before the
+business did.} Respondents to the 2022 Greater Austin Music Census who present
+live music, most of whom are not primary venue operators, ranked property tax
+first among the nine business pressures the census asked them to rank
+(Section~\ref{sec:census}). The two records both point at the cost and security
+of the building, though they measure different things: a tax on owners in the
+census answer, and rent, sale and tenure in the news timeline.
+
+\subsection{Three tests find no detectable change in the receipts}
+
+Each test below compares the panel venues exposed to a particular intervention
+against the rest of the mixed-beverage panel. The panel is the natural setting
+for these tests because each intervention hit a small, named set of Austin
+live-music rooms and left a monthly, room-level receipts trail on either side
+of the event, which is exactly what a before-and-after comparison against a
+non-treated group needs.
+
+\textbf{The 2017 extended-hours pilot.} Five named Red River venues ran later
+outdoor music hours in 2017 under a City of Austin sound-ordinance pilot; the
+only ordinance text located names the pilot as a six-month experiment later
+extended to 30 April 2018.\footnote{City of Austin, Law Department, \textit{Draft
+ordinance amending City Code Chapter 9-2 (Red River extended-hours pilot)},
+dated 30 March 2018, at
+\url{https://services.austintexas.gov/edims/document.cfm?id=296553}, retrieved
+1 August 2026. The City evaluation memo referenced in the press has not been
+located, so the pilot window used in the reported city evaluation (May to
+November 2017) and the window the Law Department draft ordinance describes do
+not match; both are reported below.} Press accounts of a City evaluation
+reported a \NQuasiRedriverClaimUnverified\ rise in payments to local musicians,
+alongside 10 percent more local and regional acts booked and 13 percent fewer
+total tickets sold; the evaluation memo behind those figures has never been
+located and nobody has independently checked them. The Comptroller receipts
+contain no matching change in venue revenue.
+Once venue-specific seasonality is absorbed, which matters because six of the
+pilot window's seven months fall in the second half of the year, the estimate
+is \NQuasiRedriverDidSeasonadj\ log points. The unadjusted specification gives
+\NQuasiRedriverDidCoef\ log points but fails its own pre-trend test.
+Randomization inference on the unadjusted specification, which asks how large
+an estimate the same regression produces when five other panel venues are
+labelled as treated at random, gives an exact $p =$
+\NQuasiRedriverRiP\ across 5,000 placebo draws.\footnote{The specification is
+\(\ln R^{\mathrm{real}}_{it} = \alpha_i + \tau_t
+   + \beta\,(\mathrm{Pilot}_i \times W_t) + \varepsilon_{it}\),
+where \(\mathrm{Pilot}_i\) is one for the five named venues, \(W_t\) is one
+for the months of the reported pilot window from May to November 2017, and
+\(\alpha_i\) and \(\tau_t\) are venue and year-month fixed effects. The sample
+is the panel venues from January 2015 to December 2019 with the large ticketed
+rooms excluded. With five treated venues a cluster-robust standard error is
+not trustworthy, so inference is by randomization instead: the treatment dates
+are held fixed, five venues are drawn at random without replacement from the
+panel venues filing in nearly every month of the window, the same regression is
+refitted on the placebo assignment, and the exact p-value is
+\[
+p = \frac{1 + \#\{\,r \le R : |\hat\beta_r| \ge |\hat\beta|\,\}}{R + 1},
+\]
+where \(\hat\beta\) is the estimate under the assignment that actually
+happened, \(\hat\beta_r\) is the estimate under placebo assignment \(r\), and
+\(R\) is 5,000, the number of draws. Adding one to numerator and denominator
+counts the observed assignment among the possibilities, which is what keeps
+the test exact rather than approximate. The bound quoted next comes from that
+same placebo distribution: 90 percent of placebo estimates fall inside roughly
+plus or minus 14 percent, so an effect larger than that would have shown. The
+five venues were named into the pilot rather than drawn into it, so this is
+descriptive.} Nine in ten placebo assignments produce estimates inside roughly
+plus or minus 14 percent, so a receipts effect much larger than that would
+probably have been visible here.\footnote{Pre-trends fail as first specified (p =
+\NQuasiRedriverPretrendP), but the cause is seasonality rather than divergence:
+the pilot window was six-sevenths second-half months. The pre-trend check
+replaces the single interaction with half-year terms,
+\(\ln R^{\mathrm{real}}_{it} = \alpha_i + \tau_t
+   + \sum_{h \neq h_0} \pi_h\,(\mathbf{1}\{\mathrm{halfyear}(t) = h\}
+   \times \mathrm{Pilot}_i) + \varepsilon_{it}\),
+with the second half of 2016 as the omitted base \(h_0\), and tests jointly
+whether the three half-years before the pilot are all zero,
+\(H_0: \pi_{2015\mathrm{H}1} = \pi_{2015\mathrm{H}2}
+   = \pi_{2016\mathrm{H}1} = 0\),
+by a Wald test with standard errors clustered by venue. Absorbing
+venue-specific seasonality, by adding a venue-by-month-of-year fixed effect
+that lets each room have its own December and its own March rather than only
+the seasonality the whole market shares, clears the pre-trend (p =
+\NQuasiRedriverPretrendPSeasonadj) and moves the estimate to
+\NQuasiRedriverDidSeasonadj. The reported May-to-November
+window also conflicts with the only ordinance text in hand, which describes a
+six-month pilot later extended to 30 April 2018.} \textbf{This does not disprove
+the \NQuasiRedriverClaimUnverified\ claim.} Mixed-beverage receipts measure
+alcohol sales, not the
+door split between venue and performer, so a venue could raise what it pays
+performers by a fifth without changing its bar takings.
+
+\textbf{The 2024 Live Music Fund venue grants.} The City of Austin
+awarded \NQuasiLmfTwoFourVenueAwards\ Live Music Fund venue grants in fiscal
+2024, all at the same dollar amount.\footnote{City of Austin, \textit{Austin
+Live Music Fund, FY2024 Awardee List}, at
+\url{https://austin.widen.net/content/bpzuacfkk8/pdf/FY24-AwardeeList_Austin-Live-Music-Fund.pdf},
+retrieved 1 August 2026. All \NQuasiLmfTwoFourVenueAwards\ awards were made at
+\$60,000. The full FY2024 award total, adding musician and non-venue promoter
+awardees, is 136 awards / \$4,365,000 by independent line-item tally. Program
+mechanics and the fund's revenue source are the subject of
+Section~\ref{sec:city}.} Against other tracked panel venues the estimate is
+\NQuasiLmfTwoFourPostCoef\ log points, about 9 percent, with an exact
+randomization-inference $p =$ \NQuasiLmfTwoFourRiP\ across 2,000 placebo draws.
+No divergence between grantees and non-grantees is detectable in the years
+before the awards ($p =$ \NQuasiLmfTwoFourPretrendP), though that window spans
+the pandemic and the parallel-paths test has little power with 15 treated
+venues; restricted to 2018 and 2019, the same joint test gives $p =$
+\NQuasiLmfTwoFourPretrendPPrepandemic.\footnote{The specification is
+\(\ln R^{\mathrm{real}}_{it} = \alpha_i + \tau_t
+   + \beta\,(\mathrm{Grant}_i \times \mathrm{Post2024}_t) + \varepsilon_{it}\),
+where \(\mathrm{Grant}_i\) is one for a fiscal 2024 venue grantee and
+\(\mathrm{Post2024}_t\) is one from January 2024 onward, on monthly
+observations from January 2018 to December 2025 with the large ticketed rooms
+excluded and standard errors clustered by venue. Grantees with too few filings
+in the base year to have a pre-period, and the one large room among them,
+leave the estimation sample, so the regression rests on fewer venues than
+received awards. The parallel-paths check is an annual event study with 2023
+as the omitted base and a joint Wald test that the pre-award year terms are
+all zero, \(H_0: \beta_{2018} = \beta_{2019} = \beta_{2020} = \beta_{2021} =
+\beta_{2022} = 0\); that window spans the pandemic, so it asks whether the two
+groups followed the same path through it; the narrower 2018-and-2019 version
+quoted in the text rests on the 12 of 15 grantee venues already filing in 2019.
+Randomization inference draws
+the same number of placebo grantees from the venues meeting the same
+filing-coverage requirement and computes the exact p-value by the formula
+above, over 2,000 draws.} Grants are competitively scored, so recipients
+differ from non-recipients in whatever the scoring rewarded, and the estimate is
+an association rather than a program effect. The
+\NQuasiLmfFyTwoSixNotEvaluable\ of the fiscal 2026 round cannot
+be tested at all: the city made those awards in March 2026 and the receipts
+panel ends that June.
+
+\textbf{The Moody Center.} The Moody Center, a 15,000-seat multipurpose arena
+on the University of Texas at Austin campus, opened for public events in April
+2022.\footnote{Moody Center, \textit{About}, at
+\url{https://www.moodycenteratx.com/about}, retrieved 1 August 2026; opening
+event reported in local news coverage the same month. The arena competes for
+concert bookings at the top of the market rather than at the size of the
+tracked live-music rooms, so any spillover to the venue panel would appear as
+a proximity gradient in receipts, not as a shift in the market average.} The
+test asks whether panel venues near the arena traded differently from panel
+venues farther out after it opened. Within four miles of the arena the
+post-opening pattern does not vary with distance ($p =$
+\NQuasiMoodyJointP). The design cannot say more than that: the comparison
+group is only six venues more than four miles out, every distance-band standard
+error is large, and no band is individually distinguishable from zero.\footnote{All three bands enter one regression,
+\[
+\ln R^{\mathrm{real}}_{it}
+  = \alpha_i + \tau_t
+  + \sum_{b=1}^{3} \beta_b\,
+    \bigl(\mathrm{Band}_{bi} \times \mathrm{Post}_t\bigr)
+  + \varepsilon_{it},
+\]
+where \(\mathrm{Band}_{bi}\) is one when venue \(i\) sits under one mile, one
+to two miles, or two to four miles from the arena, venues more than four miles
+away are the omitted reference group, and \(\mathrm{Post}_t\) is one from
+April 2022 onward. Distance is straight-line miles from the arena's
+coordinates, computed by the great-circle formula
+\(D = 2\rho\arcsin\sqrt{\sin^{2}(\Delta\phi/2)
+   + \cos\phi_1\cos\phi_2\sin^{2}(\Delta\lambda/2)}\),
+with \(\phi\) latitude, \(\lambda\) longitude, and \(\rho\) the Earth's radius
+in miles. The pre-period is January 2018 to December 2019 and the post-period
+July 2022 to December 2025, so neither period includes the pandemic. The quoted
+p-value is a Wald test of \(H_0: \beta_1 = \beta_2 = \beta_3\), which asks
+whether the post-opening pattern varies with distance at all rather than
+whether any single band moved; a continuous version replacing the bands with
+post-opening times log distance is registered separately, so nothing rests on
+where the band cuts fall. Standard errors are clustered by venue. Distance is
+not assigned at random: near venues are central-city rooms and differ from
+suburban ones in many ways at once, so this is a description of where the
+divergence sits. Note also that any market-wide arena effect is absorbed by the
+year-month fixed effects by construction, so this design tests proximity and not
+the arena's overall effect on venue receipts.}
+
+These receipts describe what rooms sold at the register. They do not describe
+who played in them. Section~\ref{sec:census} turns to the only current
+Austin-specific measurement of the people who work in those rooms, the 2022
+Greater Austin Music Census, and takes up the retention question the receipts
+panel cannot answer. Federal pandemic relief, the one intervention with a
+visible signature in the mixed-beverage receipts, waits until
+Section~\ref{sec:state}, because that signature traces the eligibility rule
+rather than the program's effect and belongs with the state and national
+programs.

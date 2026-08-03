@@ -1,0 +1,317 @@
+% Section on the 2022 music census microdata. This is the only current
+% Austin-specific measurement of this workforce, and its retention finding is
+% the report's most novel result.
+\section{What musicians say about staying}
+\label{sec:census}
+
+Section~\ref{sec:venues} counted rooms. The only current Austin-specific
+measurement of the people who play in those rooms is the 2022 Greater Austin
+Music Census, an online instrument that Sound Music Cities fielded with the
+City of Austin Music \& Entertainment Division between 15 July and 12 September
+2022.\footnote{Sound Music Cities is the consultancy that has run the same
+instrument across a rolling cohort of U.S.\ cities since 2022 (Sacramento,
+Nashville, New Orleans, Washington D.C., Minneapolis, Cleveland, Baltimore,
+and others; the full roster is listed in the references). The Austin fielding
+was distributed through community mailing lists, the city's Music \&
+Entertainment Division channels, and partner organizations. The city
+publishes the individual respondent records as an open dataset,
+\textit{2022 Austin Music Census: Details}, Socrata identifier
+\texttt{an3p-3yqx}, at \url{https://data.austintexas.gov/resource/an3p-3yqx.csv},
+retrieved 1~August 2026. The three Sound Music Cities reports that accompany
+the microdata (\textit{Summary Report}, \textit{Data Appendix}, and
+\textit{DEI Data Appendix}) are the source for anything printed above the
+respondent level; the underlying \NCensusNRespondents\ records are the source
+for this study. The Summary Report headline count is 2,260; the microdata
+release carries 33 fewer rows and the release documents no reason. Every share
+in this section uses the \NCensusNRespondents-row microdata file, so a value
+here can sit a few tenths of a point away from a published percentage even
+where the two agree.} The 2022 instrument dropped the dollar-denominated income
+questions the 2014 fielding had asked, so it cannot say what a musician earns,
+but it kept a great deal else: work volume, workspace, tenure, insurance,
+business spending, three-year intent, and a ranked list of business
+pressures.\footnote{The 2014 census, run by the same authoring team on behalf
+of the city, asked for calendar-year 2013 music income in banded form. The
+2022 authors state that they dropped the item to raise completion rates and
+because respondents had told them the frame did not fit self-employed and
+mixed-income careers; see \textit{Summary Report}, printed p.~6, at
+\url{https://www.austinmusiccensus.org/}. The consequence is that Austin's own
+music census has not asked what a musician earns for the twelve years running.}
+This study reads the census from the respondent-level file rather than the
+published tables, because a per-respondent construction is needed for two
+questions the printed report cannot answer: whether one person's two three-year
+answers move together, and whether the widely cited spending headline describes
+any actual person.
+
+That file records \NCensusNRespondents\ respondents across 107 variables. Every
+number in this section describes those respondents and not the Austin music
+workforce.\footnote{The census was a self-selected online instrument with no
+design or post-stratification weights. It is not a probability sample of
+Austin's music workforce, and a probability-sample benchmark for the same
+population does not exist. Every share in this section is therefore a
+descriptive statistic on the people who answered, not a population estimate,
+and none is comparable with the American Community Survey estimates in
+Section~\ref{sec:earnings}, the Bureau of Labor Statistics wage series in
+Section~\ref{sec:payroll}, or the Comptroller receipts panel in
+Section~\ref{sec:venues}. No standard error or margin of error is computed
+anywhere in this section. Item nonresponse is heavy and uneven, and several
+blocks were routed only to performers or only to venue operators, so every
+statistic in this section is reported against its own denominator. Six
+figures computed here reproduce the Sound Music Cities \textit{Data Appendix}
+to within a percentage point (the two three-year retention shares, the mean
+and median distance travelled to work, the sum-of-means spending headline, and
+the local share of spending), which is the best available check that the file
+is being read correctly.}
+
+\subsection{Most respondents expect to stay in music; far fewer expect to stay in Austin}
+
+The same \NCensusRetentionDenom\ respondents answered both three-year questions,
+so the comparison below is between one person's two answers rather than between
+two groups. \NCensusIntendContinueMusic\ answered definitely or maybe yes to
+still working in music, and \NCensusIntendStayAustin\ answered definitely or
+maybe yes to still living in greater Austin, a within-person gap of
+\NCensusRetentionGap.\footnote{Each share is an unweighted count over its own
+denominator, \(\hat p = 100 \times n_{\mathrm{yes}}/n_{\mathrm{answered}}\),
+where \(n_{\mathrm{yes}}\) counts respondents answering definitely or maybe yes
+and \(n_{\mathrm{answered}}\) counts everyone who answered that item. A
+respondent who skipped the item is out of both numerator and denominator
+rather than counted as a no. The retention gap is the difference of the two
+shares on the same respondents,
+\(\hat p_{\mathrm{music}} - \hat p_{\mathrm{Austin}}\), which is a within-person
+comparison and not a comparison of two groups. No weight enters anywhere in
+this section, because the release carries none, so no margin of error can be
+computed. Both retention shares reproduce the Sound Music Cities
+\textit{Summary Report} p.~7 to the tenth of a percentage point on the
+microdata file.} Most of the complement to the Austin share is uncertainty
+rather than stated departure: among the \NCensusRetentionDenom\ respondents,
+about a quarter answered ``unsure'' and roughly one in ten answered maybe or
+definitely no, which is a weaker claim than a third planning to
+leave.\footnote{The Austin item's five options are definitely yes, maybe yes,
+unsure, maybe no, and definitely no. The full breakdown on the
+\NCensusRetentionDenom\ respondents is 44.2\% definitely yes, 19.9\% maybe
+yes, 25.6\% unsure, 6.7\% maybe no, and 3.6\% definitely no; the two shares
+combined into ``definitely or maybe yes'' produce \NCensusIntendStayAustin.
+Read the 25.6\% unsure share as respondents who could not answer, not as
+respondents who leaned toward leaving.}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{fig26_retention_split.png}
+\caption{Share expecting to continue music work and to remain in greater Austin
+three years on, overall and by housing tenure. Source: 2022 Greater Austin
+Music Census respondent-level file, Sound Music Cities and City of Austin
+Music \& Entertainment Division, City of Austin open data dataset
+\texttt{an3p-3yqx}, retrieved 1~August 2026. How to read it: both questions
+were answered by the same \NCensusRetentionDenom\ respondents, so the distance
+between the two bars is a within-person gap and not a comparison of two
+groups. Caveats: this is a self-selected online survey with no weights, so
+the percentages describe respondents rather than the Austin music workforce,
+and they are not comparable with the American Community Survey estimates in
+Section~\ref{sec:earnings}.}
+\label{fig:retention}
+\end{figure}
+
+\subsection{Housing tenure separates the answers most sharply; sector and workspace do not separate them at all}
+
+Who are the doubtful respondents? Of six respondent characteristics this study
+tested against the Austin-retention answer, housing tenure separates it most
+sharply: \NCensusStayHousingTenureHomeowner\ of homeowners expected to stay in
+greater Austin against \NCensusStayHousingTenureRenter\ of renters, with
+\NCensusStayHousingTenureOtherOrUnstableHousing\ of respondents in other or
+unstable housing situated between them.\footnote{The homeowner--renter
+difference in expected-stay rates is unlikely to be chance among these
+respondents: \NCensusStaychiTwoHousingTenure. The test is Pearson's
+chi-squared for independence in a two-way table,
+\(X^{2} = \sum_{j}\sum_{k}(O_{jk} - E_{jk})^{2}/E_{jk}\) with
+\(E_{jk} = R_j C_k / N\), where \(O_{jk}\) is the number of respondents in row
+\(j\) and column \(k\), \(R_j\) and \(C_k\) are the row and column totals,
+\(N\) is the number answering both items, and \(E_{jk}\) is the count expected
+if the two answers were unrelated. The number in parentheses after the
+statistic is the degrees of freedom, \((J-1)(K-1)\) for a table with \(J\)
+rows and \(K\) columns. In a logistic regression conditioning on primary
+music-ecosystem sector, years of experience, and health insurance, renters
+have \NCensusLogitRenterOr\ times the odds of expecting to stay in Austin
+that homeowners do, on \NCensusLogitN\ respondents who answered every item in
+the equation. The specification is
+\[
+\ln\frac{\Pr(\mathrm{stay}_i = 1)}{1 - \Pr(\mathrm{stay}_i = 1)}
+  = \alpha + \sum_s \beta_s\,\mathrm{sector}_{si}
+  + \sum_e \gamma_e\,\mathrm{exper}_{ei}
+  + \sum_h \delta_h\,\mathrm{tenure}_{hi}
+  + \theta\,\mathrm{insured}_i ,
+\]
+where \(\mathrm{stay}_i\) is one when respondent \(i\) answered definitely or
+maybe yes to still living in greater Austin in three years, the
+\(\mathrm{sector}_{si}\) are indicators for primary music-ecosystem sector,
+the \(\mathrm{exper}_{ei}\) for years-of-experience band, the
+\(\mathrm{tenure}_{hi}\) for housing tenure with homeowner omitted, and
+\(\mathrm{insured}_i\) is one for holding health insurance. The quantity
+quoted is the odds ratio \(e^{\hat\delta_{\mathrm{renter}}}\); a value below
+one means renters had lower odds of expecting to stay than homeowners who
+match them on sector, experience, and insurance. An odds ratio is not a ratio
+of probabilities and sits further from one than the probability ratio does
+when the outcome is common, as it is here. Estimation is by maximum
+likelihood on the respondents who answered every item in the equation, which
+is fewer than answered the retention question alone. Neither the test nor the
+regression is weighted, because the census carries no design weights, and
+both p-values assume a simple random sample, which a self-selected online
+survey is not. Read the test statistics as descriptive discriminants among
+respondents rather than as inference to the Austin music workforce.
+Tenure was not assigned at random, and income, age, and family stage all
+move with it, none of which the census measured; the tenure result is
+therefore an association among respondents and not the cost of renting.
+The analysis recodes tenure into three mutually exclusive categories, because
+the published appendix's categories overlap, which is why the tenure shares
+here do not match the \textit{Data Appendix}.} Health insurance separates the
+answers the same way: \NCensusStayHealthInsuranceHasHealthInsurance\ of the
+1,390 respondents with health insurance expected to stay against
+\NCensusStayHealthInsuranceNoHealthInsurance\ of the 254
+uninsured.\footnote{The census item is respondent-reported coverage of any
+kind (an employer plan, a marketplace plan, Medicaid, Medicare, VA, or
+another source), asked as a single yes/no. It is not directly comparable with
+the American Community Survey health-insurance coverage rate quoted in the
+summary, which uses the ACS multi-item HICOV construction on a probability
+sample of households.}
+
+Two music-career characteristics also separate the Austin-retention answer,
+though not in a straight line. Years of experience is the second strongest of
+the six discriminants (\NCensusStaychiTwoYearsOfExperience), and it runs
+non-monotonically across the four experience bands the census reports: the
+lowest expected-stay rate belongs to the 6-to-10-year band at
+\NCensusStayYearsOfExperienceSixToOneZeroYears, below both newer entrants at
+\NCensusStayYearsOfExperienceUnderThreeYears\ (under three years of
+experience) and the most experienced at
+\NCensusStayYearsOfExperienceMoreThanOneZeroYears\ (more than ten years). How
+much of a respondent's music income comes from local gigs also separates the
+Austin answer, on the same 1,900 respondents
+(\NCensusStaychiTwoMusicIncomeFromLocalGigs).
+
+Two other characteristics do not separate the answers. Neither the
+respondent's primary music-ecosystem sector (music creative, music industry,
+or venue or presenter) nor the respondent's workspace status (owns, rents,
+provided or not needed, or needs but lacks) discriminates the Austin-retention
+answer at conventional levels; both are within the range chance would
+produce among respondents
+(\NCensusStaychiTwoPrimarySector; \NCensusStaychiTwoWorkSpaceStatus).
+
+\begin{keyfinding}
+{\small That result ties together two parts of this study.
+Section~\ref{sec:costs} showed that Austin's cost problem is centered on
+housing more than on prices generally, and this section finds that housing tenure separates the
+census respondents' Austin-retention answer more sharply than any of the six
+respondent characteristics tested. Health insurance splits the same answer
+the same way, so the two strongest household-security measures both
+separate stayers from the unsure, while primary sector and workspace access
+do not separate them at all.}
+\end{keyfinding}
+
+\subsection{Working in music costs money, and the widely cited figure overstates the typical case}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{fig27_cost_of_working.png}
+\caption{Annual respondent spending on their own music work, by category,
+music creatives only, 2025 dollars. Source: 2022 Greater Austin Music Census
+respondent-level file (dataset \texttt{an3p-3yqx}), converted from 2022 to
+2025 dollars with the national consumer price index (CPI-U annual factor).
+How to read it: mean and median are shown for each category because the
+distribution is heavily right-skewed and the median is the better guide to a
+typical respondent. Caveats: each category has its own base, ranging from 611
+to 742 music creatives; the census is a self-selected online sample and
+carries no weights.}
+\label{fig:costofworking}
+\end{figure}
+
+Coverage of the 2022 census in local media and in the Sound Music Cities
+\textit{Data Appendix} often cites an annual music-work spending figure of
+about \$10,500 in 2022 dollars, worth \NCensusSpendSumofmeansTwoZeroTwoFive\
+in 2025 prices.\footnote{The published \$10,500 headline appears in the Sound
+Music Cities \textit{Data Appendix}, printed p.~46. It was widely picked up
+locally, including in Austin City Council briefings on the Live Music Fund
+and in coverage by KUT News and \textit{Austin Monitor}. The 2022 dollar
+inflation factor to 2025 is the ratio of the national CPI-U all-urban annual
+averages from the Bureau of Labor Statistics, series identifier
+\texttt{CUUR0000SA0}, at \url{https://www.bls.gov/cpi/data.htm}; the same
+factor is used throughout this study.} That headline adds together eight
+category means computed on eight different sets of respondents, so it does
+not describe any actual person. Among the \NCensusSpendCompleteN\ music
+creatives who answered every category, the median total is
+\NCensusSpendTotalMedian\ and the mean is \NCensusSpendTotalMean, both in
+2025 dollars, so the correctly constructed mean sits well below the widely
+cited figure and the median sits far below it.\footnote{The widely cited
+headline is \(\sum_{k=1}^{8}\bar{x}_k\), where \(\bar{x}_k\) is the mean of
+spending category \(k\) taken over \(S_k\), the set of respondents who
+answered that category. The eight sets are not the same people. The
+per-respondent figures quoted here are built the other way round, summing
+within a person first and taking the middle of those totals:
+\(\tilde{x} = \operatorname{median}_{i \in S}
+   \bigl(\sum_{k=1}^{8} x_{ik}\bigr)\)
+over \(S = \bigcap_k S_k\), the respondents who answered every category, so
+every dollar in the sum belongs to one person. The two constructions agree
+only when each category has the same respondents and the within-person total
+is symmetrically distributed, and neither condition holds here. Both are
+converted from 2022 to 2025 dollars by \(C_{2025}/C_{2022}\), the ratio of
+national CPI-U annual averages, as is the published headline quoted above.
+The eight categories in the instrument are gear and rentals, new recordings,
+publicity and promotion, merchandise, rehearsal or work space, supplies,
+accounting and legal, and travel; the item is asked of music creatives only
+and does not appear on the venue-operator branch.} For a single number that
+describes a typical respondent, prefer the median: \NCensusSpendTotalMedian\
+on the \NCensusSpendCompleteN\ complete-case music creatives, or
+\NCensusSpendTotalMedianAnyitem\ on the 873 who answered at least one
+category (with unanswered categories treated as zero, a deliberate lower
+bound because the release cannot distinguish a true zero from a blank).
+
+These self-reported spending figures cannot be netted against the
+Nonemployer Statistics receipts figure quoted in
+Section~\ref{sec:payroll}.\footnote{U.S.~Census Bureau, Nonemployer
+Statistics, at
+\url{https://www.census.gov/programs-surveys/nonemployer-statistics.html}.
+Nonemployer Statistics is an administrative-record product built from
+business income-tax returns of firms with no paid employees and receipts of
+at least \$1{,}000; it reports the receipts side, before expenses, and
+carries no expense series. The two numbers therefore cannot be differenced.
+They cover different populations (music-industry nonemployer firms in the
+Nonemployer file, music creatives in the census), different years, and
+different units (businesses in one case and people in the other), and the
+census figure is a self-reported cost rather than a tax-return revenue
+line.}
+
+\subsection{Respondents who present live music name property tax as their leading pressure}
+
+Among the \NCensusNPresentersRanking\ respondents who both present live music
+and completed the nine-item business-pressure ranking,
+\NCensusPressureTopThreePropertyTax\ placed property tax in their top three
+and \NCensusPressureFirstPropertyTax\ ranked it their single greatest
+pressure, ahead of talent costs (\NCensusPressureTopThreeTalentCosts\ in the
+top three) and labor cost and retention
+(\NCensusPressureTopThreeLaborCostAndRetention).\footnote{The ranking item
+asked respondents who present live music, whether as a primary or a
+secondary activity, to rank nine business pressures from most to least
+pressing. The nine items were building operations and upkeep, changing
+audience behavior, labor cost and retention, marketing, neighborhood
+redevelopment, ordinances and permitting, property tax, talent costs, and
+unpredictable operating costs. \NCensusNPresentersRanking\ respondents
+completed the full ranking; that is 8~percent of the \NCensusNRespondents\
+respondents in the file and the thinnest block used in this section. This is
+a presenter-activity population rather than a venue census: only 77 of the
+177 named venue or presenter as their primary sector, and the remaining 100
+are music creatives and industry professionals who also present gigs. The
+Sound Music Cities \textit{Data Appendix} slides~56--57 split operators from
+promoters; the promoter cell falls below this study's 50-record publication
+floor and is not reported here.}
+
+That ranking and the closure record in Section~\ref{sec:venues}, where
+\NCensusClosuresPropertyShare\ of the 36 dated Austin venue closures cite a
+real-estate cause (sale, rent increase, lease expiration, or redevelopment)
+against 13 that cite the pandemic, both point at property costs. They do not
+point at the same property cost: the census item is a tax that falls on
+owners, and the Section~\ref{sec:venues} closure record is dominated by
+rent, sale, and lease-tenure disputes at what are mostly tenant venues. The
+two sources also diverge in one place. Talent costs rank second among
+presenter pressures in the census, but appear as the cause of no closure in
+the Section~\ref{sec:venues} record. The Comptroller receipts panel used in
+Section~\ref{sec:venues} has no field for what a venue pays performers, so
+the talent-cost item is untested here rather than contradicted.
+
+Sections~\ref{sec:city} and \ref{sec:state} turn from what these respondents
+report to what the city and the state actually spend on this workforce.

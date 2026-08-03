@@ -1,0 +1,39 @@
+lmf_fy,award_name,lmf_usd,venue_key,venue_name,tier,district,match_method,uncertain_match,match_note
+2024,Antone’s Nightclub,60000,antones,Antone's,core_live_music,Downtown,taxpayer_name_confirmed,0,Comptroller trading name is ANTONES; the award list uses the full club name.
+2024,Chess Club Austin,60000,chessclub,Chess Club,core_live_music,Red River Cultural District,hand_verified,0,Comptroller trading name is CHESS CLUB.
+2024,Coral Snake,60000,coralsnake,The Coral Snake / Steely's Lodge,core_live_music,East Austin,trading_name_confirmed,0,"Comptroller records the room under two trading names, THE CORAL SNAKE and STEELYS LODGE."
+2024,Elephant Room,60000,elephantroom,Elephant Room,core_live_music,Downtown,trading_name_confirmed,0,Trading name matches exactly.
+2024,Flamingo Cantina,60000,flamingo,Flamingo Cantina,core_live_music,Downtown/6th,trading_name_confirmed,0,Trading name matches once the legal suffix is stripped.
+2024,Mohawk Austin,60000,mohawk,Mohawk,core_live_music,Red River Cultural District,hand_verified,0,"Comptroller trading name is THE MOHAWK; the permit is held by Austin Hawk, LP."
+2024,Sagebrush,60000,sagebrush,Sagebrush,core_live_music,South Congress,venue_name_confirmed,0,Comptroller trading name is SAGEBRUSH BAR.
+2024,Sahara Lounge,60000,sahara,The Sahara Lounge,core_live_music,East Austin,trading_name_confirmed,0,Trading name matches once the leading article is stripped.
+2024,Speakeasy,60000,speakeasy,Speakeasy,core_live_music,Downtown,trading_name_confirmed,0,Trading name matches exactly.
+2024,The 04 Center,60000,o4center,The 04 Center,core_live_music,South Lamar,trading_name_confirmed,0,Trading name matches once the leading article is stripped.
+2024,The 13th Floor,60000,redriverhosp,Beerland successor (Red River Hospitality),core_live_music,Red River Cultural District,hand_verified,1,"Matched on address history only: 711 Red River ran Beerland, then Green Jay, then 13th Floor. The current permit files under the trading name RED RIVER HOSPITALITY, so no name key can confirm it."
+2024,The Concourse Project,60000,concourse,The Concourse Project,large_venue,Southeast Austin,venue_name_confirmed,0,Comptroller trading name is THE CONCOURSE.
+2024,The Far Out Lounge & Stage,60000,farout,The Far Out Lounge,core_live_music,South Congress,hand_verified,0,Comptroller trading name is THE FAR OUT.
+2024,The Lost Well,60000,lostwell,The Lost Well,core_live_music,East Austin,trading_name_confirmed,0,Trading name matches once the leading article is stripped.
+2024,The Parish,60000,parish_ih35,The Parish (501 N IH-35),core_live_music,East Austin,trading_name_confirmed,0,The operating Parish room on the award date is 501 N IH-35; the older 214 E 6th permit stopped filing in 2017.
+2024,The Skylark Lounge,60000,skylark,Skylark Lounge,core_live_music,Airport Blvd,trading_name_confirmed,0,Comptroller trading name is SKYLARK LOUNGE.
+2024,Valhalla,60000,valhalla,Valhalla (711 Red River),core_live_music,Red River Cultural District,trading_name_confirmed,0,Trading name matches exactly.
+2026,Ani's Day And Night,70000,,,,,unmatched,0,
+2026,Antone's Nightclub,70000,antones,Antone's,core_live_music,Downtown,taxpayer_name_confirmed,0,Comptroller trading name is ANTONES; the award list uses the full club name.
+2026,C-Boys Heart and Soul,70000,cboys,C-Boy's Heart & Soul,core_live_music,South Congress,trading_name_confirmed,0,Comptroller trading name carries an apostrophe the award list omits.
+2026,Chess Club (Flying Houses LLC),70000,chessclub,Chess Club,core_live_music,Red River Cultural District,trading_name_confirmed,0,Comptroller trading name is CHESS CLUB; Flying Houses LLC also held the Barracuda permit.
+2026,Elysium,70000,elysium,Elysium,core_live_music,Red River Cultural District,trading_name_confirmed,0,Trading name matches exactly.
+2026,Flamingo Cantina,70000,flamingo,Flamingo Cantina,core_live_music,Downtown/6th,trading_name_confirmed,0,Trading name matches once the legal suffix is stripped.
+2026,Flying Sidewalks LLC,70000,,,,,unmatched,0,
+2026,Heard Entertainment Texas (Empire Control Room),70000,empire,Empire Control Room & Garage,core_live_music,East Austin,taxpayer_name_confirmed,0,"Heard Entertainment Texas, LLC is the Comptroller taxpayer for Empire Control Room and Garage at 606 E 7th."
+2026,Juno Black Music LLC,70000,,,,,unmatched,0,
+2026,Kick Butt Coffee,70000,kickbutt,Kick Butt Coffee,core_live_music,Airport Blvd,trading_name_confirmed,0,Trading name matches exactly.
+2026,Kingdom Nightclub,70000,kingdom,Kingdom Nightclub,core_live_music,Downtown/East,trading_name_confirmed,0,Trading name matches exactly.
+2026,Mohawk Austin,70000,mohawk,Mohawk,core_live_music,Red River Cultural District,hand_verified,0,"Comptroller trading name is THE MOHAWK; the permit is held by Austin Hawk, LP."
+2026,Parker Jazz Club,70000,parker,Parker Jazz Club,core_live_music,Downtown,venue_name_confirmed,0,Panel venue name matches; the Comptroller trading name is only PARKER.
+2026,Sahara Lounge,70000,sahara,The Sahara Lounge,core_live_music,East Austin,trading_name_confirmed,0,Trading name matches once the leading article is stripped.
+2026,Sam's Town Point,70000,samstown,Sam's Town Point,core_live_music,South Austin,trading_name_confirmed,0,Trading name matches exactly.
+2026,The 13th Floor,70000,redriverhosp,Beerland successor (Red River Hospitality),core_live_music,Red River Cultural District,hand_verified,1,"Matched on address history only: 711 Red River ran Beerland, then Green Jay, then 13th Floor. The current permit files under the trading name RED RIVER HOSPITALITY, so no name key can confirm it."
+2026,The Concourse Project,70000,concourse,The Concourse Project,large_venue,Southeast Austin,venue_name_confirmed,0,Comptroller trading name is THE CONCOURSE.
+2026,The Far Out Lounge and Stage,70000,farout,The Far Out Lounge,core_live_music,South Congress,hand_verified,0,Comptroller trading name is THE FAR OUT.
+2026,Three's Company LLC (Hotel Vegas),70000,hotelvegas,Hotel Vegas / Volstead Lounge,core_live_music,East Austin,taxpayer_name_confirmed,0,Threes Company LLC is the Comptroller taxpayer for the Hotel Vegas and Volstead Lounge permit.
+2026,VINYL Beauty Bar,70000,,,,,unmatched,0,
+2026,Valhalla,70000,valhalla,Valhalla (711 Red River),core_live_music,Red River Cultural District,trading_name_confirmed,0,Trading name matches exactly.

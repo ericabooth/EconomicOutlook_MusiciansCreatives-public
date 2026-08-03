@@ -1,0 +1,336 @@
+% Section 3: the cost side. Two housing figures in this section look
+% contradictory unless the text says which measure it is using and where each
+% measure comes from, so the reconciliation is explicit and every rent source is
+% named with its universe and vintage at first mention.
+\section{Austin is an average-cost city with expensive housing}
+\label{sec:costs}
+
+What Austin musicians earn matters only against what living in Austin costs.
+Austin is often described in local reporting and in national coverage as an
+expensive city across the board, from groceries to rent to services, but the
+federal price record narrows that picture: Austin runs close to the national
+average on most goods and services and above the national average only in
+housing.\footnote{Framings that treat Austin as broadly expensive appear in
+national coverage such as U.S.\ News \& World Report's cost-of-living
+rankings and in Austin American-Statesman and Axios Austin coverage of
+city-affordability trends; this study does not enumerate that literature
+here, and the BEA Regional Price Parities cited in the next sentence are
+the federal counterpoint.} The Bureau of
+Economic Analysis publishes an annual price comparison across metro areas
+called the Regional Price Parities (RPP), which measures the price of a common
+basket of goods and services in each metro against a national average set to
+100 and reports it separately for four component baskets, one of which is
+housing services.\footnote{The BEA program is the \textit{Regional Price
+Parities and Implicit Regional Price Deflators by MSA}, currently released in
+its 2024 vintage covering years 2008 through 2024, and available from the
+Bureau of Economic Analysis at
+\url{https://apps.bea.gov/regional/zip/MARPP.zip}. The universe is the
+population of each metropolitan statistical area, and the basket weights come
+from the Consumer Expenditure Survey. Each metro's all-items index is a
+weighted average of the four component indexes, so the housing component and
+the all-items index sit on the same national base of 100 and their difference
+in the same metro is in index points rather than percent. BEA publishes no
+sampling error for these estimates because the underlying price series are
+themselves published indexes rather than sample statistics.} On the 2024 BEA
+figures, Austin's all-items index is \NColRppAllitemsAustin\ against the
+national average of 100, marginally below the national average across all
+goods and services. Austin's housing services index is
+\NColRppHousingAustin, so housing costs in Austin run
+\NColRppGapAustin\ higher than everything else does in the same city. That
+place gap is the widest of the five metros compared here, ahead of
+Dallas \NColRppGapDallas, Nashville \NColRppGapNashville, Houston
+\NColRppGapHouston, and San Antonio essentially none at
+\NColRppGapSanantonio.\footnote{The gap reported for each metro is
+\(g_m = \mathrm{RPP}^{\mathrm{hous}}_m - \mathrm{RPP}^{\mathrm{all}}_m\), the
+difference in index points between that metro's housing parity and its own
+all-items parity, so it measures how much more expensive housing is than
+everything else in the same place rather than how expensive that place is
+against another one. Because both terms are indexed to the same national base
+of 100, the difference is in index points and is not a percentage. Austin's
+housing parity peaked at \NColRppAustinHousingPeak, a peak year the two
+independent housing series in Figure~\ref{fig:metrorent} corroborate.}
+
+The national price record shows the same relative movement over time, in a
+different measure. The Bureau of Labor Statistics tracks the price of a fixed
+consumer basket each month in its Consumer Price Index for All Urban Consumers
+(CPI-U), for a universe of the urban population of the United States, and
+reports the all-items index and its components on a common
+base.\footnote{The series are the CPI-U All items (series identifier
+CUUR0000SA0) and the CPI-U Housing component, U.S.\ city average, monthly, and
+this study rebases each to its 2005 annual average and takes the 2025 annual
+average of each rebased series. Program documentation is available from BLS at
+\url{https://www.bls.gov/cpi/}. BLS publishes no Austin-area CPI at all, so
+every real-dollar figure in this report deflates by the national U.S.\ city
+average CPI-U, and given the RPP evidence above that Austin housing runs above
+the national norm, this national deflator most likely understates the true
+Austin price rise. The 2025 annual average of the housing component uses an
+interpolated October, because the federal funding lapse suspended BLS price
+collection that month.} Rebased so that each series equals 100 in 2005, the
+housing component reaches \NColCpiHousingIndexTwoZeroTwoFive\ by 2025 against
+\NColCpiAllitemsIndexTwoZeroTwoFive\ for all items, so national housing prices
+have risen \NColCpiHousingGapTwoZeroTwoFive\ faster than the broad basket since
+2005.\footnote{Rebasing on 2005 puts \(I^{s}_{t} = 100 \times C^{s}_{t} /
+C^{s}_{2005}\), where \(C^{s}_{t}\) is the annual average of the CPI-U for
+series \(s\), either all items or the housing component, in year \(t\).
+Putting both series on the same base year is what makes them comparable, and
+the gap is the difference of the two rebased levels in 2025,
+\(I^{\mathrm{hous}}_{2025} - I^{\mathrm{all}}_{2025}\), again in index points
+rather than percent. This national CPI comparison and the BEA metro parity
+above answer different questions and are not comparable in level: the
+CPI-Housing figure describes the national price rise for housing since 2005,
+and the RPP-Housing figure above describes where the Austin metro sits against
+the current national average.}
+
+For Austin musicians the cost problem concentrates in housing, the one BEA
+category that prices well above the national norm in Austin. The rest of this
+section follows housing: what market rents have done since 2015, how many
+hours of work a month of rent costs at Austin wages, and why those two figures
+appear to disagree.
+
+\subsection{Rents rose sharply, then fell further than in any comparison metro}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{fig20_metro_rent.png}
+\caption{Real market rent indexed to each metro's own January 2015 level, 2025
+dollars, through June 2026. Source: Zillow Observed Rent Index (ZORI),
+seasonally adjusted, deflated with the national Consumer Price Index for All
+Urban Consumers. How to read it: each line shows how far that metro's real
+rent has moved from its own 2015 starting point, so the lines compare
+trajectories rather than rent levels. Note on timing: Austin's real peak is
+December 2021, about a year before the widely quoted nominal peak, because
+deflating during the sharp inflation of 2021 to 2023 shifts the turning point
+earlier. Both readings are correct and answer different questions. Caveat: the
+small step every line takes at each January is the annual deflator changing,
+not a change in rents, because a single year-average price index is applied to
+twelve months of rent data.}
+\label{fig:metrorent}
+\end{figure}
+
+Zillow's Observed Rent Index estimates the typical asking rent in each metro
+each month by weighting an internal repeat-rent index against local rental
+market shares, and it is the closest thing in the public record to a monthly
+Austin rent series, because BLS publishes no Austin-area consumer price
+index.\footnote{Zillow Group publishes the seasonally adjusted metro-level
+ZORI series at \url{https://www.zillow.com/research/data/}, together with a
+methodology document. The universe is rental listings on the Zillow platform,
+weighted to the U.S.\ Postal Service's count of the rental housing stock in
+each geography, so ZORI captures the rent asked on newly available units
+rather than the rent paid on all standing leases. It is not a probability
+sample of dwellings, and Zillow does not attach a sampling error to it. It
+runs monthly at the metro level and picks up cyclical turns faster than the
+Census Bureau's American Community Survey median gross rent, which pools five
+years of household responses and moves slowly by construction.} On that
+series, Austin's real market rent peaked at \NColZoriAustinPeak\ and has
+fallen \NColZoriAustinPeaktolatest\ since, the steepest decline among the five
+metros in Figure~\ref{fig:metrorent}, with San Antonio the nearest at
+\NColZoriSanantonioPeaktolatest\ and Dallas
+\NColZoriDallasPeaktolatest\ and Houston
+\NColZoriHoustonPeaktolatest.\footnote{The plotted series deflates each metro
+first and rebases second. The real level is
+\(R^{\mathrm{real}}_{m,t} = R_{m,t} \times d_{y(t)}\), where \(R_{m,t}\) is
+the seasonally adjusted ZORI value for metro \(m\) in month \(t\), \(y(t)\)
+is the calendar year containing that month, and \(d_y = C_{2025}/C_y\) is
+the ratio of national CPI-U annual averages that carries year \(y\) dollars
+to 2025 dollars. The plotted line is then
+\(I_{m,t} = 100 \times R^{\mathrm{real}}_{m,t} \big/
+   R^{\mathrm{real}}_{m,\text{Jan }2015}\),
+each metro against its own base month, which removes the level and leaves the
+trajectory, so metros at different rent levels can share one axis. The
+peak-to-latest change is
+\(100\,\bigl(R^{\mathrm{real}}_{m,\text{latest}} \big/
+   R^{\mathrm{real}}_{m,\text{peak}} - 1\bigr)\)
+on the deflated series. Deflating with an annual CPI-U during the sharp
+inflation of 2021 to 2023 is what moves the real peak about a year ahead of
+the nominal one: the step in \(d_y\) between 2021 and 2022 outweighs the
+further nominal rent increase in that year.} Home values fell further still.
+Zillow's Home Value Index (ZHVI), a repeat-sales estimate of the typical
+market value of a single-family home in the metro, records an Austin peak of
+\NColZhviAustinPeak\ and a real decline of
+\NColZhviAustinPeaktolatest\ from it.\footnote{Zillow Group publishes the
+metro-level ZHVI (all homes, seasonally adjusted) at the same research portal,
+\url{https://www.zillow.com/research/data/}. The universe is the middle tier
+of homes valued between the 35th and 65th percentiles in each geography,
+estimated monthly from Zillow's proprietary automated valuation model and
+transaction records. ZHVI is a market-value estimate rather than a
+transaction-price series, so it can move faster than recorded sales prices
+where turnover thins, and no sampling error attaches to it.} A report that
+showed only the run-up and stopped in 2022 would be describing a market that
+no longer exists.
+
+The federal housing-assistance benchmark moved differently. The Department
+of Housing and Urban Development publishes an annual Fair Market Rent (FMR)
+for each metropolitan area, one figure per bedroom count, and sets it near
+the 40th percentile of standard-quality rents in the area, using a rolling
+five-year window of American Community Survey responses updated with more
+recent private data.\footnote{The all-years FMR history is available from
+HUD at \url{https://www.huduser.gov/portal/datasets/FMR/FMR_All_1983_2026.csv}.
+The FMR is the reference point for what the federal Housing Choice Voucher
+program, and other HUD rental-assistance programs, will pay in each metro
+area. It is a benchmark, not an observed rent: HUD constructs it from ACS
+five-year survey data on gross rent for standard-quality units and then
+trends it forward with more recent private rent indexes. The universe is
+recent movers within the metro, so FMR turns later than a market series like
+ZORI. Two breaks in the source sit inside this study's window and make the
+peak date and the peak-to-latest change approximate: the nominal one-bedroom
+Austin rent jumps 18.0 percent between FY2023 and FY2024, the same year the
+file's percentile-basis field goes blank, and the FY2026 value is published
+for a redefined metro area, Austin-Round Rock-San Marcos rather than
+Austin-Round Rock.} HUD's Austin one-bedroom FMR peaked later, at
+\NColHudBrOneAustinPeak, and has come down only
+\NColHudBrOneAustinPeaktolatest\ since.\footnote{Both housing series in this
+subsection use the same deflator and dating rule as the market rent above,
+\(F^{\mathrm{real}}_y = F_y \times d_y\) followed by
+\(100\,(F^{\mathrm{real}}_{\mathrm{latest}}/F^{\mathrm{real}}_{\mathrm{peak}}
+   - 1)\), so both are in constant 2025 dollars. The hours-of-work ratio in
+the next subsection uses the same HUD Fair Market Rent in nominal dollars
+instead, because there the rent is divided by a same-year wage and deflating
+both sides would cancel.} Austin's assistance benchmark turned about two and
+a half years after the market series did. That lag matters for any program
+priced off the benchmark rather than off the market, and it is the larger
+part of the tension between the next two figures. The rest of that tension is
+that the payroll musician wage the next figure divides by fell back from an
+unusually high 2022 reading in the years HUD's FMR was still rising.
+
+\subsection{The payroll wage understates what rent takes from musicians}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{fig19_rent_vs_wages.png}
+\caption{Hours of work at the median hourly wage needed to cover one month of
+Austin one-bedroom Fair Market Rent. Sources: Bureau of Labor Statistics
+Occupational Employment and Wage Statistics for the Austin metro; HUD Fair
+Market Rents; and the City of Austin's purchased earnings series, dataset
+\texttt{2qxc-8cme}. Wages and rents are matched within year in nominal terms,
+because the ratio of two same-year dollar figures needs no inflation
+adjustment. How to read it: a higher line means rent costs more hours of work.
+Critical caveat: the federal wage series counts payroll jobs only and excludes
+the self-employed, who are \NPumsAustinMusSelfemp\
+(\NPumsAustinMusSelfempMoe) of employed Austin-metro musicians aged 18 to 64
+over 2020 to 2024, and the Austin musician estimate rests on between about
+100 and 700 payroll jobs depending on the year, and
+\NEmpPayrollMusiciansAustinLast\ in 2025, which makes it volatile from year to
+year. The city's own purchased earnings series, which appears to include
+self-employment income, exists for only two years and is not plotted; in 2017
+it put musician pay at \NColAnchorCityWageVsOewsTwoZeroOneSeven\ of the
+federal figure for the same occupation.}
+\label{fig:rentwages}
+\end{figure}
+
+The federal payroll wage this figure divides into rent is the Austin-metro
+median hourly wage in the BLS Occupational Employment and Wage Statistics
+program (OEWS), a semi-annual establishment survey that BLS and the state
+workforce agencies run jointly.\footnote{BLS publishes the OEWS Austin
+Metropolitan Statistical Area estimates in its annual tables at
+\url{https://www.bls.gov/oes/tables.htm}, the most recent vintage being
+May~2025. Establishments in the sample report the wage of every worker on
+their payroll but report nothing for the self-employed, who fall outside the
+sampling frame, so the Austin musician wage in this figure describes only the
+\NEmpPayrollMusiciansAustinLast\ musician jobs the 2025 OEWS Austin sample
+found on a payroll, and Section~\ref{sec:measurement} develops that
+measurement gap in full. BLS does not publish an \emph{annual} musician wage
+for any city or year because musician work is too irregular to annualise from
+an hourly rate, so the ratio here uses the hourly median.} On that payroll
+wage, a month of one-bedroom rent costs an Austin musician
+\NColAnchorHoursMusicianLatest\ of work, against
+\NColAnchorHoursAlloccLatest\ for the median Austin worker in 2025
+(Figure~\ref{fig:rentwages}).\footnote{The ratio is
+\(h_{o,y} = F_y / w_{o,y}\), where \(F_y\) is the Austin one-bedroom HUD Fair
+Market Rent for fiscal year \(y\) in dollars per month, \(w_{o,y}\) is the
+Austin-metro OEWS median hourly wage for occupation group \(o\) in the same
+year in dollars per hour, and \(h_{o,y}\) is therefore in hours per month.
+This ratio needs no inflation adjustment, and both sides are left in nominal
+dollars on purpose: multiplying numerator and denominator by the same factor
+\(d_y\) leaves \((d_y F_y)/(d_y w_{o,y}) = F_y / w_{o,y}\), so deflating would
+change nothing except to invite a mismatch of years. The two sides are
+matched within year for the same reason. BLS did not publish the musician
+wage for 2016 and the figure draws a straight segment across that year, so
+the 2015-to-2017 stretch of the orange line should not be read as an observed
+path. This is a ratio of two published medians, not a sample estimate, so
+it has no standard error; its year-to-year movement still reflects sampling
+noise in the thin musician wage estimate underneath it.} By that measure
+Austin musicians look better placed than the typical Austin worker, because
+the OEWS payroll wage covers only the \NEmpPayrollMusiciansAustinLast\
+musician jobs the 2025 OEWS Austin sample recorded, the measurement gap
+Section~\ref{sec:measurement} describes, and those payroll jobs pay above the
+Austin all-occupation median. That ordering is a real feature of the payroll
+data and a poor description of the occupation, and on so thin a base the
+shape of the orange line across the full period is firmer evidence than the
+2025 point on its own.
+
+The picture changes when the earnings measure includes the self-employed. The
+Census Bureau's American Community Survey Public Use Microdata Sample (ACS
+PUMS) samples households rather than employers, so it captures earnings for
+the self-employed alongside payroll earners, at the cost of thinner samples in
+any single year.\footnote{The ACS is an ongoing annual household survey the
+Census Bureau administers to approximately 3.5 million addresses each year;
+the five-year PUMS pools respondents across 2020 through 2024 to produce
+metro-level estimates on smaller occupations, at
+\url{https://www2.census.gov/programs-surveys/acs/data/pums/2024/5-Year/}. The
+Austin-metro musician cell used here is Musicians and Singers (occupation
+code OCCP 2752), employed 18 to 64 with positive earnings, weighted by PWGTP.
+Because the five-year file is one pooled cross-section rather than five
+annual observations, this share is a point estimate for the pooled period
+rather than a series that can be plotted year by year.} Measured against ACS
+median earnings from Section~\ref{sec:earnings}, a year of one-bedroom HUD
+Fair Market Rent would equal \NColPumsRentShareMatched\ of the median annual
+earnings of employed Austin-metro musicians aged 18 to 64 over 2020 to
+2024.\footnote{The share is
+\(s = 100 \times 12\bar{F} \big/ \tilde{y}\), where \(\bar{F}\) is the
+average Austin one-bedroom HUD Fair Market Rent across fiscal years 2020 to
+2024 in 2025 dollars, the same five years the microdata pool, and
+\(\tilde{y}\) is the weighted median personal earnings from work of Austin
+musicians in 2025 dollars on the positive-earnings base. Averaging the five
+fiscal years rather than picking one is what makes the numerator and the
+denominator cover the same period. The numerator is a housing cost for a
+dwelling and the denominator is one person's earnings, so \(s\) is
+affordability arithmetic rather than an observed housing outlay, and it
+carries the margin of error of the earnings median in its denominator.
+Measured against the FY2026 rent, which replaces \(\bar{F}\) with that single
+year, it is \NColPumsRentShareLatest. Both are far above the 30 percent share
+the federal government treats as the ceiling for a rental burden a household
+can carry without cost-burden status, which is a statement about arithmetic
+rather than a claim about any individual's housing.} The numerator here is a
+benchmark rent rather than an observed one. Separate corroboration comes from
+Section~\ref{sec:earnings}, which reports that across Texas, renting
+households with a musician in them pay a higher median gross rent than
+renting worker households generally, while carrying about the same
+rent-to-income burden. On that evidence, Texas musician households are not
+renting more cheaply than other working households.
+
+\subsection{Real market rents fell while the nominal assistance benchmark kept climbing through 2025}
+
+Figure~\ref{fig:metrorent} shows real rents falling. Figure~\ref{fig:rentwages}
+shows hours of work per month of rent rising between 2023 and 2025. Both are
+correct, and a reader who noticed the tension without an explanation would be
+right to distrust what follows. The two figures rest on different rents and
+different denominators, as the table below sets out:
+
+\begin{center}
+\footnotesize
+\begin{tabular}{@{}B{2.9cm} P{6.3cm} P{6.6cm}@{}}
+\toprule
+& \textbf{Figure~\ref{fig:metrorent}} & \textbf{Figure~\ref{fig:rentwages}} \\
+\midrule
+Rent measure & Zillow Observed Rent Index, a market listings series deflated
+to constant 2025 dollars and indexed to each metro's own January 2015 level &
+HUD Fair Market Rent for a one-bedroom in Austin, nominal dollars, the annual
+benchmark for federal housing-assistance payments \\
+\rowrule
+Wage denominator & None: the line plots rent alone & The BLS OEWS median
+hourly wage across the \NEmpPayrollMusiciansAustinLast\ Austin musician jobs
+recorded in 2025 \\
+\rowrule
+Direction, 2023 to 2025 & Down: Zillow market rents fell in real terms in
+Austin more than in any other metro compared & Up: HUD's benchmark kept
+climbing while the OEWS musician wage fell back from an unusually high 2022
+reading \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{3pt}
+Where this study needs a single number for what renting costs in Austin, it
+takes the Zillow market series and says so. The hours-of-rent figure also
+rests on an OEWS payroll wage that describes fewer musician jobs than it once
+did, and Section~\ref{sec:payroll} follows that count across twenty years.

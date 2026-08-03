@@ -1,0 +1,474 @@
+year,geography,geo_level,area,area_name,occ_code,occ_title,tot_emp,h_mean,a_mean,h_median,a_median,h_pct10,h_pct25,h_pct75,h_pct90,a_pct10,a_pct25,a_pct75,a_pct90,source_file
+2005,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",00-0000,All Occupations,686150.0,18.66,38810.0,14.38,29910.0,7.19,9.59,22.57,35.02,14940.0,19960.0,46950.0,72850.0,MSA_may2005_dl_3.xls
+2006,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",00-0000,All Occupations,711080.0,19.19,39910.0,14.7,30570.0,7.34,9.78,23.18,36.71,15270.0,20340.0,48200.0,76360.0,MSA_may2006_dl_3.xls
+2007,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",00-0000,All Occupations,743630.0,19.87,41330.0,14.88,30950.0,7.48,9.96,24.18,38.78,15560.0,20710.0,50300.0,80660.0,MSA_May2007_dl_3.xls
+2008,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",00-0000,All Occupations,775020.0,20.46,42550.0,15.26,31750.0,7.79,10.29,24.83,39.55,16200.0,21390.0,51640.0,82250.0,MSA_M2008_dl_3.xls
+2009,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",00-0000,All Occupations,769370.0,21.72,45180.0,16.3,33890.0,8.01,10.69,26.19,41.91,16650.0,22230.0,54480.0,87180.0,MSA_dl_3.xls
+2010,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",00-0000,All Occupations,759910.0,22.18,46130.0,16.78,34900.0,8.37,10.83,26.88,42.61,17400.0,22530.0,55910.0,88620.0,MSA_M2010_dl_3.xls
+2011,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",00-0000,All Occupations,787850.0,22.76,47340.0,17.2,35780.0,8.56,11.01,27.79,43.81,17810.0,22900.0,57810.0,91120.0,MSA_M2011_dl_3_OH_WY.xls
+2012,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",00-0000,All Occupations,812600.0,22.64,47080.0,17.12,35620.0,8.64,11.02,27.63,43.64,17960.0,22930.0,57470.0,90760.0,MSA_M2012_dl_3_OH_WY.xls
+2013,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",00-0000,All Occupations,854930.0,23.03,47900.0,17.48,36360.0,8.74,11.21,28.09,44.1,18180.0,23310.0,58430.0,91720.0,MSA_M2013_dl_3_OH_WY.xls
+2014,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",00-0000,All Occupations,886620.0,23.15,48150.0,17.62,36640.0,8.82,11.37,28.08,44.26,18340.0,23650.0,58420.0,92060.0,MSA_M2014_dl.xlsx
+2015,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",00-0000,All Occupations,928810.0,23.83,49560.0,17.95,37330.0,8.99,11.63,29.0,46.05,18700.0,24190.0,60320.0,95780.0,MSA_M2015_dl.xlsx
+2016,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",00-0000,All Occupations,965100.0,24.44,50830.0,18.17,37800.0,9.24,11.96,29.67,47.41,19220.0,24870.0,61710.0,98620.0,MSA_M2016_dl.xlsx
+2017,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",00-0000,All Occupations,996540.0,24.92,51840.0,18.56,38610.0,9.45,12.26,30.21,48.0,19650.0,25500.0,62830.0,99830.0,MSA_M2017_dl.xlsx
+2018,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",00-0000,All Occupations,1028500.0,25.87,53810.0,19.26,40070.0,9.85,12.89,31.5,49.12,20500.0,26800.0,65520.0,102170.0,MSA_M2018_dl.xlsx
+2019,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",00-0000,All Occupations,1073340.0,26.53,55190.0,19.98,41560.0,10.16,13.37,32.41,50.22,21130.0,27810.0,67420.0,104460.0,MSA_M2019_dl.xlsx
+2020,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",00-0000,All Occupations,1054230.0,27.8,57830.0,21.16,44020.0,10.7,14.2,34.23,52.81,22260.0,29530.0,71200.0,109830.0,MSA_M2020_dl.xlsx
+2021,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",00-0000,All Occupations,1073160.0,28.97,60260.0,22.55,46910.0,11.19,14.39,36.82,55.45,23270.0,29940.0,76590.0,115340.0,MSA_M2021_dl.xlsx
+2022,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",00-0000,All Occupations,1176860.0,30.72,63890.0,22.9,47630.0,12.63,16.14,37.28,59.44,26270.0,33570.0,77530.0,123640.0,MSA_M2022_dl.xlsx
+2023,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",00-0000,All Occupations,1235440.0,33.25,69150.0,24.07,50070.0,13.5,17.23,39.56,63.52,28080.0,35840.0,82270.0,132130.0,MSA_M2023_dl.xlsx
+2024,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",00-0000,All Occupations,1260220.0,34.32,71390.0,25.29,52610.0,13.9,17.75,39.86,64.16,28920.0,36920.0,82910.0,133450.0,MSA_M2024_dl.xlsx
+2025,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",00-0000,All Occupations,1293690.0,35.85,74580.0,27.38,56950.0,14.36,18.38,43.54,66.26,29860.0,38230.0,90560.0,137820.0,MSA_M2025_dl.xlsx
+2005,US_national,National,0,U.S.,00-0000,All Occupations,130307840.0,18.21,37870.0,14.15,29430.0,7.26,9.46,22.2,33.74,15110.0,19680.0,46180.0,70180.0,national_may2005_dl.xls
+2006,US_national,National,0,U.S.,00-0000,All Occupations,132604980.0,18.84,39190.0,14.61,30400.0,7.45,9.75,22.99,35.08,15500.0,20270.0,47820.0,72960.0,national_may2006_dl.xls
+2007,US_national,National,0,U.S.,00-0000,All Occupations,134354250.0,19.56,40690.0,15.1,31410.0,7.72,10.06,23.87,36.49,16060.0,20920.0,49640.0,75910.0,national_May2007_dl.xls
+2008,US_national,National,0,U.S.,00-0000,All Occupations,135185230.0,20.32,42270.0,15.57,32390.0,8.02,10.38,24.78,37.99,16680.0,21590.0,51540.0,79020.0,national__M2008_dl.xls
+2009,US_national,National,0,U.S.,00-0000,All Occupations,130647610.0,20.9,43460.0,15.95,33190.0,8.24,10.55,25.44,39.02,17140.0,21940.0,52920.0,81160.0,national_dl.xls
+2010,US_national,National,0,U.S.,00-0000,All Occupations,127097160.0,21.35,44410.0,16.27,33840.0,8.51,10.65,26.08,39.97,17690.0,22150.0,54250.0,83140.0,national_M2010_dl.xls
+2011,US_national,National,0,U.S.,00-0000,All Occupations,128278550.0,21.74,45230.0,16.57,34460.0,8.65,10.76,26.67,41.0,18000.0,22380.0,55470.0,85280.0,national_M2011_dl.xls
+2012,US_national,National,0,U.S.,00-0000,All Occupations,130287700.0,22.01,45790.0,16.71,34750.0,8.7,10.81,27.02,41.74,18090.0,22480.0,56200.0,86810.0,national_M2012_dl.xls
+2013,US_national,National,0,U.S.,00-0000,All Occupations,132588810.0,22.33,46440.0,16.87,35080.0,8.74,10.9,27.34,42.47,18190.0,22670.0,56860.0,88330.0,national_M2013_dl.xls
+2014,US_national,National,0,U.S.,00-0000,All Occupations,135128260.0,22.71,47230.0,17.09,35540.0,8.82,11.04,27.75,43.3,18350.0,22950.0,57720.0,90060.0,national_M2014_dl.xlsx
+2015,US_national,National,0,U.S.,00-0000,All Occupations,137896660.0,23.23,48320.0,17.4,36200.0,9.07,11.27,28.32,44.29,18870.0,23430.0,58900.0,92110.0,national_M2015_dl.xlsx
+2016,US_national,National,0,U.S.,00-0000,All Occupations,140400040.0,23.86,49630.0,17.81,37040.0,9.27,11.6,28.92,45.45,19290.0,24140.0,60150.0,94540.0,national_M2016_dl.xlsx
+2017,US_national,National,0,U.S.,00-0000,All Occupations,142549250.0,24.34,50620.0,18.12,37690.0,9.6,11.91,29.38,46.23,19970.0,24770.0,61110.0,96150.0,national_M2017_dl.xlsx
+2018,US_national,National,0,U.S.,00-0000,All Occupations,144733270.0,24.98,51960.0,18.58,38640.0,9.95,12.37,30.06,47.31,20690.0,25740.0,62510.0,98410.0,national_M2018_dl.xlsx
+2019,US_national,National,0,U.S.,00-0000,All Occupations,146875480.0,25.72,53490.0,19.14,39810.0,10.35,13.02,30.88,48.57,21530.0,27080.0,64240.0,101020.0,national_M2019_dl.xlsx
+2020,US_national,National,0,U.S.,00-0000,All Occupations,139099570.0,27.07,56310.0,20.17,41950.0,10.97,13.95,32.41,50.99,22810.0,29020.0,67410.0,106050.0,national_M2020_dl.xlsx
+2021,US_national,National,0,U.S.,00-0000,All Occupations,140886310.0,28.01,58260.0,22.0,45760.0,11.53,14.4,32.98,49.43,23980.0,29950.0,68590.0,102810.0,national_M2021_dl.xlsx
+2022,US_national,National,0,U.S.,00-0000,All Occupations,147886000.0,29.76,61900.0,22.26,46310.0,13.14,16.03,35.32,53.03,27340.0,33330.0,73460.0,110290.0,national_M2022_dl.xlsx
+2023,US_national,National,0,U.S.,00-0000,All Occupations,151853870.0,31.48,65470.0,23.11,48060.0,13.97,17.14,37.01,58.4,29050.0,35660.0,76980.0,121470.0,national_M2023_dl.xlsx
+2024,US_national,National,0,U.S.,00-0000,All Occupations,154187380.0,32.66,67920.0,23.8,49500.0,14.42,17.66,37.89,60.44,29990.0,36730.0,78810.0,125720.0,national_M2024_dl.xlsx
+2025,US_national,National,0,U.S.,00-0000,All Occupations,155495730.0,33.54,69770.0,24.51,50980.0,15.0,18.07,38.71,61.81,31200.0,37590.0,80520.0,128560.0,national_M2025_dl.xlsx
+2005,TX_state,State,48,Texas,00-0000,All Occupations,9424510.0,17.05,35470.0,12.88,26790.0,6.47,8.44,20.89,32.14,13470.0,17560.0,43450.0,66840.0,state_may2005_dl.xls
+2006,TX_state,State,48,Texas,00-0000,All Occupations,9760960.0,17.5,36410.0,13.26,27570.0,6.62,8.69,21.34,32.89,13770.0,18080.0,44380.0,68400.0,state_may2006_dl.xls
+2007,TX_state,State,48,Texas,00-0000,All Occupations,10061750.0,18.21,37880.0,13.76,28620.0,6.8,9.0,22.2,34.35,14140.0,18710.0,46180.0,71450.0,state_May2007_dl.xls
+2008,TX_state,State,48,Texas,00-0000,All Occupations,10391420.0,18.9,39320.0,14.28,29710.0,7.17,9.3,23.06,35.43,14910.0,19350.0,47970.0,73690.0,state__M2008_dl.xls
+2009,TX_state,State,48,Texas,00-0000,All Occupations,10289240.0,19.76,41100.0,14.83,30850.0,7.53,9.55,24.13,36.92,15660.0,19870.0,50180.0,76790.0,state_dl.xls
+2010,TX_state,State,48,Texas,00-0000,All Occupations,10089870.0,20.3,42220.0,15.14,31490.0,7.99,9.69,24.78,37.83,16620.0,20150.0,51550.0,78680.0,state_M2010_dl.xls
+2011,TX_state,State,48,Texas,00-0000,All Occupations,10304370.0,20.72,43090.0,15.44,32120.0,8.28,9.87,25.37,38.68,17210.0,20520.0,52770.0,80450.0,state_M2011_dl.xls
+2012,TX_state,State,48,Texas,00-0000,All Occupations,10579400.0,20.97,43620.0,15.55,32350.0,8.32,9.9,25.57,39.66,17300.0,20590.0,53190.0,82500.0,state_M2012_dl.xls
+2013,TX_state,State,48,Texas,00-0000,All Occupations,10913950.0,21.35,44400.0,15.81,32880.0,8.37,10.09,26.01,40.57,17420.0,20990.0,54090.0,84390.0,state_M2013_dl.xls
+2014,TX_state,State,48,Texas,00-0000,All Occupations,11228940.0,21.79,45330.0,16.18,33650.0,8.45,10.36,26.53,41.42,17570.0,21550.0,55190.0,86160.0,state_M2014_dl.xlsx
+2015,TX_state,State,48,Texas,00-0000,All Occupations,11572540.0,22.38,46560.0,16.61,34550.0,8.55,10.67,27.25,42.52,17780.0,22200.0,56680.0,88450.0,state_M2015_dl.xlsx
+2016,TX_state,State,48,Texas,00-0000,All Occupations,11745250.0,22.97,47770.0,17.06,35480.0,8.69,11.0,27.98,43.61,18080.0,22890.0,58190.0,90710.0,state_M2016_dl.xlsx
+2017,TX_state,State,48,Texas,00-0000,All Occupations,11890880.0,23.42,48700.0,17.39,36170.0,8.85,11.29,28.53,44.45,18400.0,23480.0,59340.0,92460.0,state_M2017_dl.xlsx
+2018,TX_state,State,48,Texas,00-0000,All Occupations,12113810.0,23.9,49720.0,17.84,37100.0,9.06,11.63,29.06,45.04,18850.0,24190.0,60450.0,93670.0,state_M2018_dl.xlsx
+2019,TX_state,State,48,Texas,00-0000,All Occupations,12431200.0,24.27,50490.0,18.28,38010.0,9.25,11.99,29.47,45.7,19240.0,24930.0,61290.0,95050.0,state_M2019_dl.xlsx
+2020,TX_state,State,48,Texas,00-0000,All Occupations,12102370.0,25.19,52400.0,19.06,39640.0,9.55,12.56,30.59,47.62,19870.0,26120.0,63620.0,99050.0,state_M2020_dl.xlsx
+2021,TX_state,State,48,Texas,00-0000,All Occupations,12226170.0,26.07,54230.0,18.77,39030.0,10.63,13.78,30.01,48.02,22110.0,28660.0,62420.0,99880.0,state_M2021_dl.xlsx
+2022,TX_state,State,48,Texas,00-0000,All Occupations,12992730.0,27.55,57300.0,20.9,43460.0,10.92,14.29,31.47,49.82,22710.0,29720.0,65460.0,103620.0,state_M2022_dl.xlsx
+2023,TX_state,State,48,Texas,00-0000,All Occupations,13557950.0,29.44,61240.0,22.1,45970.0,11.68,15.35,34.92,53.76,24300.0,31920.0,72640.0,111820.0,state_M2023_dl.xlsx
+2024,TX_state,State,48,Texas,00-0000,All Occupations,13846880.0,30.6,63660.0,22.84,47500.0,12.52,16.4,36.33,58.26,26050.0,34100.0,75570.0,121180.0,state_M2024_dl.xlsx
+2025,TX_state,State,48,Texas,00-0000,All Occupations,14071160.0,31.61,65750.0,23.38,48620.0,13.1,17.01,37.42,60.2,27250.0,35370.0,77840.0,125220.0,state_M2025_dl.xlsx
+2005,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-1024,Graphic designers,1230.0,20.13,41870.0,18.49,38460.0,11.78,14.2,23.62,30.38,24500.0,29540.0,49140.0,63190.0,MSA_may2005_dl_3.xls
+2006,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-1024,Graphic designers,1100.0,20.79,43250.0,19.24,40020.0,12.27,14.89,25.15,31.67,25520.0,30970.0,52320.0,65870.0,MSA_may2006_dl_3.xls
+2007,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-1024,Graphic designers,1060.0,21.66,45050.0,19.68,40940.0,12.72,15.25,25.45,33.48,26470.0,31710.0,52940.0,69630.0,MSA_May2007_dl_3.xls
+2008,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-1024,Graphic designers,1350.0,22.13,46040.0,20.86,43400.0,13.07,16.24,25.68,32.8,27190.0,33790.0,53420.0,68220.0,MSA_M2008_dl_3.xls
+2009,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-1024,Graphic designers,1510.0,23.33,48520.0,21.22,44130.0,12.83,16.64,26.49,34.0,26690.0,34620.0,55090.0,70710.0,MSA_dl_3.xls
+2010,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-1024,Graphic Designers,1410.0,24.59,51150.0,22.18,46140.0,13.14,17.4,28.5,35.83,27320.0,36190.0,59290.0,74530.0,MSA_M2010_dl_3.xls
+2011,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-1024,Graphic Designers,1350.0,24.2,50330.0,21.06,43800.0,13.77,16.54,27.99,35.85,28640.0,34410.0,58220.0,74560.0,MSA_M2011_dl_3_OH_WY.xls
+2012,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-1024,Graphic Designers,1350.0,22.91,47640.0,21.06,43800.0,14.06,16.67,27.28,34.39,29240.0,34670.0,56750.0,71540.0,MSA_M2012_dl_3_OH_WY.xls
+2013,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-1024,Graphic Designers,1500.0,23.27,48410.0,20.96,43600.0,14.74,17.14,26.96,34.21,30660.0,35640.0,56070.0,71150.0,MSA_M2013_dl_3_OH_WY.xls
+2014,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-1024,Graphic Designers,1670.0,22.89,47610.0,21.64,45010.0,11.19,16.7,27.6,34.39,23270.0,34740.0,57420.0,71540.0,MSA_M2014_dl.xlsx
+2015,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-1024,Graphic Designers,1600.0,23.57,49030.0,21.66,45060.0,11.7,17.2,27.54,35.56,24330.0,35790.0,57280.0,73970.0,MSA_M2015_dl.xlsx
+2016,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-1024,Graphic Designers,1520.0,24.54,51040.0,22.39,46560.0,12.05,18.33,28.18,36.25,25070.0,38120.0,58610.0,75400.0,MSA_M2016_dl.xlsx
+2017,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-1024,Graphic Designers,1520.0,27.83,57880.0,25.31,52650.0,16.93,20.63,32.16,38.13,35210.0,42910.0,66890.0,79300.0,MSA_M2017_dl.xlsx
+2018,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-1024,Graphic Designers,1750.0,27.34,56860.0,26.05,54190.0,16.25,20.63,32.9,38.04,33810.0,42910.0,68420.0,79120.0,MSA_M2018_dl.xlsx
+2019,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-1024,Graphic Designers,2210.0,26.29,54690.0,25.5,53040.0,15.19,20.1,32.84,38.46,31600.0,41810.0,68300.0,79990.0,MSA_M2019_dl.xlsx
+2020,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-1024,Graphic Designers,2150.0,26.08,54240.0,24.49,50950.0,14.49,20.42,31.86,38.87,30150.0,42470.0,66270.0,80850.0,MSA_M2020_dl.xlsx
+2021,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-1024,Graphic Designers,2020.0,27.08,56320.0,23.84,49590.0,14.91,18.8,30.39,38.5,31000.0,39110.0,63210.0,80080.0,MSA_M2021_dl.xlsx
+2022,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-1024,Graphic Designers,2130.0,28.95,60210.0,27.62,57450.0,17.19,21.68,34.49,40.66,35760.0,45090.0,71740.0,84560.0,MSA_M2022_dl.xlsx
+2023,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-1024,Graphic Designers,1900.0,30.99,64450.0,29.16,60660.0,18.52,22.68,36.45,45.49,38520.0,47180.0,75820.0,94620.0,MSA_M2023_dl.xlsx
+2024,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-1024,Graphic Designers,1960.0,30.7,63850.0,29.35,61040.0,17.75,22.38,35.94,45.71,36920.0,46560.0,74760.0,95080.0,MSA_M2024_dl.xlsx
+2025,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-1024,Graphic Designers,1880.0,33.74,70170.0,31.28,65060.0,19.56,25.07,38.36,48.89,40690.0,52140.0,79790.0,101690.0,MSA_M2025_dl.xlsx
+2005,US_national,National,0,U.S.,27-1024,Graphic designers,178530.0,20.45,42530.0,18.46,38390.0,11.13,14.16,24.69,32.53,23160.0,29460.0,51360.0,67660.0,national_may2005_dl.xls
+2006,US_national,National,0,U.S.,27-1024,Graphic designers,190880.0,21.07,43830.0,19.18,39900.0,11.59,14.71,25.63,33.52,24120.0,30600.0,53310.0,69730.0,national_may2006_dl.xls
+2007,US_national,National,0,U.S.,27-1024,Graphic designers,201080.0,21.8,45340.0,19.85,41280.0,12.06,15.2,26.45,34.73,25090.0,31620.0,55030.0,72230.0,national_May2007_dl.xls
+2008,US_national,National,0,U.S.,27-1024,Graphic designers,209290.0,22.48,46750.0,20.39,42400.0,12.55,15.67,27.22,35.9,26110.0,32600.0,56620.0,74660.0,national__M2008_dl.xls
+2009,US_national,National,0,U.S.,27-1024,Graphic designers,200870.0,22.99,47820.0,20.76,43180.0,12.71,15.93,27.95,36.75,26440.0,33130.0,58140.0,76450.0,national_dl.xls
+2010,US_national,National,0,U.S.,27-1024,Graphic Designers,192240.0,23.14,48140.0,20.92,43500.0,12.6,15.96,28.17,36.98,26200.0,33200.0,58600.0,76910.0,national_M2010_dl.xls
+2011,US_national,National,0,U.S.,27-1024,Graphic Designers,191550.0,23.41,48690.0,21.16,44010.0,12.6,16.06,28.56,37.2,26210.0,33410.0,59410.0,77370.0,national_M2011_dl.xls
+2012,US_national,National,0,U.S.,27-1024,Graphic Designers,191440.0,23.43,48730.0,21.22,44150.0,12.62,16.13,28.55,37.25,26250.0,33550.0,59390.0,77490.0,national_M2012_dl.xls
+2013,US_national,National,0,U.S.,27-1024,Graphic Designers,194360.0,23.85,49610.0,21.55,44830.0,12.83,16.36,29.09,38.11,26690.0,34040.0,60510.0,79260.0,national_M2013_dl.xls
+2014,US_national,National,0,U.S.,27-1024,Graphic Designers,197540.0,24.36,50670.0,22.07,45900.0,13.03,16.64,29.68,38.74,27100.0,34600.0,61740.0,80570.0,national_M2014_dl.xlsx
+2015,US_national,National,0,U.S.,27-1024,Graphic Designers,204850.0,24.83,51640.0,22.55,46900.0,13.25,16.91,30.12,39.1,27560.0,35170.0,62650.0,81320.0,national_M2015_dl.xlsx
+2016,US_national,National,0,U.S.,27-1024,Graphic Designers,210710.0,25.14,52290.0,22.9,47640.0,13.44,17.1,30.45,39.43,27950.0,35560.0,63340.0,82020.0,national_M2016_dl.xlsx
+2017,US_national,National,0,U.S.,27-1024,Graphic Designers,217170.0,25.62,53280.0,23.41,48700.0,13.73,17.46,30.98,39.97,28560.0,36320.0,64430.0,83140.0,national_M2017_dl.xlsx
+2018,US_national,National,0,U.S.,27-1024,Graphic Designers,217810.0,26.29,54680.0,24.21,50370.0,14.23,18.06,31.87,41.23,29610.0,37550.0,66300.0,85760.0,national_M2018_dl.xlsx
+2019,US_national,National,0,U.S.,27-1024,Graphic Designers,215930.0,27.17,56510.0,25.05,52110.0,14.81,18.75,33.13,42.89,30810.0,39000.0,68920.0,89210.0,national_M2019_dl.xlsx
+2020,US_national,National,0,U.S.,27-1024,Graphic Designers,201440.0,28.06,58370.0,25.66,53380.0,15.25,19.31,34.29,44.92,31720.0,40160.0,71310.0,93440.0,national_M2020_dl.xlsx
+2021,US_national,National,0,U.S.,27-1024,Graphic Designers,204040.0,28.83,59970.0,24.38,50710.0,15.06,18.88,35.92,47.24,31310.0,39270.0,74700.0,98260.0,national_M2021_dl.xlsx
+2022,US_national,National,0,U.S.,27-1024,Graphic Designers,211890.0,31.01,64500.0,27.88,57990.0,17.04,21.32,37.0,48.52,35430.0,44350.0,76970.0,100920.0,national_M2022_dl.xlsx
+2023,US_national,National,0,U.S.,27-1024,Graphic Designers,212720.0,31.11,64700.0,28.32,58910.0,17.51,21.9,37.3,48.29,36420.0,45560.0,77570.0,100450.0,national_M2023_dl.xlsx
+2024,US_national,National,0,U.S.,27-1024,Graphic Designers,214260.0,32.98,68610.0,29.47,61300.0,18.08,22.69,37.98,49.53,37600.0,47200.0,79000.0,103030.0,national_M2024_dl.xlsx
+2025,US_national,National,0,U.S.,27-1024,Graphic Designers,197830.0,33.92,70560.0,30.27,62960.0,19.0,23.58,39.34,50.44,39520.0,49040.0,81830.0,104910.0,national_M2025_dl.xlsx
+2005,TX_state,State,48,Texas,27-1024,Graphic designers,10770.0,19.93,41450.0,17.67,36760.0,10.7,13.06,23.65,31.42,22250.0,27170.0,49190.0,65360.0,state_may2005_dl.xls
+2006,TX_state,State,48,Texas,27-1024,Graphic designers,9970.0,20.04,41680.0,18.34,38140.0,10.79,13.76,24.48,31.29,22440.0,28620.0,50920.0,65080.0,state_may2006_dl.xls
+2007,TX_state,State,48,Texas,27-1024,Graphic designers,10780.0,20.27,42160.0,18.59,38660.0,11.13,14.14,24.99,31.39,23140.0,29410.0,51970.0,65290.0,state_May2007_dl.xls
+2008,TX_state,State,48,Texas,27-1024,Graphic designers,11340.0,21.15,44000.0,19.32,40190.0,11.75,14.84,26.01,32.65,24450.0,30870.0,54100.0,67920.0,state__M2008_dl.xls
+2009,TX_state,State,48,Texas,27-1024,Graphic designers,10850.0,21.32,44350.0,19.33,40200.0,11.88,14.95,25.55,32.87,24710.0,31100.0,53140.0,68360.0,state_dl.xls
+2010,TX_state,State,48,Texas,27-1024,Graphic Designers,11020.0,21.44,44590.0,19.36,40270.0,11.87,15.11,26.07,33.54,24690.0,31430.0,54230.0,69760.0,state_M2010_dl.xls
+2011,TX_state,State,48,Texas,27-1024,Graphic Designers,10780.0,21.43,44570.0,19.13,39790.0,12.06,15.09,25.93,33.84,25080.0,31400.0,53930.0,70400.0,state_M2011_dl.xls
+2012,TX_state,State,48,Texas,27-1024,Graphic Designers,11180.0,21.37,44440.0,19.35,40250.0,12.2,15.4,26.06,33.5,25380.0,32040.0,54200.0,69680.0,state_M2012_dl.xls
+2013,TX_state,State,48,Texas,27-1024,Graphic Designers,11150.0,21.51,44750.0,19.6,40760.0,12.44,15.55,25.84,33.58,25880.0,32340.0,53750.0,69840.0,state_M2013_dl.xls
+2014,TX_state,State,48,Texas,27-1024,Graphic Designers,11780.0,21.89,45530.0,20.1,41810.0,12.42,15.85,26.81,34.17,25840.0,32960.0,55770.0,71080.0,state_M2014_dl.xlsx
+2015,TX_state,State,48,Texas,27-1024,Graphic Designers,11700.0,22.59,46980.0,20.98,43640.0,12.66,16.28,27.6,34.92,26320.0,33870.0,57410.0,72630.0,state_M2015_dl.xlsx
+2016,TX_state,State,48,Texas,27-1024,Graphic Designers,12110.0,23.25,48360.0,21.55,44830.0,12.84,16.19,28.44,36.45,26720.0,33680.0,59160.0,75810.0,state_M2016_dl.xlsx
+2017,TX_state,State,48,Texas,27-1024,Graphic Designers,12120.0,23.83,49570.0,22.32,46420.0,13.33,16.57,29.08,36.89,27720.0,34460.0,60480.0,76730.0,state_M2017_dl.xlsx
+2018,TX_state,State,48,Texas,27-1024,Graphic Designers,13480.0,24.37,50700.0,22.87,47570.0,13.45,16.66,29.91,38.23,27970.0,34650.0,62210.0,79510.0,state_M2018_dl.xlsx
+2019,TX_state,State,48,Texas,27-1024,Graphic Designers,14050.0,25.02,52050.0,23.77,49450.0,13.82,17.89,30.39,38.52,28740.0,37220.0,63210.0,80120.0,state_M2019_dl.xlsx
+2020,TX_state,State,48,Texas,27-1024,Graphic Designers,14320.0,25.32,52670.0,23.85,49610.0,13.93,18.37,30.52,39.31,28980.0,38200.0,63480.0,81750.0,state_M2020_dl.xlsx
+2021,TX_state,State,48,Texas,27-1024,Graphic Designers,13450.0,24.48,50920.0,22.86,47560.0,13.89,17.49,29.62,37.41,28880.0,36390.0,61600.0,77820.0,state_M2021_dl.xlsx
+2022,TX_state,State,48,Texas,27-1024,Graphic Designers,13680.0,26.43,54970.0,24.51,50970.0,15.18,18.87,31.49,38.58,31570.0,39240.0,65500.0,80240.0,state_M2022_dl.xlsx
+2023,TX_state,State,48,Texas,27-1024,Graphic Designers,13760.0,27.8,57830.0,25.53,53100.0,16.58,20.17,33.65,40.48,34490.0,41950.0,69990.0,84190.0,state_M2023_dl.xlsx
+2024,TX_state,State,48,Texas,27-1024,Graphic Designers,19360.0,28.97,60250.0,29.82,62030.0,16.99,22.32,31.91,38.67,35330.0,46420.0,66370.0,80430.0,state_M2024_dl.xlsx
+2025,TX_state,State,48,Texas,27-1024,Graphic Designers,13670.0,30.08,62570.0,28.92,60150.0,17.47,22.11,36.32,44.67,36340.0,45990.0,75540.0,92910.0,state_M2025_dl.xlsx
+2013,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-2011,Actors,,23.91,,18.51,,15.44,16.59,22.23,31.96,,,,,MSA_M2013_dl_3_OH_WY.xls
+2017,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-2011,Actors,230.0,19.06,,11.15,,8.51,9.58,14.76,25.71,,,,,MSA_M2017_dl.xlsx
+2024,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-2011,Actors,80.0,39.26,,24.35,,13.43,18.42,35.67,,,,,,MSA_M2024_dl.xlsx
+2025,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-2011,Actors,160.0,,,,,,,,,,,,,MSA_M2025_dl.xlsx
+2005,US_national,National,0,U.S.,27-2011,Actors,59590.0,23.73,,13.6,,7.09,8.39,34.59,56.67,,,,,national_may2005_dl.xls
+2006,US_national,National,0,U.S.,27-2011,Actors,51880.0,21.84,,11.61,,7.31,8.47,22.51,51.02,,,,,national_may2006_dl.xls
+2007,US_national,National,0,U.S.,27-2011,Actors,44860.0,23.91,,14.28,,7.71,8.92,25.01,58.27,,,,,national_May2007_dl.xls
+2008,US_national,National,0,U.S.,27-2011,Actors,44360.0,29.05,,16.59,,7.99,9.81,29.57,,,,,,national__M2008_dl.xls
+2009,US_national,National,0,U.S.,27-2011,Actors,39880.0,28.79,,16.2,,7.98,10.18,29.33,74.44,,,,,national_dl.xls
+2010,US_national,National,0,U.S.,27-2011,Actors,54740.0,28.44,,17.44,,8.58,10.78,30.19,64.04,,,,,national_M2010_dl.xls
+2011,US_national,National,0,U.S.,27-2011,Actors,60830.0,33.82,,19.14,,8.79,11.37,36.96,,,,,,national_M2011_dl.xls
+2012,US_national,National,0,U.S.,27-2011,Actors,70540.0,35.97,,20.26,,8.92,11.84,44.86,,,,,,national_M2012_dl.xls
+2013,US_national,National,0,U.S.,27-2011,Actors,63230.0,41.94,,22.15,,9.05,13.11,56.38,,,,,,national_M2013_dl.xls
+2014,US_national,National,0,U.S.,27-2011,Actors,59210.0,37.28,,19.82,,9.0,11.97,49.7,,,,,,national_M2014_dl.xlsx
+2015,US_national,National,0,U.S.,27-2011,Actors,50570.0,37.47,,18.8,,9.27,11.8,48.79,,,,,,national_M2015_dl.xlsx
+2016,US_national,National,0,U.S.,27-2011,Actors,48620.0,39.84,,18.7,,9.39,11.78,44.36,,,,,,national_M2016_dl.xlsx
+2017,US_national,National,0,U.S.,27-2011,Actors,43470.0,32.89,,17.49,,8.97,11.01,33.59,89.08,,,,,national_M2017_dl.xlsx
+2018,US_national,National,0,U.S.,27-2011,Actors,47430.0,29.34,,17.54,,9.05,10.96,28.41,61.74,,,,,national_M2018_dl.xlsx
+2019,US_national,National,0,U.S.,27-2011,Actors,52620.0,29.14,,20.43,,9.52,12.59,29.29,60.41,,,,,national_M2019_dl.xlsx
+2020,US_national,National,0,U.S.,27-2011,Actors,44460.0,31.42,,21.88,,10.51,14.04,30.38,64.92,,,,,national_M2020_dl.xlsx
+2021,US_national,National,0,U.S.,27-2011,Actors,30100.0,31.31,,23.48,,11.16,15.02,30.0,61.98,,,,,national_M2021_dl.xlsx
+2022,US_national,National,0,U.S.,27-2011,Actors,54160.0,36.06,,17.94,,13.2,15.61,29.63,109.46,,,,,national_M2022_dl.xlsx
+2023,US_national,National,0,U.S.,27-2011,Actors,62560.0,41.01,,20.5,,13.0,15.98,36.54,100.01,,,,,national_M2023_dl.xlsx
+2024,US_national,National,0,U.S.,27-2011,Actors,38800.0,44.4,,23.33,,14.0,16.94,41.09,97.19,,,,,national_M2024_dl.xlsx
+2025,US_national,National,0,U.S.,27-2011,Actors,55000.0,58.29,,29.05,,16.5,20.34,97.95,143.68,,,,,national_M2025_dl.xlsx
+2005,TX_state,State,48,Texas,27-2011,Actors,,18.35,,19.59,,6.0,6.94,24.57,32.79,,,,,state_may2005_dl.xls
+2009,TX_state,State,48,Texas,27-2011,Actors,3720.0,19.7,,10.12,,7.01,7.64,17.94,28.94,,,,,state_dl.xls
+2011,TX_state,State,48,Texas,27-2011,Actors,1540.0,25.43,,13.35,,8.04,8.94,26.19,55.69,,,,,state_M2011_dl.xls
+2015,TX_state,State,48,Texas,27-2011,Actors,1050.0,24.78,,18.85,,9.52,11.99,23.8,38.95,,,,,state_M2015_dl.xlsx
+2016,TX_state,State,48,Texas,27-2011,Actors,1320.0,23.47,,15.75,,8.73,10.65,23.15,38.77,,,,,state_M2016_dl.xlsx
+2017,TX_state,State,48,Texas,27-2011,Actors,1720.0,21.92,,14.67,,8.81,10.5,22.77,38.57,,,,,state_M2017_dl.xlsx
+2018,TX_state,State,48,Texas,27-2011,Actors,1250.0,18.33,,11.97,,8.85,10.16,17.7,27.31,,,,,state_M2018_dl.xlsx
+2019,TX_state,State,48,Texas,27-2011,Actors,1120.0,20.29,,15.57,,9.64,11.23,22.03,25.99,,,,,state_M2019_dl.xlsx
+2020,TX_state,State,48,Texas,27-2011,Actors,,20.4,,19.79,,8.18,10.15,23.04,25.79,,,,,state_M2020_dl.xlsx
+2021,TX_state,State,48,Texas,27-2011,Actors,760.0,21.76,,17.74,,14.14,17.74,23.42,26.45,,,,,state_M2021_dl.xlsx
+2022,TX_state,State,48,Texas,27-2011,Actors,560.0,,,,,,,,,,,,,state_M2022_dl.xlsx
+2023,TX_state,State,48,Texas,27-2011,Actors,1000.0,,,,,,,,,,,,,state_M2023_dl.xlsx
+2024,TX_state,State,48,Texas,27-2011,Actors,1230.0,30.74,,20.26,,14.51,17.86,30.08,58.93,,,,,state_M2024_dl.xlsx
+2025,TX_state,State,48,Texas,27-2011,Actors,2160.0,47.11,,25.86,,14.97,18.07,67.01,111.29,,,,,state_M2025_dl.xlsx
+2008,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-2041,Music directors and composers,,21.93,45610.0,22.18,46130.0,19.9,20.81,23.55,24.36,41400.0,43290.0,48970.0,50680.0,MSA_M2008_dl_3.xls
+2009,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-2041,Music directors and composers,90.0,21.53,44790.0,21.52,44750.0,13.6,19.11,23.89,26.54,28290.0,39760.0,49700.0,55200.0,MSA_dl_3.xls
+2010,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-2041,Music Directors and Composers,250.0,22.14,46050.0,21.59,44910.0,18.44,19.68,24.3,27.91,38360.0,40940.0,50550.0,58050.0,MSA_M2010_dl_3.xls
+2011,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-2041,Music Directors and Composers,260.0,23.63,49160.0,21.99,45750.0,18.5,19.97,25.17,28.79,38490.0,41530.0,52350.0,59890.0,MSA_M2011_dl_3_OH_WY.xls
+2012,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-2041,Music Directors and Composers,200.0,24.45,50860.0,22.63,47070.0,19.36,20.59,26.22,29.6,40280.0,42820.0,54540.0,61570.0,MSA_M2012_dl_3_OH_WY.xls
+2013,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-2041,Music Directors and Composers,40.0,29.92,62240.0,25.59,53230.0,19.08,21.64,29.17,35.39,39680.0,45000.0,60680.0,73620.0,MSA_M2013_dl_3_OH_WY.xls
+2014,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-2041,Music Directors and Composers,40.0,25.87,53810.0,26.1,54280.0,20.27,22.58,29.23,33.1,42160.0,46970.0,60790.0,68850.0,MSA_M2014_dl.xlsx
+2015,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-2041,Music Directors and Composers,100.0,27.04,56250.0,23.6,49090.0,15.84,20.31,27.72,30.25,32950.0,42240.0,57660.0,62910.0,MSA_M2015_dl.xlsx
+2016,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-2041,Music Directors and Composers,120.0,27.03,56220.0,24.06,50040.0,15.4,20.74,28.05,30.51,32040.0,43130.0,58340.0,63470.0,MSA_M2016_dl.xlsx
+2017,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-2041,Music Directors and Composers,100.0,27.93,58090.0,24.96,51920.0,18.84,21.67,28.72,31.24,39180.0,45070.0,59740.0,64970.0,MSA_M2017_dl.xlsx
+2018,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-2041,Music Directors and Composers,60.0,34.37,71490.0,27.57,57350.0,14.6,23.05,31.88,47.07,30380.0,47940.0,66310.0,97900.0,MSA_M2018_dl.xlsx
+2019,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-2041,Music Directors and Composers,60.0,,,,,,,,,,,,,MSA_M2019_dl.xlsx
+2020,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-2041,Music Directors and Composers,50.0,36.97,76910.0,32.56,67720.0,21.18,25.31,38.45,47.11,44060.0,52640.0,79970.0,97980.0,MSA_M2020_dl.xlsx
+2021,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-2041,Music Directors and Composers,30.0,34.32,71390.0,29.84,62070.0,22.7,23.73,37.49,55.17,47210.0,49360.0,77970.0,114750.0,MSA_M2021_dl.xlsx
+2005,US_national,National,0,U.S.,27-2041,Music directors and composers,8610.0,20.9,43470.0,16.74,34810.0,7.85,11.4,24.51,38.57,16330.0,23710.0,50980.0,80220.0,national_may2005_dl.xls
+2006,US_national,National,0,U.S.,27-2041,Music directors and composers,9470.0,25.63,53320.0,19.11,39750.0,7.31,11.38,29.02,53.29,15210.0,23660.0,60350.0,110850.0,national_may2006_dl.xls
+2007,US_national,National,0,U.S.,27-2041,Music directors and composers,9110.0,25.95,53970.0,19.3,40150.0,7.74,12.99,28.94,53.6,16110.0,27020.0,60200.0,111490.0,national_May2007_dl.xls
+2008,US_national,National,0,U.S.,27-2041,Music directors and composers,9120.0,26.36,54840.0,19.84,41270.0,8.05,12.73,30.38,51.57,16750.0,26480.0,63200.0,107280.0,national__M2008_dl.xls
+2009,US_national,National,0,U.S.,27-2041,Music directors and composers,14330.0,25.68,53410.0,21.68,45090.0,10.33,15.49,29.63,40.87,21480.0,32210.0,61630.0,85020.0,national_dl.xls
+2010,US_national,National,0,U.S.,27-2041,Music Directors and Composers,20640.0,25.36,52750.0,22.1,45970.0,10.44,16.21,29.68,40.88,21720.0,33720.0,61740.0,85020.0,national_M2010_dl.xls
+2011,US_national,National,0,U.S.,27-2041,Music Directors and Composers,25290.0,25.84,53760.0,22.8,47410.0,10.67,17.0,29.9,41.24,22190.0,35370.0,62180.0,85770.0,national_M2011_dl.xls
+2012,US_national,National,0,U.S.,27-2041,Music Directors and Composers,24940.0,25.68,53420.0,22.77,47350.0,10.31,16.85,30.26,41.4,21450.0,35050.0,62950.0,86110.0,national_M2012_dl.xls
+2013,US_national,National,0,U.S.,27-2041,Music Directors and Composers,23190.0,26.23,54560.0,23.24,48330.0,10.64,16.96,31.21,42.3,22130.0,35280.0,64910.0,87970.0,national_M2013_dl.xls
+2014,US_national,National,0,U.S.,27-2041,Music Directors and Composers,21880.0,26.55,55230.0,23.16,48180.0,10.39,16.88,31.77,44.16,21610.0,35100.0,66080.0,91860.0,national_M2014_dl.xlsx
+2015,US_national,National,0,U.S.,27-2041,Music Directors and Composers,21540.0,28.38,59040.0,23.95,49820.0,10.13,16.92,33.74,48.63,21070.0,35200.0,70180.0,101150.0,national_M2015_dl.xlsx
+2016,US_national,National,0,U.S.,27-2041,Music Directors and Composers,18380.0,29.15,60630.0,24.09,50110.0,10.01,16.84,33.9,51.3,20820.0,35020.0,70510.0,106700.0,national_M2016_dl.xlsx
+2017,US_national,National,0,U.S.,27-2041,Music Directors and Composers,15400.0,29.56,61490.0,24.32,50590.0,10.1,16.49,34.3,52.55,21010.0,34290.0,71350.0,109300.0,national_M2017_dl.xlsx
+2018,US_national,National,0,U.S.,27-2041,Music Directors and Composers,12160.0,28.75,59790.0,23.86,49630.0,10.41,14.88,33.54,54.24,21640.0,30950.0,69770.0,112820.0,national_M2018_dl.xlsx
+2019,US_national,National,0,U.S.,27-2041,Music Directors and Composers,10580.0,31.09,64670.0,24.84,51670.0,11.1,16.01,36.06,60.19,23100.0,33290.0,75010.0,125200.0,national_M2019_dl.xlsx
+2020,US_national,National,0,U.S.,27-2041,Music Directors and Composers,9200.0,31.6,65720.0,25.12,52250.0,11.49,16.34,36.54,59.8,23890.0,33990.0,76000.0,124390.0,national_M2020_dl.xlsx
+2021,US_national,National,0,U.S.,27-2041,Music Directors and Composers,9560.0,31.29,65080.0,23.62,49130.0,11.75,17.66,37.52,59.52,24440.0,36720.0,78030.0,123800.0,national_M2021_dl.xlsx
+2022,US_national,National,0,U.S.,27-2041,Music Directors and Composers,11690.0,45.88,95430.0,30.26,62940.0,15.26,21.66,47.21,79.69,31750.0,45050.0,98200.0,165760.0,national_M2022_dl.xlsx
+2023,US_national,National,0,U.S.,27-2041,Music Directors and Composers,10770.0,42.23,87840.0,30.09,62590.0,16.46,22.55,48.89,83.56,34240.0,46910.0,101690.0,173810.0,national_M2023_dl.xlsx
+2024,US_national,National,0,U.S.,27-2041,Music Directors and Composers,12330.0,40.5,84230.0,30.61,63670.0,16.82,22.75,46.44,75.49,34990.0,47330.0,96590.0,157010.0,national_M2024_dl.xlsx
+2025,US_national,National,0,U.S.,27-2041,Music Directors and Composers,12540.0,43.5,90470.0,35.44,73710.0,19.17,25.53,50.04,79.69,39880.0,53110.0,104090.0,165760.0,national_M2025_dl.xlsx
+2005,TX_state,State,48,Texas,27-2041,Music directors and composers,140.0,17.43,36250.0,10.49,21810.0,6.12,7.35,21.76,31.78,12720.0,15280.0,45260.0,66100.0,state_may2005_dl.xls
+2006,TX_state,State,48,Texas,27-2041,Music directors and composers,120.0,21.99,45740.0,16.4,34100.0,6.47,8.02,32.69,41.83,13460.0,16670.0,68000.0,87020.0,state_may2006_dl.xls
+2007,TX_state,State,48,Texas,27-2041,Music directors and composers,170.0,21.82,45390.0,20.37,42370.0,8.33,11.23,24.48,40.42,17330.0,23360.0,50920.0,84080.0,state_May2007_dl.xls
+2008,TX_state,State,48,Texas,27-2041,Music directors and composers,220.0,24.44,50830.0,22.65,47110.0,8.98,15.93,33.8,39.28,18680.0,33140.0,70290.0,81700.0,state__M2008_dl.xls
+2009,TX_state,State,48,Texas,27-2041,Music directors and composers,1090.0,25.73,53530.0,24.98,51950.0,16.36,20.91,29.33,35.92,34030.0,43490.0,61010.0,74710.0,state_dl.xls
+2010,TX_state,State,48,Texas,27-2041,Music Directors and Composers,2420.0,23.39,48650.0,23.27,48410.0,8.71,18.4,28.14,35.11,18130.0,38260.0,58520.0,73020.0,state_M2010_dl.xls
+2011,TX_state,State,48,Texas,27-2041,Music Directors and Composers,2760.0,24.21,50360.0,23.97,49860.0,9.1,19.34,28.44,34.74,18920.0,40220.0,59150.0,72250.0,state_M2011_dl.xls
+2012,TX_state,State,48,Texas,27-2041,Music Directors and Composers,1920.0,23.59,49060.0,23.22,48300.0,8.77,17.59,28.22,34.22,18240.0,36600.0,58710.0,71180.0,state_M2012_dl.xls
+2013,TX_state,State,48,Texas,27-2041,Music Directors and Composers,990.0,26.81,55770.0,25.94,53960.0,18.84,21.93,29.98,35.42,39180.0,45610.0,62360.0,73670.0,state_M2013_dl.xls
+2014,TX_state,State,48,Texas,27-2041,Music Directors and Composers,940.0,27.05,56250.0,24.97,51930.0,16.34,20.52,29.48,35.56,33980.0,42670.0,61320.0,73960.0,state_M2014_dl.xlsx
+2015,TX_state,State,48,Texas,27-2041,Music Directors and Composers,1210.0,26.83,55800.0,24.96,51920.0,15.91,20.2,29.13,35.22,33100.0,42020.0,60580.0,73260.0,state_M2015_dl.xlsx
+2016,TX_state,State,48,Texas,27-2041,Music Directors and Composers,1150.0,27.83,57890.0,24.67,51320.0,15.68,19.93,29.34,37.23,32610.0,41450.0,61030.0,77430.0,state_M2016_dl.xlsx
+2017,TX_state,State,48,Texas,27-2041,Music Directors and Composers,940.0,27.44,57070.0,26.77,55680.0,16.89,21.96,30.49,37.4,35120.0,45670.0,63420.0,77800.0,state_M2017_dl.xlsx
+2018,TX_state,State,48,Texas,27-2041,Music Directors and Composers,890.0,29.43,61210.0,28.05,58340.0,17.69,23.19,33.62,39.48,36790.0,48230.0,69940.0,82120.0,state_M2018_dl.xlsx
+2019,TX_state,State,48,Texas,27-2041,Music Directors and Composers,860.0,32.23,67040.0,30.32,63070.0,20.79,25.66,36.91,44.15,43250.0,53360.0,76770.0,91840.0,state_M2019_dl.xlsx
+2020,TX_state,State,48,Texas,27-2041,Music Directors and Composers,750.0,31.47,65450.0,29.06,60430.0,17.13,22.44,37.23,47.02,35620.0,46680.0,77430.0,97800.0,state_M2020_dl.xlsx
+2021,TX_state,State,48,Texas,27-2041,Music Directors and Composers,380.0,35.31,73440.0,29.84,62070.0,22.19,23.62,37.78,48.88,46140.0,49130.0,78580.0,101680.0,state_M2021_dl.xlsx
+2022,TX_state,State,48,Texas,27-2041,Music Directors and Composers,290.0,43.13,89710.0,40.26,83730.0,23.4,30.19,45.48,71.86,48680.0,62800.0,94600.0,149460.0,state_M2022_dl.xlsx
+2023,TX_state,State,48,Texas,27-2041,Music Directors and Composers,170.0,45.32,94270.0,39.59,82340.0,16.64,27.54,60.84,76.56,34610.0,57270.0,126540.0,159240.0,state_M2023_dl.xlsx
+2024,TX_state,State,48,Texas,27-2041,Music Directors and Composers,650.0,39.26,81660.0,24.7,51380.0,19.17,22.84,39.39,68.49,39870.0,47510.0,81930.0,142460.0,state_M2024_dl.xlsx
+2025,TX_state,State,48,Texas,27-2041,Music Directors and Composers,480.0,41.23,85750.0,31.53,65570.0,13.45,24.99,41.43,62.64,27970.0,51980.0,86180.0,130290.0,state_M2025_dl.xlsx
+2005,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-2042,Musicians and singers,150.0,16.86,,13.68,,8.79,10.46,23.18,27.09,,,,,MSA_may2005_dl_3.xls
+2006,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-2042,Musicians and singers,110.0,16.81,,13.79,,9.24,11.08,16.56,25.06,,,,,MSA_may2006_dl_3.xls
+2007,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-2042,Musicians and singers,120.0,19.84,,16.78,,8.38,9.49,21.67,31.88,,,,,MSA_May2007_dl_3.xls
+2008,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-2042,Musicians and singers,180.0,15.74,,13.38,,8.41,9.19,18.01,28.09,,,,,MSA_M2008_dl_3.xls
+2009,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-2042,Musicians and singers,240.0,16.72,,10.09,,8.1,8.77,22.19,27.51,,,,,MSA_dl_3.xls
+2010,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-2042,Musicians and Singers,170.0,22.77,,21.65,,8.3,11.61,30.22,35.81,,,,,MSA_M2010_dl_3.xls
+2011,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-2042,Musicians and Singers,280.0,27.18,,19.71,,7.99,8.97,33.11,76.05,,,,,MSA_M2011_dl_3_OH_WY.xls
+2012,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-2042,Musicians and Singers,250.0,25.72,,17.76,,8.14,9.33,31.48,76.94,,,,,MSA_M2012_dl_3_OH_WY.xls
+2013,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-2042,Musicians and Singers,720.0,20.94,,13.99,,9.45,12.51,21.6,43.66,,,,,MSA_M2013_dl_3_OH_WY.xls
+2014,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-2042,Musicians and Singers,,27.93,,17.74,,11.97,13.43,36.1,60.55,,,,,MSA_M2014_dl.xlsx
+2015,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-2042,Musicians and Singers,,33.35,,20.92,,12.51,14.06,45.8,80.68,,,,,MSA_M2015_dl.xlsx
+2016,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-2042,Musicians and Singers,430.0,,,,,,,,,,,,,MSA_M2016_dl.xlsx
+2017,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-2042,Musicians and Singers,240.0,51.71,,31.03,,18.38,24.68,55.36,,,,,,MSA_M2017_dl.xlsx
+2018,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-2042,Musicians and Singers,370.0,36.22,,24.16,,13.39,17.9,38.6,61.78,,,,,MSA_M2018_dl.xlsx
+2019,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-2042,Musicians and Singers,400.0,26.23,,21.12,,8.53,13.6,28.53,54.9,,,,,MSA_M2019_dl.xlsx
+2020,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-2042,Musicians and Singers,240.0,29.87,,20.29,,8.77,13.72,25.19,59.19,,,,,MSA_M2020_dl.xlsx
+2021,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-2042,Musicians and Singers,130.0,41.46,,35.11,,9.98,12.45,47.14,,,,,,MSA_M2021_dl.xlsx
+2022,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-2042,Musicians and Singers,180.0,44.6,,40.32,,12.89,24.12,47.65,48.97,,,,,MSA_M2022_dl.xlsx
+2023,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-2042,Musicians and Singers,220.0,46.16,,33.95,,15.22,24.08,47.65,78.94,,,,,MSA_M2023_dl.xlsx
+2024,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-2042,Musicians and Singers,100.0,44.6,,31.14,,23.32,26.03,50.13,69.13,,,,,MSA_M2024_dl.xlsx
+2025,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-2042,Musicians and Singers,120.0,35.7,,31.49,,8.62,20.96,36.3,62.52,,,,,MSA_M2025_dl.xlsx
+2005,US_national,National,0,U.S.,27-2042,Musicians and singers,50410.0,25.16,,17.9,,6.8,10.91,32.16,52.78,,,,,national_may2005_dl.xls
+2006,US_national,National,0,U.S.,27-2042,Musicians and singers,46600.0,27.51,,19.73,,7.08,10.81,36.55,57.37,,,,,national_may2006_dl.xls
+2007,US_national,National,0,U.S.,27-2042,Musicians and singers,47520.0,27.27,,19.92,,7.33,10.8,35.7,58.46,,,,,national_May2007_dl.xls
+2008,US_national,National,0,U.S.,27-2042,Musicians and singers,47030.0,28.28,,21.24,,7.64,11.49,36.36,59.92,,,,,national__M2008_dl.xls
+2009,US_national,National,0,U.S.,27-2042,Musicians and singers,47260.0,29.1,,22.36,,8.04,12.64,37.09,58.9,,,,,national_dl.xls
+2010,US_national,National,0,U.S.,27-2042,Musicians and Singers,43350.0,30.22,,22.39,,8.5,12.94,39.54,60.02,,,,,national_M2010_dl.xls
+2011,US_national,National,0,U.S.,27-2042,Musicians and Singers,42530.0,31.74,,22.99,,8.63,12.34,40.71,66.01,,,,,national_M2011_dl.xls
+2012,US_national,National,0,U.S.,27-2042,Musicians and Singers,42100.0,31.94,,23.5,,8.81,13.07,40.15,65.24,,,,,national_M2012_dl.xls
+2013,US_national,National,0,U.S.,27-2042,Musicians and Singers,39260.0,32.1,,23.74,,8.88,12.92,40.05,68.63,,,,,national_M2013_dl.xls
+2014,US_national,National,0,U.S.,27-2042,Musicians and Singers,38900.0,32.49,,24.16,,8.98,13.21,41.56,66.11,,,,,national_M2014_dl.xlsx
+2015,US_national,National,0,U.S.,27-2042,Musicians and Singers,37090.0,33.62,,24.2,,9.2,13.2,44.01,68.98,,,,,national_M2015_dl.xlsx
+2016,US_national,National,0,U.S.,27-2042,Musicians and Singers,40110.0,34.56,,25.14,,9.33,14.02,47.21,68.13,,,,,national_M2016_dl.xlsx
+2017,US_national,National,0,U.S.,27-2042,Musicians and Singers,40170.0,35.86,,26.96,,9.7,15.74,47.9,69.81,,,,,national_M2017_dl.xlsx
+2018,US_national,National,0,U.S.,27-2042,Musicians and Singers,41680.0,37.51,,28.15,,10.4,15.97,49.25,73.34,,,,,national_M2018_dl.xlsx
+2019,US_national,National,0,U.S.,27-2042,Musicians and Singers,41130.0,39.96,,30.39,,11.11,17.48,50.76,80.7,,,,,national_M2019_dl.xlsx
+2020,US_national,National,0,U.S.,27-2042,Musicians and Singers,34770.0,41.72,,31.4,,11.17,17.67,54.6,87.47,,,,,national_M2020_dl.xlsx
+2021,US_national,National,0,U.S.,27-2042,Musicians and Singers,24080.0,41.46,,30.49,,11.47,18.12,55.09,88.77,,,,,national_M2021_dl.xlsx
+2022,US_national,National,0,U.S.,27-2042,Musicians and Singers,31750.0,50.21,,39.14,,14.42,20.36,61.74,100.22,,,,,national_M2022_dl.xlsx
+2023,US_national,National,0,U.S.,27-2042,Musicians and Singers,35520.0,51.65,,39.14,,16.02,23.7,60.92,102.98,,,,,national_M2023_dl.xlsx
+2024,US_national,National,0,U.S.,27-2042,Musicians and Singers,38350.0,55.13,,42.45,,18.68,26.02,62.83,105.44,,,,,national_M2024_dl.xlsx
+2025,US_national,National,0,U.S.,27-2042,Musicians and Singers,36180.0,60.46,,47.8,,20.35,27.57,75.33,132.56,,,,,national_M2025_dl.xlsx
+2005,TX_state,State,48,Texas,27-2042,Musicians and singers,2870.0,15.59,,13.08,,6.24,8.12,17.71,29.59,,,,,state_may2005_dl.xls
+2006,TX_state,State,48,Texas,27-2042,Musicians and singers,2320.0,15.27,,13.11,,6.28,7.9,17.53,29.84,,,,,state_may2006_dl.xls
+2007,TX_state,State,48,Texas,27-2042,Musicians and singers,2120.0,16.99,,13.85,,6.08,7.09,18.87,34.31,,,,,state_May2007_dl.xls
+2008,TX_state,State,48,Texas,27-2042,Musicians and singers,1970.0,16.8,,13.97,,6.73,8.05,18.81,30.28,,,,,state__M2008_dl.xls
+2009,TX_state,State,48,Texas,27-2042,Musicians and singers,2300.0,18.51,,14.22,,7.19,8.34,21.24,35.64,,,,,state_dl.xls
+2010,TX_state,State,48,Texas,27-2042,Musicians and Singers,1880.0,21.67,,19.79,,9.18,13.59,26.14,34.67,,,,,state_M2010_dl.xls
+2011,TX_state,State,48,Texas,27-2042,Musicians and Singers,2090.0,21.9,,20.32,,8.75,11.57,25.81,34.75,,,,,state_M2011_dl.xls
+2012,TX_state,State,48,Texas,27-2042,Musicians and Singers,1690.0,21.07,,19.73,,8.43,11.94,23.74,33.56,,,,,state_M2012_dl.xls
+2013,TX_state,State,48,Texas,27-2042,Musicians and Singers,1800.0,24.37,,16.78,,8.66,12.27,27.8,60.42,,,,,state_M2013_dl.xls
+2014,TX_state,State,48,Texas,27-2042,Musicians and Singers,1880.0,27.74,,19.63,,8.57,12.65,35.48,65.49,,,,,state_M2014_dl.xlsx
+2015,TX_state,State,48,Texas,27-2042,Musicians and Singers,1780.0,31.48,,22.23,,9.16,13.88,47.29,65.03,,,,,state_M2015_dl.xlsx
+2016,TX_state,State,48,Texas,27-2042,Musicians and Singers,1600.0,30.34,,21.84,,8.4,11.82,39.72,59.95,,,,,state_M2016_dl.xlsx
+2017,TX_state,State,48,Texas,27-2042,Musicians and Singers,1570.0,35.11,,26.28,,8.98,17.33,49.36,63.84,,,,,state_M2017_dl.xlsx
+2018,TX_state,State,48,Texas,27-2042,Musicians and Singers,1720.0,32.11,,23.83,,8.79,15.46,45.05,60.43,,,,,state_M2018_dl.xlsx
+2019,TX_state,State,48,Texas,27-2042,Musicians and Singers,1790.0,33.89,,25.37,,8.62,15.07,48.04,66.36,,,,,state_M2019_dl.xlsx
+2020,TX_state,State,48,Texas,27-2042,Musicians and Singers,1270.0,35.62,,27.05,,8.7,14.23,47.63,62.46,,,,,state_M2020_dl.xlsx
+2021,TX_state,State,48,Texas,27-2042,Musicians and Singers,1020.0,45.25,,35.11,,10.9,18.43,47.15,,,,,,state_M2021_dl.xlsx
+2022,TX_state,State,48,Texas,27-2042,Musicians and Singers,1400.0,43.49,,40.0,,12.71,23.66,47.79,59.83,,,,,state_M2022_dl.xlsx
+2023,TX_state,State,48,Texas,27-2042,Musicians and Singers,1650.0,48.27,,38.68,,16.64,27.64,51.89,82.04,,,,,state_M2023_dl.xlsx
+2024,TX_state,State,48,Texas,27-2042,Musicians and Singers,1100.0,50.45,,37.09,,21.74,28.56,57.87,85.03,,,,,state_M2024_dl.xlsx
+2025,TX_state,State,48,Texas,27-2042,Musicians and Singers,1430.0,43.77,,33.59,,8.56,23.62,60.52,83.33,,,,,state_M2025_dl.xlsx
+2005,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-3043,Writers and authors,400.0,32.21,67000.0,34.99,72780.0,14.4,19.15,40.54,45.06,29960.0,39830.0,84330.0,93730.0,MSA_may2005_dl_3.xls
+2006,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-3043,Writers and authors,420.0,30.86,64180.0,26.67,55480.0,13.34,17.09,40.93,51.93,27750.0,35550.0,85130.0,108020.0,MSA_may2006_dl_3.xls
+2007,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-3043,Writers and authors,440.0,31.65,65840.0,27.34,56860.0,14.93,18.05,40.46,55.82,31050.0,37550.0,84150.0,116110.0,MSA_May2007_dl_3.xls
+2008,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-3043,Writers and authors,410.0,29.66,61690.0,24.86,51710.0,13.77,17.73,34.53,47.7,28650.0,36890.0,71830.0,99210.0,MSA_M2008_dl_3.xls
+2009,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-3043,Writers and authors,550.0,33.14,68920.0,29.41,61180.0,15.4,22.44,36.0,49.36,32040.0,46670.0,74880.0,102670.0,MSA_dl_3.xls
+2010,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-3043,Writers and Authors,470.0,35.4,73630.0,30.04,62470.0,16.26,23.27,38.0,60.27,33820.0,48400.0,79040.0,125350.0,MSA_M2010_dl_3.xls
+2011,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-3043,Writers and Authors,430.0,31.8,66140.0,27.9,58040.0,16.0,20.12,35.14,45.82,33270.0,41840.0,73090.0,95310.0,MSA_M2011_dl_3_OH_WY.xls
+2012,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-3043,Writers and Authors,350.0,25.12,52250.0,23.05,47940.0,14.05,18.05,28.98,35.83,29230.0,37540.0,60280.0,74530.0,MSA_M2012_dl_3_OH_WY.xls
+2013,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-3043,Writers and Authors,470.0,26.9,55940.0,25.38,52780.0,9.29,17.96,34.06,41.3,19330.0,37360.0,70850.0,85910.0,MSA_M2013_dl_3_OH_WY.xls
+2014,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-3043,Writers and Authors,660.0,26.39,54890.0,26.47,55050.0,8.68,17.32,35.13,42.45,18050.0,36040.0,73070.0,88290.0,MSA_M2014_dl.xlsx
+2015,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-3043,Writers and Authors,480.0,25.07,52150.0,22.57,46940.0,8.49,15.29,35.23,44.05,17660.0,31790.0,73280.0,91620.0,MSA_M2015_dl.xlsx
+2016,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-3043,Writers and Authors,380.0,23.28,48420.0,21.64,45000.0,8.85,15.97,28.76,41.69,18410.0,33220.0,59810.0,86720.0,MSA_M2016_dl.xlsx
+2017,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-3043,Writers and Authors,350.0,27.8,57820.0,27.3,56780.0,15.74,19.19,34.29,43.58,32750.0,39910.0,71320.0,90640.0,MSA_M2017_dl.xlsx
+2018,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-3043,Writers and Authors,330.0,29.32,60980.0,29.29,60920.0,16.28,21.66,36.13,44.06,33850.0,45060.0,75140.0,91640.0,MSA_M2018_dl.xlsx
+2019,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-3043,Writers and Authors,360.0,29.73,61840.0,29.09,60520.0,16.16,24.21,37.67,44.67,33600.0,50350.0,78350.0,92910.0,MSA_M2019_dl.xlsx
+2020,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-3043,Writers and Authors,370.0,29.27,60880.0,28.69,59680.0,16.61,25.08,34.38,43.64,34540.0,52170.0,71510.0,90770.0,MSA_M2020_dl.xlsx
+2021,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-3043,Writers and Authors,420.0,31.63,65790.0,29.66,61700.0,18.69,26.48,37.34,47.24,38880.0,55070.0,77660.0,98260.0,MSA_M2021_dl.xlsx
+2022,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-3043,Writers and Authors,400.0,32.64,67880.0,31.5,65520.0,16.97,21.97,39.34,46.88,35300.0,45690.0,81820.0,97510.0,MSA_M2022_dl.xlsx
+2023,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-3043,Writers and Authors,320.0,36.05,74980.0,33.0,68640.0,19.86,23.91,41.31,51.79,41300.0,49740.0,85930.0,107720.0,MSA_M2023_dl.xlsx
+2024,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-3043,Writers and Authors,370.0,44.01,91530.0,36.57,76060.0,24.94,27.0,46.83,86.92,51870.0,56150.0,97400.0,180800.0,MSA_M2024_dl.xlsx
+2025,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-3043,Writers and Authors,420.0,44.53,92620.0,36.24,75380.0,24.35,26.8,52.33,77.59,50640.0,55740.0,108840.0,161380.0,MSA_M2025_dl.xlsx
+2005,US_national,National,0,U.S.,27-3043,Writers and authors,43020.0,25.89,53850.0,22.32,46420.0,11.69,16.04,31.13,43.24,24320.0,33360.0,64750.0,89940.0,national_may2005_dl.xls
+2006,US_national,National,0,U.S.,27-3043,Writers and authors,43260.0,27.93,58080.0,23.38,48640.0,12.23,16.76,32.61,46.97,25430.0,34850.0,67820.0,97700.0,national_may2006_dl.xls
+2007,US_national,National,0,U.S.,27-3043,Writers and authors,44310.0,28.9,60120.0,24.36,50660.0,12.76,17.49,33.83,48.04,26530.0,36370.0,70370.0,99910.0,national_May2007_dl.xls
+2008,US_national,National,0,U.S.,27-3043,Writers and authors,44170.0,31.04,64560.0,25.51,53070.0,13.47,18.34,36.08,51.26,28020.0,38150.0,75060.0,106630.0,national__M2008_dl.xls
+2009,US_national,National,0,U.S.,27-3043,Writers and authors,43390.0,31.04,64560.0,25.91,53900.0,13.5,18.63,36.41,50.82,28070.0,38760.0,75740.0,105710.0,national_dl.xls
+2010,US_national,National,0,U.S.,27-3043,Writers and Authors,40980.0,31.71,65960.0,26.64,55420.0,13.76,18.91,37.29,52.62,28610.0,39330.0,77560.0,109440.0,national_M2010_dl.xls
+2011,US_national,National,0,U.S.,27-3043,Writers and Authors,40930.0,32.72,68060.0,26.86,55870.0,13.55,19.03,38.0,55.64,28180.0,39580.0,79050.0,115740.0,national_M2011_dl.xls
+2012,US_national,National,0,U.S.,27-3043,Writers and Authors,41990.0,32.9,68420.0,26.89,55940.0,13.35,18.77,39.04,56.66,27770.0,39050.0,81200.0,117860.0,national_M2012_dl.xls
+2013,US_national,National,0,U.S.,27-3043,Writers and Authors,43590.0,33.3,69250.0,27.77,57750.0,13.61,19.29,40.48,56.27,28310.0,40130.0,84190.0,117050.0,national_M2013_dl.xls
+2014,US_national,National,0,U.S.,27-3043,Writers and Authors,43500.0,32.63,67870.0,28.3,58850.0,13.77,19.67,40.28,55.2,28640.0,40920.0,83790.0,114820.0,national_M2014_dl.xlsx
+2015,US_national,National,0,U.S.,27-3043,Writers and Authors,43380.0,33.24,69130.0,28.97,60250.0,14.05,20.38,40.4,55.06,29230.0,42380.0,84030.0,114530.0,national_M2015_dl.xlsx
+2016,US_national,National,0,U.S.,27-3043,Writers and Authors,44690.0,34.58,71920.0,29.44,61240.0,14.12,20.73,40.15,57.04,29380.0,43130.0,83500.0,118640.0,national_M2016_dl.xlsx
+2017,US_national,National,0,U.S.,27-3043,Writers and Authors,45300.0,34.67,72120.0,29.72,61820.0,14.67,21.3,40.48,57.1,30520.0,44310.0,84190.0,118760.0,national_M2017_dl.xlsx
+2018,US_national,National,0,U.S.,27-3043,Writers and Authors,45210.0,35.14,73090.0,29.89,62170.0,15.24,21.58,41.14,58.49,31700.0,44890.0,85580.0,121670.0,national_M2018_dl.xlsx
+2019,US_national,National,0,U.S.,27-3043,Writers and Authors,45860.0,35.51,73860.0,30.39,63200.0,16.18,22.42,41.88,58.87,33660.0,46640.0,87110.0,122450.0,national_M2019_dl.xlsx
+2020,US_national,National,0,U.S.,27-3043,Writers and Authors,44240.0,37.82,78680.0,32.27,67120.0,17.25,23.7,45.24,64.17,35880.0,49310.0,94090.0,133460.0,national_M2020_dl.xlsx
+2021,US_national,National,0,U.S.,27-3043,Writers and Authors,49410.0,39.0,81120.0,33.42,69510.0,18.51,23.74,48.6,64.22,38500.0,49390.0,101080.0,133580.0,national_M2021_dl.xlsx
+2022,US_national,National,0,U.S.,27-3043,Writers and Authors,54010.0,44.02,91560.0,35.17,73150.0,19.04,24.51,50.48,77.53,39610.0,50980.0,105000.0,161260.0,national_M2022_dl.xlsx
+2023,US_national,National,0,U.S.,27-3043,Writers and Authors,49450.0,42.11,87590.0,35.43,73690.0,19.67,25.32,48.55,71.27,40900.0,52660.0,100990.0,148240.0,national_M2023_dl.xlsx
+2024,US_national,National,0,U.S.,27-3043,Writers and Authors,47800.0,41.24,85780.0,34.75,72270.0,19.75,25.43,47.27,64.27,41080.0,52890.0,98320.0,133680.0,national_M2024_dl.xlsx
+2025,US_national,National,0,U.S.,27-3043,Writers and Authors,47940.0,41.39,86090.0,36.98,76910.0,21.31,28.0,49.01,67.25,44310.0,58230.0,101950.0,139870.0,national_M2025_dl.xlsx
+2005,TX_state,State,48,Texas,27-3043,Writers and authors,1660.0,25.02,52040.0,21.88,45510.0,12.02,15.81,32.34,40.88,24990.0,32880.0,67260.0,85030.0,state_may2005_dl.xls
+2006,TX_state,State,48,Texas,27-3043,Writers and authors,1930.0,25.4,52840.0,22.66,47130.0,12.19,16.05,32.63,42.53,25360.0,33390.0,67860.0,88460.0,state_may2006_dl.xls
+2007,TX_state,State,48,Texas,27-3043,Writers and authors,2000.0,26.47,55070.0,23.87,49640.0,12.98,17.44,33.17,43.3,26990.0,36270.0,68990.0,90050.0,state_May2007_dl.xls
+2008,TX_state,State,48,Texas,27-3043,Writers and authors,2180.0,26.14,54370.0,23.75,49400.0,13.42,17.61,31.8,40.9,27920.0,36620.0,66130.0,85060.0,state__M2008_dl.xls
+2009,TX_state,State,48,Texas,27-3043,Writers and authors,2090.0,26.9,55960.0,24.62,51210.0,13.19,18.02,32.35,40.48,27440.0,37480.0,67280.0,84190.0,state_dl.xls
+2010,TX_state,State,48,Texas,27-3043,Writers and Authors,2050.0,27.94,58120.0,24.68,51340.0,13.4,17.92,33.48,43.12,27870.0,37270.0,69640.0,89690.0,state_M2010_dl.xls
+2011,TX_state,State,48,Texas,27-3043,Writers and Authors,1970.0,26.44,54990.0,23.25,48370.0,11.57,16.48,33.08,41.94,24070.0,34270.0,68810.0,87230.0,state_M2011_dl.xls
+2012,TX_state,State,48,Texas,27-3043,Writers and Authors,2010.0,25.92,53920.0,23.64,49180.0,12.6,17.56,31.73,40.61,26210.0,36530.0,65990.0,84460.0,state_M2012_dl.xls
+2013,TX_state,State,48,Texas,27-3043,Writers and Authors,2400.0,26.49,55110.0,25.05,52110.0,11.01,17.77,33.1,42.11,22910.0,36970.0,68850.0,87580.0,state_M2013_dl.xls
+2014,TX_state,State,48,Texas,27-3043,Writers and Authors,2620.0,26.82,55780.0,26.04,54160.0,10.61,18.24,34.22,43.14,22070.0,37940.0,71180.0,89730.0,state_M2014_dl.xlsx
+2015,TX_state,State,48,Texas,27-3043,Writers and Authors,2340.0,26.74,55620.0,26.15,54390.0,9.45,17.09,35.22,43.85,19660.0,35550.0,73270.0,91210.0,state_M2015_dl.xlsx
+2016,TX_state,State,48,Texas,27-3043,Writers and Authors,2060.0,26.01,54100.0,24.48,50910.0,9.76,16.91,33.96,44.37,20300.0,35160.0,70640.0,92300.0,state_M2016_dl.xlsx
+2017,TX_state,State,48,Texas,27-3043,Writers and Authors,2110.0,27.29,56760.0,25.94,53950.0,12.1,18.57,35.07,44.25,25170.0,38620.0,72940.0,92050.0,state_M2017_dl.xlsx
+2018,TX_state,State,48,Texas,27-3043,Writers and Authors,2110.0,27.25,56680.0,25.83,53730.0,13.31,18.3,34.66,44.0,27680.0,38060.0,72100.0,91530.0,state_M2018_dl.xlsx
+2019,TX_state,State,48,Texas,27-3043,Writers and Authors,2580.0,27.67,57550.0,26.17,54430.0,13.94,20.04,35.22,43.91,28990.0,41680.0,73250.0,91340.0,state_M2019_dl.xlsx
+2020,TX_state,State,48,Texas,27-3043,Writers and Authors,2560.0,28.19,58640.0,26.82,55780.0,14.44,21.04,33.88,43.75,30030.0,43760.0,70470.0,91000.0,state_M2020_dl.xlsx
+2021,TX_state,State,48,Texas,27-3043,Writers and Authors,1970.0,30.42,63270.0,29.23,60790.0,16.99,23.62,36.97,46.87,35340.0,49140.0,76890.0,97480.0,state_M2021_dl.xlsx
+2022,TX_state,State,48,Texas,27-3043,Writers and Authors,2460.0,38.04,79130.0,29.2,60730.0,16.97,19.16,40.35,51.48,35300.0,39840.0,83930.0,107070.0,state_M2022_dl.xlsx
+2023,TX_state,State,48,Texas,27-3043,Writers and Authors,2180.0,33.62,69940.0,31.03,64530.0,17.49,22.56,40.48,50.0,36380.0,46920.0,84200.0,104000.0,state_M2023_dl.xlsx
+2024,TX_state,State,48,Texas,27-3043,Writers and Authors,2100.0,39.83,82840.0,34.45,71650.0,20.89,24.74,44.1,64.14,43460.0,51460.0,91730.0,133420.0,state_M2024_dl.xlsx
+2025,TX_state,State,48,Texas,27-3043,Writers and Authors,2320.0,39.04,81210.0,33.65,69990.0,23.59,25.94,46.28,60.21,49070.0,53950.0,96260.0,125240.0,state_M2025_dl.xlsx
+2005,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4014,Sound engineering technicians,60.0,19.06,39650.0,18.06,37560.0,8.0,10.12,28.01,32.42,16640.0,21050.0,58270.0,67430.0,MSA_may2005_dl_3.xls
+2006,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4014,Sound engineering technicians,,23.2,48270.0,22.78,47390.0,17.63,20.61,25.81,32.68,36660.0,42870.0,53690.0,67960.0,MSA_may2006_dl_3.xls
+2007,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4014,Sound engineering technicians,170.0,21.33,44360.0,22.29,46370.0,14.99,19.5,24.33,25.64,31180.0,40560.0,50600.0,53340.0,MSA_May2007_dl_3.xls
+2008,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4014,Sound engineering technicians,100.0,21.19,44070.0,22.32,46420.0,13.79,17.54,24.8,26.38,28690.0,36490.0,51590.0,54880.0,MSA_M2008_dl_3.xls
+2009,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4014,Sound engineering technicians,70.0,19.14,39800.0,17.54,36490.0,12.36,13.8,23.14,27.65,25700.0,28700.0,48130.0,57520.0,MSA_dl_3.xls
+2010,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4014,Sound Engineering Technicians,110.0,17.62,36660.0,12.98,27000.0,8.23,9.67,18.12,28.65,17120.0,20100.0,37680.0,59600.0,MSA_M2010_dl_3.xls
+2011,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-4014,Sound Engineering Technicians,130.0,17.86,37160.0,13.54,28170.0,8.56,10.42,20.18,28.64,17810.0,21670.0,41980.0,59580.0,MSA_M2011_dl_3_OH_WY.xls
+2012,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-4014,Sound Engineering Technicians,130.0,19.92,41440.0,15.34,31900.0,8.46,9.9,25.38,29.32,17600.0,20600.0,52790.0,60990.0,MSA_M2012_dl_3_OH_WY.xls
+2013,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-4014,Sound Engineering Technicians,70.0,23.28,48420.0,24.64,51260.0,10.44,17.0,27.59,29.58,21720.0,35370.0,57380.0,61530.0,MSA_M2013_dl_3_OH_WY.xls
+2014,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-4014,Sound Engineering Technicians,70.0,25.07,52150.0,25.42,52880.0,12.14,20.2,28.39,32.37,25240.0,42010.0,59050.0,67340.0,MSA_M2014_dl.xlsx
+2015,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4014,Sound Engineering Technicians,50.0,22.65,47120.0,22.09,45940.0,11.18,17.21,28.95,35.13,23260.0,35800.0,60210.0,73070.0,MSA_M2015_dl.xlsx
+2016,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4014,Sound Engineering Technicians,70.0,23.51,48910.0,17.95,37330.0,8.18,9.88,32.88,38.44,17010.0,20540.0,68390.0,79950.0,MSA_M2016_dl.xlsx
+2017,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4014,Sound Engineering Technicians,110.0,29.83,62040.0,25.5,53040.0,9.32,13.8,39.1,58.28,19380.0,28700.0,81330.0,121220.0,MSA_M2017_dl.xlsx
+2018,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4014,Sound Engineering Technicians,170.0,26.49,55090.0,20.17,41960.0,9.52,13.08,33.53,56.27,19790.0,27210.0,69750.0,117040.0,MSA_M2018_dl.xlsx
+2019,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4014,Sound Engineering Technicians,140.0,28.28,58830.0,24.93,51860.0,13.73,16.09,33.79,55.79,28550.0,33470.0,70290.0,116040.0,MSA_M2019_dl.xlsx
+2020,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4014,Sound Engineering Technicians,100.0,23.88,49670.0,18.93,39380.0,12.87,15.73,30.6,38.26,26760.0,32730.0,63650.0,79580.0,MSA_M2020_dl.xlsx
+2021,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4014,Sound Engineering Technicians,70.0,33.61,69910.0,31.1,64690.0,14.0,23.4,41.14,52.52,29110.0,48670.0,85570.0,109240.0,MSA_M2021_dl.xlsx
+2022,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4014,Sound Engineering Technicians,80.0,28.43,59140.0,23.77,49430.0,14.18,15.86,31.17,55.14,29500.0,32980.0,64830.0,114680.0,MSA_M2022_dl.xlsx
+2023,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4014,Sound Engineering Technicians,60.0,32.5,67590.0,28.99,60300.0,16.19,19.44,32.78,65.67,33680.0,40430.0,68190.0,136600.0,MSA_M2023_dl.xlsx
+2024,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-4014,Sound Engineering Technicians,70.0,32.41,67410.0,29.03,60390.0,21.55,24.05,32.84,57.99,44830.0,50030.0,68310.0,120620.0,MSA_M2024_dl.xlsx
+2025,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-4014,Sound Engineering Technicians,150.0,32.15,66880.0,30.5,63440.0,18.84,21.36,37.3,47.66,39190.0,44420.0,77570.0,99130.0,MSA_M2025_dl.xlsx
+2005,US_national,National,0,U.S.,27-4014,Sound engineering technicians,12680.0,22.98,47790.0,18.46,38390.0,9.47,13.17,29.55,42.49,19700.0,27380.0,61460.0,88370.0,national_may2005_dl.xls
+2006,US_national,National,0,U.S.,27-4014,Sound engineering technicians,14080.0,24.16,50260.0,20.68,43010.0,10.12,14.07,31.53,43.64,21050.0,29270.0,65590.0,90770.0,national_may2006_dl.xls
+2007,US_national,National,0,U.S.,27-4014,Sound engineering technicians,15490.0,26.07,54220.0,22.38,46550.0,11.24,15.43,35.39,46.55,23370.0,32090.0,73620.0,96830.0,national_May2007_dl.xls
+2008,US_national,National,0,U.S.,27-4014,Sound engineering technicians,16600.0,25.53,53110.0,22.83,47490.0,11.44,15.75,33.51,44.57,23790.0,32770.0,69700.0,92700.0,national__M2008_dl.xls
+2009,US_national,National,0,U.S.,27-4014,Sound engineering technicians,15560.0,25.93,53940.0,22.29,46370.0,11.26,15.6,32.21,45.32,23420.0,32450.0,67010.0,94270.0,national_dl.xls
+2010,US_national,National,0,U.S.,27-4014,Sound Engineering Technicians,15650.0,25.98,54030.0,22.63,47080.0,10.84,15.29,31.53,44.52,22550.0,31790.0,65590.0,92600.0,national_M2010_dl.xls
+2011,US_national,National,0,U.S.,27-4014,Sound Engineering Technicians,14930.0,26.98,56110.0,22.48,46750.0,10.35,14.94,33.83,47.23,21520.0,31070.0,70360.0,98240.0,national_M2011_dl.xls
+2012,US_national,National,0,U.S.,27-4014,Sound Engineering Technicians,14280.0,26.6,55340.0,22.27,46310.0,10.96,15.16,34.53,46.97,22810.0,31540.0,71820.0,97700.0,national_M2012_dl.xls
+2013,US_national,National,0,U.S.,27-4014,Sound Engineering Technicians,13480.0,27.22,56610.0,22.35,46480.0,10.66,15.68,35.03,48.96,22180.0,32610.0,72860.0,101840.0,national_M2013_dl.xls
+2014,US_national,National,0,U.S.,27-4014,Sound Engineering Technicians,13750.0,28.21,58670.0,23.98,49870.0,10.97,16.08,35.96,51.38,22820.0,33450.0,74790.0,106870.0,national_M2014_dl.xlsx
+2015,US_national,National,0,U.S.,27-4014,Sound Engineering Technicians,13840.0,30.45,63340.0,25.64,53330.0,10.82,17.1,39.15,56.99,22510.0,35570.0,81430.0,118530.0,national_M2015_dl.xlsx
+2016,US_national,National,0,U.S.,27-4014,Sound Engineering Technicians,15210.0,31.37,65240.0,25.81,53680.0,11.75,16.58,39.95,58.48,24440.0,34490.0,83100.0,121630.0,national_M2016_dl.xlsx
+2017,US_national,National,0,U.S.,27-4014,Sound Engineering Technicians,13370.0,32.78,68180.0,26.83,55810.0,12.44,17.41,42.87,60.21,25880.0,36220.0,89160.0,125230.0,national_M2017_dl.xlsx
+2018,US_national,National,0,U.S.,27-4014,Sound Engineering Technicians,13510.0,30.53,63500.0,25.19,52390.0,12.35,15.99,38.35,56.54,25680.0,33260.0,79770.0,117600.0,national_M2018_dl.xlsx
+2019,US_national,National,0,U.S.,27-4014,Sound Engineering Technicians,12890.0,32.25,67090.0,26.32,54740.0,12.5,16.96,38.04,58.33,25990.0,35270.0,79130.0,121320.0,national_M2019_dl.xlsx
+2020,US_national,National,0,U.S.,27-4014,Sound Engineering Technicians,10870.0,32.31,67210.0,25.73,53520.0,13.3,17.05,37.22,57.56,27650.0,35460.0,77410.0,119720.0,national_M2020_dl.xlsx
+2021,US_national,National,0,U.S.,27-4014,Sound Engineering Technicians,10800.0,32.38,67360.0,29.09,60500.0,14.0,20.24,38.33,59.95,29110.0,42100.0,79730.0,124690.0,national_M2021_dl.xlsx
+2022,US_national,National,0,U.S.,27-4014,Sound Engineering Technicians,13420.0,36.34,75590.0,29.17,60670.0,15.0,20.0,47.82,65.36,31200.0,41600.0,99470.0,135950.0,national_M2022_dl.xlsx
+2023,US_national,National,0,U.S.,27-4014,Sound Engineering Technicians,14600.0,35.62,74100.0,28.57,59430.0,17.38,22.03,45.46,63.91,36160.0,45820.0,94550.0,132940.0,national_M2023_dl.xlsx
+2024,US_national,National,0,U.S.,27-4014,Sound Engineering Technicians,13050.0,38.12,79280.0,31.94,66430.0,17.6,22.92,48.05,64.9,36600.0,47680.0,99950.0,134980.0,national_M2024_dl.xlsx
+2025,US_national,National,0,U.S.,27-4014,Sound Engineering Technicians,13080.0,39.13,81390.0,35.16,73130.0,18.06,23.99,48.21,66.04,37570.0,49910.0,100280.0,137370.0,national_M2025_dl.xlsx
+2005,TX_state,State,48,Texas,27-4014,Sound engineering technicians,550.0,17.69,36800.0,14.53,30220.0,6.77,9.25,18.95,32.44,14090.0,19250.0,39420.0,67470.0,state_may2005_dl.xls
+2006,TX_state,State,48,Texas,27-4014,Sound engineering technicians,620.0,19.73,41040.0,16.54,34410.0,7.93,11.07,22.59,33.63,16500.0,23030.0,46990.0,69960.0,state_may2006_dl.xls
+2007,TX_state,State,48,Texas,27-4014,Sound engineering technicians,630.0,18.17,37800.0,17.87,37170.0,8.42,11.91,23.33,28.59,17510.0,24780.0,48530.0,59480.0,state_May2007_dl.xls
+2008,TX_state,State,48,Texas,27-4014,Sound engineering technicians,590.0,19.82,41220.0,18.93,39380.0,8.68,12.8,24.7,34.41,18040.0,26630.0,51370.0,71580.0,state__M2008_dl.xls
+2009,TX_state,State,48,Texas,27-4014,Sound engineering technicians,480.0,19.17,39880.0,16.44,34190.0,7.69,11.66,24.17,35.7,16000.0,24250.0,50280.0,74260.0,state_dl.xls
+2010,TX_state,State,48,Texas,27-4014,Sound Engineering Technicians,590.0,18.43,38330.0,13.27,27610.0,7.87,9.17,20.41,38.6,16370.0,19070.0,42440.0,80280.0,state_M2010_dl.xls
+2011,TX_state,State,48,Texas,27-4014,Sound Engineering Technicians,620.0,17.55,36510.0,12.78,26590.0,8.08,9.11,18.53,38.36,16810.0,18950.0,38550.0,79800.0,state_M2011_dl.xls
+2012,TX_state,State,48,Texas,27-4014,Sound Engineering Technicians,660.0,21.82,45380.0,13.89,28890.0,8.19,9.3,24.48,52.13,17030.0,19350.0,50920.0,108420.0,state_M2012_dl.xls
+2013,TX_state,State,48,Texas,27-4014,Sound Engineering Technicians,440.0,22.68,47180.0,17.16,35690.0,8.42,10.47,27.02,43.12,17510.0,21790.0,56210.0,89680.0,state_M2013_dl.xls
+2014,TX_state,State,48,Texas,27-4014,Sound Engineering Technicians,430.0,24.59,51140.0,18.74,38990.0,8.31,10.9,29.54,47.19,17280.0,22670.0,61440.0,98160.0,state_M2014_dl.xlsx
+2015,TX_state,State,48,Texas,27-4014,Sound Engineering Technicians,370.0,20.28,42180.0,17.81,37040.0,8.19,9.36,27.38,36.8,17040.0,19460.0,56950.0,76550.0,state_M2015_dl.xlsx
+2016,TX_state,State,48,Texas,27-4014,Sound Engineering Technicians,510.0,24.18,50290.0,19.02,39570.0,8.52,11.24,33.89,44.72,17720.0,23380.0,70490.0,93020.0,state_M2016_dl.xlsx
+2017,TX_state,State,48,Texas,27-4014,Sound Engineering Technicians,500.0,26.3,54710.0,20.16,41940.0,9.61,13.44,35.53,49.39,20000.0,27950.0,73910.0,102720.0,state_M2017_dl.xlsx
+2018,TX_state,State,48,Texas,27-4014,Sound Engineering Technicians,650.0,28.76,59810.0,22.55,46910.0,10.56,13.68,39.54,52.04,21970.0,28450.0,82230.0,108240.0,state_M2018_dl.xlsx
+2019,TX_state,State,48,Texas,27-4014,Sound Engineering Technicians,560.0,27.78,57790.0,23.38,48620.0,12.85,15.62,32.69,51.59,26720.0,32480.0,68000.0,107300.0,state_M2019_dl.xlsx
+2020,TX_state,State,48,Texas,27-4014,Sound Engineering Technicians,580.0,27.3,56790.0,22.95,47740.0,12.3,15.57,31.37,47.43,25590.0,32390.0,65250.0,98650.0,state_M2020_dl.xlsx
+2021,TX_state,State,48,Texas,27-4014,Sound Engineering Technicians,690.0,28.78,59870.0,28.46,59190.0,11.99,14.0,35.92,49.19,24940.0,29120.0,74720.0,102310.0,state_M2021_dl.xlsx
+2022,TX_state,State,48,Texas,27-4014,Sound Engineering Technicians,740.0,25.3,52620.0,20.0,41600.0,13.4,14.57,30.52,52.51,27870.0,30300.0,63480.0,109230.0,state_M2022_dl.xlsx
+2023,TX_state,State,48,Texas,27-4014,Sound Engineering Technicians,400.0,29.88,62140.0,22.16,46090.0,14.17,18.17,32.21,59.33,29470.0,37790.0,66990.0,123410.0,state_M2023_dl.xlsx
+2024,TX_state,State,48,Texas,27-4014,Sound Engineering Technicians,320.0,32.55,67690.0,28.54,59370.0,20.8,23.11,32.91,59.22,43260.0,48060.0,68450.0,123180.0,state_M2024_dl.xlsx
+2025,TX_state,State,48,Texas,27-4014,Sound Engineering Technicians,830.0,27.97,58180.0,26.14,54370.0,16.79,19.08,34.52,39.96,34920.0,39690.0,71790.0,83120.0,state_M2025_dl.xlsx
+2005,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4021,Photographers,380.0,15.21,31640.0,13.13,27310.0,7.37,10.76,17.95,22.01,15330.0,22380.0,37330.0,45780.0,MSA_may2005_dl_3.xls
+2006,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4021,Photographers,410.0,15.94,33150.0,12.1,25160.0,7.7,8.84,17.16,32.23,16020.0,18390.0,35700.0,67050.0,MSA_may2006_dl_3.xls
+2007,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4021,Photographers,480.0,15.07,31340.0,13.53,28150.0,8.24,11.3,15.54,24.36,17130.0,23500.0,32320.0,50670.0,MSA_May2007_dl_3.xls
+2008,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4021,Photographers,500.0,16.6,34530.0,14.73,30630.0,8.72,12.26,17.97,29.35,18130.0,25500.0,37370.0,61060.0,MSA_M2008_dl_3.xls
+2009,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4021,Photographers,490.0,17.16,35700.0,15.7,32650.0,9.24,13.76,18.78,26.08,19220.0,28630.0,39070.0,54250.0,MSA_dl_3.xls
+2010,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4021,Photographers,460.0,16.81,34960.0,15.89,33060.0,8.84,12.39,18.64,25.63,18380.0,25770.0,38770.0,53310.0,MSA_M2010_dl_3.xls
+2011,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-4021,Photographers,370.0,16.62,34560.0,15.48,32200.0,8.57,10.8,18.58,26.48,17830.0,22450.0,38640.0,55070.0,MSA_M2011_dl_3_OH_WY.xls
+2012,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-4021,Photographers,340.0,15.14,31500.0,15.12,31440.0,8.83,11.23,18.09,21.21,18360.0,23370.0,37630.0,44130.0,MSA_M2012_dl_3_OH_WY.xls
+2013,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-4021,Photographers,250.0,14.22,29570.0,12.51,26010.0,9.43,10.38,17.64,21.99,19610.0,21590.0,36700.0,45740.0,MSA_M2013_dl_3_OH_WY.xls
+2014,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-4021,Photographers,290.0,14.91,31020.0,13.91,28930.0,9.8,11.12,18.43,22.11,20390.0,23120.0,38340.0,46000.0,MSA_M2014_dl.xlsx
+2015,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4021,Photographers,320.0,16.52,34360.0,15.78,32820.0,10.65,12.08,20.79,23.24,22150.0,25120.0,43240.0,48350.0,MSA_M2015_dl.xlsx
+2016,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4021,Photographers,300.0,17.57,36550.0,17.86,37150.0,8.47,13.23,22.4,24.87,17610.0,27520.0,46590.0,51720.0,MSA_M2016_dl.xlsx
+2017,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4021,Photographers,300.0,16.66,34650.0,16.26,33820.0,8.39,9.93,22.46,25.23,17450.0,20650.0,46710.0,52470.0,MSA_M2017_dl.xlsx
+2018,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4021,Photographers,250.0,16.41,34140.0,15.38,31980.0,8.59,10.12,20.85,27.04,17870.0,21050.0,43380.0,56250.0,MSA_M2018_dl.xlsx
+2019,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4021,Photographers,320.0,23.45,48770.0,21.31,44330.0,10.98,15.5,33.44,36.97,22830.0,32250.0,69550.0,76890.0,MSA_M2019_dl.xlsx
+2020,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4021,Photographers,310.0,26.19,54480.0,26.47,55070.0,15.45,18.11,34.44,37.82,32130.0,37670.0,71630.0,78660.0,MSA_M2020_dl.xlsx
+2021,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4021,Photographers,310.0,20.27,42170.0,17.11,35580.0,11.07,13.71,23.04,31.3,23030.0,28520.0,47910.0,65110.0,MSA_M2021_dl.xlsx
+2022,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4021,Photographers,480.0,19.58,40720.0,17.57,36540.0,12.1,13.09,22.83,30.86,25160.0,27230.0,47490.0,64180.0,MSA_M2022_dl.xlsx
+2023,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock, TX",27-4021,Photographers,460.0,19.46,40480.0,17.94,37320.0,11.11,13.44,23.32,29.4,23110.0,27940.0,48510.0,61150.0,MSA_M2023_dl.xlsx
+2024,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-4021,Photographers,470.0,18.08,37610.0,17.09,35550.0,8.43,13.14,22.56,29.05,17540.0,27340.0,46930.0,60420.0,MSA_M2024_dl.xlsx
+2025,Austin_RoundRock_MSA_12420,MSA,12420,"Austin-Round Rock-San Marcos, TX",27-4021,Photographers,540.0,19.99,41590.0,18.74,38970.0,8.87,12.56,24.73,31.0,18450.0,26120.0,51430.0,64480.0,MSA_M2025_dl.xlsx
+2005,US_national,National,0,U.S.,27-4021,Photographers,58260.0,15.1,31410.0,12.55,26100.0,7.33,8.86,17.97,25.92,15240.0,18420.0,37370.0,53900.0,national_may2005_dl.xls
+2006,US_national,National,0,U.S.,27-4021,Photographers,60300.0,15.3,31830.0,12.58,26170.0,7.47,8.98,18.62,27.23,15540.0,18680.0,38730.0,56640.0,national_may2006_dl.xls
+2007,US_national,National,0,U.S.,27-4021,Photographers,62370.0,16.35,34010.0,13.32,27720.0,7.77,9.36,19.85,28.79,16170.0,19470.0,41280.0,59890.0,national_May2007_dl.xls
+2008,US_national,National,0,U.S.,27-4021,Photographers,61670.0,17.14,35640.0,14.15,29440.0,8.14,9.91,20.93,30.02,16920.0,20620.0,43530.0,62430.0,national__M2008_dl.xls
+2009,US_national,National,0,U.S.,27-4021,Photographers,57760.0,17.48,36370.0,14.31,29770.0,8.23,10.17,21.26,29.97,17120.0,21150.0,44230.0,62340.0,national_dl.xls
+2010,US_national,National,0,U.S.,27-4021,Photographers,54550.0,17.3,35980.0,14.0,29130.0,8.34,9.96,21.01,30.48,17350.0,20710.0,43700.0,63400.0,national_M2010_dl.xls
+2011,US_national,National,0,U.S.,27-4021,Photographers,54410.0,17.59,36580.0,13.88,28860.0,8.39,9.75,21.32,31.5,17450.0,20270.0,44340.0,65510.0,national_M2011_dl.xls
+2012,US_national,National,0,U.S.,27-4021,Photographers,56140.0,17.47,36330.0,13.7,28490.0,8.42,9.59,21.12,32.21,17520.0,19950.0,43930.0,66990.0,national_M2012_dl.xls
+2013,US_national,National,0,U.S.,27-4021,Photographers,54830.0,17.88,37190.0,14.08,29280.0,8.55,9.88,21.63,31.9,17770.0,20550.0,44980.0,66360.0,national_M2013_dl.xls
+2014,US_national,National,0,U.S.,27-4021,Photographers,52250.0,18.44,38350.0,14.66,30490.0,8.71,10.36,22.32,33.14,18120.0,21550.0,46420.0,68930.0,national_M2014_dl.xlsx
+2015,US_national,National,0,U.S.,27-4021,Photographers,50070.0,19.37,40280.0,15.24,31710.0,9.06,10.87,23.36,34.71,18850.0,22600.0,48600.0,72200.0,national_M2015_dl.xlsx
+2016,US_national,National,0,U.S.,27-4021,Photographers,48660.0,20.5,42640.0,16.38,34070.0,9.19,11.29,25.1,36.65,19110.0,23480.0,52220.0,76220.0,national_M2016_dl.xlsx
+2017,US_national,National,0,U.S.,27-4021,Photographers,49320.0,20.17,41940.0,15.62,32490.0,9.33,11.15,24.43,36.09,19400.0,23190.0,50820.0,75080.0,national_M2017_dl.xlsx
+2018,US_national,National,0,U.S.,27-4021,Photographers,49560.0,20.56,42770.0,16.35,34000.0,9.54,11.52,25.73,36.71,19850.0,23970.0,53520.0,76360.0,national_M2018_dl.xlsx
+2019,US_national,National,0,U.S.,27-4021,Photographers,50620.0,21.85,45440.0,17.44,36280.0,9.92,12.09,27.53,38.19,20630.0,25150.0,57250.0,79440.0,national_M2019_dl.xlsx
+2020,US_national,National,0,U.S.,27-4021,Photographers,41600.0,24.18,50290.0,19.85,41280.0,10.78,13.72,30.02,41.76,22410.0,28530.0,62440.0,86850.0,national_M2020_dl.xlsx
+2021,US_national,National,0,U.S.,27-4021,Photographers,38420.0,23.18,48210.0,18.73,38950.0,11.8,14.47,28.84,37.38,24540.0,30090.0,60000.0,77760.0,national_M2021_dl.xlsx
+2022,US_national,National,0,U.S.,27-4021,Photographers,47380.0,24.14,50210.0,19.31,40170.0,12.98,14.93,28.73,39.64,26990.0,31050.0,59750.0,82450.0,national_M2022_dl.xlsx
+2023,US_national,National,0,U.S.,27-4021,Photographers,53630.0,25.67,53380.0,19.6,40760.0,13.71,15.5,30.04,46.03,28510.0,32240.0,62480.0,95740.0,national_M2023_dl.xlsx
+2024,US_national,National,0,U.S.,27-4021,Photographers,51230.0,26.76,55650.0,20.44,42520.0,14.23,16.73,29.99,45.56,29610.0,34790.0,62370.0,94760.0,national_M2024_dl.xlsx
+2025,US_national,National,0,U.S.,27-4021,Photographers,51760.0,26.64,55410.0,21.47,44660.0,14.82,17.33,30.16,44.14,30820.0,36050.0,62740.0,91810.0,national_M2025_dl.xlsx
+2005,TX_state,State,48,Texas,27-4021,Photographers,4390.0,11.83,24610.0,9.67,20110.0,7.06,7.92,13.36,20.4,14690.0,16470.0,27790.0,42430.0,state_may2005_dl.xls
+2006,TX_state,State,48,Texas,27-4021,Photographers,4190.0,12.51,26010.0,9.91,20620.0,6.87,7.98,14.3,22.51,14300.0,16590.0,29740.0,46830.0,state_may2006_dl.xls
+2007,TX_state,State,48,Texas,27-4021,Photographers,4590.0,12.98,27000.0,10.8,22460.0,6.86,8.32,15.4,22.9,14260.0,17300.0,32020.0,47630.0,state_May2007_dl.xls
+2008,TX_state,State,48,Texas,27-4021,Photographers,4740.0,14.29,29720.0,11.78,24510.0,7.27,9.0,17.05,25.91,15110.0,18730.0,35470.0,53900.0,state__M2008_dl.xls
+2009,TX_state,State,48,Texas,27-4021,Photographers,4620.0,16.06,33390.0,12.77,26560.0,7.56,9.28,18.61,27.37,15730.0,19310.0,38700.0,56920.0,state_dl.xls
+2010,TX_state,State,48,Texas,27-4021,Photographers,4450.0,15.56,32370.0,12.07,25110.0,7.97,9.19,17.48,25.92,16570.0,19110.0,36370.0,53900.0,state_M2010_dl.xls
+2011,TX_state,State,48,Texas,27-4021,Photographers,3820.0,15.78,32830.0,11.87,24680.0,8.04,9.04,17.8,25.67,16730.0,18800.0,37020.0,53390.0,state_M2011_dl.xls
+2012,TX_state,State,48,Texas,27-4021,Photographers,3520.0,15.1,31420.0,13.01,27060.0,8.16,9.29,18.39,25.11,16980.0,19320.0,38260.0,52230.0,state_M2012_dl.xls
+2013,TX_state,State,48,Texas,27-4021,Photographers,3250.0,15.66,32570.0,13.61,28310.0,8.41,9.83,19.63,25.71,17500.0,20450.0,40830.0,53480.0,state_M2013_dl.xls
+2014,TX_state,State,48,Texas,27-4021,Photographers,3330.0,16.06,33400.0,14.2,29530.0,8.54,10.26,20.2,26.23,17770.0,21330.0,42010.0,54550.0,state_M2014_dl.xlsx
+2015,TX_state,State,48,Texas,27-4021,Photographers,3070.0,20.76,43180.0,14.17,29470.0,9.05,10.72,20.83,28.75,18830.0,22300.0,43320.0,59790.0,state_M2015_dl.xlsx
+2016,TX_state,State,48,Texas,27-4021,Photographers,3040.0,21.15,43990.0,13.41,27890.0,8.25,9.76,21.19,30.54,17160.0,20290.0,44080.0,63520.0,state_M2016_dl.xlsx
+2017,TX_state,State,48,Texas,27-4021,Photographers,3280.0,21.48,44680.0,12.66,26330.0,8.4,9.82,21.59,31.56,17480.0,20420.0,44920.0,65650.0,state_M2017_dl.xlsx
+2018,TX_state,State,48,Texas,27-4021,Photographers,3070.0,16.42,34160.0,13.51,28100.0,8.48,9.75,20.62,29.12,17630.0,20290.0,42890.0,60570.0,state_M2018_dl.xlsx
+2019,TX_state,State,48,Texas,27-4021,Photographers,3300.0,24.41,50770.0,18.38,38240.0,9.92,11.81,29.22,37.98,20640.0,24560.0,60790.0,79000.0,state_M2019_dl.xlsx
+2020,TX_state,State,48,Texas,27-4021,Photographers,2980.0,27.51,57230.0,22.94,47720.0,10.39,15.96,31.05,40.09,21610.0,33190.0,64580.0,83390.0,state_M2020_dl.xlsx
+2021,TX_state,State,48,Texas,27-4021,Photographers,3060.0,19.3,40140.0,16.53,34380.0,9.91,12.17,22.42,32.44,20610.0,25320.0,46640.0,67470.0,state_M2021_dl.xlsx
+2022,TX_state,State,48,Texas,27-4021,Photographers,4390.0,17.7,36820.0,14.46,30070.0,10.39,12.49,20.44,28.66,21610.0,25980.0,42510.0,59620.0,state_M2022_dl.xlsx
+2023,TX_state,State,48,Texas,27-4021,Photographers,3950.0,17.72,36850.0,15.77,32810.0,10.31,12.85,20.47,27.85,21440.0,26720.0,42580.0,57930.0,state_M2023_dl.xlsx
+2024,TX_state,State,48,Texas,27-4021,Photographers,3780.0,19.33,40210.0,17.67,36760.0,10.17,14.78,22.44,29.1,21150.0,30750.0,46680.0,60530.0,state_M2024_dl.xlsx
+2025,TX_state,State,48,Texas,27-4021,Photographers,4330.0,21.02,43720.0,19.85,41280.0,11.98,16.82,24.77,30.15,24910.0,34980.0,51510.0,62720.0,state_M2025_dl.xlsx

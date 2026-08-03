@@ -1,0 +1,166 @@
+The 2024 Economic Impact
+    of Music in Texas
+       January 2025
+
+
+
+
+               Produced by
+
+
+
+
+                 TXP, Inc.
+      1310 South 1st Street; Suite 105
+           Austin, Texas 78704
+              www.txp.com
+Overview
+Almost five years post-pandemic, music-related activity continues to grow, though ongoing
+shifts in the labor market see a lower volume of employment producing a greater level of
+overall activity. Specifically, the number of overall jobs directly associated with music in Texas
+has stagnated, albeit with the jobs that remain paying higher wages.
+
+For the first time, the impact of music on travel and tourism is included in the analysis, further
+completing the picture of the role that music plays in Texas’ economy.
+
+The return on investment associated with economic development is normally a longer-term
+payback, as external events tend to drive the fortunes of a regional economy in the near
+term. However, the outlook for Texas remains bright, as the strong influx of both firms and
+people in the wake of the pandemic remains a positive force. Much of Texas’ future will
+depend on what has brought so many here in the recent past: a highly capable workforce,
+innovation and entrepreneurship, clusters in knowledge industries, the presence of world-
+class research universities and other institutions of higher learning, and public policy that
+supports growth and development. Embedded in the above is the interrelationship between
+creativity, innovation, and quality of life that forms a substantial piece of the foundation of a
+modern economy. Music is an integral part of this equation; this brief analysis updates the
+impact of music on the state’s economy completed four times previously, using the same
+methodology and sources of data, as well as discussing broad areas of additional influence on
+the Texas economy.
+
+Inputs and Methodology Used in the Modeling Process
+Inputs
+Any effort to measure the role of music in a local economy involves classification decisions by
+the analyst, since music does not map directly to standard industrial classification patterns.
+For this study, there are three broad categories of activity that comprise the music sector:
+
+    1) Music business (which includes commercial music, music-related media, music
+       production, distribution and sales, music industry, tour and recording services,
+       performers, and music-related manufacturing, transportation, and retail activity
+       (including venues));
+    2) Music education (both primary and secondary); and
+    3) Music-related tourism.
+
+On the music business side of the equation, this analysis uses the most current edition of the
+Texas Music Directory produced by the Texas Music Office as the data source for job
+estimates. This information is then combined with wage data from the Quarterly Survey of
+
+
+
+                                                     Texas Music Economic Impact | January 2025   1
+Employment and Wages (QCEW) maintained by the Texas Workforce Commission to
+estimate annual wages for each segment within the broad categories. These annual earnings
+estimates are then crossed against data from the 2017 Economic Census to derive estimates
+of annual revenue by sector, allowing an overall assessment of the direct “footprint” of
+music business in Texas. Music education is based on job counts and QCEW data on wages.
+Meanwhile, data on music event ticket sales in Texas is combined with information on
+ancillary spending by attendees and shares of attendance by residence, including both
+overnight and day-visitors, to develop direct spending estimates. See Table 1 below for the
+results.
+
+Table 1: Texas Music Industry 2024 Direct “Footprint” ($Billions)
+
+                                                          Jobs              Earnings            Revenue/Sales
+   Music-Related Business                              71,385                 $4.039                     $11.327
+   Music-Related Education                             15,447                 $0.842                          N.A
+   Music-Related Tourism                                  N.A.                   N.A.                     $1.206
+
+
+Source: TXP, Inc. Note: Direct jobs, earnings, or top-line revenue/sales can be used individually as inputs into an
+input-output analysis outlined below.
+
+
+Economic Impact Methodology
+In an input-output analysis of new economic activity, it is useful to distinguish three types of
+expenditure effects: direct, indirect, and induced. Direct effects are production changes
+associated with the immediate effects or final demand changes. The payment made by an
+out-of-town visitor to a hotel operator visiting for a concert is an example of a direct effect,
+as would be the taxi fare the visitor paid to be transported into town from the airport.
+
+Indirect effects are production changes in backward-linked industries caused by the changing
+input needs of directly affected industries—typically, additional purchases to produce
+additional output. Satisfying the demand for an overnight stay will require the hotel
+operator to purchase additional cleaning supplies and services, for example, and the taxi
+driver will have to replace the gasoline consumed during the trip from the airport. These
+downstream purchases affect the economic status of other local merchants and workers.
+
+Induced effects are the changes in regional household spending patterns caused by changes
+in household income generated from the direct and indirect effects. Both the hotel operator
+and taxi driver experience increased income from the visitor’s stay, for example, as do the
+cleaning supplies outlet and the gas station proprietor. Induced effects capture the way in
+which this increased income is in turn spent in the local economy.
+
+
+
+
+                                                                 Texas Music Economic Impact | January 2025           2
+Figure 1: The Flow of Economic Impacts
+
+     Direct         +        Indirect          +     Induced            =            Total
+
+Once the ripple effects have been calculated, the results can be presented various ways.
+Three of the most common are “Output,” equivalent to sales; “Earnings,” which represents
+the compensation to employees/proprietors; and “Employment,” which refers to permanent,
+full-time jobs that have been created locally. The interdependence between different
+sectors of the economy is reflected in the concept of a “multiplier.” An output multiplier, for
+example, divides the total (direct, indirect and induced) effects of an initial spending injection
+by the value of that injection—i.e., the direct effect. The higher the multiplier, the greater
+the interdependence among different sectors of the economy.
+
+Results
+The ripple effects associated with the direct injection outlined in Table One collectively bring
+the total impact (including the direct effects) to almost 196,000 permanent jobs, $10.5 billion
+in earnings, and $31.7 billion in annual economic activity. The State of Texas also realizes
+approximately $564 million in tax revenue from these impacts.
+
+Table 2: Summary of Texas Music Industry 2024 Total Economic Impact ($Billions)
+                                        Jobs         Earnings    Revenue/Sales        TX Tax Rev.
+   Music-Related Business           145,855           $8.121             $24.706          $0.407
+   Music-Related Education            24,476          $1.510                $4.132        $0.076
+   Music-Related Tourism              25,648          $0.853                $2.827        $0.081
+   Total Annual                     195,979          $10.484             $31.655          $0.564
+Source: TXP, Inc.
+
+
+Conclusion
+The figures above show the important role that music plays in Texas’ economy, and the fact
+that it, in dollar terms, is at an all-time high. There are many factors that drive economic
+growth in Texas, with an exceptional range of activity and opportunity in music and the
+creative space clearly a major factor. Texas is a place that appreciates creativity and culture
+in a variety of forms, and its incredible diversity of the local scene undoubtedly serves to
+both attract and retain talented people. This in turn has a significant impact on business
+recruitment, retention, and expansion, as well as local entrepreneurship. Moreover, music is
+a crucial element of “Brand Texas” that draws visitors from across the globe, the impact of
+which this report documents for the first time. The creativity expressed through music is a
+fundamental comparative advantage for Texas—the goal remains to identify the key
+investments, policies, and regulatory changes necessary for sustainability and growth.
+
+
+                                                     Texas Music Economic Impact | January 2025     3
+Legal Disclaimer
+TXP reserves the right to make changes, corrections, and/or improvements at any time and
+without notice. In addition, TXP disclaims any and all liability for damages incurred directly or
+indirectly as a result of errors, omissions, or discrepancies. TXP disclaims any liability due to
+errors, omissions, or discrepancies made by third parties whose material TXP relied on in
+good faith to produce the report.
+
+Any statements involving matters of opinion or estimates, whether or not so expressly
+stated, are set forth as such and not as representations of fact, and no representation is
+made that such opinions or estimates will be realized. The information and expressions of
+opinion contained herein are subject to change without notice, and shall not, under any
+circumstances, create any implications that there has been no change or updates.
+
+
+
+
+                                                     Texas Music Economic Impact | January 2025   4
+

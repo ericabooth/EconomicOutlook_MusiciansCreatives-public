@@ -1,0 +1,637 @@
+% Technical appendix: methods, specifications, known limitations, and how to
+% reproduce every number. Written so an outside reader can rerun the analysis.
+\section{Technical appendix}
+\label{sec:appendix}
+
+This appendix records how to rerun the analysis, how the estimates and
+regressions are specified, and where the evidence runs out. Every method in
+this appendix names the Stata do-file that produced it, so a reader can open
+the file, read the code, and reproduce the number. All do-files sit in
+\texttt{03\_analysis/stata/} and the merged number ledger sits in
+\texttt{03\_analysis/out/canonical\_numbers.csv}.
+
+\subsection{Reproducing this study}
+
+The analysis folder is self-contained: a reader can copy it to another machine
+and rerun it without editing a path, because every path resolves relative to
+the project root, which the setup file \texttt{\_setup.do} locates by
+searching upward for a known sentinel file. Outside data files sit in
+\texttt{03\_analysis/data/} rather than at referenced absolute paths.
+Rebuilding the study from raw data takes three commands, run in order from
+the analysis folder.
+
+\begin{center}
+{\footnotesize
+\begin{tabular}{@{}B{4.2cm} P{12.6cm}@{}}
+\toprule
+\textbf{Step} & \textbf{Command} \\
+\midrule
+Run the descriptive modules & \texttt{cd 03\_analysis/stata \&\& stata-mp -b do run\_all.do} \\
+\rowrule
+Run the quasi-experimental module & \texttt{stata-mp -b do 70\_quasi\_experiments.do} \\
+\rowrule
+Build the study & \texttt{cd ../../05\_report \&\& make} \\
+\bottomrule
+\end{tabular}}
+\end{center}
+
+\texttt{run\_all.do} runs the seven descriptive modules that produce the
+figures and registered numbers in Sections~\ref{sec:earnings} through
+\ref{sec:state}. Those modules are, in order,
+\texttt{10\_pums\_earnings.do} for PUMS earnings,
+\texttt{20\_wages\_industry.do} for the payroll wage and industry series,
+\texttt{30\_venues.do} for the venue panel,
+\texttt{40\_city\_money.do} for the city funds,
+\texttt{50\_state\_national.do} for the state and national comparison,
+\texttt{60\_cost\_of\_living.do} for the cost-of-living series, and
+\texttt{80\_census\_microdata.do} for the 2022 music census and finishes by calling
+\texttt{build\_numbers.do}, so the number macros need no separate command.
+\texttt{run\_all.do} does not call the quasi-experimental module
+\texttt{70\_quasi\_experiments.do}, which is the sole source of every quantity
+behind the four designs in Sections~\ref{sec:venues} and \ref{sec:state}, so
+that module runs separately as the second step. Because
+\texttt{build\_numbers.do} merges whatever ledgers it finds on disk, skipping
+the second step produces a report that still compiles, using stale
+quasi-experimental numbers.
+
+Every quantity registered in the numbers ledger is quoted through a generated
+macro rather than a typed figure. A small number of figures quoted from named
+source documents, and rounded verbal descriptions of registered quantities,
+are typed in place and cited where they appear. Each analysis module writes
+its results to its own ledger, and \texttt{build\_numbers.do} merges those
+ledgers into the macro file the study reads. The merged ledger at
+\texttt{03\_analysis/out/canonical\_numbers.csv} lists every registered
+quantity with its value, its source file, and a \texttt{note} field recording
+the population, filter, weight and vintage behind it. A reader checking any
+number in this study can find it in that file and trace it to the module that
+produced it.
+
+\subsection{Inflation adjustment}
+
+All dollar figures are real, in 2025 dollars, converted with the U.S. Bureau
+of Labor Statistics Consumer Price Index for All Urban Consumers (series
+CUUR0000SA0, national, all items), and every figure subtitle states the base
+year.\footnote{Series documentation and monthly values at
+\url{https://www.bls.gov/cpi/}; this study pulls the series from the BLS
+Public Data API at \url{https://api.bls.gov/publicAPI/v2/timeseries/data/}.}
+Three kinds of figure are flagged nominal where they appear: a ratio of two
+same-year dollar figures, where deflation cancels; a figure quoted as its
+source originally published it; and award or excluded-filing totals whose
+dollars all fall inside one period.
+
+The Bureau of Labor Statistics never published a Consumer Price Index value
+for October 2025, because the federal funding lapse suspended
+collection.\footnote{The Bureau paused the October 2025 CPI collection during
+the fiscal-year 2026 government shutdown; the September and November values
+are published as scheduled. See BLS release schedule at
+\url{https://www.bls.gov/schedule/news_release/cpi.htm}.} This analysis
+interpolates that month from September and November and flags it in the data,
+so the 2025 annual average that deflates every dollar figure in this study
+rests on twelve months rather than eleven. The interpolation runs inside
+\texttt{60\_cost\_of\_living.do}.
+
+Austin has no local price index, as Section~\ref{sec:measurement} notes.
+Deflating by the national index is the only option available, and its effect
+on the estimates here is unknown in sign. The one cross-sectional price
+comparison that does exist puts Austin's all-items Regional Price Parity at
+\NColRppAllitemsAustin\ against a national 100, which says nothing about the
+rate at which Austin prices moved.\footnote{U.S. Bureau of Economic Analysis,
+Regional Price Parities by Metropolitan Statistical Area, 2024 vintage, at
+\url{https://www.bea.gov/data/prices-inflation/regional-price-parities-state-and-metro-area}.
+The Regional Price Parity indexes the price level in a metro against a
+national 100 in the same year, and its own documentation says it is not a
+time-series measure of local inflation.}
+
+\subsection{Survey estimates and their uncertainty}
+
+Microdata estimates, computed from individual survey records rather than from
+published tables, use the American Community Survey five-year Public Use
+Microdata Sample (PUMS) for Texas, 2020 to 2024, the newest five-year PUMS
+released as of retrieval.\footnote{U.S. Census Bureau, American Community
+Survey 2020--2024 five-year PUMS for Texas, released 5 March 2026, at
+\url{https://www2.census.gov/programs-surveys/acs/data/pums/2024/5-Year/csv_ptx.zip}.
+The ACS is the Bureau's ongoing household survey, and the PUMS is its
+individual-record release; it is the only public federal source that supports
+occupation-by-metro estimates for a workforce as small as Musicians and
+Singers because it pools the occupation across five years.} Dollar variables
+are adjusted first by the survey's own \texttt{ADJINC} income-adjustment
+factor, which places five survey years on a common basis, and then by the
+Consumer Price Index.
+
+Standard errors come from the Census Bureau's successive-difference
+replication method, the published approach for this file, which re-estimates
+each statistic on all 80 replicate weights (\texttt{PWGTP1} to
+\texttt{PWGTP80}) and takes the spread across those estimates as the
+error.\footnote{U.S. Census Bureau, \emph{PUMS Accuracy of the Data} technical
+document for the 2020--2024 five-year file, at
+\url{https://www2.census.gov/programs-surveys/acs/tech_docs/pums/accuracy/2020-2024AccuracyPUMS.pdf}.
+Treating microdata records as an independent sample would understate the true
+standard error substantially, because the ACS is a stratified cluster
+sample rather than a simple random sample.} Margins of error are reported at
+90 percent. The PUMS extractions and every survey estimate in this study run
+in \texttt{10\_pums\_earnings.do}.
+
+Two population definitions are used, and each is applied to both sides of
+every comparison it appears in; Section~\ref{sec:formulas} defines them and
+names which estimates use which. This study suppresses estimates resting on
+fewer than 50 unweighted records, the practice the Bureau recommends. The
+Austin musician cell has \NPumsAustinMusNPos\ unweighted person records,
+which supports the headline estimates reported here and does not support any
+further breakdown.
+
+\subsection{Regression specifications}
+
+\textbf{Conditional earnings gap.} This study regresses the natural logarithm
+of personal earnings on an indicator for music occupations by weighted least
+squares, controlling for age and age squared, sex, educational attainment,
+usual hours worked, weeks worked and metro fixed effects, among employed
+Texans aged 18 to 64 with positive earnings, with standard errors from the
+80 replicate weights. The coefficient is \NPumsRegMusicCoef\ (standard error
+\NPumsRegMusicSe), a difference of \NPumsRegMusicPctgap. The full table sits
+at \texttt{03\_analysis/out/tables/table\_earnings\_regression.csv} and the
+regression runs in \texttt{10\_pums\_earnings.do}.
+
+\textbf{Venue divergence.} A two-way fixed-effects regression of the log of
+real monthly receipts on a core-live-music indicator interacted with the
+post-March-2020 period, absorbing venue and year-month fixed effects and
+clustering standard errors by venue, gives \NVenueDidCoef\ (standard error
+\NVenueDidSe, p = \NVenueDidP) on \NVenueDidN\ venue-months. The event-study
+version replaces the single interaction with year-specific terms, omitting
+2019.\footnote{A full factorial interaction under two-way fixed effects
+leaves the term of interest collinear and the estimator drops it, so this
+study constructs the interaction as an explicit product variable. Requesting
+2019 as the base year is likewise not honoured when the fixed effects absorb
+the alternatives, so the year-by-treatment terms are built by hand with 2019
+omitted. Both fixes change the coefficients, which is why they are recorded
+here. Pre-2019 coefficients trend upward rather than staying flat, so the
+parallel-paths assumption does not hold cleanly and the design is
+descriptive.} The divergence regression runs in \texttt{30\_venues.do}.
+
+\textbf{Quasi-experimental designs.} Four designs appear in
+Sections~\ref{sec:venues} and \ref{sec:state}: an event study around federal
+relief awards, a difference-in-differences on the 2017 extended-hours pilot,
+an event study around the 2024 venue grants, and a distance-band test around
+the 2022 arena opening. For the two designs with the smallest treated groups
+(the extended-hours pilot and the 2024 venue grants), conventional
+cluster-robust standard errors are unreliable, so this study uses
+randomization inference as the primary test: the module reassigns treatment
+at random across the eligible venues several thousand times, and the exact
+p-value is the share of those placebo estimates at least as large as the
+observed one. The arena and federal relief designs report Wald tests on
+cluster-robust standard errors instead; the arena design's reference group
+is six venues, so its bands are imprecisely estimated and none is
+individually distinguishable from zero. All four designs are descriptive:
+selection into treatment is not random in any of them, and the relief design
+in particular selects on the severity of the shock by construction. All four
+designs run in \texttt{70\_quasi\_experiments.do}. Section~\ref{sec:formulas}
+below gathers the specification behind each design with every symbol defined.
+
+\subsection{Every formula in one place}
+\label{sec:formulas}
+
+The footnotes at each point of use give the specification behind each
+estimate. This subsection gathers all of them, so a reviewer can read the
+methods in one sitting instead of hunting through the sections. Nothing here
+is new: each block names the estimator, defines every symbol, names the
+estimation sample and the variance assumption, and says whether the quantity
+is descriptive or causal. Where a quantity appears in more than one section,
+this appendix writes it once here.
+
+\subsubsection*{Notation used throughout}
+
+Subscript \(i\) indexes a unit: a person in the survey blocks and a venue or
+permit location in the panel blocks. Subscript \(t\) indexes time: a month in
+the venue panel and a year elsewhere. \(C_y\) is the annual average of the
+national Consumer Price Index for All Urban Consumers in year \(y\), and
+\(d_y = C_{2025}/C_y\) is the factor that carries year \(y\) dollars to this
+study's 2025 base. \(w_i\) is a survey weight, \texttt{PWGTP} for persons and
+\texttt{WGTP} for households in the American Community Survey PUMS.
+\(\mathbf{1}(\cdot)\) equals one when the condition inside holds and zero
+otherwise. A hat marks an estimate.
+
+\subsubsection*{Price adjustment}
+
+Nominal dollars become real dollars by \(x^{\mathrm{real}}_y = x_y \times
+d_y\). The 2025 annual average uses an interpolated October, the average of
+September and November, because the federal funding lapse suspended
+collection that month. A ratio of two same-year dollar figures is left
+nominal on purpose, because deflating both sides by the same \(d_y\) leaves
+the ratio unchanged. The deflator ledger \texttt{cpi\_annual.dta} is built
+inside \texttt{60\_cost\_of\_living.do} from the BLS Public Data API.
+
+Microdata dollars take an extra step first. For person \(i\) the real value
+is \(y_i = Y_i \times (\mathrm{ADJINC}_i/10^{6}) \times d_{2024}\), where
+\(Y_i\) is the amount as reported and \(\mathrm{ADJINC}_i\) is the survey's
+own income adjustment factor, published with six implied decimals, which
+restates all five survey years on a common 2024
+basis.\footnote{Documentation at
+\url{https://www2.census.gov/programs-surveys/acs/tech_docs/pums/2020-2024_PUMS_README.pdf}
+(ADJINC is section 3.3 of the readme).} Housing dollars use
+\texttt{ADJHSG} in the same position. No year-specific deflator is merged
+on, because the survey factor has already removed the inflation inside the
+2020 to 2024 window and a second one would remove it twice.
+
+\subsubsection*{Weighted descriptive estimates and their uncertainty}
+
+A weighted median is
+\(\hat\theta_{0.5} = \inf\{\,y : \sum_i w_i \mathbf{1}(y_i \le y)
+   \ge 0.5 \sum_i w_i\,\}\),
+the smallest observed value at which accumulated weight reaches half the
+total, with adjacent order statistics averaged when the accumulated weight
+lands exactly on half. A weighted share of a group \(G\) is
+\(\hat p = \sum_{i \in G} w_i a_i \big/ \sum_{i \in G} w_i\), where \(a_i\)
+is one when the record has the attribute being counted. Both are descriptive
+population estimates.
+
+Sampling error comes from successive-difference replication (SDR), the
+published method for this file:
+\[
+\widehat{\operatorname{Var}}(\hat\theta)
+  = \frac{4}{80}\sum_{r=1}^{80}\bigl(\hat\theta_r - \hat\theta\bigr)^{2},
+\qquad
+\mathrm{MOE}_{90} = 1.645\,\sqrt{\widehat{\operatorname{Var}}(\hat\theta)},
+\]
+where \(\hat\theta\) uses the full weight and \(\hat\theta_r\) the \(r\)th
+replicate weight, \texttt{PWGTP1} to \texttt{PWGTP80} for persons and
+\texttt{WGTP1} to \texttt{WGTP80} for households.\footnote{The constant
+\(4/80\) is fixed by the Bureau's replicate design; the derivation is in
+\emph{PUMS Accuracy of the Data}, section 5, cited above.} Deviations are
+taken around the full-sample estimate rather than the replicate mean, the
+convention Stata labels \texttt{mse}. A few replicate weight cells are
+slightly negative, which the Bureau permits; this study floors the weight
+at zero inside percentile calculations only, because a weighted percentile
+is undefined with negative weights. For a difference between two
+independent estimates the combined margin is
+\(\mathrm{MOE}_{A-B} = \sqrt{\mathrm{MOE}_A^{2} + \mathrm{MOE}_B^{2}}\).
+
+Two population definitions are used, and each is applied to both sides of
+every comparison it appears in. The employed base is Texas residents aged
+18 to 64 in work (employment status \texttt{ESR} in \{1,2,4,5\}). The
+positive-earnings base adds the requirement that personal earnings exceed
+zero. Medians, the self-employment share, coverage rates and the regression
+run on the bases named in their own footnotes; the earnings-threshold
+shares run on the employed base, so that people reporting zero or negative
+earnings stay in the denominator. No estimate resting on fewer than 50
+unweighted records is published. All weighted descriptive estimates run in
+\texttt{10\_pums\_earnings.do}.
+
+\subsubsection*{Conditional earnings gap}
+
+\[
+\ln y_i = \alpha + \beta\,\mathrm{music}_i
+  + \gamma_1 \mathrm{age}_i + \gamma_2 \mathrm{age}_i^{2}
+  + \gamma_3 \mathrm{female}_i
+  + \sum_{k=2}^{5}\delta_k\,\mathrm{educ}_{ki}
+  + \gamma_4 \mathrm{hours}_i + \gamma_5 \mathrm{weeks}_i
+  + \sum_{m}\lambda_m\,\mathrm{metro}_{mi} + \varepsilon_i
+\]
+
+Every symbol appears in the footnote at the point of use in
+Section~\ref{sec:earnings}. Estimation is by weighted least squares with the
+person weight, over the \NPumsRegN\ employed Texans aged 18 to 64 with
+positive earnings, with standard errors from the 80 replicate weights
+rather than from an independence assumption. A log-point coefficient
+converts to a percentage difference as \(100\,(e^{\hat\beta} - 1)\), and the
+same transformation applied to \(\hat\beta \pm 1.96\,\mathrm{se}(\hat\beta)\)
+gives the 95 percent interval. Two nested specifications, metro fixed
+effects alone and metro plus demographics, appear in the exported table
+beside the one quoted in the text. The estimate is a descriptive conditional
+difference, not the earnings cost of choosing music: hours and weeks are
+themselves outcomes of the occupation, so controlling for them removes part
+of what is being measured and pushes the coefficient toward zero. The
+regression runs in \texttt{10\_pums\_earnings.do}.
+
+\subsubsection*{Index numbers, ratios and per-resident measures}
+
+An index rebases a series on a chosen year or month,
+\(I_{s,t} = 100 \times X_{s,t}/X_{s,t_0}\). Three bases appear in this
+study, each chosen for what its figure compares: each series against its
+own first available year, for payroll jobs against nonemployer businesses;
+each metro against its own January 2015, for real rent; and every group
+against 2019, for venue receipts. An index carries no unit and no count,
+which is why two indexed panels can be compared for direction and never
+added together. The index constructions run in
+\texttt{20\_wages\_industry.do} (jobs against nonemployer),
+\texttt{60\_cost\_of\_living.do} (metro rent) and \texttt{30\_venues.do}
+(receipts).
+
+An endpoint percentage change is \(100\,(X_T/X_0 - 1)\), a total change
+across the whole span rather than an annual rate.
+
+The hours-of-work ratio is \(h_{o,y} = F_y / w_{o,y}\), monthly Fair Market
+Rent over the median hourly wage for occupation group \(o\), matched within
+year and left in nominal dollars, because
+\((d_y F_y)/(d_y w_{o,y}) = F_y / w_{o,y}\). Fair Market Rent is the U.S.
+Department of Housing and Urban Development benchmark rent used to set
+voucher payment standards, published annually by HUD metro area at
+\url{https://www.huduser.gov/portal/datasets/fmr.html}. The wages come from
+the BLS Occupational Employment and Wage Statistics program, described
+below. The ratio is computed in \texttt{60\_cost\_of\_living.do}.
+
+The rent share of earnings is \(s = 100 \times 12\bar{F}/\tilde{y}\), the
+annualised average Fair Market Rent over the five fiscal years the microdata
+pool, divided by the weighted median earnings of Austin musicians, both in
+2025 dollars.
+
+Businesses per 10,000 residents is \(10^{4} \times E_{c,y}/N_{c,y}\), and
+receipts per business is \(\bar{r}_{c,y} = R^{\mathrm{real}}_{c,y}/E_{c,y}\),
+an arithmetic mean with no distribution published behind it. Both use the
+Census Bureau's Nonemployer Statistics for the numerator, which reports
+counts of establishments with no paid employees and no covered payroll, and
+the Bureau's Vintage 2025 population estimates for the
+denominator.\footnote{Nonemployer Statistics documentation at
+\url{https://www.census.gov/programs-surveys/nonemployer-statistics.html};
+Vintage 2025 state and county estimates at
+\url{https://www.census.gov/programs-surveys/popest.html}. This branch of
+the analysis lives in \texttt{20\_wages\_industry.do}.}
+
+Per-resident state support is computed twice from the same denominator,
+\(a_s = A_s\,d_{y(A_s)}/N_s\) for the authorised amount and
+\(b_s = B_s\,d_{y(B_s)}/N_s\) for the amount disbursed, where \(N_s\) is
+resident population on 1 July 2025 from the Census Bureau's Vintage 2025
+national estimates. An authorisation is a statutory ceiling and a
+disbursement is money that left the treasury, and the two can differ by the
+whole amount. Both computations run in \texttt{50\_state\_national.do}.
+
+Regional Price Parity gaps are
+\(g_m = \mathrm{RPP}^{\mathrm{hous}}_m - \mathrm{RPP}^{\mathrm{all}}_m\),
+and Consumer Price Index gaps are differences between two series rebased on
+the same year. Both are in index points and neither is a percentage. Both
+sit in \texttt{60\_cost\_of\_living.do}.
+
+Every measure in this block is an arithmetic ratio of published quantities,
+so none carries a sampling error of its own, though the rent share inherits
+the margin of error of the earnings median in its denominator.
+
+\subsubsection*{Panel regressions on venue receipts}
+
+The curated panel of \NVenuePanelIsCurated\ Austin live-music rooms supplies
+the treated group. The comparison group in the divergence and event-study
+designs is every other mixed-beverage permit location in Travis County and
+the City of Austin, which is why those two regressions run on \NVenueDidN\
+venue-months rather than on the panel's own \NQuasiPanelVenueMonths. The
+four quasi-experimental designs run inside the panel and its neighbours
+instead.
+
+The venue designs below share an outcome and a fixed-effects structure. The
+outcome is \(\ln R^{\mathrm{real}}_{it}\), the log of venue \(i\)'s
+mixed-beverage receipts in month \(t\) in 2025 dollars, taken from Texas
+Comptroller Mixed Beverage Gross Receipts (dataset \texttt{naix-2893}) at
+\url{https://data.texas.gov/dataset/Mixed-Beverage-Gross-Receipts/naix-2893}.
+\(\alpha_i\) is a venue fixed effect absorbing everything constant about the
+room, and \(\tau_t\) is a year-month fixed effect absorbing everything
+common to the market in that month. Standard errors are clustered by venue
+throughout, which allows one room's months to be correlated with one another
+and treats venues as the independent units. Zero-receipt months leave a log
+specification, so every log estimate describes venues conditional on
+trading that month. All venue regressions run in \texttt{30\_venues.do}
+(divergence and event study) and \texttt{70\_quasi\_experiments.do}
+(federal relief, extended-hours pilot, 2024 venue grants and arena
+opening).
+
+\begin{itemize}
+\item \textbf{Divergence, core tier against the rest of the market.}
+      \(\ln R^{\mathrm{real}}_{it} = \alpha_i + \tau_t
+        + \beta(\mathrm{Core}_i \times \mathrm{Post}_t) + \varepsilon_{it}\),
+      with \(\mathrm{Post}_t\) equal to one from March 2020, over
+      \NVenueDidN\ from January 2013 to December 2025. The comparison group
+      is other mixed-beverage permit locations in Travis County and Austin;
+      the panel's live-music-adjacent tier is dropped from the estimation
+      sample rather than coded zero, because those rooms programme live
+      music intermittently and belong to neither group.
+\item \textbf{Event study.} The same equation with
+      \(\sum_{y \neq 2019}\beta_y(\mathbf{1}\{\mathrm{year}(t)=y\}
+        \times \mathrm{Core}_i)\) in place of the single interaction.
+\item \textbf{Federal relief.} Half-year blocks relative to each venue's own
+      award month, \(\mathrm{block}_{it} = \lfloor (t-a_i)/6 \rfloor\),
+      clipped at nine blocks before and eight after, with the block 30 to
+      25 months before the award omitted. A second version replaces the
+      recipient indicator with award intensity, the award divided by mean
+      monthly 2019 receipts at the same venue, so one unit is one month of
+      pre-pandemic revenue. Award data come from the U.S. Small Business
+      Administration's Shuttered Venue Operators Grant awards file (awards
+      as of 5 July 2022) at
+      \url{https://data.sba.gov/sites/default/files/distribution/SBA-ODA-2022-09-001/awards-as-of-7-5-22.xlsx}.
+\item \textbf{Extended-hours pilot.}
+      \(\mathrm{Pilot}_i \times W_t\) over January 2015 to December 2019,
+      with a half-year event study on a 2016 second-half base and a variant
+      adding venue-by-month-of-year fixed effects, which absorb the
+      seasonality the two groups do not share. \(W_t\) equals one during
+      the pilot's operating window on Red River.
+\item \textbf{Venue grants.} \(\mathrm{Grant}_i \times \mathrm{Post2024}_t\)
+      over January 2018 to December 2025, with an annual event study on a
+      2023 base. The grant set comes from the City of Austin's fiscal 2024
+      Live Music Fund awardee list at
+      \url{https://austin.widen.net/content/bpzuacfkk8/pdf/FY24-AwardeeList_Austin-Live-Music-Fund.pdf}.
+\item \textbf{Arena opening.} Three distance-band interactions with the
+      post-April-2022 period, venues more than four miles away omitted, and
+      the pandemic window dropped from both sides. Straight-line distance
+      comes from the great-circle formula
+      \[
+      D = 2\rho\arcsin\sqrt{\sin^{2}(\Delta\phi/2)
+        + \cos\phi_1\cos\phi_2\sin^{2}(\Delta\lambda/2)},
+      \]
+      with \(\phi\) latitude, \(\lambda\) longitude, \(\Delta\) the
+      difference between venue and arena, and \(\rho\) the Earth's radius
+      in miles.
+\end{itemize}
+
+Interactions are constructed as explicit product variables and base periods
+are dropped by hand throughout. Under two-way fixed effects a factorial
+interaction leaves the term of interest collinear and the estimator drops
+it, and a requested base year is not honoured once the fixed effects
+absorb the alternatives, which renormalises an event study onto whichever
+level the estimator happened to drop.
+
+The exported venue table carries a fourth column that replaces the log with
+the inverse hyperbolic sine,
+\[
+\operatorname{asinh}(R) = \ln\bigl(R + \sqrt{R^{2}+1}\bigr),
+\]
+which behaves like a logarithm at large values and is defined at zero, so
+months when a room reported no receipts stay in the sample. That column
+answers a different question from the log column, which conditions on
+trading, and its coefficient is not scale-free: rescaling the currency
+changes its size, so a reader cannot read it as a percentage. No number
+quoted in this study comes from it, and the column stays in the table
+because dropping zero months is the log specification's main limitation and
+a reader should be able to see what happens without that drop.
+
+Joint tests reported as p-values are Wald tests. The parallel-paths checks
+test that the pre-treatment event-study coefficients are jointly zero, and
+the arena test is \(H_0: \beta_1 = \beta_2 = \beta_3\), which asks whether
+the pattern varies with distance at all rather than whether any single band
+moved.
+
+Every venue design is descriptive. Nothing in them is randomised, no policy
+switches on for one group and not another at a clean date, and the relief
+design selects on the severity of the shock by construction.
+
+\subsubsection*{Randomization inference}
+
+Where the treated group is small, cluster-robust standard errors understate
+the true sampling variability, so the exact p-value comes from permuting
+the treatment assignment:
+\[
+p = \frac{1 + \#\{\,r \le R : |\hat\beta_r| \ge |\hat\beta|\,\}}{R + 1},
+\]
+where \(\hat\beta\) is the estimate under the assignment that actually
+happened, \(\hat\beta_r\) is the estimate from refitting the same
+regression after reassigning treatment at random to the same number of
+units, drawn without replacement from an eligible pool, and \(R\) is the
+number of draws: 5{,}000 for the extended-hours pilot and 2{,}000 for the
+venue grants. Treatment dates are held fixed and only the assignment moves.
+Adding one to numerator and denominator counts the assignment that happened
+among the possibilities, which is what keeps the test exact rather than
+approximate.\footnote{The derivation is in Fisher's \emph{Design of
+Experiments}, 1935, chapter 2, and the small-sample properties of the
+adjustment are in Phipson and Smyth, ``Permutation p-values should never be
+zero,'' \emph{Statistical Applications in Genetics and Molecular Biology}
+9(1), 2010.} The pool is restricted to venues whose filing coverage matches
+the treated group's, so a placebo assignment lands on the same kind of unit
+as the real one. The spread of the placebo estimates also bounds what the
+design could have detected, and the report quotes that bound where it is
+informative. The randomization loop runs in
+\texttt{70\_quasi\_experiments.do}.
+
+\subsubsection*{Association tests on the 2022 census file}
+
+The 2022 Greater Austin Music Census carries no design weights, because it
+is a self-selected online instrument fielded through community mailing
+lists between 15 July and 12 September 2022 and not a probability sample,
+so every statistic in that section is an unweighted count over a stated
+denominator, \(\hat p = 100 \times n_{\mathrm{yes}}/n_{\mathrm{answered}}\),
+and no margin of error exists for any of them.\footnote{Sound Music Cities
+and the City of Austin Music \& Entertainment Division, \emph{2022 Greater
+Austin Music Census}, summary report at
+\url{https://www.austinmusiccensus.org/s/2022-Greater-Austin-Music-Census-SUMMARY-REPORT-v13-optimized.pdf};
+the respondent-level microdata sit on the City of Austin's open data portal
+as dataset \texttt{an3p-3yqx} at \url{https://data.austintexas.gov/}.} The
+census-file estimates all run in \texttt{80\_census\_microdata.do}.
+
+Independence between two survey items is tested with Pearson's chi-squared,
+\(X^{2} = \sum_j \sum_k (O_{jk}-E_{jk})^{2}/E_{jk}\) with
+\(E_{jk} = R_j C_k/N\), on \((J-1)(K-1)\) degrees of freedom, where
+\(O_{jk}\) is the observed count in row \(j\) and column \(k\), \(R_j\) and
+\(C_k\) are the row and column totals, and \(N\) is the number answering
+both items.
+
+The retention regression is a logit,
+\[
+\ln\frac{\Pr(\mathrm{stay}_i = 1)}{1-\Pr(\mathrm{stay}_i = 1)}
+  = \alpha + \sum_s \beta_s\,\mathrm{sector}_{si}
+  + \sum_e \gamma_e\,\mathrm{exper}_{ei}
+  + \sum_h \delta_h\,\mathrm{tenure}_{hi}
+  + \theta\,\mathrm{insured}_i ,
+\]
+estimated by maximum likelihood on the \NCensusLogitN\ respondents who
+answered every item in the equation, with the quoted quantity the odds
+ratio \(e^{\hat\delta_{\mathrm{renter}}}\). An odds ratio is not a ratio of
+probabilities and sits further from one than the probability ratio does
+when the outcome is common, as it is here. Three nested models appear in
+the exported table. The logit runs in \texttt{80\_census\_microdata.do}.
+
+The published spending headline and the per-respondent total are two
+different calculations. The headline is \(\sum_{k=1}^{8}\bar{x}_k\), a sum
+of eight category means each taken over the respondents who answered that
+category. The per-respondent figure is
+\(\tilde{x} = \operatorname{median}_{i \in S}\bigl(\sum_{k=1}^{8}x_{ik}\bigr)\)
+over \(S = \bigcap_k S_k\), the respondents who answered every category,
+so each figure in the sum belongs to one person.
+
+Both the tests and the logit assume a simple random sample, which a
+self-selected online survey is not, so they describe which characteristics
+separate respondents from one another and support no inference to the
+Austin music workforce.
+
+\subsection{The venue panel}
+
+The panel matches Texas Comptroller Mixed Beverage Gross Receipts (dataset
+\texttt{naix-2893}) to named Austin venues by location address and taxpayer
+name, following venues through changes of owner and legal name, and covers
+\NVenuePanelIsCurated\ rooms monthly from January 2007 to June
+2026.\footnote{Comptroller portal at
+\url{https://data.texas.gov/dataset/Mixed-Beverage-Gross-Receipts/naix-2893};
+the file records every mixed-beverage permit holder's monthly gross
+receipts, cover-charge receipts (unreliable before roughly 2022 because of
+a reporting change), and permit status. The matching runs in
+\texttt{30\_venues.do} and uses a curated venue list at
+\texttt{01\_evidence/08\_venues\_ecosystem/venue\_match\_list.csv}.} Four
+limitations bound what the panel can show.
+
+\begin{itemize}
+\item It measures alcohol sales, not music activity, and nothing in it
+      records what performers were paid.
+\item It is curated, not a census, and over-represents nameable rooms in
+      the central city, particularly Red River, East Austin and South
+      Congress.
+\item It omits venues without a liquor permit, which removes several
+      well-known listening rooms (Cactus Cafe, Meanwhile Brewing, Carousel
+      Lounge, Bass Concert Hall, Central Presbyterian) from the panel.
+\item Festival companies file under venue-linked names. The largest such
+      filing is more than three hundred times its venue's median month, and
+      the ten excluded venue-months are worth
+      \NVenueFestivalDollarsExcluded\ in nominal dollars in total.\footnote{Two modules
+      apply slightly different exclusion rules, one dropping the flagged
+      extreme filings and the other a wider set. Testing the difference
+      showed it does not matter: the core-tier change from 2019 to 2025 is
+      identical under both rules. The cover-charge field is separately
+      unusable before about 2022 because of a reporting change, so this
+      study does not use it.}
+\end{itemize}
+
+\subsection{Known limitations}
+
+\begin{itemize}
+\item \textbf{No current representative measurement of Austin musician
+      earnings exists.} The survey estimates in this study are the best
+      available and rest on \NPumsAustinMusNPos\ Austin records pooled over
+      five years of the American Community Survey PUMS.
+\item \textbf{The federal wage survey excludes the self-employed.} The
+      Bureau of Labor Statistics Occupational Employment and Wage
+      Statistics (OEWS) program is a semi-annual establishment survey; it
+      records the wage of every worker on a respondent establishment's
+      payroll and records nothing for the self-employed, who fall outside
+      the sampling frame.\footnote{OEWS program documentation at
+      \url{https://www.bls.gov/oes/oes_ques.htm}. The Bureau also does not
+      publish an annual musician wage for any city or year because the work
+      is too irregular to annualise from an hourly rate.} Self-employed
+      workers are \NPumsAustinMusSelfemp\ (\NPumsAustinMusSelfempMoe) of
+      Austin musicians in the ACS PUMS, so even at the low end of that
+      margin every figure drawn from OEWS describes a minority of the
+      occupation.
+\item \textbf{The 2022 Greater Austin Music Census has no design weights}
+      and is a self-selected online sample, so its percentages describe
+      respondents only and have no margins of error; a probability-sample
+      benchmark for the Austin music workforce does not exist.
+\item \textbf{The Arts and Cultural Production Satellite Account has no
+      metro detail and will not be updated after 2023.} The Bureau of
+      Economic Analysis announced in February 2026 that the April 2025
+      release is the final regular annual release.\footnote{BEA news
+      release 25-13, at
+      \url{https://www.bea.gov/data/special-topics/arts-and-culture}.}
+\item \textbf{Metro groupings for federal Shuttered Venue Operators Grant
+      relief} are built from recipient city names rather than official
+      metropolitan-statistical-area boundaries and are approximate.
+\item \textbf{One award document does not reconcile with itself in three
+      places}, and a second disagrees with press reporting by one award.
+      This study uses each document's stated headline totals rather than
+      re-tallying its line items.
+\item \textbf{Records the city and the state hold but do not publish}:
+      applicant demographics for the Austin Live Music Fund, the recipient
+      list for the Texas Music Incubator Rebate Program, and the fund's
+      audited fund-balance schedule. Section~\ref{sec:next} sets out how a
+      requester could obtain them under the Texas Public Information Act
+      (Texas Government Code Chapter 552) or the City of Austin's
+      equivalent process.
+\end{itemize}
+
+\subsection{Software}
+
+The analysis runs in Stata 19 and uses these user-written commands:
+\texttt{reghdfe} and \texttt{ftools} for high-dimensional fixed effects,
+\texttt{estout} for tables, \texttt{spmap} and \texttt{shp2dta} for the map,
+and \texttt{gtools}, \texttt{palettes}, \texttt{colrspace} and
+\texttt{grstyle} for data handling and figure styling. The project bundles
+all of them in \texttt{03\_analysis/stata/ado/}, so no package installation
+is needed, and \XeLaTeX{} typesets the document.

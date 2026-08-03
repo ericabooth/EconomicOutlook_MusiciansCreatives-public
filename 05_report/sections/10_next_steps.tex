@@ -1,0 +1,145 @@
+% Section 10: what would extend this work, plus the design for an interactive
+% scenario tool. Kept to about one page.
+\section{Extending this work}
+\label{sec:next}
+
+Better measurement would close the gaps this analysis ran into, the evidence
+base now assembled would support analyses this study could not run, and a small
+tool would let readers test the findings under their own assumptions.
+
+\subsection*{Additions that would close measurement gaps}
+
+\begin{itemize}
+\item \textbf{Add an earnings module to the next Austin music survey.} Five
+      questions asked consistently every two years would rebuild the series
+      that lapsed after the 2014 Austin Music Census (whose income items
+      covered calendar 2013): gross income from music, share of total income
+      from music, number of paid performances, whether the respondent holds
+      non-music work, and health-coverage source.\footnote{Both Austin music
+      censuses are self-selected online instruments (2014 n=3{,}968; 2022
+      n=2{,}260), so a restored earnings series would describe respondents
+      rather than the Austin music workforce; a probability-sample benchmark
+      for that workforce does not exist. Sources: Titan Music Group,
+      \emph{The Austin Music Census}, 2015, at
+      \url{https://austin.widen.net/content/om7zqn1qbx/pdf/Austin_Music_Census_Interactive_PDF_53115.pdf};
+      Sound Music Cities and the City of Austin Music \& Entertainment
+      Division, \emph{2022 Greater Austin Music Census}, at
+      \url{https://www.austinmusiccensus.org/s/2022-Greater-Austin-Music-Census-SUMMARY-REPORT-v13-optimized.pdf}.}
+\item \textbf{Request the administrative records that agencies collect but do
+      not publish.} This study stops short in places because the agencies
+      holding the records have not released them: applicant demographics for
+      Austin's Live Music Fund, the recipient list for the Texas Music
+      Incubator Rebate Program at the Governor's office, and the audited
+      fund-balance schedule for Austin's cultural funds.\footnote{A requester
+      can obtain each of these through a formal public information request
+      under the Texas Public Information Act (Texas Government Code
+      Chapter 552, at
+      \url{https://statutes.capitol.texas.gov/Docs/GV/htm/GV.552.htm}) or the
+      City of Austin's equivalent process. This study filed no such requests,
+      because the statutory response and Attorney General review windows would
+      have delayed publication, and a follow-up round remains the most direct
+      way to close these three gaps. Rider 40 to the Governor's office in the
+      2026--27 General Appropriations Act requires the office to report
+      film-incentive awards recipient by recipient to the Legislative Budget
+      Board (the Legislature's fiscal research office) twice a year, and no
+      parallel rider covers the music rebate, so the rebate's recipient list
+      stays unpublished unless someone asks for it.}
+\item \textbf{Track paid performance slots rather than venue names.} Venue
+      addresses recycle as one operator replaces another, so counting names
+      overstates what closed. Capacity and the number of paid performance
+      opportunities per month measure what a working musician actually faces.
+\item \textbf{Extend the venue panel to beer-and-wine rooms.} The Texas
+      Comptroller's mixed-beverage tax file omits venues without a liquor
+      permit, which removes several well-known listening rooms from the panel
+      (Cactus Cafe, Meanwhile Brewing, the Carousel Lounge) even when they
+      programme live music regularly.\footnote{The Comptroller's mixed-beverage
+      gross-receipts file (dataset \texttt{naix-2893} on the Texas Open Data
+      Portal, at
+      \url{https://data.texas.gov/dataset/Mixed-Beverage-Gross-Receipts/naix-2893})
+      covers only holders of a mixed-beverage (liquor) permit. Rooms operating
+      on a beer-and-wine permit are reported through a separate Comptroller
+      tax file that a follow-up round could join to the same venue list.}
+      A join on permit type would recover the beer-and-wine rooms. Rooms with
+      no separable alcohol permit, and rooms folded into a hotel permit, sit
+      outside any alcohol-tax file and would need a different source, such as
+      ticketing or sound-permit records.
+\end{itemize}
+
+\subsection*{Analyses this evidence base would support}
+
+\begin{itemize}
+\item \textbf{Link venue closures to property records.} Matching this study's
+      closure timeline against Travis Central Appraisal District parcel and
+      sale records would separate rent pressure from ownership transfer and
+      redevelopment, which the news record conflates.\footnote{The Travis
+      Central Appraisal District publishes parcel-level records at
+      \url{https://www.traviscad.org/}, with owner name, parcel value and
+      sale history for every real-property account in Travis County.}
+\item \textbf{Follow the cohort rather than the occupation.} Longitudinal
+      earnings records, such as the Census Bureau's Longitudinal
+      Employer-Household Dynamics program (LEHD, the state unemployment
+      insurance records the Bureau assembles into a national worker panel),
+      would show whether musicians leave music, leave Austin, or add non-music
+      work. Those three outcomes look identical in the cross-sectional
+      microdata used here.\footnote{Public LEHD tabulations are at
+      \url{https://lehd.ces.census.gov/}; microdata access requires an
+      approved Federal Statistical Research Data Center project.}
+\item \textbf{Compare Austin against a matched set of metros} on the same
+      federal series used here, to separate a music-specific pattern from
+      what happens to self-employed workers in any fast-growing metro.
+\end{itemize}
+
+\subsection*{A scenario tool for non-technical readers}
+
+This study prints one set of numbers, and readers will want to vary them. A
+small interactive tool with the four controls below would let a council
+member, a state staffer, or a reporter test how the measured trends play out
+under different assumptions.
+
+\begin{center}
+\footnotesize
+\begin{tabular}{@{}B{2.9cm} P{7.2cm} P{5.5cm}@{}}
+\toprule
+\textbf{Control} & \textbf{What the user adjusts} & \textbf{What updates on screen} \\
+\midrule
+Venue revenue trend & The annual real change in core live-music venue receipts,
+from continued decline through stabilisation to renewed growth &
+Projected count of core live-music rooms and total real receipts to 2032, with
+the historical series drawn behind the projection \\
+\rowrule
+Public support level & The Live Music Fund's share of hotel-tax revenue, and
+the split between musician grants and venue grants &
+Dollars available, grants per applicant at current award sizes, and the share
+of the estimated musician population reached \\
+\rowrule
+Housing costs & Austin market rent growth, from the recent decline through a
+return to the 2015 to 2023 pace &
+The market rent index and, separately, hours of work per month of Fair Market
+Rent (the U.S. Department of Housing and Urban Development benchmark used to
+set voucher payment standards) at the payroll musician wage, which covers
+payroll jobs only. The two rent series moved in opposite directions after
+2023, as Section~\ref{sec:costs} shows, so the panel would have to display
+both \\
+\rowrule
+State program design & Whether the state rebate stays tied to alcohol tax
+remitted or is tied instead to documented artist payments &
+Illustrative redistribution across venue sizes, showing which venues gain and
+which lose under each rule \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{3pt}
+{\footnotesize Whoever builds such a tool would keep it honest by drawing
+every default from the measured series here, by drawing projections in a
+different line style from observed data and labelling them assumptions, and
+by saying plainly that the fourth control illustrates a design tradeoff and
+predicts no legislative outcome. A static web page with those series embedded
+as a small data file is enough for the historical series, which are already
+registered in this study's numbers ledger at
+\texttt{03\_analysis/out/canonical\_numbers.csv}. Two controls would need
+code this study does not have: a projection rule behind the venue trend, and
+an illustrative redistribution model behind the state-design control, which
+has no measured artist-payment data to rest on.
+Whether or not anyone builds it, each item in this section would let a later
+analyst replace one of this study's inferences with a measurement.}

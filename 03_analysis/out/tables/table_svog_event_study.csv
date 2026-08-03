@@ -1,0 +1,130 @@
+="Receipts around a federal shuttered-venue relief award, Austin panel venues"
+
+="",="(1)",="(2)",="(3)",="(4)",="(5)"
+="",="Log real monthly receipts, 2025 dollars",="Log real monthly receipts, 2025 dollars",="Log real monthly receipts, 2025 dollars",="Log real monthly receipts, 2025 dollars",="Log real monthly receipts, 2025 dollars"
+
+="Award month onward x SVOG recipient",="0.0129",="",="",="",=""
+="",="(0.1126)",="",="",="",=""
+
+="Two or more years after the award x SVOG recipient",="",="-0.0434",="",="",=""
+="",="",="(0.1495)",="",="",=""
+
+="Award month onward x award in months of 2019 revenue",="",="",="-0.0029",="",=""
+="",="",="",="(0.0091)",="",=""
+
+="SVOG recipient x half-year block -9",="",="",="",="-0.0192",=""
+="",="",="",="",="(0.0772)",=""
+
+="SVOG recipient x half-year block -8",="",="",="",="-0.0539",=""
+="",="",="",="",="(0.0750)",=""
+
+="SVOG recipient x half-year block -7",="",="",="",="-0.0175",=""
+="",="",="",="",="(0.0714)",=""
+
+="SVOG recipient x half-year block -6",="",="",="",="-0.0143",=""
+="",="",="",="",="(0.0686)",=""
+
+="SVOG recipient x half-year block -4",="",="",="",="-0.0717",=""
+="",="",="",="",="(0.0432)",=""
+
+="SVOG recipient x half-year block -3",="",="",="",="-0.1981",=""
+="",="",="",="",="(0.1393)",=""
+
+="SVOG recipient x half-year block -2",="",="",="",="-0.5593",=""
+="",="",="",="",="(0.3375)",=""
+
+="SVOG recipient x half-year block -1",="",="",="",="-0.4953***",=""
+="",="",="",="",="(0.1873)",=""
+
+="SVOG recipient x half-year block 0",="",="",="",="-0.2104",=""
+="",="",="",="",="(0.1389)",=""
+
+="SVOG recipient x half-year block 1",="",="",="",="-0.1769",=""
+="",="",="",="",="(0.1331)",=""
+
+="SVOG recipient x half-year block 2",="",="",="",="-0.1468",=""
+="",="",="",="",="(0.1158)",=""
+
+="SVOG recipient x half-year block 3",="",="",="",="-0.1166",=""
+="",="",="",="",="(0.1267)",=""
+
+="SVOG recipient x half-year block 4",="",="",="",="-0.0532",=""
+="",="",="",="",="(0.1286)",=""
+
+="SVOG recipient x half-year block 5",="",="",="",="-0.0038",=""
+="",="",="",="",="(0.1334)",=""
+
+="SVOG recipient x half-year block 6",="",="",="",="-0.1031",=""
+="",="",="",="",="(0.1466)",=""
+
+="SVOG recipient x half-year block 7",="",="",="",="-0.0258",=""
+="",="",="",="",="(0.1449)",=""
+
+="SVOG recipient x half-year block 8",="",="",="",="-0.0977",=""
+="",="",="",="",="(0.1472)",=""
+
+="Award months of 2019 revenue x half-year block -9",="",="",="",="",="-0.0008"
+="",="",="",="",="",="(0.0076)"
+
+="Award months of 2019 revenue x half-year block -8",="",="",="",="",="-0.0062"
+="",="",="",="",="",="(0.0062)"
+
+="Award months of 2019 revenue x half-year block -7",="",="",="",="",="-0.0008"
+="",="",="",="",="",="(0.0058)"
+
+="Award months of 2019 revenue x half-year block -6",="",="",="",="",="-0.0020"
+="",="",="",="",="",="(0.0062)"
+
+="Award months of 2019 revenue x half-year block -4",="",="",="",="",="-0.0085*"
+="",="",="",="",="",="(0.0045)"
+
+="Award months of 2019 revenue x half-year block -3",="",="",="",="",="-0.0255*"
+="",="",="",="",="",="(0.0141)"
+
+="Award months of 2019 revenue x half-year block -2",="",="",="",="",="-0.0670**"
+="",="",="",="",="",="(0.0303)"
+
+="Award months of 2019 revenue x half-year block -1",="",="",="",="",="-0.0480***"
+="",="",="",="",="",="(0.0164)"
+
+="Award months of 2019 revenue x half-year block 0",="",="",="",="",="-0.0173"
+="",="",="",="",="",="(0.0122)"
+
+="Award months of 2019 revenue x half-year block 1",="",="",="",="",="-0.0164"
+="",="",="",="",="",="(0.0114)"
+
+="Award months of 2019 revenue x half-year block 2",="",="",="",="",="-0.0163*"
+="",="",="",="",="",="(0.0088)"
+
+="Award months of 2019 revenue x half-year block 3",="",="",="",="",="-0.0160"
+="",="",="",="",="",="(0.0098)"
+
+="Award months of 2019 revenue x half-year block 4",="",="",="",="",="-0.0116"
+="",="",="",="",="",="(0.0096)"
+
+="Award months of 2019 revenue x half-year block 5",="",="",="",="",="-0.0091"
+="",="",="",="",="",="(0.0106)"
+
+="Award months of 2019 revenue x half-year block 6",="",="",="",="",="-0.0173"
+="",="",="",="",="",="(0.0108)"
+
+="Award months of 2019 revenue x half-year block 7",="",="",="",="",="-0.0096"
+="",="",="",="",="",="(0.0116)"
+
+="Award months of 2019 revenue x half-year block 8",="",="",="",="",="-0.0171"
+="",="",="",="",="",="(0.0110)"
+
+="Constant",="11.1551***",="11.1905***",="11.1736***",="11.1937***",="11.2102***"
+="",="(0.0209)",="(0.0175)",="(0.0157)",="(0.0266)",="(0.0192)"
+
+="Observations",="6822",="5862",="6758",="6822",="6758"
+="Specification",="Pooled post-award",="Late post vs pre-pandemic only",="Pooled post-award, intensity",="Event study, half-year blocks",="Event study, intensity"
+="Sample",="Panel venues, large rooms excluded",="Panel venues, large rooms excluded",="Panel venues, large rooms excluded",="Panel venues, large rooms excluded",="Panel venues, large rooms excluded"
+
+="Standard errors in parentheses"
+="Outcome is log real monthly receipts in 2025 dollars, 2017-01 to 2025-12."
+="Venue and calendar-month fixed effects; standard errors clustered by venue."
+="Event-study blocks are six months wide; the omitted block is 30 to 25 months before the award."
+="SVOG eligibility required a documented revenue drop, so recipients are selected on shock severity."
+="Descriptive event study. Not a causal estimate of the program."
+="* p<0.10, ** p<0.05, *** p<0.01"

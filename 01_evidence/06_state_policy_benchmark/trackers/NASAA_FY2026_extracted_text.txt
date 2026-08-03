@@ -1,0 +1,863 @@
+S TATE ARTS AGENCY REVENU ES, FI SCAL YEAR 202 6
+                                                   1
+
+
+
+
+State Arts
+Agency
+Revenues
+Fiscal Year 2026
+S TATE ARTS AGENCY REVENU ES, FI SCAL YEAR 202 6
+                                                                                                         2
+
+
+
+
+Preface
+The National Assembly of State Arts Agencies (NASAA) publishes reports twice a year on the
+revenues of state and jurisdictional arts agencies (SAAs) within the broader context of national
+funding trends. Arts appropriations can fluctuate throughout the year as state legislatures adjust
+budgets in response to changing revenue forecasts. This report presents the enacted funding levels
+for fiscal year 2026, which began in July 2025 for most states, along with revised budget figures for
+FY2025. NASAA continues to track changes in appropriations and will release an updated report in
+summer 2026, including projections for FY2027.
+
+While appropriations from state legislatures are the primary revenue source for most agencies,
+NASAA's revenues survey also tracks National Endowment for the Arts (NEA) funding, other federal
+support, supplemental state revenue streams, and private and miscellaneous sources. Included in
+the analysis are state-by-state comparisons of funding levels, per capita rankings and line item
+information, as well as discussions of the SAA revenue outlook. Explore our interactive
+visualizations for an in-depth look at state arts agency revenues.
+
+State arts agencies offer a broad array of programs and services that make the arts more accessible
+to the public, stimulate the marketplace for cultural activities, attract local and private investment
+in the arts, and support states and jurisdictions in meeting their goals for economic development,
+education and community enrichment. To learn more about how state arts agencies utilize their
+funding, visit nasaa-arts.org.
+S TATE ARTS AGENCY REVENU ES, FI SCAL YEAR 202 6
+                                                                                                                                                       3
+
+
+
+
+Contents
+State Budget Outlook .................................................................................................... 4
+   SAA Appropriations as a Percentage of All State Funds ................................................................. 5
+State Arts Agency Revenue ............................................................................................. 6
+   Legislative Appropriations................................................................................................................ 7
+   Line Item Appropriations ................................................................................................................. 7
+   Other State Funds ............................................................................................................................. 8
+   National Endowment for the Arts Funds.......................................................................................... 8
+   Private and Miscellaneous Funds ..................................................................................................... 8
+Historic Trends in Legislative Appropriations and Revenue ............................................... 9
+Methods and Definitions .............................................................................................. 19
+
+
+
+
+Table 1: State Arts Agency Total Legislative Appropriations............................................. 13
+Table 2: State Arts Agency Legislative Appropriations Excluding Line Items ...................... 14
+Tables 3 & 4: State Arts Agencies Receiving Line Item Appropriations ............................... 15
+Table 5: Total State Arts Agency Revenue ...................................................................... 16
+Table 6: Per Capita Spending on State Arts Agencies ....................................................... 17
+Table 7: State Arts Agency Legislative Appropriations as a Percentage of State General
+ Fund Expenditures .................................................................................................... 18
+S TATE ARTS AGENCY REVENU ES, FI SCAL YEAR 202 6
+                                                                                                        4
+
+
+
+
+     Key Findings
+     •   For fiscal year 2026, state and jurisdictional arts agencies (SAAs) reported a total of
+         $646.0 million in total legislative appropriations, representing a 5.9% decrease
+         compared to FY2025.
+     •   Excluding line items, SAAs will operate with $572.9 million in FY2026 appropriations,
+         marking a 2.6% increase from FY2025.
+     •   Line item funding shifted sharply across states, declining from $128.3 million to
+         $73.1 million, a major driver of the national totals.
+     •   Despite the decrease, the total appropriations, with or without line items, remain
+         higher than the prepandemic record high in FY2022 (unadjusted for inflation).
+     •   Twenty-five SAAs reported increases in total legislative appropriations, with a
+         median increase of 6.6%.
+     •   Twenty SAAs reported decreases, with a median decrease of 12.8%.
+     •   Per capita appropriations (including line items) to SAAs fell to $1.88 in FY2026, down
+         by $0.12 from FY2025. This equates to a 6% decrease.
+
+
+
+
+FY2026 legislative appropriations to state arts agencies totaled $646.0 million, representing a 5.9%
+decrease from the previous year. Individual state changes varied significantly (ranging from -82%
+to +80%). This variation reflects both baseline budget adjustments and changes in line item project
+funding. When line item appropriations are excluded, base legislative funding increased 2.6% to
+$572.9 million from FY2025 ($558.5 million). The overall national decrease is primarily attributable
+to fluctuations in line item funding and substantial changes in select states, rather than widespread
+reductions across all states.
+
+
+State Budget Outlook
+State governments are entering FY2026 in more constrained budget environments after several
+years of relatively stable fiscal conditions. In FY2025, revenues generally outperformed forecasts
+and reserves remained at historically high levels. In FY2026, many states are engaging in fiscal
+tightening and phasing out major line item allocations. According to the National Association of
+State Budget Officers (NASBO), state general fund spending growth is expected to be nearly flat in
+FY2026, with more states planning minimal or no increases compared to previous years' surplus-
+funded spending. Revenue growth is projected to remain slow for a fourth consecutive year, with
+early FY2026 performance showing mixed results and some states making downward revisions to
+their tax-source estimates. This shift reflects a more cautious fiscal environment as states balance
+ongoing spending demands against modest revenue expectations in the context of broader
+economic moderation.
+S TATE ARTS AGENCY REVENU ES, FI SCAL YEAR 202 6
+                                                                                                     5
+
+
+
+NASBO reports that despite these constraints, states retain strong fiscal buffers, with rainy-day
+funds near all-time highs. To manage the tightening environment, 24 states have enacted targeted
+cuts and 17 have eliminated vacant positions or imposed hiring freezes. Looking ahead, many
+states anticipate that ongoing spending demands will exceed revenue growth, particularly as they
+address pressures from Medicaid, education, housing affordability and disaster response while
+navigating federal fiscal uncertainty and potential policy changes.
+
+
+Figure 1: State Arts Agency Legislative Appropriations
+Fiscal Years 2001-2026
+
+
+
+
+SAA Appropriations as a Percentage of All State Funds (See Table 7)
+SAA appropriations primarily derive from state general funds and represent a very small share of
+overall state spending. Excluding jurisdictions, in FY2026 state legislatures allocated an average
+of 0.044% of general fund expenditures to SAAs, a decrease of 0.002% from FY2025.
+S TATE ARTS AGENCY REVENU ES, FI SCAL YEAR 202 6
+                                                                                                        6
+
+
+
+State Arts Agency Revenue (See Table 5)
+In FY2026, the total appropriations to state arts agencies
+amount to $646.0 million, reflecting a 5.9% decrease          Figure 2: Sources of State Arts
+from FY2025. State funds remain the largest revenue           Agency Revenue
+source for SAAs, with funds allocated through three           Fiscal Year 2026
+common mechanisms:
+
+•   Legislative appropriations are the primary and
+    most flexible funding source, typically allocated
+    from a state's general operating budget. These
+    funds support a wide range of arts programs and
+    administrative functions. For FY2026, 77.6% of SAA
+    revenue comes from legislative appropriations.
+•   Line item appropriations are designated funding
+    for specific projects, organizations or initiatives
+    within the arts sector, often directed by the
+    legislature to support cultural institutions or
+    special programs. Line items are pass-through
+    appropriations that flow through SAA budgets
+    directly to recipient entities. In FY2026, line items
+    account for 9.9% of SAA revenue.
+•   Transfers to SAAs from other state funds are state dollars received separately from
+    legislative appropriations and line items. This category can include funds received from other
+    state agencies or special state accounts. Examples might include revenue from specialty
+    license plates, taxes or lottery proceeds, or cultural trust or other state level funding sources
+    that are distinct from the state funds appropriated to or designated by the legislature. In
+    FY2026, other state funds contribute 3.7% to SAA revenue.
+
+Combined, these mechanisms fund 91.2% of total state arts agency revenue in FY2026. Other
+funding for SAAs comes from the National Endowment for the Arts, other federal grants, and
+foundation, corporate and individual support.
+S TATE ARTS AGENCY REVENU ES, FI SCAL YEAR 202 6
+                                                                                                                            7
+
+
+
+Legislative Appropriations (See tables                       Figure 3: SAA Total Legislative
+1, 2 and 6)                                                  Appropriations Changes
+While total SAA appropriations decreased in                  Fiscal Years 2025–2026
+FY2026, the impact varied widely across states.
+                                                              Increases
+Thirty-six state and jurisdictional arts agencies
+                                                                 Number of SAAs                                        25
+reported increased or flat appropriations, while 20              Number of SAAs up 10%+                                11
+states experienced decreases. Of those reporting                 Median percent increase                            6.6%
+                                                              Flat Funding*
+decreases, 11 states reported reductions
+                                                                 Number of SAAs                                        11
+exceeding 10%. Year-over-year changes vary                    Decreases
+widely across states and are often shaped by shifts              Number of SAAs                                      20
+in line item appropriations as well as changes in                Number of SAAs down 10%+                            11
+                                                                 Median percent decrease                        -12.8%
+recurring base funding. For example, Florida's                All States
+FY2025 base funding reflects a one-time reduction                Aggregate percent change                           -5.9%
+in grant funds and FY2026 reflects a restoration of              Median percent change                              0.05%
+                                                              *Flat funding includes changes of less than 0.5% in
+those funds, while New Hampshire and Virginia                 magnitude.
+reported sizable decreases in base legislative
+appropriations.
+
+Each SAA's appropriation serves the entire state, thus per capita funding provides a standardized
+measure of arts resource distribution across states. For FY2026, per capita legislative
+appropriations averaged $1.88 including line items and $1.67 excluding line items. Twenty-nine
+state and all jurisdictional arts agencies reported per capita spending of more than $1.00, while 10
+states reported per capita spending of less than $0.50. State-by-state per capita funding amounts
+and rankings are available in Table 6.
+
+State general funds remained the primary revenue source for most SAAs in FY2026, representing
+70.5% of total agency appropriations. The predominance of legislative support also means that
+changes in overall state fiscal conditions and budget priorities can have outsized effects on arts
+agency capacity and grant making.
+
+Line Item Appropriations (See tables 3 and 4)
+Line items are state legislative appropriations passed through state arts agency budgets and
+designated for specific entities and projects. In FY2026, 21 agencies received line item
+appropriations totaling $73.1 million across 180 line items. This reflects a 43.0% funding reduction
+from FY2025, when 23 agencies received $128.3 million across 181 line items.
+
+Line item allocations can vary substantially from year to year. In the previous five years, the line
+item year-over-year percentage change has ranged from 7.1% to 741.1%. Among agencies
+receiving line items in fiscal years 2025 and 2026, the percentage change in line item dollars ranged
+from -84.0% to +108.7% (Table 4). Florida's line item funding declined 37.3%, and Missouri's
+declined 84.0%; these two states alone account for approximately 86% of the national line item
+decrease. This illustrates how changes in a small number of large, onetime, pass-through
+appropriations can shift national totals even when recurring agency funding is stable or increasing.
+Since 2001, line item funding has represented as little as 0.4% and as much as 97.6% of individual
+state arts agency appropriations.
+S TATE ARTS AGENCY REVENU ES, FI SCAL YEAR 202 6
+                                                                                                       8
+
+
+
+Other State Funds
+Other state funds include appropriations and transfers from dedicated revenues and special-
+purpose funds, as distinct from general fund legislative appropriations. Examples of these sources
+include dedicated taxes (hotel/motel, sales, entertainment and conservation), license plate sales,
+lottery funds, gaming funds and interest from statewide cultural endowments. More details on
+these funding mechanisms can be found in NASAA's Dedicated Revenue Strategies Policy Brief.
+
+In FY2026, 27 agencies reported receiving other state funds totaling $27.6 million (3.7% of total
+agency revenue), representing a 3% decrease from the prior year. Dedicated revenue sources, like
+capital funds and interdepartmental transfers, are less stable, vary widely and can be sensitive to
+shifts in consumer spending, tourism and other sector-specific trends.
+
+National Endowment for the Arts Funds
+By law, the National Endowment for the Arts allocates 40% of its annual grants budget to state and
+jurisdictional arts agencies and regional arts organizations (see The Federal-State Partnership in
+the Arts). These federal funds are distributed through Partnership Agreements (large block grants
+containing multiple components, both formula-driven and competitive) and are designed to
+address state priorities while extending the reach of federal funding. Receipt of Partnership
+Agreement funding is contingent on a variety of federal eligibility, accountability and matching
+requirements.
+
+Partnership Agreements have been one of the most reliable and stabilizing funding sources
+available to state arts agencies over time. Total NEA funding to SAAs is $58 million in FY2026,
+accounting for 7.9% of their total revenue. These federal funds play an even larger role in states
+with smaller budgets: 21 states will receive more than one-third of their total revenue from the
+federal arts agency in FY2026. NEA funding categories tend to remain consistent, although states
+occasionally receive funds for special federal initiatives.
+
+Private and Miscellaneous Funds
+Private and miscellaneous funds are a small but important supplement to public support, helping
+some agencies expand services, pilot initiatives or strengthen their capacity to match state funds.
+Sources include individual gifts and donations, corporate support, regional arts organization funds,
+earned income, and non-NEA federal grants. In FY2026, private and miscellaneous revenue totaled
+$6.4 million (0.9% of total agency revenue), with 26 agencies reporting at least some private or
+miscellaneous funds. Only three states received more than 10% of their total revenue from funds
+in this category. The combined revenues going to state arts agencies from individual and corporate
+donations amount to less than 0.00024% of total SAA revenue.
+S TATE ARTS AGENCY REVENU ES, FI SCAL YEAR 202 6
+                                                                                                       9
+
+
+
+Historic Trends in Legislative Appropriations
+and Revenue
+Over the past three decades, state arts agency funding streams have experienced varying degrees
+of fluctuation. Baseline appropriations from state legislatures have consistently served as the main
+source of agency funding over time. Line items and other state funds have oscillated with more
+variance throughout this period. Partnership Agreement awards from the National Endowment for
+the Arts have remained consistent. Other private dollars continue to provide minimal funds to state
+arts agencies.
+
+
+Figure 4: State Arts Agency Funding History
+Fiscal Years 1995-2026
+S TATE ARTS AGENCY REVENU ES, FI SCAL YEAR 202 6
+                                                                                                          10
+
+
+
+Appropriations following Recessions
+Most major declines in SAA funding over the past three decades are correlated with economic
+recessions. Shrinking economies reduce state revenues and force cutbacks to state spending and
+state services. The ripple effects of a recession often persist, impacting state budgets for years even
+after the economy has rebounded. State budgets were hit especially hard in the years following the
+2007-2009 Great Recession. Between FY2008 and FY2012, total legislative appropriations to state
+arts agencies decreased 27%. Over the decade following the Great Recession and before the COVID-
+19 pandemic, state revenue collections experienced a gradual recovery. FY2021 was projected to
+have the highest rate of spending growth since 2007. However, the pandemic and the resulting
+2020 economic recession significantly reduced state revenues, leading to decreased SAA
+appropriations in FY2021. Appropriations including line items fell 17.9% from FY2020 to FY2021.
+While budget deficits were anticipated to persist until 2023, reopening economies and federal
+emergency relief funds drove state budgets, producing significant increases in SAA appropriations
+for FY2022 and FY2023. In contrast, the declines afterward through FY2026 appear to reflect a shift
+from postpandemic surpluses to a more constrained, normalizing fiscal environment rather than a
+broad recession. To put the FY2026 decline from recent peaks in context: total appropriations
+exceed all prepandemic years, base funding grew 2.5% and about 50% of states increased arts
+support, suggesting a recalibration rather than a crisis.
+
+
+Figure 5: State Arts Agency Legislative Appropriations
+Fiscal Years 1990-2026
+S TATE ARTS AGENCY REVENU ES, FI SCAL YEAR 202 6
+                                                                                                      11
+
+
+
+Inflation
+Inflation steadily erodes the purchasing power of state arts funding, widening the gap between
+nominal and inflation-adjusted dollars. According to Congressional Budget Office (CBO)
+September 2025 projections, inflation was expected to rise to 3.1% in 2025—partly due to higher
+tariffs—before moderating to 2.4% in 2026, remaining above the Federal Reserve's 2% target until
+2027. With inflation projected at 2.4% for 2026, any nominal reduction in arts appropriations
+translates to an even steeper decline in real terms. When adjusted for inflation, FY2026 total
+legislative appropriations to SAAs are estimated to decline by approximately 8% compared to the
+prior year and by 12% relative to 2001, reinforcing the long-standing pattern of eroding purchasing
+power.
+
+
+Figure 6: State Arts Agency Funding History
+Nominal and Inflation-Adjusted Dollars
+Fiscal Years 2001-2026
+S TATE ARTS AGENCY REVENU ES, FI SCAL YEAR 202 6
+                                                                                                       12
+
+
+
+Per Capita Appropriations
+Population growth further stresses the power of legislative appropriations. State arts agencies
+serve all residents within their respective states, and as populations increase, appropriations must
+rise just to provide each resident with the same level of benefit. In FY2026, per capita legislative
+appropriations averaged $1.88 per person including line items. When converted to 2001 dollars,
+FY2026's per capita funding equals just $1.04—compared to $1.57 in 2001, a real decline of 34%.
+This erosion demonstrates how population growth and inflation have reduced the real value of arts
+support over 25 years, underscoring the need for funding increases that keep pace with both
+demographic and economic changes.
+
+
+Figure 7: Per Capita Legislative Appropriations to State Arts Agencies
+Fiscal Years 1995-2026
+S TATE ARTS AGENCY REVENU ES, FI SCAL YEAR 202 6
+                                                                                                                                               13
+
+
+
+Table 1: State Arts Agency Total Legislative Appropriations
+Fiscal Years 2025–2026
+
+                            Legislative Appropriation        Percent     Table Notes
+  State or Special            Including Line items           Change
+                                                                         ♦ Percent change can be significantly affected by a change in line
+    Jurisdiction                                             FY25 to     items. See tables 3 and 4 for more information.
+                              FY2025         FY2026
+                                                              FY26
+   Alabama ♦                    $8,158,074      $8,467,537        3.8%   ^ Figure reflects state arts agency appropriation only and does
+   Alaska                        $940,300        $990,500         5.3%   not include appropriation to the state's cultural endowment.
+   American Samoa                $338,500        $293,500       -13.3%
+   Arizona                      $2,000,000      $2,000,000        0.0%   1 Delaware: In FY2026, the Delaware Division of the Arts budget
+   Arkansas                     $1,470,904      $1,283,091      -12.8%   includes a $60,000 partnership with the Delaware Division of
+   California                  $32,392,000     $34,804,000        7.4%   Services for Aging and Adults with Physical Disabilities to provide
+   Colorado                     $3,330,259      $3,519,038        5.7%   continued Access Creative Aging programming to Delaware
+   Connecticut ♦^               $6,908,696      $9,176,774       32.8%   senior centers and libraries.
+1  Delaware                     $5,906,800      $6,434,700        8.9%
+   District of Columbia ♦      $46,319,805     $44,754,343       -3.4%   2 Florida: The FY2026 appropriation reflects the restoration of
+2  Florida ♦                   $30,670,843     $39,980,263       30.4%   Florida Division of Arts and Culture grants following a one-time
+   Georgia                      $1,587,150      $1,587,150        0.0%   cut in FY2025.
+   Guam ♦                        $421,950        $421,950         0.0%
+   Hawai'i                     $16,050,607     $19,000,107       18.4%
+   Idaho                         $933,400        $941,300         0.8%   3 Iowa: The FY2026 appropriation includes $321,800 for the Arts
+   Illinois ♦                  $25,728,526     $25,348,300       -1.5%   and Culture Enhancement Fund, a new state appropriation line
+   Indiana                      $5,197,761      $3,278,256      -36.9%   item that replaces the former state appropriation line items for
+3  Iowa ^                       $2,220,493      $2,220,203        0.0%   Cultural Affairs Grants and the Iowa Cultural Trust.
+   Kansas                       $1,521,173      $1,000,000      -34.3%
+   Kentucky                     $1,833,500      $1,804,500       -1.6%   4 New Hampshire: In FY2026 the legislature enacted a state tax
+   Louisiana                    $2,112,377      $2,080,617       -1.5%   credit to incentivize private contributions to the New Hampshire
+   Maine                        $1,041,201      $1,195,839       14.9%   State Council on the Arts. Proceeds from this fund will appear in
+   Maryland                    $34,250,622     $33,969,051       -0.8%
+                                                                         future reports.
+   Massachusetts               $26,850,000     $26,975,152        0.5%
+   Michigan                    $11,129,201     $11,335,200        1.9%
+   Minnesota                   $58,321,000     $45,484,000      -22.0%   5 North Carolina: The FY2026 state budget had not yet been
+   Mississippi                  $9,943,577      $9,894,957       -0.5%   enacted at the time of publication. Figures reflect the recurring
+   Missouri                    $54,437,132     $17,057,686      -68.7%   funds level.
+   Montana ^                    $1,129,039      $1,385,603       22.7%
+   Nebraska ^                   $2,628,779      $2,668,359        1.5%
+                                                                         6 Oklahoma: The FY2026 appropriation includes one-time
+   Nevada                       $2,442,670      $2,824,179       15.6%
+                                                                         funding of $100,000 for capitol risk-mitigation measures and
+4  New Hampshire                 $905,307        $165,000       -81.8%
+                               $41,055,000     $35,455,000      -13.6%   $305,855 for museum collections storage equipment as part of
+   New Jersey ♦
+   New Mexico                   $1,689,800      $1,709,900        1.2%
+                                                                         the Jim Thorpe Memorial Building renovation.
+   New York ♦                  $86,783,651     $82,191,485       -5.3%
+5  North Carolina              $12,408,629     $11,725,890       -5.5%   7 Oregon: In FY2026, designated grants through Oregon's
+   North Dakota ^               $1,313,524      $1,318,768        0.4%   Cultural Resource Economic Fund support capital construction
+   Northern Marianas             $188,144        $208,937        11.1%   projects during the 2025–2027 biennium as well as grants to
+   Ohio                        $25,563,000     $26,710,595        4.5%   major arts organizations, including Oregon Shakespeare Festival
+6  Oklahoma                     $4,558,907      $4,308,180       -5.5%   ($2,500,000) and Portland Center Stage ($1,500,000).
+7  Oregon                       $8,059,487     $14,480,737       79.7%
+   Pennsylvania                $10,643,000     $10,643,000        0.0%
+   Puerto Rico                 $18,649,000     $19,598,000        5.1%   8 South Dakota: The South Dakota Arts Council's budget is
+   Rhode Island                 $2,412,492      $2,414,685        0.1%   derived from tourism taxes, making it subject to revenue
+   South Carolina ♦            $12,250,618     $11,603,268       -5.3%   fluctuations and legislative decisions.
+8  South Dakota                 $1,410,250      $1,431,204        1.5%
+   Tennessee                   $16,020,600     $16,440,977        2.6%   9 Texas: The Texas Commission on the Arts received a $7.9
+9  Texas                       $14,319,358     $18,288,573       27.7%   million funding increase for the next two years, with $2 million
+   Utah                        $10,835,100      $8,925,700      -17.6%   allocated to cultural tourism grants and the remainder directed
+   Vermont                       $973,848       $1,096,800       12.6%
+                                                                         to general support for arts organizations.
+   Virgin Islands                $366,475        $366,475         0.0%
+10 Virginia ^                   $7,430,398      $4,590,173      -38.2%
+   Washington                   $7,813,000      $6,793,000      -13.1%   10 Virginia: In FY2025, the Virginia Commission for the Arts
+11 West Virginia                 $811,500       $1,085,924       33.8%   received a onetime $2 million general fund appropriation to
+   Wisconsin                    $1,083,000      $1,184,238        9.3%   expand grants for arts organizations and venues. The funds were
+   Wyoming                      $1,077,773      $1,077,773        0.0%   carried forward for use in FY2026 and beyond.
+   Total                     $686,838,200    $645,990,437        -5.9%
+                                                                         11 West Virginia: For FY2026, the majority of the arts office's
+                                                                         appropriation is comprised of legislatively directed funds.
+S TATE ARTS AGENCY REVENU ES, FI SCAL YEAR 202 6
+                                                                                                                                            14
+
+
+
+Table 2: State Arts Agency Legislative Appropriations Excluding Line Items
+Fiscal Years 2025–2026
+
+                         Legislative Appropriation         Percent
+                                                                       Table Notes
+  State or Special         Excluding Line items            Change
+    Jurisdiction                                           FY25 to     ♦ Percent change can be significantly affected by a change in line
+                           FY2025          FY2026                      items. See tables 3 and 4 for more information.
+                                                            FY26
+Alabama ♦                     $6,833,074      $7,057,537        3.3%   ^ Figure reflects state arts agency appropriation only and does
+Alaska                         $940,300        $990,500         5.3%   not include appropriation to the state's cultural endowment.
+American Samoa                 $194,500        $293,500        50.9%
+Arizona                       $2,000,000      $2,000,000        0.0%
+Arkansas                      $1,470,904      $1,283,091      -12.8%
+California                   $32,392,000     $34,804,000        7.4%
+Colorado                      $3,330,259      $3,519,038        5.7%
+Connecticut ♦^                $1,497,298      $1,497,298        0.0%
+Delaware                      $5,906,800      $6,434,700        8.9%
+District of Columbia ♦       $41,534,805     $43,754,343        5.3%
+Florida ♦                      $742,293      $21,210,797     2757.5%
+Georgia                       $1,587,150      $1,587,150        0.0%
+Guam ♦                         $376,950        $376,950         0.0%
+Hawai'i                       $6,550,607      $9,500,107       45.0%
+Idaho                          $933,400        $941,300         0.8%
+Illinois ♦                   $20,876,500     $21,338,000        2.2%
+Indiana                       $5,197,761      $3,278,256      -36.9%
+Iowa ^                        $1,150,000      $1,450,000       26.1%
+Kansas                        $1,521,173      $1,000,000      -34.3%
+Kentucky                      $1,833,500      $1,804,500       -1.6%
+Louisiana                     $2,112,377      $2,080,617       -1.5%
+Maine                         $1,041,201      $1,195,839       14.9%
+Maryland                     $33,325,622     $33,709,051        1.2%
+Massachusetts                $25,895,000     $26,045,152        0.6%
+Michigan                      $9,507,825     $10,963,644       15.3%
+Minnesota                    $58,321,000     $45,484,000      -22.0%
+Mississippi                   $9,943,577      $9,894,957       -0.5%
+Missouri                     $10,948,798     $10,118,952       -7.6%
+Montana ^                     $1,129,039      $1,385,603       22.7%
+Nebraska ^                    $2,628,779      $2,668,359        1.5%
+Nevada                        $2,442,670      $2,824,179       15.6%
+New Hampshire                  $905,307        $165,000       -81.8%
+New Jersey ♦                 $32,355,000     $32,355,000        0.0%
+New Mexico                    $1,689,800      $1,709,900        1.2%
+New York ♦                   $82,283,651     $81,191,485       -1.3%
+North Carolina               $12,289,672     $11,606,933       -5.6%
+North Dakota ^                $1,308,524      $1,308,768        0.0%
+Northern Marianas              $188,144        $208,937        11.1%
+Ohio                         $25,563,000     $26,710,595        4.5%
+Oklahoma                      $3,952,325      $4,308,180        9.0%
+Oregon                        $2,179,194      $2,205,737        1.2%
+Pennsylvania                 $10,643,000     $10,643,000        0.0%
+Puerto Rico                  $15,072,000     $16,021,000        6.3%
+Rhode Island                  $2,012,492      $2,014,685        0.1%
+South Carolina ♦             $12,050,618     $11,603,268       -3.7%
+South Dakota                  $1,410,250      $1,431,204        1.5%
+Tennessee                    $15,715,600     $16,215,977        3.2%
+Texas                        $14,319,358     $18,288,573       27.7%
+Utah                         $10,835,100      $8,925,700      -17.6%
+Vermont                        $973,848       $1,096,800       12.6%
+Virgin Islands                 $366,475        $366,475         0.0%
+Virginia ^                    $7,430,398      $4,590,173      -38.2%
+Washington                    $7,813,000      $6,793,000      -13.1%
+West Virginia                  $811,500        $381,424       -53.0%
+Wisconsin                     $1,083,000      $1,184,238        9.3%
+Wyoming                       $1,077,773      $1,077,773        0.0%
+Total                      $558,494,191    $572,895,245         2.6%
+S TATE ARTS AGENCY REVENU ES, FI SCAL YEAR 202 6
+                                                                                                                            15
+
+
+
+Table 3: State Arts Agencies Receiving Line Item Appropriations
+Fiscal Year 2026
+                                     Line Item Appropriations                                        Line Item Dollars as
+                                                                           Total Legislative
+  State or Special Jurisdiction                                                                          a % of Total
+                                   Number               Dollars             Appropriation
+                                                                                                     Legislative Dollars
+ Alabama                              1                     $1,410,000                 $8,467,537           16.7%
+ Connecticut                          69                    $7,679,476                 $9,176,774           83.7%
+ District of Columbia                 2                     $1,000,000                $44,754,343            2.2%
+ Florida                              24                   $18,769,466                $39,980,263           46.9%
+ Guam                                 1                        $45,000                   $421,950           10.7%
+ Hawaii                               2                     $9,500,000                $19,000,107           50.0%
+ Illinois                             3                     $4,010,300                $25,348,300           15.8%
+ Iowa                                 2                       $770,203                 $2,220,203           34.7%
+ Maryland                             2                       $260,000                $33,969,051            0.8%
+ Massachusetts                        19                      $930,000                $26,975,152            3.4%
+ Michigan                             1                       $371,556                $11,335,200            3.3%
+ Missouri                             7                     $6,938,734                $17,057,686           40.7%
+ New Jersey                           6                     $3,100,000                $35,455,000            8.7%
+ New York                             1                     $1,000,000                $82,135,000            1.2%
+ North Carolina                       1                       $118,957                $11,725,890            1.0%
+ North Dakota                         2                        $10,000                 $1,318,768            0.8%
+ Oregon                               15                   $12,275,000                $14,480,737           84.8%
+ Puerto Rico                          8                     $3,577,000                $19,598,000           18.3%
+ Rhode Island                         1                       $400,000                 $2,414,685           16.6%
+ Tennessee                            3                       $225,000                $16,440,977            1.4%
+ West Virginia                        10                      $704,500                 $1,085,924           64.9%
+ Total (21 agencies)                 180                  $73,095,192               $423,361,547            17.3%
+
+ All States (56 agencies)            180                  $73,095,192               $645,990,437            11.3%
+
+
+Table 4: State Arts Agencies Receiving Line Item Appropriations
+Fiscal Years 2025-2026
+                                              FY2025                              FY2026                 Percent Change
+  State or Special Jurisdiction
+                                     Number             Dollars          Number            Dollars        FY25 to FY26
+ Alabama                                 1               $1,325,000        1                $1,410,000          6.4%
+ American Samoa                          1                 $144,000                                               -
+ Connecticut                            51               $5,411,398        69               $7,679,476        41.9%
+ District of Columbia                    3               $4,785,000         2               $1,000,000        -79.1%
+ Florida                                22              $29,928,550        24              $18,769,466        -37.3%
+ Guam                                    1                  $45,000         1                  $45,000          0.0%
+ Hawaii                                  2               $9,500,000         2               $9,500,000          0.0%
+ Illinois                                4               $4,852,026         3               $4,010,300        -17.3%
+ Iowa                                    4               $1,070,493         2                 $770,203        -28.1%
+ Maryland                                5                 $925,000         2                 $260,000        -71.9%
+ Massachusetts                          20                 $955,000        19                 $930,000         -2.6%
+ Michigan                                3               $1,621,376         1                 $371,556        -77.1%
+ Missouri                               18              $43,488,334         7               $6,938,734        -84.0%
+ New Jersey                             13               $8,700,000         6               $3,100,000        -64.4%
+ New York                                2               $4,500,000         1               $1,000,000        -77.8%
+ North Carolina                          1                 $118,957         1                 $118,957          0.0%
+ North Dakota                            1                   $5,000         2                  $10,000        100.0%
+ Oklahoma                                1                 $606,582                                               -
+ Oregon                                 13               $5,880,293        15              $12,275,000        108.7%
+ Puerto Rico                             8               $3,577,000         8               $3,577,000          0.0%
+ Rhode Island                            1                 $400,000         1                 $400,000          0.0%
+ South Carolina                          1                 $200,000                                          -100.0%
+ Tennessee                               5                 $305,000         3                 $225,000        -26.2%
+ West Virginia                                                             10                 $704,500            -
+ Total                                 181             $128,344,009       180              $73,095,192       -43.0%
+S TATE ARTS AGENCY REVENU ES, FI SCAL YEAR 202 6
+                                                                                                                                      16
+
+
+
+Table 5: Total State Arts Agency Revenue
+Fiscal Years 2025–2026
+
+                        Total State Arts Agency          Percent
+                                                                     Table Notes
+  State or Special             Revenue                   Change
+    Jurisdiction                                         FY25 to     This table incorporates all sources of revenue received by the
+                         FY2025          FY2026                      state arts agency, including legislative appropriations, other
+                                                          FY26       state funds, funds from the National Endowment for the Arts,
+Alabama                     $9,367,230      $9,768,075        4.3%   and private and miscellaneous funds.
+Alaska                      $3,376,426      $2,795,064      -17.2%
+American Samoa               $717,150        $697,700        -2.7%
+Arizona                     $4,667,828      $4,560,916       -2.3%
+Arkansas                    $2,503,929      $2,376,074       -5.1%
+California                 $33,911,591     $36,422,689        7.4%
+Colorado                    $4,940,043      $4,624,107       -6.4%
+Connecticut                 $9,687,068     $11,533,811       19.1%
+Delaware                    $6,965,250      $7,649,763        9.8%
+District of Columbia       $47,296,705     $45,756,881       -3.3%
+Florida                    $31,825,013     $41,286,126       29.7%
+Georgia                     $2,616,575      $2,736,533        4.6%
+Guam                         $798,900        $824,065         3.1%
+Hawaii                     $16,963,107     $20,014,845       18.0%
+Idaho                       $1,982,633      $1,967,598       -0.8%
+Illinois                   $26,874,726     $26,544,938       -1.2%
+Indiana                     $6,357,775      $4,656,894      -26.8%
+Iowa                        $3,098,493      $3,142,566        1.4%
+Kansas                      $2,483,070      $2,064,920      -16.8%
+Kentucky                    $2,818,225      $2,887,283        2.5%
+Louisiana                   $3,115,277      $3,108,155       -0.2%
+Maine                       $2,020,726      $2,240,422       10.9%
+Maryland                   $35,246,422     $35,017,789       -0.6%
+Massachusetts              $33,565,012     $33,765,631        0.6%
+Michigan                   $12,128,326     $12,455,453        2.7%
+Minnesota                  $59,406,600     $46,571,138      -21.6%
+Mississippi                $11,053,077     $11,054,795        0.0%
+Missouri                   $55,354,477     $18,074,309      -67.3%
+Montana                     $2,508,223      $2,630,290        4.9%
+Nebraska                    $6,473,912      $5,603,316      -13.4%
+Nevada                      $3,448,713      $3,962,657       14.9%
+New Hampshire               $1,898,763       $759,000       -60.0%
+New Jersey                 $42,250,200     $36,752,538      -13.0%
+New Mexico                  $2,576,402      $2,731,060        6.0%
+New York                   $87,878,351     $82,191,485       -6.5%
+North Carolina             $13,838,029     $13,224,928       -4.4%
+North Dakota                $2,260,199      $2,363,439        4.6%
+Northern Marianas            $538,944        $585,037         8.6%
+Ohio                       $27,358,500     $28,565,333        4.4%
+Oklahoma                   $11,616,827      $9,901,991      -14.8%
+Oregon                      $9,733,126     $16,165,051       66.1%
+Pennsylvania               $11,887,000     $11,912,338        0.2%
+Puerto Rico                $21,602,450     $22,449,512        3.9%
+Rhode Island                $7,587,317      $9,371,068       23.5%
+South Carolina             $14,599,734     $14,048,823       -3.8%
+South Dakota                $2,459,550      $2,593,642        5.5%
+Tennessee                  $17,068,021     $17,631,400        3.3%
+Texas                      $16,115,358     $20,205,111       25.4%
+Utah                       $13,883,429     $12,992,438       -6.4%
+Vermont                     $3,017,457      $3,274,940        8.5%
+Virgin Islands               $741,625        $741,790         0.0%
+Virginia                    $8,472,183      $5,658,015      -33.2%
+Washington                 $10,059,648      $9,180,135       -8.7%
+West Virginia               $2,758,399      $2,984,762        8.2%
+Wisconsin                   $2,166,000      $2,368,476        9.3%
+Wyoming                     $2,247,861      $2,557,429       13.8%
+Total                    $778,187,875    $738,004,544        -5.2%
+S TATE ARTS AGENCY REVENU ES, FI SCAL YEAR 202 6
+                                                                                                                                    17
+
+
+
+Table 6: Per Capita Spending on State Arts Agencies
+Fiscal Year 2026
+
+                                     Legislative             Legislative          Total State Funds
+                                   Appropriation           Appropriation           (Appropriation            Total Agency
+      State or Special
+                                   Including Line          Excluding Line          and Other State             Revenue
+        Jurisdiction
+                                       Items                   Items                   Funds)
+                                 Dollars       Rank        Dollars      Rank       Dollars      Rank       Dollars      Rank
+Alabama                            $1.64         22         $1.37        20         $1.68        23         $1.89        26
+Alaska                             $1.34         24         $1.34        21         $1.39        26         $3.78        12
+Arizona                            $0.26         47         $0.26        46         $0.41        45         $0.60        47
+Arkansas                           $0.42         44         $0.42        42         $0.42        44         $0.77        40
+California                         $0.88         30         $0.88        28         $0.88        32         $0.92        37
+Colorado                           $0.59         38         $0.59        34         $0.59        39         $0.78        39
+Connecticut                        $2.50         12         $0.41        43         $2.83        12         $3.14        15
+Delaware                           $6.12         3          $6.12        3          $6.17         4         $7.27        4
+Florida                            $1.71         19         $0.91        27         $1.71        22         $1.77        27
+Georgia                            $0.14         49         $0.14        49         $0.14        50         $0.24        50
+Hawai'i                           $13.14         1          $6.57        2          $13.14        1         $13.84       1
+Idaho                              $0.47         42         $0.47        39         $0.47        42         $0.98        35
+Illinois                           $1.99         17         $1.68        16         $1.99        20         $2.09        25
+Indiana                            $0.47         41         $0.47        38         $0.51        41         $0.67        43
+Iowa                               $0.68         36         $0.45        41         $0.68        37         $0.97        36
+Kansas                             $0.34         46         $0.34        45         $0.38        47         $0.70        41
+Kentucky                           $0.39         45         $0.39        44         $0.39        46         $0.63        46
+Louisiana                          $0.45         43         $0.45        40         $0.45        43         $0.68        42
+Maine                              $0.85         33         $0.85        31         $0.85        34         $1.59        29
+Maryland                           $5.42         4          $5.38        4          $5.42         5         $5.59        5
+Massachusetts                      $3.78         6          $3.65        6          $4.50         6         $4.73        7
+Michigan                           $1.12         27         $1.08        24         $1.12        28         $1.23        31
+Minnesota                          $7.85         2          $7.85        1          $7.85         2         $8.04        3
+Mississippi                        $3.36         9          $3.36        8          $3.36        11         $3.76        13
+Missouri                           $2.73         10         $1.62        18         $2.73        13         $2.89        17
+Montana                            $1.22         26         $1.22        23         $1.24        27         $2.31        24
+Nebraska                           $1.33         25         $1.33        22         $1.83        21         $2.79        19
+Nevada                             $0.86         31         $0.86        29         $0.88        33         $1.21        32
+New Hampshire                      $0.12         50         $0.12        50         $0.18        49         $0.54        48
+New Jersey                         $3.73         7          $3.41        7          $3.73         8         $3.87        10
+New Mexico                         $0.80         35         $0.80        33         $0.82        35         $1.28        30
+New York                           $4.14         5          $4.09        5          $4.14         7         $4.14        9
+North Carolina                     $1.06         28         $1.05        26         $1.07        29         $1.20        33
+North Dakota                       $1.66         21         $1.64        17         $1.67        24         $2.97        16
+Ohio                               $2.25         14         $2.25        10         $2.28        16         $2.40        23
+Oklahoma                           $1.05         29         $1.05        25         $2.08        19         $2.42        22
+Oregon                             $3.39         8          $0.52        37         $3.52         9         $3.78        11
+Pennsylvania                       $0.81         34         $0.81        32         $0.81        36         $0.91        38
+Rhode Island                       $2.17         15         $1.81        14         $7.49         3         $8.42        2
+South Carolina                     $2.12         16         $2.12        12         $2.33        15         $2.56        20
+South Dakota                       $1.55         23         $1.55        19         $1.55        25         $2.80        18
+Tennessee                          $2.27         13         $2.24        11         $2.27        17         $2.44        21
+Texas                              $0.58         39         $0.58        35         $0.59        38         $0.65        44
+Utah                               $2.55         11         $2.55        9          $3.41        10         $3.71        14
+Vermont                            $1.69         20         $1.69        15         $2.27        18         $5.05        6
+Virginia                           $0.52         40         $0.52        36         $0.53        40         $0.64        45
+Washington                         $0.85         32         $0.85        30         $1.00        31         $1.15        34
+West Virginia                      $0.61         37         $0.22        47         $1.04        30         $1.69        28
+Wisconsin                          $0.20         48         $0.20        48         $0.20        48         $0.40        49
+Wyoming                            $1.83         18         $1.83        13         $2.55        14         $4.35        8
+American Samoa                     $6.69         4          $6.69        3          $6.69         5         $15.89       2
+District of Columbia              $63.73         1          $62.31       1          $63.73        1         $65.16       1
+Guam                               $2.49         18         $2.22        17         $2.49        20         $4.86        12
+Northern Marianas                  $4.09         9          $4.09        8          $4.09        11         $11.44       4
+Puerto Rico                        $6.49         5          $5.31        7          $6.49         6         $7.43        7
+Virgin Islands                     $3.51         12         $3.51        11         $3.51        14         $7.11        9
+Total                             $1.88                     $1.67                   $1.96                   $2.15
+Per capita amounts represent the total dollar figure for each variable divided by the total population. Total per capita dollar
+figures listed in the bottom row are based on the aggregate population for all 56 states and jurisdictions. States are ranked out
+of 50; jurisdictions are ranked out of 56.
+S TATE ARTS AGENCY REVENU ES, FI SCAL YEAR 202 6
+                                                                                                                                           18
+
+
+
+Table 7: State Arts Agency Legislative Appropriations as a Percentage of State
+General Fund Expenditures
+Fiscal Year 2026
+
+                   State General              State Arts Agency                Table Notes
+     State             Fund               Legislative Appropriation
+                                                               % of General    State general fund expenditures are based on the Fiscal
+                   Expenditures           Dollar Amount
+                                                                  Fund
+                                                                               Survey of States, Fall 2025, Fiscal 2026 State General
+                                                                               Fund, Enacted (Millions) table published by the National
+Alabama                 $13,667,000,000           $8,467,537         0.062%    Association of State Budget Officers.
+Alaska                   $5,993,000,000            $990,500          0.017%
+Arizona                 $17,571,000,000           $2,000,000         0.011%    Note: N/A indicates data are not available at the time of
+Arkansas                 $6,494,000,000           $1,283,091         0.020%    publication.
+California             $228,366,000,000          $34,804,000         0.015%
+Colorado                $17,284,000,000           $3,519,038         0.020%
+Connecticut             $24,036,000,000           $9,176,774         0.038%
+Delaware                 $7,261,000,000           $6,434,700         0.089%
+Florida                 $55,301,000,000          $39,980,263         0.072%
+Georgia                 $35,948,000,000           $1,587,150         0.004%
+Hawai'i                 $11,257,000,000            $421,950          0.004%
+Idaho                    $5,624,000,000            $941,300          0.017%
+Illinois                $56,259,000,000          $25,348,300         0.045%
+Indiana                 $22,925,000,000           $3,278,256         0.014%
+Iowa                     $9,418,000,000           $2,220,203         0.024%
+Kansas                  $11,372,000,000           $1,000,000         0.009%
+Kentucky                $16,967,000,000           $1,804,500         0.011%
+Louisiana               $12,213,000,000           $2,080,617         0.017%
+Maine                    $5,808,000,000           $1,195,839         0.021%
+Maryland                $27,011,000,000          $33,969,051         0.126%
+Massachusetts           $49,611,000,000          $26,975,152         0.054%
+Michigan                $14,115,000,000          $11,335,200         0.080%
+Minnesota               $32,991,000,000          $45,484,000         0.138%
+Mississippi              $7,141,000,000           $9,894,957         0.139%
+Missouri                $15,737,000,000          $17,057,686         0.108%
+Montana                  $3,385,000,000           $1,385,603         0.041%
+Nebraska                 $5,485,000,000           $2,668,359         0.049%
+Nevada                   $6,660,000,000           $2,824,179         0.042%
+New Hampshire            $1,958,000,000            $165,000          0.008%
+New Jersey              $57,687,000,000          $35,455,000         0.061%
+New Mexico              $13,625,000,000           $1,709,900         0.013%
+New York               $125,512,000,000          $82,191,485         0.065%
+North Carolina          $31,870,000,000          $11,725,890         0.037%
+North Dakota             $3,128,000,000           $1,318,768         0.042%
+Ohio                    $30,828,000,000          $26,710,595         0.087%
+Oklahoma                $10,381,000,000           $4,308,180         0.042%
+Oregon                  $18,288,000,000          $14,480,737         0.079%
+Pennsylvania                        N/A          $10,643,000             N/A
+Rhode Island             $5,809,000,000           $2,414,685         0.042%
+South Carolina          $14,136,000,000          $11,603,268         0.082%
+South Dakota             $2,470,000,000           $1,431,204         0.058%
+Tennessee               $25,788,000,000          $16,440,977         0.064%
+Texas                   $95,884,000,000          $18,288,573         0.019%
+Utah                    $11,839,000,000           $8,925,700         0.075%
+Vermont                  $2,502,000,000           $1,096,800         0.044%
+Virginia                $32,918,000,000           $4,590,173         0.014%
+Washington              $35,537,000,000           $6,793,000         0.019%
+West Virginia            $5,808,000,000           $1,085,924         0.019%
+Wisconsin               $22,723,000,000           $1,184,238         0.005%
+Wyoming                  $1,962,000,000           $1,077,773         0.055%
+Total               $1,276,553,000,000         $561,769,075          0.044%
+S TATE ARTS AGENCY REVENU ES, FI SCAL YEAR 202 6
+                                                                                                                                 19
+
+
+
+Methods and Definitions
+Survey data: NASAA collected data for this publication from all 56 state and jurisdictional arts agencies between
+October and December 2025. Therefore, the figures represent projected revenues for SAAs early in the fiscal year 2026
+cycle. As legislatures typically adjust budgets throughout the fiscal year to reflect changing revenue and expense
+expectations, these figures may not reflect final allocations. Each agency was asked to provide a total revenue figure
+and to itemize appropriations, line items, other state funds, National Endowment for the Arts funds, and private and
+miscellaneous funds, such as individual donations and non-NEA federal grants. NASAA will survey SAAs in spring 2026
+to capture updated revenue data.
+
+Fiscal year: Legislative appropriations are reported by fiscal year. Most, but not all, states' fiscal years begin in July and
+end in June. Fiscal years are referred to by the calendar year in which they end (e.g., July 2025 through June 2026 is
+FY2026). For details about individual state fiscal cycles, refer to Budget Processes in the States, Spring 2021, by the
+National Association of State Budget Officers.
+
+Appropriations change: For analysis and reporting purposes, flat funding is defined as either no change in the
+appropriation level of an agency or a change by less than one-half of one percent in magnitude from the previous fiscal
+year.
+
+Median values: Median calculations identify the middle value in a data set. Unlike averages, medians provide a more
+accurate representation of national norms as they are less affected by outliers, such as unusually high figures from
+individual states.
+
+State budget information: This report draws on data from multiple sources, including The Fiscal Survey of States, Fall
+2025, published by the National Association of State Budget Officers; from Fiscal 50: State Trends and Analysis, from
+The Pew Charitable Trusts; and from The Budget and Economic Outlook: 2025 to 2035 and CBO's current view of the
+economy from 2025 to 2028, by the Congressional Budget Office. These sources exclude U.S. jurisdictions from their
+calculations and analyses.
+
+Per capita spending calculations: Fiscal year 2026 per capita spending calculations for the 50 states, the District of
+Columbia and Puerto Rico are based on the July 1, 2025, population estimates in the Annual Estimates of the Resident
+Population for the United States, Regions, States, District of Columbia, and Puerto Rico: April 1, 2020 to July 1, 2025
+table from the U.S. Census Bureau. Population figures for American Samoa, Guam, the Northern Mariana Islands and
+the U.S. Virgin Islands are from the International Database of the U.S. Census Bureau. This State Arts Agency Revenues
+report organizes per capita funding into four categories: legislative appropriations including line items, legislative
+appropriations excluding line items, total state funds and total agency revenue. States are ranked out of 50 states, and
+jurisdictions are ranked out of 56 states and jurisdictions. NASAA presents these four categories because each SAA relies
+on a distinct combination of funding and the significance of various revenue sources varies by state. For assistance in
+determining the most relevant ranking, please contact the state arts agency or ask NASAA.
+
+Trend data: NASAA maintains historical legislative appropriations data dating back to 1969. Additional information on
+long-term trends is available upon request.
+
+Inflation: Inflation adjustments use the Historical Consumer Price Index for All Urban Consumers (CPI-U): U.S. city
+average, all items, by month (1982-84=100), as published by the U.S. Department of Labor, Bureau of Labor Statistics.
+This State Arts Agency Revenues report aligned the consumer price index's (CPI) calendar years with the SAAs' fiscal
+years (most of which begin in July of the previous calendar year). This report used the 2001 CPI as a starting point to
+measure inflation between 2001 and 2026. Inflation comparisons for FY2026 are based on the 2025 index value, not
+seasonally adjusted, as the 2026 annual CPI value was not available at the time of publication.
+
+Questions: For additional information about the data in this report, contact NASAA Research Manager Nakyung Rhee
+at nakyung.rhee@nasaa-arts.org or 202-609-9772.
+      National Assembly of State Arts Agencies
+
+
+      The National Assembly of State Arts Agencies (NASAA) is a nonprofit, nonpartisan
+      organization. In collaboration with the nation's 56 state and jurisdictional arts councils, we
+      advance the arts as a powerful path to economic prosperity, rural resilience, good health,
+      education success and strong communities in which everyone thrives. NASAA serves as a
+      clearinghouse for data and research about public funding for the arts as well as the policies
+      and programs of state arts agencies. For more information about NASAA and the work of state
+      arts agencies, visit www.nasaa-arts.org.
+
+                                                   NASAA is supported in part by the National Endowment for
+                                                   the Arts.
+
+
+
+
+© 2026 National Assembly of State Arts Agencies
+
+                     This work is licensed under a Creative
+                     Commons Attribution-Noncommercial 4.0
+                     International License.
+
+
+     @NASAA.Arts                @NASAA_Arts
+

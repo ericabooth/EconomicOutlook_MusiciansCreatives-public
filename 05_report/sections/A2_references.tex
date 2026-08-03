@@ -1,0 +1,543 @@
+% A2_references -- categorized reference list built from every _sources.md and
+% _findings.md file under 01_evidence/*/ (all retrieved 2026-08-01). Machine-
+% readable companion: 03_analysis/out/source_inventory.csv (same 294 entries).
+\section{References}
+
+\noindent{\footnotesize\color{ammuted}This appendix gives the issuing body, title, and URL for every one of the 294 sources this project used, with a parenthetical note wherever a limitation matters to a claim in the report. Every source below was retrieved on 2026-08-01; dataset vintages are kept in the tables because those vary. \textbf{The complete machine-readable inventory -- the same 294 entries with vintages, retrieval dates, and every limitation note in one spreadsheet -- is at \texttt{03\_analysis/out/source\_inventory.csv}.}\par}
+
+\subsection*{Federal statistical sources}
+\subsubsection*{Datasets}
+\noindent{\scriptsize\itshape\color{ammuted}Every dataset below was retrieved on 2026-08-01; that column is omitted from the table.\par}
+{\scriptsize\raggedright
+\begin{longtable}{@{}P{0.60\textwidth} P{0.33\textwidth}@{}}
+\toprule
+\textbf{Series / dataset (vintage)} & \textbf{Geography \& years used} \\
+\midrule
+\endfirsthead
+\multicolumn{2}{@{}l}{\itshape (Federal statistical sources, continued)}\\
+\toprule
+\textbf{Series / dataset (vintage)} & \textbf{Geography \& years used} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+
+\textbf{U.S. Bureau of Labor Statistics}: \textit{Occupational Employment and Wage Statistics (OEWS)} (May 2005--May 2025 annual estimates (May 2025 is the current vintage)). \url{https://www.bls.gov/oes/tables.htm}\newline{\color{ammuted}(payroll wage-and-salary employment only; excludes the self-employed; annual-wage figures not published for Musicians and Singers or Actors in most years and geographies)} & Austin-Round Rock(-San Marcos) MSA, Texas, and U.S.; 8 occupations incl. Musicians and Singers (SOC 27-2042) \\
+\textbf{U.S. Bureau of Labor Statistics}: \textit{Quarterly Census of Employment and Wages (QCEW), annual-by-industry files} (2001--2025 (2025 vintage carries no MSA-level rows)). \url{https://www.bls.gov/cew/}\newline{\color{ammuted}(UI-covered wage-and-salary jobs only; excludes the self-employed)} & Travis County, Texas, U.S., and Austin-Round Rock(-San Marcos) MSA; NAICS 71, 7111, 71113, 7115 \\
+\textbf{U.S. Bureau of Labor Statistics}: \textit{Consumer Price Index for All Urban Consumers (CPI-U), U.S. city average, all items (series CUUR0000SA0), via the BLS Public Data API} (monthly, January 2007--June 2026). \url{https://api.bls.gov/publicAPI/v2/timeseries/data/}\newline{\color{ammuted}(no value was published for October 2025 because of the federal government shutdown; linearly interpolated in this project’s analysis and flagged)} & U.S. national; used as the deflator for Austin venue receipts and cost-of-living series \\
+\textbf{U.S. Census Bureau}: \textit{American Community Survey (ACS) Public Use Microdata Sample (PUMS), 2020--2024 5-Year} (released 2026-03-05 (newest 5-year PUMS available as of retrieval)). \url{https://www2.census.gov/programs-surveys/acs/data/pums/2024/5-Year/csv_ptx.zip}\newline{\color{ammuted}(OCCP reflects a respondent’s current or most recent job only; dollar values are nominal unless the ADJINC adjustment factor is applied)} & Texas statewide and the Austin-Round Rock-San Marcos MSA (5-county PUMA crosswalk); 9 creative-occupation OCCP codes \\
+\textbf{U.S. Census Bureau}: \textit{Nonemployer Statistics (NES), county and state historical datasets} (2012--2023 (2023 is the latest available; 2024 not yet released as of retrieval)). \url{https://www2.census.gov/programs-surveys/nonemployer-statistics/datasets/2023/historical-datasets/nonemp23co.zip}\newline{\color{ammuted}(counts establishments, not people; excludes unregistered/informal gig work)} & Travis, Williamson, Hays, Bastrop, Caldwell, Harris, Dallas, Tarrant, and Bexar counties, plus Texas statewide; NAICS 711/7111/7115 \\
+\textbf{U.S. Census Bureau}: \textit{ACS Table-Based Summary File, tables B25064 (median gross rent) and B25077 (median home value)} (2017--2021 and 2020--2024 5-Year estimates). \url{https://www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/5YRData/acsdt5y2024-b25064.dat}\newline{\color{ammuted}(this table-based format does not exist before the 2021 vintage; 5-year estimates smooth over sharp cyclical turns)} & Travis, Dallas, Harris, Bexar, and Davidson counties and their MSAs \\
+\textbf{U.S. Census Bureau}: \textit{Vintage 2025 State Population Totals (NST-EST2025-ALLDATA)} (July 1, 2025 estimates). \url{https://www2.census.gov/programs-surveys/popest/datasets/2020-2025/state/totals/NST-EST2025-ALLDATA.csv} & All 50 states; used as the per-capita denominator for state policy comparisons \\
+\textbf{U.S. Bureau of Economic Analysis}: \textit{Arts and Cultural Production Satellite Account (ACPSA)} (2023 data, released April 2, 2025 (BEA news release 25-13)). \url{https://www.bea.gov/data/special-topics/arts-and-culture}\newline{\color{ammuted}(BEA announced in February 2026 that it will no longer regularly produce ACPSA statistics; the 2023/April-2025 release is the final regular annual release)} & Texas plus 7 comparison states (CA, NY, TN, GA, LA, FL, WA) and the U.S., 2001--2023 (state); U.S. industry detail, 1998--2023 \\
+\textbf{U.S. Bureau of Economic Analysis}: \textit{Regional Price Parities (RPP) and Implicit Regional Price Deflators (IRPD) by MSA} (2008--2024 annual (no 2025 vintage yet released)). \url{https://apps.bea.gov/regional/zip/MARPP.zip} & Austin, Dallas-Fort Worth, Houston, San Antonio, and Nashville MSAs, plus the U.S. \\
+\textbf{U.S. Department of Housing and Urban Development}: \textit{Fair Market Rents (FMR), all-years file} (FY1983--FY2026 (FY1984 is missing from HUD’s own archive)). \url{https://www.huduser.gov/portal/datasets/FMR/FMR_All_1983_2026.csv} & Travis (Austin), Dallas, Harris (Houston), Bexar (San Antonio), and Davidson (Nashville) counties/HUD metro areas \\
+\textbf{U.S. Department of Labor, Employment and Training Administration}: \textit{List of Apprenticeable Occupations} (cover sheet revised March 2020; current live version as of retrieval). \url{https://www.dol.gov/sites/dolgov/files/ETA/apprenticeship/pdfs/Available_Occupations.xlsx} & National, 1,441 titles; 16 arts/entertainment/media/audio titles extracted, incl. Musician (RAPIDS code 2080CB) \\
+\textbf{U.S. Small Business Administration}: \textit{Shuttered Venue Operators Grant (SVOG) awards file} (“Awards as of 07-05-2022” (the last file SBA has published to its open-data portal)). \url{https://data.sba.gov/sites/default/files/distribution/SBA-ODA-2022-09-001/awards-as-of-7-5-22.xlsx}\newline{\color{ammuted}(the commonly cited \$16.25 billion appropriated figure differs from the \$14.57 billion this file shows as awarded)} & National (13,011 records); Texas and Austin-area subsets \\
+\textbf{U.S. Small Business Administration}: \textit{Paycheck Protection Program (PPP) FOIA loan-level data} (snapshot as of 2024-09-30; loans originated 2020--2021). \url{https://data.sba.gov/dataset/ppp-foia}\newline{\color{ammuted}(NAICS is self-reported; 722410 (drinking places) is a broad bar/tavern category not specific to live music)} & Texas subset, NAICS 711130/711310/722410; Austin-area subset \\
+\end{longtable}
+}
+\subsubsection*{Documents}
+{\scriptsize\renewcommand{\baselinestretch}{0.88}\selectfont\raggedright
+\begin{multicols}{2}
+\setlength{\parskip}{0pt}
+\subsubsection*{Census Bureau}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{U.S. Census Bureau.} \textit{2020 Census Tract to 2020 PUMA Relationship File.} 2020 vintage geography. \url{https://www2.census.gov/geo/docs/maps-data/data/rel2020/2020_Census_Tract_to_2020_PUMA.txt}. {\color{ammuted}(used to build the Austin MSA PUMA crosswalk)}
+\item \textbf{U.S. Census Bureau / Office of Management and Budget.} \textit{Core-Based Statistical Area Delineation Files, 2023 vintage.} 2023 OMB delineation. \url{https://www2.census.gov/programs-surveys/metro-micro/geographies/reference-files/2023/delineation-files/list1_2023.xlsx}. {\color{ammuted}(confirms the 5-county Austin-Round Rock-San Marcos MSA definition)}
+\end{itemize}
+\subsubsection*{Reports and legislation}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{National Endowment for the Arts.} \textit{Arts and Cultural Production, State Profile: Texas.} 2026-produced document; underlying data is the 2023 ACPSA release. \url{https://www.arts.gov/impact/state-profiles/texas}.
+\item \textbf{National Endowment for the Arts.} \textit{Texas Fact Sheet.} filename dated 2025; the PDF’s own footer reads “Produced 2026”. \url{https://www.arts.gov/sites/default/files/2025_texas_fact_sheet.pdf}. {\color{ammuted}(rounds Texas’s ACPSA GDP share to “3 percent”; the underlying BEA ratio is 2.5 percent)}
+\item \textbf{U.S. Small Business Administration, Office of Inspector General.} \textit{Report 25-21: SBA’s Oversight of Shuttered Venue Operators Grant Recipients.} July 2025. \url{https://www.oversight.gov/sites/default/files/documents/reports/2025-07/SBA%20OIG%20Report%2025-21.pdf}.
+\item \textbf{Congressional Research Service.} \textit{Report R46689: SBA Shuttered Venue Operators Grant Program (SVOG).} \url{https://www.congress.gov/crs_external_products/R/PDF/R46689/R46689.5.pdf}.
+\item \textbf{U.S. Small Business Administration.} \textit{New Report Shows Consequential Impacts of SBA Pandemic Relief.} January 15, 2025. \url{https://www.sba.gov/article/2025/01/15/new-report-shows-consequential-impacts-sba-pandemic-relief}.
+\item \textbf{U.S. Department of Labor.} \textit{Apprenticeship.gov, Data and Statistics.} dashboards cover FY Oct. 2014--Jul. 15, 2026. \url{https://www.apprenticeship.gov/data-and-statistics}. {\color{ammuted}(dashboards are Tableau-rendered with no static export; no Texas-by-occupation cross-tab is obtainable)}
+\item \textbf{U.S. Department of Labor.} \textit{Registered Apprenticeship Partners Information Data System (RAPIDS), dataset listing.} \url{https://catalog.data.gov/dataset/registered-apprenticeship-partners-information-database-system-rapids-dataset}. {\color{ammuted}(access level “non-public”)}
+\item \textbf{U.S. House of Representatives.} \textit{Living Wage for Musicians Act, H.R. 7763, 118th Congress (Rep. Tlaib et al.).} introduced March 20, 2024. \textit{URL not recorded}. {\color{ammuted}(text retrieved via GovInfo; exact URL not recorded)}
+\item \textbf{U.S. House of Representatives.} \textit{Living Wage for Musicians Act, H.R. 5664, 119th Congress (Rep. Tlaib et al.).} reintroduced September 30, 2025. \textit{URL not recorded}. {\color{ammuted}(text retrieved via GovInfo; exact URL not recorded)}
+\end{itemize}
+\end{multicols}
+}
+
+\subsection*{State of Texas sources}
+{\scriptsize\renewcommand{\baselinestretch}{0.88}\selectfont\raggedright
+\begin{multicols}{2}
+\setlength{\parskip}{0pt}
+\subsubsection*{Statutes and legislation}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Texas Legislature, 87th R.S. (2021).} \textit{Senate Bill 609, enrolled (creates Government Code ch. 485, subch. C, the Texas Music Incubator Rebate Program).} effective September 1, 2021. \url{https://capitol.texas.gov/tlodocs/87R/billtext/pdf/SB00609F.pdf}. {\color{ammuted}(the enacting statute; House Bill 2806 (86R) is a predecessor bill that died without a Senate vote)}
+\item \textbf{Texas Legislature, 86th R.S. (2019).} \textit{House Bill 2806, bill history.} passed the House April 24, 2019; died on the Senate intent calendar. \url{https://capitol.texas.gov/BillLookup/History.aspx?LegSess=86R&Bill=HB2806}. {\color{ammuted}(not enacted; do not cite as the enacting statute for the incubator rebate)}
+\item \textbf{Texas Legislative Budget Board.} \textit{Fiscal Note, House Bill 2806 (86R), as introduced.} 2019. \url{https://capitol.texas.gov/tlodocs/86R/fiscalnotes/html/HB02806I.htm}.
+\item \textbf{Texas Legislative Budget Board.} \textit{Fiscal Note, Senate Bill 609 (87R), as introduced.} April 6, 2021. \url{https://capitol.texas.gov/tlodocs/87R/fiscalnotes/html/SB00609I.htm}. {\color{ammuted}(the engrossed/enrolled fiscal note was not available)}
+\item \textbf{Texas Senate Research Center.} \textit{Bill Analysis, Senate Bill 609 (87R).} 2021. \url{https://www.lrl.texas.gov/scanned/srcBillAnalyses/87-0/SB609RPT.PDF}.
+\item \textbf{Texas Legislature, 89th R.S. (2025).} \textit{Senate Bill 22, enrolled (Texas moving image industry incentive fund, adds Tax Code § 151.801(g)).} effective 2025; sunsets September 1, 2035. \url{https://capitol.texas.gov/tlodocs/89R/billtext/pdf/SB00022F.pdf}. {\color{ammuted}(\$300 million per biennium for film, against \$20.2 million per biennium for the music incubator rebate)}
+\item \textbf{Texas Tax Code.} \textit{§ 351.101, Use of [Municipal Hotel Occupancy] Tax Revenue.} current. \url{https://texas.public.law/statutes/tex._tax_code_section_351.101}. {\color{ammuted}(third-party statute mirror; the official statutes.capitol.texas.gov deep link did not resolve; verify before publication)}
+\end{itemize}
+\subsubsection*{General Appropriations Act}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Texas Legislature, 89th R.S. (Senate Bill 1, 2025).} \textit{General Appropriations Act, 2026--27 biennium.} LBB print dated September 19, 2025. \url{https://www.lbb.texas.gov/Documents/GAA/General_Appropriations_Act_2026_2027.pdf}. {\color{ammuted}(Rider 40, Rider 45, Strategy C.2.1, and footnote 3)}
+\item \textbf{Texas Legislature, 88th R.S. (House Bill 1, 2023).} \textit{General Appropriations Act, 2024--25 biennium.} 2023. \url{https://capitol.texas.gov/tlodocs/88R/billtext/pdf/HB00001F.pdf}. {\color{ammuted}(Rider 39, the first Texas Music Incubator appropriation)}
+\item \textbf{Texas Legislature, 87th R.S. (Senate Bill 1, 2021).} \textit{General Appropriations Act, 2022--23 biennium.} 2021. \url{https://capitol.texas.gov/tlodocs/87R/billtext/pdf/SB00001F.pdf}. {\color{ammuted}(contains no Texas Music Incubator appropriation, confirmed by full-text search)}
+\end{itemize}
+\subsubsection*{Texas Music Office}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Texas Music Office, Office of the Governor.} \textit{Texas Music Incubator Rebate Program (TMIR), program page.} current as of retrieval. \url{https://gov.texas.gov/music/tmir}. {\color{ammuted}(sole source for the FY2026 award total (\$10.1 million / 180 recipients / 60 cities))}
+\item \textbf{Office of the Governor of Texas.} \textit{Governor Abbott Announces Texas Music Incubator Rebate Program.} September 1, 2023. \url{https://gov.texas.gov/news/post/governor-abbott-announces-texas-music-incubator-rebate-program}.
+\item \textbf{Texas Music Office.} \textit{Texas Music Incubator Rebate Program brochure and applicant checklist.} undated. \url{https://gov.texas.gov/uploads/files/music/TMIR_Brochure.pdf}. {\color{ammuted}(image-based PDFs; text extraction returns nothing)}
+\item \textbf{Texas Comptroller of Public Accounts.} \textit{Manual of Accounts, Texas Music Incubator Account No. 5193.} Fiscal 2025 edition. \url{https://fmcpa.cpa.state.tx.us/fiscalmoa/fund.jsp?num=5193}.
+\item \textbf{Texas Music Office.} \textit{Music Friendly Texas (Music Friendly Communities), program page.} current as of retrieval. \url{https://gov.texas.gov/music/page/music-friendly-communities}. {\color{ammuted}(the page’s headline count (92) and its own transcribed list (94 entries) disagree)}
+\item \textbf{Texas Music Office, Office of the Governor.} \textit{Texas Music Office homepage.} current as of retrieval. \url{https://gov.texas.gov/music}.
+\item \textbf{Texas Music Office (via Internet Archive).} \textit{Texas Music Industry Directory, archived snapshots (talent, business, and radio listings).} April 2025 snapshots. \url{http://web.archive.org/web/20250413id_/https://texasmusic.reel-scout.com/crew_directorylist_content.aspx?type=S}. {\color{ammuted}(the live directory (texasmusic.reel-scout.com) is Cloudflare-gated; the legacy gov.texas.gov/Apps/Music/Directory application is retired; no registration counts could be verified)}
+\item \textbf{TXP, Inc. (for the Texas Music Office).} \textit{The 2024 Economic Impact of Music in Texas.} January 2025 (2024 reference year). \url{https://gov.texas.gov/uploads/files/music/TXP_TX_Music_Impact_Winter_2025.pdf}. {\color{ammuted}(job counts derive from TMO’s own self-listed business directory; revenue ratios are anchored to the 2017 Economic Census; 2024 is the first year to include tourism)}
+\item \textbf{Texas Music Office.} \textit{Economic impact study index (2015, 2017, 2019, 2021, 2023, 2025 editions).} current as of retrieval. \url{https://gov.texas.gov/music/page/economic-impact-study}. {\color{ammuted}(only the 2025 edition was obtained; earlier editions were not downloaded)}
+\item \textbf{Texas Music Office.} \textit{Tourism Commission presentation (City of Austin EDIMS document).} undated; content circa 2023. \url{https://services.austintexas.gov/edims/document.cfm?id=428363}.
+\item \textbf{Texas Music Office.} \textit{Facebook post, FY2026 TMIR results.} circa 2026. \url{https://www.facebook.com/texasmusicoffice/posts/1393226669502889/}.
+\end{itemize}
+\subsubsection*{Texas Commission on the Arts}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Texas Commission on the Arts.} \textit{Legislative Appropriations Request, FY2024--2025 biennium.} 2022. \url{https://www.arts.texas.gov/wp-content/uploads/2022/07/2024-2025_LAR_TCA_2022-07-28.pdf}. {\color{ammuted}(baseline request only; does not reflect final enacted supplemental riders or grants)}
+\item \textbf{Texas Commission on the Arts.} \textit{FY26 Operating Budget.} as of October 31, 2025. \url{https://www.arts.texas.gov/wp-content/uploads/2026/02/FY26_Operating_Budget_2025-10-31.pdf}.
+\item \textbf{Texas Commission on the Arts.} \textit{FY25 Operating Budget.} as of July 31, 2025. \url{https://www.arts.texas.gov/wp-content/uploads/2025/09/FY25_Operating_Budget.pdf}.
+\item \textbf{Texas Commission on the Arts.} \textit{Texas Commission on the Arts homepage.} current as of retrieval. \url{https://www.arts.texas.gov/}. {\color{ammuted}(no discipline-level grant breakout is published; music’s share of TCA grants is not available)}
+\end{itemize}
+\subsubsection*{Texas Comptroller data}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Texas Comptroller of Public Accounts.} \textit{Mixed Beverage Gross Receipts (Texas Open Data Portal, dataset naix-2893).} obligation end dates 2007-01 through 2026-08; dataset last refreshed 2026-08-01 per its own metadata. Travis County and City of Austin extract (267,708 rows retrieved; 3,802,638 rows statewide). \url{https://data.texas.gov/dataset/Mixed-Beverage-Gross-Receipts/naix-2893}. {\color{ammuted}(mixed-beverage (liquor) permittees only; excludes beer-and-wine-only and non-alcohol venues)}
+\end{itemize}
+\end{multicols}
+}
+
+\subsection*{City of Austin sources}
+\subsubsection*{Datasets}
+\noindent{\scriptsize\itshape\color{ammuted}Every dataset below was retrieved on 2026-08-01; that column is omitted from the table.\par}
+{\scriptsize\raggedright
+\begin{longtable}{@{}P{0.60\textwidth} P{0.33\textwidth}@{}}
+\toprule
+\textbf{Series / dataset (vintage)} & \textbf{Geography \& years used} \\
+\midrule
+\endfirsthead
+\multicolumn{2}{@{}l}{\itshape (City of Austin sources, continued)}\\
+\toprule
+\textbf{Series / dataset (vintage)} & \textbf{Geography \& years used} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+
+\textbf{City of Austin (Open Budget ATX / Socrata)}: \textit{Revenue Open Budget – revised (5rhv-xasu)} (FY2021--FY2027). \url{https://data.austintexas.gov/resource/5rhv-xasu.csv} & Live Music Fund, Iconic Venue Fund, Cultural Arts Fund, Historic Preservation Fund, HOT Fund \\
+\textbf{City of Austin (Open Budget ATX / Socrata)}: \textit{Expense Open Budget – revised (yeeq-kk6v)} (FY2021--FY2027). \url{https://data.austintexas.gov/resource/yeeq-kk6v.csv} & same six HOT-related funds, expenditure side \\
+\textbf{City of Austin (Open Budget ATX / Socrata)}: \textit{Program Budget Operating Budget vs. Expense Raw Data (g5k8-8sud)} (FY2026 Q3). \url{https://data.austintexas.gov/resource/g5k8-8sud.csv}\newline{\color{ammuted}(single fiscal year only; no time series possible)} & fund/department/unit/expense-object detail, incl. ACME and Music and Entertainment activity lines \\
+\textbf{City of Austin (Socrata)}: \textit{Cultural Funding Awards (x6aj-qng8)} (1982--FY2023; dataset last updated 2024-02-29). \url{https://data.austintexas.gov/resource/x6aj-qng8.csv}\newline{\color{ammuted}(Cultural Arts Fund only, not the Live Music Fund; FY2022 is missing entirely)} & 6,476 individual awards \\
+\textbf{City of Austin (Socrata)}: \textit{Median Earnings of Creative Sector Occupations (2qxc-8cme)} (vintage not stated in metadata). \url{https://data.austintexas.gov/resource/2qxc-8cme.csv}\newline{\color{ammuted}(verify vintage before use)} & 54 rows \\
+\textbf{City of Austin (Socrata)}: \textit{Creative Sector Industry Codes, 2016 (mbwg-yjpy)} (2016). \url{https://data.austintexas.gov/resource/mbwg-yjpy.csv} & 51 rows; the City’s own NAICS-based definition of the creative sector \\
+\textbf{City of Austin (Socrata)}: \textit{Creative Workspaces, Performance Venues, Galleries \& Museums (qxfh-ycp7)} (last refreshed 2016-11-11). \url{https://data.austintexas.gov/resource/qxfh-ycp7.csv}\newline{\color{ammuted}(describes the venue stock as of roughly a decade before this project)} & 2,136 rows, facility inventory \\
+\textbf{City of Austin (Socrata)}: \textit{Number and Percentage of Creatives Reporting Access to Affordable Creative Space (r5j2-ynwq)} (2017 Creative Space Survey). \url{https://data.austintexas.gov/resource/r5j2-ynwq.csv} & 266 rows, survey-derived indicator \\
+\textbf{City of Austin (Socrata)}: \textit{Creative Content Incentive Program Agreements (qwjz-np8k)}. \url{https://data.austintexas.gov/resource/qwjz-np8k.csv} & 10 rows; film/creative-content incentives, not music grants \\
+\textbf{City of Austin (Socrata)}: \textit{Jobs Supported, Economic Development Department (69de-ksja)}. \url{https://data.austintexas.gov/resource/69de-ksja.csv} & 27 rows \\
+\textbf{City of Austin (Socrata)}: \textit{Sound Ordinance Permits (ryu3-tuin)}. \url{https://data.austintexas.gov/resource/ryu3-tuin.csv} & 6,989 rows; includes Outdoor Music Venue permits \\
+\textbf{City of Austin (Socrata)}: \textit{Sound Ordinance Permits, geographic extract (g3rj-dfgm)}. \url{https://data.austintexas.gov/resource/g3rj-dfgm.csv} & same permit universe, geocoded \\
+\textbf{City of Austin (Socrata)}: \textit{CAMP Arts and Cultural Facilities, 2017 (xjsy-32ku) and 2018 (8kxv-xaqc)} (2017 and 2018). \url{https://data.austintexas.gov/resource/xjsy-32ku.csv} & Cultural Arts Master Plan facility inventories \\
+\textbf{City of Austin (Socrata)}: \textit{ACME Museums and Cultural Centers (w2pp-ceu8)}. \url{https://data.austintexas.gov/resource/w2pp-ceu8.csv} & -- \\
+\textbf{City of Austin (Socrata)}: \textit{ACE Events (teth-r7k8)}. \url{https://data.austintexas.gov/resource/teth-r7k8.csv} & 54,169 rows \\
+\textbf{City of Austin (Socrata)}: \textit{2022 Austin Music Census microdata extracts: Details (an3p-3yqx) and Zip Codes (p7ky-riuq)} (fielded July--September 2022). \url{https://data.austintexas.gov/resource/an3p-3yqx.csv} & 2,227 respondents by 107 variables \\
+\end{longtable}
+}
+\subsubsection*{Documents}
+{\scriptsize\renewcommand{\baselinestretch}{0.88}\selectfont\raggedright
+\begin{multicols}{2}
+\setlength{\parskip}{0pt}
+\subsubsection*{Ordinances and resolutions}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{City of Austin.} \textit{Ordinance No. 20190919-149 (creates the Live Music Fund; amends City Code 11-2-7, adds 11-2-8).} adopted September 19, 2019; effective September 30, 2019. \url{https://services.austintexas.gov/edims/document.cfm?id=328565}.
+\item \textbf{City of Austin.} \textit{Resolution No. 20160303-019, Austin Music and Creative Ecosystem Omnibus Resolution.} adopted March 3, 2016. \url{https://services.austintexas.gov/edims/document.cfm?id=253186}.
+\item \textbf{City of Austin, Visitor Impact Task Force.} \textit{Visitor Impact Task Force, Final Report to Austin City Council.} June 30, 2017. \url{https://services.austintexas.gov/edims/document.cfm?id=279988}.
+\item \textbf{City of Austin.} \textit{Resolution No. 20160818-075 (creates the 18-member Visitor Impact Task Force).} circa 2017. \url{https://services.austintexas.gov/edims/document.cfm?id=285060}. {\color{ammuted}(resolution number not printed on the retrieved copy)}
+\item \textbf{City of Austin, Music \& Entertainment Division.} \textit{Live Music Fund Event Program, proposed guidelines (draft).} dated August 16, 2021. \url{https://services.austintexas.gov/edims/document.cfm?id=365831}. {\color{ammuted}(draft, not adopted text)}
+\item \textbf{City of Austin, Music Commission.} \textit{Recommendation 20220207-3b on Live Music Fund design.} February 7, 2022. \url{https://services.austintexas.gov/edims/document.cfm?id=376727}.
+\item \textbf{City of Austin, Music \& Entertainment Division.} \textit{Austin Live Music Fund, 2024 Program Guidelines.} 2024. \url{https://services.austintexas.gov/edims/document.cfm?id=423038}.
+\item \textbf{City of Austin.} \textit{Austin Live Music Fund, 2024 draft Program Guidelines.} 2024 (draft). \url{https://services.austintexas.gov/edims/document.cfm?id=426112}.
+\item \textbf{City of Austin, Music Commission.} \textit{Recommendation 20250203-010, “Evolution of the Austin Live Music Fund (2025 and beyond)”.} February 3, 2025. \url{https://services.austintexas.gov/edims/document.cfm?id=445601}.
+\item \textbf{City of Austin.} \textit{Resolution No. 20230720-123 (sets the City’s musician pay rate).} adopted July 20, 2023. \url{https://services.austintexas.gov/edims/document.cfm?id=413057}. {\color{ammuted}(applies to City-commissioned performances only)}
+\item \textbf{City of Austin.} \textit{Resolution (Version 3) on live music venue preservation.} circa 2020. \url{https://services.austintexas.gov/edims/document.cfm?id=351220}. {\color{ammuted}(version-3 draft; resolution number not printed on the retrieved copy; the related Ordinance 20201001-052 (SAVES Fund) and Resolution 20200103-013 (Live Music Venue Preservation Fund) were not separately captured (URL not recorded for either))}
+\item \textbf{City of Austin.} \textit{Ordinance No. 20200423-067 (Austin Music Disaster Relief Fund, \$1.5 million).} adopted April 23, 2020. \textit{URL not recorded}. {\color{ammuted}(primary PDF not captured; cited only via secondary reporting)}
+\item \textbf{City of Austin, Law Department.} \textit{Draft ordinance amending City Code Chapter 9-2 (Red River extended-hours pilot).} dated March 30, 2018. \url{https://services.austintexas.gov/edims/document.cfm?id=296553}.
+\end{itemize}
+\subsubsection*{Award lists and program pages}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{City of Austin.} \textit{Live Music Fund, FY2023 Event Program Awardee List.} 2023. \url{https://austin.widen.net/content/jfxwxsxktx/pdf/2023LiveMusicFundEventProgramAwardeeList.pdf}. {\color{ammuted}(369 awards, \$3,490,000 by independent line-item tally (press reports 368 awardees / \$3.5 million))}
+\item \textbf{City of Austin.} \textit{Austin Live Music Fund, FY2024 Awardee List.} 2024. \url{https://austin.widen.net/content/bpzuacfkk8/pdf/FY24-AwardeeList_Austin-Live-Music-Fund.pdf}. {\color{ammuted}(136 awards, \$4,365,000 by independent line-item tally)}
+\item \textbf{City of Austin.} \textit{2026 ACME Funding Program Award List (Live Music Fund and Elevate).} March 2026. \url{https://austin.widen.net/s/hhgtdnjqmn/almf_acme-2026-funding-program-award-list}. {\color{ammuted}(internally inconsistent totals (the venue count and the musician/promoter subtotal each disagree with the document’s own line items by a small margin); cite the document’s stated totals)}
+\item \textbf{City of Austin.} \textit{Creative Space Assistance Program, FY2019 award list.} FY2019. \url{https://austin.widen.net/view/pdf/36ruwqr9dt/FY19-CSAP-AWARDS.pdf?t.download=true}.
+\item \textbf{City of Austin.} \textit{Creative Space Assistance Program, FY2023 award list.} FY2023. \url{https://austin.widen.net/view/pdf/9xav5mpgtl/FY23-CSAP-AWARDS.pdf?t.download=true}.
+\item \textbf{City of Austin.} \textit{Creative Space Assistance Program, FY2026 award list.} FY2026. \url{https://austin.widen.net/s/m2dzk6qcvg/csap_acme-2026-funding-program-award-list}.
+\item \textbf{City of Austin.} \textit{Creative Space Assistance Program, program page.} current as of retrieval. \url{https://www.austintexas.gov/creative-space-assistance-program}.
+\item \textbf{City of Austin.} \textit{City of Austin Announces 2026 Cultural Funding Awards (news release).} March 2026. \url{https://www.austintexas.gov/communications/news/city-austin-announces-2026-cultural-funding-awards}.
+\item \textbf{City of Austin.} \textit{Live Music Fund program page (ATX Music).} current as of retrieval; FY27 cycle. \url{https://www.austintexas.gov/atxmusic/live-music-fund}.
+\item \textbf{City of Austin, Office of Arts, Culture, Music and Entertainment (ACME).} \textit{Funding programs overview page (Elevate, Thrive, Live Music Fund, Heritage Preservation, Nexus, CSAP).} current as of retrieval. \url{https://www.austintexas.gov/arts-culture/funding-programs}.
+\item \textbf{Create Austin (Long Center for the Performing Arts).} \textit{Austin Live Music Fund Application Breakdown.} 2024. \url{https://createaustin.org/wp-content/uploads/2024/03/Austin-Live-Music-Fund-Application-Breakdown2.pdf}.
+\end{itemize}
+\subsubsection*{City Auditor reports}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{City of Austin, Office of the City Auditor.} \textit{Special Request: EDD Culture and Arts Funding.} October 2024. \url{https://austin.widen.net/view/pdf/pifyu2e2j6/Special_Request_EDD_Culture_and_Arts_Funding_October_2024.pdf?t.download=true}. {\color{ammuted}(scope explicitly excludes funding for music or music-disaster relief)}
+\item \textbf{City of Austin, Office of the City Auditor.} \textit{Cultural Arts Contract Monitoring.} September 2018. \url{https://austin.widen.net/view/pdf/jep13duk08/Cultural_Arts_Contract_Monitoring_September_2018.pdf?t.download=true}.
+\item \textbf{City of Austin, Office of the City Auditor.} \textit{Audit reports index.} checked 2026-08-01. \url{https://www.austintexas.gov/auditor/audit-reports}. {\color{ammuted}(no music-specific audit exists in the index)}
+\end{itemize}
+\end{multicols}
+}
+
+\subsection*{Other states' programs and evaluations}
+{\scriptsize\renewcommand{\baselinestretch}{0.88}\selectfont\raggedright
+\begin{multicols}{2}
+\setlength{\parskip}{0pt}
+\subsubsection*{Georgia}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Georgia Department of Audits and Accounts (with Georgia Southern University CBAER).} \textit{Georgia Music Tax Credit: Economic and Fiscal Impact Analysis.} report dated December 8, 2023; published December 14, 2023. \url{https://www.audits.ga.gov/ReportSearch/download/30448}. {\color{ammuted}(the single most important peer-state document: zero credits were ever awarded over the credit’s active life)}
+\item \textbf{Georgia Office of Planning and Budget / Georgia Southern University Fiscal Research Center.} \textit{Tax Expenditure Report, FY2025 edition.} FY2025 edition; Department of Revenue data as of tax year 2021. \url{https://opb.georgia.gov/document/tax-expenditure-reports/fy-2025-tax-expenditure-report-0/download}. {\color{ammuted}(reports the musical credit as “(m)”, less than \$1 million; superseded by the DOAA finding of exactly zero)}
+\item \textbf{Georgia Office of Planning and Budget.} \textit{Tax Expenditure Report, FY2024 edition.} FY2024 edition; Department of Revenue data as of tax year 2020. \url{https://open.ga.gov/openga/report/downloadFile?rid=29170}.
+\item \textbf{Georgia Department of Revenue.} \textit{Musical Tax Credit (program page).} undated. \url{https://dor.georgia.gov/musical-tax-credit}. {\color{ammuted}(describes the tier-1 bonus rate but not the full tier-1/tier-2 structure)}
+\item \textbf{Georgia Department of Revenue.} \textit{Ga. Comp. R. \& Regs. R. 560-7-8-.61.} 2017, amended 2025. \url{https://www.law.cornell.edu/regulations/georgia/Ga-Comp-R-Regs-R-560-7-8-.61}. {\color{ammuted}(third-party (Cornell) reproduction)}
+\item \textbf{Georgia Department of Economic Development.} \textit{Ga. Comp. R. \& Regs. R. 159-1-2-.01.} 2017, amended 2025. \url{https://rules.sos.ga.gov/gac/159-1-2}. {\color{ammuted}(official Secretary of State source)}
+\item \textbf{Official Code of Georgia Annotated.} \textit{O.C.G.A. § 48-7-40.33 (Georgia Music Tax Credit statute).} \textit{URL not recorded}. {\color{ammuted}(full statutory text not retrieved (blocked on every mirror attempted); statutory substance reconstructed from the DOAA evaluation and the Department of Revenue/GDEcD rules above)}
+\end{itemize}
+\subsubsection*{Louisiana}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Louisiana Department of Revenue.} \textit{Tax Exemption Budget, 2025--2026 edition.} actuals through FYE June 30, 2025; projections for FYE 2026--2027. \url{https://dam.ldr.la.gov/publications/TEB(2025)(WEB).pdf}. {\color{ammuted}(primary utilization source; figures are revenue loss (credits claimed), not credits certified or the statutory cap)}
+\item \textbf{Louisiana Department of Revenue.} \textit{Return on Investment Analysis for Selected Louisiana Tax Incentive Programs (R-21000).} published January 2025; analyzes FY2023. \url{https://dam.ldr.la.gov/publications/R-21000(1_25)%20ROI%20Report%20d5%20(WEB).pdf}. {\color{ammuted}(neither Louisiana music credit appears; both fall below the \$1 million statutory trigger for review)}
+\item \textbf{Louisiana Legislature.} \textit{La. R.S. 47:6023 (Sound Recording Investor Tax Credit), current text.} current, incl. 2024 Third Extraordinary Session amendments. \url{https://www.legis.la.gov/Legis/Law.aspx?d=321887}.
+\item \textbf{Louisiana Legislature, 2025 R.S..} \textit{House Bill 653, enrolled (would have extended and expanded the Sound Recording Investor Tax Credit).} enrolled June 2025. \url{https://www.legis.la.gov/legis/ViewDocument.aspx?d=1421402}. {\color{ammuted}(passed 89-7 (House) and 32-5 (Senate); vetoed by the Governor June 20, 2025)}
+\item \textbf{Louisiana Legislature.} \textit{House Bill 653 (2025), bill status and action history.} current as of retrieval. \url{https://www.legis.la.gov/Legis/BillInfo.aspx?s=25RS&b=HB653&sbi=y}.
+\item \textbf{Louisiana Department of Revenue.} \textit{2024 Third Extraordinary Session Legislative Summaries.} rev. January 2, 2025. \url{https://dam.ldr.la.gov/miscellaneous/2024%20Tax%20Reform%20Legislative%20Summaries%20rev%201.2.25.pdf}. {\color{ammuted}(self-labeled “informal advice,” not binding on LDR)}
+\item \textbf{Louisiana Economic Development (Louisiana Entertainment).} \textit{Sound Recording and Live Performance Production, program pages.} current as of retrieval; both programs closed to new applications June 30, 2025. \url{https://www.louisianaentertainment.gov/music/sound-recording-program}.
+\item \textbf{Louisiana Legislature.} \textit{La. R.S. 47:6034 (Musical and Theatrical Production Tax Credit), full statutory text.} \textit{URL not recorded}. {\color{ammuted}(not retrieved; every mirror attempted returned an error. Program design reconstructed from the Tax Exemption Budget and the Louisiana Entertainment program pages)}
+\end{itemize}
+\subsubsection*{New York}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{New York State Senate.} \textit{N.Y. Tax Law § 24-c (New York City Musical and Theatrical Production Tax Credit).} current. \url{https://www.nysenate.gov/legislation/laws/TAX/24-C}. {\color{ammuted}(the research brief’s working citation of § 24-a was wrong; § 24-a is the separate, much smaller upstate program)}
+\item \textbf{Empire State Development.} \textit{New York City Musical and Theatrical Production Tax Credit, program page.} current as of retrieval. \url{https://esd.ny.gov/new-york-city-musical-and-theatrical-production-tax-credit}.
+\item \textbf{Empire State Development.} \textit{Program Guidelines, NYC Musical and Theatrical Production Tax Credit.} rev. July 5, 2024. \url{https://esd.ny.gov/sites/default/files/media/document/Program-Guidelines-NYC-MT-07052024.pdf}. {\color{ammuted}(stale on the cap and sunset date (states \$300 million and September 30, 2025); still authoritative on eligibility and equity requirements)}
+\item \textbf{Empire State Development.} \textit{Musical and Theatrical Tax Credit Annual Report, 2024 (upstate, § 24-a program).} calendar year 2024; PDF authored January 23, 2025. \url{https://www.esd.ny.gov/esd-media-center/reports/musical-and-theatrical-tax-credit-annual-report-2024}. {\color{ammuted}(covers only the smaller upstate program; ESD publishes no equivalent public report for the larger NYC program)}
+\item \textbf{Justia (New York Consolidated Laws).} \textit{N.Y. Tax Law § 24-a (Empire State Musical and Theatrical Production Credit).} 2024 code. \url{https://law.justia.com/codes/new-york/tax/article-1/24-a/}. {\color{ammuted}(blocked by Cloudflare on direct fetch; content obtained via search summary and should be treated as secondary)}
+\item \textbf{New York State Department of Taxation and Finance.} \textit{Annual Report on New York State Tax Expenditures, FY2027 edition, Table 8 (cross-article tax credits).} 2026 report. \url{https://www.tax.ny.gov/data/stats/ter/fiscal-year27/cross-article-tax-credits.htm}. {\color{ammuted}(primary source for actual claims by tax year)}
+\item \textbf{New York State Department of Taxation and Finance.} \textit{Annual Report on New York State Tax Expenditures, FY2026 edition, Table 8.} 2025 report. \url{https://www.tax.ny.gov/data/stats/ter/fiscal-year26/cross-article-tax-credits.htm}.
+\item \textbf{New York State Department of Taxation and Finance.} \textit{FY2026 Executive Budget, tax expenditure proposals.} January 2025. \url{https://www.tax.ny.gov/data/stats/ter/fiscal-year26/executive-budget-tax-expenditure-proposals.htm}. {\color{ammuted}(source of a disputed \$1.5 million per-production cap figure that does not appear in the current statute)}
+\item \textbf{New York State Department of Taxation and Finance.} \textit{FY2027 Executive Budget, tax expenditure proposals.} January 2026. \url{https://www.tax.ny.gov/data/stats/ter/fiscal-year27/executive-budget-tax-expenditure-proposals.htm}.
+\end{itemize}
+\subsubsection*{Tennessee}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Tennessee Entertainment Commission.} \textit{TEC Scoring Incentive Program Guidelines.} rev. July 1, 2025. \url{https://www.tnentertainment.com/lib/file/manager/PDFs/Guidelines_TEC_Scoring_Incentive_Program_Rev_July_1st_2025.pdf}. {\color{ammuted}(funded through the Visual Content Modernization Act of 2018, not the 2006 act named in the original research brief; the underlying T.C.A. section numbers were not verified)}
+\item \textbf{Tennessee Entertainment Commission.} \textit{Music incentives page.} current as of retrieval. \url{https://www.tnentertainment.com/music/incentives/}.
+\item \textbf{Tennessee Entertainment Commission.} \textit{Complete Production Incentive Guidelines (film/TV).} rev. July 10, 2024. \url{https://www.createtn.com/lib/file/manager/TEC_Complete_Production_Incentive_Guidelines.pdf}. {\color{ammuted}(music videos are expressly ineligible; conflicts with the TEC website on the film minimum-spend threshold)}
+\item \textbf{Tennessee Entertainment Commission.} \textit{Film incentives page.} current as of retrieval. \url{https://www.tnentertainment.com/film/incentives/}.
+\item \textbf{State of Tennessee, Department of Finance and Administration.} \textit{State Budget Document, FY2026--2027, Volume 1.} published January/February 2026. \url{https://www.tn.gov/content/dam/tn/finance/budget/documents/budget-archive/budget-documents/2027BudgetDocumentVol1.pdf}. {\color{ammuted}(line 330.17 (Film and Television Incentive Fund) funds both the film and the music/scoring incentive with no breakout)}
+\item \textbf{State of Tennessee, Department of Finance and Administration.} \textit{State Budget Document, FY2025--2026, Volume 1.} published January/February 2025. \url{https://www.tn.gov/content/dam/tn/finance/budget/documents/budget-archive/budget-documents/2026BudgetDocumentVol1.pdf}.
+\end{itemize}
+\subsubsection*{Cross-state benchmarking}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Oxford Economics.} \textit{The Concerts and Live Entertainment Industry.} July 2021 report; 2019 reference year. \textit{URL not recorded}. {\color{ammuted}(not retrieved directly; a nine-state comparison table is reproduced in the Georgia DOAA evaluation (Table 4); Texas is not among the nine states shown there)}
+\end{itemize}
+\end{multicols}
+}
+
+\subsection*{Surveys, studies, and industry reports}
+{\scriptsize\renewcommand{\baselinestretch}{0.88}\selectfont\raggedright
+\begin{multicols}{2}
+\setlength{\parskip}{0pt}
+\subsubsection*{Austin Music Census and related city studies}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Titan Music Group, LLC (for the City of Austin Economic Development Department, Music \& Entertainment Division).} \textit{The Austin Music Census: A Data-Driven Assessment of Austin’s Commercial Music Economy.} fielded late 2014; published June 1, 2015; income data are pre-tax calendar 2013. \url{https://austin.widen.net/content/om7zqn1qbx/pdf/Austin_Music_Census_Interactive_PDF_53115.pdf}. {\color{ammuted}(self-selected online convenience sample, n=3,968; authored by Titan Music Group, not TXP; microdata never publicly released)}
+\item \textbf{Sound Music Cities.} \textit{2022 Greater Austin Music Census – Summary Report.} fielded July 15--September 12, 2022; published February 2023. \url{https://www.austinmusiccensus.org/s/2022-Greater-Austin-Music-Census-SUMMARY-REPORT-v13-optimized.pdf}. {\color{ammuted}(n=2,260, self-selected; income questions were deliberately removed; image-only PDF)}
+\item \textbf{Sound Music Cities.} \textit{2022 Greater Austin Music Census – Data Appendix.} 2023. \url{https://www.austinmusiccensus.org/s/2022-Greater-Austin-Music-Census-Data-APPENDIX-v12-optimized.pdf}.
+\item \textbf{Sound Music Cities.} \textit{2022 Greater Austin Music Census – DEI Data Deep Dive Appendix.} 2023. \url{https://www.austinmusiccensus.org/s/2022-Greater-Austin-Music-Census-DEI-Data-APPENDIX-v12.pdf}. {\color{ammuted}(image-only PDF)}
+\item \textbf{City of Austin Economic Development Department.} \textit{Music and Creative Ecosystem Stabilization Recommendations.} June 2016. \url{https://austin.widen.net/content/smcazf04mu/pdf/Music_and_Creative_Ecosystem_Stabilization_Recommendations__June_2016_.pdf}.
+\item \textbf{City of Austin.} \textit{Building Austin’s Creative Capacity – Needs Assessment.} 2016. \url{https://austin.widen.net/content/3ukvlrtdte/pdf/BuildingAustin_sCreativeCapacity_Compilation.pdf}.
+\item \textbf{City of Austin.} \textit{Thriving in Place: Supporting Austin’s Cultural Vitality Through Place-Based Economic Development.} January 2018. \url{https://austin.widen.net/content/cmebuokend/pdf/ThrivinginPlaceReport_1_30_18.pdf}.
+\item \textbf{TXP, Inc..} \textit{The Economic Impact of Music: 2016 UPDATE.} February 2016, using 2014 data. \url{https://austin.widen.net/content/a0case0pss/pdf/TXP-Austin-Music-Impact-Update-2016-Final.pdf}. {\color{ammuted}(roughly two-thirds of the headline impact rests on a tourism-attribution assumption, not a direct measurement)}
+\item \textbf{University of Texas at Austin (Prof. Eric Drott et al.).} \textit{Support Austin Musicians.} drafted July 2024. \url{https://supportaustinmusicians.org/final-summary/}. {\color{ammuted}(approximately 60 non-random interviews; project website, no named lead author, not peer reviewed)}
+\end{itemize}
+\subsubsection*{National surveys of musician income}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Krueger, Alan B., and Ying Zhen, with James Reeves (Music Industry Research Association, Princeton University Survey Research Center, and MusiCares).} \textit{Report on the MIRA Musician Survey.} embargoed until June 22, 2018; fieldwork April--June 2018. \url{http://web.archive.org/web/20181003155850/https://img1.wsimg.com/blobby/go/53aaa2d4-793a-4400-b6c9-95d6618809f9/downloads/1cgjrbs3b_761615.pdf}. {\color{ammuted}(n=1,227, nonrandom, 62\% recruited from MusiCares clients; themira.org now returns 403, recovered via the Internet Archive)}
+\item \textbf{Music Industry Research Association.} \textit{MIRA Musician Survey, questionnaire.} 2018. \url{https://www.ehcca.com/presentations/musicianssummit1/zhen_1_handout.pdf}.
+\item \textbf{Zhen, Ying.} \textit{MIRA wellbeing and representativeness, conference slides.} 2018. \url{https://cip2.gmu.edu/wp-content/uploads/sites/31/2020/09/Ying-Zhen-Presentation-Slides.pdf}.
+\item \textbf{Zhen, Ying.} \textit{Career challenges facing musicians in the United States.} Journal of Cultural Economics, 2022. \url{https://link.springer.com/article/10.1007/s10824-022-09442-x}. {\color{ammuted}(paywalled; abstract only, not independently verified beyond the citation)}
+\item \textbf{Zhen, Ying.} \textit{Gender and Racial Discrimination in the U.S. Music Industry.} Sage, 2023. \url{https://journals.sagepub.com/doi/10.1177/05694345221092958}. {\color{ammuted}(presumed paywalled; not retrieved)}
+\item \textbf{Future of Music Coalition (Berkman Center / Rethinking Music).} \textit{Artist Revenue Streams: A Multi-Method Research Project.} 2011--2012 fieldwork. \url{https://cyber.harvard.edu/sites/cyber.harvard.edu/files/Rethinking_Music_Artist_Revenue_Streams.pdf}.
+\item \textbf{DiCola, Peter.} \textit{Money from Music: Survey Evidence on Musicians’ Revenue and Lessons About Copyright Incentives.} Arizona Law Review 55, no. 2 (2013): 301--370. \url{https://arizonalawreview.org/pdf/55-2/55arizlrev301.pdf}. {\color{ammuted}(peer-reviewed version of the Future of Music Coalition survey; publishes medians (music-income median \$18,000) where the project website published only means)}
+\item \textbf{Future of Music Coalition.} \textit{Money from Music, survey snapshot and data memos.} fielded September 6--October 28, 2011. \url{http://web.archive.org/web/20160323201420/http://money.futureofmusic.org/survey-snapshot/}. {\color{ammuted}(project site (money.futureofmusic.org) no longer resolves; recovered from the Internet Archive)}
+\item \textbf{Americans for the Arts.} \textit{Arts \& Economic Prosperity 6: The Economic and Social Impact Study of Nonprofit Arts and Culture Organizations and Their Audiences.} 2023 (study year: calendar 2022). \url{https://nmculture.org/assets/files/reports/AEP6_NationalReport.pdf}. {\color{ammuted}(original host (americansforthearts.org) returns 403; obtained from a mirror. Austin, Houston, and San Antonio did not participate; Texas coverage is limited to Dallas-Fort Worth and Frisco)}
+\end{itemize}
+\subsubsection*{Other-city music censuses}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Sound Music Cities.} \textit{Nashville Music Census, 2024.} 2024. \url{https://www.greaternashvillemusiccensus.org/results}. {\color{ammuted}(n=4,256 (the census homepage states 4,265, an unresolved discrepancy); average, not median, income)}
+\item \textbf{Sound Music Cities.} \textit{New Orleans Music Census, 2024.} fieldwork May 10--June 29, 2024; report dated August 2024. \url{https://www.nolamusiccensus.org/}.
+\item \textbf{Sound Music Cities.} \textit{Washington, D.C. Music Census, 2024.} fieldwork April 10--May 29, 2024; report dated October 2024. \url{https://www.dcmusiccensus.org/s/2024-DC-Music-Census-Report-Final-10-25-24-compressed.pdf}. {\color{ammuted}(the only cohort city publishing gig-pay medians alongside averages)}
+\item \textbf{Sound Music Cities / City of Sacramento Office of Arts and Culture.} \textit{Sacramento Music Census.} fieldwork October--November 2022; published August 2023. \url{https://www.cityofsacramento.gov/content/dam/portal/ccs/office-of-arts-and-culture/music-census/2023-August-Sacramento-Music-Census-Summary-Report-PRINT.pdf}. {\color{ammuted}(image-only PDF with no text layer; every figure is OCR output and should be checked against the PDF by eye)}
+\item \textbf{Sound Music Cities.} \textit{Minneapolis Music Census, 2024.} fieldwork April 12--May 6, 2024. \url{https://mplsartsandculture.org/2024-minneapolis-music-census}.
+\item \textbf{Sound Music Cities.} \textit{Cleveland Music Census.} fieldwork November 8--December 15, 2023; released August 2024. \url{https://clevelandrocksppf.org/wp-content/uploads/2024/08/2024-Cleveland-Summary-Report-v3.pdf}.
+\item \textbf{Sound Music Cities / Johns Hopkins 21st Century Cities Initiative.} \textit{Baltimore Music Census, 2024.} fieldwork March 4--June 26, 2024. \url{https://21cc.jhu.edu/wp-content/uploads/sites/64/baltimore-music-census-report.pdf}. {\color{ammuted}(n=576, the smallest cohort city; the Industry and Venue subgroups are roughly 35--40 respondents each)}
+\item \textbf{Sound Music Cities.} \textit{Charlotte Music Ecosystem Study and Action Plan.} released May 6, 2019. \url{http://web.archive.org/web/20230121011932/http://musiceverywhereclt.com/files/2019/04/2019_0425_SMC_Charlotte_Digital.pdf}. {\color{ammuted}(n=1,802 (766 professionals); publishes a true median (under \$10,000); a different instrument from the 2025 Charlotte Music Census)}
+\item \textbf{Sound Music Cities.} \textit{Pittsburgh Music Ecosystem Study.} released July 2018. \textit{URL not recorded}. {\color{ammuted}(report PDF not obtainable (404, no Internet Archive capture); n=1,800+ per the project announcement; no Pittsburgh income figures available)}
+\item \textbf{Sound Music Cities.} \textit{Multi-City Music Census Cohort: additional editions (Anchorage, Chattanooga, Columbus, Lawrence, Tulsa, NW Arkansas, Greensboro, Detroit, Charlotte 2025, and Baton Rouge).} fielded 2022--2026 across the 2023--24 and 2025--26 cohorts. \url{https://www.soundmusiccities.com/music-census-cohort}. {\color{ammuted}(individual per-city report URLs were not separately captured in this pass; Anchorage and Baton Rouge exist only as Tableau dashboards, and Tulsa only as an Issuu-hosted PDF)}
+\item \textbf{Brown, Megan (Musicians’ Association of Seattle, AFM Local 76-493).} \textit{Seattle’s Working Musicians.} 2015. \textit{URL not recorded}. {\color{ammuted}(n=124; local file only, no public URL recorded; median music income \$15,000/year)}
+\end{itemize}
+\subsubsection*{HAAM (Health Alliance for Austin Musicians)}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Health Alliance for Austin Musicians (HAAM).} \textit{2014 Annual Impact Report.} 2014. \url{https://www.myhaam.org/s/2014-Annual-Impact-Report}.
+\item \textbf{HAAM.} \textit{2015 Annual Impact Report.} 2015. \url{https://www.myhaam.org/s/2015-Annual-Impact-Report}.
+\item \textbf{HAAM.} \textit{2016 Annual Impact Report.} 2016. \url{https://www.myhaam.org/s/2016-Annual-Impact-Report}.
+\item \textbf{HAAM.} \textit{2017-18 Annual Impact Report.} 2017--2018. \url{https://www.myhaam.org/s/2017-18-Annual-Impact-Report}.
+\item \textbf{HAAM.} \textit{2019 Annual Impact Report.} 2019. \url{https://www.myhaam.org/s/2019-HAAM-Annual-Impact-Report.pdf}. {\color{ammuted}(reprints 2015 Austin Music Census figures as though current)}
+\item \textbf{HAAM.} \textit{2020 Annual Impact Report.} 2020. \url{https://www.myhaam.org/s/2020-Annual-Impact-Report}. {\color{ammuted}(source of the food-insecurity finding (29\% pre-COVID to 74\% post-COVID))}
+\item \textbf{HAAM.} \textit{2022 Annual Impact Report.} 2022. \url{https://static1.squarespace.com/static/5ed3d236709a614ffb385827/t/6568bc7f36a53b2bce6899af/1747062958076/2022+HAAM+Digital+Annual+Report_.pdf}.
+\item \textbf{HAAM.} \textit{2023 Annual Impact Report (published under the filename “HAAM-Annual-Report\_2024\_rev.pdf”; the cover and content are FY2023).} 2023. \url{https://www.myhaam.org/s/HAAM-Annual-Report_2024_rev.pdf}. {\color{ammuted}(cite by content year, not filename)}
+\item \textbf{HAAM.} \textit{2024 Annual Impact Report (published under the filename “HAAM-Annual-Report-2024\_Errata.pdf”).} 2024. \url{https://www.myhaam.org/s/HAAM-Annual-Report-2024_Errata.pdf}.
+\item \textbf{HAAM.} \textit{2025 Annual Impact Report (“Sustaining the Sound”).} 2025. \url{https://www.myhaam.org/s/HAAM-Sustaining-the-Sound-2025_web.pdf}.
+\item \textbf{HAAM.} \textit{Presentations to Austin City Council (two decks).} undated. \url{https://services.austintexas.gov/edims/document.cfm?id=382651}. {\color{ammuted}(image-heavy slide decks; content overlaps the annual reports)}
+\item \textbf{Health Alliance for Austin Musicians (EIN 80-0147620), via ProPublica Nonprofit Explorer.} \textit{IRS Form 990 filings, FY2011--FY2023.} FY2011--FY2023 (ProPublica’s data stops at FY2023). \url{https://projects.propublica.org/nonprofits/organizations/800147620}.
+\end{itemize}
+\subsubsection*{SIMS Foundation}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{SIMS Foundation.} \textit{IRS Form 990, FY2023.} FY2023. \url{https://simsfoundation.org/wp-content/uploads/2025/08/Sims-2023-Form-990-PUBLIC-COPY.pdf}. {\color{ammuted}(the 711 recipients / \$536,205 figure is the most defensible SIMS annual service-volume number, from a signed filing)}
+\item \textbf{SIMS Foundation.} \textit{Audit Report, 2023.} 2023. \url{https://simsfoundation.org/wp-content/uploads/2025/08/SIMS-Foundation-Audit-Report-2023.pdf}.
+\item \textbf{SIMS Foundation (EIN 74-2766013), via ProPublica Nonprofit Explorer.} \textit{IRS Form 990 filings, FY2011--FY2023.} FY2011--FY2023. \url{https://projects.propublica.org/nonprofits/organizations/742766013}.
+\item \textbf{SIMS Foundation.} \textit{Impact page (cumulative clients, sessions, and investment since 1995).} current as of retrieval. \url{https://simsfoundation.org/impact/}.
+\end{itemize}
+\subsubsection*{Black Fret / Sonic Guild}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Sonic Guild (formerly Black Fret).} \textit{About page (cumulative grants and musicians funded).} current as of retrieval. \url{https://sonicguild.org/about/}. {\color{ammuted}(Austin and Seattle chapters combined; do not treat as an Austin-only figure)}
+\item \textbf{Black Fret / Sonic Guild (EIN 46-0576111), via ProPublica Nonprofit Explorer.} \textit{IRS Form 990 filings, FY2014--FY2023.} FY2014--FY2023. \url{https://projects.propublica.org/nonprofits/organizations/460576111}. {\color{ammuted}(ProPublica’s API does not populate the grants-paid field for this organization)}
+\end{itemize}
+\subsubsection*{MusiCares}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{MusiCares (Recording Academy) (EIN 95-4470909), via ProPublica Nonprofit Explorer.} \textit{IRS Form 990 filings, FY2011--FY2023.} FY2011--FY2023. \url{https://projects.propublica.org/nonprofits/organizations/954470909}. {\color{ammuted}(no Texas- or Austin-specific distribution figure is published)}
+\end{itemize}
+\subsubsection*{RIAA}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Recording Industry Association of America (RIAA).} \textit{2025 Year-End Music Industry Revenue Report.} calendar year 2025, published March 2026. \url{https://www.riaa.com/wp-content/uploads/2026/03/RIAA-Year-End-Revenue-2025.pdf}. {\color{ammuted}(reports on a wholesale basis, a methodology change from prior years)}
+\item \textbf{RIAA.} \textit{2024 Year-End Music Industry Revenue Report.} calendar year 2024, published March 2025. \url{https://www.riaa.com/wp-content/uploads/2025/03/RIAA-2024Year-End-Revenue-Report.pdf}. {\color{ammuted}(reports on a retail basis; do not compare dollar totals to the 2025 report without adjusting for basis)}
+\item \textbf{RIAA.} \textit{2015 Year-End Shipments \& Revenue memo.} calendar year 2015, published March 2016. \url{https://www.riaa.com/wp-content/uploads/2016/03/RIAA-2015-Year-End-shipments-memo.pdf}.
+\item \textbf{RIAA.} \textit{Reports archive.} ongoing. \url{https://www.riaa.com/reports/}.
+\item \textbf{RIAA.} \textit{U.S. Music Revenue Database (interactive).} ongoing. \url{https://www.riaa.com/u-s-sales-database/}.
+\end{itemize}
+\subsubsection*{MLC (Mechanical Licensing Collective)}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{The Mechanical Licensing Collective (MLC).} \textit{2024 Annual Report.} FY2024, published circa 2025. \url{https://themlc.com/hubfs/The%20MLC%202024%20Annual%20Report.pdf}.
+\item \textbf{MLC.} \textit{2025 Annual Report.} FY2025, published circa March 2026. \url{https://themlc.com/hubfs/The%20MLC%202025%20Annual%20Report.pdf}.
+\item \textbf{MLC.} \textit{Historical Unmatched Royalties dashboard.} live dashboard; snapshot 2026-08-01. \url{https://www.themlc.com/historical-unmatched-royalties}. {\color{ammuted}(figures update continuously as matches are made)}
+\end{itemize}
+\subsubsection*{SoundExchange}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{SoundExchange.} \textit{2024 Fiscal Report (audited).} FY2024, with FY2022--2023 comparison. \url{https://soundexchange.com/wp-content/uploads/2025/05/2024-SoundExchange-Fiscal-Report-Audited-Financials.pdf}. {\color{ammuted}(official filing under 37 C.F.R. 370.5(c); the highest-confidence source in this category)}
+\item \textbf{SoundExchange.} \textit{Press release, Q2 2025 distributions.} August 21, 2025. \url{https://soundexchange.com/2025/08/21/soundexchange-distributes-241-million-in-digital-royalties-to-creators-in-q2-2025/}.
+\item \textbf{SoundExchange.} \textit{“Tops \$13B Distribution Milestone” (press release).} 2025. \url{https://soundexchange.com/news/soundexchange-tops-13b-distribution-milestone/}.
+\end{itemize}
+\subsubsection*{NASAA}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{National Assembly of State Arts Agencies (NASAA).} \textit{State Arts Agency Revenues, Fiscal Year 2026.} February 2026. \url{https://nasaa-arts.org/wp-content/uploads/2026/02/FY2026-State-Arts-Agency-Revenues-Report_final-updated.pdf}. {\color{ammuted}(agency self-report survey gathered October--December of the preceding year; “current year” figures are enacted/projected, not year-end actuals)}
+\item \textbf{NASAA.} \textit{State Arts Agency Revenues, Fiscal Year 2025.} February 2025. \url{https://tsd-wpe-largefs-storage.s3.us-east-1.amazonaws.com/nasaa/fileBucket/2025/02/FY2025-State-Arts-Agency-Revenues-Report_021225.pdf}.
+\item \textbf{NASAA.} \textit{Public Funding Sourcebook (state-by-state appropriations, 1970--present).} current as of retrieval. \url{https://nasaa-arts.org/nasaa_research/sourcebook-data/}. {\color{ammuted}(member/purchase-gated; not independently accessed)}
+\end{itemize}
+\subsubsection*{Industry, platform, and advocacy materials}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Spotify.} \textit{Loud \& Clear (self-published royalty and payout data).} 2025 royalty data, published circa March 2026. \url{https://loudandclear.byspotify.com/}. {\color{ammuted}(platform-reported, self-published, not independently audited)}
+\item \textbf{Spotify.} \textit{Loud and Clear: Music Economics Highlights (Newsroom post).} March 11, 2026. \url{https://newsroom.spotify.com/2026-03-11/loud-and-clear-music-economics-highlights/}.
+\item \textbf{Bazinet, Jason, lead author (Citi GPS: Global Perspectives \& Solutions).} \textit{Putting the Band Back Together: Remastering the World of Music.} August 6, 2018. \url{https://www.citigroup.com/global/insights/music-industry}. {\color{ammuted}(the widely cited 12\% artist-share figure counts \$16.9 billion of radio and video advertising revenue in its \$43 billion denominator; the direction of the trend (rising from 7\% in 2000) is often reported backwards)}
+\item \textbf{Union of Musicians and Allied Workers (UMAW).} \textit{Justice at Spotify (campaign page).} campaign launched October 2020. \url{https://weareumaw.org/justice-at-spotify}. {\color{ammuted}(advocacy arithmetic, not audited data; UMAW has never fielded a survey of its own members’ earnings)}
+\item \textbf{UMAW.} \textit{Streaming resources page.} current as of retrieval. \url{https://weareumaw.org/streaming-resources}.
+\item \textbf{UMAW.} \textit{Fair Pay at SXSW (campaign page).} 2024 cycle. \url{https://weareumaw.org/fair-pay-at-sxsw}.
+\item \textbf{Music Workers Alliance.} \textit{Website and per-stream advocacy figures.} current as of retrieval. \url{https://www.musicworkersalliance.org/}. {\color{ammuted}(no earnings survey or member income data; figures derive from the same third-party per-stream rate as UMAW)}
+\item \textbf{The Trichordist.} \textit{Royalty Rates (blog category).} figures mostly 2015--2019 vintage. \url{https://thetrichordist.com/category/royalty-rates-2/}. {\color{ammuted}(self-described artist-advocacy blog; data from confidentially supplied indie-label figures, not independently verifiable; the ultimate source behind most third-party per-stream-rate claims in this category)}
+\item \textbf{American Federation of Musicians (AFM).} \textit{Sound Recording Labor Agreement (SRLA), scale rates in effect through July 31, 2026.} current through 2026-07-31. \textit{URL not recorded}. {\color{ammuted}(local file only, no public URL recorded)}
+\item \textbf{American Federation of Musicians, Local 433 (Austin).} \textit{Local chapter page.} snapshot 2026-08-01. \url{https://afm433.com}. {\color{ammuted}(publishes no scale rates of any kind; Austin union scale is not public)}
+\item \textbf{Goldman Sachs.} \textit{Music streaming services are on the cusp of major structural change.} July 31, 2023. \url{https://www.goldmansachs.com/insights/articles/music-streaming-services-are-on-the-cusp-of-major-structural-change}. {\color{ammuted}(the full “Music in the Air” report is client-only for every edition; no artist-earnings split is public in any Goldman material)}
+\item \textbf{Castle, Christian L., and Claudio Feijóo (World Intellectual Property Organization, Standing Committee on Copyright and Related Rights).} \textit{Study on the Artists in the Digital Music Marketplace: Economic and Legal Considerations (SCCR/41/3).} June 1, 2021. \textit{URL not recorded}. {\color{ammuted}(local file only, no public URL recorded; the study’s own disclaimer states it does not reflect the views of WIPO or its member states)}
+\item \textbf{Bandcamp.} \textit{Homepage and Fair Trade Music Policy page (cumulative artist payouts).} snapshot 2026-08-01. \url{https://bandcamp.com/}. {\color{ammuted}(undated marketing counters; the homepage and policy-page totals disagree slightly)}
+\item \textbf{Patreon.} \textit{About page (cumulative creator earnings).} snapshot 2026-08-01. \url{https://www.patreon.com/about}. {\color{ammuted}(undated marketing-page counters with no musician-specific breakout)}
+\item \textbf{Duetti.} \textit{2024 Music Economics Report.} published January 23, 2025, covering calendar 2024. \url{https://report.duetti.co}. {\color{ammuted}(Duetti buys independent artists’ catalogs and has a direct financial stake in perceived per-stream rates)}
+\end{itemize}
+\end{multicols}
+}
+
+\subsection*{News and trade coverage}
+{\scriptsize\renewcommand{\baselinestretch}{0.88}\selectfont\raggedright
+\begin{multicols}{2}
+\setlength{\parskip}{0pt}
+\subsubsection*{Austin Chronicle}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Austin Chronicle.} \textit{Your Live Music Fund FAQs, Answered.} 2026-07-16. \url{https://www.austinchronicle.com/music/2026-07-16/your-live-music-fund-faqs-answered/}.
+\item \textbf{Austin Chronicle.} \textit{A Threat to the Empire (Caroline Drew).} 2026-01-15. \url{https://www.austinchronicle.com/music/a-threat-to-the-empire/}.
+\item \textbf{Austin Chronicle.} \textit{In the Pocket: The Lost Well Relocates to Its Dream Home on Airport.} 2025-08-14. \url{https://www.austinchronicle.com/columns/in-the-pocket-the-lost-well-relocates-to-its-dream-home-on-airport-13406522/}.
+\item \textbf{Austin Chronicle.} \textit{Live Music Venue Parish Is Moving Again.} 2025-05-15. \url{https://www.austinchronicle.com/daily/music/2025-05-15/live-music-venue-parish-is-moving-again/}.
+\item \textbf{Austin Chronicle.} \textit{Eastside Venue The Coral Snake Has Closed.} 2025-01-21. \url{https://austinchronicle.com/daily/music/2025-01-21/eastside-venue-the-coral-snake-has-closed}.
+\item \textbf{Austin Chronicle.} \textit{Closures Abound for Beloved Austin Hangouts and More Culture News.} 2024-10-24. \url{https://www.austinchronicle.com/music/closures-abound-for-beloved-austin-hangouts-and-more-culture-news-13284302/}.
+\item \textbf{Austin Chronicle.} \textit{Rally Austin Lends Empire Control Room Team \$2.2 Million to Buy Garage, Expand.} 2024-10-01. \url{https://www.austinchronicle.com/music/rally-austin-lends-empire-control-room-team-22-million-to-buy-garage-expand-13286511/}.
+\item \textbf{Austin Chronicle.} \textit{Why Venues Are Struggling to Stay Open in the Live Music Capital of the World.} 2024-07-11. \url{https://www.austinchronicle.com/music/why-venues-are-struggling-to-stay-open-in-the-live-music-capital-of-the-world-13283901/}. {\color{ammuted}(updated 2025-09-30)}
+\item \textbf{Austin Chronicle.} \textit{What Hole in the Wall’s Freshly Inked 20-Year Lease Means for Other At-Risk Venues (Genevieve Wood).} 2023-08-24. \url{https://www.austinchronicle.com/music/2023-08-25/what-hole-in-the-walls-freshly-inked-20-year-lease-means-for-other-at-risk-venues/}.
+\item \textbf{Austin Chronicle.} \textit{Former Sidewinder Space Now Open as After-Hours Club The Cut.} 2023-01-13. \url{https://www.austinchronicle.com/music/former-sidewinder-space-now-open-as-after-hours-club-the-cut-12834091/}.
+\item \textbf{Austin Chronicle.} \textit{The 13th Floor Moves to 711 Red River, Formerly Beerland and the Green Jay.} 2022-08-29. \url{https://www.austinchronicle.com/music/the-13th-floor-moves-to-711-red-river-formerly-beerland-and-the-green-jay-12833777/}.
+\item \textbf{Austin Chronicle.} \textit{Team Behind Barracuda to Open Chess Club in Former Plush Location.} 2022-03-10. \url{https://www.austinchronicle.com/daily/music/2022-03-10/team-behind-barracuda-to-open-chess-club-in-former-plush-location/}.
+\item \textbf{Austin Chronicle.} \textit{Faster Than Sound: Should the Live Music Fund Go to Musicians or Venues?.} 2021-11-04. \url{https://www.austinchronicle.com/music/faster-than-sound-should-the-live-music-fund-go-to-musicians-or-venues-12124639/}.
+\item \textbf{Austin Chronicle.} \textit{Faster Than Sound: Recapping the Year SXSW Got Canceled.} 2020-12-30. \url{https://www.austinchronicle.com/music/2021-01-01/recapping-the-year-sxsw-got-canceled/}.
+\item \textbf{Austin Chronicle.} \textit{Faster Than Sound: City of Austin Delays Venue Funding – Again.} 2020-11-25. \url{https://www.austinchronicle.com/music/2020-11-27/faster-than-sound-city-of-austin-delays-venue-funding-again/}.
+\item \textbf{Austin Chronicle.} \textit{Faster Than Sound: It’s Now or Never for a Music Venue Preservation Fund.} 2020-09-24. \url{https://www.austinchronicle.com/music/2020-09-25/faster-than-sound-its-now-or-never-for-a-music-venue-preservation-fund/}.
+\item \textbf{Austin Chronicle.} \textit{Faster Than Sound: Austin Music Venues Are Out of Money.} 2020-06-18. \url{https://www.austinchronicle.com/music/faster-than-sound-austin-music-venues-are-out-of-money-11777766/}.
+\item \textbf{Austin Chronicle.} \textit{Sidewinder Closes.} 2018-05-18. \url{https://www.austinchronicle.com/music/sidewinder-closes-12098951/}.
+\item \textbf{Austin Chronicle.} \textit{Can a Working Musician Find a Decent Job in This Town?.} 2017-01-26. \url{https://www.austinchronicle.com/music/2017-01-27/can-a-working-musician-find-a-decent-job-in-this-town/}.
+\item \textbf{Austin Chronicle.} \textit{We Can’t Make It Here Anymore.} 2016-05-26. \url{https://www.austinchronicle.com/music/2016-05-27/we-cant-make-it-here-anymore/}.
+\item \textbf{Austin Chronicle.} \textit{Playback: Austin Music Census.} 2015-06-04. \url{https://www.austinchronicle.com/music/2015-06-05/playback-austin-music-census/}.
+\item \textbf{Austin Chronicle.} \textit{Playback: Holy Mountain and Red 7 in Danger of Losing Leases.} 2015-05-14. \url{https://www.austinchronicle.com/music/2015-05-15/playback-holy-mountain-and-red-7-in-danger-of-losing-leases/}.
+\end{itemize}
+\subsubsection*{KUT}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{KUT.} \textit{Austin Opens Applications for \$23 Million in Arts and Music Grants.} 2026-07-08. \url{https://www.kut.org/life-arts/2026-07-08/austin-tx-arts-music-grants-applications-open-acme}.
+\item \textbf{KUT.} \textit{SIMS Foundation Launches the Dick Chalmers Music Venue Program.} 2026-01-05. \url{https://www.kut.org/health/2026-01-05/sims-foundation-austin-tx-dick-chalmers-music-venue-program-mental-health-fund}. {\color{ammuted}(the fund’s dollar size is not published in this article)}
+\item \textbf{KUT.} \textit{After Reset, Austin Opens Live Music Fund Applications With More Money Available.} 2025-10-21. \url{https://www.kut.org/austin/2025-10-21/live-music-fund-austin-tx-grants-musicians-acme}.
+\item \textbf{KUT.} \textit{These Four Austin Artists Offer a Blueprint for Making a Living as a Musician.} 2025-06-23. \url{https://www.kut.org/life-arts/2025-06-23/these-four-austin-artists-offer-a-blueprint-for-making-a-living-as-a-musician}.
+\item \textbf{KUT.} \textit{Austin, Texas Closed Businesses 2024.} 2024-12-18. \url{https://www.kut.org/austin/2024-12-18/austin-texas-closed-businesses-2024}.
+\item \textbf{KUT.} \textit{SXSW Says It Won’t Partner With the U.S. Army – or Weapons Manufacturers – in 2025.} 2024-06-26. \url{https://www.kut.org/austin/2024-06-26/sxsw-wont-partner-with-u-s-army-weapons-manufacturers-2025}.
+\item \textbf{KUT.} \textit{Coconut Club Is Still on Track to Close Down.} 2023-12-05. \url{https://www.kut.org/business/2023-12-05/coconut-club-is-still-on-track-to-close-down}.
+\item \textbf{KUT.} \textit{City Department Bumps Up Set Pay for Musicians It Books.} 2022-03-17. \url{https://www.kut.org/austin/2022-03-17/city-department-bumps-up-set-pay-for-musicians-it-books-other-austin-agencies-could-follow-suit}.
+\item \textbf{KUT.} \textit{The City Has Millions to Support the Austin Music Scene. But Who Gets the Money?.} 2022-03-01. \url{https://www.kut.org/austin/2022-03-01/the-city-has-millions-of-dollars-to-support-the-austin-music-scene-but-who-gets-the-money}.
+\item \textbf{KUT.} \textit{Same as It Ever Was: Musician Pay for Live Shows in Austin Hasn’t Changed in 40 Years.} 2022-02-15. \url{https://www.kut.org/austin/2022-02-15/same-as-it-ever-was-musician-pay-for-live-shows-in-austin-hasnt-changed-in-40-years}.
+\item \textbf{KUT.} \textit{Live Gigs Don’t Always Pay the Bills (Tee Double).} 2022-02-01. \url{https://www.kut.org/business/2022-02-01/live-music-tee-double}.
+\item \textbf{KUT.} \textit{Survey Finds Majority of Austin’s Live Music Venues Could Close for Good.} 2020-07-10. \url{https://www.kut.org/austin/2020-07-10/survey-finds-majority-of-austins-live-music-venues-could-close-for-good}.
+\item \textbf{KUT.} \textit{Report: Austin Music Is Now a \$1.8-Billion Industry, But the Local Scene Is Struggling.} 2016-02-22. \url{https://www.kut.org/post/report-austin-music-now-18-billion-industry-local-scene-struggling}.
+\item \textbf{KUT.} \textit{The Rising Costs \& Gender Disparity Within Austin’s Music Scene.} 2015-08-25. \url{https://www.kut.org/austin/2015-08-25/the-rising-costs-gender-disparity-within-austins-music-scene}.
+\item \textbf{KUT.} \textit{One-Fifth of Austin’s Musicians Live Below Federal Poverty Level, Census Says.} 2015-06-01. \url{https://www.kut.org/austin/2015-06-01/one-fifth-of-austins-musicians-live-below-federal-poverty-level-census-says}.
+\end{itemize}
+\subsubsection*{Austin Monitor}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Austin Monitor.} \textit{Dozens of City Music Grants Stalled Over Missing Final Reports.} 2025-06-19. \url{https://austinmonitor.com/stories/2025/06/dozens-of-city-music-grants-stalled-over-missing-final-reports/}.
+\item \textbf{Austin Monitor.} \textit{Live Music Fund Collections Show Hotel Taxes Dipped Slightly Last Fiscal Year.} 2024-12-09. \url{https://austinmonitor.com/stories/2024/12/live-music-fund-collections-show-hotel-taxes-dipped-slightly-last-fiscal-year/}.
+\item \textbf{Austin Monitor.} \textit{Auditor Examines City’s Shifting Funding, Expectations for Cultural Arts Grants.} 2024-10-30. \url{https://austinmonitor.com/stories/2024/10/auditor-examines-citys-shifting-funding-expectations-for-cultural-arts-grants/}.
+\item \textbf{Austin Monitor.} \textit{Music Census Leaders Try New Approach With Lessons From Other Cities.} 2022-08-10. \url{https://austinmonitor.com/stories/2022/08/music-census-leaders-try-new-approach-with-lessons-from-other-cities/}.
+\item \textbf{Austin Monitor.} \textit{Survey Predicts 90 Percent of Austin Live Music Venues to Close by Halloween.} 2020-07-08. \url{https://austinmonitor.com/stories/2020/07/survey-predicts-90-percent-of-austin-live-music-venues-to-close-by-halloween/}.
+\item \textbf{Austin Monitor.} \textit{HAAM Seeks City Help to Offset Expected \$1M Shortfall.} 2020-06-08. \url{https://www.austinmonitor.com/stories/2020/06/haam-seeks-city-help-to-offset-expected-1m-shortfall/}.
+\item \textbf{Austin Monitor.} \textit{Council Approves \$2.5 Million in Aid to Musicians, Artists Impacted by Covid-19.} 2020-04-24. \url{https://www.austinmonitor.com/stories/2020/04/council-approves-2-5-million-in-aid-to-musicians-artists-impacted-by-covid-19/}.
+\item \textbf{Austin Monitor.} \textit{Council Approves \$3M Annually From Hotel Tax for Musicians, Venues.} 2019-09-23. \url{https://www.austinmonitor.com/stories/2019/09/council-approves-3m-annually-from-hotel-tax-for-musicians-venues/}.
+\item \textbf{Austin Monitor.} \textit{Another Report, Same Story: Austin’s Too Pricey for Artists.} 2018-07-16. \url{https://www.austinmonitor.com/stories/2018/07/another-report-same-story-austins-too-pricey-for-artists/}.
+\item \textbf{Austin Monitor.} \textit{Study: Red River Music Venues Face ‘11th Hour’ Endangerment.} 2017-04-21. \url{https://www.austinmonitor.com/stories/2017/04/study-red-river-music-venues-face-11th-hour-endangerment/}.
+\item \textbf{Austin Monitor.} \textit{Austin Music Census Reveals Fault Lines in Industry.} 2015-06-01. \url{https://austinmonitor.com/stories/2015/06/austin-music-census-reveals-fault-lines-in-industry/}.
+\end{itemize}
+\subsubsection*{Community Impact}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Community Impact.} \textit{Over \$2B in Local Impact: Findings From Red River Cultural District’s Economic Impact Report.} 2026-04-02. \url{https://communityimpact.com/austin/central-austin/business/2026/04/02/over-2b-in-local-impact-findings-from-red-river-cultural-districts-economic-impact-report/}. {\color{ammuted}(the \$23.1 million tax-revenue figure and the 1,040-artist figure came from this and similar secondary coverage, not from the RRCD report page itself; verify against the full PDF)}
+\item \textbf{Community Impact.} \textit{Nutty Brown Amphitheatre Announces Nov. 28 Closure, Final Shows Before Move to Round Rock.} 2021-09-27. \url{https://communityimpact.com/austin/southwest-austin-dripping-springs/arts-entertainment/2021/09/27/nutty-brown-amphitheatre-announces-nov-28-closure-final-shows-before-move-to-round-rock/}.
+\item \textbf{Community Impact.} \textit{Far Out Lounge Owner of Venue With History Hopes to Keep South Austin Spirit Alive.} 2021-09-24. \url{https://communityimpact.com/austin/southwest-austin-dripping-springs/business/2021/09/24/far-out-lounge-owner-of-venue-with-history-hopes-to-keep-south-austin-spirit-alive/}.
+\item \textbf{Community Impact.} \textit{Downtown Austin Closings: Pink Avocado Catering, Mugshots, The North Door Will Not Reopen.} 2020-09-14. \url{https://communityimpact.com/austin/central-austin/business/2020/09/14/downtown-austin-closings-pink-avocado-catering-mugshots-the-north-door-will-not-reopen/}.
+\item \textbf{Community Impact.} \textit{Red River Nightclub Plush Announces Permanent Closure.} 2020-06-08. \url{https://communityimpact.com/austin/central-austin/impacts/2020/06/08/red-river-nightclub-plush-announces-permanent-closure/}.
+\item \textbf{Community Impact.} \textit{In Nod to Austin’s Live Music Industry, City Council Carves Out More Than \$3 Million in Hotel Tax Funding.} 2019-09-19. \url{https://communityimpact.com/austin/central-austin/arts-entertainment/2019/09/19/in-nod-to-austins-live-music-industry-city-council-carves-out-more-than-3-million-in-hotel-tax-funding/}.
+\end{itemize}
+\subsubsection*{CultureMap Austin}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{CultureMap Austin.} \textit{Another Popular Austin Music Venue Shutters, Blaming High Rents and COVID-19 Crisis.} 2020-06-11. \url{https://austin.culturemap.com/news/restaurants-bars/06-11-20-another-popular-austin-music-venue-shutters-blaming-high-rents-and-covid-19-crisis/}.
+\item \textbf{CultureMap Austin.} \textit{Downtown Austin Music Venue Shutters.} 2020-06-10. \url{https://austin.culturemap.com/news/entertainment/06-10-20-downtown-austin-music-venue-shutters-barracuda/}.
+\item \textbf{CultureMap Austin.} \textit{Exclusive Photos: First Inside Look, Antone’s New Location Fifth Street Downtown.} 2016-01-12. \url{https://austin.culturemap.com/news/entertainment/01-12-16-exclusive-photos-first-inside-look-antones-new-location-fifth-steet-downtown/}.
+\item \textbf{CultureMap Austin.} \textit{Looking Back at Austin’s Biggest Music Venue and Club Closings of 2015.} 2015-12-23. \url{https://austin.culturemap.com/news/entertainment/12-23-15-bar-music-venue-closings-closures-list-austin-trend-2015/}.
+\item \textbf{CultureMap Austin.} \textit{Sidewinder, New Venue, Red River Cultural District.} 2015-08-05. \url{https://austin.culturemap.com/news/entertainment/08-05-15-sidewinder-new-venue-red-river-cutlural-district/}.
+\end{itemize}
+\subsubsection*{NPR}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{NPR.} \textit{Bands at SXSW Are Calling for Better Pay.} 2023-03-16. \url{https://www.npr.org/2023/03/16/1164053499/bands-at-sxsw-are-calling-for-better-pay}.
+\end{itemize}
+\subsubsection*{PBS NewsHour}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{PBS NewsHour.} \textit{Skyrocketing Cost of Living Threatens Austin’s Status as Live Music Capital.} 2023-07-05. \url{https://www.pbs.org/newshour/show/skyrocketing-cost-of-living-threatens-austins-status-as-live-music-capital-of-the-world}.
+\end{itemize}
+\subsubsection*{KXAN}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{KXAN.} \textit{Broken Spoke Among Austin’s Heritage Preservation Grant Recipients.} 2026. \url{https://www.kxan.com/news/local/austin/broken-spoke-among-austins-heritage-preservation-grant-recipients/}. {\color{ammuted}(reached via search-result summary, not independently fetched)}
+\item \textbf{KXAN.} \textit{Hotel Occupancy Tax Collections for Austin Live Music Fund Up 8\% So Far This Fiscal Year.} 2026-07. \url{https://www.kxan.com/news/local/austin/hotel-occupancy-tax-collections-for-austin-live-music-fund-up-8-so-far-this-fiscal-year/}. {\color{ammuted}(page returns 403 to automated retrieval; figure taken from a search-result summary and not independently verified)}
+\item \textbf{KXAN.} \textit{East 6th Street’s B.D. Riley’s Irish Pub, Dirty Dog Bar Closing Doors Permanently.} 2020. \url{https://www.kxan.com/news/business/east-6th-streets-b-d-rileys-irish-pub-dirty-dog-bar-closing-doors-permanently/}. {\color{ammuted}(reached via search-result summary, not independently fetched)}
+\end{itemize}
+\subsubsection*{KVUE}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{KVUE.} \textit{SIMS Foundation Revamping Mental Health, Recovery Resources for Musicians.} undated (context suggests November 2024). \url{https://www.kvue.com/article/news/local/sims-foundation-revamping-mental-health-recovery-resources-musicians-austin/269-0daa1622-06d9-4ee1-8d10-b21512a9cfe2}. {\color{ammuted}(the year of the reported 90-day service pause is not stated in the retrieved material)}
+\item \textbf{KVUE.} \textit{Spider House Cafe Permanently Closed, Ballroom Remains.} 2020. \url{https://www.kvue.com/article/money/business/spider-house-cafe-permanently-closed-ballroom-remains/269-39555d13-55dc-437f-bd9a-5226f2c379be}. {\color{ammuted}(reached via search-result summary, not independently fetched)}
+\end{itemize}
+\subsubsection*{Denton Record-Chronicle}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Denton Record-Chronicle.} \textit{Denton Music Venues Get a Boost From Texas Music Incubator Rebate Program.} 2024-11-07. \url{https://dentonrc.com/news/denton/denton-music-venues-get-a-boost-from-texas-music-incubator-rebate-program-and-applications-are/article_9bd04fa6-9d5f-11ef-aaf9-07deb2c677fd.html}. {\color{ammuted}(the sole located source for round-one Texas Music Incubator Rebate figures; its own average and total are arithmetically inconsistent)}
+\end{itemize}
+\subsubsection*{KCBD (Lubbock)}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{KCBD (Lubbock).} \textit{Texas Music Office, Lubbock Cultural Arts Foundation Host Texas Music Incubator Rebate Program Workshop.} 2025-08-27. \url{https://www.kcbd.com/2025/08/27/texas-music-office-lubbock-cultural-arts-foundation-host-texas-music-incubator-rebate-program-workshop/}.
+\end{itemize}
+\subsubsection*{New York Focus}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{New York Focus.} \textit{New York Gave These Broadway Shows Millions – And They Flopped Anyway (Nick Garber).} 2026-03-19. \url{https://nysfocus.com/2026/03/19/new-york-broadway-tax-credit-flops}. {\color{ammuted}(the only source for the per-show allocation list, obtained by the outlet via a Freedom of Information Law request; the underlying data is ESD’s, the framing is the outlet’s)}
+\end{itemize}
+\subsubsection*{KERA News}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{KERA News.} \textit{Texas Commission on the Arts Budget Increase.} 2025-05-30. \url{https://www.keranews.org/arts-culture/2025-05-30/texas-commission-on-the-arts-budget-increase}.
+\end{itemize}
+\subsubsection*{GovTech}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{GovTech.} \textit{Austin Music Census Data Ignites Squabble Over Open Records Requests.} 2015-10. \url{https://www.govtech.com/dc/articles/austin-music-census-data-ignites-squabble-over-open-records-requests.html}.
+\end{itemize}
+\subsubsection*{Variety}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Variety.} \textit{...More Than 1,500 Artists Earned Over \$1 Million....} 2026-03. \url{https://variety.com/2026/digital/news/spotify-says-more-than-1500-artists-earned-1-million-in-royalties-2025-1236684566/}.
+\item \textbf{Variety.} \textit{Songwriters Are Getting Screwed by Streaming Even Worse Than They’d Thought.} 2024. \url{https://variety.com/2024/music/news/songwriters-are-getting-screwed-by-streaming-midia-1236090862/}. {\color{ammuted}(secondary summary of a MIDiA-linked study)}
+\item \textbf{Variety.} \textit{Music Venues Foresee Permanent Closure.} 2020. \url{https://variety.com/2020/music/news/music-venues-foresee-permanent-closure-1234629793}. {\color{ammuted}(reports the 2020 NIVA membership poll (90\% expected permanent closure without federal aid))}
+\end{itemize}
+\subsubsection*{Axios}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Axios.} \textit{Austin Music Venues \$113 Million COVID Relief Grants.} 2021-09-29. \url{https://www.axios.com/2021/09/29/austin-music-venues-113-million-covid-relief-grants}. {\color{ammuted}(headline figure from search results; article not independently fetched. Cross-check against SBA SVOG award data before citing)}
+\end{itemize}
+\subsubsection*{BroadwayWorld}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{BroadwayWorld.} \textit{The 11th Annual Sonic Guild Ball Returns This Month.} 2025-01-06. \url{https://www.broadwayworld.com/austin/article/The-11th-Annual-SONIC-GUILD-BALL-Returns-This-Month-20250106}.
+\end{itemize}
+\subsubsection*{Cascade PBS}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Cascade PBS.} \textit{After Raising \$1.75M, Austin Musicians’ Black Fret Hopes to Keep Music Playing (in Seattle).} 2020-01. \url{https://www.cascadepbs.org/culture/2020/01/after-raising-175m-austin-musicians-black-fret-hopes-keep-music-playing-seattle/}.
+\end{itemize}
+\subsubsection*{Billboard}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Billboard.} \textit{Nonprofit Black Fret, a Subscription Service for Local Music.} 2022. \url{https://www.billboard.com/pro/nonprofit-black-fret-subscription-local-music/}.
+\item \textbf{Billboard.} \textit{Citi Report on the Music Industry, Dissected (Robert Levine).} 2018-08-13. \url{https://www.billboard.com/articles/business/8469860/citi-music-industry-report-dissected-analysis}.
+\item \textbf{Billboard.} \textit{Music Biz Slams Citi Report (Cherie Hu).} 2018-08-10. \url{https://www.billboard.com/music/music-news/citi-report-music-biz-industry-artist-revenue-inconsistent-analysis-8469666/}.
+\end{itemize}
+\subsubsection*{Music Business Worldwide}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Music Business Worldwide.} \textit{80 Artists Generated \$10m Each From Spotify Last Year, 1,500 Generated \$1m: Here’s the Full Breakdown.} 2026-03. \url{https://www.musicbusinessworldwide.com/80-artists-generated-10m-each-from-spotify-last-year-1500-generated-1m-heres-the-full-breakdown/}.
+\item \textbf{Music Business Worldwide.} \textit{The MLC Nears \$2.5bn in Royalty Distributions to Songwriters and Publishers Since 2021.} 2024-10. \url{https://musicbusinessworldwide.com/the-mlc-nears-2-5bn-in-royalty-distributions-to-songwriters-and-publishers-since-2021/}.
+\end{itemize}
+\subsubsection*{MusicRow}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{MusicRow.} \textit{The MLC Marks Growth At Annual Membership Meeting.} 2025-10. \url{https://musicrow.com/2025/10/the-mlc-marks-growth-at-annual-membership-meeting/}.
+\end{itemize}
+\subsubsection*{Digital Music News}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Digital Music News.} \textit{SoundExchange Payouts Edge Upward 5\% in 2024.} 2025-02-25. \url{https://www.digitalmusicnews.com/2025/02/25/soundexchange-payouts-data-2024-us-based/}.
+\item \textbf{Digital Music News.} \textit{MLC “Unmatched Royalties” Hit \$561MM in 2021.} 2023-02-03. \url{https://www.digitalmusicnews.com/2023/02/03/mechanical-licensing-collective-black-box-royalties/}. {\color{ammuted}(not reconciled with later \$397--424M black-box figures cited elsewhere; flagged discrepancy)}
+\end{itemize}
+\subsubsection*{Music Ally}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Music Ally.} \textit{80 Artists Are Generating \$10m-Plus of Spotify Payouts a Year.} 2026-03-11. \url{https://musically.com/2026/03/11/80-artists-are-generating-10m-plus-of-spotify-payouts-a-year/}.
+\item \textbf{Music Ally.} \textit{Spotify Slams ‘Ridiculous and Unfounded’ Duetti Report.} 2025-01-24. \url{https://musically.com/2025/01/24/spotify-slams-ridiculous-and-unfounded-duetti-report/}.
+\item \textbf{Music Ally.} \textit{SoundExchange Has Distributed More Than \$7bn Since 2003.} 2020-04-14. \url{https://musically.com/2020/04/14/soundexchange-has-distributed-more-than-7bn-since-2003/}.
+\end{itemize}
+\subsubsection*{PR Newswire}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{PR Newswire.} \textit{SoundExchange Surpasses \$12 Billion Cumulative Distribution Milestone.} 2025-02. \url{https://www.prnewswire.com/news-releases/soundexchange-surpasses-12-billion-cumulative-distribution-milestone-302383478.html}.
+\item \textbf{PR Newswire.} \textit{Duetti’s 2024 Music Economics Report Finds Industry-Wide Per-Stream Rates for Independent Artists Are Finally Stabilizing.} 2025-01. \url{https://www.prnewswire.com/news-releases/duettis-2024-music-economics-report-finds-industry-wide-per-stream-rates-for-independent-artists-are-finally-stabilizing-following-years-of-decline-302358211.html}.
+\end{itemize}
+\subsubsection*{MacTech}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{MacTech.} \textit{Duetti Report Says That Apple Music Payouts for Artists Remain Strong.} 2025-01-23. \url{https://www.mactech.com/2025/01/23/duetti-report-says-that-apple-music-payouts-for-artists-remain-strong/}.
+\end{itemize}
+\subsubsection*{Sonicbids}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Sonicbids.} \textit{SIMS Foundation: Mental Health for Austin Musicians.} c. 2017--2019 (undated). \url{https://blog.sonicbids.com/sims-foundation-mental-health-austin-musicians}.
+\end{itemize}
+\subsubsection*{Texas Highways}
+\begin{itemize}[itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt,leftmargin=1em]
+\item \textbf{Texas Highways.} \textit{The Original Threadgill’s Closes, Marking the End of a Defining Cultural Era in Austin.} undated. \url{https://texashighways.com/travel/the-original-threadgills-closes-marking-the-end-of-a-defining-cultural-era-in-austin/}.
+\end{itemize}
+\end{multicols}
+}
+

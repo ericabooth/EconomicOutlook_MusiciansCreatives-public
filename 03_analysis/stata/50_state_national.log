@@ -1,0 +1,2986 @@
+
+  ___  ____  ____  ____  ____ ®
+ /__    /   ____/   /   ____/      StataNow 19.5
+___/   /   /___/   /   /___/       MP—Parallel Edition
+
+ Statistics and Data Science       Copyright 1985-2025 StataCorp LLC
+                                   StataCorp
+                                   4905 Lakeway Drive
+                                   College Station, Texas 77845 USA
+                                   800-782-8272        https://www.stata.com
+                                   979-696-4600        service@stata.com
+
+Stata license: 4-user 4-core network, expiring  6 May 2027
+Serial number: 501909369296
+  Licensed to: Eric Booth
+               Texas 2036
+
+Notes:
+      1. Stata is running in batch mode.
+      2. Unicode is supported; see help unicode_advice.
+      3. More than 2 billion observations are allowed; see help obs_advice.
+      4. Maximum number of variables is set to 5,000 but can be increased;
+          see help set_maxvar.
+
+
+Running /Users/ericbooth/Documents/Stata/ado/personal/profile.do ...
+-------------------------------------------------------------------------------
+  [1]  (BASE)      "/Applications/StataNow/ado/base/"
+  [2]  (SITE)      "/_codeshare/"
+  [3]              "."
+  [4]  (PERSONAL)  "/Users/ericbooth/Documents/Stata/ado/personal/"
+  [5]  (PLUS)      "/Users/ericbooth/Library/Application Support/Stata/ado/plus
+> /"
+  [6]  (OLDPLACE)  "~/ado/"
+ [view] [edit] [do]  10_pums_earnings.do 
+ [view] [edit] [do]  20_wages_industry.do 
+ [view] [edit] [do]  30_venues.do 
+ [view] [edit] [do]  40_city_money.do 
+ [view] [edit] [do]  50_state_national.do 
+ [view] [edit] [do]  60_cost_of_living.do 
+ [view] [edit] [do]  70_quasi_experiments.do 
+ [view] [edit] [do]  80_census_microdata.do 
+ [view] [edit] [do]  _setup.do 
+ [view] [edit] [do]  build_numbers.do 
+ [view] [edit] [do]  run_all.do 
+
+Click [here] for other links
+-------------------------------------------------------------------------------
+
+. do 50_state_national.do 
+
+. *! 50_state_national.do - Texas music policy against peer states, Texas film
+. *!   vs. music appropriations, the BEA arts-economy satellite account, SVOG
+. *!   federal pandemic relief, and (optional) other cities' self-reported
+. *!   music-census income against Austin's data gap.
+. *! Inputs  : 01_evidence/06_state_policy_benchmark/_findings.md (hand-entered
+. *!             state policy dollar figures; no machine-readable cross-state
+. *!             file exists for these -- each program is a different statute)
+. *!           01_evidence/06_state_policy_benchmark/trackers/Census_NST-EST202
+> 5-ALLDATA.csv
+. *!           01_evidence/03_creative_economy_bea/tidy/acpsa_state_totals_long
+> _2001_2023.csv
+. *!           01_evidence/03_creative_economy_bea/tidy/acpsa_state_industry_de
+> tail_2001_2023.csv
+. *!           01_evidence/03_creative_economy_bea/tidy/nasaa_fy2026_table6_per
+> _capita_spending.csv
+. *!           01_evidence/07_svog_federal_relief/svog_awards_TEXAS.csv
+. *!           01_evidence/07_svog_federal_relief/svog_awards_AUSTIN_AREA.csv
+. *!           03_analysis/data/external/SVOG_awards_full_national.dta (staged
+. *!             this module -- see note before SECTION 4 -- from the same SBA
+. *!             "awards as of 07-05-2022" vintage as the two evidence CSVs
+. *!             above; needed only for Nashville, TN, which sits outside the
+. *!             two Texas-scoped evidence extracts)
+. *!           01_evidence/05_music_census_pay_surveys/national_and_benchmark_s
+> urveys.md
+. *!             (hand-entered city-census income figures, verified against
+. *!             that file before use; no tidy CSV exists for this table either
+> )
+. *! Outputs : 04_figures/fig15_film_vs_music.png (+ .csv)
+. *!           04_figures/fig16_state_percapita.png (+ .csv)
+. *!           04_figures/fig17_bea_arts.png (+ 2 csvs, one per panel)
+. *!           04_figures/fig18_svog_metro.png (+ .csv)
+. *!           04_figures/fig21_city_census_income.png (+ .csv)
+. *!           03_analysis/out/numbers/numbers_state.csv
+. 
+. clear all
+
+. do "_setup.do"
+
+. *! _setup.do - shared foundation for the Austin musician/creative-worker anal
+> ysis.
+. *! Every module do-file starts with:  do "_setup.do"
+. *!
+. *! WHAT THIS DOES
+. *!   1. Finds the project root by searching upward for a sentinel file, so th
+> e
+. *!      whole folder can be zipped, moved to another machine, and run without
+. *!      editing a single path.
+. *!   2. Points Stata at the project-local ado library, so reghdfe, estout,
+. *!      spmap and the rest travel with the folder. No ssc install needed on a
+. *!      new machine.
+. *!   3. Builds a CPI-U deflator once and stores it, so every dollar figure in
+. *!      the report sits in the same base year (2025).
+. *!   4. Defines the report palette and graph styling, matched to the LaTeX fi
+> le.
+. *!   5. Defines two helper programs: numadd (register a number the report wil
+> l
+. *!      quote) and figsave (export a figure at consistent size).
+. *!
+. *! CONVENTIONS FOR MODULE AUTHORS
+. *!   - Set  global CURMODULE "<name>"  then call  numinit  before registering
+> .
+. *!   - Figure titles state the FINDING; subtitles qualify it. Source notes an
+> d
+. *!     caveats do NOT go in the image; they go in the LaTeX caption.
+. *!   - All dollars real, 2025 base, via the cpi_annual lookup.
+. 
+. version 17
+
+. set more off
+
+. set varabbrev off
+
+. 
+. * ---------------------------------------------------------------- 1. ROOT --
+. * Search the working directory and its parents for a file that only exists in
+. * this project. Whichever candidate contains it is the project root.
+. local sentinel "01_evidence/01_wages_oews_qcew/_sources.md"
+
+. local found 0
+
+. foreach cand in "`c(pwd)'" "`c(pwd)'/.." "`c(pwd)'/../.." "`c(pwd)'/../../.."
+>  {
+  2.     capture confirm file "`cand'/`sentinel'"
+  3.     if (_rc == 0) & (`found' == 0) {
+  4.         global PROJ "`cand'"
+  5.         local found 1
+  6.     }
+  7. }
+
+. if `found' == 0 {
+.     display as error "_setup.do could not locate the project root."
+.     display as error "Run Stata from 03_analysis/stata/ (or the project root)
+>  and try again."
+.     display as error "Current directory: `c(pwd)'"
+.     exit 601
+. }
+
+. 
+. global EVID     "${PROJ}/01_evidence"
+
+. global ANALYSIS "${PROJ}/03_analysis"
+
+. global DATAX    "${ANALYSIS}/data/external"
+
+. global OUT      "${ANALYSIS}/out"
+
+. global NUMDIR   "${OUT}/numbers"
+
+. global TABDIR   "${OUT}/tables"
+
+. global FIGS     "${PROJ}/04_figures"
+
+. global STATADIR "${ANALYSIS}/stata"
+
+. 
+. * Evidence subfolders, named for the workstream each one came from.
+. global EV_WAGES  "${EVID}/01_wages_oews_qcew"
+
+. global EV_PUMS   "${EVID}/02_pums_nes_microdata"
+
+. global EV_BEA    "${EVID}/03_creative_economy_bea"
+
+. global EV_CITY   "${EVID}/04_city_programs_lmf"
+
+. global EV_SURVEY "${EVID}/05_music_census_pay_surveys"
+
+. global EV_STATE  "${EVID}/06_state_policy_benchmark"
+
+. global EV_SVOG   "${EVID}/07_svog_federal_relief"
+
+. global EV_VENUE  "${EVID}/08_venues_ecosystem"
+
+. global EV_COL    "${EVID}/09_cost_of_living"
+
+. global EV_APP    "${EVID}/10_apprenticeship_workforce"
+
+. global EV_STREAM "${EVID}/11_streaming_royalties"
+
+. 
+. capture mkdir "${OUT}"
+
+. capture mkdir "${NUMDIR}"
+
+. capture mkdir "${TABDIR}"
+
+. capture mkdir "${FIGS}"
+
+. 
+. * ------------------------------------------------------------- 2. ADO PATH -
+> -
+. * Prepend the project-local library. Using adopath rather than sysdir set PLU
+> S
+. * keeps any packages already installed on this machine visible as a fallback,
+. * while guaranteeing the bundled copies win.
+. adopath ++ "${STATADIR}/ado/s"
+  [1]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/s"
+  [2]  (BASE)      "/Applications/StataNow/ado/base/"
+  [3]  (SITE)      "/_codeshare/"
+  [4]              "."
+  [5]  (PERSONAL)  "/Users/ericbooth/Documents/Stata/ado/personal/"
+  [6]  (PLUS)      "/Users/ericbooth/Library/Application Support/Stata/ado/plus
+> /"
+  [7]  (OLDPLACE)  "~/ado/"
+
+. adopath ++ "${STATADIR}/ado/plus"
+  [1]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/plus"
+  [2]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/s"
+  [3]  (BASE)      "/Applications/StataNow/ado/base/"
+  [4]  (SITE)      "/_codeshare/"
+  [5]              "."
+  [6]  (PERSONAL)  "/Users/ericbooth/Documents/Stata/ado/personal/"
+  [7]  (PLUS)      "/Users/ericbooth/Library/Application Support/Stata/ado/plus
+> /"
+  [8]  (OLDPLACE)  "~/ado/"
+
+. adopath ++ "${STATADIR}/ado"
+  [1]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado"
+  [2]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/plus"
+  [3]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/s"
+  [4]  (BASE)      "/Applications/StataNow/ado/base/"
+  [5]  (SITE)      "/_codeshare/"
+  [6]              "."
+  [7]  (PERSONAL)  "/Users/ericbooth/Documents/Stata/ado/personal/"
+  [8]  (PLUS)      "/Users/ericbooth/Library/Application Support/Stata/ado/plus
+> /"
+  [9]  (OLDPLACE)  "~/ado/"
+
+. 
+. * --------------------------------------------------------- 3. CPI DEFLATOR -
+> -
+. * Base year for every real-dollar figure in the report.
+. global BASEYEAR 2025
+
+. 
+. * Build the annual CPI lookup once. Rebuilt only if missing, so modules that
+. * run in sequence do not each redo it.
+. capture confirm file "${OUT}/cpi_annual.dta"
+
+. if _rc != 0 {
+.     preserve
+.     use "${DATAX}/BLS_CPI.dta", clear
+.     keep if area_name == "U.S. city average" & item_name == "All items"
+.     keep if is_annualavg == 0 & seas_adj == 0 & !missing(month)
+.     keep year month cpi
+.     duplicates drop year month, force
+. 
+.     * BLS never published a CPI-U value for October 2025 because the federal
+.     * funding lapse suspended collection. Fill that single month by averaging
+.     * September and November and flag it. October matters here because it is
+.     * the month of the Austin City Limits festival, so leaving a hole would
+.     * distort the venue-receipts series specifically.
+.     generate byte cpi_imputed = 0
+.     sort year month
+.     quietly count if year == 2025 & month == 10 & missing(cpi)
+.     if r(N) > 0 {
+.         quietly summarize cpi if year == 2025 & month == 9, meanonly
+.         local sep = r(mean)
+.         quietly summarize cpi if year == 2025 & month == 11, meanonly
+.         local nov = r(mean)
+.         quietly replace cpi = (`sep' + `nov') / 2 if year == 2025 & month == 
+> 10
+.         quietly replace cpi_imputed = 1 if year == 2025 & month == 10
+.     }
+.     drop if missing(cpi)
+. 
+.     * Keep only years with a full twelve months, so a partial year (2026 at t
+> he
+.     * time of writing) never masquerades as an annual average.
+.     bysort year: generate byte nmon = _N
+.     keep if nmon == 12
+.     collapse (mean) cpi (max) cpi_imputed, by(year)
+. 
+.     quietly summarize cpi if year == ${BASEYEAR}, meanonly
+.     local base = r(mean)
+.     generate double defl = `base' / cpi
+.     label variable defl "Multiply nominal dollars of `year' by this to get ${
+> BASEYEAR} dollars"
+.     label variable cpi_imputed "1 = annual average uses an imputed month"
+.     sort year
+.     save "${OUT}/cpi_annual.dta", replace
+.     restore
+. }
+
+. 
+. * Convenience: put the base-year CPI in a global for ad hoc use.
+. preserve
+
+. use "${OUT}/cpi_annual.dta", clear
+
+. quietly summarize cpi if year == ${BASEYEAR}, meanonly
+
+. global CPIBASE = r(mean)
+
+. restore
+
+. 
+. * ------------------------------------------------------------- 4. PALETTE --
+. * RGB triples matching 05_report/style/austinmusic.sty, so figures and docume
+> nt
+. * agree without anyone re-typing hex codes.
+. global NAVY    "27 45 85"
+
+. global ORANGE  "212 69 0"
+
+. global BLUE    "43 108 176"
+
+. global MUTED   "108 122 141"
+
+. global LIGHTBG "245 247 250"
+
+. global BORDER  "222 226 230"
+
+. global GREEN   "46 125 87"
+
+. global GOLD    "200 137 27"
+
+. global RED     "192 57 43"
+
+. global TEXTC   "26 26 46"
+
+. 
+. * Orange marks the musician or Austin series throughout; navy and muted mark
+. * comparison series. Keeping that constant across figures means a reader lear
+> ns
+. * the convention once.
+. global SERIES1 "${NAVY}"
+
+. global SERIES2 "${ORANGE}"
+
+. global SERIES3 "${BLUE}"
+
+. global SERIES4 "${GREEN}"
+
+. global SERIES5 "${GOLD}"
+
+. global SERIES6 "${MUTED}"
+
+. 
+. * Standard title and subtitle options. Modules pass these straight through:
+. *   twoway ... , title("Finding", $TITLEOPT) subtitle("Qualifier", $SUBOPT)
+. global TITLEOPT `"size(4.1) color("${NAVY}") justification(left) position(11)
+>  span margin(b=1)"'
+
+. global SUBOPT   `"size(3.0) color("${MUTED}") justification(left) position(11
+> ) span margin(b=3)"'
+
+. global XTOPT    `"size(3.0)"'
+
+. global YTOPT    `"size(3.0)"'
+
+. global LEGOPT   `"size(3.0) region(lstyle(none)) symxsize(6)"'
+
+. 
+. capture grstyle init
+
+. capture grstyle set plain, horizontal
+
+. capture grstyle set color "${TEXTC}": p1lineplot
+
+. capture grstyle set legend 6, nobox
+
+. 
+. * ------------------------------------------------------------ 5. PROGRAMS --
+. capture program drop numinit
+
+. program define numinit
+  1.     * Start (or restart) this module's number ledger. Called once per modu
+> le so
+.     * re-running a module replaces its own rows rather than appending duplica
+> tes.
+.     if "$CURMODULE" == "" {
+  2.         display as error "numinit: set  global CURMODULE  first"
+  3.         exit 198
+  4.     }
+  5.     quietly {
+  6.         local f "${NUMDIR}/numbers_${CURMODULE}.csv"
+  7.         capture erase "`f'"
+  8.         file open nh using "`f'", write text replace
+  9.         file write nh "key,value,formatted,unit,source,note,module" _n
+ 10.         file close nh
+ 11.     }
+ 12.     display as text "  ledger started: numbers_${CURMODULE}.csv"
+ 13. end
+
+. 
+. capture program drop numadd
+
+. program define numadd
+  1.     * Register one number the written report will quote.
+.     *
+.     *   numadd, key(pums_median_earnings_tx) value(22800) ///
+>     *           formatted("\$22,800") unit("2025 dollars") ///
+>     *           source("01_evidence/02_pums.../pums_...csv") ///
+>     *           note("ACS PUMS 2020-2024 5-yr, OCCP 2752, PWGTP-weighted medi
+> an")
+.     *
+.     * key becomes a LaTeX macro, so use letters, digits and underscores only.
+.     * note must let a reader reproduce the number: population, filter, weight
+> ,
+.     * vintage, and any caveat.
+.     syntax , KEY(string) VALUE(string) [FORMATTED(string) UNIT(string) ///
+>              SOURCE(string) NOTE(string)]
+  2.     if "$CURMODULE" == "" {
+  3.         display as error "numadd: set  global CURMODULE  and call numinit 
+> first"
+  4.         exit 198
+  5.     }
+  6.     if "`formatted'" == "" {
+  7.         local formatted "`value'"
+  8.     }
+  9.     * Replace any embedded double quote with an apostrophe. These fields a
+> re
+.     * descriptive text, never data, so substituting is safer than escaping an
+> d
+.     * keeps the ledger readable by any CSV parser.
+.     foreach v in formatted unit source note {
+ 10.         local `v' : subinstr local `v' `"""' "'", all
+ 11.     }
+ 12.     quietly {
+ 13.         file open nh using "${NUMDIR}/numbers_${CURMODULE}.csv", write tex
+> t append
+ 14.         file write nh `""`key'","`value'","`formatted'","`unit'","`source'
+> ","`note'","${CURMODULE}""' _n
+ 15.         file close nh
+ 16.     }
+ 17. end
+
+. 
+. capture program drop figsave
+
+. program define figsave
+  1.     * Export the current graph to 04_figures at a consistent size.
+.     * Width 2000px at the report's 6.5 inch text width is about 300 dpi.
+.     syntax , NAME(string) [WIDTH(integer 2000)]
+  2.     quietly graph export "${FIGS}/`name'.png", replace width(`width')
+  3.     display as text "  figure -> 04_figures/`name'.png"
+  4. end
+
+. 
+. capture program drop requirefile
+
+. program define requirefile
+  1.     * Fail early and legibly when an expected input is absent, rather than
+.     * producing a confusing error deeper in a module.
+.     *
+.     * This project's paths contain spaces ("My Drive", the Google Drive mount
+.     * point), so the argument is taken from `0' as a whole rather than parsed
+.     * into tokens, stripped of any quotes the caller supplied, and then
+.     * compound-quoted for `confirm'. Passing an unquoted path with spaces to
+.     * `confirm file' is what makes this fail with a misleading r(601).
+.     local fn `0'
+  2.     local fn : subinstr local fn `"""' "", all
+  3.     local fn = trim("`fn'")
+  4.     capture confirm file `"`fn'"'
+  5.     if _rc != 0 {
+  6.         display as error "Required input not found: `fn'"
+  7.         exit 601
+  8.     }
+  9. end
+
+. 
+. display as text "_setup.do ready. Root: ${PROJ}"
+_setup.do ready. Root: /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.b
+> ooth@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_an
+> alysis/stata/../..
+
+. display as text "  base year ${BASEYEAR}, CPI ${CPIBASE}"
+  base year 2025, CPI 322.1528333333334
+
+. 
+end of do-file
+
+. global CURMODULE "state"
+
+. numinit
+  ledger started: numbers_state.csv
+
+. 
+. requirefile "${EV_STATE}/_findings.md"
+
+. requirefile "${EV_STATE}/trackers/Census_NST-EST2025-ALLDATA.csv"
+
+. requirefile "${EV_BEA}/tidy/acpsa_state_totals_long_2001_2023.csv"
+
+. requirefile "${EV_BEA}/tidy/acpsa_state_industry_detail_2001_2023.csv"
+
+. requirefile "${EV_BEA}/tidy/nasaa_fy2026_table6_per_capita_spending.csv"
+
+. requirefile "${EV_SVOG}/svog_awards_TEXAS.csv"
+
+. requirefile "${EV_SVOG}/svog_awards_AUSTIN_AREA.csv"
+
+. requirefile "${EV_SURVEY}/national_and_benchmark_surveys.md"
+
+. 
+. 
+. * ================================================================
+. * SECTION 1. TASK 2 / FIGURE 15: Texas film vs. music per biennium, plus the
+. *            film-workforce line. All three dollar figures were dedicated by
+. *            the SAME 2025 legislative session for the SAME 2026-27 biennium
+. *            (SB 22 for film; Rider 39/40 of the 2026-27 GAA for music and
+. *            for the workforce pilot), so this is a same-nominal-year
+. *            comparison. Per CONVENTIONS.md section 3, a ratio of two
+. *            same-year nominal quantities needs no CPI deflation; that is
+. *            registered explicitly below rather than left for a reader to
+. *            wonder whether it was forgotten.
+. * ================================================================
+. clear
+
+. set obs 3
+Number of observations (_N) was 0, now 3.
+
+. generate byte ord = _n
+
+. generate str40 lever_label = ""
+(3 missing values generated)
+
+. generate double amount_usd = .
+(3 missing values generated)
+
+. replace lever_label = "Music (TMIR)"                 in 1
+(1 real change made)
+
+. replace amount_usd  = 20200000                        in 1
+(1 real change made)
+
+. replace lever_label = "Film (moving image)"           in 2
+(1 real change made)
+
+. replace amount_usd  = 300000000                       in 2
+(1 real change made)
+
+. replace lever_label = "Film workforce (one-time)"     in 3
+(1 real change made)
+
+. replace amount_usd  = 30000000                        in 3
+(1 real change made)
+
+. generate double amount_millions = amount_usd/1000000
+
+. 
+. local tmir_biennium      = amount_usd[1]
+
+. local film_biennium      = amount_usd[2]
+
+. local workforce_onetime  = amount_usd[3]
+
+. local film_music_ratio   = `film_biennium' / `tmir_biennium'
+
+. local film_music_ratio_r = round(`film_music_ratio',0.1)
+
+. local film_music_ratio_s = string(`film_music_ratio_r',"%4.1f")
+
+. 
+. display as text _newline "{hline 72}"
+
+------------------------------------------------------------------------
+
+. display as text "TASK 2 / FIGURE 15: Texas film vs. music per biennium"
+TASK 2 / FIGURE 15: Texas film vs. music per biennium
+
+. display as text "{hline 72}"
+------------------------------------------------------------------------
+
+. display as text "Music (TMIR) $`=string(`tmir_biennium',"%12.0fc")'/biennium;
+>  Film $`=string(`film_biennium',"%12.0fc")'/biennium; ratio `film_music_ratio
+> _s' to 1"
+Music (TMIR) $20,200,000/biennium; Film $300,000,000/biennium; ratio 14.9 to 1
+
+. 
+. numadd, key(tx_music_tmir_biennium) value(`tmir_biennium') formatted("\$20.2 
+> million") ///
+>     unit("2026-27 biennium, nominal") ///
+>     source("01_evidence/06_state_policy_benchmark/_findings.md") ///
+>     note("Texas Music Incubator Rebate: \$10,100,000/year statutory dedicatio
+> n (Tax Code sec 183.023(c) \$10,000,000 + sec 151.801(f) \$100,000), SB 609, 
+> 87th Legislature (2021), funded starting the 2024-25 biennium. \$20,200,000 f
+> or the 2026-27 biennium (Rider 39/40 of the 2024-25 and 2026-27 GAAs). Ongoin
+> g statutory dedication, not a one-time appropriation.")
+
+. 
+. numadd, key(tx_film_incentive_biennium) value(`film_biennium') formatted("\$3
+> 00.0 million") ///
+>     unit("2026-27 biennium, nominal") ///
+>     source("01_evidence/06_state_policy_benchmark/_findings.md") ///
+>     note("Texas moving image industry incentive fund, SB 22, 89th Legislature
+>  (2025), Tax Code sec 151.801(g): comptroller deposits \$300,000,000 per bien
+> nium, sunsets September 1, 2035. Same Gov’t Code ch. 485 office as the music 
+> rebate (Music, Film, Television, and Multimedia Office); ratio to TMIR is 14.
+> 9 to 1.")
+
+. 
+. numadd, key(tx_film_workforce_pilot_onetime) value(`workforce_onetime') forma
+> tted("\$30.0 million, one-time") ///
+>     unit("FY2026 only, nominal -- NOT a per-biennium recurring dedication lik
+> e the other two lines") ///
+>     source("01_evidence/06_state_policy_benchmark/_findings.md") ///
+>     note("Higher Education Film Workforce Pilot Program, Rider 45 of the 2026
+> -27 GAA, verbatim: \$30,000,000 General Revenue in fiscal year 2026 to eligib
+> le general academic teaching institutions, film/media workforce only, no musi
+> c counterpart, funds may not be spent for any other purpose. Funded once for 
+> FY2026, not a recurring per-biennium amount like TMIR or the moving-image fun
+> d -- shown for context, never summed with the other two bars as if all three 
+> were on the same time basis.")
+
+. 
+. numadd, key(tx_film_music_ratio) value(`film_music_ratio_r') formatted("`film
+> _music_ratio_s' to 1") ///
+>     unit("ratio, both same 2026-27 biennium, nominal") ///
+>     source("01_evidence/06_state_policy_benchmark/_findings.md") ///
+>     note("Texas moving-image incentive (\$300.0M/biennium) against the music 
+> rebate (\$20.2M/biennium), both dedicated by the 89th/88th Legislatures for t
+> he 2026-27 biennium and administered by the same office (Gov’t Code ch. 485).
+>  Same nominal year on both sides of this ratio, so no CPI deflation applies -
+> - recorded here so the omission reads as deliberate, not forgotten (CONVENTIO
+> NS.md section 3).")
+
+. 
+. local fig15_title = "Texas dedicates far more to film incentives than to live
+>  music"
+
+. local _tlen = length("`fig15_title'")
+
+. display as text "fig15 title length check: `_tlen' characters (target under ~
+> 70)."
+fig15 title length check: 62 characters (target under ~70).
+
+. 
+. generate str20 vlabel = ""
+(3 missing values generated)
+
+. replace vlabel = "$20.2M"  in 1
+(1 real change made)
+
+. replace vlabel = "$300.0M" in 2
+(1 real change made)
+
+. replace vlabel = "$30.0M"  in 3
+(1 real change made)
+
+. generate double vlabel_y = amount_millions + 12
+
+. 
+. twoway ///
+>     (bar amount_millions ord if ord==1, barwidth(0.6) color("${ORANGE}")) ///
+>     (bar amount_millions ord if ord==2, barwidth(0.6) color("${NAVY}")) ///
+>     (bar amount_millions ord if ord==3, barwidth(0.6) color("${MUTED}")) ///
+>     (scatter vlabel_y ord, mlabel(vlabel) mlabcolor("${TEXTC}") mlabsize(2.6)
+>  mlabpos(12) msymbol(none)) ///
+>     , ///
+>     title("`fig15_title'", $TITLEOPT) ///
+>     subtitle("Dollars dedicated for the 2026-27 biennium, nominal (same bienn
+> ium both sides, no deflation needed)." ///
+>              "The film-workforce line is a one-time FY2026 grant, not an ongo
+> ing per-biennium dedication.", $SUBOPT) ///
+>     xtitle("") ytitle("$ millions, 2026-27 biennium", $YTOPT) ///
+>     xlabel(1 "Music (TMIR)" 2 "Film (moving image)" 3 "Film workforce (one-ti
+> me)", noticks labsize(2.6)) ///
+>     xscale(range(0.5 3.5)) ///
+>     ylabel(0(50)300, angle(horizontal)) ///
+>     yscale(range(0 320)) ///
+>     legend(off) ///
+>     graphregion(color(white)) plotregion(margin(zero)) ///
+>     name(g_fig15, replace)
+
+. 
+. figsave, name(fig15_film_vs_music)
+  figure -> 04_figures/fig15_film_vs_music.png
+
+. 
+. preserve
+
+.     export delimited ord lever_label amount_usd amount_millions using "${OUT}
+> /fig15_film_vs_music.csv", replace
+file /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.booth@texas2036.org
+> /My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analysis/stata/../..
+> /03_analysis/out/fig15_film_vs_music.csv saved
+
+. restore
+
+. 
+. display as text "fig15 complete."
+fig15 complete.
+
+. 
+. 
+. * ================================================================
+. * SECTION 2. TASK 1 / FIGURE 16: state music-specific support per capita,
+. *            distinguishing dollars AUTHORIZED (statutory cap or ongoing
+. *            dedication) from dollars ACTUALLY DISBURSED, plus NASAA general
+. *            state-arts-agency per-capita spending as a separate, clearly
+. *            labeled baseline. No machine-readable cross-state file exists
+. *            for the music-specific programs -- each is a different statute
+. *            with a different reporting regime -- so every dollar figure
+. *            below is hand-entered from 01_evidence/06_state_policy_
+. *            benchmark/_findings.md, with the source statute/report and the
+. *            nominal-year assumption stated in that row's note. Every dollar
+. *            is then run through the shared CPI-U deflator to 2025 real
+. *            dollars, same as every other figure in this report.
+. * ================================================================
+. clear
+
+. set obs 5
+Number of observations (_N) was 0, now 5.
+
+. generate byte staten = _n
+
+. generate str20 state_name = ""
+(5 missing values generated)
+
+. generate double auth_nominal = .
+(5 missing values generated)
+
+. generate int    auth_year = .
+(5 missing values generated)
+
+. generate double disb_nominal = .
+(5 missing values generated)
+
+. generate int    disb_year = .
+(5 missing values generated)
+
+. 
+. * ---- 1. Texas: Texas Music Incubator Rebate (TMIR) ----
+. replace state_name   = "Texas"     in 1
+(1 real change made)
+
+. replace auth_nominal  = 10100000   in 1
+(1 real change made)
+
+. replace auth_year     = 2025       in 1
+(1 real change made)
+
+. replace disb_nominal  = 10100000   in 1
+(1 real change made)
+
+. replace disb_year     = 2025       in 1
+(1 real change made)
+
+. 
+. * ---- 2. Georgia: Musical Tax Credit (O.C.G.A. sec 48-7-40.33), ran 2018-202
+> 2 ----
+. replace state_name   = "Georgia"   in 2
+(1 real change made)
+
+. replace auth_nominal  = 15000000   in 2
+(1 real change made)
+
+. replace auth_year     = 2022       in 2
+(1 real change made)
+
+. replace disb_nominal  = 0          in 2
+(1 real change made)
+
+. replace disb_year     = 2022       in 2
+(1 real change made)
+
+. 
+. * ---- 3. Louisiana: 2 music credits combined ----
+. replace state_name   = "Louisiana" in 3
+(1 real change made)
+
+. replace auth_nominal  = 12160000   in 3
+(1 real change made)
+
+. replace auth_year     = 2025       in 3
+(1 real change made)
+
+. replace disb_nominal  = 2203906    in 3
+(1 real change made)
+
+. replace disb_year     = 2025       in 3
+(1 real change made)
+
+. 
+. * ---- 4. New York: NYC Musical & Theatrical Production Credit (Tax Law sec 2
+> 4-c) ----
+. replace state_name   = "New York"  in 4
+(1 real change made)
+
+. replace auth_nominal  = 150000000  in 4
+(1 real change made)
+
+. replace auth_year     = 2025       in 4
+(1 real change made)
+
+. replace disb_nominal  = 88000000   in 4
+(1 real change made)
+
+. replace disb_year     = 2024       in 4
+(1 real change made)
+
+. 
+. * ---- 5. Tennessee: budget line 330.17, film+TV+music SCORING combined ----
+. replace state_name   = "Tennessee" in 5
+(1 real change made)
+
+. replace auth_nominal  = 10686500   in 5
+(1 real change made)
+
+. replace auth_year     = 2025       in 5
+(1 real change made)
+
+. replace disb_nominal  = 7620200    in 5
+(1 real change made)
+
+. replace disb_year     = 2024       in 5
+(1 real change made)
+
+. 
+. * Vintage 2025 populations (Census Bureau, July 1, 2025), held fixed across
+. * BOTH the authorized and disbursed bars for every state -- including
+. * Tennessee, whose disbursed figure is FY2024-25 -- so every bar in this
+. * figure shares one population vintage rather than mixing vintages within
+. * one chart.
+. generate double population = .
+(5 missing values generated)
+
+. replace population = 31709821 in 1
+(1 real change made)
+
+. replace population = 11302748 in 2
+(1 real change made)
+
+. replace population = 4618189  in 3
+(1 real change made)
+
+. replace population = 20002427 in 4
+(1 real change made)
+
+. replace population = 7315076  in 5
+(1 real change made)
+
+. 
+. display as text _newline "{hline 72}"
+
+------------------------------------------------------------------------
+
+. display as text "TASK 1 / FIGURE 16: state per-capita music support, authoriz
+> ed vs. disbursed"
+TASK 1 / FIGURE 16: state per-capita music support, authorized vs. disbursed
+
+. display as text "{hline 72}"
+------------------------------------------------------------------------
+
+. list state_name auth_nominal auth_year disb_nominal disb_year population, cle
+> an
+
+       state_n~e   auth_no~l   auth_y~r   disb_n~l   disb_y~r   popula~n  
+  1.       Texas    10100000       2025   10100000       2025   31709821  
+  2.     Georgia    15000000       2022          0       2022   11302748  
+  3.   Louisiana    12160000       2025    2203906       2025    4618189  
+  4.    New York   1.500e+08       2025   88000000       2024   20002427  
+  5.   Tennessee    10686500       2025    7620200       2024    7315076  
+
+. 
+. * ---- Real 2025 dollars: two merges, because authorized and disbursed can
+. *      carry different nominal years for the same state (e.g. Tennessee). ---
+> -
+. generate year = auth_year
+
+. merge m:1 year using "${OUT}/cpi_annual.dta", keepusing(defl) keep(master mat
+> ch) nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                             0
+    Matched                                 5  
+    -----------------------------------------
+
+. rename defl defl_auth
+
+. drop year
+
+. 
+. generate year = disb_year
+
+. merge m:1 year using "${OUT}/cpi_annual.dta", keepusing(defl) keep(master mat
+> ch) nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                             0
+    Matched                                 5  
+    -----------------------------------------
+
+. rename defl defl_disb
+
+. drop year
+
+. 
+. assert !missing(defl_auth) & !missing(defl_disb)
+
+. 
+. generate double auth_real = auth_nominal * defl_auth
+
+. generate double disb_real = disb_nominal * defl_disb
+
+. generate double auth_percapita = auth_real / population
+
+. generate double disb_percapita = disb_real / population
+
+. label variable auth_percapita "Authorized (statutory cap/dedication), 2025 re
+> al dollars per capita"
+
+. label variable disb_percapita "Disbursed (actual), 2025 real dollars per capi
+> ta"
+
+. 
+. list state_name auth_percapita disb_percapita, clean
+
+       state_n~e   auth_pe~a   disb_pe~a  
+  1.     Georgia    1.460876           0  
+  2.   Tennessee   1.4608871   1.0698193  
+  3.    New York     7.49909   4.5181732  
+  4.       Texas   .31851331   .31851331  
+  5.   Louisiana   2.6330668     .477223  
+
+. 
+. * ---- NASAA general state-arts-agency baseline, FY2026, per capita -- a
+. *      real machine-readable file, not hand-entered like the rows above. ----
+. preserve
+
+.     import delimited "${EV_BEA}/tidy/nasaa_fy2026_table6_per_capita_spending.
+> csv", varnames(1) case(preserve) clear
+(encoding automatically selected: ISO-8859-1)
+(9 vars, 56 obs)
+
+.     keep if inlist(state,"Texas","Georgia","Louisiana","New York","Tennessee"
+> )
+(51 observations deleted)
+
+.     keep state incl_lineitems_percapita
+
+.     rename state state_name
+
+.     rename incl_lineitems_percapita nasaa_percapita
+
+.     tempfile nasaa5
+
+.     save `nasaa5'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St34522.000003 saved
+    as .dta format
+
+. restore
+
+. merge 1:1 state_name using `nasaa5', assert(match) nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                             0
+    Matched                                 5  
+    -----------------------------------------
+
+. 
+. quietly count
+
+. assert r(N)==5
+
+. 
+. * Rank check for the title: verify Texas's position on AUTHORIZED per capita
+. * directly rather than assume it, since the two "cap is not spending" states
+. * (Georgia, and now Louisiana/Tennessee too) turn out to rank close together.
+. gsort -auth_percapita
+
+. list state_name auth_percapita disb_percapita nasaa_percapita, clean
+
+       state_n~e   auth_pe~a   disb_pe~a   nasaa_~a  
+  1.    New York     7.49909   4.5181732       4.14  
+  2.   Louisiana   2.6330668     .477223        .45  
+  3.   Tennessee   1.4608871   1.0698193       2.27  
+  4.     Georgia    1.460876           0        .14  
+  5.       Texas   .31851331   .31851331        .58  
+
+. quietly summarize disb_percapita if state_name=="Georgia", meanonly
+
+. local ga_disb = r(mean)
+
+. assert `ga_disb'==0
+
+. 
+. quietly summarize disb_percapita if state_name=="Texas", meanonly
+
+. local tx_disb_pc = r(mean)
+
+. quietly summarize auth_percapita if state_name=="Texas", meanonly
+
+. local tx_auth_pc = r(mean)
+
+. local tx_fully_drawn = (abs(`tx_disb_pc' - `tx_auth_pc') < 0.001)
+
+. display as text "Texas authorized == disbursed (fully drawn down)? `tx_fully_
+> drawn'"
+Texas authorized == disbursed (fully drawn down)? 1
+
+. 
+. * Build an explicit numeric display order, descending by authorized per capit
+> a,
+. * and carry it into BOTH fig16 panels so the two can be compared row by row.
+. * Sorting by the state-name string does not work: over(state_name,
+. * sort(auth_percapita) descending) looks right but silently falls back to
+. * ALPHABETICAL order for a string over() variable (confirmed by inspecting th
+> e
+. * rendered PNG: panel A came out Georgia, Louisiana, New York, Tennessee,
+. * Texas), and panel B, built the same way, landed on yet a THIRD order. Both
+. * panels now key their row positions off ord5 directly.
+. gsort -auth_percapita
+
+. generate byte ord5 = _n
+
+. label define ord5lbl 1 "placeholder", replace
+
+. quietly forvalues i = 1/5 {
+
+. label values ord5 ord5lbl
+
+. 
+. tempfile percapita_final
+
+. save `percapita_final'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St34522.000004 saved
+    as .dta format
+
+. 
+. * ---- Registry: one row per state per stage, plus the NASAA baseline. ----
+. foreach s in Texas Georgia Louisiana "New York" Tennessee {
+  2.     local sl = lower(subinstr("`s'"," ","",.))
+  3.     quietly summarize auth_nominal if state_name=="`s'", meanonly
+  4.     local an = r(mean)
+  5.     quietly summarize disb_nominal if state_name=="`s'", meanonly
+  6.     local dn = r(mean)
+  7.     quietly summarize auth_percapita if state_name=="`s'", meanonly
+  8.     local apc = r(mean)
+  9.     quietly summarize disb_percapita if state_name=="`s'", meanonly
+ 10.     local dpc = r(mean)
+ 11.     quietly summarize nasaa_percapita if state_name=="`s'", meanonly
+ 12.     local npc = r(mean)
+ 13.     quietly summarize population if state_name=="`s'", meanonly
+ 14.     local pop = r(mean)
+ 15. 
+.     numadd, key(percapita_pop_2025_`sl') value(`pop') formatted("`=string(`po
+> p',"%12.0fc")'") ///
+>         unit("residents, Census Vintage 2025, July 1 2025") ///
+>         source("01_evidence/06_state_policy_benchmark/trackers/Census_NST-EST
+> 2025-ALLDATA.csv") ///
+>         note("`s' resident population, Census Bureau Vintage 2025 state estim
+> ate, July 1, 2025 (SUMLEV 040). Used as the single population denominator for
+>  both the authorized and disbursed bars for `s' in fig16.")
+ 16. 
+.     numadd, key(music_authorized_percapita_`sl') value(`=round(`apc',0.01)') 
+> formatted("\$`=string(round(`apc',0.01),"%4.2f")'") ///
+>         unit("2025 real dollars per capita, primary music-specific program") 
+> ///
+>         source("01_evidence/06_state_policy_benchmark/_findings.md") ///
+>         note("`s': statutory cap or ongoing dedication for its primary music-
+> specific incentive, deflated to 2025 dollars and divided by Vintage-2025 popu
+> lation. See fig16 caption/registry for the specific program and nominal-year 
+> assumption used for `s'.")
+ 17. 
+.     numadd, key(music_disbursed_percapita_`sl') value(`=round(`dpc',0.01)') f
+> ormatted("\$`=string(round(`dpc',0.01),"%4.2f")'") ///
+>         unit("2025 real dollars per capita, primary music-specific program") 
+> ///
+>         source("01_evidence/06_state_policy_benchmark/_findings.md") ///
+>         note("`s': actual disbursed/claimed/awarded amount for its primary mu
+> sic-specific incentive, deflated to 2025 dollars and divided by Vintage-2025 
+> population.")
+ 18. 
+.     numadd, key(nasaa_baseline_percapita_`sl') value(`npc') formatted("\$`=st
+> ring(`npc',"%4.2f")'") ///
+>         unit("FY2026 nominal dollars per capita, state arts agency (general a
+> rts, NOT music-specific)") ///
+>         source("01_evidence/03_creative_economy_bea/tidy/nasaa_fy2026_table6_
+> per_capita_spending.csv") ///
+>         note("`s' state arts agency legislative appropriation including line 
+> items, FY2026, per capita (NASAA Table 6). This is a GENERAL arts baseline, n
+> ot a music-specific figure -- it excludes Texas’s TMIR, Louisiana’s and Tenne
+> ssee’s music-adjacent economic-development incentives entirely, because those
+>  sit outside the state arts agency in all three states.")
+ 19. }
+
+. 
+. numadd, key(ga_credit_zero_disbursed_note) value(1) formatted("statutory cap 
+> is not a measure of support") ///
+>     unit("methodological/analytical point") ///
+>     source("01_evidence/06_state_policy_benchmark/peer_GA/GA_DOAA_Musical_Tax
+> _Credit_eval.txt") ///
+>     note("Georgia Musical Tax Credit (O.C.G.A. sec 48-7-40.33): \$15,000,000/
+> year statutory cap, in effect 2018-2022 (expired Jan 1 2023). Georgia Departm
+> ent of Audits and Accounts evaluation states, verbatim, that throughout the c
+> redit’s active period no tax credits were awarded; six applications were rece
+> ived, none approved (all lacked GDEcD pre-certification). Disbursed = \$0 in 
+> every year of the program’s life. Verified directly against the source PDF te
+> xt in this session, not taken on the evidence memo’s word alone.")
+
+. 
+. numadd, key(fig16_nominal_year_methodology) value(1) formatted("see note") un
+> it("methodological note") ///
+>     source("01_evidence/06_state_policy_benchmark/_findings.md") ///
+>     note("fig16 nominal-year assignments, all deflated to 2025 real dollars v
+> ia this project’s shared CPI-U lookup: Texas TMIR authorized+disbursed, nomin
+> al 2025 (FY2026 award year treated as coincident with the 2025 base year). Ge
+> orgia cap, nominal 2022 (last year the flat \$15M/yr cap was in effect before
+>  the credit expired); disbursed is a real \$0 in any year. Louisiana’s 2 comb
+> ined credits (Sound Recording Investor + Musical & Theatrical Production), bo
+> th authorized and disbursed, nominal 2025 (FYE 6/2025, current law before bot
+> h credits closed to new applications 6/30/2025). New York NYC Musical & Theat
+> rical (sec 24-c): this credit uses an escalating multi-year LIFETIME aggregat
+> e cap (\$100M to \$550M since Aug 2022), not a flat annual cap like the other
+>  4 states, so the authorized figure here is this module’s own proxy -- the mo
+> st recent one-year increase to that cap (\$400M to \$550M, enacted in the FY2
+> 027 budget, May 2026, versus the FY2026 budget, May 2025 -- one year apart), 
+> nominal 2025. New York disbursed is the evidence memo’s own annualized actual
+>  (\$308M awarded Aug 2022-Feb 2026, 3.5 years, ~\$88M/yr), nominal year appro
+> ximated as 2024, the rough midpoint of that window. Tennessee budget line 330
+> .17 (film+TV+music-scoring combined, no music-only breakout exists): authoriz
+> ed = FY2025-26 estimated appropriation, nominal 2025; disbursed = FY2024-25 a
+> ctual, nominal 2024. NASAA baseline figures are FY2026 nominal, treated as ap
+> proximately 2025-real given proximity to the base year, consistent with the T
+> exas TMIR treatment. New York’s authorized figure and the Tennessee bars (not
+>  music-specific) should be read with more caution than Texas, Georgia, and Lo
+> uisiana’s cleaner flat-annual-cap figures.")
+
+. 
+. * ---- FIGURE 16, panel A: authorized vs. disbursed, per capita. ----
+. use `percapita_final', clear
+
+. sort ord5
+
+. isid ord5
+
+. 
+. local fig16a_title = "What states authorize for music support differs from wh
+> at they spend"
+
+. local _tlen = length("`fig16a_title'")
+
+. display as text "fig16 panel A title length check: `_tlen' characters (target
+>  under ~70)."
+fig16 panel A title length check: 68 characters (target under ~70).
+
+. 
+. * WHY THIS PANEL IS A twoway AND NOT A graph hbar. The hbar version put 5
+. * states x 2 series into 10 evenly spaced slots and labeled them with
+. * blabel(bar), which offers no per-observation control. That produced two
+. * defects a reader could not recover from:
+. *   (1) Texas's authorized and disbursed figures are identical (the rebate is
+. *       fully drawn down), so two "0.32" labels printed on top of each other
+. *       and read as struck-through text;
+. *   (2) Georgia's disbursed bar has zero length, so its "0.00" label sat in t
+> he
+. *       gap between rows and looked as though it belonged to Texas.
+. * Building the panel at a taller ysize does NOT fix either one: graph combine
+. * gives every cell the same height and ignores a component's declared ysize
+. * (verified by rendering), and Stata sizes text against min(xsize,ysize), so 
+> a
+. * taller combined canvas enlarges the labels by the same factor it enlarges t
+> he
+. * panel and the ratio of row height to text height does not move. Explicit y
+. * positions -- the pattern fig12 already uses -- fix both: each state's pair 
+> of
+. * bars sits closer to itself than to its neighbours, and every label is place
+> d
+. * individually.
+. generate double ypos   = 6 - ord5          // New York at the top, Texas at t
+> he bottom
+
+. generate double y_auth = ypos + 0.16
+
+. generate double y_disb = ypos - 0.16
+
+. 
+. generate str24 lab_auth = string(auth_percapita, "%4.2f")
+
+. generate str24 lab_disb = string(disb_percapita, "%4.2f")
+
+. * Where the two figures round to the same printed value the bars are the same
+. * length, so one label serves both and saying "on both" keeps the fact that
+. * they are equal, which is itself the Texas finding.
+. generate byte same_rounded = (lab_auth == lab_disb)
+
+. replace lab_disb = lab_disb + " on both" if same_rounded
+(1 real change made)
+
+. replace lab_auth = "" if same_rounded
+(1 real change made)
+
+. quietly count if same_rounded
+
+. display as text "  fig16 panel A: states whose authorized and disbursed round
+>  alike (one label printed): " r(N)
+  fig16 panel A: states whose authorized and disbursed round alike (one label p
+> rinted): 1
+
+. 
+. * Row labels come from the data, so the tick position and the bar position ar
+> e
+. * the same coordinate by construction and cannot drift apart.
+. local ylab16 ""
+
+. forvalues i = 1/5 {
+  2.     local nm = state_name[`i']
+  3.     local yp = 6 - `i'
+  4.     local ylab16 `"`ylab16' `yp' "`nm'""'
+  5. }
+
+. 
+. quietly summarize auth_percapita
+
+. local xmax16 = 1.15 * r(max)
+
+. 
+. twoway ///
+>     (bar auth_percapita y_auth, horizontal barwidth(0.28) color("${MUTED}")) 
+> ///
+>     (bar disb_percapita y_disb, horizontal barwidth(0.28) color("${ORANGE}"))
+>  ///
+>     (scatter y_auth auth_percapita, msymbol(none) mlabel(lab_auth) ///
+>         mlabposition(3) mlabgap(1) mlabcolor("${TEXTC}") mlabsize(2.5)) ///
+>     (scatter y_disb disb_percapita, msymbol(none) mlabel(lab_disb) ///
+>         mlabposition(3) mlabgap(1) mlabcolor("${TEXTC}") mlabsize(2.5)) ///
+>     , ylabel(`ylab16', angle(0) labsize(2.6) noticks) ///
+>       yscale(range(0.45 5.55)) ytitle("") ///
+>       xtitle("2025 real dollars per capita", size(2.8)) ///
+>       xlabel(0(2)8, labsize(2.6)) xscale(range(0 `xmax16')) ///
+>       title("Authorized versus disbursed, primary music-specific incentive", 
+> size(3.2) color("${NAVY}")) ///
+>       legend(order(1 "Authorized (cap or dedication)" 2 "Disbursed (actual)")
+>  ///
+>              cols(1) position(4) ring(0) size(2.4) symxsize(5) ///
+>              region(lstyle(none) fcolor(white))) ///
+>       graphregion(color(white)) ///
+>       name(g_fig16a, replace)
+
+. 
+. * ---- FIGURE 16, panel B: NASAA general-arts baseline, same states, same
+. *      per-capita units, same state order -- a separate, clearly labeled
+. *      comparison, not mixed into panel A's music-specific bars. Built the sa
+> me
+. *      twoway way as panel A so the two panels' rows line up exactly. ----
+. generate str24 lab_nasaa = string(nasaa_percapita, "%4.2f")
+
+. quietly summarize nasaa_percapita
+
+. local xmax16b = 1.15 * r(max)
+
+. 
+. twoway ///
+>     (bar nasaa_percapita ypos, horizontal barwidth(0.5) color("${NAVY}")) ///
+>     (scatter ypos nasaa_percapita, msymbol(none) mlabel(lab_nasaa) ///
+>         mlabposition(3) mlabgap(1) mlabcolor("${TEXTC}") mlabsize(2.5)) ///
+>     , ylabel(`ylab16', angle(0) labsize(2.6) noticks) ///
+>       yscale(range(0.45 5.55)) ytitle("") ///
+>       xtitle("FY2026 dollars per capita", size(2.8)) ///
+>       xlabel(0(1)4, labsize(2.6)) xscale(range(0 `xmax16b')) ///
+>       title("Separate baseline: state arts agency (general arts, not music)",
+>  size(3.2) color("${NAVY}")) ///
+>       legend(off) ///
+>       graphregion(color(white)) ///
+>       name(g_fig16b, replace)
+
+. 
+. graph combine g_fig16a g_fig16b, rows(2) ///
+>     title("`fig16a_title'", $TITLEOPT) ///
+>     subtitle("Five states, primary music-specific incentive per state; NASAA 
+> general-arts baseline is a separate measure." ///
+>              "Georgia’s credit paid \$0 across its whole 2018-2022 life; its 
+> cap was never spending.", $SUBOPT) ///
+>     graphregion(color(white)) ///
+>     name(g_fig16, replace)
+
+. 
+. figsave, name(fig16_state_percapita)
+  figure -> 04_figures/fig16_state_percapita.png
+
+. 
+. preserve
+
+.     export delimited state_name auth_nominal auth_year disb_nominal disb_year
+>  population ///
+>         auth_percapita disb_percapita nasaa_percapita using "${OUT}/fig16_sta
+> te_percapita.csv", replace
+file /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.booth@texas2036.org
+> /My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analysis/stata/../..
+> /03_analysis/out/fig16_state_percapita.csv saved
+
+. restore
+
+. 
+. display as text "fig16 complete."
+fig16 complete.
+
+. 
+. 
+. * ================================================================
+. * SECTION 3. TASK 3 / FIGURE 17: BEA Arts and Cultural Production Satellite
+. *            Account (ACPSA). Panel A checks, directly against the tidy CSV,
+. *            whether Texas really is the LOWEST of the 8 benchmark states on
+. *            arts value added as a share of state GDP -- the evidence memo's
+. *            headline sentence says so, but its own supporting table lists
+. *            Louisiana lower. Panel B shows the Texas performing-arts-
+. *            companies-vs-independent-artists crossover.
+. * ================================================================
+. import delimited "${EV_BEA}/tidy/acpsa_state_totals_long_2001_2023.csv", varn
+> ames(1) case(preserve) clear
+(encoding automatically selected: ISO-8859-1)
+(7 vars, 207 obs)
+
+. keep if year==2023
+(198 observations deleted)
+
+. generate double share_pct = acpsa_va_share_of_state_gdp*100
+
+. 
+. quietly summarize share_pct if state=="United States", meanonly
+
+. local us_avg_share = r(mean)
+
+. local us_avg_s = string(round(`us_avg_share',0.1),"%3.1f")
+
+. 
+. * The 8 benchmark states are every row here EXCEPT the "United States"
+. * national-average row -- verify the count directly rather than assume it.
+. drop if state=="United States"
+(1 observation deleted)
+
+. quietly count
+
+. local n_benchmark = r(N)
+
+. display as text _newline "{hline 72}"
+
+------------------------------------------------------------------------
+
+. display as text "TASK 3 / FIGURE 17 panel A: arts value-added share of state 
+> GDP, 2023"
+TASK 3 / FIGURE 17 panel A: arts value-added share of state GDP, 2023
+
+. display as text "{hline 72}"
+------------------------------------------------------------------------
+
+. display as text "Benchmark states in this file (expect 8): `n_benchmark'"
+Benchmark states in this file (expect 8): 8
+
+. assert `n_benchmark'==8
+
+. 
+. quietly summarize share_pct, meanonly
+
+. local min_share = r(min)
+
+. local max_share = r(max)
+
+. 
+. * acpsa_va_share_of_state_gdp arrives as float, so share_pct carries float
+. * rounding noise (3.2000002, 9.7999997, ...); an exact `==` match against
+. * r(min)/r(max) silently finds nothing and leaves minstate/maxstate blank.
+. * rank8 (an integer built from gsort, below) is exact, so derive the
+. * lowest/highest STATE NAMES from rank8==1 and rank8==n_benchmark instead of
+. * from a floating-point equality test.
+. gsort share_pct
+
+. generate byte rank8 = _n
+
+. levelsof state if rank8==1, local(minstate) clean
+Louisiana
+
+. levelsof state if rank8==`n_benchmark', local(maxstate) clean
+Washington
+
+. quietly summarize rank8 if state=="Texas", meanonly
+
+. local tx_rank8 = r(mean)
+
+. quietly summarize share_pct if state=="Texas", meanonly
+
+. local tx_share = r(mean)
+
+. quietly summarize share_pct if state=="Louisiana", meanonly
+
+. local la_share = r(mean)
+
+. 
+. * Pre-format every share as a string ONCE, here, so no display or numadd call
+. * below nests a `=string(round(...))' expression inside a longer string that
+. * also carries other macro references (CONVENTIONS trap #2).
+. local _minshare_s = string(round(`min_share',0.1),"%3.1f")
+
+. local _maxshare_s = string(round(`max_share',0.1),"%3.1f")
+
+. local _txshare_s  = string(round(`tx_share',0.1),"%3.1f")
+
+. local _lashare_s  = string(round(`la_share',0.1),"%3.1f")
+
+. 
+. display as text "Lowest of the 8: `minstate' at `_minshare_s'%. Highest: `max
+> state' at `_maxshare_s'%."
+Lowest of the 8: Louisiana at 2.1%. Highest: Washington at 9.8%.
+
+. display as text "Texas: `_txshare_s'%, rank `tx_rank8' of `n_benchmark' (1=lo
+> west). Louisiana: `_lashare_s'%."
+Texas: 2.5%, rank 2 of 8 (1=lowest). Louisiana: 2.1%.
+
+. list state share_pct rank8, clean
+
+            state   share_pct   rank8  
+  1.    Louisiana         2.1       1  
+  2.        Texas         2.5       2  
+  3.      Florida   3.2000002       3  
+  4.      Georgia   3.7999999       4  
+  5.    Tennessee   3.9999999       5  
+  6.   California   7.5000003       6  
+  7.     New York   7.5999998       7  
+  8.   Washington   9.7999997       8  
+
+. 
+. * CORRECTION to 01_evidence/03_creative_economy_bea/_findings.md bullet 2:
+. * that file's headline sentence claims Texas is the lowest of the 8; its own
+. * supporting numbers (quoted two lines later in the same bullet) list
+. * Louisiana lower. Direct inspection of the tidy CSV confirms the supporting
+. * numbers, not the headline sentence: Louisiana is lowest, Texas is 2nd-lowes
+> t.
+. local tx_is_lowest = ("`minstate'"=="Texas")
+
+. if `tx_is_lowest'==0 {
+.     display as error "CORRECTION to 01_evidence/03_creative_economy_bea/_find
+> ings.md bullet 2: that bullet’s headline sentence states Texas has the lowest
+>  arts/culture GDP share of the 8 benchmark states. Direct inspection of acpsa
+> _state_totals_long_2001_2023.csv shows `minstate' (`_minshare_s'%) is lower t
+> han Texas (`_txshare_s'%, rank `tx_rank8' of 8). The bullet’s own supporting 
+> table two lines later lists `minstate' below Texas and is correct; only the h
+> eadline sentence is wrong. This module uses rank `tx_rank8' of 8 (2nd-lowest)
+> , not lowest, and titles fig17 panel A accordingly. The evidence folder’s _fi
+> ndings.md should be corrected at the source."
+CORRECTION to 01_evidence/03_creative_economy_bea/_findings.md bullet 2: that b
+> ullet’s headline sentence states Texas has the lowest arts/culture GDP share 
+> of the 8 benchmark states. Direct inspection of acpsa_state_totals_long_2001_
+> 2023.csv shows Louisiana (2.1%) is lower than Texas (2.5%, rank 2 of 8). The 
+> bullet’s own supporting table two lines later lists Louisiana below Texas and
+>  is correct; only the headline sentence is wrong. This module uses rank 2 of 
+> 8 (2nd-lowest), not lowest, and titles fig17 panel A accordingly. The evidenc
+> e folder’s _findings.md should be corrected at the source.
+. }
+
+. 
+. numadd, key(bea_gdp_share_correction_tx_not_lowest) value(`tx_rank8') formatt
+> ed("rank `tx_rank8' of `n_benchmark' (1=lowest), not lowest") ///
+>     unit("correction to 01_evidence/03_creative_economy_bea/_findings.md bull
+> et 2") ///
+>     source("01_evidence/03_creative_economy_bea/tidy/acpsa_state_totals_long_
+> 2001_2023.csv") ///
+>     note("The evidence memo’s bullet 2 headline sentence says Texas has the l
+> owest arts/culture value-added share of state GDP among the 8 benchmark state
+> s; its own supporting numbers, quoted in the same bullet, list Louisiana (2.1
+> %) below Texas (2.5%). Direct inspection of the tidy CSV here confirms the su
+> pporting numbers: Louisiana is lowest of the 8 at `_lashare_s'%, Texas is 2nd
+> -lowest at `_txshare_s'% (rank `tx_rank8' of `n_benchmark', 1=lowest). Fixed 
+> in this module’s figure and registry; the source memo’s headline sentence sho
+> uld be corrected.")
+
+. 
+. numadd, key(bea_gdp_share_tx_2023) value(`=round(`tx_share',0.1)') formatted(
+> "`_txshare_s'%") ///
+>     unit("percent of state GDP, arts/culture value added, 2023") ///
+>     source("01_evidence/03_creative_economy_bea/tidy/acpsa_state_totals_long_
+> 2001_2023.csv") ///
+>     note("Texas arts and cultural production value added as a share of Texas 
+> state GDP, 2023, BEA ACPSA. Among the 8 benchmark states (CA, FL, GA, LA, NY,
+>  TN, TX, WA) Texas ranks `tx_rank8' of 8, 1=lowest -- 2nd-lowest, not lowest.
+> ")
+
+. 
+. numadd, key(bea_gdp_share_la_2023) value(`=round(`la_share',0.1)') formatted(
+> "`_lashare_s'%") ///
+>     unit("percent of state GDP, arts/culture value added, 2023") ///
+>     source("01_evidence/03_creative_economy_bea/tidy/acpsa_state_totals_long_
+> 2001_2023.csv") ///
+>     note("Louisiana arts and cultural production value added as a share of st
+> ate GDP, 2023 -- the lowest of the 8 benchmark states, below Texas.")
+
+. 
+. numadd, key(bea_gdp_share_us_avg_2023) value(`=round(`us_avg_share',0.1)') fo
+> rmatted("`us_avg_s'%") ///
+>     unit("percent of GDP, US total, 2023") ///
+>     source("01_evidence/03_creative_economy_bea/tidy/acpsa_state_totals_long_
+> 2001_2023.csv") ///
+>     note("US arts/culture value added as a share of US GDP, 2023. Reference l
+> ine on fig17 panel A; the United States row is the national average, not a 9t
+> h benchmark state, and is excluded from the 8-state bar count and from the ra
+> nk8 calculation above.")
+
+. 
+. * This module's own tidy extract covers only the 8 benchmark states plus the
+. * US average -- it cannot independently verify a full 50-state-plus-DC rank.
+. * The national-rank claim below is therefore cited to the evidence memo's own
+. * reading of the full BEA release, not re-derived from a file in this
+. * project; registered as a DIFFERENT and WEAKER claim than the 8-state rank
+. * above, per this module's tasking.
+. numadd, key(bea_gdp_share_tx_national_rank) value(36) formatted("36th of 51 (
+> 50 states + DC)") ///
+>     unit("national rank, arts/culture value-added share of state GDP, 2023 --
+>  NOT independently re-derived here") ///
+>     source("01_evidence/03_creative_economy_bea/_findings.md") ///
+>     note("Texas ranks 36th of 51 (50 states + DC) nationally on arts/culture 
+> value-added share of state GDP, 2023, per the evidence memo’s reading of the 
+> full BEA ACPSA release. This project’s own tidy CSV extract (acpsa_state_tota
+> ls_long_2001_2023.csv) contains only the 8 benchmark states plus the US avera
+> ge, so this 36th-of-51 figure is cited from the evidence memo, not independen
+> tly recomputed from a file in this project. It is a different and weaker clai
+> m than the rank `tx_rank8' of 8 benchmark states figure above -- keep the two
+>  separate and always name which comparison set a given rank refers to.")
+
+. 
+. sort share_pct
+
+. tempfile fig17a_data
+
+. save `fig17a_data'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St34522.000006 saved
+    as .dta format
+
+. 
+. * Panel A's own title is a descriptive panel label, not a finding: the findin
+> g
+. * it used to carry (Texas 2nd-lowest of the 8) is promoted to the combined
+. * figure's main title below, which previously named the data source instead o
+> f
+. * saying anything. Same division of labour as fig16, where the panel titles
+. * describe and the main title states the finding.
+. local fig17a_title = "Arts and culture value added as a share of state GDP, 2
+> 023"
+
+. local _tlen = length("`fig17a_title'")
+
+. display as text "fig17 panel A title length check: `_tlen' characters (target
+>  under ~70)."
+fig17 panel A title length check: 58 characters (target under ~70).
+
+. 
+. * Highlight color: Texas orange, every other state a shared muted navy so the
+. * single comparison of interest (Texas against the pack) reads at a glance.
+. generate double bar_tx        = share_pct if state=="Texas"
+(7 missing values generated)
+
+. generate double bar_other     = share_pct if state!="Texas"
+(1 missing value generated)
+
+. 
+. * Built as a twoway with explicit y positions rather than
+. * graph hbar bar_other bar_tx, over(rank8) asyvars. That hbar form gives ever
+> y
+. * over() group TWO bar slots and leaves one of them empty in every group, so
+. * the seven muted bars landed in the upper slot of their group while the oran
+> ge
+. * Texas bar landed in the lower slot -- each about half a row away from its o
+> wn
+. * tick label, in opposite directions. It is the same defect fig18 had in a
+. * larger form. With explicit y positions the tick and the bar are the same
+. * coordinate by construction.
+. sort rank8
+
+. generate double ypos = `n_benchmark' + 1 - rank8    // lowest share at the to
+> p
+
+. local ylab17 ""
+
+. forvalues i = 1/`n_benchmark' {
+  2.     local nm = state[`i']
+  3.     local yp = `n_benchmark' + 1 - `i'
+  4.     local ylab17 `"`ylab17' `yp' "`nm'""'
+  5. }
+
+. generate str8 lab_share = string(share_pct, "%3.1f")
+
+. local ytop17 = `n_benchmark' + 0.55
+
+. local xmax17 = 1.12 * `max_share'
+
+. 
+. twoway ///
+>     (bar bar_other ypos, horizontal barwidth(0.55) color("${MUTED}")) ///
+>     (bar bar_tx ypos, horizontal barwidth(0.55) color("${ORANGE}")) ///
+>     (scatter ypos share_pct, msymbol(none) mlabel(lab_share) ///
+>         mlabposition(3) mlabgap(1) mlabcolor("${TEXTC}") mlabsize(2.6)) ///
+>     , xline(`us_avg_share', lcolor("${NAVY}") lpattern(dash) lwidth(thin)) //
+> /
+>       ylabel(`ylab17', angle(0) labsize(2.6) noticks) ///
+>       yscale(range(0.45 `ytop17')) ytitle("") ///
+>       xtitle("Percent of state GDP, arts/culture value added, 2023", size(2.6
+> )) ///
+>       xlabel(0(2)10, labsize(2.6)) xscale(range(0 `xmax17')) ///
+>       title("`fig17a_title'", size(3.1) color("${NAVY}")) ///
+>       legend(off) ///
+>       graphregion(color(white)) ///
+>       name(g_fig17a, replace)
+
+. 
+. 
+. * ---- Panel B: Texas, performing arts companies vs. independent artists,
+. *      2001-2023, showing the crossover. ----
+. import delimited "${EV_BEA}/tidy/acpsa_state_industry_detail_2001_2023.csv", 
+> varnames(1) case(preserve) clear
+(encoding automatically selected: ISO-8859-1)
+(6 vars, 368 obs)
+
+. keep if state=="Texas"
+(322 observations deleted)
+
+. keep year industry acpsa_value_added_thousands
+
+. 
+. preserve
+
+.     keep if industry=="Performing arts companies"
+(23 observations deleted)
+
+.     keep year acpsa_value_added_thousands
+
+.     rename acpsa_value_added_thousands performing_va
+
+.     tempfile perf
+
+.     save `perf'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St34522.000008 saved
+    as .dta format
+
+. restore
+
+. preserve
+
+.     keep if strpos(industry,"ndependent")>0
+(23 observations deleted)
+
+.     keep year acpsa_value_added_thousands
+
+.     rename acpsa_value_added_thousands indep_va
+
+.     tempfile indep
+
+.     save `indep'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St34522.00000a saved
+    as .dta format
+
+. restore
+
+. 
+. clear
+
+. use `perf'
+
+. merge 1:1 year using `indep', nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                             0
+    Matched                                23  
+    -----------------------------------------
+
+. sort year
+
+. generate double performing_va_m = performing_va/1000
+
+. generate double indep_va_m      = indep_va/1000
+
+. generate double diff_va         = indep_va - performing_va
+
+. generate byte   indep_ahead     = (diff_va>0)
+
+. 
+. display as text _newline "{hline 72}"
+
+------------------------------------------------------------------------
+
+. display as text "TASK 3 / FIGURE 17 panel B: Texas performing-arts vs. indepe
+> ndent-artist VA"
+TASK 3 / FIGURE 17 panel B: Texas performing-arts vs. independent-artist VA
+
+. display as text "{hline 72}"
+------------------------------------------------------------------------
+
+. list year performing_va_m indep_va_m indep_ahead, clean
+
+       year   perfor~m   indep_~m   indep_~d  
+  1.   2001    373.526    229.773          0  
+  2.   2002    336.381    269.646          0  
+  3.   2003    337.886    262.347          0  
+  4.   2004    378.819    298.412          0  
+  5.   2005    380.029    282.232          0  
+  6.   2006    358.059    343.654          0  
+  7.   2007    346.452     373.51          1  
+  8.   2008    364.593    438.915          1  
+  9.   2009    499.714    450.949          0  
+ 10.   2010    535.775    458.914          0  
+ 11.   2011    555.663    648.836          1  
+ 12.   2012    510.189    786.745          1  
+ 13.   2013     537.07    738.346          1  
+ 14.   2014    593.779    966.104          1  
+ 15.   2015    543.004    896.686          1  
+ 16.   2016    642.475    901.827          1  
+ 17.   2017     684.21    917.899          1  
+ 18.   2018    656.246   1063.675          1  
+ 19.   2019    669.798   1138.159          1  
+ 20.   2020    574.429    872.294          1  
+ 21.   2021    382.651   1199.219          1  
+ 22.   2022    551.679    1572.15          1  
+ 23.   2023    875.728     1642.8          1  
+
+. 
+. * The FIRST year independent artists' VA exceeds performing-arts companies'
+. * VA is not the same as a LASTING crossover: this series has an earlier,
+. * temporary blip (verify below) before the change holds for good. The title
+. * must describe whichever one is actually true of the chart as drawn, so
+. * both are computed and checked explicitly rather than assumed.
+. quietly summarize year if indep_ahead==1, meanonly
+
+. local first_crossover_year = r(min)
+
+. quietly count if year>=`first_crossover_year' & indep_ahead==0
+
+. local n_reversals_from_first = r(N)
+
+. display as text "First year independent artists' VA exceeds performing-arts-c
+> ompanies' VA: `first_crossover_year'. Reversal years after that point: `n_rev
+> ersals_from_first' (0 = clean, uninterrupted crossover from that year on)."
+First year independent artists' VA exceeds performing-arts-companies' VA: 2007.
+>  Reversal years after that point: 2 (0 = clean, uninterrupted crossover from 
+> that year on).
+
+. 
+. * Stable crossover: the EARLIEST year Y such that independent artists' VA
+. * exceeds performing-arts companies' VA in every year from Y through the end
+. * of the series (2023), i.e. the start of the run that is still unbroken at
+. * the last observed year. Found by scanning candidate years in order and
+. * stopping at the first one with zero reversal years after it.
+. quietly summarize year, meanonly
+
+. local first_year = r(min)
+
+. local last_year  = r(max)
+
+. local stable_crossover_year = .
+
+. local y = `first_year'
+
+. while missing(`stable_crossover_year') & `y'<=`last_year' {
+  2.     quietly count if year>=`y' & indep_ahead==0
+  3.     if r(N)==0 {
+  4.         local stable_crossover_year = `y'
+  5.     }
+  6.     local y = `y' + 1
+  7. }
+
+. quietly count if year>=`stable_crossover_year' & indep_ahead==0
+
+. local n_reversals_from_stable = r(N)
+
+. local n_blip_years = `n_reversals_from_first'
+
+. display as text "Stable (lasting-through-2023) crossover year: `stable_crosso
+> ver_year'. Reversal years after THAT point: `n_reversals_from_stable' (must b
+> e 0 by construction)."
+Stable (lasting-through-2023) crossover year: 2011. Reversal years after THAT p
+> oint: 0 (must be 0 by construction).
+
+. assert `n_reversals_from_stable'==0
+
+. display as text "Years between the first (`first_crossover_year') and stable 
+> (`stable_crossover_year') crossover where performing arts companies pulled ba
+> ck ahead: `n_blip_years'."
+Years between the first (2007) and stable (2011) crossover where performing art
+> s companies pulled back ahead: 2.
+
+. 
+. quietly summarize indep_va_m if year==2023, meanonly
+
+. local indep_2023 = r(mean)
+
+. quietly summarize performing_va_m if year==2023, meanonly
+
+. local perf_2023 = r(mean)
+
+. local gap_2023 = `indep_2023' - `perf_2023'
+
+. 
+. * This module reports and titles fig17 panel B using the STABLE crossover
+. * year, not the first (transient) one, since "independent artists overtook
+. * performing arts companies in `first_crossover_year'" would be true only
+. * for 2 years before reverting -- a claim a reader could check against the
+. * chart and find contradicted by 2009-2010.
+. numadd, key(bea_crossover_year_tx) value(`stable_crossover_year') formatted("
+> `stable_crossover_year'") ///
+>     unit("first year of the UNBROKEN run through 2023, calendar") ///
+>     source("01_evidence/03_creative_economy_bea/tidy/acpsa_state_industry_det
+> ail_2001_2023.csv") ///
+>     note("Texas independent-artists-writers-and-performers value added has ex
+> ceeded performing-arts-companies value added in every year from `stable_cross
+> over_year' through 2023, BEA ACPSA state industry detail. There was an earlie
+> r, temporary crossover starting in `first_crossover_year' that reversed after
+>  2 years (performing arts companies pulled back ahead in 2009-2010) before th
+> e change took hold for good in `stable_crossover_year' -- the earlier blip is
+>  registered separately (bea_first_crossover_year_tx) so the paper does not ov
+> erstate the `first_crossover_year' date as the durable change.")
+
+. 
+. numadd, key(bea_first_crossover_year_tx) value(`first_crossover_year') format
+> ted("`first_crossover_year' (temporary, reversed)") ///
+>     unit("first year, calendar -- NOT the lasting crossover, see bea_crossove
+> r_year_tx") ///
+>     source("01_evidence/03_creative_economy_bea/tidy/acpsa_state_industry_det
+> ail_2001_2023.csv") ///
+>     note("First year independent-artists VA exceeded performing-arts-companie
+> s VA in Texas was `first_crossover_year', but performing arts companies pulle
+> d back ahead for 2009 and 2010 before independent artists retook and held the
+>  lead from `stable_crossover_year' onward. Registered so the earlier date is 
+> not mistaken for the durable change.")
+
+. 
+. numadd, key(bea_indep_artists_va_tx_2023) value(`=round(`indep_2023',0.1)') f
+> ormatted("\$`=string(round(`indep_2023',0.1),"%6.1f")'M") ///
+>     unit("2023 nominal dollars, millions") ///
+>     source("01_evidence/03_creative_economy_bea/tidy/acpsa_state_industry_det
+> ail_2001_2023.csv") ///
+>     note("Texas independent-artists-writers-and-performers value added, 2023,
+>  BEA ACPSA, nominal dollars (this is a same-year level comparison against per
+> forming arts companies below, so no deflation is applied here).")
+
+. 
+. numadd, key(bea_performing_arts_va_tx_2023) value(`=round(`perf_2023',0.1)') 
+> formatted("\$`=string(round(`perf_2023',0.1),"%6.1f")'M") ///
+>     unit("2023 nominal dollars, millions") ///
+>     source("01_evidence/03_creative_economy_bea/tidy/acpsa_state_industry_det
+> ail_2001_2023.csv") ///
+>     note("Texas performing-arts-companies value added, 2023, BEA ACPSA, nomin
+> al dollars.")
+
+. 
+. numadd, key(bea_indep_vs_performing_gap_tx_2023) value(`=round(`gap_2023',0.1
+> )') formatted("\$`=string(round(`gap_2023',0.1),"%6.1f")'M") ///
+>     unit("2023 nominal dollars, millions, gap") ///
+>     source("01_evidence/03_creative_economy_bea/tidy/acpsa_state_industry_det
+> ail_2001_2023.csv") ///
+>     note("2023 gap between Texas independent-artist value added and performin
+> g-arts-company value added (independent minus performing), nominal dollars, s
+> ame-year comparison so no deflation applies.")
+
+. 
+. quietly summarize year if !missing(indep_va_m)
+
+. local ly_indep = r(max)
+
+. quietly summarize year if !missing(performing_va_m)
+
+. local ly_perf = r(max)
+
+. generate lbl_indep = "Independent artists, writers, performers" if year==`ly_
+> indep'
+(22 missing values generated)
+
+. generate lbl_perf  = "Performing arts companies" if year==`ly_perf'
+(22 missing values generated)
+
+. 
+. local fig17b_title = "Independent artists overtook arts companies in Texas in
+>  `stable_crossover_year'"
+
+. local _tlen = length("`fig17b_title'")
+
+. display as text "fig17 panel B title length check: `_tlen' characters (target
+>  under ~70)."
+fig17 panel B title length check: 60 characters (target under ~70).
+
+. 
+. * The crossover year used to be printed directly above its own marker, where
+. * the two series meet -- so the orange line ran straight through the digits.
+. * It now sits at the top of the plot on a dashed vertical rule that points at
+. * the same year, in the report's dark text colour rather than light gray.
+. quietly summarize indep_va_m
+
+. local vamax = r(max)
+
+. local yaxis17b = ceil(`vamax' / 500) * 500
+
+. if (`yaxis17b' - `vamax') < 200 local yaxis17b = `yaxis17b' + 500
+
+. local ycross17b = 0.94 * `yaxis17b'
+
+. display as text "fig17 panel B: y-axis 0 to `yaxis17b' (series max `vamax'); 
+> crossover label at `ycross17b'."
+fig17 panel B: y-axis 0 to 2000 (series max 1642.8); crossover label at 1880.
+
+. 
+. * AXIS UNITS. BEA publishes the STATE-level ACPSA series in current dollars
+. * only -- there is no state chained-dollar file (01_evidence/03_creative_
+. * economy_bea/_sources.md). So these are nominal dollars of each year, and th
+> e
+. * old axis title "2023 nominal dollars, millions" was self-contradictory for 
+> a
+. * 2001-2023 series: it read as constant 2023 dollars AND as nominal at once.
+. twoway ///
+>     (line indep_va_m year, lcolor("${ORANGE}") lwidth(medthick)) ///
+>     (line performing_va_m year, lcolor("${NAVY}")) ///
+>     (scatter indep_va_m year if year==`ly_indep', mlabel(lbl_indep) mlabcolor
+> ("${ORANGE}") mlabposition(1) mlabsize(2.4) msymbol(none)) ///
+>     (scatter performing_va_m year if year==`ly_perf', mlabel(lbl_perf) mlabco
+> lor("${NAVY}") mlabposition(3) mlabsize(2.4) msymbol(none)) ///
+>     (scatter performing_va_m year if year==`stable_crossover_year', mlabcolor
+> ("${MUTED}") msymbol(O) mcolor("${MUTED}") msize(small)) ///
+>     , ///
+>     xline(`stable_crossover_year', lcolor("${MUTED}") lpattern(shortdash) lwi
+> dth(thin)) ///
+>     text(`ycross17b' `stable_crossover_year' "`stable_crossover_year'", place
+> ment(e) size(2.5) color("${TEXTC}")) ///
+>     title("`fig17b_title'", size(3.1) color("${NAVY}")) ///
+>     xtitle("") ytitle("Value added, millions of nominal dollars", size(2.6)) 
+> ///
+>     xlabel(2001(4)2023) xscale(range(2001 2032)) ///
+>     ylabel(0(500)`yaxis17b', angle(horizontal) labsize(2.6)) ///
+>     yscale(range(0 `yaxis17b')) ///
+>     legend(off) ///
+>     graphregion(color(white)) plotregion(margin(zero)) ///
+>     name(g_fig17b, replace)
+
+. 
+. * rows(1) (side by side) squeezes each panel to half the canvas width, and
+. * Stata does not wrap a long title() or an mlabel() that runs past the edge
+. * -- it silently truncates (confirmed: panel A's own title clipped to "...8
+. * benchmark stat" and panel B's line label clipped to "...writers, p" when
+. * this was rows(1)). rows(2) (stacked) gives each panel the FULL canvas
+. * width, the same layout that already worked cleanly for fig16.
+. * MAIN TITLE. This was the one title in the set that named its data source
+. * ("Texas's arts economy: BEA satellite-account data, 2001-2023") and the one
+. * that stated no finding. The source belongs in the LaTeX caption, so the
+. * verified panel A finding is promoted here instead. It is bounded to the 8
+. * states the figure actually draws, and rebuilt from the computed rank rather
+. * than typed, so it cannot drift from the chart.
+. local fig17_title = "Texas has the 2nd-lowest arts share of GDP among `n_benc
+> hmark' benchmark states"
+
+. assert `tx_rank8'==2
+
+. local _tlen = length("`fig17_title'")
+
+. display as text "fig17 main title length check: `_tlen' characters (target un
+> der ~70)."
+fig17 main title length check: 67 characters (target under ~70).
+
+. 
+. graph combine g_fig17a g_fig17b, rows(2) ///
+>     title("`fig17_title'", $TITLEOPT) ///
+>     subtitle("Top: 8-state comparison for 2023, Texas highlighted; dashed lin
+> e is the US average." ///
+>              "Bottom: Texas value added, nominal dollars of each year, not ad
+> justed for inflation.", $SUBOPT) ///
+>     graphregion(color(white)) ///
+>     name(g_fig17, replace)
+
+. 
+. figsave, name(fig17_bea_arts)
+  figure -> 04_figures/fig17_bea_arts.png
+
+. 
+. preserve
+
+.     use `fig17a_data', clear
+
+.     export delimited state share_pct rank8 using "${OUT}/fig17_bea_arts_panel
+> A_states2023.csv", replace
+file /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.booth@texas2036.org
+> /My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analysis/stata/../..
+> /03_analysis/out/fig17_bea_arts_panelA_states2023.csv saved
+
+. restore
+
+. export delimited year performing_va_m indep_va_m indep_ahead using "${OUT}/fi
+> g17_bea_arts_panelB_tx_timeseries.csv", replace
+file /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.booth@texas2036.org
+> /My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analysis/stata/../..
+> /03_analysis/out/fig17_bea_arts_panelB_tx_timeseries.csv saved
+
+. 
+. display as text "fig17 complete."
+fig17 complete.
+
+. 
+. 
+. * ================================================================
+. * NOTE BEFORE SECTION 4: staging the full-national SVOG file.
+. *
+. * This module's declared inputs are svog_awards_TEXAS.csv and
+. * svog_awards_AUSTIN_AREA.csv, both scoped to Texas. Task 4 also asks for
+. * Nashville, TN, which lies outside both files. The same SBA "awards as of
+. * 07-05-2022" file that produced those two Texas extracts also exists in
+. * full-national form; per CONVENTIONS.md #1 (external inputs are copied into
+. * data/external, never read from an absolute/scratch path inside a numbered
+. * module), that full file was copied in once, ahead of this run, as
+. * ${DATAX}/SVOG_awards_full_national.dta (13,011 rows; state field arrives
+. * upper-cased/trimmed at source, city field does not -- a city_norm =
+. * upper(trim(itrim(city))) variable is included precisely because an exact
+. * string match on the raw city field silently drops case-variant rows, e.g.
+. * "NASHVILLE" rows sit alongside "Nashville" rows in the source data). Its
+. * Texas subset was cross-checked row-for-row and dollar-for-dollar against
+. * svog_awards_TEXAS.csv at staging time (758 rows, $1,167,322,216, exact
+. * match). If SVOG_awards_full_national.dta is ever missing, rebuild it by
+. * re-importing the SBA awards-as-of-7-5-22 file with import delimited,
+. * bindquote(strict), and the same city_norm/state_norm construction.
+. * ================================================================
+. requirefile "${DATAX}/SVOG_awards_full_national.dta"
+
+. 
+. 
+. * ================================================================
+. * SECTION 4. TASK 4 / FIGURE 18: SVOG federal pandemic relief, Texas and the
+. *            Austin area, with Austin against Houston, Dallas-Fort Worth, and
+. *            Nashville. The Houston-area and Dallas-Fort Worth-area totals
+. *            use a hand-built city-name list against Census place names, NOT
+. *            official CBSA/MSA boundaries -- approximate and non-exhaustive
+. *            by construction, exactly like the Austin-area and Nashville
+. *            city-only matches this evidence folder's own _sources.md
+. *            documents. That method is registered explicitly below.
+. * ================================================================
+. import delimited "${EV_SVOG}/svog_awards_TEXAS.csv", varnames(1) case(preserv
+> e) clear
+(encoding automatically selected: ISO-8859-1)
+(9 vars, 758 obs)
+
+. generate double amt = total_awarded_usd
+
+. generate str60 city_norm = upper(trim(itrim(city)))
+
+. 
+. quietly count
+
+. local tx_n = r(N)
+
+. quietly summarize amt
+
+. local tx_total = r(sum)
+
+. 
+. gsort -amt
+
+. quietly summarize amt
+
+. local tx_total2 = r(sum)
+
+. quietly summarize amt in 1/10
+
+. local tx_top10 = r(sum)
+
+. local tx_top10_share = 100*`tx_top10'/`tx_total2'
+
+. quietly count if amt>=9999999.5
+
+. local tx_cap_hits = r(N)
+
+. 
+. display as text _newline "{hline 72}"
+
+------------------------------------------------------------------------
+
+. display as text "TASK 4 / FIGURE 18: SVOG federal relief, Texas + metro compa
+> rison"
+TASK 4 / FIGURE 18: SVOG federal relief, Texas + metro comparison
+
+. display as text "{hline 72}"
+------------------------------------------------------------------------
+
+. display as text "Texas: N=`tx_n', total=$`=string(`tx_total',"%12.0fc")', top
+> 10 share=`=string(round(`tx_top10_share',0.1),"%4.1f")'%, recipients at \$10M
+>  cap=`tx_cap_hits'"
+Texas: N=758, total=$1167322216, top10 share=8.6%, recipients at $10M cap=30
+
+. 
+. * ---- Hand-built Houston-area and Dallas-Fort Worth-area city lists,
+. *      applied to this Texas-only file (both metros sit fully in Texas, so
+. *      no state filter beyond "this file is Texas already" is needed). ----
+. generate byte houston_area = 0
+
+. foreach c in "HOUSTON" "SUGAR LAND" "THE WOODLANDS" "KATY" "PEARLAND" "BAYTOW
+> N" "CONROE" ///
+>     "LEAGUE CITY" "MISSOURI CITY" "PASADENA" "SPRING" "HUMBLE" "FRIENDSWOOD" 
+> "TEXAS CITY" ///
+>     "WEBSTER" "LA PORTE" "TOMBALL" "ROSENBERG" "CYPRESS" "GALVESTON" "DEER PA
+> RK" ///
+>     "CHANNELVIEW" "RICHMOND" "STAFFORD" "BELLAIRE" "KINGWOOD" "ALVIN" "ANGLET
+> ON" ///
+>     "MANVEL" "KLEIN" {
+  2.     replace houston_area = 1 if city_norm=="`c'"
+  3. }
+(106 real changes made)
+(4 real changes made)
+(4 real changes made)
+(2 real changes made)
+(0 real changes made)
+(0 real changes made)
+(2 real changes made)
+(1 real change made)
+(1 real change made)
+(0 real changes made)
+(1 real change made)
+(2 real changes made)
+(1 real change made)
+(0 real changes made)
+(0 real changes made)
+(2 real changes made)
+(1 real change made)
+(1 real change made)
+(3 real changes made)
+(7 real changes made)
+(0 real changes made)
+(0 real changes made)
+(0 real changes made)
+(2 real changes made)
+(0 real changes made)
+(1 real change made)
+(0 real changes made)
+(0 real changes made)
+(0 real changes made)
+(0 real changes made)
+
+. generate byte dfw_area = 0
+
+. foreach c in "DALLAS" "FORT WORTH" "ARLINGTON" "PLANO" "IRVING" "GARLAND" "MC
+> KINNEY" "FRISCO" ///
+>     "DENTON" "GRAPEVINE" "GRAND PRAIRIE" "MESQUITE" "CARROLLTON" "RICHARDSON"
+>  "LEWISVILLE" ///
+>     "ALLEN" "FLOWER MOUND" "NORTH RICHLAND HILLS" "MANSFIELD" "EULESS" "DESOT
+> O" "CEDAR HILL" ///
+>     "ROWLETT" "WYLIE" "KELLER" "COPPELL" "SOUTHLAKE" "BURLESON" "BEDFORD" "HA
+> LTOM CITY" ///
+>     "WAXAHACHIE" "ROCKWALL" "WEATHERFORD" "PROSPER" "CELINA" "LITTLE ELM" "TH
+> E COLONY" ///
+>     "FARMERS BRANCH" "UNIVERSITY PARK" "HIGHLAND PARK" "DUNCANVILLE" "LANCAST
+> ER" "SACHSE" ///
+>     "MURPHY" "ADDISON" "HURST" "WATAUGA" "COLLEYVILLE" "BENBROOK" "FATE" "FOR
+> NEY" "ROYSE CITY" {
+  2.     replace dfw_area = 1 if city_norm=="`c'"
+  3. }
+(97 real changes made)
+(25 real changes made)
+(4 real changes made)
+(10 real changes made)
+(9 real changes made)
+(2 real changes made)
+(4 real changes made)
+(8 real changes made)
+(1 real change made)
+(1 real change made)
+(0 real changes made)
+(2 real changes made)
+(2 real changes made)
+(7 real changes made)
+(4 real changes made)
+(3 real changes made)
+(3 real changes made)
+(1 real change made)
+(1 real change made)
+(0 real changes made)
+(1 real change made)
+(0 real changes made)
+(0 real changes made)
+(2 real changes made)
+(1 real change made)
+(1 real change made)
+(0 real changes made)
+(0 real changes made)
+(1 real change made)
+(0 real changes made)
+(1 real change made)
+(1 real change made)
+(5 real changes made)
+(0 real changes made)
+(0 real changes made)
+(0 real changes made)
+(1 real change made)
+(2 real changes made)
+(0 real changes made)
+(0 real changes made)
+(0 real changes made)
+(0 real changes made)
+(1 real change made)
+(0 real changes made)
+(3 real changes made)
+(2 real changes made)
+(0 real changes made)
+(0 real changes made)
+(0 real changes made)
+(0 real changes made)
+(0 real changes made)
+(0 real changes made)
+
+. generate byte san_antonio = (city_norm=="SAN ANTONIO")
+
+. 
+. quietly summarize amt if houston_area==1
+
+. local houston_total = r(sum)
+
+. quietly count if houston_area==1
+
+. local houston_n = r(N)
+
+. quietly summarize amt if dfw_area==1
+
+. local dfw_total = r(sum)
+
+. quietly count if dfw_area==1
+
+. local dfw_n = r(N)
+
+. quietly summarize amt if san_antonio==1
+
+. local sa_total = r(sum)
+
+. quietly count if san_antonio==1
+
+. local sa_n = r(N)
+
+. 
+. display as text "Houston-area: N=`houston_n', $`=string(`houston_total',"%12.
+> 0fc")'"
+Houston-area: N=141, $224,804,999
+
+. display as text "Dallas-Fort Worth-area: N=`dfw_n', $`=string(`dfw_total',"%1
+> 2.0fc")'"
+Dallas-Fort Worth-area: N=206, $415,035,546
+
+. display as text "San Antonio (city only, bonus context): N=`sa_n', $`=string(
+> `sa_total',"%12.0fc")'"
+San Antonio (city only, bonus context): N=48, $70,428,349
+
+. 
+. * ---- Austin-area: the evidence folder's own pre-built extract. ----
+. preserve
+
+.     import delimited "${EV_SVOG}/svog_awards_AUSTIN_AREA.csv", varnames(1) ca
+> se(preserve) clear
+(encoding automatically selected: ISO-8859-1)
+(9 vars, 152 obs)
+
+.     generate double amt = total_awarded_usd
+
+.     quietly count
+
+.     local austin_n = r(N)
+
+.     gsort -amt
+
+.     quietly summarize amt
+
+.     local austin_total = r(sum)
+
+.     quietly summarize amt in 1/10
+
+.     local austin_top10 = r(sum)
+
+.     local austin_top10_share = 100*`austin_top10'/`austin_total'
+
+.     quietly count if amt>=9999999.5
+
+.     local austin_cap_hits = r(N)
+
+.     display as text "Austin-area: N=`austin_n', $`=string(`austin_total',"%12
+> .0fc")', top10 share=`=string(round(`austin_top10_share',0.1),"%4.1f")'%, rec
+> ipients at \$10M cap=`austin_cap_hits'"
+Austin-area: N=152, $238,413,446, top10 share=38.8%, recipients at $10M cap=5
+
+. restore
+
+. 
+. * ---- Nashville, TN: needs the full-national file (staged above). ----
+. preserve
+
+.     use "${DATAX}/SVOG_awards_full_national.dta", clear
+
+.     quietly summarize total_awarded_usd_nominal if state_norm=="TN" & city_no
+> rm=="NASHVILLE"
+
+.     local nashville_total = r(sum)
+
+.     quietly count if state_norm=="TN" & city_norm=="NASHVILLE"
+
+.     local nashville_n = r(N)
+
+.     display as text "Nashville (TN, city only): N=`nashville_n', $`=string(`n
+> ashville_total',"%12.0fc")'"
+Nashville (TN, city only): N=114, $159,856,094
+
+. restore
+
+. 
+. numadd, key(svog_metro_method_note) value(1) formatted("hand-built city-name 
+> list, not official MSA boundaries") ///
+>     unit("methodological note") ///
+>     source("01_evidence/07_svog_federal_relief/_sources.md") ///
+>     note("Austin-area figure uses the evidence folder's own pre-built 26-plac
+> e city list (svog_awards_AUSTIN_AREA.csv). Houston-area (`houston_n' recipien
+> ts) and Dallas-Fort Worth-area (`dfw_n' recipients) figures were built in thi
+> s module from svog_awards_TEXAS.csv using this module's own hand-built city-n
+> ame lists (29 and 49 place names respectively; full lists are in this do-file
+> 's SECTION 4 source), matched on a case/whitespace-normalized city field. Nas
+> hville (`nashville_n' recipients) and San Antonio (`sa_n' recipients) use a s
+> ingle-city, case-normalized match against the full national SVOG file, follow
+> ing the same convention the evidence folder used for those two cities. None o
+> f the four metro figures corresponds to an official Census CBSA/MSA boundary;
+>  treat all four as approximate, directional comparisons, not authoritative me
+> tro totals, and expect them to differ somewhat from any other hand-built city
+>  list covering the same metro.")
+
+. 
+. numadd, key(svog_tx_total) value(`tx_total') formatted("\$`=string(`tx_total'
+> /1000000000,"%4.2f")' billion") ///
+>     unit("nominal dollars, 758 recipients") ///
+>     source("01_evidence/07_svog_federal_relief/svog_awards_TEXAS.csv") ///
+>     note("Total SVOG awards to Texas recipients, SBA awards-as-of-7-5-22 file
+> , `tx_n' recipients. Shown for context; not plotted on fig18's metro-comparis
+> on bars because it is a whole-state total, not a metro figure, and dwarfs all
+>  four metro bars on the same axis.")
+
+. 
+. numadd, key(svog_tx_top10_share) value(`=round(`tx_top10_share',0.1)') format
+> ted("`=string(round(`tx_top10_share',0.1),"%4.1f")'%") ///
+>     unit("percent of Texas SVOG dollars, top 10 of 758 recipients") ///
+>     source("01_evidence/07_svog_federal_relief/svog_awards_TEXAS.csv") ///
+>     note("Share of all Texas SVOG dollars captured by the 10 largest of 758 T
+> exas recipients.")
+
+. 
+. numadd, key(svog_tx_cap_hits) value(`tx_cap_hits') formatted("`tx_cap_hits' o
+> f 758 recipients") ///
+>     unit("count at/above the \$10,000,000 per-entity cap") ///
+>     source("01_evidence/07_svog_federal_relief/svog_awards_TEXAS.csv") ///
+>     note("Number of Texas SVOG recipients whose total award is at or above th
+> e program’s \$10,000,000 per-entity cap.")
+
+. 
+. numadd, key(svog_austin_total) value(`austin_total') formatted("\$`=string(ro
+> und(`austin_total'/1000000,0.1),"%6.1f")' million") ///
+>     unit("nominal dollars, `austin_n' recipients") ///
+>     source("01_evidence/07_svog_federal_relief/svog_awards_AUSTIN_AREA.csv") 
+> ///
+>     note("Total SVOG awards to Austin-area recipients (Austin, Round Rock, Sa
+> n Marcos, Pflugerville, and other nearby places -- see _sources.md's city lis
+> t), `austin_n' recipients, about `=string(round(100*`austin_total'/`tx_total'
+> ,0.1),"%4.1f")'% of the Texas total.")
+
+. 
+. numadd, key(svog_austin_top10_share) value(`=round(`austin_top10_share',0.1)'
+> ) formatted("`=string(round(`austin_top10_share',0.1),"%4.1f")'%") ///
+>     unit("percent of Austin-area SVOG dollars, top 10 of `austin_n' recipient
+> s") ///
+>     source("01_evidence/07_svog_federal_relief/svog_awards_AUSTIN_AREA.csv") 
+> ///
+>     note("Share of all Austin-area SVOG dollars captured by the 10 largest of
+>  `austin_n' Austin-area recipients.")
+
+. 
+. numadd, key(svog_austin_cap_hits) value(`austin_cap_hits') formatted("`austin
+> _cap_hits' of `austin_n' recipients") ///
+>     unit("count at/above the \$10,000,000 per-entity cap") ///
+>     source("01_evidence/07_svog_federal_relief/svog_awards_AUSTIN_AREA.csv") 
+> ///
+>     note("Number of Austin-area SVOG recipients whose total award is at or ab
+> ove the program’s \$10,000,000 per-entity cap: Alamo South Lamar LP, Circuit 
+> of the Americas LLC dba Germania Insurance Amphitheater, Flix Entertainment L
+> LC (Round Rock), The University of Texas at Austin, and Messina Touring Group
+>  LLC.")
+
+. 
+. numadd, key(svog_houston_area_total) value(`houston_total') formatted("\$`=st
+> ring(round(`houston_total'/1000000,0.1),"%6.1f")' million") ///
+>     unit("nominal dollars, `houston_n' recipients, hand-built city list") ///
+>     source("01_evidence/07_svog_federal_relief/svog_awards_TEXAS.csv") ///
+>     note("Houston-area SVOG total, this module’s own hand-built 29-place city
+>  list matched against svog_awards_TEXAS.csv, case/whitespace-normalized. Not 
+> an official MSA total.")
+
+. 
+. numadd, key(svog_dfw_area_total) value(`dfw_total') formatted("\$`=string(rou
+> nd(`dfw_total'/1000000,0.1),"%6.1f")' million") ///
+>     unit("nominal dollars, `dfw_n' recipients, hand-built city list") ///
+>     source("01_evidence/07_svog_federal_relief/svog_awards_TEXAS.csv") ///
+>     note("Dallas-Fort Worth-area SVOG total, this module’s own hand-built 49-
+> place city list matched against svog_awards_TEXAS.csv, case/whitespace-normal
+> ized. Not an official MSA total.")
+
+. 
+. numadd, key(svog_nashville_total) value(`nashville_total') formatted("\$`=str
+> ing(round(`nashville_total'/1000000,0.1),"%6.1f")' million") ///
+>     unit("nominal dollars, `nashville_n' recipients, city of Nashville only")
+>  ///
+>     source("03_analysis/data/external/SVOG_awards_full_national.dta") ///
+>     note("Nashville, TN city only (Nashville-Davidson is a consolidated city-
+> county government, so this captures nearly all of Davidson County but exclude
+> s MSA suburbs like Franklin and Murfreesboro -- the true Nashville-MSA total 
+> would be higher). Not an official MSA total.")
+
+. 
+. numadd, key(svog_san_antonio_total_bonus) value(`sa_total') formatted("\$`=st
+> ring(round(`sa_total'/1000000,0.1),"%6.1f")' million") ///
+>     unit("nominal dollars, `sa_n' recipients, city of San Antonio only, bonus
+>  context (not one of the 3 required comparators)") ///
+>     source("01_evidence/07_svog_federal_relief/svog_awards_TEXAS.csv") ///
+>     note("San Antonio city-only SVOG total, provided as bonus context alongsi
+> de the Houston/Dallas-Fort Worth/Nashville comparators the tasking required; 
+> not plotted on fig18.")
+
+. 
+. * ---- Build the 4-geography comparison dataset for fig18. ----
+. clear
+
+. set obs 4
+Number of observations (_N) was 0, now 4.
+
+. generate str24 geo = ""
+(4 missing values generated)
+
+. generate double total_usd = .
+(4 missing values generated)
+
+. replace geo = "Dallas-Fort Worth"  in 1
+(1 real change made)
+
+. replace total_usd = `dfw_total'    in 1
+(1 real change made)
+
+. replace geo = "Austin"             in 2
+(1 real change made)
+
+. replace total_usd = `austin_total' in 2
+(1 real change made)
+
+. replace geo = "Houston"            in 3
+(1 real change made)
+
+. replace total_usd = `houston_total' in 3
+(1 real change made)
+
+. replace geo = "Nashville"          in 4
+(1 real change made)
+
+. replace total_usd = `nashville_total' in 4
+(1 real change made)
+
+. generate double total_millions = total_usd/1000000
+
+. 
+. local austin_beats_houston = (`austin_total' > `houston_total')
+
+. local austin_beats_nashville = (`austin_total' > `nashville_total')
+
+. local austin_beats_dfw = (`austin_total' > `dfw_total')
+
+. display as text "Austin > Houston? `austin_beats_houston'. Austin > Nashville
+> ? `austin_beats_nashville'. Austin > DFW? `austin_beats_dfw'."
+Austin > Houston? 1. Austin > Nashville? 1. Austin > DFW? 0.
+
+. 
+. local fig18_title = "Austin’s SVOG total beat Houston and Nashville, trailed 
+> DFW"
+
+. local _tlen = length("`fig18_title'")
+
+. display as text "fig18 title length check: `_tlen' characters (target under ~
+> 70)."
+fig18 title length check: 61 characters (target under ~70).
+
+. 
+. gsort -total_millions
+
+. generate byte ordg = _n
+
+. * Confirm Austin really is 2nd by dollars in this sorted order before colorin
+> g
+. * its bar orange -- if Austin's rank ever changes, this assert stops the modu
+> le
+. * rather than silently coloring the wrong bar.
+. quietly summarize ordg if geo=="Austin", meanonly
+
+. assert r(mean)==2
+
+. 
+. * WHY THIS IS A twoway AND NOT A graph hbar. The previous version was
+. * graph hbar bar_g1 bar_g2 bar_g3 bar_g4, over(ordg) asyvars -- one masked co
+> py
+. * of the series per metro, which was the only way to get both per-metro color
+> s
+. * and visible axis labels out of graph hbar. But four variables give every
+. * over() group FOUR bar slots and three of them are empty in every group, so
+. * each metro's bar sat in a different slot within its own group: Dallas-Fort
+. * Worth's bar at the top of its group (label below it), Nashville's at the
+. * bottom of its group (label well above it). Reading across, a metro could be
+. * matched to the wrong dollar figure. Explicit y positions make the tick and
+. * the bar the same coordinate, so they cannot drift.
+. generate double ypos = 5 - ordg          // largest total at the top
+
+. generate double bar_other  = total_millions if geo!="Austin"
+(1 missing value generated)
+
+. generate double bar_austin = total_millions if geo=="Austin"
+(3 missing values generated)
+
+. generate str12 lab_g = strtrim(string(total_millions, "%6.1f"))
+
+. 
+. local ylab18 ""
+
+. forvalues i = 1/4 {
+  2.     local nm = geo[`i']
+  3.     local yp = 5 - `i'
+  4.     local ylab18 `"`ylab18' `yp' "`nm'""'
+  5. }
+
+. quietly summarize total_millions
+
+. local xmax18 = 1.13 * r(max)
+
+. 
+. twoway ///
+>     (bar bar_other ypos, horizontal barwidth(0.58) color("${MUTED}")) ///
+>     (bar bar_austin ypos, horizontal barwidth(0.58) color("${ORANGE}")) ///
+>     (scatter ypos total_millions, msymbol(none) mlabel(lab_g) ///
+>         mlabposition(3) mlabgap(1.5) mlabcolor("${TEXTC}") mlabsize(2.8)) ///
+>     , ylabel(`ylab18', angle(0) labsize(3.0) noticks) ///
+>       yscale(range(0.42 4.58)) ytitle("") ///
+>       xtitle("\$ millions, nominal", $XTOPT) ///
+>       xlabel(0(100)400, labsize(2.8)) xscale(range(0 `xmax18')) ///
+>       title("`fig18_title'", $TITLEOPT) ///
+>       subtitle("SVOG awards by metro area, \$ millions; hand-built city-name 
+> matches, not official MSA boundaries." ///
+>                "The three Texas bars sit inside a \$1.17 billion Texas total;
+>  Nashville, Tennessee, does not.", $SUBOPT) ///
+>       legend(off) ///
+>       graphregion(color(white)) plotregion(margin(l=2 r=4)) ///
+>       name(g_fig18, replace)
+
+. 
+. figsave, name(fig18_svog_metro)
+  figure -> 04_figures/fig18_svog_metro.png
+
+. 
+. preserve
+
+.     export delimited geo total_usd total_millions using "${OUT}/fig18_svog_me
+> tro.csv", replace
+file /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.booth@texas2036.org
+> /My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analysis/stata/../..
+> /03_analysis/out/fig18_svog_metro.csv saved
+
+. restore
+
+. 
+. display as text "fig18 complete."
+fig18 complete.
+
+. 
+. 
+. * ================================================================
+. * SECTION 5. OPTIONAL / FIGURE 21: other cities' self-reported average music
+. *            income (Sound Music Cities censuses) against Austin's data gap.
+. *            Every figure below was verified directly against
+. *            01_evidence/05_music_census_pay_surveys/national_and_benchmark_
+. *            surveys.md before use (see that file's SS 6c comparison table).
+. *            These are self-selected SURVEY AVERAGES, not medians, and are
+. *            NOT comparable to this report's ACS PUMS median-earnings
+. *            figures used elsewhere -- stated in the subtitle and caption,
+. *            not smoothed over.
+. * ================================================================
+. clear
+
+. set obs 16
+Number of observations (_N) was 0, now 16.
+
+. generate byte ord = _n
+
+. generate str20 city = ""
+(16 missing values generated)
+
+. generate double income_usd = .
+(16 missing values generated)
+
+. generate int    n_resp = .
+(16 missing values generated)
+
+. generate int    census_year = .
+(16 missing values generated)
+
+. 
+. replace city = "Nashville"     in 1
+(1 real change made)
+
+. replace income_usd = 52000     in 1
+(1 real change made)
+
+. replace n_resp = 4256          in 1
+(1 real change made)
+
+. replace census_year = 2024     in 1
+(1 real change made)
+
+. 
+. replace city = "Baltimore"     in 2
+(1 real change made)
+
+. replace income_usd = 35000     in 2
+(1 real change made)
+
+. replace census_year = 2024     in 2
+(1 real change made)
+
+. 
+. replace city = "Charlotte"     in 3
+(1 real change made)
+
+. replace income_usd = 29000     in 3
+(1 real change made)
+
+. replace n_resp = 1046          in 3
+(1 real change made)
+
+. replace census_year = 2025     in 3
+(1 real change made)
+
+. 
+. replace city = "Minneapolis"   in 4
+(1 real change made)
+
+. replace income_usd = 28000     in 4
+(1 real change made)
+
+. replace census_year = 2024     in 4
+(1 real change made)
+
+. 
+. replace city = "NW Arkansas"   in 5
+(1 real change made)
+
+. replace income_usd = 26000     in 5
+(1 real change made)
+
+. replace census_year = 2024     in 5
+(1 real change made)
+
+. 
+. replace city = "Baton Rouge"   in 6
+(1 real change made)
+
+. replace income_usd = 25000     in 6
+(1 real change made)
+
+. replace census_year = 2025     in 6
+(1 real change made)
+
+. 
+. replace city = "New Orleans"   in 7
+(1 real change made)
+
+. replace income_usd = 23000     in 7
+(1 real change made)
+
+. replace n_resp = 1504          in 7
+(1 real change made)
+
+. replace census_year = 2024     in 7
+(1 real change made)
+
+. 
+. replace city = "Washington DC" in 8
+(1 real change made)
+
+. replace income_usd = 23000     in 8
+(1 real change made)
+
+. replace n_resp = 2738          in 8
+(1 real change made)
+
+. replace census_year = 2024     in 8
+(1 real change made)
+
+. 
+. replace city = "Cleveland"     in 9
+(1 real change made)
+
+. replace income_usd = 21000     in 9
+(1 real change made)
+
+. replace n_resp = 2768          in 9
+(1 real change made)
+
+. replace census_year = 2023     in 9
+(1 real change made)
+
+. 
+. replace city = "Detroit"       in 10
+(1 real change made)
+
+. replace income_usd = 20000     in 10
+(1 real change made)
+
+. replace n_resp = 2518          in 10
+(1 real change made)
+
+. replace census_year = 2026     in 10
+(1 real change made)
+
+. 
+. replace city = "Columbus"      in 11
+(1 real change made)
+
+. replace income_usd = 19390     in 11
+(1 real change made)
+
+. replace n_resp = 1555          in 11
+(1 real change made)
+
+. replace census_year = 2023     in 11
+(1 real change made)
+
+. 
+. replace city = "Greensboro"    in 12
+(1 real change made)
+
+. replace income_usd = 18000     in 12
+(1 real change made)
+
+. replace n_resp = 1126          in 12
+(1 real change made)
+
+. replace census_year = 2024     in 12
+(1 real change made)
+
+. 
+. replace city = "Tulsa"         in 13
+(1 real change made)
+
+. replace income_usd = 18000     in 13
+(1 real change made)
+
+. replace n_resp = 1003          in 13
+(1 real change made)
+
+. replace census_year = 2024     in 13
+(1 real change made)
+
+. 
+. replace city = "Lawrence"      in 14
+(1 real change made)
+
+. replace income_usd = 16000     in 14
+(1 real change made)
+
+. replace n_resp = 826           in 14
+(1 real change made)
+
+. replace census_year = 2024     in 14
+(1 real change made)
+
+. 
+. replace city = "Anchorage"     in 15
+(1 real change made)
+
+. replace income_usd = 15000     in 15
+(1 real change made)
+
+. replace n_resp = 377           in 15
+(1 real change made)
+
+. replace census_year = 2024     in 15
+(1 real change made)
+
+. 
+. * Austin: an explicit gap, not a bar. The city's own 2022 Greater Austin
+. * Music Census removed the income-quantification questions the 2014 census
+. * had used, on its community partners' advice (verified directly against the
+. * census PDF's own front matter in this project's evidence folder); no
+. * dollar figure exists for any year after 2013. income_usd is left MISSING
+. * (not zero -- a zero would misstate "no data" as "musicians earn nothing")
+. * deliberately, and the category label itself says so, so the row still
+. * appears on the axis with no bar drawn under it, self-explanatory without
+. * relying on blabel (which has no value to print for a missing observation).
+. replace city = "Austin (no data)" in 16
+(1 real change made)
+
+. replace census_year = 2022        in 16
+(1 real change made)
+
+. 
+. display as text _newline "{hline 72}"
+
+------------------------------------------------------------------------
+
+. display as text "OPTIONAL FIGURE 21: city music-census self-reported average 
+> income"
+OPTIONAL FIGURE 21: city music-census self-reported average income
+
+. display as text "{hline 72}"
+------------------------------------------------------------------------
+
+. list city income_usd n_resp census_year, clean
+
+                   city   income~d   n_resp   census~r  
+  1.          Nashville      52000     4256       2024  
+  2.          Baltimore      35000        .       2024  
+  3.          Charlotte      29000     1046       2025  
+  4.        Minneapolis      28000        .       2024  
+  5.        NW Arkansas      26000        .       2024  
+  6.        Baton Rouge      25000        .       2025  
+  7.        New Orleans      23000     1504       2024  
+  8.      Washington DC      23000     2738       2024  
+  9.          Cleveland      21000     2768       2023  
+ 10.            Detroit      20000     2518       2026  
+ 11.           Columbus      19390     1555       2023  
+ 12.         Greensboro      18000     1126       2024  
+ 13.              Tulsa      18000     1003       2024  
+ 14.           Lawrence      16000      826       2024  
+ 15.          Anchorage      15000      377       2024  
+ 16.   Austin (no data)          .        .       2022  
+
+. 
+. foreach c in Nashville Baltimore Charlotte Minneapolis "NW Arkansas" "Baton R
+> ouge" ///
+>     "New Orleans" "Washington DC" Cleveland Detroit Columbus Greensboro Tulsa
+>  Lawrence Anchorage {
+  2.     local cl = lower(subinstr(subinstr("`c'"," ","_",.),"NW_Arkansas","nwa
+> rkansas",.))
+  3.     quietly summarize income_usd if city=="`c'", meanonly
+  4.     local inc = r(mean)
+  5.     quietly summarize census_year if city=="`c'", meanonly
+  6.     local yr = r(mean)
+  7.     numadd, key(citycensus_income_`cl') value(`inc') formatted("\$`=string
+> (`inc',"%9.0fc")'") ///
+>         unit("self-selected survey AVERAGE (not median), music-related annual
+>  income") ///
+>         source("01_evidence/05_music_census_pay_surveys/national_and_benchmar
+> k_surveys.md") ///
+>         note("`c' Sound Music Cities-style music census, `yr'. Self-selected 
+> online survey average music-related income, NOT a median and not comparable t
+> o this report's ACS PUMS median-earnings figures for Austin/Texas musicians u
+> sed elsewhere. Verified against national_and_benchmark_surveys.md SS6c before
+>  use.")
+  8. }
+
+. 
+. numadd, key(citycensus_austin_no_data) value(1) formatted("no data since 2013
+> ") ///
+>     unit("data gap, methodological finding") ///
+>     source("01_evidence/05_music_census_pay_surveys/austin_music_census_2014_
+> vs_2022_extracted_numbers.md") ///
+>     note("Austin’s own 2022 Greater Austin Music Census removed the income-qu
+> antification questions the 2014 census had used, on the stated advice of its 
+> community engagement partners (the census Summary Report says these questions
+>  turned off many respondents). No Austin figure comparable to the other 15 ci
+> ties’ 2023-2026 self-reported averages exists; the last Austin dollar figure 
+> is the 2014 census, measuring calendar-2013 income, reported as a distributio
+> n (68.4% earned under \$10,000 from music) rather than an average or median. 
+> Shown in fig21 as an explicit gap, not a bar.")
+
+. 
+. sort income_usd
+
+. tempfile fig21_data
+
+. save `fig21_data'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St34522.00000f saved
+    as .dta format
+
+. 
+. local fig21_title = "Austin dropped the income question every peer city still
+>  asks"
+
+. local _tlen = length("`fig21_title'")
+
+. display as text "fig21 title length check: `_tlen' characters (target under ~
+> 70)."
+fig21 title length check: 61 characters (target under ~70).
+
+. 
+. local sub1 = "Self-selected survey averages, not medians; not comparable to t
+> his report’s ACS figures."
+
+. local sub2 = "Each city ran its own census in a different year; sample sizes 
+> and methods differ."
+
+. local _s1len = length("`sub1'")
+
+. local _s2len = length("`sub2'")
+
+. display as text "fig21 subtitle length check: line1=`_s1len', line2=`_s2len' 
+> (target under ~95 each)."
+fig21 subtitle length check: line1=90, line2=82 (target under ~95 each).
+
+. 
+. * over(city, sort(income_usd) descending) looks right but a STRING over()
+. * variable silently falls back to alphabetical order regardless of sort()
+. * (confirmed on fig16/fig17a/fig18 -- see the notes there); build an explicit
+. * value-labeled numeric ordering variable instead. Austin's income_usd is
+. * missing, and gsort places its row last here (confirmed by rendering: it
+. * lands at the bottom of the descending list, below Anchorage) -- still a
+. * clean, unambiguous position for an explicit gap, just not the top as a
+. * naive "missing sorts as +infinity" expectation would suggest.
+. gsort -income_usd
+
+. generate byte ordc = _n
+
+. label define ordclbl 1 "placeholder", replace
+
+. quietly forvalues i = 1/16 {
+
+. label values ordc ordclbl
+
+. 
+. * Comparison cities in navy, not orange -- orange marks Austin/the report's
+. * own subject throughout this project, and Austin has no bar here at all
+. * (an explicit gap), so coloring the 15 comparison bars orange would invert
+. * that convention rather than follow it.
+. graph hbar income_usd, over(ordc) ///
+>     bar(1, color("${NAVY}")) ///
+>     blabel(bar, format(%9.0fc) size(2.6)) ///
+>     title("`fig21_title'", $TITLEOPT) ///
+>     subtitle("`sub1'" "`sub2'", $SUBOPT) ///
+>     ytitle("Self-reported average annual music income (US$)", $YTOPT) ///
+>     ylabel(0(10000)50000, angle(horizontal) labsize(2.6)) ///
+>     yscale(range(0 65000)) ///
+>     legend(off) ///
+>     graphregion(color(white)) ///
+>     name(g_fig21, replace)
+
+. 
+. figsave, name(fig21_city_census_income)
+  figure -> 04_figures/fig21_city_census_income.png
+
+. 
+. preserve
+
+.     export delimited city income_usd n_resp census_year using "${OUT}/fig21_c
+> ity_census_income.csv", replace
+file /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.booth@texas2036.org
+> /My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analysis/stata/../..
+> /03_analysis/out/fig21_city_census_income.csv saved
+
+. restore
+
+. 
+. display as text "fig21 complete."
+fig21 complete.
+
+. 
+. 
+. * ================================================================
+. * Done.
+. * ================================================================
+. display as text _newline "{hline 72}"
+
+------------------------------------------------------------------------
+
+. display as text "50_state_national.do complete"
+50_state_national.do complete
+
+. display as text "{hline 72}"
+------------------------------------------------------------------------
+
+. 
+end of do-file

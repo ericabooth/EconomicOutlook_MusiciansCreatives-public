@@ -1,0 +1,793 @@
+City of Austin
+Office of the City Auditor
+
+
+Special Report
+
+Economic Development Department
+Culture and Arts Funding
+October 2024
+
+
+
+
+We researched information to answer several questions about cultural arts grant funding
+and eligibility criteria in Austin. In typical years, most revenues used for cultural arts come
+from hotel occupancy taxes. In recent years, large infusions of City and federal money from
+programs initiated during the COVID-19 pandemic were allocated to fund cultural arts
+programs. The City collects a variety of information about applicants for funding, but did not
+collect some information consistently. We also looked at culture and arts programs in other
+cities. They appear similar, but most are managed through a separate department or office.
+The City of Austin has not made progress in creating a separate Department of Arts, Culture
+and Creativity.
+  Contents                             Objective & Background
+                                       What We Learned
+                                                                                                                    2
+                                                                                                                    3
+                                       Appendices                                                                  13
+                                       Why We Did This Report, Scope, & Methodology                                17
+
+                                       Cover: Reflect and Resound by Virginia Fleck, located in the daycare facility
+                                       of Austin’s Women and Children’s Shelter
+
+
+
+  Objective                            The objective of this special request was to provide the following
+                                       information requested by the City Council for fiscal years 2018 through
+                                       2023 (except for question six):
+
+                                       •   What are the revenues, expenditures, and administrative costs related
+                                           to cultural arts funding?
+                                       •   What are eligible expenses and criteria for cultural arts funds under
+                                           federal and state law as well as City Code?
+                                       •   What information does the City of Austin collect about applicants for
+                                           cultural arts grant funding? What is the profile of applicants for this
+                                           funding based on available information?
+                                       •   What are the major changes in the City’s cultural arts program?
+                                       •   What progress has City management made towards the CreateAustin
+                                           Plan’s recommendation to establish a Department of Arts, Cultural and
+                                           Creativity?
+                                       •   Based on the current year, how do cultural arts grant-making programs
+                                           in other cities compare to Austin’s, including their administrative
+                                           structure, staffing, and funding?
+
+
+
+  Background                           The arts, culture, and creativity are valued as vital contributors to Austin’s
+                                       character, quality of life, and economy. Through culture and arts funding,
+                                       the City of Austin provides support annually to local artists, area non-profit
+                                       arts organizations, and creative entrepreneurs.
+
+                                       The funding for culture and arts programs typically comes from the City’s
+                                       Hotel Occupancy Tax (HOT) revenue. According to City Code, the City
+                                       allocates 15% of the City’s HOT revenue to support arts and cultural
+                                       organizations. Recipients of this funding run projects and activities in
+                                       Austin aimed at promoting tourism and the convention and hotel industry
+                                       through the encouragement, promotion, improvement, application, and
+                                       exhibition of the arts.
+
+                                       The Cultural Arts Division within the City’s Economic Development
+                                       Department (EDD) oversees the City’s cultural arts funding. The City
+                                       contracted with the Long Center and the Better Business Bureau of Austin,
+                                       Texas, as third-party administrators for processing the grant agreements
+                                       and payments.
+
+
+
+
+Economic Development Department Culture and Arts Funding 2                                      Office of the City Auditor
+  What We Learned
+  Summary                              We researched information to answer several questions about cultural
+                                       arts grant funding and eligibility criteria in Austin. In typical years, most
+                                       revenues used for cultural arts come from hotel occupancy taxes. In recent
+                                       years, large infusions of City and federal money from programs initiated
+                                       during the COVID-19 pandemic were allocated to fund cultural arts
+                                       programs. The City collects a variety of information about applicants for
+                                       funding, but did not collect some information consistently. We also looked
+                                       at culture and arts programs in other cities. They appear similar, but most
+                                       are managed through a separate department or office. The City of Austin
+                                       has not made progress in creating a separate Department of Arts, Culture
+                                       and Creativity.
+
+
+
+  Question 1                           Cultural arts funding revenues: According to information provided by
+                                       EDD staff, the annual revenue for fiscal years 2018 through 2023 ranged
+  What are the revenues,               between about $9 million and $27 million. Most revenues for the cultural
+  expenditures, and                    arts came from Hotel Occupancy Tax (HOT), however, large infusions of
+                                       City and federal money initiated during the COVID-19 pandemic were
+  administrative costs
+                                       allocated to fund these programs, as well. In typical years, revenue would
+  related to cultural arts             come mainly from HOT and a very small amount would come from interest
+  funding?                             income.
+
+                                       In 2021, the Coronavirus Aid, Relief, and Economic Security (CARES)
+                                       Act provided $11.3 million for cultural funding. From those funds, $6.3
+                                       million went to fund culture and arts non-profits, and $5 million funded
+                                       mini-grants to creative sector workers and music disaster relief. These
+                                       funds were administered through a third-party vendor, the Better Business
+                                       Bureau of Austin, Texas.
+
+                                       In 2022, the American Rescue Plan Act (ARPA) brought $12 million to
+                                       the City to use for other culture and arts relief. From those funds, $6
+                                       million went to the arts, $2 million to arts non-profit relief, and $4 million
+                                       to music.1 The ARPA funding was administered by two entities, the Long
+                                       Center and the Better Business Bureau of Austin, Texas.
+
+                                       In addition to emergency funds from federal sources, culture and arts
+                                       programs received funding from City sources during the pandemic.
+                                       In 2022, cultural programs received a total of $5.8 million from the
+                                       General Fund Budget Stabilization Reserve to shore up losses from the
+                                       COVID-19 pandemic. From those funds, $4.8 million went to cultural arts
+                                       programming and $1 million went to provide pandemic relief to culture
+                                       and arts non-profits.
+
+                                       Before the pandemic, EDD had been allocating grant funding based on
+                                       projected earnings from HOT. However, the infusion of federal funding in
+                                       2021 and 2022 allowed them to move to funding based on the prior year’s
+                                       HOT earnings instead of the current year’s projected earnings.
+
+                                       1
+                                         For the purposes of this report, we did not look at funding for music or music disaster
+                                       relief.
+
+Economic Development Department Culture and Arts Funding 3                                                 Office of the City Auditor
+                                           Exhibit 1: Cultural arts revenues by source for fiscal years 2018 – 2023
+
+
+
+
+                                       Note: The years indicate the fiscal year budget in which the funding was included.
+                                       Source: Office of the City Auditor (OCA) analysis of revenue data provided by EDD, June 2024
+
+                                       Cultural arts expenditures: According to information provided by EDD
+                                       staff, expenditures for fiscal years 2018 through 2023 ranged between
+                                       about $9 million and $16 million. Before the pandemic, expenditures for
+                                       cultural arts came mainly from the Cultural Arts Fund which was funded by
+                                       HOT revenues and a small amount of interest income.
+
+                                       While City Council appropriated $4.8 million from the Budget Stabilization
+                                       Reserve to the Cultural Arts Fund to account for HOT revenue losses, only
+                                       $1.18 million was paid out in 2022, with $500,000 coming from the $4.8
+                                       million appropriation. This $500,000 was approved by the City Council to
+                                       go towards culture and arts non-profit relief grants. An additional $1
+                                       million from the General Fund Budget Stabilization Reserve was paid from
+                                       the EDD operating fund and used to provide additional culture and arts
+                                       non-profit relief. Also, the 2022 expenditures from CARES and ARPA
+                                       funding were distributed to qualifying applicants through third-party
+                                       administrators, the Long Center and the Better Business Bureau of Austin,
+                                       Texas.
+                                       Exhibit 2: Cultural arts expenditures by source for fiscal years 2018 – 2023
+
+
+
+
+                                       Source: OCA analysis of expenditure data provided by EDD, June 2024
+
+
+
+
+Economic Development Department Culture and Arts Funding 4                                                      Office of the City Auditor
+                                        Cultural arts administrative costs: According to information provided by
+                                        EDD staff, administrative costs for fiscal years 2018 through 2023 ranged
+                                        between 4.9% and 8.4% of the total expenditures shown in Exhibit 2.
+                                        Most of the administrative costs were for EDD staff salaries. The rest went
+   The TEMPO Program provides           to other non-grant expenses like marketing, software licenses, facility
+   funding to local artists for         maintenance, the PARD Artist Access program, and the TEMPO program.
+   temporary public art installations
+                                        Also, the third-party administrators of ARPA and CARES funding receive a
+   on City-owned property.
+                                        4.5% fee to administer the funds. A full list of administrative costs can be
+                                        found in Appendix A.
+
+
+
+  Question 2                            As noted above, most of the funding for the City’s cultural arts comes from
+                                        the City’s HOT revenue. The City of Austin Code states that the City’s HOT
+  What are eligible                     revenue may be used only as provided by Texas State law.
+  expenses and criteria for              The state of Texas allows cities to use revenue from HOT to promote
+  cultural arts funds under             culture and art. Texas State Code, Section 351.101, establishes a two-part
+  federal and state law as              test that cities must meet for any expenditures of HOT revenue collected:
+  well as City Code?                    1. Every expenditure must directly enhance and promote tourism and the
+                                           convention and hotel industry. However, the state does not provide
+                                           a formula for determining the level of impact an event must have to
+                                           satisfy this requirement.
+
+                                        2. Every expenditure must fit into one of the statutorily authorized
+                                           categories for expenditure of local HOT revenues. One of those
+                                           categories is “[e]xpenditures that promote cultural and fine arts.”
+                                           However, to meet the two-part test, these expenditures must also
+                                           directly promote tourism and the convention and hotel industry.
+
+                                        State law and City Code provide specific examples of allowed
+                                        expenses related to the encouragement, promotion, improvement, and
+                                        encouragement of arts. These include expenses for “instrumental and
+                                        vocal music, dance, drama, folk art, creative writing, architecture, design
+                                        and allied fields, painting, sculpture, photography, graphic and craft arts,
+                                        motion pictures, radio, television, tape and sound recording, and other
+                                        arts related to the presentation, performance, execution, and exhibition of
+                                        these major art forms.”
+
+                                        The City of Austin also established a detailed list of allowed expenses for
+                                        each of its current culture and arts programs (Thrive, Nexus, and Elevate).
+                                        Generally, allowable expenses are similar across the three programs. They
+                                        include costs incurred in the preparation and implementation of cultural
+                                        activities that are open to and marketed to tourists including:
+
+                                        • Administrative expenses &          • Insurance costs
+                                          artist fees                        • Fiscal sponsor fees, if applicable, &
+                                        • Travel for visiting artists          other contract management costs
+                                        • Space and equipment rentals        • Licensing fees or subscriptions
+                                        • Production costs                     for software needed for the
+                                        • Supplies and materials               implementation of contracted
+                                        • Marketing and promotion              activities
+                                          expenses
+
+
+Economic Development Department Culture and Arts Funding 5                                      Office of the City Auditor
+                                       Allowable expenses that are unique for the Thrive program include:
+
+                                       •    Capital expenditures, which includes, but are not limited to, the
+                                            purchase, repair, or renovation of equipment or property like speaker
+                                            systems, theater seats, and artwork. However, the City requires any
+                                            single capital expenditure over $2,000 to be pre-approved by a City
+                                            staff contract administrator.
+
+                                       •    Costs related to improving the organization’s ability to produce cultural
+                                            events.
+
+                                       Eligible expenses and criteria for grant-funded programs: The City of
+                                       Austin used money from a federal National Endowment for the Arts (NEA)
+                                       grant for local arts agencies to create a sub-granting program called the
+                                       Arts Education Relief Grant. In 2023, the City received approximately
+                                       $500,000 from this grant. Exhibit 3 shows both the federal eligibility
+                                       criteria for the City to receive these funds as well as the City’s criteria for
+                                       non-profits to apply for the Arts Education Relief Grant funding.
+                                                     Exhibit 3: Federal and City of Austin eligibility criteria
+                                                                  for NEA-funded grant money
+
+                                                       NEA criteria for                            City of Austin criteria for
+                                                      local art agencies                          Arts Education Relief Grant
+                                        •    Arts-focused non-profit,                         Arts education-focused 501(c)
+                                             tax-exempt 501(c)(3)                             (3) non-profit organizations
+                                             organizations                                    providing arts education services:
+                                        •    Units of state or local                          • Primarily serve participants
+                                             government                                           from early childhood through
+                                        •    Federally-recognized tribal                          18 years
+                                             communities or tribes                            • Must be located and operating
+                                        •    Applicants may be arts                               in the Austin metropolitan
+                                             organizations, local arts                            statistical area
+                                             agencies, arts service                           • Must have at least a one-year
+                                             organizations, local education                       operating history
+                                             agencies, and other                              • Majority of applicant’s
+                                             organizations that can help                          activities must be within the
+                                             advance the NEA’s goals                              Austin city limits
+
+                                       Source: OCA analysis of federal and City requirements for use of the Arts Education Relief Grant, June
+                                       2024
+
+
+                                       The City established eligibility criteria for each of its 2023 culture and
+                                       arts programs (Thrive, Nexus, Elevate, and Arts Education Relief Grant).
+                                       Appendix B shows a summary of the eligibility criteria for each of the
+                                       programs.
+
+
+
+
+Economic Development Department Culture and Arts Funding 6                                                        Office of the City Auditor
+  Question 3                           Economic Development Department staff collect both personal and
+                                       organizational information from the culture and arts program applicants
+  What information                     as shown in the bulleted list. The information collected is generally similar
+  does the City of Austin              across the programs with a few exceptions.
+  collect about applicants             •   Applicant name, contact information, race/ethnicity, gender, and council
+  for cultural arts grant                  district
+  funding? What is the                 •   Business structure including whether the organization is a non-profit,
+  profile of applicants for                creative business, or individual artist
+  this funding based on                •   Organization/business mission, vision, and address
+  available information?
+                                       •   Composition of leadership based on race/ethnicity and gender
+
+                                       •   Current City funding
+
+                                       •   Fiscal sponsor
+
+                                       •   Operating budget and how the applicant intends to use the awarded
+                                           funds
+
+                                       •   Artistic discipline/experience
+
+                                       •   Primary production history and the proposed public activities
+
+                                       •   Community impact (usually a short narrative about the proposed
+                                           project)
+
+                                       •   How the applicant plans to market the proposed activities
+
+                                       •   Number of members of the disability community, and number of
+                                           members of LGBTQIA+ community in leadership*
+
+                                       •   Specialized language access accommodations or programming
+                                           for non-English speaking communities, and accommodations for
+                                           individuals with disabilities*
+
+                                       * The City did not consistently collect this information during fiscal years
+                                       2018 through 2021
+
+                                       Some information is collected only from a subsection of programs. For
+                                       example, only Thrive program applicants are required to provide the
+                                       number of people employed by the applicant (both permanent and
+                                       contract employees). Also, IRS information is collected for non-profits
+                                       only. Appendix C shows more detail of information that was consistently
+                                       tracked for 2023 program participants.
+
+
+
+
+Economic Development Department Culture and Arts Funding 7                                      Office of the City Auditor
+   Question 4                                     From fiscal years 2018 to 2023, City managaement made several key
+                                                  changes to its culture and arts funding program. Changes were made to
+   What are the major                             the programs offered, eligibility requirements, funding amounts and
+   changes in the City of                         approach, and application review and scoring processes.
+   Austin’s cultural arts                                       Exhibit 4: City management made key changes to the
+   program?                                                         culture and arts funding program since 2018
+                                                                                            Based on a 2022 cultural funding review, the City:
+                        Reduced organizational funding                                         -Made major changes to programs offered,
+                        due to increased participation                                         funding award amounts and funding cycles,
+                        and limited funding                                                    review of applications and scoring processes,
+                                                                                               and insurance and eligibility requirements
+                                                                                                -Switched basis for funding from projected
+                                                                                               HOT funds to actual HOT funds collected
+
+                                2018                                    2020
+                                                    2019                                    2021                                   2023
+                                                                                                                2022
+
+                         The City launched Strategic
+                         Direction 2023, reinforcing an              Significant City and federal
+                         approach to lead with a lens of             money from programs                    EDD made program changes
+                         racial equity and healing, which            initiated during the COVID-            to comply with increased risks
+                         EDD adopted to manage the                   19 pandemic were allocated             to race-led equity programs
+                         programs*                                   to fund cultural arts
+
+
+                      * For example, EDD started prioritizing organizations that served communities at immediate risk of cultural erasure and
+                      displacement, and those that represented communities that experienced other forms of organizational marginalization.
+                      Source: OCA analysis of EDD culture and arts funding reports, May 2024
+
+                                                  Specific changes made following the City’s 2022 Cultural Funding Review
+                                                  Process: In 2022, City staff reviewed and restructured the cultural funding
+                                                  process, replacing the old culture and arts programs (Community
+EDD staff noted community and                     Initiatives, Core, Cultural Heritage Festivals, and Capacity Building) with
+stakeholder engagement informed                   three new pilot programs (Nexus, Thrive, and Elevate). These new pilot
+the changes made through this review              programs were launched in fiscal year 2023. The City contracted with a
+process.                                          third-party administrator for processing grant agreements and payments
+                                                  for these programs. Staff stated the City widened its focus to include
+                                                  sustainability, not just growth. Also, they changed other aspects of the
+                                                  program including funding, eligibility requirements, and the panel review
+                                                  process. Exhibits 5 and 6 show funding and eligibility changes.
+                                                                  Exhibit 5: Funding changes across all pilot programs
+                                                                  Initial process                                    Changes made
+                                                   Matching funding requirement                        Requirement removed for all programs
+Based on the City’s cultural funding
+                                                   Fiscal sponsorship was mandatory for
+guidelines, a “fiscal sponsor” is a                                                                    Requirement removed for all programs
+                                                   some programs
+non-profit corporation with a 501(c)
+status who applies for financial support           Program awards based on applicant’s
+                                                                                                       Requirement removed for all programs
+on behalf of another organization                  existing budget
+or individual. This enables the other              The City used projected HOT revenue                 The City used actual HOT revenue to
+organization or individual to receive the          to determine program awards                         determine program awards
+benefits of tax-exempt status
+                                                   The City funded all applicants scoring              The City funded the highest-scoring
+                                                   75 or higher on a 100-point scale                   applications until all funds exhausted
+                                                  Source: OCA analysis of information provided by EDD staff, May 2024
+
+
+Economic Development Department Culture and Arts Funding 8                                                                   Office of the City Auditor
+                                                Exhibit 6: Applicant eligibility changes across all pilot programs
+                                                     Initial process                        Changes made
+                                                                                         Eligibility expanded to applicants
+                                           Eligibility limited to applicants             from the Austin/Round Rock
+                                           in Austin or the extra-territorial            Metropolitan Statistical Area (MSA),
+                                           jurisdiction (ETJ)                            but activities receiving funding must
+                                                                                         take place within the city of Austin
+                                           Non-arts programs were eligible to Non-arts programs are not eligible
+                                           participate in the programs        to participate in the programs
+                                                                                         Eligibility expanded to any for-profit
+                                           Individual artists and arts
+                                                                                         business structure with a budget of
+                                           collectives (without 501(c) status)
+                                                                                         $500,000 or less (for Elevate) and
+                                           were eligible
+                                                                                         $150,000 or less (for Nexus)
+                                           Program applications only          Program applications accepted in
+                                           accepted in one language (English) non-English languages
+                                       Source: OCA analysis of information provided by EDD staff, May 2024
+
+
+                                       Changes related to application panel review process: City management
+                                       made some changes aimed at improving the applicant panel review
+                                       process. For example, the City:
+                                       •      Added formal training components for reviewers, including equity and
+                                              unconscious bias training, and technical training on how to use the
+                                              online application system
+                                       •      Clarified the panel composition and selection process
+                                       •      Disallowed applicant interaction with the panel
+                                       •      Made panels virtual instead of in-person
+                                       •      Video-recorded panel meetings as opposed to audio-recorded
+                                       •      Added Spanish interpreters
+                                       •      Added a two-round panel process for fiscal year 20232
+
+                                       Other program-specific changes: For Nexus applicants, City management
+                                       waived the insurance requirements. Also, Thrive participants were allowed
+                                       to spend awarded funds on capital expenditures. However, participants
+                                       must obtain pre-approval from an EDD program staff member for any
+                                       capital expenses over $2,000.
+
+
+
+
+                                       2
+                                           According to EDD staff, this will not be utilized in future years.
+
+
+
+Economic Development Department Culture and Arts Funding 9                                                      Office of the City Auditor
+  Question 5                                  In 2006, the City of Austin undertook the CreateAustin cultural planning
+                                              process with community stakeholders to “identify Austin’s creative
+  What progress has City                      assets and challenges, define goals, and establish recommendations
+  management made                             to invigorate Austin’s ‘culture of creativity’ to the year 2017.” In 2010,
+  towards the CreateAustin                    Council endorsed the CreateAustin Cultural Master Plan (Plan), in principle.
+                                              The plan recommended creating a City department for arts and culture
+  Plan’s recommendation                       and consolidating all arts, culture, music, and film activities into that
+  to establish a Department                   department. The Plan notes that activities and funds were spread across
+  of Arts, Cultural and                       departments creating a lack of focus, missed opportunities for leveraging
+  Creativity?                                 City resources, and a lack of a unified vision and coordination. The Plan
+                                              indicated that creating the department would allow the City to leverage
+                                              available resources and raise the significance of arts and culture in Austin.
+
+                                              When endorsing the Plan, Council Members gave three directives to
+                                              the City Manager, one of which was to “[d]irect City staff to continue to
+                                              explore the coordination of creative enterprise services, programs and
+                                              resources into an interdisciplinary staff team within the City to ensure
+                                              effective interdepartmental communication and collaboration of services
+                                              between the respective creative industries.” This directive followed a 2009
+                                              feasibility study by City Manager’s Office staff to explore the creation of
+                                              a new department of Arts and Culture. This study did not recommend
+                                              creating a separate department.
+
+                                              EDD staff said that the department has not received an explicit directive
+                                              to create a separate new department of arts and culture. They noted that
+                                              there have been many one-on-one discussions between EDD management
+                                              and other key stakeholders including City Council offices, Arts Commission,
+                                              and City Manager’s Office. Staff also said that EDD has previously asked
+                                              City management if there is interest in moving arts and culture out of EDD,
+                                              but the answer has always been “no.”
+                       Exhibit 7: Timeline of City actions related to CreateAustin’s recommendation to create a
+                                               Department of Arts, Culture and Creativity
+
+
+
+
+                   * The feasibility study report recommended creating a separate division within the Economic Growth and Redevelopment Services
+                   Office (now EDD) emphasizing the music division alongside the Arts Culture and Creativity Division.
+                   Source: OCA analysis of City documents and information obtained from EDD staff, April 2024
+
+
+
+Economic Development Department Culture and Arts Funding 10                                                           Office of the City Auditor
+  Question 6                           We surveyed culture and arts programs in 10 cities (Dallas, El Paso, Fort
+                                       Worth, Houston, and San Antonio in Texas as well as Denver, Phoenix,
+  Based on the current                 San Diego, San Jose, and Seattle) to collect information about program
+  year, how do cultural arts           attributes including administrative structure, funding, and staffing.
+  grant-making programs                Programs were similar, but some differed in terms of who manages culture
+                                       and arts operations as well as how they are staffed and funded.
+  in other cities compare to
+  Austin’s, including their            Administrative structure: In 8 of 11 cities, culture and arts programs are
+  administrative structure,            managed through separate departments or offices that have a sole focus
+                                       on culture and arts. In Austin, the program is managed by the Cultural
+  staffing, and funding?               Arts Division within the Economic Development Department. In Houston,
+                                       the program is a separate office in the Mayor’s Office. This program also
+                                       works with a third-party partner who has their own staffing resources who
+                                       help to manage grants and public art programs. In San Jose, the program
+                                       is managed by a division of their Office of Economic Development and
+                                       Cultural Affairs (located within the City Manager’s office). All the cities
+                                       have an Arts Commission or board that acts as an advisory body to support
+                                       the City Council.
+
+                                       In Austin and 4 other cities (San Antonio, Denver, San Diego, and San
+                                       Jose), other entities such as the Parks, Library, and Aviation departments
+                                       also manage various programs that have cultural impacts on their cities.
+
+                                       Staffing: Staffing varied among the cities. In Austin and 5 cities, staffing
+                                       ranged between 8 and 26 staff members (FTEs). Another 5 cities had at
+                                       least 45 FTEs. However, in those cities, the culture and arts managing
+                                       entities also oversee cultural facilities.
+
+                                       Funding: We mainly looked at funding flowing through the cities and
+                                       excluded any other funding that culture and arts organizations received
+                                       directly from other sources. All the cities have dedicated funding sources
+                                       that support their programs. The most common source of funding is HOT
+                                       revenue. Another common funding source is the general fund.
+
+                                       See Exhibit 8 for more detailed information about the culture and arts
+                                       program attributes among the cities we reviewed.
+
+
+
+
+Economic Development Department Culture and Arts Funding 11                                      Office of the City Auditor
+                                                                 Exhibit 8: Culture and arts programs in Austin and other cities
+            City                            Managing entity                            FTEs                                         Key source of funding
+                                                                                                   •   Hotel Occupancy Tax
+                                                                                                   •   2% Ordinance of COA Capital Improvement Project (CIP)
+                            Cultural Arts Division within the
+    Austin (TX)                                                                         18         •   General Fund – Budget Stabilization Reserve
+                            Economic Development Department
+                                                                                                   •   Pandemic relief funding - ARPA and CARES (One-time funding source)
+                                                                                                   •   Federal Grant - National Endowment for the Arts (One-time funding source)
+                                                                                                   •   Hotel Occupancy Tax
+    Dallas (TX)             Office of Arts & Culture*                                   56         •   Capital Bond Program Reimbursement
+                                                                                                   •   Municipal Radio Reimbursement
+                            El Paso Museums and Cultural Affairs                                   •   Hotel Occupancy Tax
+    El Paso (TX)                                                                       51.5
+                            Department**                                                           •   General Fund
+    Fort Worth              Arts Council of Fort Worth and Tarrant
+                                                                                        14         •   General Fund
+    (TX)                    County, d/b/a Arts Fort Worth
+                                                                                                   •   Hotel Occupancy Tax
+    Houston (TX)            Mayor's Office of Cultural Affairs                          26
+                                                                                                   •   General Fund
+    San Antonio                                                                                    •   Hotel Occupancy Tax
+                            Department of Arts & Culture                                24
+    (TX)                                                                                           •   Arts and Entertainment Fund
+    Denver (CO)             Denver Arts and Venues***                                   93         •   Facility Operations (100%)
+
+                                                                                                   •   General Fund
+                            City of Phoenix Arts and Culture
+    Phoenix (AZ)                                                                        28         •   National Endowment for the Arts Grants
+                            Department
+                                                                                                   •   Percent-For-Art CIP Budget
+                                                                                                   •   Hotel Occupancy Tax
+    San Diego (CA) Department of Cultural Affairs                                        8         •   CIP and Developer fees
+                                                                                                   •   General Fund
+                                                                                                   •   Transient Occupancy Tax (Hotel Tax)
+                            San Jose Office of Cultural Affairs,
+                                                                                                   •   General Fund
+                            a division of the Office of Economic
+    San Jose (CA)                                                                       13         •   Citywide Operation and Maintenance Funds for City-owned Cultural Facilities
+                            Development and Cultural Affairs, an
+                                                                                                   •   Percent-for-Art Fund (1% on City CIP)
+                            office within the City Manager’s Office
+                                                                                                   •   Contributed Grant Funds
+                                                                                                   •   Seattle Admissions Tax (5% Admissions Tax)
+    Seattle (WA)            Office of Arts & Culture                                   45.3
+                                                                                                   •   City Light – 1% for Art Fund
+   * The Dallas Office of Arts and Culture is the custodian of 19 city-owned cultural facilities
+   ** The El Paso Museums and Cultural Affairs Department oversees City museums
+   *** Denver Arts and Venues manages some cultural facilities
+   Source: OCA analysis of cultural arts survey responses from other cities, May 2024
+
+
+Economic Development Department Culture and Arts Funding                                                   12                                                      Office of the City Auditor
+Appendix A - Program and administration expenses for fiscal years 2018 – 2023
+
+
+
+
+     Notes: Values were rounded to the nearest dollar which caused total amounts to be off by a dollar or two in some instances
+            EDD staff noted the TEMPO amount will increase in 2024 due to a contract with The Trail Conservancy to manage that program
+
+
+
+
+Economic Development Department Culture and Arts Funding                                           13                                    Office of the City Auditor
+Appendix B: Key eligibility criteria for each of the four City’s current arts & culture programs
+    Category                           ELEVATE Grant                                     NEXUS Grant                    THRIVE Grant                     NEA*
+                       An Incorporated, tax exempt, 501(c)
+                       arts organization                                                                                                       This program funds
+                                                                                A 501(c) non-profit arts          501(c) non-profit arts
+                       A non-501 (c) arts organization (but                                                                                    non-profit arts education
+                                                                                organization                      organization
+                       registered as a non-profit with the                                                                                     providers
+                       Texas Secretary of State Office)
+                       Creative businesses with an annual
+ Applicant                                                                      A creative business
+                       operating budget $500,000 or less
+ Type
+                       An individual aged 18 or older          An individual aged 18 or older
+                       with an annual operating budget         (may apply directly or with a
+                       $500,000 or less                        fiscal sponsor)
+                                                               Applicant’s most recently
+                       Individual artists with an annual
+                                                               completed fiscal year budget is
+                       operating budget $500,000 or less
+                                                               $150,000 or less
+                                                               Applicants who have not already                    Applicants must not be
+                       Applicants must not be receiving City received or are not currently                        receiving City funding for
+ Current City
+                       funding for the same activities in the receiving City funding for the                      the same activities in the
+ Support
+                       fiscal year in which they are applying same activities in the fiscal year                  fiscal year in which they
+                                                               in which they are applying                         are applying
+                       One-year of operating history in                                                           A minimum of 5 years         One year of operating
+                                                               One year of operating history in
+                       the cultural sector in the Austin                                                          of operating history in      history in the Austin
+                                                               the Austin MSA
+                       metropolitan statistical area                                                              Austin                       MSA
+                       Produce public arts/culture activities,
+                       within the Austin 10-1 districts and
+ Production
+                       extraterritorial jurisdiction (ETJ)
+ History
+                                                                                                                  51% or more of the
+                                                                                                                                               Majority of applicant’s
+                       51% or more of the application’s                         51% or more of the applicant’s    applicant’s creative
+                                                                                                                                               activities must be within
+                       creative production is within the                        creative production is within the production is within the
+                                                                                                                                               the Austin 10-1 districts
+                       Austin 10-1 districts or ETJ                             Austin 10-1 districts or ETJ      Austin 10-1 districts or
+                                                                                                                                               or ETJ
+                                                                                                                  ETJ
+                       Applicant’s address must be in the                       Applicant’s address must be in    Applicant’s address must     Applicant’s address must
+ Geographical
+                       Austin MSA                                               the Austin MSA                    be in the Austin MSA         be in the Austin MSA
+* The NEA grant was from a one-time funding source and is not a recurring program
+Source: OCA analysis of the City of Austin Program guidelines, April 2024
+
+
+Economic Development Department Culture and Arts Funding                                        14                                                  Office of the City Auditor
+  Appendix C - Profile of applicants who received funding through
+  the City’s Fiscal Year 2023 Cultural Arts Program
+
+  Participants
+  In fiscal year 2023 many people and organizations received funding through the City’s cultural arts program.
+
+      Program             Elevate            Thrive              NEA
+   Participants       199               36                19
+
+
+  Participants by business structure
+  Overall, non-profits accounted for most program participants followed by individual participants. Only
+  non-profits were awarded funding through the Thrive and NEA programs.
+
+                 Participant                 Elevate    Thrive      NEA
+   Corporation                                 3%
+   Individual                                 12%
+   LLC                                        12%
+   Non-profit                                 63%       100%        100%
+   Not a legally-formed organization           4%
+   Partnership                                 1%
+   S-Corp                                      1%
+   Sole Proprietorship                         4%
+
+
+  Participants by artistic discipline
+  Overall, the Multidisciplinary, Music, Arts Education, and Theater/Opera/Music Theater disciplines had the
+  highest number of participants. The Design Arts and Arts/Music Therapy disciplines had the lowest number of
+  participants.
+
+
+
+
+                                             Program Participants
+
+
+
+Economic Development Department Culture and Arts Funding 15                                   Office of the City Auditor
+  Appendix C - Profile of applicants who received funding through
+  the City’s Fiscal Year 2023 Cultural Arts Program
+  Elevate, Thrive, and NEA program participants by Council district
+
+  Overall, Council districts three, one, nine, and four had the highest number of program participants that
+  received funding through cultural arts programs.
+
+
+
+
+                                                               Program Participants
+
+  Source: OCA analysis of the City’s Elevate, Thrive, and NEA cultural arts program reports, April 2024
+
+
+
+
+Economic Development Department Culture and Arts Funding 16                                               Office of the City Auditor
+  Why We Did This                      This report responds to a request from Council Members Zohaib “Zo”
+                                       Qadri, Vanessa Fuentes, Ryan Alter, José Velásquez, and Leslie Pool.
+  Report                               The request aimed to understand the City’s culture and arts funding
+                                       process and activities including revenues and expenditures, eligible
+                                       expenses and criteria, information collected about applicants, changes
+                                       in the cultural arts program, and how the city’s cultural arts program
+                                       compares to those in other cities.
+
+
+
+  Scope                                The project scope included the City’s culture and arts funding process and
+                                       activities during fiscal years 2018 through 2023. The scope also included
+                                       identifying and surveying other cities with culture and arts programs.
+
+                                       Data Reliability
+                                       Question 1 – Revenue and expenditures: Some of the data and expense
+                                       summaries EDD staff provided included errors and inconsistencies. For
+                                       example, some values were repeated, and some totals were incorrect. We
+                                       reviewed and corrected identified errors with EDD. However, this indicates
+                                       there may be an issue with data reliability or an inadequate internal
+                                       tracking system.
+
+                                       Question 3 and Appendix C – Profile of program applicants: We did not include
+                                       profile information for all programs. Based on the records EDD staff
+                                       provided, we noted some information was not complete or consistently
+                                       tracked.
+
+
+
+  Methodology                          To complete this special request, we performed the following steps:
+
+                                       •   interviewed staff from the Economic Development and Law
+                                           Departments, culture and arts programs in other cities; and the Vice
+                                           Chair of the Austin Arts Commission.
+                                       •   surveyed culture and arts programs in 10 other cities including Dallas,
+                                           El Paso, Fort Worth, Houston, and San Antonio in Texas as well as
+                                           Denver, Phoenix, San Diego, San Jose, and Seattle
+                                       •   reviewed State of Texas and City of Austin rules and regulations about
+                                           eligible expenses and criteria for cultural arts funding
+                                       •   reviewed and analyzed data, reports, and presentations generated by
+                                           the Economic Development Department
+                                       •   reviewed and analyzed survey information from other cities (Dallas,
+                                           El Paso, Fort Worth, Houston, and San Antonio in Texas as well as
+                                           Denver, Phoenix, San Diego, San Jose, and Seattle)
+
+
+
+  Project Type                         This project is not considered an audit. However, this project was
+                                       conducted in accordance with the ethics, independence, competency, and
+                                       quality provisions of the Government Auditing Standards.
+
+
+
+
+Economic Development Department Culture and Arts Funding 17                                    Office of the City Auditor
+The Office of the City Auditor was created by the Austin City
+Charter as an independent office reporting to City Council to
+help establish accountability and improve City services. Special
+requests are designed to answer specific questions to assist
+Council in decision-making. We do not draw conclusions or make
+recommendations in these reports.
+
+
+
+
+Team
+Patrick Johnson, Audit Manager
+Henry Katumwa, Auditor-in-Charge
+Mariel Dempster
+
+
+City Auditor
+Corrie Stokes
+
+
+Deputy City Auditor
+Jason Hadavi
+
+
+Office of the City Auditor
+phone: (512) 974-2805
+email: AustinAuditor@austintexas.gov
+website: http://www.austintexas.gov/auditor
+
+   AustinAuditor
+   @AustinAuditor
+
+
+Copies of our audit reports are available at
+http://www.austintexas.gov/page/audit-reports
+
+
+
+
+                      Alternate formats available upon request
+

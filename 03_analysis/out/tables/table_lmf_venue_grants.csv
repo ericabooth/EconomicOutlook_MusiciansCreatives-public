@@ -1,0 +1,43 @@
+="Receipts around a FY2024 Live Music Fund venue grant, Austin panel venues"
+
+="",="(1)",="(2)"
+="",="Log real monthly receipts, 2025 dollars",="Log real monthly receipts, 2025 dollars"
+
+="FY2024 venue grantee x 2024 onward",="0.0877",=""
+="",="(0.0920)",=""
+
+="FY2024 venue grantee x 2018",="",="0.0242"
+="",="",="(0.1662)"
+
+="FY2024 venue grantee x 2019",="",="-0.1512"
+="",="",="(0.1670)"
+
+="FY2024 venue grantee x 2020",="",="-0.0903"
+="",="",="(0.2160)"
+
+="FY2024 venue grantee x 2021",="",="-0.1258"
+="",="",="(0.1557)"
+
+="FY2024 venue grantee x 2022",="",="-0.1122"
+="",="",="(0.0821)"
+
+="FY2024 venue grantee x 2024",="",="-0.0009"
+="",="",="(0.0548)"
+
+="FY2024 venue grantee x 2025",="",="0.0326"
+="",="",="(0.0888)"
+
+="Constant",="11.1411***",="11.1552***"
+="",="(0.0051)",="(0.0123)"
+
+="Observations",="6007",="6007"
+="Specification",="Pooled 2024-2025",="Annual event study, base 2023"
+="Sample",="Panel venues 2018-2025, large rooms excluded",="Panel venues 2018-2025, large rooms excluded"
+
+="Standard errors in parentheses"
+="Outcome is log real monthly receipts in 2025 dollars, 2018-01 to 2025-12."
+="Venue and calendar-month fixed effects; standard errors clustered by venue."
+="The annual event study omits 2023, the last full year before the FY2024 awards."
+="Grants are competitively scored, so recipients are selected on the scoring criteria."
+="Descriptive event study. Not a causal estimate of the program."
+="* p<0.10, ** p<0.05, *** p<0.01"

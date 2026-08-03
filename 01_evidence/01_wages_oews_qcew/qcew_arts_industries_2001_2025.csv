@@ -1,0 +1,734 @@
+year,geography,area_fips,area_title,industry_code,industry_title,own_code,own_title,agglvl_code,disclosure_code,annual_avg_estabs,annual_avg_emplvl,total_annual_wages,annual_avg_wkly_wage,avg_annual_pay
+2001,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71,"Arts, entertainment, and recreation",5,Private,44,,384,7379,140355470,366,19021
+2002,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71,"Arts, entertainment, and recreation",5,Private,44,,412,7285,145165592,383,19928
+2003,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71,"Arts, entertainment, and recreation",5,Private,44,,415,7424,144485156,374,19462
+2004,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71,"Arts, entertainment, and recreation",5,Private,44,,435,7991,175980102,423,22021
+2005,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71,"Arts, entertainment, and recreation",5,Private,44,,459,8247,177229923,413,21491
+2006,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71,"Arts, entertainment, and recreation",5,Private,44,,483,8551,196416407,442,22969
+2007,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71,"Arts, entertainment, and recreation",5,Private,44,,531,9121,213244139,450,23380
+2008,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71,"Arts, entertainment, and recreation",5,Private,44,,540,9456,218471371,444,23105
+2009,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71,"Arts, entertainment, and recreation",5,Private,44,,555,9831,222294643,435,22611
+2010,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71,"Arts, entertainment, and recreation",5,Private,44,,575,10027,229968954,441,22934
+2011,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71,"Arts, entertainment, and recreation",5,Private,44,,613,10364,281083736,522,27122
+2012,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71,"Arts, entertainment, and recreation",5,Private,44,N,638,0,0,0,0
+2013,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71,"Arts, entertainment, and recreation",5,Private,44,N,687,0,0,0,0
+2014,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71,"Arts, entertainment, and recreation",5,Private,44,,753,11611,339457344,562,29237
+2015,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71,"Arts, entertainment, and recreation",5,Private,44,,825,12694,368726650,559,29047
+2016,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71,"NAICS 71 Arts, entertainment, and recreation",5,Private,44,,886,13521,399239215,568,29526
+2017,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71,"NAICS 71 Arts, entertainment, and recreation",5,Private,44,,914,13616,426646446,603,31334
+2018,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71,"NAICS 71 Arts, entertainment, and recreation",5,Private,44,,956,14102,462331075,630,32785
+2019,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71,"NAICS 71 Arts, entertainment, and recreation",5,Private,44,,1009,14429,481960330,642,33402
+2020,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71,"NAICS 71 Arts, entertainment, and recreation",5,Private,44,,1065,11045,395204912,688,35783
+2021,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71,"NAICS 71 Arts, entertainment, and recreation",5,Private,44,,1152,12936,490107555,729,37886
+2022,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71,"NAICS 71 Arts, entertainment, and recreation",5,Private,44,,1232,15199,592501942,750,38983
+2023,Austin_RoundRock_MSA,C1242,"Austin-Round Rock-San Marcos, TX MSA",71,"NAICS 71 Arts, entertainment, and recreation",5,Private,44,,1304,16842,688626034,786,40887
+2024,Austin_RoundRock_MSA,C1242,"Austin-Round Rock-San Marcos, TX MSA",71,"NAICS 71 Arts, entertainment, and recreation",5,Private,44,,1337,17889,750921042,807,41977
+2001,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",1,Federal Government,54,,42,1656,39660976,461,23950
+2002,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",1,Federal Government,54,,42,1645,38520053,450,23421
+2003,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",1,Federal Government,54,,45,1530,38647603,486,25267
+2004,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",1,Federal Government,54,,47,1473,40770786,532,27683
+2005,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",1,Federal Government,54,,48,1559,43853296,541,28123
+2006,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",1,Federal Government,54,,51,1833,50521266,530,27562
+2007,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",1,Federal Government,54,,50,1766,48651229,530,27555
+2008,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",1,Federal Government,54,,52,1980,54985294,534,27775
+2009,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",1,Federal Government,54,,58,1978,62752455,610,31720
+2010,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",1,Federal Government,54,,81,2127,59693241,540,28063
+2011,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",1,Federal Government,54,,79,2013,57710648,551,28663
+2012,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",1,Federal Government,54,,75,1909,56077182,565,29369
+2013,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",1,Federal Government,54,,73,1972,58554302,571,29694
+2014,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",1,Federal Government,54,,72,1863,58479290,604,31397
+2015,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",1,Federal Government,54,,72,1876,59065391,605,31479
+2016,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,54,,70,1888,60075262,612,31828
+2017,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,54,,67,1819,61054782,646,33567
+2018,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,54,,65,1793,63758574,684,35568
+2019,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,54,,65,1754,64480747,707,36764
+2020,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,54,,63,1673,63956025,735,38230
+2021,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,54,,63,1605,64556855,774,40227
+2022,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,54,,63,1614,71890978,856,44535
+2023,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,54,,63,1733,79893973,887,46102
+2024,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,54,,63,1704,86330921,974,50649
+2025,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,54,,63,1563,78608690,967,50285
+2001,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",3,Local Government,54,N,0,0,0,0,0
+2002,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",3,Local Government,54,,236,18269,356051174,375,19489
+2003,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",3,Local Government,54,,245,18504,350160310,364,18924
+2004,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",3,Local Government,54,,261,19373,377777853,375,19500
+2005,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",3,Local Government,54,,268,18995,389384750,394,20499
+2006,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",3,Local Government,54,,277,18790,402590948,412,21426
+2007,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",3,Local Government,54,,280,18627,434571108,449,23330
+2008,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",3,Local Government,54,,282,19275,462426153,461,23991
+2009,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",3,Local Government,54,,282,19699,479260174,468,24329
+2010,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",3,Local Government,54,,295,19891,485742868,470,24421
+2011,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",3,Local Government,54,,300,19541,485813647,478,24862
+2012,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",3,Local Government,54,,301,19613,493799118,484,25177
+2013,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",3,Local Government,54,,311,20033,507608738,487,25338
+2014,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",3,Local Government,54,N,313,0,0,0,0
+2015,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",3,Local Government,54,,322,20887,549752828,506,26320
+2016,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,54,,330,21161,560541293,509,26489
+2017,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,54,N,327,0,0,0,0
+2018,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,54,N,326,0,0,0,0
+2019,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,54,N,324,0,0,0,0
+2020,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,54,N,325,0,0,0,0
+2021,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,54,N,324,0,0,0,0
+2022,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,54,N,325,0,0,0,0
+2023,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,54,,324,22896,768922927,646,33583
+2024,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,54,,329,24191,828022775,658,34228
+2025,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,54,,334,23707,863927870,701,36442
+2001,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",5,Private,54,,4922,93120,2102873074,434,22582
+2002,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",5,Private,54,,5101,96280,2306233976,461,23953
+2003,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",5,Private,54,,5196,96355,2357293863,470,24465
+2004,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",5,Private,54,,5423,99963,2426807194,467,24277
+2005,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",5,Private,54,,5514,100885,2544468526,485,25221
+2006,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",5,Private,54,,5625,103435,2839906323,528,27456
+2007,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",5,Private,54,,6089,106613,3016413633,544,28293
+2008,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",5,Private,54,,5966,108458,3150321923,559,29046
+2009,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",5,Private,54,,5933,109511,3236545134,568,29555
+2010,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",5,Private,54,,5967,109624,3216322481,564,29340
+2011,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",5,Private,54,,6128,109858,3305222068,579,30086
+2012,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",5,Private,54,,6290,111420,3494181439,603,31360
+2013,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",5,Private,54,,6438,116738,3548920992,585,30401
+2014,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",5,Private,54,,6632,123867,3841973521,596,31017
+2015,TX_state,48000,Texas -- Statewide,71,"Arts, entertainment, and recreation",5,Private,54,,6924,129664,4246104236,630,32747
+2016,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",5,Private,54,,7249,135294,4568146279,649,33765
+2017,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",5,Private,54,,7554,138977,4825346349,668,34720
+2018,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",5,Private,54,,7901,144515,5014729785,667,34700
+2019,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",5,Private,54,,8371,149552,5489680839,706,36707
+2020,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",5,Private,54,,8709,115511,4641059624,773,40179
+2021,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",5,Private,54,,9090,131734,5321952538,777,40399
+2022,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",5,Private,54,,9660,148983,6369835147,822,42755
+2023,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",5,Private,54,,10270,159654,7329851952,883,45911
+2024,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",5,Private,54,,10671,166589,7682566382,887,46117
+2025,TX_state,48000,Texas -- Statewide,71,"NAICS 71 Arts, entertainment, and recreation",5,Private,54,,10903,172257,8227985972,919,47766
+2001,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",1,Federal Government,74,,1,4,138829,654,33999
+2002,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",1,Federal Government,74,,1,4,147360,694,36088
+2003,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",1,Federal Government,74,,1,5,263834,1050,54586
+2004,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",1,Federal Government,74,,1,5,326445,1256,65289
+2005,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",1,Federal Government,74,,1,5,291929,1123,58386
+2006,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",1,Federal Government,74,,1,4,268063,1167,60694
+2007,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",1,Federal Government,74,,1,4,252986,1216,63247
+2008,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",1,Federal Government,74,,1,4,238735,1124,58466
+2009,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",1,Federal Government,74,,1,4,213623,1120,58261
+2010,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",1,Federal Government,74,,1,2,123524,1188,61762
+2011,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",1,Federal Government,74,,1,2,125771,1075,55898
+2012,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",1,Federal Government,74,,1,3,192391,1168,60755
+2013,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",1,Federal Government,74,,1,4,202392,973,50598
+2014,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",1,Federal Government,74,,1,3,194128,1244,64709
+2015,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",1,Federal Government,74,,1,4,259900,1304,67800
+2016,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,74,,1,4,202838,1114,57954
+2017,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,74,,1,3,197990,1269,65997
+2018,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,74,,1,3,210887,1352,70296
+2019,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,74,,1,3,265344,1570,81644
+2020,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,74,,1,5,385589,1534,79777
+2021,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,74,,1,6,483200,1549,80533
+2022,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,74,,1,6,494330,1584,82388
+2023,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,74,,1,6,615482,1845,95919
+2024,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,74,,1,5,511804,1845,95963
+2025,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,74,,1,4,445747,1941,100924
+2001,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",3,Local Government,74,N,0,0,0,0,0
+2002,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",3,Local Government,74,N,0,0,0,0,0
+2003,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",3,Local Government,74,N,0,0,0,0,0
+2004,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",3,Local Government,74,N,4,0,0,0,0
+2005,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",3,Local Government,74,N,4,0,0,0,0
+2006,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",3,Local Government,74,N,4,0,0,0,0
+2007,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",3,Local Government,74,N,4,0,0,0,0
+2008,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",3,Local Government,74,N,4,0,0,0,0
+2009,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",3,Local Government,74,N,4,0,0,0,0
+2010,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",3,Local Government,74,N,4,0,0,0,0
+2011,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",3,Local Government,74,N,4,0,0,0,0
+2012,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",3,Local Government,74,N,4,0,0,0,0
+2013,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",3,Local Government,74,N,4,0,0,0,0
+2014,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",3,Local Government,74,N,5,0,0,0,0
+2015,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",3,Local Government,74,N,5,0,0,0,0
+2016,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,74,N,5,0,0,0,0
+2017,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,74,N,5,0,0,0,0
+2018,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,74,N,5,0,0,0,0
+2019,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,74,N,5,0,0,0,0
+2020,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,74,N,5,0,0,0,0
+2021,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,74,N,5,0,0,0,0
+2022,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,74,N,4,0,0,0,0
+2023,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,74,N,4,0,0,0,0
+2024,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,74,N,4,0,0,0,0
+2025,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,74,N,4,0,0,0,0
+2001,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",5,Private,74,,300,6359,125513045,380,19737
+2002,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",5,Private,74,,321,6210,130068840,403,20946
+2003,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",5,Private,74,,326,6201,127091914,394,20494
+2004,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",5,Private,74,,336,6594,155340388,453,23560
+2005,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",5,Private,74,,334,6787,153643976,435,22638
+2006,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",5,Private,74,,350,6995,170608530,469,24389
+2007,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",5,Private,74,,391,7132,181395976,489,25435
+2008,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",5,Private,74,,397,7309,183047114,482,25044
+2009,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",5,Private,74,,402,7603,184162948,466,24223
+2010,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",5,Private,74,,411,7611,189094892,478,24844
+2011,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",5,Private,74,,444,7607,232011177,587,30500
+2012,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",5,Private,74,,465,7289,216044186,570,29641
+2013,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",5,Private,74,,506,7845,218604349,536,27867
+2014,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",5,Private,74,,560,8903,287934182,622,32343
+2015,Travis_County,48453,"Travis County, Texas",71,"Arts, entertainment, and recreation",5,Private,74,,630,9837,311601248,609,31676
+2016,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",5,Private,74,,675,10556,338011704,616,32020
+2017,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",5,Private,74,,694,10542,360275253,657,34176
+2018,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",5,Private,74,,717,10592,381740822,693,36042
+2019,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",5,Private,74,,754,10800,399515053,711,36993
+2020,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",5,Private,74,,799,8336,324774920,749,38960
+2021,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",5,Private,74,,850,9588,398506873,799,41564
+2022,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",5,Private,74,,911,11374,488109543,825,42915
+2023,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",5,Private,74,,946,12781,570364479,858,44627
+2024,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",5,Private,74,,970,13432,617029971,883,45938
+2025,Travis_County,48453,"Travis County, Texas",71,"NAICS 71 Arts, entertainment, and recreation",5,Private,74,,996,14505,696667077,924,48029
+2001,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",1,Federal Government,14,,880,40618,1340326058,635,32999
+2002,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",1,Federal Government,14,,907,41162,1367159084,639,33214
+2003,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",1,Federal Government,14,,925,40148,1393545403,668,34710
+2004,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",1,Federal Government,14,,921,39821,1501115502,725,37696
+2005,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",1,Federal Government,14,,896,39235,1522718582,746,38810
+2006,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",1,Federal Government,14,,901,39631,1602781064,778,40442
+2007,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",1,Federal Government,14,,919,39199,1665608138,817,42491
+2008,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",1,Federal Government,14,,942,40558,1719959400,816,42407
+2009,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",1,Federal Government,14,,1002,41668,1844996338,852,44278
+2010,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",1,Federal Government,14,,1234,43571,1954330393,863,44854
+2011,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",1,Federal Government,14,,1245,43502,1978450028,875,45480
+2012,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",1,Federal Government,14,,1209,43062,1985688407,887,46112
+2013,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",1,Federal Government,14,,1140,41468,1911149210,886,46087
+2014,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",1,Federal Government,14,,1171,41354,1977666236,920,47823
+2015,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",1,Federal Government,14,,1179,40351,2001076969,954,49592
+2016,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,14,,1170,40792,2068087501,975,50698
+2017,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,14,,1151,39484,2069931877,1008,52425
+2018,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,14,,1130,39177,2145329053,1053,54760
+2019,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,14,,1115,39044,2154510906,1061,55182
+2020,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,14,,1115,36722,2122276426,1111,57793
+2021,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,14,,1111,37031,2199393459,1142,59393
+2022,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,14,,1072,37427,2325274812,1195,62128
+2023,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,14,,1048,39600,2568342709,1247,64857
+2024,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,14,,1049,40467,2756609750,1310,68120
+2025,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",1,Federal Government,14,,1046,38345,2666451596,1337,69538
+2001,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",2,State Government,14,,742,25270,644455256,490,25503
+2002,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",2,State Government,14,,758,24807,649638513,504,26187
+2003,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",2,State Government,14,,747,25120,659831934,505,26268
+2004,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",2,State Government,14,,789,24462,656507610,516,26838
+2005,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",2,State Government,14,,809,24175,674952695,537,27919
+2006,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",2,State Government,14,,829,24396,702432189,554,28793
+2007,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",2,State Government,14,,865,25847,760138085,566,29409
+2008,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",2,State Government,14,,875,25186,780754102,596,30999
+2009,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",2,State Government,14,,826,24424,773871406,609,31684
+2010,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",2,State Government,14,,832,23616,754960145,615,31968
+2011,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",2,State Government,14,,837,22534,729006314,622,32351
+2012,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",2,State Government,14,,857,22383,735262784,632,32849
+2013,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",2,State Government,14,,901,23155,755362886,627,32623
+2014,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",2,State Government,14,,1130,23203,778136109,645,33536
+2015,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",2,State Government,14,,1162,22849,793828398,668,34742
+2016,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",2,State Government,14,,1165,23230,805995562,667,34696
+2017,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",2,State Government,14,,916,19618,665063715,652,33901
+2018,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",2,State Government,14,,924,19755,684456744,666,34647
+2019,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",2,State Government,14,,921,19414,700718830,694,36094
+2020,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",2,State Government,14,,918,16231,669782164,794,41265
+2021,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",2,State Government,14,,918,16765,692680460,795,41317
+2022,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",2,State Government,14,N,916,0,0,0,0
+2023,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",2,State Government,14,N,937,0,0,0,0
+2024,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",2,State Government,14,N,925,0,0,0,0
+2025,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",2,State Government,14,N,909,0,0,0,0
+2001,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",3,Local Government,14,,3329,282164,6009403628,410,21298
+2002,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",3,Local Government,14,,3352,292870,6410104324,421,21887
+2003,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",3,Local Government,14,,3424,300950,6792195162,434,22569
+2004,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",3,Local Government,14,,3459,312358,7363396359,453,23574
+2005,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",3,Local Government,14,,3552,321118,7736149110,463,24091
+2006,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",3,Local Government,14,,3612,321709,8081829869,483,25122
+2007,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",3,Local Government,14,,3646,329410,8642595324,505,26237
+2008,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",3,Local Government,14,,3696,336454,9070582052,518,26959
+2009,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",3,Local Government,14,,3791,335477,9060024829,519,27006
+2010,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",3,Local Government,14,,3830,329802,8957687533,522,27161
+2011,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",3,Local Government,14,,3823,325885,8963059026,529,27504
+2012,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",3,Local Government,14,,3817,325671,9056903577,535,27810
+2013,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",3,Local Government,14,,3882,319029,8905427985,537,27914
+2014,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",3,Local Government,14,,3913,321187,9099877736,545,28332
+2015,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",3,Local Government,14,,3954,321987,9389622981,561,29161
+2016,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,14,,4004,325611,9586689225,566,29442
+2017,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,14,,3984,325920,9707507162,573,29785
+2018,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,14,,3974,306282,9129677872,573,29808
+2019,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,14,,3987,303348,9263388693,587,30537
+2020,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,14,,3973,238232,8335949826,673,34991
+2021,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,14,,3927,247755,9048413742,702,36522
+2022,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,14,,3942,270516,10262771619,730,37938
+2023,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,14,,3942,292539,11418346215,751,39032
+2024,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,14,,3948,306745,12169779680,763,39674
+2025,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",3,Local Government,14,,3947,313800,12879651458,789,41044
+2001,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",5,Private,14,,105423,1784330,45222527726,487,25344
+2002,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",5,Private,14,,108451,1798621,47050671391,503,26159
+2003,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",5,Private,14,,111877,1816902,49085967142,520,27016
+2004,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",5,Private,14,,115441,1852920,51154058592,531,27607
+2005,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",5,Private,14,,118614,1867996,52596535974,541,28157
+2006,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",5,Private,14,,122212,1901194,56941586592,576,29950
+2007,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",5,Private,14,,124370,1953899,60393336465,594,30909
+2008,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",5,Private,14,,125435,1978461,63220274966,615,31954
+2009,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",5,Private,14,,124950,1921653,60787160363,608,31633
+2010,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",5,Private,14,,124347,1903739,61451892655,621,32280
+2011,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",5,Private,14,,124740,1922644,63338491821,634,32943
+2012,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",5,Private,14,,126544,1975855,66676016800,649,33745
+2013,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",5,Private,14,,128822,2029671,68667092262,651,33832
+2014,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",5,Private,14,,132517,2094615,73033384887,671,34867
+2015,US_national,US000,U.S. TOTAL,71,"Arts, entertainment, and recreation",5,Private,14,,135502,2160970,78072485561,695,36128
+2016,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",5,Private,14,,138206,2237922,82368650908,708,36806
+2017,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",5,Private,14,,141502,2293872,86614672017,726,37759
+2018,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",5,Private,14,,148237,2362663,91876041857,748,38887
+2019,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",5,Private,14,,154513,2426459,97193915672,770,40056
+2020,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",5,Private,14,,159416,1727920,78924344172,878,45676
+2021,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",5,Private,14,,163709,1978745,91504530803,889,46244
+2022,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",5,Private,14,,172885,2308345,112222248848,935,48616
+2023,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",5,Private,14,,180798,2486610,122251154735,945,49164
+2024,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",5,Private,14,,186268,2605233,131520239730,971,50483
+2025,US_national,US000,U.S. TOTAL,71,"NAICS 71 Arts, entertainment, and recreation",5,Private,14,,191113,2667272,139093388764,1003,52148
+2001,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7111,Performing arts companies,5,Private,46,N,0,0,0,0,0
+2002,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7111,Performing arts companies,5,Private,46,,56,771,18637899,465,24171
+2003,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7111,Performing arts companies,5,Private,46,,51,671,17157715,492,25574
+2004,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7111,Performing arts companies,5,Private,46,,49,626,15893534,488,25376
+2005,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7111,Performing arts companies,5,Private,46,,43,603,15085183,481,25013
+2006,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7111,Performing arts companies,5,Private,46,,45,580,15747675,522,27147
+2007,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7111,Performing arts companies,5,Private,46,,48,666,17258828,498,25911
+2008,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7111,Performing arts companies,5,Private,46,,54,801,21662722,520,27031
+2009,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7111,Performing arts companies,5,Private,46,,59,821,23009007,539,28031
+2010,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7111,Performing arts companies,5,Private,46,,60,865,24870167,553,28746
+2011,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7111,Performing arts companies,5,Private,46,,66,888,24006346,520,27049
+2012,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7111,Performing arts companies,5,Private,46,,70,847,23867030,542,28187
+2013,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7111,Performing arts companies,5,Private,46,,70,920,25618278,536,27859
+2014,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7111,Performing arts companies,5,Private,46,,72,910,27992966,592,30778
+2015,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7111,Performing arts companies,5,Private,46,,82,992,30246473,586,30490
+2016,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7111,NAICS 7111 Performing arts companies,5,Private,46,,87,1004,31289905,599,31160
+2017,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7111,NAICS 7111 Performing arts companies,5,Private,46,,86,1031,35722096,666,34651
+2018,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7111,NAICS 7111 Performing arts companies,5,Private,46,,87,1022,34080321,641,33333
+2019,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7111,NAICS 7111 Performing arts companies,5,Private,46,,88,1002,36671252,704,36610
+2020,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7111,NAICS 7111 Performing arts companies,5,Private,46,,90,618,23677340,736,38287
+2021,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7111,NAICS 7111 Performing arts companies,5,Private,46,,93,656,28900151,847,44050
+2022,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7111,NAICS 7111 Performing arts companies,5,Private,46,,98,1009,41696255,795,41321
+2023,Austin_RoundRock_MSA,C1242,"Austin-Round Rock-San Marcos, TX MSA",7111,NAICS 7111 Performing arts companies,5,Private,46,,99,1182,48085759,783,40693
+2024,Austin_RoundRock_MSA,C1242,"Austin-Round Rock-San Marcos, TX MSA",7111,NAICS 7111 Performing arts companies,5,Private,46,N,99,0,0,0,0
+2001,TX_state,48000,Texas -- Statewide,7111,Performing arts companies,1,Federal Government,56,,2,8,177714,423,21985
+2002,TX_state,48000,Texas -- Statewide,7111,Performing arts companies,1,Federal Government,56,,1,7,149219,396,20582
+2003,TX_state,48000,Texas -- Statewide,7111,Performing arts companies,1,Federal Government,56,,1,7,149821,388,20201
+2004,TX_state,48000,Texas -- Statewide,7111,Performing arts companies,1,Federal Government,56,,1,7,160791,427,22178
+2005,TX_state,48000,Texas -- Statewide,7111,Performing arts companies,1,Federal Government,56,,1,7,168735,453,23544
+2006,TX_state,48000,Texas -- Statewide,7111,Performing arts companies,1,Federal Government,56,,1,7,174623,458,23812
+2007,TX_state,48000,Texas -- Statewide,7111,Performing arts companies,1,Federal Government,56,,1,7,178155,484,25151
+2008,TX_state,48000,Texas -- Statewide,7111,Performing arts companies,1,Federal Government,56,,1,7,198194,538,27980
+2009,TX_state,48000,Texas -- Statewide,7111,Performing arts companies,1,Federal Government,56,,1,6,171148,581,30203
+2010,TX_state,48000,Texas -- Statewide,7111,Performing arts companies,1,Federal Government,56,,1,4,112159,575,29909
+2011,TX_state,48000,Texas -- Statewide,7111,Performing arts companies,1,Federal Government,56,,0,0,0,0,0
+2014,TX_state,48000,Texas -- Statewide,7111,Performing arts companies,1,Federal Government,56,,1,1,8564,198,10277
+2015,TX_state,48000,Texas -- Statewide,7111,Performing arts companies,1,Federal Government,56,,1,1,11428,155,8067
+2016,TX_state,48000,Texas -- Statewide,7111,NAICS 7111 Performing arts companies,1,Federal Government,56,,1,1,11148,198,10290
+2001,TX_state,48000,Texas -- Statewide,7111,Performing arts companies,5,Private,56,,394,5946,158344325,512,26633
+2002,TX_state,48000,Texas -- Statewide,7111,Performing arts companies,5,Private,56,,379,5725,156620865,526,27359
+2003,TX_state,48000,Texas -- Statewide,7111,Performing arts companies,5,Private,56,,363,5426,157779455,559,29077
+2004,TX_state,48000,Texas -- Statewide,7111,Performing arts companies,5,Private,56,,364,5339,152267907,548,28520
+2005,TX_state,48000,Texas -- Statewide,7111,Performing arts companies,5,Private,56,,362,5130,150089156,563,29258
+2006,TX_state,48000,Texas -- Statewide,7111,Performing arts companies,5,Private,56,,354,5185,156502039,580,30182
+2007,TX_state,48000,Texas -- Statewide,7111,Performing arts companies,5,Private,56,,381,4977,165979837,641,33349
+2008,TX_state,48000,Texas -- Statewide,7111,Performing arts companies,5,Private,56,,367,5187,169631214,629,32702
+2009,TX_state,48000,Texas -- Statewide,7111,Performing arts companies,5,Private,56,,376,5611,200666684,688,35764
+2010,TX_state,48000,Texas -- Statewide,7111,Performing arts companies,5,Private,56,,370,5893,211004003,689,35807
+2011,TX_state,48000,Texas -- Statewide,7111,Performing arts companies,5,Private,56,,376,5975,207234633,667,34685
+2012,TX_state,48000,Texas -- Statewide,7111,Performing arts companies,5,Private,56,,376,5592,203928892,701,36465
+2013,TX_state,48000,Texas -- Statewide,7111,Performing arts companies,5,Private,56,,383,5883,223679246,731,38020
+2014,TX_state,48000,Texas -- Statewide,7111,Performing arts companies,5,Private,56,,403,5935,237472321,769,40013
+2015,TX_state,48000,Texas -- Statewide,7111,Performing arts companies,5,Private,56,,404,6297,242063776,739,38443
+2016,TX_state,48000,Texas -- Statewide,7111,NAICS 7111 Performing arts companies,5,Private,56,,428,6699,258880288,743,38642
+2017,TX_state,48000,Texas -- Statewide,7111,NAICS 7111 Performing arts companies,5,Private,56,,440,7057,278265344,758,39429
+2018,TX_state,48000,Texas -- Statewide,7111,NAICS 7111 Performing arts companies,5,Private,56,,452,7324,276713093,727,37780
+2019,TX_state,48000,Texas -- Statewide,7111,NAICS 7111 Performing arts companies,5,Private,56,,470,7262,290148684,768,39956
+2020,TX_state,48000,Texas -- Statewide,7111,NAICS 7111 Performing arts companies,5,Private,56,,474,4807,208736186,835,43424
+2021,TX_state,48000,Texas -- Statewide,7111,NAICS 7111 Performing arts companies,5,Private,56,,471,5265,241457424,882,45862
+2022,TX_state,48000,Texas -- Statewide,7111,NAICS 7111 Performing arts companies,5,Private,56,,513,7518,333473348,853,44358
+2023,TX_state,48000,Texas -- Statewide,7111,NAICS 7111 Performing arts companies,5,Private,56,,550,7802,419413349,1034,53755
+2024,TX_state,48000,Texas -- Statewide,7111,NAICS 7111 Performing arts companies,5,Private,56,,576,7808,439485395,1082,56288
+2025,TX_state,48000,Texas -- Statewide,7111,NAICS 7111 Performing arts companies,5,Private,56,,596,8022,381302605,914,47534
+2001,Travis_County,48453,"Travis County, Texas",7111,Performing arts companies,5,Private,76,,53,856,18680445,420,21834
+2002,Travis_County,48453,"Travis County, Texas",7111,Performing arts companies,5,Private,76,,51,754,18404398,469,24404
+2003,Travis_County,48453,"Travis County, Texas",7111,Performing arts companies,5,Private,76,,48,666,16747171,484,25143
+2004,Travis_County,48453,"Travis County, Texas",7111,Performing arts companies,5,Private,76,,45,620,15524450,482,25060
+2005,Travis_County,48453,"Travis County, Texas",7111,Performing arts companies,5,Private,76,,38,595,14600376,472,24559
+2006,Travis_County,48453,"Travis County, Texas",7111,Performing arts companies,5,Private,76,,38,559,15177112,522,27134
+2007,Travis_County,48453,"Travis County, Texas",7111,Performing arts companies,5,Private,76,,40,590,16203713,529,27483
+2008,Travis_County,48453,"Travis County, Texas",7111,Performing arts companies,5,Private,76,,44,733,20173562,530,27534
+2009,Travis_County,48453,"Travis County, Texas",7111,Performing arts companies,5,Private,76,,46,707,20355896,554,28799
+2010,Travis_County,48453,"Travis County, Texas",7111,Performing arts companies,5,Private,76,,47,727,21598765,571,29716
+2011,Travis_County,48453,"Travis County, Texas",7111,Performing arts companies,5,Private,76,,50,734,20800249,545,28341
+2012,Travis_County,48453,"Travis County, Texas",7111,Performing arts companies,5,Private,76,,53,731,22233365,585,30398
+2013,Travis_County,48453,"Travis County, Texas",7111,Performing arts companies,5,Private,76,,56,797,23878536,576,29951
+2014,Travis_County,48453,"Travis County, Texas",7111,Performing arts companies,5,Private,76,,61,869,26964362,596,31014
+2015,Travis_County,48453,"Travis County, Texas",7111,Performing arts companies,5,Private,76,,69,945,29015165,591,30707
+2016,Travis_County,48453,"Travis County, Texas",7111,NAICS 7111 Performing arts companies,5,Private,76,,74,958,30121166,605,31447
+2017,Travis_County,48453,"Travis County, Texas",7111,NAICS 7111 Performing arts companies,5,Private,76,,75,975,34522944,681,35399
+2018,Travis_County,48453,"Travis County, Texas",7111,NAICS 7111 Performing arts companies,5,Private,76,,75,963,32778792,655,34053
+2019,Travis_County,48453,"Travis County, Texas",7111,NAICS 7111 Performing arts companies,5,Private,76,,73,947,35330470,717,37301
+2020,Travis_County,48453,"Travis County, Texas",7111,NAICS 7111 Performing arts companies,5,Private,76,,74,583,22716503,749,38943
+2021,Travis_County,48453,"Travis County, Texas",7111,NAICS 7111 Performing arts companies,5,Private,76,,75,634,27865492,845,43940
+2022,Travis_County,48453,"Travis County, Texas",7111,NAICS 7111 Performing arts companies,5,Private,76,,80,957,40309501,810,42117
+2023,Travis_County,48453,"Travis County, Texas",7111,NAICS 7111 Performing arts companies,5,Private,76,,80,1145,46568824,782,40671
+2024,Travis_County,48453,"Travis County, Texas",7111,NAICS 7111 Performing arts companies,5,Private,76,,80,1177,50478361,825,42899
+2025,Travis_County,48453,"Travis County, Texas",7111,NAICS 7111 Performing arts companies,5,Private,76,,87,1190,51661121,835,43416
+2001,US_national,US000,U.S. TOTAL,7111,Performing arts companies,1,Federal Government,16,,6,1379,40217997,561,29166
+2002,US_national,US000,U.S. TOTAL,7111,Performing arts companies,1,Federal Government,16,,5,1400,51295016,705,36644
+2003,US_national,US000,U.S. TOTAL,7111,Performing arts companies,1,Federal Government,16,,5,1336,56879220,819,42577
+2004,US_national,US000,U.S. TOTAL,7111,Performing arts companies,1,Federal Government,16,,6,1309,48041796,706,36694
+2005,US_national,US000,U.S. TOTAL,7111,Performing arts companies,1,Federal Government,16,,6,1261,50972839,777,40425
+2006,US_national,US000,U.S. TOTAL,7111,Performing arts companies,1,Federal Government,16,,7,1332,48913784,706,36731
+2007,US_national,US000,U.S. TOTAL,7111,Performing arts companies,1,Federal Government,16,,7,1343,52402735,751,39031
+2008,US_national,US000,U.S. TOTAL,7111,Performing arts companies,1,Federal Government,16,,6,1395,53365144,736,38250
+2009,US_national,US000,U.S. TOTAL,7111,Performing arts companies,1,Federal Government,16,,6,1371,57135252,802,41687
+2010,US_national,US000,U.S. TOTAL,7111,Performing arts companies,1,Federal Government,16,,6,1418,59787310,811,42163
+2011,US_national,US000,U.S. TOTAL,7111,Performing arts companies,1,Federal Government,16,,5,1515,71494166,907,47186
+2012,US_national,US000,U.S. TOTAL,7111,Performing arts companies,1,Federal Government,16,,5,1556,71146108,879,45726
+2013,US_national,US000,U.S. TOTAL,7111,Performing arts companies,1,Federal Government,16,,5,1576,71474594,872,45359
+2014,US_national,US000,U.S. TOTAL,7111,Performing arts companies,1,Federal Government,16,,6,1520,74556686,943,49059
+2015,US_national,US000,U.S. TOTAL,7111,Performing arts companies,1,Federal Government,16,,7,1182,73751469,1200,62413
+2016,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,1,Federal Government,16,,7,1186,73718680,1196,62175
+2017,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,1,Federal Government,16,,6,1035,73110302,1358,70610
+2018,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,1,Federal Government,16,,6,1323,75759880,1102,57278
+2019,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,1,Federal Government,16,,6,1388,81133910,1124,58457
+2020,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,1,Federal Government,16,,6,711,47982767,1297,67455
+2021,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,1,Federal Government,16,,5,618,48709073,1516,78849
+2022,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,1,Federal Government,16,,6,1153,75959958,1267,65880
+2023,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,1,Federal Government,16,,6,1248,85476052,1317,68486
+2024,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,1,Federal Government,16,,6,1236,92107633,1433,74521
+2025,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,1,Federal Government,16,,4,1016,82546776,1562,81240
+2001,US_national,US000,U.S. TOTAL,7111,Performing arts companies,2,State Government,16,N,0,0,0,0,0
+2002,US_national,US000,U.S. TOTAL,7111,Performing arts companies,2,State Government,16,N,0,0,0,0,0
+2003,US_national,US000,U.S. TOTAL,7111,Performing arts companies,2,State Government,16,N,0,0,0,0,0
+2004,US_national,US000,U.S. TOTAL,7111,Performing arts companies,2,State Government,16,N,2,0,0,0,0
+2005,US_national,US000,U.S. TOTAL,7111,Performing arts companies,2,State Government,16,N,2,0,0,0,0
+2006,US_national,US000,U.S. TOTAL,7111,Performing arts companies,2,State Government,16,N,2,0,0,0,0
+2007,US_national,US000,U.S. TOTAL,7111,Performing arts companies,2,State Government,16,N,2,0,0,0,0
+2008,US_national,US000,U.S. TOTAL,7111,Performing arts companies,2,State Government,16,N,2,0,0,0,0
+2009,US_national,US000,U.S. TOTAL,7111,Performing arts companies,2,State Government,16,N,2,0,0,0,0
+2010,US_national,US000,U.S. TOTAL,7111,Performing arts companies,2,State Government,16,N,2,0,0,0,0
+2011,US_national,US000,U.S. TOTAL,7111,Performing arts companies,2,State Government,16,N,2,0,0,0,0
+2012,US_national,US000,U.S. TOTAL,7111,Performing arts companies,2,State Government,16,N,2,0,0,0,0
+2013,US_national,US000,U.S. TOTAL,7111,Performing arts companies,2,State Government,16,N,2,0,0,0,0
+2014,US_national,US000,U.S. TOTAL,7111,Performing arts companies,2,State Government,16,N,2,0,0,0,0
+2015,US_national,US000,U.S. TOTAL,7111,Performing arts companies,2,State Government,16,N,1,0,0,0,0
+2016,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,2,State Government,16,N,1,0,0,0,0
+2017,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,2,State Government,16,N,1,0,0,0,0
+2018,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,2,State Government,16,N,1,0,0,0,0
+2019,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,2,State Government,16,N,1,0,0,0,0
+2020,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,2,State Government,16,N,1,0,0,0,0
+2021,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,2,State Government,16,N,1,0,0,0,0
+2022,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,2,State Government,16,,1,141,6967864,948,49301
+2023,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,2,State Government,16,,1,152,8107372,1025,53309
+2024,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,2,State Government,16,,1,154,9059129,1132,58889
+2025,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,2,State Government,16,,1,149,9486190,1226,63737
+2001,US_national,US000,U.S. TOTAL,7111,Performing arts companies,3,Local Government,16,,15,626,11996399,368,19158
+2002,US_national,US000,U.S. TOTAL,7111,Performing arts companies,3,Local Government,16,N,0,0,0,0,0
+2003,US_national,US000,U.S. TOTAL,7111,Performing arts companies,3,Local Government,16,N,0,0,0,0,0
+2004,US_national,US000,U.S. TOTAL,7111,Performing arts companies,3,Local Government,16,N,15,0,0,0,0
+2005,US_national,US000,U.S. TOTAL,7111,Performing arts companies,3,Local Government,16,N,16,0,0,0,0
+2006,US_national,US000,U.S. TOTAL,7111,Performing arts companies,3,Local Government,16,N,13,0,0,0,0
+2007,US_national,US000,U.S. TOTAL,7111,Performing arts companies,3,Local Government,16,N,12,0,0,0,0
+2008,US_national,US000,U.S. TOTAL,7111,Performing arts companies,3,Local Government,16,N,12,0,0,0,0
+2009,US_national,US000,U.S. TOTAL,7111,Performing arts companies,3,Local Government,16,N,12,0,0,0,0
+2010,US_national,US000,U.S. TOTAL,7111,Performing arts companies,3,Local Government,16,N,12,0,0,0,0
+2011,US_national,US000,U.S. TOTAL,7111,Performing arts companies,3,Local Government,16,N,12,0,0,0,0
+2012,US_national,US000,U.S. TOTAL,7111,Performing arts companies,3,Local Government,16,N,11,0,0,0,0
+2013,US_national,US000,U.S. TOTAL,7111,Performing arts companies,3,Local Government,16,N,11,0,0,0,0
+2014,US_national,US000,U.S. TOTAL,7111,Performing arts companies,3,Local Government,16,N,11,0,0,0,0
+2015,US_national,US000,U.S. TOTAL,7111,Performing arts companies,3,Local Government,16,N,11,0,0,0,0
+2016,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,3,Local Government,16,N,12,0,0,0,0
+2017,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,3,Local Government,16,,11,353,13343723,727,37783
+2018,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,3,Local Government,16,,11,347,14056955,779,40529
+2019,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,3,Local Government,16,,14,605,20529772,652,33915
+2020,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,3,Local Government,16,,13,373,14881169,767,39905
+2021,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,3,Local Government,16,,14,409,16540321,777,40424
+2022,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,3,Local Government,16,,12,545,22381783,790,41061
+2023,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,3,Local Government,16,,13,593,24299588,788,40966
+2024,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,3,Local Government,16,,13,612,25668040,807,41970
+2025,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,3,Local Government,16,,13,606,26157496,830,43170
+2001,US_national,US000,U.S. TOTAL,7111,Performing arts companies,5,Private,16,,10687,126879,3761663013,570,29648
+2002,US_national,US000,U.S. TOTAL,7111,Performing arts companies,5,Private,16,,10350,121708,3674342776,581,30190
+2003,US_national,US000,U.S. TOTAL,7111,Performing arts companies,5,Private,16,,10055,120040,4020647209,644,33494
+2004,US_national,US000,U.S. TOTAL,7111,Performing arts companies,5,Private,16,,9771,117430,4026836134,659,34291
+2005,US_national,US000,U.S. TOTAL,7111,Performing arts companies,5,Private,16,,9657,113831,4041883040,683,35508
+2006,US_national,US000,U.S. TOTAL,7111,Performing arts companies,5,Private,16,,9642,114577,4463371160,749,38955
+2007,US_national,US000,U.S. TOTAL,7111,Performing arts companies,5,Private,16,,9712,115350,4629406208,772,40134
+2008,US_national,US000,U.S. TOTAL,7111,Performing arts companies,5,Private,16,,9887,117115,5000238722,821,42695
+2009,US_national,US000,U.S. TOTAL,7111,Performing arts companies,5,Private,16,,9899,110663,4504127637,783,40701
+2010,US_national,US000,U.S. TOTAL,7111,Performing arts companies,5,Private,16,,9763,109221,4523624598,796,41417
+2011,US_national,US000,U.S. TOTAL,7111,Performing arts companies,5,Private,16,,9672,110444,4684809142,816,42418
+2012,US_national,US000,U.S. TOTAL,7111,Performing arts companies,5,Private,16,,9643,111262,4847851845,838,43572
+2013,US_national,US000,U.S. TOTAL,7111,Performing arts companies,5,Private,16,,9715,112342,5073411529,868,45160
+2014,US_national,US000,U.S. TOTAL,7111,Performing arts companies,5,Private,16,,9839,114851,5176582450,867,45072
+2015,US_national,US000,U.S. TOTAL,7111,Performing arts companies,5,Private,16,,9907,117547,5658992822,926,48142
+2016,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,5,Private,16,,9978,120508,5838851336,932,48452
+2017,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,5,Private,16,,10026,122891,6088098827,953,49541
+2018,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,5,Private,16,,10315,126498,6497076970,988,51361
+2019,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,5,Private,16,,10608,129274,6687955377,995,51735
+2020,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,5,Private,16,,10886,77991,4010146820,989,51418
+2021,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,5,Private,16,,11071,85942,4849220303,1085,56425
+2022,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,5,Private,16,,11922,122440,7019914311,1103,57333
+2023,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,5,Private,16,,12649,129206,7928888572,1180,61366
+2024,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,5,Private,16,,13132,134126,8102986963,1162,60413
+2025,US_national,US000,U.S. TOTAL,7111,NAICS 7111 Performing arts companies,5,Private,16,,13347,133422,7498730841,1081,56203
+2001,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71113,Musical groups and artists,5,Private,47,N,0,0,0,0,0
+2002,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71113,Musical groups and artists,5,Private,47,N,0,0,0,0,0
+2003,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71113,Musical groups and artists,5,Private,47,N,0,0,0,0,0
+2004,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71113,Musical groups and artists,5,Private,47,N,36,0,0,0,0
+2005,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71113,Musical groups and artists,5,Private,47,,29,240,7307871,587,30513
+2006,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71113,Musical groups and artists,5,Private,47,,29,215,6908426,618,32145
+2007,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71113,Musical groups and artists,5,Private,47,,29,218,7301346,643,33429
+2008,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71113,Musical groups and artists,5,Private,47,,33,235,9000945,736,38288
+2009,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71113,Musical groups and artists,5,Private,47,,35,229,9437220,791,41136
+2010,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71113,Musical groups and artists,5,Private,47,N,36,0,0,0,0
+2011,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71113,Musical groups and artists,5,Private,47,,37,226,7590396,645,33536
+2012,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71113,Musical groups and artists,5,Private,47,N,41,0,0,0,0
+2013,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71113,Musical groups and artists,5,Private,47,N,43,0,0,0,0
+2014,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71113,Musical groups and artists,5,Private,47,,45,272,10082898,713,37092
+2015,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71113,Musical groups and artists,5,Private,47,,51,291,11183235,738,38397
+2016,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71113,NAICS 71113 Musical groups and artists,5,Private,47,,55,277,11328784,787,40923
+2017,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71113,NAICS 71113 Musical groups and artists,5,Private,47,,55,288,14596711,975,50683
+2018,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71113,NAICS 71113 Musical groups and artists,5,Private,47,,55,296,12191164,792,41175
+2019,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71113,NAICS 71113 Musical groups and artists,5,Private,47,,58,304,13508379,854,44399
+2020,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71113,NAICS 71113 Musical groups and artists,5,Private,47,,61,205,8314163,779,40524
+2021,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71113,NAICS 71113 Musical groups and artists,5,Private,47,,63,248,11601946,901,46845
+2022,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",71113,NAICS 71113 Musical groups and artists,5,Private,47,,67,320,16519519,992,51597
+2023,Austin_RoundRock_MSA,C1242,"Austin-Round Rock-San Marcos, TX MSA",71113,NAICS 71113 Musical groups and artists,5,Private,47,,66,331,18925269,1098,57119
+2024,Austin_RoundRock_MSA,C1242,"Austin-Round Rock-San Marcos, TX MSA",71113,NAICS 71113 Musical groups and artists,5,Private,47,N,64,0,0,0,0
+2001,TX_state,48000,Texas -- Statewide,71113,Musical groups and artists,1,Federal Government,57,,1,0,0,0,0
+2001,TX_state,48000,Texas -- Statewide,71113,Musical groups and artists,5,Private,57,,230,2163,84038699,747,38860
+2002,TX_state,48000,Texas -- Statewide,71113,Musical groups and artists,5,Private,57,,218,2118,84093162,763,39698
+2003,TX_state,48000,Texas -- Statewide,71113,Musical groups and artists,5,Private,57,,204,1944,79578333,787,40937
+2004,TX_state,48000,Texas -- Statewide,71113,Musical groups and artists,5,Private,57,,204,1901,78681859,796,41397
+2005,TX_state,48000,Texas -- Statewide,71113,Musical groups and artists,5,Private,57,,203,1851,76252110,792,41204
+2006,TX_state,48000,Texas -- Statewide,71113,Musical groups and artists,5,Private,57,,198,1704,76052796,858,44634
+2007,TX_state,48000,Texas -- Statewide,71113,Musical groups and artists,5,Private,57,,206,1717,80748328,904,47029
+2008,TX_state,48000,Texas -- Statewide,71113,Musical groups and artists,5,Private,57,,200,1730,81619581,907,47170
+2009,TX_state,48000,Texas -- Statewide,71113,Musical groups and artists,5,Private,57,,208,1859,103334637,1069,55576
+2010,TX_state,48000,Texas -- Statewide,71113,Musical groups and artists,5,Private,57,,200,1964,108558675,1063,55284
+2011,TX_state,48000,Texas -- Statewide,71113,Musical groups and artists,5,Private,57,,195,2100,102296755,937,48703
+2012,TX_state,48000,Texas -- Statewide,71113,Musical groups and artists,5,Private,57,,197,1784,97699272,1053,54762
+2013,TX_state,48000,Texas -- Statewide,71113,Musical groups and artists,5,Private,57,,208,1857,113899012,1180,61343
+2014,TX_state,48000,Texas -- Statewide,71113,Musical groups and artists,5,Private,57,,219,1850,119490719,1242,64590
+2015,TX_state,48000,Texas -- Statewide,71113,Musical groups and artists,5,Private,57,,219,1946,114529899,1132,58857
+2016,TX_state,48000,Texas -- Statewide,71113,NAICS 71113 Musical groups and artists,5,Private,57,,235,1981,120493630,1170,60835
+2017,TX_state,48000,Texas -- Statewide,71113,NAICS 71113 Musical groups and artists,5,Private,57,,244,1997,127172534,1225,63695
+2018,TX_state,48000,Texas -- Statewide,71113,NAICS 71113 Musical groups and artists,5,Private,57,,249,2028,121349795,1151,59849
+2019,TX_state,48000,Texas -- Statewide,71113,NAICS 71113 Musical groups and artists,5,Private,57,,261,2063,125542443,1170,60847
+2020,TX_state,48000,Texas -- Statewide,71113,NAICS 71113 Musical groups and artists,5,Private,57,,268,1637,96289093,1131,58811
+2021,TX_state,48000,Texas -- Statewide,71113,NAICS 71113 Musical groups and artists,5,Private,57,,259,1742,112270869,1239,64446
+2022,TX_state,48000,Texas -- Statewide,71113,NAICS 71113 Musical groups and artists,5,Private,57,,277,2002,148196818,1424,74040
+2023,TX_state,48000,Texas -- Statewide,71113,NAICS 71113 Musical groups and artists,5,Private,57,,301,2090,215229221,1980,102985
+2024,TX_state,48000,Texas -- Statewide,71113,NAICS 71113 Musical groups and artists,5,Private,57,,320,2240,225013104,1932,100467
+2025,TX_state,48000,Texas -- Statewide,71113,NAICS 71113 Musical groups and artists,5,Private,57,,334,2029,145575088,1380,71744
+2001,Travis_County,48453,"Travis County, Texas",71113,Musical groups and artists,5,Private,77,,39,320,8680958,522,27142
+2002,Travis_County,48453,"Travis County, Texas",71113,Musical groups and artists,5,Private,77,,39,284,9189450,622,32348
+2003,Travis_County,48453,"Travis County, Texas",71113,Musical groups and artists,5,Private,77,,36,281,8969060,614,31918
+2004,Travis_County,48453,"Travis County, Texas",71113,Musical groups and artists,5,Private,77,,34,250,8298850,639,33240
+2005,Travis_County,48453,"Travis County, Texas",71113,Musical groups and artists,5,Private,77,,26,234,6997571,576,29936
+2006,Travis_County,48453,"Travis County, Texas",71113,Musical groups and artists,5,Private,77,,26,208,6553476,605,31444
+2007,Travis_County,48453,"Travis County, Texas",71113,Musical groups and artists,5,Private,77,,26,211,6890111,627,32590
+2008,Travis_County,48453,"Travis County, Texas",71113,Musical groups and artists,5,Private,77,,28,227,8043319,683,35511
+2009,Travis_County,48453,"Travis County, Texas",71113,Musical groups and artists,5,Private,77,,29,217,8363215,741,38540
+2010,Travis_County,48453,"Travis County, Texas",71113,Musical groups and artists,5,Private,77,,30,246,8884163,694,36078
+2011,Travis_County,48453,"Travis County, Texas",71113,Musical groups and artists,5,Private,77,,32,222,7326021,634,32975
+2012,Travis_County,48453,"Travis County, Texas",71113,Musical groups and artists,5,Private,77,,34,234,8300456,682,35447
+2013,Travis_County,48453,"Travis County, Texas",71113,Musical groups and artists,5,Private,77,,36,245,8339804,656,34098
+2014,Travis_County,48453,"Travis County, Texas",71113,Musical groups and artists,5,Private,77,,39,263,9681730,708,36813
+2015,Travis_County,48453,"Travis County, Texas",71113,Musical groups and artists,5,Private,77,,43,281,10678182,731,38034
+2016,Travis_County,48453,"Travis County, Texas",71113,NAICS 71113 Musical groups and artists,5,Private,77,,48,270,10945054,780,40575
+2017,Travis_County,48453,"Travis County, Texas",71113,NAICS 71113 Musical groups and artists,5,Private,77,,48,281,14257661,977,50829
+2018,Travis_County,48453,"Travis County, Texas",71113,NAICS 71113 Musical groups and artists,5,Private,77,,49,289,11750622,783,40707
+2019,Travis_County,48453,"Travis County, Texas",71113,NAICS 71113 Musical groups and artists,5,Private,77,,49,292,13105197,862,44830
+2020,Travis_County,48453,"Travis County, Texas",71113,NAICS 71113 Musical groups and artists,5,Private,77,,51,195,7975553,786,40883
+2021,Travis_County,48453,"Travis County, Texas",71113,NAICS 71113 Musical groups and artists,5,Private,77,,51,237,10833275,877,45630
+2022,Travis_County,48453,"Travis County, Texas",71113,NAICS 71113 Musical groups and artists,5,Private,77,,55,307,16000319,1001,52048
+2023,Travis_County,48453,"Travis County, Texas",71113,NAICS 71113 Musical groups and artists,5,Private,77,,53,311,17858914,1103,57363
+2024,Travis_County,48453,"Travis County, Texas",71113,NAICS 71113 Musical groups and artists,5,Private,77,,50,318,18756604,1135,59045
+2025,Travis_County,48453,"Travis County, Texas",71113,NAICS 71113 Musical groups and artists,5,Private,77,,56,314,17700461,1086,56461
+2001,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,1,Federal Government,17,,1,0,0,0,0
+2001,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,2,State Government,17,N,0,0,0,0,0
+2002,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,2,State Government,17,N,0,0,0,0,0
+2003,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,2,State Government,17,N,0,0,0,0,0
+2004,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,2,State Government,17,N,1,0,0,0,0
+2005,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,2,State Government,17,N,1,0,0,0,0
+2006,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,2,State Government,17,N,1,0,0,0,0
+2007,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,2,State Government,17,N,1,0,0,0,0
+2008,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,2,State Government,17,N,1,0,0,0,0
+2009,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,2,State Government,17,N,1,0,0,0,0
+2010,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,2,State Government,17,N,1,0,0,0,0
+2011,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,2,State Government,17,N,1,0,0,0,0
+2012,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,2,State Government,17,N,1,0,0,0,0
+2013,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,2,State Government,17,N,1,0,0,0,0
+2014,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,2,State Government,17,N,1,0,0,0,0
+2015,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,2,State Government,17,N,1,0,0,0,0
+2016,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,2,State Government,17,N,1,0,0,0,0
+2017,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,2,State Government,17,N,1,0,0,0,0
+2018,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,2,State Government,17,N,1,0,0,0,0
+2019,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,2,State Government,17,N,1,0,0,0,0
+2020,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,2,State Government,17,N,1,0,0,0,0
+2021,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,2,State Government,17,N,1,0,0,0,0
+2022,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,2,State Government,17,,1,141,6967864,948,49301
+2023,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,2,State Government,17,,1,152,8107372,1025,53309
+2024,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,2,State Government,17,,1,154,9059129,1132,58889
+2025,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,2,State Government,17,,1,149,9486190,1226,63737
+2001,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,3,Local Government,17,N,0,0,0,0,0
+2002,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,3,Local Government,17,,7,64,1587311,474,24641
+2003,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,3,Local Government,17,,7,89,1859092,404,21007
+2004,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,3,Local Government,17,,7,105,1991044,363,18887
+2005,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,3,Local Government,17,,8,93,1850609,383,19935
+2006,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,3,Local Government,17,,7,36,652934,347,18053
+2007,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,3,Local Government,17,,6,56,707968,244,12680
+2008,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,3,Local Government,17,,6,37,721936,377,19600
+2009,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,3,Local Government,17,,6,31,582995,363,18857
+2010,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,3,Local Government,17,,6,26,573093,425,22113
+2011,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,3,Local Government,17,,6,25,651427,506,26320
+2012,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,3,Local Government,17,,6,35,685531,378,19633
+2013,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,3,Local Government,17,,6,31,767414,480,24957
+2014,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,3,Local Government,17,,6,57,776502,260,13524
+2015,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,3,Local Government,17,,6,38,796941,401,20835
+2016,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,3,Local Government,17,,7,67,859283,247,12857
+2017,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,3,Local Government,17,,7,50,947368,366,19043
+2018,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,3,Local Government,17,,6,42,941309,430,22368
+2019,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,3,Local Government,17,N,7,0,0,0,0
+2020,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,3,Local Government,17,N,6,0,0,0,0
+2021,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,3,Local Government,17,N,6,0,0,0,0
+2022,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,3,Local Government,17,N,5,0,0,0,0
+2023,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,3,Local Government,17,N,5,0,0,0,0
+2024,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,3,Local Government,17,N,5,0,0,0,0
+2025,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,3,Local Government,17,N,5,0,0,0,0
+2001,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,5,Private,17,,5961,45459,1716563334,726,37761
+2002,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,5,Private,17,,5814,44081,1630500651,711,36989
+2003,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,5,Private,17,,5634,42029,1927210541,882,45855
+2004,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,5,Private,17,,5446,41284,1832236510,853,44381
+2005,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,5,Private,17,,5393,40246,1861489411,889,46253
+2006,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,5,Private,17,,5326,39414,2142906077,1046,54370
+2007,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,5,Private,17,,5313,39436,2272101570,1108,57614
+2008,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,5,Private,17,,5341,38654,2457060699,1222,63566
+2009,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,5,Private,17,,5317,35701,2064783412,1112,57836
+2010,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,5,Private,17,,5206,34627,2052035361,1140,59260
+2011,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,5,Private,17,,5086,34602,2107803357,1171,60916
+2012,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,5,Private,17,,5000,33684,2207277079,1260,65528
+2013,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,5,Private,17,,4970,33940,2374980902,1346,69977
+2014,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,5,Private,17,,4956,34254,2317628569,1301,67661
+2015,US_national,US000,U.S. TOTAL,71113,Musical groups and artists,5,Private,17,,4916,35090,2667279897,1462,76012
+2016,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,5,Private,17,,4889,35368,2734250258,1487,77309
+2017,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,5,Private,17,,4878,35508,2857999496,1548,80489
+2018,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,5,Private,17,,5008,35984,3049302561,1630,84740
+2019,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,5,Private,17,,5115,36030,3028621138,1616,84058
+2020,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,5,Private,17,,5283,24939,1858622353,1433,74527
+2021,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,5,Private,17,,5336,27349,2385065830,1677,87207
+2022,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,5,Private,17,,5601,35318,3135978068,1708,88793
+2023,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,5,Private,17,,5907,36563,3688429810,1940,100879
+2024,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,5,Private,17,,6060,37936,3642882705,1847,96027
+2025,US_national,US000,U.S. TOTAL,71113,NAICS 71113 Musical groups and artists,5,Private,17,,6041,34795,2827480291,1563,81260
+2001,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7115,"Independent artists, writers, and performers",5,Private,46,N,0,0,0,0,0
+2002,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7115,"Independent artists, writers, and performers",5,Private,46,N,0,0,0,0,0
+2003,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7115,"Independent artists, writers, and performers",5,Private,46,,56,173,5741736,637,33109
+2004,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7115,"Independent artists, writers, and performers",5,Private,46,,65,247,19281823,1503,78170
+2005,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7115,"Independent artists, writers, and performers",5,Private,46,,65,239,9090416,733,38102
+2006,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7115,"Independent artists, writers, and performers",5,Private,46,N,67,0,0,0,0
+2007,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7115,"Independent artists, writers, and performers",5,Private,46,,84,218,12443658,1098,57081
+2008,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7115,"Independent artists, writers, and performers",5,Private,46,,89,287,14211628,952,49518
+2009,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7115,"Independent artists, writers, and performers",5,Private,46,N,92,0,0,0,0
+2010,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7115,"Independent artists, writers, and performers",5,Private,46,N,93,0,0,0,0
+2011,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7115,"Independent artists, writers, and performers",5,Private,46,N,98,0,0,0,0
+2012,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7115,"Independent artists, writers, and performers",5,Private,46,,102,357,46843706,2523,131184
+2013,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7115,"Independent artists, writers, and performers",5,Private,46,N,117,0,0,0,0
+2014,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7115,"Independent artists, writers, and performers",5,Private,46,,129,514,79014281,2956,153699
+2015,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7115,"Independent artists, writers, and performers",5,Private,46,,141,710,72533115,1966,102219
+2016,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,46,,151,835,77350665,1782,92645
+2017,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,46,,156,944,84339905,1718,89312
+2018,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,46,,161,956,90172854,1813,94298
+2019,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,46,,176,970,88216435,1750,90984
+2020,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,46,,191,713,72134508,1946,101182
+2021,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,46,,226,778,85511263,2115,109971
+2022,Austin_RoundRock_MSA,C1242,"Austin-Round Rock, TX MSA",7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,46,N,264,0,0,0,0
+2023,Austin_RoundRock_MSA,C1242,"Austin-Round Rock-San Marcos, TX MSA",7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,46,N,284,0,0,0,0
+2024,Austin_RoundRock_MSA,C1242,"Austin-Round Rock-San Marcos, TX MSA",7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,46,N,290,0,0,0,0
+2001,TX_state,48000,Texas -- Statewide,7115,"Independent artists, writers, and performers",5,Private,56,,370,1349,54626298,779,40489
+2002,TX_state,48000,Texas -- Statewide,7115,"Independent artists, writers, and performers",5,Private,56,,413,1511,62301091,793,41239
+2003,TX_state,48000,Texas -- Statewide,7115,"Independent artists, writers, and performers",5,Private,56,,418,1544,54680373,681,35411
+2004,TX_state,48000,Texas -- Statewide,7115,"Independent artists, writers, and performers",5,Private,56,,460,1749,68825186,757,39342
+2005,TX_state,48000,Texas -- Statewide,7115,"Independent artists, writers, and performers",5,Private,56,,479,1750,62241152,684,35573
+2006,TX_state,48000,Texas -- Statewide,7115,"Independent artists, writers, and performers",5,Private,56,,518,1661,76269274,883,45929
+2007,TX_state,48000,Texas -- Statewide,7115,"Independent artists, writers, and performers",5,Private,56,,596,1937,85584461,850,44186
+2008,TX_state,48000,Texas -- Statewide,7115,"Independent artists, writers, and performers",5,Private,56,,607,2248,96187817,823,42783
+2009,TX_state,48000,Texas -- Statewide,7115,"Independent artists, writers, and performers",5,Private,56,,608,2172,88798061,786,40882
+2010,TX_state,48000,Texas -- Statewide,7115,"Independent artists, writers, and performers",5,Private,56,,610,2253,88525929,756,39298
+2011,TX_state,48000,Texas -- Statewide,7115,"Independent artists, writers, and performers",5,Private,56,,644,2298,126148519,1056,54893
+2012,TX_state,48000,Texas -- Statewide,7115,"Independent artists, writers, and performers",5,Private,56,,664,2523,140426391,1071,55670
+2013,TX_state,48000,Texas -- Statewide,7115,"Independent artists, writers, and performers",5,Private,56,,676,2627,132827156,972,50561
+2014,TX_state,48000,Texas -- Statewide,7115,"Independent artists, writers, and performers",5,Private,56,,701,2855,184053436,1240,64478
+2015,TX_state,48000,Texas -- Statewide,7115,"Independent artists, writers, and performers",5,Private,56,,736,3076,176926224,1106,57510
+2016,TX_state,48000,Texas -- Statewide,7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,56,,785,3158,187265960,1140,59305
+2017,TX_state,48000,Texas -- Statewide,7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,56,,834,3324,196669937,1138,59161
+2018,TX_state,48000,Texas -- Statewide,7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,56,,861,3735,208042966,1071,55696
+2019,TX_state,48000,Texas -- Statewide,7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,56,,904,4214,233064172,1064,55309
+2020,TX_state,48000,Texas -- Statewide,7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,56,,973,3067,197942915,1241,64548
+2021,TX_state,48000,Texas -- Statewide,7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,56,,1078,3523,239543740,1307,67986
+2022,TX_state,48000,Texas -- Statewide,7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,56,,1198,4086,304341659,1432,74481
+2023,TX_state,48000,Texas -- Statewide,7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,56,,1329,4201,318950403,1460,75926
+2024,TX_state,48000,Texas -- Statewide,7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,56,,1399,3674,322367278,1687,87741
+2025,TX_state,48000,Texas -- Statewide,7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,56,,1458,3469,343217686,1902,98927
+2001,Travis_County,48453,"Travis County, Texas",7115,"Independent artists, writers, and performers",5,Private,76,,44,167,10307118,1189,61843
+2002,Travis_County,48453,"Travis County, Texas",7115,"Independent artists, writers, and performers",5,Private,76,,46,162,14341711,1704,88620
+2003,Travis_County,48453,"Travis County, Texas",7115,"Independent artists, writers, and performers",5,Private,76,,50,165,5115743,598,31083
+2004,Travis_County,48453,"Travis County, Texas",7115,"Independent artists, writers, and performers",5,Private,76,,55,235,18192935,1491,77554
+2005,Travis_County,48453,"Travis County, Texas",7115,"Independent artists, writers, and performers",5,Private,76,,53,228,7930933,668,34747
+2006,Travis_County,48453,"Travis County, Texas",7115,"Independent artists, writers, and performers",5,Private,76,,53,158,8609828,1047,54435
+2007,Travis_County,48453,"Travis County, Texas",7115,"Independent artists, writers, and performers",5,Private,76,,67,184,10651732,1112,57837
+2008,Travis_County,48453,"Travis County, Texas",7115,"Independent artists, writers, and performers",5,Private,76,,67,238,12043347,973,50585
+2009,Travis_County,48453,"Travis County, Texas",7115,"Independent artists, writers, and performers",5,Private,76,,71,220,11029167,966,50209
+2010,Travis_County,48453,"Travis County, Texas",7115,"Independent artists, writers, and performers",5,Private,76,,71,220,12072952,1055,54877
+2011,Travis_County,48453,"Travis County, Texas",7115,"Independent artists, writers, and performers",5,Private,76,,79,269,48217566,3446,179192
+2012,Travis_County,48453,"Travis County, Texas",7115,"Independent artists, writers, and performers",5,Private,76,,81,321,45575302,2729,141905
+2013,Travis_County,48453,"Travis County, Texas",7115,"Independent artists, writers, and performers",5,Private,76,,93,432,36006137,1602,83299
+2014,Travis_County,48453,"Travis County, Texas",7115,"Independent artists, writers, and performers",5,Private,76,,105,463,77339542,3213,167070
+2015,Travis_County,48453,"Travis County, Texas",7115,"Independent artists, writers, and performers",5,Private,76,,115,646,70061049,2087,108510
+2016,Travis_County,48453,"Travis County, Texas",7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,76,,126,755,74474552,1896,98609
+2017,Travis_County,48453,"Travis County, Texas",7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,76,,131,869,81518825,1805,93844
+2018,Travis_County,48453,"Travis County, Texas",7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,76,,134,890,86876897,1877,97605
+2019,Travis_County,48453,"Travis County, Texas",7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,76,,146,899,84385358,1806,93909
+2020,Travis_County,48453,"Travis County, Texas",7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,76,,159,659,68714527,2004,104205
+2021,Travis_County,48453,"Travis County, Texas",7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,76,,187,718,79618770,2133,110915
+2022,Travis_County,48453,"Travis County, Texas",7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,76,,215,659,75179788,2193,114024
+2023,Travis_County,48453,"Travis County, Texas",7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,76,,226,572,73483885,2469,128375
+2024,Travis_County,48453,"Travis County, Texas",7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,76,,232,625,95260304,2931,152416
+2025,Travis_County,48453,"Travis County, Texas",7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,76,,233,383,91573962,4594,238889
+2001,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",1,Federal Government,16,,1,1,64542,1241,64542
+2002,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",1,Federal Government,16,,1,1,46940,1547,80469
+2003,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",1,Federal Government,16,,1,0,0,0,0
+2004,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",1,Federal Government,16,,1,0,0,0,0
+2007,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",2,State Government,16,N,0,0,0,0,0
+2001,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",3,Local Government,16,,3,34,916877,522,27167
+2002,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",3,Local Government,16,N,0,0,0,0,0
+2003,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",3,Local Government,16,N,0,0,0,0,0
+2004,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",3,Local Government,16,N,2,0,0,0,0
+2005,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",3,Local Government,16,N,3,0,0,0,0
+2006,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",3,Local Government,16,N,1,0,0,0,0
+2007,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",3,Local Government,16,N,1,0,0,0,0
+2008,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",3,Local Government,16,N,1,0,0,0,0
+2009,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",3,Local Government,16,N,2,0,0,0,0
+2010,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",3,Local Government,16,N,2,0,0,0,0
+2011,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",3,Local Government,16,N,2,0,0,0,0
+2012,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",3,Local Government,16,N,2,0,0,0,0
+2013,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",3,Local Government,16,N,2,0,0,0,0
+2014,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",3,Local Government,16,N,2,0,0,0,0
+2015,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",3,Local Government,16,N,1,0,0,0,0
+2016,US_national,US000,U.S. TOTAL,7115,"NAICS 7115 Independent artists, writers, and performers",3,Local Government,16,N,1,0,0,0,0
+2001,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",5,Private,16,,14332,37046,3638083275,1889,98205
+2002,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",5,Private,16,,15697,40223,4023362989,1924,100026
+2003,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",5,Private,16,,16896,44041,4251546106,1856,96537
+2004,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",5,Private,16,,18108,43010,4895356769,2189,113819
+2005,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",5,Private,16,,19178,43791,4671679339,2052,106682
+2006,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",5,Private,16,,20827,47377,5277181720,2142,111387
+2007,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",5,Private,16,,21279,49298,5453276650,2127,110620
+2008,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",5,Private,16,,21625,49223,5761456916,2251,117049
+2009,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",5,Private,16,,21914,45689,5489892869,2311,120157
+2010,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",5,Private,16,,21429,45158,5653261751,2407,125189
+2011,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",5,Private,16,,21436,47072,6184066199,2526,131376
+2012,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",5,Private,16,,21949,48971,6401906414,2514,130728
+2013,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",5,Private,16,,22534,50782,6159790689,2333,121300
+2014,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",5,Private,16,,23815,52221,6712079600,2472,128533
+2015,US_national,US000,U.S. TOTAL,7115,"Independent artists, writers, and performers",5,Private,16,,24474,52114,6952614715,2566,133412
+2016,US_national,US000,U.S. TOTAL,7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,16,,24821,51240,7177797467,2694,140081
+2017,US_national,US000,U.S. TOTAL,7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,16,,25587,50611,7645673753,2905,151067
+2018,US_national,US000,U.S. TOTAL,7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,16,,27776,51432,7800977541,2917,151677
+2019,US_national,US000,U.S. TOTAL,7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,16,,29861,53116,8605518585,3116,162014
+2020,US_national,US000,U.S. TOTAL,7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,16,,32075,43483,7851897466,3473,180572
+2021,US_national,US000,U.S. TOTAL,7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,16,,33929,49822,9016711358,3480,180979
+2022,US_national,US000,U.S. TOTAL,7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,16,,36718,58372,9878145539,3254,169229
+2023,US_national,US000,U.S. TOTAL,7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,16,,39010,59575,9046848987,2920,151858
+2024,US_national,US000,U.S. TOTAL,7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,16,,40861,61092,9900643775,3117,162062
+2025,US_national,US000,U.S. TOTAL,7115,"NAICS 7115 Independent artists, writers, and performers",5,Private,16,,42223,59406,9457797161,3062,159205

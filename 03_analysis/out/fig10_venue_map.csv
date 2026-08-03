@@ -1,0 +1,115 @@
+venue_key,venue_name,district,tier,lat,lon,geosrc,real2019,real2025,pctchg,changecat,stopped
+o4center,The 04 Center,South Lamar,core_live_music,,,none,0,153408,,Opened after 2019,0
+o4lounge,The 04 Lounge,South Austin,live_music_adjacent,,,none,725224.1876593319,698603,-3.670752866813787,Roughly flat (-25% to +10%),0
+abgb,The ABGB,South Austin,live_music_adjacent,30.2453087,-97.76893112,address,0,1098921,,Opened after 2019,0
+acl_moody,ACL Live at Moody Theater / 3TEN (Block 21),Downtown,large_venue,30.26543654,-97.74708724000001,address,644066.4584833415,5044750,683.2654431158334,Real receipts up >10%,0
+antones,Antone's,Downtown,core_live_music,,,none,1579215.04347126,1386022,-12.23348550724312,Roughly flat (-25% to +10%),0
+austinmusichall,Austin Music Hall,Downtown,large_venue,,,none,,,,,1
+swandive,Barbarella / Swan Dive,Red River Cultural District,core_live_music,30.26715122,-97.7366835,address,3407242.300314647,3219867,-5.499324198262723,Roughly flat (-25% to +10%),0
+barracuda,Barracuda,East Austin,core_live_music,30.26713007,-97.73633031999999,address,1044318.243480778,0,-100,Stopped filing by 2025,1
+bartonsprings,Barton Springs Saloon,South Central,live_music_adjacent,30.26132962,-97.75879796,address,1208846.430032508,1709036,41.37742872384889,Real receipts up >10%,0
+beerland,Beerland,Red River Cultural District,core_live_music,30.26780546,-97.73652411,name,173367.7584886546,0,-100,Stopped filing by 2025,1
+redriverhosp,Beerland successor (Red River Hospitality),Red River Cultural District,core_live_music,30.26780546,-97.73652411,address,0,355426,,Opened after 2019,0
+belmont,The Belmont,Downtown,live_music_adjacent,30.26859015,-97.74567435000002,address,602403.911519615,204264,-66.09185363940836,Real receipts down >25%,1
+blackheart,The Blackheart,Rainey Street,core_live_music,30.25970906,-97.73872599000002,address,,,,,1
+blindpig,Blind Pig Pub,Downtown/6th,live_music_adjacent,30.26703099,-97.73981587000002,address,5145428.507922549,2411065,-53.14160917234354,Real receipts down >25%,0
+brokenspoke,Broken Spoke,South Lamar,core_live_music,,,none,965269.9146501066,879235,-8.913042180672615,Roughly flat (-25% to +10%),0
+brushy,Brushy Street Commons (501 N IH-35 successor),East Austin,core_live_music,,,none,0,126108,,Opened after 2019,0
+buzzmill,Buzz Mill,Southeast Austin,live_music_adjacent,,,none,1145332.562048366,222743,-80.55211146694057,Real receipts down >25%,0
+cboys,C-Boy's Heart & Soul,South Congress,core_live_music,30.24379854,-97.75221243,address,1050248.254248443,1122503,6.879777753428673,Roughly flat (-25% to +10%),0
+cheerup,Cheer Up Charlies,Red River Cultural District,core_live_music,30.26491873999999,-97.73102216000002,address,1840939.458359804,1303521,-29.19261988325352,Real receipts down >25%,0
+chessclub,Chess Club,Red River Cultural District,core_live_music,,,none,0,170639,,Opened after 2019,0
+clivebar,Clive Bar,Rainey Street,live_music_adjacent,30.26006401,-97.73859763999998,address,2237090.891670461,653233,-70.79989005219973,Real receipts down >25%,0
+clubdeville,Club de Ville,Red River Cultural District,core_live_music,30.26968892,-97.73636254999998,address,,,,,1
+cati,Come and Take It Live,Southeast Austin,core_live_music,30.23964247,-97.72786624999999,address,1036935.342272162,628409,-39.39747500331,Real receipts down >25%,0
+concourse,The Concourse Project,Southeast Austin,large_venue,,,none,0,5111807,,Opened after 2019,0
+containerbar,Container Bar,Rainey Street,live_music_adjacent,30.26036995999999,-97.73849437,address,5918230.132163844,0,-100,Stopped filing by 2025,1
+continental,The Continental Club,South Congress,core_live_music,,,none,1837951.771251828,1523749,-17.09526746927776,Roughly flat (-25% to +10%),0
+coralsnake,The Coral Snake / Steely's Lodge,East Austin,core_live_music,30.25698698,-97.72374798,address,1364841.247923246,345923,-74.65470797234775,Real receipts down >25%,0
+cosmic,Cosmic Coffee & Beer Garden,South Austin,live_music_adjacent,30.22729459,-97.7630537,address,3187576.10246655,1583263,-50.33018980237463,Real receipts down >25%,0
+creekcave,The Creek and the Cave (611 E 7th successor),East Austin,core_live_music,30.26713007,-97.73633031999999,address,0,1017841,,Opened after 2019,0
+creekside,The Creekside Lounge / Lipstick24 (606 E 7th predecessor),East Austin,core_live_music,30.26741406,-97.73610492,address,,,,,1
+dirtydog,Dirty Dog Bar,Downtown/6th,core_live_music,30.2664579,-97.73802261,address,586515.3637572937,0,-100,Stopped filing by 2025,1
+donns,Donn's Depot,Central/West,core_live_music,,,none,977303.829403867,1424882,45.79723900899329,Real receipts up >10%,0
+dozenst,Dozen Street / Outer Heaven,East Austin,core_live_music,30.27384944,-97.72036186,address,309528.6687119384,276584,-10.64349510791137,Roughly flat (-25% to +10%),1
+elephantroom,Elephant Room,Downtown,core_live_music,,,none,1225541.439097699,2014623,64.38636309868559,Real receipts up >10%,0
+elysium,Elysium,Red River Cultural District,core_live_music,30.26766914,-97.73658322999999,address,665867.3756723271,516586,-22.41908541045392,Roughly flat (-25% to +10%),0
+emos_orig,"Emo's (original, 603 Red River)",Red River Cultural District,core_live_music,30.2668215,-97.73685393,address,,,,,1
+emoseast,Emo's East,Southeast Austin,large_venue,30.23964247,-97.72786624999999,address,2155252.710770174,1951018,-9.476137519724615,Roughly flat (-25% to +10%),0
+empire,Empire Control Room & Garage,East Austin,core_live_music,30.26741406,-97.73610492,address,1286189.849265081,839249,-34.74921291910829,Real receipts down >25%,0
+esthers,Esther's Follies / Velveeta Room,Downtown/6th,live_music_adjacent,,,none,708056.6426744906,458449,-35.25249642905204,Real receipts down >25%,0
+farout,The Far Out Lounge,South Congress,core_live_music,30.17273225,-97.78580164000002,address,459265.8509307214,1162999,153.2300186576324,Real receipts up >10%,0
+flamingo,Flamingo Cantina,Downtown/6th,core_live_music,,,none,343082.499294466,336140,-2.023565558937857,Roughly flat (-25% to +10%),0
+frontpage,The Front Page (Springdale),East Austin,live_music_adjacent,,,none,203259.7507178389,457085,124.8772806154408,Real receipts up >10%,0
+thegatsby,The Gatsby / Mala Vida (708 E 6th),Downtown/6th,live_music_adjacent,30.26618575,-97.73558625,address,1164961.074102747,3361561,188.5556500322619,Real receipts up >10%,0
+giddyups,Giddy Ups,South Austin,core_live_music,,,none,677973.1158858747,0,-100,Stopped filing by 2025,0
+littlelonghorn,Ginny's Little Longhorn Saloon,North Austin/Burnet,core_live_music,,,none,0,537436,,Opened after 2019,0
+goodnight,The Goodnight,North Austin,live_music_adjacent,30.35905881,-97.73460244,address,,,,,1
+gands,G&S Lounge,South Austin,core_live_music,30.24147095,-97.7604034,address,145684.7141718622,75166,-48.40501940970434,Real receipts down >25%,0
+halfstep,Half Step,Rainey Street,live_music_adjacent,30.25859091,-97.73850996,address,2632355.217547962,1874974,-28.77199902577976,Real receipts down >25%,0
+hardluck,Hard Luck Lounge,East Austin,core_live_music,30.25646627,-97.7019049,address,562729.7957057768,0,-100,Stopped filing by 2025,1
+haymaker,Haymaker,Manor Rd,live_music_adjacent,30.28479407,-97.71757864999999,address,2546865.279060618,1583832,-37.81249393041401,Real receipts down >25%,0
+highball,The Highball,South Lamar,core_live_music,,,none,,,,,1
+scootinn,Historic Scoot Inn,East Austin,core_live_music,30.26224126,-97.72948491000001,address,1017489.544106713,643974,-36.70952161327953,Real receipts down >25%,0
+holeinwall,Hole in the Wall,UT/Guadalupe,core_live_music,,,none,1014922.728991173,732762,-27.80120307992696,Real receipts down >25%,0
+holymtn,Holy Mountain,East Austin,core_live_music,30.26695861,-97.73612944,address,,,,,1
+hotelvegas,Hotel Vegas / Volstead Lounge,East Austin,core_live_music,,,none,3394483.830484089,4818227,41.94284729625213,Real receipts up >10%,0
+indianroller,Indian Roller,South Austin,live_music_adjacent,,,none,857769.8830733446,0,-100,Stopped filing by 2025,1
+jovitas,Jovita's,South Austin,core_live_music,30.24820324,-97.7552879,name,,,,,1
+kickbutt,Kick Butt Coffee,Airport Blvd,core_live_music,30.32230597,-97.71379640000001,address,310830.3476586017,167913,-45.97921301287285,Real receipts down >25%,0
+kingdom,Kingdom Nightclub,Downtown/East,core_live_music,,,none,0,675277,,Opened after 2019,0
+lalas,Lala's Little Nugget,North Austin,live_music_adjacent,,,none,1625362.271336414,1390026,-14.47900418796573,Roughly flat (-25% to +10%),0
+lastchance,Last Chance Bar & Dancehall,Hill Country / W Travis,core_live_music,,,none,182485.8115942265,0,-100,Stopped filing by 2025,1
+lazonarosa,La Zona Rosa,Downtown,large_venue,30.26828254,-97.74978425,address,,,,,1
+littledarlin,The Little Darlin',South Austin,live_music_adjacent,30.19448195,-97.77681440000001,address,2561285.815232559,2302641,-10.09824103558994,Roughly flat (-25% to +10%),0
+longbranch,Longbranch Inn,East Austin,core_live_music,,,none,,,,,1
+longcenter,Long Center for the Performing Arts,South Central,large_venue,30.26062251,-97.75039156,address,898484.838006199,1237620,37.74522926245096,Real receipts up >10%,0
+lostwell,The Lost Well,East Austin,core_live_music,30.26270062,-97.71444362,address,743440.1323379041,137027,-81.56852259655531,Real receipts down >25%,0
+maggiemaes,Maggie Mae's,Downtown/6th,live_music_adjacent,30.26699383,-97.73962670000002,address,2582659.559950181,271192,-89.49950646978687,Real receipts down >25%,0
+marchesa,The Marchesa Hall & Theatre,North Austin,core_live_music,,,none,,,,,1
+mercer,Mercer St. Taproom (Dripping/W Travis),Hill Country / W Travis,core_live_music,,,none,0,297619,,Opened after 2019,0
+midway,Midway Field House (CATI predecessor),Southeast Austin,core_live_music,30.23964247,-97.72786624999999,address,,,,,1
+mohawk,Mohawk,Red River Cultural District,core_live_music,30.27004697,-97.73611606999999,address,1905904.956689111,1215171,-36.24178394965908,Real receipts down >25%,0
+moodyamph,Moody Amphitheater at Waterloo Greenway,Downtown,large_venue,,,none,0,6416375,,Opened after 2019,0
+moodycenter,Moody Center (UT),UT/Campus,large_venue,,,none,0,4893024,,Opened after 2019,0
+moontower,Moon Tower Saloon,South Austin,live_music_adjacent,,,none,3280327.972967079,1668835,-49.12597112993774,Real receipts down >25%,0
+nomad,Nomad Bar,Northeast/Corona,core_live_music,,,none,1204521.781295868,278923,-76.84367320448747,Real receipts down >25%,0
+northdoor,The North Door / ND Austin,East Austin,core_live_music,,,none,653624.2850181346,0,-100,Stopped filing by 2025,1
+nuttybrown,Nutty Brown Cafe,Hill Country / W Travis,core_live_music,,,none,677947.9139701599,268008,-60.46775947277323,Real receipts down >25%,0
+one2one,One-2-One Bar,South Lamar / Downtown,core_live_music,30.26661598,-97.74204594,address,543261.3158161851,0,-100,Stopped filing by 2025,1
+paramount,Paramount Theatre,Downtown,large_venue,,,none,1080365.803623273,1528382,41.46893532488664,Real receipts up >10%,0
+parish_ih35,The Parish (501 N IH-35),East Austin,core_live_music,,,none,607097.7683214745,160308,-73.59436842549674,Real receipts down >25%,1
+parishroom,The Parish Room (214 E 6th),Downtown/6th,core_live_music,30.2677638,-97.74057856,address,,,,,1
+parker,Parker Jazz Club,Downtown,core_live_music,30.26633621,-97.74465115,address,544982.6066594978,522113,-4.196392027936158,Roughly flat (-25% to +10%),0
+plush,Plush,Red River Cultural District,core_live_music,,,none,232158.7874678647,0,-100,Stopped filing by 2025,1
+poodies,Poodie's Hilltop Roadhouse,Hill Country / W Travis,core_live_music,,,none,793721.7344760518,690024,-13.06474674584844,Roughly flat (-25% to +10%),0
+radiocoffee,Radio Coffee & Beer,South Austin,live_music_adjacent,30.23153225,-97.78780773,address,1573600.056650029,1006151,-36.06056407102879,Real receipts down >25%,0
+red7,Red 7,East Austin,core_live_music,30.26713007,-97.73633031999999,address,,,,,1
+redeyedfly,Red Eyed Fly,Red River Cultural District,core_live_music,30.26786593,-97.73625079,address,,,,,1
+redshed,Red Shed Tavern (Far Out predecessor),South Congress,core_live_music,30.17273225,-97.78580164000002,address,,,,,1
+riorita,Rio Rita,East Austin,core_live_music,30.26409482,-97.72864431000001,address,147029.2363752404,0,-100,Stopped filing by 2025,1
+room710,Room 710,Red River Cultural District,core_live_music,,,none,,,,,1
+sagebrush,Sagebrush,South Congress,core_live_music,,,none,0,1107335,,Opened after 2019,0
+sahara,The Sahara Lounge,East Austin,core_live_music,,,none,498556.8976256964,507375,1.768725378446989,Roughly flat (-25% to +10%),0
+samstown,Sam's Town Point,South Austin,core_live_music,,,none,0,623236,,Opened after 2019,0
+saxon,The Saxon Pub,South Lamar,core_live_music,30.25352646,-97.76354857,address,1230383.987202275,1073831,-12.72391292723625,Roughly flat (-25% to +10%),0
+scratchouse,Scratchouse (617 E 7th successor),East Austin,core_live_music,30.26695861,-97.73612944,address,441386.3518269403,0,-100,Stopped filing by 2025,1
+sevengrand,Seven Grand,Downtown/East,live_music_adjacent,30.26766697,-97.73864837000001,address,2046395.556032178,1949659,-4.72716800752554,Roughly flat (-25% to +10%),0
+shadygrove,Shady Grove,South Central,live_music_adjacent,30.26278313,-97.76201467,address,1465275.922429397,0,-100,Stopped filing by 2025,1
+shoalcreek,Shoal Creek Saloon,Central,live_music_adjacent,,,none,747568.206131969,923353,23.51421481359783,Real receipts up >10%,0
+sidewinder,Sidewinder,Red River Cultural District,core_live_music,30.26786593,-97.73625079,address,,,,,1
+skylark,Skylark Lounge,Airport Blvd,core_live_music,,,none,384990.7649364107,53279,-86.16096674194246,Real receipts down >25%,1
+sabg,South Austin Beer Garden,South Austin,live_music_adjacent,,,none,1435653.59069836,1438487,.1973602350872072,Roughly flat (-25% to +10%),0
+speakeasy,Speakeasy,Downtown,core_live_music,30.26686274,-97.74375856999998,address,1879497.129307482,2072350,10.26087604419894,Real receipts up >10%,0
+spiderhouse,Spider House Ballroom,UT/North Campus,core_live_music,30.29549402999999,-97.74170600000001,address,1582633.683337956,192155,-87.85852961282089,Real receipts down >25%,1
+stateside,Stateside at the Paramount (State Theater Co),Downtown,large_venue,,,none,126257.8174431995,92845,-26.46395931739528,Real receipts down >25%,0
+stubbs,Stubb's Bar-B-Q,Red River Cultural District,core_live_music,30.26859842,-97.73615979,address,4043125.696765431,2742553,-32.16750589292613,Real receipts down >25%,0
+summit,Summit (120 W 5th),Downtown,core_live_music,30.26750204,-97.74396741,address,1672944.748301519,0,-100,Stopped filing by 2025,1
+threadgills_n,Threadgill's North (N Lamar),North Austin,core_live_music,,,none,259732.2034512983,0,-100,Stopped filing by 2025,1
+threadgills_s,Threadgill's South (Riverside),South Central,core_live_music,30.2582312,-97.74871985999999,address,0,0,,Opened after 2019,1
+valhalla,Valhalla (711 Red River),Red River Cultural District,core_live_music,,,none,314816.0306288787,280254,-10.97848497734928,Roughly flat (-25% to +10%),0
+vortex,The Vortex / Butterfly Bar,Manor Rd,core_live_music,30.28428921,-97.71745469,address,1289676.534304207,921145,-28.57550125954904,Real receipts down >25%,0
+vulcan,Vulcan Gas Company,Downtown/6th,core_live_music,30.26718461,-97.73846092000001,address,944478.3341854936,707963,-25.04190150528561,Real receipts down >25%,0
+whitehorse,The White Horse,East Austin,core_live_music,30.26253077,-97.7270651,address,2723565.990902539,2648903,-2.741368894748075,Roughly flat (-25% to +10%),0
+wonderland,Wonderland (1104 E 6th successor),East Austin,core_live_music,30.26491873999999,-97.73102216000002,address,0,0,,Opened after 2019,1
+yellowjacket,Yellow Jacket Social Club,East Austin,live_music_adjacent,30.26163225,-97.72453885,address,1932040.603381022,1348459,-30.20545232640396,Real receipts down >25%,0

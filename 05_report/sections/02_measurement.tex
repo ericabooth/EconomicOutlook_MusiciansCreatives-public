@@ -1,0 +1,434 @@
+% Section 1: the measurement problem. This section exists because the honest
+% answer to "what do Austin musicians earn" depends on which instrument you ask,
+% and the instruments disagree in a patterned way. It opens with an orientation
+% subsection that nests Austin inside Texas and Texas inside the country, so
+% that the Austin figures in later sections have a reference point. That
+% orientation only points to the comparisons; each one is developed in the
+% section named in the table.
+\section{Austin stopped asking musicians what they earn}
+\label{sec:measurement}
+
+What Austin musicians earn depends on which source you ask, and the sources
+disagree in a patterned way. This section opens by placing Austin inside Texas
+and Texas inside the country, then traces what the city measured and then
+stopped measuring, follows one widely repeated income figure back to its origin,
+sets out what four federal statistical programs can and cannot see, and ends
+with the rules this study follows when sources conflict.
+
+% Reserve enough space for the heading, the orientation paragraph and the
+% nesting table together. The paragraph promises a table the reader should be
+% able to see without turning the page, and holding the block together costs no
+% page here: the study runs to the same length either way.
+\needspace{30\baselineskip}
+\subsection{Austin is a concentrated music town inside a state that commits
+little to music}
+
+A reader meeting an Austin figure in this study needs two reference points:
+where Austin stands within Texas, and where Texas stands within the country.
+Austin accounts for \NPumsAustinShareOfTxMusicians\ of Texas musicians and
+singers against \NPumsAustinShareOfTxWorkers\ of employed Texans,\footnote{The
+Census Bureau's American Community Survey Public Use Microdata Sample is the
+only federal instrument that identifies a respondent's detailed occupation and
+attaches survey weights that project the sample to a state or metro population.
+The Bureau makes the raw records available for reanalysis, and both shares
+here are ratios of person weights from the 2020--2024 five-year Texas file at
+\url{https://www2.census.gov/programs-surveys/acs/data/pums/2024/5-Year/}.
+Population: Texas residents 18--64 who worked in the reference week (ESR codes
+1, 2, 4 and 5) and reported positive earnings; the musician cell restricts
+that population to Musicians and Singers, occupation code OCCP 2752. Both
+shares are computed on the same weighted denominator and so cancel any common
+weighting artefact.} so the metro's share of the state's musicians is close to
+twice its share of the state's workers. Travis County registers more solo
+creative businesses per resident than Dallas, Bexar or Harris, the three other
+large Texas counties compared here.\footnote{The Census Bureau's Nonemployer
+Statistics program tabulates every U.S.\ business with no paid employees that
+files a federal income-tax return with receipts of at least \$1,000, and
+publishes county-by-industry counts at
+\url{https://www.census.gov/programs-surveys/nonemp.html}. The count used here
+is NAICS 7115, Independent Artists, Writers and Performers, per 10,000
+residents for 2023, with resident totals from the Census Bureau's Vintage 2025
+Population Estimates Program. That industry code covers writers and other
+independent performers as well as musicians, so the count is a proxy for solo
+creative work rather than a musician-only census; the same NAICS boundary
+applies to every county compared, so the ranking is internally consistent.}
+Texas itself has a small arts economy for its size and pays out little per
+resident through its main music-specific incentive, though in the one rebate
+round with a published total the Texas Music Office awarded its full annual
+dedication.\footnote{The Bureau of Economic Analysis measures the arts-economy
+share of state output through its Arts and Cultural Production Satellite
+Account (ACPSA), which reweights the national GDP accounts to isolate arts and
+culture value added; program page at
+\url{https://www.bea.gov/data/special-topics/arts-and-culture}. The Texas
+music-incentive figure is the Texas Music Incubator Rebate Program awarded in
+FY2026, per the Texas Music Office program page at
+\url{https://gov.texas.gov/music/tmir}. Both figures appear later with method
+and vintage in Section~\ref{sec:state}.} The table below sets each comparison
+beside the section that develops it, where the margins, methods and caveats
+are given in full.
+
+\vspace{3pt}
+{\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.05}
+\noindent\begin{tabular}{@{}P{0.28\textwidth} R{0.14\textwidth} P{0.54\textwidth}@{}}
+\toprule
+\textbf{Measure} & \textbf{Austin or Texas} & \textbf{Comparison, and the section that develops it} \\
+\midrule
+\multicolumn{3}{@{}l@{}}{\sffamily\bfseries\color{amnavy}Austin within Texas} \\
+Share of Texas musicians and singers who work in the Austin metro
+& \NPumsAustinShareOfTxMusicians
+& The metro's share of all employed Texans is
+\NPumsAustinShareOfTxWorkers\ \mbox{(Section~\ref{sec:earnings})} \\
+\rowrule
+Independent-artist businesses per 10,000 residents, Travis County, 2023
+& \NNesEstabPerOneZerokTravisTwoZeroTwoThree
+& Dallas \NNesEstabPerOneZerokDallasTwoZeroTwoThree, Bexar
+\NNesEstabPerOneZerokBexarTwoZeroTwoThree, Harris
+\NNesEstabPerOneZerokHarrisTwoZeroTwoThree\ \mbox{(Section~\ref{sec:payroll})} \\
+\rowrule
+Median earnings in the pooled music occupations (musicians, singers, music
+directors and composers), Austin metro
+& \NPumsMetroAustinMusicMedpernp
+& Dallas-Fort Worth \NPumsMetroDfwMusicMedpernp, Houston
+\NPumsMetroHoustonMusicMedpernp; Austin has the lowest point estimate of the
+three and the margins overlap, so no gap is statistically firm
+\mbox{(Section~\ref{sec:earnings})} \\
+\midrule
+\multicolumn{3}{@{}l@{}}{\sffamily\bfseries\color{amnavy}Texas within the nation} \\
+Arts and cultural production as a share of economic output, 2023
+& \NBeaGdpShareTxTwoZeroTwoThree
+& \NBeaGdpShareUsAvgTwoZeroTwoThree\ nationally; Texas ranks
+\NBeaGdpShareTxNationalRank, and of the eight benchmark states only Louisiana
+(\NBeaGdpShareLaTwoZeroTwoThree) is lower \mbox{(Section~\ref{sec:state})} \\
+\rowrule
+State music money awarded, claimed or appropriated, per resident
+& \NMusicDisbursedPercapitaTexas
+& New York \NMusicDisbursedPercapitaNewyork, Tennessee
+\NMusicDisbursedPercapitaTennessee, Louisiana
+\NMusicDisbursedPercapitaLouisiana, Georgia
+\NMusicDisbursedPercapitaGeorgia\ \mbox{(Section~\ref{sec:state})} \\
+\rowrule
+Federal shuttered-venue grants, Austin area
+& \NSvogAustinTotal
+& Dallas-Fort Worth \NSvogDfwAreaTotal, Houston \NSvogHoustonAreaTotal,
+Nashville \NSvogNashvilleTotal\ \mbox{(Section~\ref{sec:state})} \\
+\bottomrule
+\end{tabular}
+}
+
+\srcnote{Sources: American Community Survey 2020--2024 five-year public use
+microdata, employed adults 18 to 64 with positive earnings, for the shares and
+the medians; Census Bureau Nonemployer Statistics, NAICS 7115, with Census
+Bureau population estimates, for businesses per 10,000 residents; Bureau of
+Economic Analysis Arts and Cultural Production Satellite Account for the output
+share; state statutes and agency reports, with Census Bureau population
+estimates, for money disbursed per resident; Small Business Administration
+award file, July 2022 vintage, for the shuttered-venue grants. How to read it:
+the middle column is the Austin or Texas figure and the right column is what
+that figure is measured against, with the section that develops the comparison
+in parentheses. Caveats: the three metro medians rest on small samples and
+carry wide margins of error; independent-artist businesses cover writers and other performers as well
+as musicians, so that count is a proxy for solo creative work rather than a
+count of musicians; the shuttered-venue metro groupings are built from
+recipient city names rather than official metropolitan boundaries, and they are
+not built alike, since the two Texas figures use multi-place lists while the
+Nashville figure covers the consolidated city only and so understates its metro;
+\textbf{the Austin and Houston totals should not be read as a ranking}, because
+several cinema-chain awards filed at Austin-area corporate addresses fund
+operations in other states, and removing the two clearest of them alone puts
+Austin below Houston (Section~\ref{sec:state});
+shuttered-venue awards are nominal dollars, an exception to the deflation rule
+below, because every award falls in one program period; the per-resident state
+figures are money that left the treasury or was awarded, claimed or
+appropriated, rather than dollars authorised, which is why Georgia appears at
+zero; and the Tennessee figure combines film, television and music scoring
+because no music-only breakout exists, so it is an upper bound rather than a
+music-specific number.}
+
+\vspace{4pt}
+
+Those are the two reference points. The rest of this section asks how much
+weight any one of those Austin figures can carry.
+
+\subsection{The 2022 music census dropped the income questions the 2014 one
+asked}
+
+The City of Austin's Music and Entertainment Division commissioned Titan Music
+Group to field a music census in 2014, and that instrument asked what people
+earned from music. It drew 3,968 self-selected
+responses.\footnote{Titan Music Group, LLC (for the City of Austin Economic
+Development Department, Music and Entertainment Division), \textit{The Austin
+Music Census: A Data-Driven Assessment of Austin's Commercial Music Economy},
+fielded late 2014, published 1 June 2015, with income questions covering
+calendar year 2013;
+\url{https://austin.widen.net/content/om7zqn1qbx/pdf/Austin_Music_Census_Interactive_PDF_53115.pdf}.
+Recruitment ran through Austin music-industry mailing lists and social channels,
+so respondents self-selected into the sample rather than being drawn by
+probability method; the census itself flags that limitation, and the
+microdata were never publicly released. Every share below is a sample share,
+not a population estimate.} Of the 1,883 respondents who identified as
+musicians, 68.4\%, or 1,288 people, reported earning under \$10,000 from
+music, a threshold worth \NPumsMusiccensusTenkTwoZeroTwoFiveusd\ in 2025
+dollars.\footnote{The 68.4 percent figure appears on page 74 of the Titan
+report; it is the share of the 1,883 self-identified musician respondents who
+placed themselves in the ``under \$10,000'' band of the pre-tax
+calendar-2013 earnings question. Converted with the Bureau of Labor
+Statistics's Consumer Price Index for All Urban Consumers, U.S.\ city average,
+all items, series CUUR0000SA0 (annual-average factor
+\NPumsDeflTwoZeroOneThreeToTwoZeroTwoFive\ between 2013 and 2025), retrieved
+from the BLS Public Data API at
+\url{https://api.bls.gov/publicAPI/v2/timeseries/data/}. Inflation adjustment
+matters more here than usual: a reader comparing the 2013 threshold against
+present-day earnings without adjusting would understate today's bar by about
+28 percent, since \$10,000 is that much below the
+\NPumsMusiccensusTenkTwoZeroTwoFiveusd\ the line is worth now.} The 2022
+successor census dropped those income questions. Its authors explain why in
+the front matter: working ``with the guidance of the community,'' they removed
+questions from the 2014 survey ``that aimed to quantify the income of music
+people in a way that turned off many
+respondents.''\footnote{Sound Music Cities, \textit{Greater Austin Music
+Census, Summary Report}, published February 2023, printed page 2;
+\url{https://www.austinmusiccensus.org/s/2022-Greater-Austin-Music-Census-SUMMARY-REPORT-v13-optimized.pdf}.
+The team removed the income-quantification items specifically, not every
+income-related question, and the 2022 questionnaire kept items on the
+composition of music income, on spending, on housing and on whether
+respondents expected to remain in Austin, all of which Section~\ref{sec:census}
+uses. Like the 2014 fielding, the 2022 census is a self-selected online
+convenience sample.}
+
+The 2022 census's silence on earnings is narrower than it first appears,
+because other measurement of Austin musician pay continued through other
+channels. The City of Austin bought a commercial series that put median
+musician earnings at \$17.49 an hour in 2016 and \$17.68 in
+2017.\footnote{City of Austin open data, \textit{Median Earnings of Creative
+Sector Occupations}, dataset \texttt{2qxc-8cme}, at
+\url{https://data.austintexas.gov/resource/2qxc-8cme.csv}, retrieved 1 August
+2026. The city purchased the underlying figures from the Creative Vitality
+Suite, a commercial subscription database maintained by the labor-market data
+vendor Lightcast (formerly Emsi Burning Glass) that combines federal
+Occupational Employment and Wage Statistics with self-employment tax records.
+The vendor publishes no methodology detail on how the two sources are joined,
+so a reader cannot audit the resulting hourly figure. The city's series
+covers Musicians and Singers for 2016 and 2017 only.} A University of Texas
+research project led by Professor Eric Drott interviewed roughly sixty Austin
+musicians and reported that their annual incomes clustered around \$30,000 to
+\$35,000.\footnote{University of Texas at Austin (Prof.\ Eric Drott et al.),
+\textit{Support Austin Musicians}, project website drafted July 2024,
+\url{https://supportaustinmusicians.org/final-summary/}. Recruitment ran
+through Austin music-community contacts rather than by any probability method,
+the sample was about 60 non-random interviews, the project has no named lead
+author on the public write-up, and the summary has not been peer reviewed. It
+is the direction of the finding rather than the point estimate that this
+study takes from that source.} The Health Alliance for Austin Musicians,
+a local nonprofit that provides health-care access to working Austin
+musicians, publishes an annual impact report that names the household-income
+ceiling its clients must fall under to
+qualify.\footnote{Health Alliance for Austin Musicians (HAAM),
+\textit{Annual Impact Report} series, 2014 through 2025, at
+\url{https://www.myhaam.org/}. HAAM's eligibility ceiling is a program-design
+threshold set by the nonprofit each year rather than a measurement of what its
+members earn, and its member roster is a self-selected subset of the Austin
+music workforce (those who applied for HAAM services), so the figure indexes
+program eligibility rather than typical musician earnings. Some HAAM reports
+also restate 2015 Austin Music Census figures alongside current impact data;
+this study takes only the eligibility threshold from HAAM, not the reprinted
+census numbers.} None of these three sources was designed as a representative
+measurement of the Austin music workforce, and none is one.
+
+\textbf{Austin's own music census has not asked a musician what they earn since
+the 2014 fielding, whose income questions covered calendar 2013.} The city has
+since relied on that 2013 figure, the three sources above, and federal series
+never designed to capture irregular self-employed performance income.
+
+\subsection{One quoted income figure is a sideman's 1981 salary}
+
+When no current number exists, people quote whatever number they can find. The
+clearest example is \$15,475, quoted as an Austin musician's annual income. It
+originates in a February 2022 KUT public radio segment in which the bandleader
+Marcia Ball described her own payroll from four decades earlier: ``if you had
+worked for me for a full year as my sax player did, you would have made
+\$15,475.''\footnote{Elizabeth McQueen and Miles Bloxson, ``Marcia Ball on the
+economics of being a working musician in Austin then and now,'' KUT 90.5 and
+KUTX, broadcast 15 February 2022. Marcia Ball is a Grammy-nominated Austin
+bandleader whose regional touring band worked out of Austin in the early 1980s;
+the \$15,475 figure is the annual salary she paid her saxophone player in 1981,
+recalled from her own memory and payroll rather than measured by any survey.
+The station's next sentence restated the figure in the present tense. A
+full-text search of every document this study gathered found the number in
+that KUT article and nowhere else; it appears in neither Austin Music Census
+and did not travel beyond its source. The KUT segment carried the number
+forward to about \$47,865 in 2022 dollars; chaining the Bureau of Labor
+Statistics Consumer Price Index for All Urban Consumers (series
+CUUR0000SA0) from its 1981 annual average to its 2025 annual average puts the
+1981 salary at roughly \$54,000 in 2025 dollars, which inverts the argument
+the figure is usually used to support.}
+
+A related claim about Austin journalism deserves the same scrutiny, even
+though it favours this study's own case. Reporters and advocates often say
+that Austin news coverage keeps recycling 2013 income data. This study
+inventoried thirteen Austin news items published after the 2022 census that
+touched on musician earnings or the music program, and that description is
+too strong: three cite an earnings figure at all, one of them the 2013 census
+figure, under a subheading that flags its own staleness.\footnote{This study
+keeps that inventory in its Austin press-coverage evidence folder
+(\texttt{01\_evidence/09\_austin\_press}), which the technical appendix
+describes in full. It was assembled by keyword search across the archives of
+KUT, KUTX, the \textit{Austin Chronicle}, the \textit{Austin American-Statesman},
+\textit{Austin Monitor} and \textit{CultureMap Austin}, and it is a curated
+sample of coverage rather than an exhaustive census. Any share drawn from it
+is a share of the items this study gathered, not of Austin coverage
+generally.} Coverage moved from earnings to program spending, reporting grant
+totals, award sizes and city booking rates. The recycling did happen earlier:
+two of the five 2022 items in the same inventory restated 2013 census income
+statistics as current.
+
+\subsection{Four federal series count this workforce, and each misses a different part of it}
+
+\begin{sidebar}[title=What the federal statistics can and cannot see]
+{\footnotesize
+Picture a working Austin musician with a part-time day job, a dozen bar gigs a
+month, a few students and some streaming royalties. Four federal statistical
+programs observe that person, and none observes all of her.
+
+\begin{itemize}
+\item \textbf{The wage survey asks employers, so it sees only payroll.} The
+Bureau of Labor Statistics's Occupational Employment and Wage Statistics
+program (OEWS) is a semi-annual establishment survey run jointly by BLS and
+the state workforce agencies. Employers in the sample report the wage of every
+worker on their payroll and report nothing for the self-employed, who fall
+outside the sampling frame; the program describes its coverage at
+\url{https://www.bls.gov/oes/oes_ques.htm}. OEWS records
+\NEmpPayrollMusiciansAustinLast\ wage-and-salary musician jobs in the Austin
+metro in 2025, against an estimated \NPumsAustinMusWtdPos\ people with positive
+earnings whom the American Community Survey records as working as musicians
+here over 2020 to 2024. Across every musician row in the OEWS extract used
+here, covering Austin, Texas and the nation from 2005 to 2025, the program
+publishes an hourly wage and no annual one.\footnote{Annual mean and annual
+median are blank in all 63 musician rows of that extract, in every year and
+every geography. The Bureau states this as a standing convention for
+occupations with substantial part-year work rather than as intermittent
+suppression; the wage series therefore cannot be annualised from within its
+own tables. Any annual figure for Austin musicians built from OEWS would
+require assumptions about weeks and hours worked that OEWS itself does not
+supply, and this study does not construct one.}
+
+\item \textbf{The quarterly payroll census is built from unemployment-insurance
+records.} The BLS Quarterly Census of Employment and Wages (QCEW) tabulates
+every job covered by state unemployment-insurance law, drawing directly from
+the wage records employers file with the state; program page at
+\url{https://www.bls.gov/cew/}. Because it is UI-covered employment only, an
+unincorporated self-employed performer is outside QCEW coverage by
+construction. Performers who incorporate as an S-corp or LLC and pay themselves
+wages do enter QCEW, which is part of why the independent-artists industry code
+(NAICS 7115) shows any employment at all.
+
+\item \textbf{Nonemployer Statistics does see the self-employed}, and counts
+their businesses. The Census Bureau builds Nonemployer Statistics (NES) from
+federal tax returns filed by businesses with no paid employees and receipts of
+at least \$1,000, and publishes county-by-industry counts and gross receipts
+at \url{https://www.census.gov/programs-surveys/nonemp.html}. It reports
+receipts before any expense, and no federal source records what a performer
+spends to earn them. Separately, the 501 respondents to the 2022 Greater
+Austin Music Census who answered every spending category report a median of
+\NCensusSpendTotalMedian\ a year spent on their own music
+work.\footnote{Median from this study's own tabulation of the census
+microdata, dataset \texttt{an3p-3yqx} at
+\url{https://data.austintexas.gov/resource/an3p-3yqx.csv}, deflated to 2025
+dollars with the CPI-U. The 2022 census is a self-selected online convenience
+sample with no survey weights, so this median describes the 501 respondents
+who answered the item rather than any wider population; it counts people
+rather than businesses, so it cannot be netted against NES receipts.}
+
+\item \textbf{Only the American Community Survey asks people directly} and
+adds self-employment income to wages. The Census Bureau's American Community
+Survey (ACS) is a continuous household survey with about 3.5 million
+respondents a year nationwide; the Bureau releases a Public Use Microdata
+Sample (PUMS) at
+\url{https://www2.census.gov/programs-surveys/acs/data/pums/2024/5-Year/} that
+lets analysts identify a respondent's detailed occupation, add wage and
+self-employment earnings on the same record, and attach person weights and 80
+replicate weights for sampling error. Even ACS records one occupation per
+person, the current or most recent job, so a musician with a day job is
+counted as whatever the day job is.
+\end{itemize}
+
+\smallskip
+The federal system measures this workforce continuously and undercounts it
+systematically. The more of a musician's income comes from gigs, teaching and
+royalties rather than from a payroll job, the less any of these series describes
+her.}
+\end{sidebar}
+
+The pattern already shows up in Austin's own numbers. Two hourly-wage series
+for the same occupation, in the same metro, in the same year disagree by
+almost half. The City of Austin's purchased Creative Vitality Suite figure for
+Musicians and Singers in the Austin metro in 2017 was \$17.68 an hour, against
+\$31.03 an hour in the BLS Occupational Employment and Wage Statistics
+tabulation for the same occupation, metro and year: the purchased figure came
+in at \NColAnchorCityWageVsOewsTwoZeroOneSeven\ of the federal
+one.\footnote{City figure from dataset \texttt{2qxc-8cme} at
+\url{https://data.austintexas.gov/resource/2qxc-8cme.csv}; federal figure from
+the Occupational Employment and Wage Statistics May 2017 estimates at
+\url{https://www.bls.gov/oes/tables.htm}, SOC 27-2042, Austin-Round
+Rock-San Marcos MSA. Every dollar in this comparison is a same-year nominal
+figure, so no deflation applies.} The federal series counts payroll jobs, and
+the purchased series appears to combine payroll wages with self-employment
+earnings, though the vendor publishes no methodology, so the size of the gap
+is a weaker piece of evidence than its direction. Section~\ref{sec:costs}
+returns to that disagreement when it asks what a one-bedroom apartment costs
+an Austin musician.
+
+The \NEmpPayrollMusiciansAustinLast\ Austin jobs behind the federal series in
+2025 are also a small base for a wage estimate, and that base size matters
+wherever this study uses the payroll wage: the Austin musician wage moves by
+several dollars an hour between adjacent years, so its level in any single
+year is uncertain. This study still uses the OEWS series, because nothing else
+records what payroll music jobs pay in Austin across two decades, and we
+suggest reading its direction over a run of years rather than any single
+year's value.
+
+\subsection{How this study keeps mismatched sources apart}
+
+The rules below apply to every number that follows. Each rule reports a source
+for what it measures, names the population behind the number, and keeps
+sources that measure different things in different sentences.
+
+\begin{itemize}
+\item Every dollar figure is adjusted for inflation to 2025 dollars using the
+      Bureau of Labor Statistics Consumer Price Index for All Urban Consumers,
+      U.S.\ city average, all items (series CUUR0000SA0), and the base year
+      appears in every figure subtitle. Three kinds of figure are left nominal
+      and are flagged as such where they appear: a ratio of two same-year
+      dollar figures, where deflation cancels; a figure quoted as its source
+      originally published it; and award totals whose payments all fall inside
+      one program period.\footnote{BLS publishes a bimonthly CPI for
+      Dallas-Fort Worth-Arlington, a bimonthly CPI for Houston-The Woodlands-Sugar
+      Land and a monthly South regional series, but no separate CPI for Austin,
+      so this study deflates Austin dollar figures with the national CUUR0000SA0
+      series retrieved via the BLS Public Data API at
+      \url{https://api.bls.gov/publicAPI/v2/timeseries/data/}. No measurement
+      in this study establishes whether Austin prices rose faster or slower
+      than the national index over the period, so the direction of that
+      substitution's effect on the estimates is unknown. October 2025 CPI
+      collection was suspended during the federal funding lapse; the missing
+      month is linearly interpolated in this project's file and flagged in the
+      figures that touch it.}
+\item Every American Community Survey estimate is reported with a margin of
+      error computed by the Census Bureau's successive-difference replication
+      method, using the 80 alternative person weightings the Bureau publishes
+      alongside the main person weight (variables PWGTP1 through PWGTP80) so
+      users can measure sampling error; the method and the replicate-weight
+      file are documented in the Bureau's PUMS Accuracy of the Data at
+      \url{https://www2.census.gov/programs-surveys/acs/tech_docs/pums/accuracy/}.
+      This study publishes no ACS estimate drawn from fewer than 50 unweighted
+      records.
+\item The 2022 Greater Austin Music Census is a self-selected online survey
+      with no survey weights, so its percentages describe the 2,227 people who
+      answered it rather than the Austin music workforce as a whole; no margin
+      of error is computable for any of them, and a probability-sample
+      benchmark for the same population does not exist. Its shares never appear
+      in the same comparison as an American Community Survey estimate.
+\end{itemize}
+
+Those rules cost the study some tidy comparisons. They are also why the Austin
+musician estimates in the next section come with wide margins of error.

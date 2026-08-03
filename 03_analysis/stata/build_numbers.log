@@ -1,0 +1,710 @@
+
+  ___  ____  ____  ____  ____ ®
+ /__    /   ____/   /   ____/      StataNow 19.5
+___/   /   /___/   /   /___/       MP—Parallel Edition
+
+ Statistics and Data Science       Copyright 1985-2025 StataCorp LLC
+                                   StataCorp
+                                   4905 Lakeway Drive
+                                   College Station, Texas 77845 USA
+                                   800-782-8272        https://www.stata.com
+                                   979-696-4600        service@stata.com
+
+Stata license: 4-user 4-core network, expiring  6 May 2027
+Serial number: 501909369296
+  Licensed to: Eric Booth
+               Texas 2036
+
+Notes:
+      1. Stata is running in batch mode.
+      2. Unicode is supported; see help unicode_advice.
+      3. More than 2 billion observations are allowed; see help obs_advice.
+      4. Maximum number of variables is set to 5,000 but can be increased;
+          see help set_maxvar.
+
+
+Running /Users/ericbooth/Documents/Stata/ado/personal/profile.do ...
+-------------------------------------------------------------------------------
+  [1]  (BASE)      "/Applications/StataNow/ado/base/"
+  [2]  (SITE)      "/_codeshare/"
+  [3]              "."
+  [4]  (PERSONAL)  "/Users/ericbooth/Documents/Stata/ado/personal/"
+  [5]  (PLUS)      "/Users/ericbooth/Library/Application Support/Stata/ado/plus
+> /"
+  [6]  (OLDPLACE)  "~/ado/"
+ [view] [edit] [do]  10_pums_earnings.do 
+ [view] [edit] [do]  20_wages_industry.do 
+ [view] [edit] [do]  30_venues.do 
+ [view] [edit] [do]  40_city_money.do 
+ [view] [edit] [do]  50_state_national.do 
+ [view] [edit] [do]  60_cost_of_living.do 
+ [view] [edit] [do]  70_quasi_experiments.do 
+ [view] [edit] [do]  80_census_microdata.do 
+ [view] [edit] [do]  _setup.do 
+ [view] [edit] [do]  build_numbers.do 
+ [view] [edit] [do]  run_all.do 
+
+Click [here] for other links
+-------------------------------------------------------------------------------
+
+. do build_numbers.do 
+
+. *! build_numbers.do - turn the modules' number ledgers into LaTeX macros.
+. *!
+. *! Every quantity the written report quotes comes from a macro defined here, 
+> so
+. *! no number is typed by hand into the prose. If an input changes, the macro
+. *! changes with it and the text cannot silently go stale.
+. *!
+. *! Inputs  : 03_analysis/out/numbers/numbers_*.csv   (one per module)
+. *! Outputs : 05_report/canonical_numbers.tex          (macro definitions)
+. *!           03_analysis/out/canonical_numbers.csv    (merged ledger, for rev
+> iew)
+. *!
+. *! Macro naming: the key  pums_median_earnings_tx  becomes  \NpumsMedianEarni
+> ngsTx.
+. *! LaTeX macro names cannot contain digits or underscores, so underscores dri
+> ve
+. *! camel-casing and digits are spelled out. The merged CSV lists both key and
+. *! macro so a reader can trace either direction.
+. 
+. clear all
+
+. do "_setup.do"
+
+. *! _setup.do - shared foundation for the Austin musician/creative-worker anal
+> ysis.
+. *! Every module do-file starts with:  do "_setup.do"
+. *!
+. *! WHAT THIS DOES
+. *!   1. Finds the project root by searching upward for a sentinel file, so th
+> e
+. *!      whole folder can be zipped, moved to another machine, and run without
+. *!      editing a single path.
+. *!   2. Points Stata at the project-local ado library, so reghdfe, estout,
+. *!      spmap and the rest travel with the folder. No ssc install needed on a
+. *!      new machine.
+. *!   3. Builds a CPI-U deflator once and stores it, so every dollar figure in
+. *!      the report sits in the same base year (2025).
+. *!   4. Defines the report palette and graph styling, matched to the LaTeX fi
+> le.
+. *!   5. Defines two helper programs: numadd (register a number the report wil
+> l
+. *!      quote) and figsave (export a figure at consistent size).
+. *!
+. *! CONVENTIONS FOR MODULE AUTHORS
+. *!   - Set  global CURMODULE "<name>"  then call  numinit  before registering
+> .
+. *!   - Figure titles state the FINDING; subtitles qualify it. Source notes an
+> d
+. *!     caveats do NOT go in the image; they go in the LaTeX caption.
+. *!   - All dollars real, 2025 base, via the cpi_annual lookup.
+. 
+. version 17
+
+. set more off
+
+. set varabbrev off
+
+. 
+. * ---------------------------------------------------------------- 1. ROOT --
+. * Search the working directory and its parents for a file that only exists in
+. * this project. Whichever candidate contains it is the project root.
+. local sentinel "01_evidence/01_wages_oews_qcew/_sources.md"
+
+. local found 0
+
+. foreach cand in "`c(pwd)'" "`c(pwd)'/.." "`c(pwd)'/../.." "`c(pwd)'/../../.."
+>  {
+  2.     capture confirm file "`cand'/`sentinel'"
+  3.     if (_rc == 0) & (`found' == 0) {
+  4.         global PROJ "`cand'"
+  5.         local found 1
+  6.     }
+  7. }
+
+. if `found' == 0 {
+.     display as error "_setup.do could not locate the project root."
+.     display as error "Run Stata from 03_analysis/stata/ (or the project root)
+>  and try again."
+.     display as error "Current directory: `c(pwd)'"
+.     exit 601
+. }
+
+. 
+. global EVID     "${PROJ}/01_evidence"
+
+. global ANALYSIS "${PROJ}/03_analysis"
+
+. global DATAX    "${ANALYSIS}/data/external"
+
+. global OUT      "${ANALYSIS}/out"
+
+. global NUMDIR   "${OUT}/numbers"
+
+. global TABDIR   "${OUT}/tables"
+
+. global FIGS     "${PROJ}/04_figures"
+
+. global STATADIR "${ANALYSIS}/stata"
+
+. 
+. * Evidence subfolders, named for the workstream each one came from.
+. global EV_WAGES  "${EVID}/01_wages_oews_qcew"
+
+. global EV_PUMS   "${EVID}/02_pums_nes_microdata"
+
+. global EV_BEA    "${EVID}/03_creative_economy_bea"
+
+. global EV_CITY   "${EVID}/04_city_programs_lmf"
+
+. global EV_SURVEY "${EVID}/05_music_census_pay_surveys"
+
+. global EV_STATE  "${EVID}/06_state_policy_benchmark"
+
+. global EV_SVOG   "${EVID}/07_svog_federal_relief"
+
+. global EV_VENUE  "${EVID}/08_venues_ecosystem"
+
+. global EV_COL    "${EVID}/09_cost_of_living"
+
+. global EV_APP    "${EVID}/10_apprenticeship_workforce"
+
+. global EV_STREAM "${EVID}/11_streaming_royalties"
+
+. 
+. capture mkdir "${OUT}"
+
+. capture mkdir "${NUMDIR}"
+
+. capture mkdir "${TABDIR}"
+
+. capture mkdir "${FIGS}"
+
+. 
+. * ------------------------------------------------------------- 2. ADO PATH -
+> -
+. * Prepend the project-local library. Using adopath rather than sysdir set PLU
+> S
+. * keeps any packages already installed on this machine visible as a fallback,
+. * while guaranteeing the bundled copies win.
+. adopath ++ "${STATADIR}/ado/s"
+  [1]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/s"
+  [2]  (BASE)      "/Applications/StataNow/ado/base/"
+  [3]  (SITE)      "/_codeshare/"
+  [4]              "."
+  [5]  (PERSONAL)  "/Users/ericbooth/Documents/Stata/ado/personal/"
+  [6]  (PLUS)      "/Users/ericbooth/Library/Application Support/Stata/ado/plus
+> /"
+  [7]  (OLDPLACE)  "~/ado/"
+
+. adopath ++ "${STATADIR}/ado/plus"
+  [1]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/plus"
+  [2]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/s"
+  [3]  (BASE)      "/Applications/StataNow/ado/base/"
+  [4]  (SITE)      "/_codeshare/"
+  [5]              "."
+  [6]  (PERSONAL)  "/Users/ericbooth/Documents/Stata/ado/personal/"
+  [7]  (PLUS)      "/Users/ericbooth/Library/Application Support/Stata/ado/plus
+> /"
+  [8]  (OLDPLACE)  "~/ado/"
+
+. adopath ++ "${STATADIR}/ado"
+  [1]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado"
+  [2]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/plus"
+  [3]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/s"
+  [4]  (BASE)      "/Applications/StataNow/ado/base/"
+  [5]  (SITE)      "/_codeshare/"
+  [6]              "."
+  [7]  (PERSONAL)  "/Users/ericbooth/Documents/Stata/ado/personal/"
+  [8]  (PLUS)      "/Users/ericbooth/Library/Application Support/Stata/ado/plus
+> /"
+  [9]  (OLDPLACE)  "~/ado/"
+
+. 
+. * --------------------------------------------------------- 3. CPI DEFLATOR -
+> -
+. * Base year for every real-dollar figure in the report.
+. global BASEYEAR 2025
+
+. 
+. * Build the annual CPI lookup once. Rebuilt only if missing, so modules that
+. * run in sequence do not each redo it.
+. capture confirm file "${OUT}/cpi_annual.dta"
+
+. if _rc != 0 {
+.     preserve
+.     use "${DATAX}/BLS_CPI.dta", clear
+.     keep if area_name == "U.S. city average" & item_name == "All items"
+.     keep if is_annualavg == 0 & seas_adj == 0 & !missing(month)
+.     keep year month cpi
+.     duplicates drop year month, force
+. 
+.     * BLS never published a CPI-U value for October 2025 because the federal
+.     * funding lapse suspended collection. Fill that single month by averaging
+.     * September and November and flag it. October matters here because it is
+.     * the month of the Austin City Limits festival, so leaving a hole would
+.     * distort the venue-receipts series specifically.
+.     generate byte cpi_imputed = 0
+.     sort year month
+.     quietly count if year == 2025 & month == 10 & missing(cpi)
+.     if r(N) > 0 {
+.         quietly summarize cpi if year == 2025 & month == 9, meanonly
+.         local sep = r(mean)
+.         quietly summarize cpi if year == 2025 & month == 11, meanonly
+.         local nov = r(mean)
+.         quietly replace cpi = (`sep' + `nov') / 2 if year == 2025 & month == 
+> 10
+.         quietly replace cpi_imputed = 1 if year == 2025 & month == 10
+.     }
+.     drop if missing(cpi)
+. 
+.     * Keep only years with a full twelve months, so a partial year (2026 at t
+> he
+.     * time of writing) never masquerades as an annual average.
+.     bysort year: generate byte nmon = _N
+.     keep if nmon == 12
+.     collapse (mean) cpi (max) cpi_imputed, by(year)
+. 
+.     quietly summarize cpi if year == ${BASEYEAR}, meanonly
+.     local base = r(mean)
+.     generate double defl = `base' / cpi
+.     label variable defl "Multiply nominal dollars of `year' by this to get ${
+> BASEYEAR} dollars"
+.     label variable cpi_imputed "1 = annual average uses an imputed month"
+.     sort year
+.     save "${OUT}/cpi_annual.dta", replace
+.     restore
+. }
+
+. 
+. * Convenience: put the base-year CPI in a global for ad hoc use.
+. preserve
+
+. use "${OUT}/cpi_annual.dta", clear
+
+. quietly summarize cpi if year == ${BASEYEAR}, meanonly
+
+. global CPIBASE = r(mean)
+
+. restore
+
+. 
+. * ------------------------------------------------------------- 4. PALETTE --
+. * RGB triples matching 05_report/style/austinmusic.sty, so figures and docume
+> nt
+. * agree without anyone re-typing hex codes.
+. global NAVY    "27 45 85"
+
+. global ORANGE  "212 69 0"
+
+. global BLUE    "43 108 176"
+
+. global MUTED   "108 122 141"
+
+. global LIGHTBG "245 247 250"
+
+. global BORDER  "222 226 230"
+
+. global GREEN   "46 125 87"
+
+. global GOLD    "200 137 27"
+
+. global RED     "192 57 43"
+
+. global TEXTC   "26 26 46"
+
+. 
+. * Orange marks the musician or Austin series throughout; navy and muted mark
+. * comparison series. Keeping that constant across figures means a reader lear
+> ns
+. * the convention once.
+. global SERIES1 "${NAVY}"
+
+. global SERIES2 "${ORANGE}"
+
+. global SERIES3 "${BLUE}"
+
+. global SERIES4 "${GREEN}"
+
+. global SERIES5 "${GOLD}"
+
+. global SERIES6 "${MUTED}"
+
+. 
+. * Standard title and subtitle options. Modules pass these straight through:
+. *   twoway ... , title("Finding", $TITLEOPT) subtitle("Qualifier", $SUBOPT)
+. global TITLEOPT `"size(4.1) color("${NAVY}") justification(left) position(11)
+>  span margin(b=1)"'
+
+. global SUBOPT   `"size(3.0) color("${MUTED}") justification(left) position(11
+> ) span margin(b=3)"'
+
+. global XTOPT    `"size(3.0)"'
+
+. global YTOPT    `"size(3.0)"'
+
+. global LEGOPT   `"size(3.0) region(lstyle(none)) symxsize(6)"'
+
+. 
+. capture grstyle init
+
+. capture grstyle set plain, horizontal
+
+. capture grstyle set color "${TEXTC}": p1lineplot
+
+. capture grstyle set legend 6, nobox
+
+. 
+. * ------------------------------------------------------------ 5. PROGRAMS --
+. capture program drop numinit
+
+. program define numinit
+  1.     * Start (or restart) this module's number ledger. Called once per modu
+> le so
+.     * re-running a module replaces its own rows rather than appending duplica
+> tes.
+.     if "$CURMODULE" == "" {
+  2.         display as error "numinit: set  global CURMODULE  first"
+  3.         exit 198
+  4.     }
+  5.     quietly {
+  6.         local f "${NUMDIR}/numbers_${CURMODULE}.csv"
+  7.         capture erase "`f'"
+  8.         file open nh using "`f'", write text replace
+  9.         file write nh "key,value,formatted,unit,source,note,module" _n
+ 10.         file close nh
+ 11.     }
+ 12.     display as text "  ledger started: numbers_${CURMODULE}.csv"
+ 13. end
+
+. 
+. capture program drop numadd
+
+. program define numadd
+  1.     * Register one number the written report will quote.
+.     *
+.     *   numadd, key(pums_median_earnings_tx) value(22800) ///
+>     *           formatted("\$22,800") unit("2025 dollars") ///
+>     *           source("01_evidence/02_pums.../pums_...csv") ///
+>     *           note("ACS PUMS 2020-2024 5-yr, OCCP 2752, PWGTP-weighted medi
+> an")
+.     *
+.     * key becomes a LaTeX macro, so use letters, digits and underscores only.
+.     * note must let a reader reproduce the number: population, filter, weight
+> ,
+.     * vintage, and any caveat.
+.     syntax , KEY(string) VALUE(string) [FORMATTED(string) UNIT(string) ///
+>              SOURCE(string) NOTE(string)]
+  2.     if "$CURMODULE" == "" {
+  3.         display as error "numadd: set  global CURMODULE  and call numinit 
+> first"
+  4.         exit 198
+  5.     }
+  6.     if "`formatted'" == "" {
+  7.         local formatted "`value'"
+  8.     }
+  9.     * Replace any embedded double quote with an apostrophe. These fields a
+> re
+.     * descriptive text, never data, so substituting is safer than escaping an
+> d
+.     * keeps the ledger readable by any CSV parser.
+.     foreach v in formatted unit source note {
+ 10.         local `v' : subinstr local `v' `"""' "'", all
+ 11.     }
+ 12.     quietly {
+ 13.         file open nh using "${NUMDIR}/numbers_${CURMODULE}.csv", write tex
+> t append
+ 14.         file write nh `""`key'","`value'","`formatted'","`unit'","`source'
+> ","`note'","${CURMODULE}""' _n
+ 15.         file close nh
+ 16.     }
+ 17. end
+
+. 
+. capture program drop figsave
+
+. program define figsave
+  1.     * Export the current graph to 04_figures at a consistent size.
+.     * Width 2000px at the report's 6.5 inch text width is about 300 dpi.
+.     syntax , NAME(string) [WIDTH(integer 2000)]
+  2.     quietly graph export "${FIGS}/`name'.png", replace width(`width')
+  3.     display as text "  figure -> 04_figures/`name'.png"
+  4. end
+
+. 
+. capture program drop requirefile
+
+. program define requirefile
+  1.     * Fail early and legibly when an expected input is absent, rather than
+.     * producing a confusing error deeper in a module.
+.     *
+.     * This project's paths contain spaces ("My Drive", the Google Drive mount
+.     * point), so the argument is taken from `0' as a whole rather than parsed
+.     * into tokens, stripped of any quotes the caller supplied, and then
+.     * compound-quoted for `confirm'. Passing an unquoted path with spaces to
+.     * `confirm file' is what makes this fail with a misleading r(601).
+.     local fn `0'
+  2.     local fn : subinstr local fn `"""' "", all
+  3.     local fn = trim("`fn'")
+  4.     capture confirm file `"`fn'"'
+  5.     if _rc != 0 {
+  6.         display as error "Required input not found: `fn'"
+  7.         exit 601
+  8.     }
+  9. end
+
+. 
+. display as text "_setup.do ready. Root: ${PROJ}"
+_setup.do ready. Root: /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.b
+> ooth@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_an
+> alysis/stata/../..
+
+. display as text "  base year ${BASEYEAR}, CPI ${CPIBASE}"
+  base year 2025, CPI 322.1528333333334
+
+. 
+end of do-file
+
+. 
+. * ------------------------------------------------------- collect the parts -
+> -
+. local files : dir "${NUMDIR}" files "numbers_*.csv"
+
+. local nfiles : word count `files'
+
+. if `nfiles' == 0 {
+.     display as error "No ledgers found in ${NUMDIR}. Run the analysis modules
+>  first."
+.     exit 601
+. }
+
+. 
+. tempfile all
+
+. local first 1
+
+. foreach f of local files {
+  2.     preserve
+  3.     import delimited "${NUMDIR}/`f'", varnames(1) stringcols(_all) clear
+  4.     if _N > 0 {
+  5.         if `first' == 1 {
+  6.             save `all', replace
+  7.             local first 0
+  8.         }
+  9.         else {
+ 10.             append using `all'
+ 11.             save `all', replace
+ 12.         }
+ 13.     }
+ 14.     restore
+ 15. }
+(encoding automatically selected: ISO-8859-1)
+(7 vars, 221 obs)
+(file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St53581.000001 not
+    found)
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St53581.000001 saved
+    as .dta format
+(encoding automatically selected: ISO-8859-1)
+(7 vars, 54 obs)
+(variable key was str36, now str44 to accommodate using data's values)
+(variable formatted was str37, now str45 to accommodate using data's values)
+(variable unit was str34, now str68 to accommodate using data's values)
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St53581.000001 saved
+    as .dta format
+(encoding automatically selected: ISO-8859-1)
+(7 vars, 485 obs)
+(variable key was str40, now str44 to accommodate using data's values)
+(variable value was str17, now str18 to accommodate using data's values)
+(variable formatted was str15, now str45 to accommodate using data's values)
+(variable unit was str45, now str68 to accommodate using data's values)
+(variable module was str4, now str6 to accommodate using data's values)
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St53581.000001 saved
+    as .dta format
+(encoding automatically selected: ISO-8859-1)
+(7 vars, 109 obs)
+(variable key was str39, now str44 to accommodate using data's values)
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St53581.000001 saved
+    as .dta format
+(encoding automatically selected: UTF-8)
+(7 vars, 66 obs)
+(variable key was str41, now str44 to accommodate using data's values)
+(variable unit was str58, now str74 to accommodate using data's values)
+(variable source was str83, now strL to accommodate using data's values)
+(variable module was str4, now str10 to accommodate using data's values)
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St53581.000001 saved
+    as .dta format
+(encoding automatically selected: ISO-8859-1)
+(7 vars, 40 obs)
+(variable key was str35, now str44 to accommodate using data's values)
+(variable formatted was str23, now str58 to accommodate using data's values)
+(variable unit was str36, now str74 to accommodate using data's values)
+(variable source was str147, now strL to accommodate using data's values)
+(variable module was str5, now str10 to accommodate using data's values)
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St53581.000001 saved
+    as .dta format
+(encoding automatically selected: ISO-8859-1)
+(7 vars, 139 obs)
+(variable value was str17, now str18 to accommodate using data's values)
+(variable formatted was str42, now str58 to accommodate using data's values)
+(variable unit was str44, now str74 to accommodate using data's values)
+(variable source was str79, now strL to accommodate using data's values)
+(variable module was str6, now str10 to accommodate using data's values)
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St53581.000001 saved
+    as .dta format
+(encoding automatically selected: UTF-8)
+(7 vars, 63 obs)
+(variable key was str38, now str56 to accommodate using data's values)
+(variable value was str17, now str18 to accommodate using data's values)
+(variable formatted was str54, now str58 to accommodate using data's values)
+(variable source was str93, now strL to accommodate using data's values)
+(variable module was str5, now str10 to accommodate using data's values)
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St53581.000001 saved
+    as .dta format
+
+. use `all', clear
+
+. display as text "Loaded `=_N' registered numbers from `nfiles' module ledger(
+> s)."
+Loaded 1177 registered numbers from 8 module ledger(s).
+
+. 
+. * ------------------------------------------------- build the macro name ----
+> -
+. * Split the key on underscores, capitalise each piece, then spell out digits.
+. generate str100 macroname = ""
+(1,177 missing values generated)
+
+. quietly {
+
+. 
+. * A duplicate macro would silently redefine an earlier number, so fail loudly
+> .
+. duplicates tag macroname, generate(dup)
+
+Duplicates in terms of macroname
+
+. quietly count if dup > 0
+
+. if r(N) > 0 {
+.     display as error "Duplicate macro names across modules:"
+.     list module key macroname if dup > 0, clean noobs
+.     exit 459
+. }
+
+. drop dup
+
+. 
+. sort module key
+
+. export delimited using "${OUT}/canonical_numbers.csv", replace
+file /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.booth@texas2036.org
+> /My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analysis/stata/../..
+> /03_analysis/out/canonical_numbers.csv saved
+
+. 
+. * ------------------------------------------------ escape for LaTeX (vector) 
+> --
+. * Escaping happens on the VARIABLE with the subinstr() function, not on a loc
+> al
+. * macro. A bare dollar sign inside a macro-level subinstr gets re-scanned by
+. * Stata as a global macro reference and the substitution silently does nothin
+> g,
+. * which is how an unescaped $ reaches the .tex file and breaks the build.
+. * char(92) is a backslash and char(36) is a dollar sign.
+. quietly {
+
+. 
+. * ------------------------------------------------------- write the macros --
+. tempname fh
+
+. file open `fh' using "${PROJ}/05_report/canonical_numbers.tex", write text re
+> place
+
+. file write `fh' "% canonical_numbers.tex - GENERATED FILE, DO NOT EDIT BY HAN
+> D." _n
+
+. file write `fh' "% Produced by 03_analysis/stata/build_numbers.do from the mo
+> dule ledgers." _n
+
+. file write `fh' "% Every quantity quoted in the report is defined here, so th
+> e prose and" _n
+
+. file write `fh' "% the analysis cannot drift apart." _n
+
+. file write `fh' "% Generated from `=_N' registered numbers." _n _n
+
+. 
+. * One pass down the rows, which are already sorted by module then key. A sing
+> le
+. * row loop avoids the quoting traps that come with nested levelsof loops.
+. local prevmod ""
+
+. forvalues i = 1/`=_N' {
+  2.     local m  = module[`i']
+  3.     local k  = key[`i']
+  4.     local mn = macroname[`i']
+  5.     local fv = formatted[`i']
+  6.     local nt = note[`i']
+  7. 
+.     if "`m'" != "`prevmod'" {
+  8.         if "`prevmod'" != "" {
+  9.             file write `fh' _n
+ 10.         }
+ 11.         quietly count if module == "`m'"
+ 12.         file write `fh' "% ---- `m' (`r(N)' numbers) ---------------------
+> ---------" _n
+ 13.         local prevmod "`m'"
+ 14.     }
+ 15. 
+.     * Keep the note short enough to stay a readable comment line.
+.     if length("`nt'") > 140 {
+ 16.         local nt = substr("`nt'", 1, 140) + "..."
+ 17.     }
+ 18.     * A stray percent sign would comment out the rest of a LaTeX line, and
+>  a
+.     * stray dollar sign would open math mode, so escape both here. Backslash 
+> is
+.     * handled first, otherwise it would escape the escapes added after it.
+.     file write `fh' "% `k': `nt'" _n
+ 19.     file write `fh' "\newcommand{\" "`mn'" "}{`fv'\xspace}" _n
+ 20. }
+
+. file close `fh'
+
+. 
+. display as text "Wrote `=_N' macros -> 05_report/canonical_numbers.tex"
+Wrote 1177 macros -> 05_report/canonical_numbers.tex
+
+. display as text "Merged ledger      -> 03_analysis/out/canonical_numbers.csv"
+Merged ledger      -> 03_analysis/out/canonical_numbers.csv
+
+. tabulate module
+
+     module |      Freq.     Percent        Cum.
+------------+-----------------------------------
+     census |        139       11.81       11.81
+       city |         66        5.61       17.42
+ costliving |        109        9.26       26.68
+       pums |        485       41.21       67.88
+      quasi |         40        3.40       71.28
+      state |         63        5.35       76.64
+     venues |         54        4.59       81.22
+      wages |        221       18.78      100.00
+------------+-----------------------------------
+      Total |      1,177      100.00
+
+. 
+end of do-file

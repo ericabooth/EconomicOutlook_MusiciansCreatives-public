@@ -1,0 +1,511 @@
+geo_fips,geo_label,series,year,rpp_index_us100
+12420,"Austin-Round Rock-San Marcos, TX MSA",all_items,2008,99.589
+12420,"Austin-Round Rock-San Marcos, TX MSA",all_items,2009,98.887
+12420,"Austin-Round Rock-San Marcos, TX MSA",all_items,2010,99.762
+12420,"Austin-Round Rock-San Marcos, TX MSA",all_items,2011,100.311
+12420,"Austin-Round Rock-San Marcos, TX MSA",all_items,2012,100.945
+12420,"Austin-Round Rock-San Marcos, TX MSA",all_items,2013,100.777
+12420,"Austin-Round Rock-San Marcos, TX MSA",all_items,2014,101.366
+12420,"Austin-Round Rock-San Marcos, TX MSA",all_items,2015,101.555
+12420,"Austin-Round Rock-San Marcos, TX MSA",all_items,2016,102.567
+12420,"Austin-Round Rock-San Marcos, TX MSA",all_items,2017,101.754
+12420,"Austin-Round Rock-San Marcos, TX MSA",all_items,2018,99.017
+12420,"Austin-Round Rock-San Marcos, TX MSA",all_items,2019,99.360
+12420,"Austin-Round Rock-San Marcos, TX MSA",all_items,2020,101.109
+12420,"Austin-Round Rock-San Marcos, TX MSA",all_items,2021,99.973
+12420,"Austin-Round Rock-San Marcos, TX MSA",all_items,2022,98.810
+12420,"Austin-Round Rock-San Marcos, TX MSA",all_items,2023,98.276
+12420,"Austin-Round Rock-San Marcos, TX MSA",all_items,2024,98.066
+12420,"Austin-Round Rock-San Marcos, TX MSA",goods,2008,97.109
+12420,"Austin-Round Rock-San Marcos, TX MSA",goods,2009,95.229
+12420,"Austin-Round Rock-San Marcos, TX MSA",goods,2010,96.633
+12420,"Austin-Round Rock-San Marcos, TX MSA",goods,2011,96.884
+12420,"Austin-Round Rock-San Marcos, TX MSA",goods,2012,97.276
+12420,"Austin-Round Rock-San Marcos, TX MSA",goods,2013,97.273
+12420,"Austin-Round Rock-San Marcos, TX MSA",goods,2014,97.626
+12420,"Austin-Round Rock-San Marcos, TX MSA",goods,2015,96.977
+12420,"Austin-Round Rock-San Marcos, TX MSA",goods,2016,97.216
+12420,"Austin-Round Rock-San Marcos, TX MSA",goods,2017,97.119
+12420,"Austin-Round Rock-San Marcos, TX MSA",goods,2018,94.392
+12420,"Austin-Round Rock-San Marcos, TX MSA",goods,2019,96.177
+12420,"Austin-Round Rock-San Marcos, TX MSA",goods,2020,96.231
+12420,"Austin-Round Rock-San Marcos, TX MSA",goods,2021,96.227
+12420,"Austin-Round Rock-San Marcos, TX MSA",goods,2022,93.729
+12420,"Austin-Round Rock-San Marcos, TX MSA",goods,2023,92.931
+12420,"Austin-Round Rock-San Marcos, TX MSA",goods,2024,93.757
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_housing,2008,109.985
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_housing,2009,111.665
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_housing,2010,108.076
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_housing,2011,110.304
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_housing,2012,115.210
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_housing,2013,114.698
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_housing,2014,117.731
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_housing,2015,119.173
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_housing,2016,122.650
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_housing,2017,124.905
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_housing,2018,121.903
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_housing,2019,121.524
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_housing,2020,124.484
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_housing,2021,122.493
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_housing,2022,126.349
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_housing,2023,126.360
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_housing,2024,120.361
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_other,2008,98.479
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_other,2009,98.108
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_other,2010,99.956
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_other,2011,100.770
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_other,2012,100.687
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_other,2013,100.306
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_other,2014,100.274
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_other,2015,100.984
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_other,2016,102.332
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_other,2017,100.462
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_other,2018,97.737
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_other,2019,96.934
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_other,2020,99.287
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_other,2021,98.056
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_other,2022,96.723
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_other,2023,95.807
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_other,2024,96.240
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_utilities,2008,99.680
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_utilities,2009,94.405
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_utilities,2010,94.955
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_utilities,2011,90.187
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_utilities,2012,88.520
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_utilities,2013,89.866
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_utilities,2014,93.328
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_utilities,2015,90.840
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_utilities,2016,86.768
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_utilities,2017,82.676
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_utilities,2018,84.100
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_utilities,2019,85.745
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_utilities,2020,85.770
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_utilities,2021,85.815
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_utilities,2022,87.419
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_utilities,2023,89.178
+12420,"Austin-Round Rock-San Marcos, TX MSA",services_utilities,2024,82.044
+19100,"Dallas-Fort Worth-Arlington, TX MSA",all_items,2008,101.355
+19100,"Dallas-Fort Worth-Arlington, TX MSA",all_items,2009,101.524
+19100,"Dallas-Fort Worth-Arlington, TX MSA",all_items,2010,101.299
+19100,"Dallas-Fort Worth-Arlington, TX MSA",all_items,2011,100.229
+19100,"Dallas-Fort Worth-Arlington, TX MSA",all_items,2012,100.776
+19100,"Dallas-Fort Worth-Arlington, TX MSA",all_items,2013,101.045
+19100,"Dallas-Fort Worth-Arlington, TX MSA",all_items,2014,100.237
+19100,"Dallas-Fort Worth-Arlington, TX MSA",all_items,2015,99.117
+19100,"Dallas-Fort Worth-Arlington, TX MSA",all_items,2016,98.038
+19100,"Dallas-Fort Worth-Arlington, TX MSA",all_items,2017,99.650
+19100,"Dallas-Fort Worth-Arlington, TX MSA",all_items,2018,101.116
+19100,"Dallas-Fort Worth-Arlington, TX MSA",all_items,2019,103.400
+19100,"Dallas-Fort Worth-Arlington, TX MSA",all_items,2020,104.526
+19100,"Dallas-Fort Worth-Arlington, TX MSA",all_items,2021,103.964
+19100,"Dallas-Fort Worth-Arlington, TX MSA",all_items,2022,103.412
+19100,"Dallas-Fort Worth-Arlington, TX MSA",all_items,2023,102.490
+19100,"Dallas-Fort Worth-Arlington, TX MSA",all_items,2024,103.090
+19100,"Dallas-Fort Worth-Arlington, TX MSA",goods,2008,99.596
+19100,"Dallas-Fort Worth-Arlington, TX MSA",goods,2009,97.182
+19100,"Dallas-Fort Worth-Arlington, TX MSA",goods,2010,99.131
+19100,"Dallas-Fort Worth-Arlington, TX MSA",goods,2011,96.057
+19100,"Dallas-Fort Worth-Arlington, TX MSA",goods,2012,99.469
+19100,"Dallas-Fort Worth-Arlington, TX MSA",goods,2013,99.466
+19100,"Dallas-Fort Worth-Arlington, TX MSA",goods,2014,97.841
+19100,"Dallas-Fort Worth-Arlington, TX MSA",goods,2015,97.994
+19100,"Dallas-Fort Worth-Arlington, TX MSA",goods,2016,102.761
+19100,"Dallas-Fort Worth-Arlington, TX MSA",goods,2017,99.615
+19100,"Dallas-Fort Worth-Arlington, TX MSA",goods,2018,99.276
+19100,"Dallas-Fort Worth-Arlington, TX MSA",goods,2019,100.026
+19100,"Dallas-Fort Worth-Arlington, TX MSA",goods,2020,102.474
+19100,"Dallas-Fort Worth-Arlington, TX MSA",goods,2021,102.886
+19100,"Dallas-Fort Worth-Arlington, TX MSA",goods,2022,102.087
+19100,"Dallas-Fort Worth-Arlington, TX MSA",goods,2023,103.642
+19100,"Dallas-Fort Worth-Arlington, TX MSA",goods,2024,102.838
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_housing,2008,103.327
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_housing,2009,102.414
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_housing,2010,101.864
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_housing,2011,104.108
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_housing,2012,103.576
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_housing,2013,103.814
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_housing,2014,105.445
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_housing,2015,106.117
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_housing,2016,108.727
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_housing,2017,110.849
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_housing,2018,111.833
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_housing,2019,112.590
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_housing,2020,114.451
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_housing,2021,114.273
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_housing,2022,116.267
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_housing,2023,117.840
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_housing,2024,117.874
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_other,2008,101.635
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_other,2009,104.414
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_other,2010,102.261
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_other,2011,102.177
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_other,2012,101.018
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_other,2013,101.030
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_other,2014,100.759
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_other,2015,98.129
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_other,2016,92.212
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_other,2017,96.909
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_other,2018,99.776
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_other,2019,104.241
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_other,2020,104.543
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_other,2021,102.998
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_other,2022,101.768
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_other,2023,97.664
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_other,2024,99.673
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_utilities,2008,108.653
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_utilities,2009,104.965
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_utilities,2010,108.906
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_utilities,2011,103.644
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_utilities,2012,99.966
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_utilities,2013,108.633
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_utilities,2014,98.109
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_utilities,2015,97.187
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_utilities,2016,99.522
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_utilities,2017,97.511
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_utilities,2018,98.580
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_utilities,2019,88.093
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_utilities,2020,82.643
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_utilities,2021,85.105
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_utilities,2022,88.052
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_utilities,2023,96.491
+19100,"Dallas-Fort Worth-Arlington, TX MSA",services_utilities,2024,90.711
+26420,"Houston-Pasadena-The Woodlands, TX MSA",all_items,2008,99.448
+26420,"Houston-Pasadena-The Woodlands, TX MSA",all_items,2009,100.557
+26420,"Houston-Pasadena-The Woodlands, TX MSA",all_items,2010,101.004
+26420,"Houston-Pasadena-The Woodlands, TX MSA",all_items,2011,98.658
+26420,"Houston-Pasadena-The Woodlands, TX MSA",all_items,2012,100.050
+26420,"Houston-Pasadena-The Woodlands, TX MSA",all_items,2013,101.105
+26420,"Houston-Pasadena-The Woodlands, TX MSA",all_items,2014,102.212
+26420,"Houston-Pasadena-The Woodlands, TX MSA",all_items,2015,103.107
+26420,"Houston-Pasadena-The Woodlands, TX MSA",all_items,2016,102.355
+26420,"Houston-Pasadena-The Woodlands, TX MSA",all_items,2017,100.024
+26420,"Houston-Pasadena-The Woodlands, TX MSA",all_items,2018,101.904
+26420,"Houston-Pasadena-The Woodlands, TX MSA",all_items,2019,101.405
+26420,"Houston-Pasadena-The Woodlands, TX MSA",all_items,2020,99.965
+26420,"Houston-Pasadena-The Woodlands, TX MSA",all_items,2021,99.724
+26420,"Houston-Pasadena-The Woodlands, TX MSA",all_items,2022,98.772
+26420,"Houston-Pasadena-The Woodlands, TX MSA",all_items,2023,99.734
+26420,"Houston-Pasadena-The Woodlands, TX MSA",all_items,2024,98.629
+26420,"Houston-Pasadena-The Woodlands, TX MSA",goods,2008,95.942
+26420,"Houston-Pasadena-The Woodlands, TX MSA",goods,2009,98.035
+26420,"Houston-Pasadena-The Woodlands, TX MSA",goods,2010,99.646
+26420,"Houston-Pasadena-The Woodlands, TX MSA",goods,2011,97.579
+26420,"Houston-Pasadena-The Woodlands, TX MSA",goods,2012,98.992
+26420,"Houston-Pasadena-The Woodlands, TX MSA",goods,2013,97.657
+26420,"Houston-Pasadena-The Woodlands, TX MSA",goods,2014,98.902
+26420,"Houston-Pasadena-The Woodlands, TX MSA",goods,2015,98.892
+26420,"Houston-Pasadena-The Woodlands, TX MSA",goods,2016,97.656
+26420,"Houston-Pasadena-The Woodlands, TX MSA",goods,2017,96.322
+26420,"Houston-Pasadena-The Woodlands, TX MSA",goods,2018,99.031
+26420,"Houston-Pasadena-The Woodlands, TX MSA",goods,2019,98.308
+26420,"Houston-Pasadena-The Woodlands, TX MSA",goods,2020,96.687
+26420,"Houston-Pasadena-The Woodlands, TX MSA",goods,2021,97.653
+26420,"Houston-Pasadena-The Woodlands, TX MSA",goods,2022,98.066
+26420,"Houston-Pasadena-The Woodlands, TX MSA",goods,2023,101.690
+26420,"Houston-Pasadena-The Woodlands, TX MSA",goods,2024,100.639
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_housing,2008,99.944
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_housing,2009,101.908
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_housing,2010,103.549
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_housing,2011,99.407
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_housing,2012,103.440
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_housing,2013,104.057
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_housing,2014,107.629
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_housing,2015,108.604
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_housing,2016,109.952
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_housing,2017,108.520
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_housing,2018,108.040
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_housing,2019,107.403
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_housing,2020,107.497
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_housing,2021,105.608
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_housing,2022,107.833
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_housing,2023,106.257
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_housing,2024,104.510
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_other,2008,102.074
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_other,2009,102.434
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_other,2010,101.446
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_other,2011,99.342
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_other,2012,100.176
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_other,2013,103.321
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_other,2014,103.738
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_other,2015,106.035
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_other,2016,104.278
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_other,2017,101.177
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_other,2018,103.431
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_other,2019,102.492
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_other,2020,100.940
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_other,2021,100.192
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_other,2022,96.971
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_other,2023,96.589
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_other,2024,95.595
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_utilities,2008,101.408
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_utilities,2009,95.257
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_utilities,2010,97.591
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_utilities,2011,97.370
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_utilities,2012,95.145
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_utilities,2013,95.808
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_utilities,2014,94.540
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_utilities,2015,83.831
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_utilities,2016,92.463
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_utilities,2017,85.719
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_utilities,2018,83.061
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_utilities,2019,91.167
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_utilities,2020,86.420
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_utilities,2021,89.111
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_utilities,2022,92.251
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_utilities,2023,94.902
+26420,"Houston-Pasadena-The Woodlands, TX MSA",services_utilities,2024,95.288
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",all_items,2008,95.693
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",all_items,2009,95.178
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",all_items,2010,96.685
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",all_items,2011,97.023
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",all_items,2012,97.353
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",all_items,2013,97.562
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",all_items,2014,97.284
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",all_items,2015,97.250
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",all_items,2016,99.306
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",all_items,2017,98.500
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",all_items,2018,93.962
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",all_items,2019,95.783
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",all_items,2020,95.927
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",all_items,2021,95.193
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",all_items,2022,96.542
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",all_items,2023,97.024
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",all_items,2024,96.338
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",goods,2008,97.085
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",goods,2009,94.821
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",goods,2010,96.911
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",goods,2011,96.669
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",goods,2012,96.610
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",goods,2013,96.961
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",goods,2014,97.346
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",goods,2015,96.178
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",goods,2016,96.974
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",goods,2017,96.731
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",goods,2018,92.306
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",goods,2019,94.512
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",goods,2020,94.272
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",goods,2021,93.882
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",goods,2022,94.477
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",goods,2023,94.290
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",goods,2024,96.247
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_housing,2008,89.436
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_housing,2009,92.421
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_housing,2010,91.461
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_housing,2011,89.194
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_housing,2012,89.840
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_housing,2013,93.685
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_housing,2014,91.233
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_housing,2015,91.421
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_housing,2016,98.800
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_housing,2017,100.184
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_housing,2018,99.752
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_housing,2019,102.483
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_housing,2020,106.983
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_housing,2021,104.388
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_housing,2022,105.305
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_housing,2023,106.905
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_housing,2024,104.626
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_other,2008,97.974
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_other,2009,97.510
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_other,2010,99.580
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_other,2011,101.175
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_other,2012,101.526
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_other,2013,100.462
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_other,2014,100.159
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_other,2015,100.886
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_other,2016,102.167
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_other,2017,100.261
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_other,2018,94.486
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_other,2019,95.928
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_other,2020,95.054
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_other,2021,94.536
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_other,2022,96.563
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_other,2023,97.083
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_other,2024,95.142
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_utilities,2008,80.892
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_utilities,2009,81.227
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_utilities,2010,81.859
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_utilities,2011,84.455
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_utilities,2012,84.290
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_utilities,2013,82.589
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_utilities,2014,84.740
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_utilities,2015,83.984
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_utilities,2016,83.016
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_utilities,2017,81.060
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_utilities,2018,77.545
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_utilities,2019,75.677
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_utilities,2020,73.350
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_utilities,2021,75.681
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_utilities,2022,77.099
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_utilities,2023,76.627
+34980,"Nashville-Davidson--Murfreesboro--Franklin, TN MSA",services_utilities,2024,71.950
+41700,"San Antonio-New Braunfels, TX MSA",all_items,2008,96.107
+41700,"San Antonio-New Braunfels, TX MSA",all_items,2009,95.132
+41700,"San Antonio-New Braunfels, TX MSA",all_items,2010,96.420
+41700,"San Antonio-New Braunfels, TX MSA",all_items,2011,96.621
+41700,"San Antonio-New Braunfels, TX MSA",all_items,2012,97.423
+41700,"San Antonio-New Braunfels, TX MSA",all_items,2013,97.447
+41700,"San Antonio-New Braunfels, TX MSA",all_items,2014,97.716
+41700,"San Antonio-New Braunfels, TX MSA",all_items,2015,97.452
+41700,"San Antonio-New Braunfels, TX MSA",all_items,2016,98.267
+41700,"San Antonio-New Braunfels, TX MSA",all_items,2017,97.140
+41700,"San Antonio-New Braunfels, TX MSA",all_items,2018,95.527
+41700,"San Antonio-New Braunfels, TX MSA",all_items,2019,95.753
+41700,"San Antonio-New Braunfels, TX MSA",all_items,2020,96.784
+41700,"San Antonio-New Braunfels, TX MSA",all_items,2021,96.181
+41700,"San Antonio-New Braunfels, TX MSA",all_items,2022,95.006
+41700,"San Antonio-New Braunfels, TX MSA",all_items,2023,94.328
+41700,"San Antonio-New Braunfels, TX MSA",all_items,2024,94.716
+41700,"San Antonio-New Braunfels, TX MSA",goods,2008,96.878
+41700,"San Antonio-New Braunfels, TX MSA",goods,2009,94.949
+41700,"San Antonio-New Braunfels, TX MSA",goods,2010,96.614
+41700,"San Antonio-New Braunfels, TX MSA",goods,2011,96.703
+41700,"San Antonio-New Braunfels, TX MSA",goods,2012,96.799
+41700,"San Antonio-New Braunfels, TX MSA",goods,2013,96.995
+41700,"San Antonio-New Braunfels, TX MSA",goods,2014,97.178
+41700,"San Antonio-New Braunfels, TX MSA",goods,2015,96.556
+41700,"San Antonio-New Braunfels, TX MSA",goods,2016,96.908
+41700,"San Antonio-New Braunfels, TX MSA",goods,2017,96.780
+41700,"San Antonio-New Braunfels, TX MSA",goods,2018,94.392
+41700,"San Antonio-New Braunfels, TX MSA",goods,2019,96.177
+41700,"San Antonio-New Braunfels, TX MSA",goods,2020,96.231
+41700,"San Antonio-New Braunfels, TX MSA",goods,2021,96.227
+41700,"San Antonio-New Braunfels, TX MSA",goods,2022,93.729
+41700,"San Antonio-New Braunfels, TX MSA",goods,2023,92.931
+41700,"San Antonio-New Braunfels, TX MSA",goods,2024,93.757
+41700,"San Antonio-New Braunfels, TX MSA",services_housing,2008,87.959
+41700,"San Antonio-New Braunfels, TX MSA",services_housing,2009,88.493
+41700,"San Antonio-New Braunfels, TX MSA",services_housing,2010,87.881
+41700,"San Antonio-New Braunfels, TX MSA",services_housing,2011,87.608
+41700,"San Antonio-New Braunfels, TX MSA",services_housing,2012,91.419
+41700,"San Antonio-New Braunfels, TX MSA",services_housing,2013,92.372
+41700,"San Antonio-New Braunfels, TX MSA",services_housing,2014,92.673
+41700,"San Antonio-New Braunfels, TX MSA",services_housing,2015,91.266
+41700,"San Antonio-New Braunfels, TX MSA",services_housing,2016,93.083
+41700,"San Antonio-New Braunfels, TX MSA",services_housing,2017,92.301
+41700,"San Antonio-New Braunfels, TX MSA",services_housing,2018,93.785
+41700,"San Antonio-New Braunfels, TX MSA",services_housing,2019,93.124
+41700,"San Antonio-New Braunfels, TX MSA",services_housing,2020,93.429
+41700,"San Antonio-New Braunfels, TX MSA",services_housing,2021,92.594
+41700,"San Antonio-New Braunfels, TX MSA",services_housing,2022,94.593
+41700,"San Antonio-New Braunfels, TX MSA",services_housing,2023,94.170
+41700,"San Antonio-New Braunfels, TX MSA",services_housing,2024,94.575
+41700,"San Antonio-New Braunfels, TX MSA",services_other,2008,98.258
+41700,"San Antonio-New Braunfels, TX MSA",services_other,2009,97.705
+41700,"San Antonio-New Braunfels, TX MSA",services_other,2010,99.543
+41700,"San Antonio-New Braunfels, TX MSA",services_other,2011,100.356
+41700,"San Antonio-New Braunfels, TX MSA",services_other,2012,100.499
+41700,"San Antonio-New Braunfels, TX MSA",services_other,2013,100.128
+41700,"San Antonio-New Braunfels, TX MSA",services_other,2014,100.136
+41700,"San Antonio-New Braunfels, TX MSA",services_other,2015,100.739
+41700,"San Antonio-New Braunfels, TX MSA",services_other,2016,101.890
+41700,"San Antonio-New Braunfels, TX MSA",services_other,2017,100.012
+41700,"San Antonio-New Braunfels, TX MSA",services_other,2018,97.737
+41700,"San Antonio-New Braunfels, TX MSA",services_other,2019,96.934
+41700,"San Antonio-New Braunfels, TX MSA",services_other,2020,99.287
+41700,"San Antonio-New Braunfels, TX MSA",services_other,2021,98.056
+41700,"San Antonio-New Braunfels, TX MSA",services_other,2022,96.723
+41700,"San Antonio-New Braunfels, TX MSA",services_other,2023,95.807
+41700,"San Antonio-New Braunfels, TX MSA",services_other,2024,96.240
+41700,"San Antonio-New Braunfels, TX MSA",services_utilities,2008,100.161
+41700,"San Antonio-New Braunfels, TX MSA",services_utilities,2009,94.777
+41700,"San Antonio-New Braunfels, TX MSA",services_utilities,2010,94.796
+41700,"San Antonio-New Braunfels, TX MSA",services_utilities,2011,89.992
+41700,"San Antonio-New Braunfels, TX MSA",services_utilities,2012,88.733
+41700,"San Antonio-New Braunfels, TX MSA",services_utilities,2013,89.691
+41700,"San Antonio-New Braunfels, TX MSA",services_utilities,2014,92.941
+41700,"San Antonio-New Braunfels, TX MSA",services_utilities,2015,90.492
+41700,"San Antonio-New Braunfels, TX MSA",services_utilities,2016,86.211
+41700,"San Antonio-New Braunfels, TX MSA",services_utilities,2017,82.219
+41700,"San Antonio-New Braunfels, TX MSA",services_utilities,2018,83.511
+41700,"San Antonio-New Braunfels, TX MSA",services_utilities,2019,85.615
+41700,"San Antonio-New Braunfels, TX MSA",services_utilities,2020,85.173
+41700,"San Antonio-New Braunfels, TX MSA",services_utilities,2021,84.862
+41700,"San Antonio-New Braunfels, TX MSA",services_utilities,2022,86.779
+41700,"San Antonio-New Braunfels, TX MSA",services_utilities,2023,88.355
+41700,"San Antonio-New Braunfels, TX MSA",services_utilities,2024,82.169
+00000,United States,all_items,2008,100.000
+00000,United States,all_items,2009,100.000
+00000,United States,all_items,2010,100.000
+00000,United States,all_items,2011,100.000
+00000,United States,all_items,2012,100.000
+00000,United States,all_items,2013,100.000
+00000,United States,all_items,2014,100.000
+00000,United States,all_items,2015,100.000
+00000,United States,all_items,2016,100.000
+00000,United States,all_items,2017,100.000
+00000,United States,all_items,2018,100.000
+00000,United States,all_items,2019,100.000
+00000,United States,all_items,2020,100.000
+00000,United States,all_items,2021,100.000
+00000,United States,all_items,2022,100.000
+00000,United States,all_items,2023,100.000
+00000,United States,all_items,2024,100.000
+00000,United States,goods,2008,99.500
+00000,United States,goods,2009,99.453
+00000,United States,goods,2010,99.542
+00000,United States,goods,2011,99.535
+00000,United States,goods,2012,99.566
+00000,United States,goods,2013,99.573
+00000,United States,goods,2014,99.586
+00000,United States,goods,2015,99.583
+00000,United States,goods,2016,99.583
+00000,United States,goods,2017,99.563
+00000,United States,goods,2018,99.542
+00000,United States,goods,2019,99.573
+00000,United States,goods,2020,99.541
+00000,United States,goods,2021,99.568
+00000,United States,goods,2022,99.542
+00000,United States,goods,2023,99.542
+00000,United States,goods,2024,99.567
+00000,United States,services_housing,2008,100.424
+00000,United States,services_housing,2009,100.455
+00000,United States,services_housing,2010,100.391
+00000,United States,services_housing,2011,100.399
+00000,United States,services_housing,2012,100.366
+00000,United States,services_housing,2013,100.370
+00000,United States,services_housing,2014,100.386
+00000,United States,services_housing,2015,100.419
+00000,United States,services_housing,2016,100.389
+00000,United States,services_housing,2017,100.430
+00000,United States,services_housing,2018,100.422
+00000,United States,services_housing,2019,100.398
+00000,United States,services_housing,2020,100.615
+00000,United States,services_housing,2021,100.595
+00000,United States,services_housing,2022,100.594
+00000,United States,services_housing,2023,100.574
+00000,United States,services_housing,2024,100.629
+00000,United States,services_other,2008,100.306
+00000,United States,services_other,2009,100.302
+00000,United States,services_other,2010,100.259
+00000,United States,services_other,2011,100.266
+00000,United States,services_other,2012,100.248
+00000,United States,services_other,2013,100.245
+00000,United States,services_other,2014,100.238
+00000,United States,services_other,2015,100.221
+00000,United States,services_other,2016,100.219
+00000,United States,services_other,2017,100.218
+00000,United States,services_other,2018,100.241
+00000,United States,services_other,2019,100.217
+00000,United States,services_other,2020,100.183
+00000,United States,services_other,2021,100.182
+00000,United States,services_other,2022,100.207
+00000,United States,services_other,2023,100.186
+00000,United States,services_other,2024,100.147
+00000,United States,services_utilities,2008,98.517
+00000,United States,services_utilities,2009,98.525
+00000,United States,services_utilities,2010,98.660
+00000,United States,services_utilities,2011,98.651
+00000,United States,services_utilities,2012,98.725
+00000,United States,services_utilities,2013,98.672
+00000,United States,services_utilities,2014,98.557
+00000,United States,services_utilities,2015,98.486
+00000,United States,services_utilities,2016,98.518
+00000,United States,services_utilities,2017,98.535
+00000,United States,services_utilities,2018,98.445
+00000,United States,services_utilities,2019,98.516
+00000,United States,services_utilities,2020,98.586
+00000,United States,services_utilities,2021,98.719
+00000,United States,services_utilities,2022,98.558
+00000,United States,services_utilities,2023,98.634
+00000,United States,services_utilities,2024,98.441

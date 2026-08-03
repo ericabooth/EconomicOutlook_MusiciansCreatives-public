@@ -1,0 +1,41 @@
+geo_level,geo_label,geo_code,acs_vintage,acs_period,variable,estimate,moe
+county,"Austin, TX (Travis County)",48453,2021,2017-2021 5-year,median_gross_rent,1422,10
+county,"Austin, TX (Travis County)",48453,2021,2017-2021 5-year,median_home_value,368000,3508
+county,"Austin, TX (Travis County)",48453,2024,2020-2024 5-year,median_gross_rent,1744,13
+county,"Austin, TX (Travis County)",48453,2024,2020-2024 5-year,median_home_value,523000,6613
+county,"Dallas, TX (Dallas County)",48113,2021,2017-2021 5-year,median_gross_rent,1233,8
+county,"Dallas, TX (Dallas County)",48113,2021,2017-2021 5-year,median_home_value,213000,2149
+county,"Dallas, TX (Dallas County)",48113,2024,2020-2024 5-year,median_gross_rent,1565,11
+county,"Dallas, TX (Dallas County)",48113,2024,2020-2024 5-year,median_home_value,303000,2811
+county,"Houston, TX (Harris County)",48201,2021,2017-2021 5-year,median_gross_rent,1164,6
+county,"Houston, TX (Harris County)",48201,2021,2017-2021 5-year,median_home_value,201200,1796
+county,"Houston, TX (Harris County)",48201,2024,2020-2024 5-year,median_gross_rent,1401,7
+county,"Houston, TX (Harris County)",48201,2024,2020-2024 5-year,median_home_value,276600,1878
+county,"San Antonio, TX (Bexar County)",48029,2021,2017-2021 5-year,median_gross_rent,1114,7
+county,"San Antonio, TX (Bexar County)",48029,2021,2017-2021 5-year,median_home_value,187300,1684
+county,"San Antonio, TX (Bexar County)",48029,2024,2020-2024 5-year,median_gross_rent,1354,12
+county,"San Antonio, TX (Bexar County)",48029,2024,2020-2024 5-year,median_home_value,262200,2140
+county,"Nashville, TN (Davidson County)",47037,2021,2017-2021 5-year,median_gross_rent,1252,15
+county,"Nashville, TN (Davidson County)",47037,2021,2017-2021 5-year,median_home_value,294200,3059
+county,"Nashville, TN (Davidson County)",47037,2024,2020-2024 5-year,median_gross_rent,1582,18
+county,"Nashville, TN (Davidson County)",47037,2024,2020-2024 5-year,median_home_value,417400,5765
+msa,"Austin-Round Rock(-San Marcos) MSA, TX",12420,2021,2017-2021 5-year,median_gross_rent,1398,8
+msa,"Austin-Round Rock(-San Marcos) MSA, TX",12420,2021,2017-2021 5-year,median_home_value,326400,2607
+msa,"Austin-Round Rock(-San Marcos) MSA, TX",12420,2024,2020-2024 5-year,median_gross_rent,1726,11
+msa,"Austin-Round Rock(-San Marcos) MSA, TX",12420,2024,2020-2024 5-year,median_home_value,465000,2494
+msa,"Dallas-Fort Worth-Arlington MSA, TX",19100,2021,2017-2021 5-year,median_gross_rent,1264,5
+msa,"Dallas-Fort Worth-Arlington MSA, TX",19100,2021,2017-2021 5-year,median_home_value,255600,1033
+msa,"Dallas-Fort Worth-Arlington MSA, TX",19100,2024,2020-2024 5-year,median_gross_rent,1614,6
+msa,"Dallas-Fort Worth-Arlington MSA, TX",19100,2024,2020-2024 5-year,median_home_value,359500,1198
+msa,"Houston-The Woodlands-Sugar Land MSA, TX",26420,2021,2017-2021 5-year,median_gross_rent,1189,5
+msa,"Houston-The Woodlands-Sugar Land MSA, TX",26420,2021,2017-2021 5-year,median_home_value,221400,1220
+msa,"Houston-The Woodlands-Sugar Land MSA, TX",26420,2024,2020-2024 5-year,median_gross_rent,1430,6
+msa,"Houston-The Woodlands-Sugar Land MSA, TX",26420,2024,2020-2024 5-year,median_home_value,298000,1513
+msa,"San Antonio-New Braunfels MSA, TX",41700,2021,2017-2021 5-year,median_gross_rent,1122,6
+msa,"San Antonio-New Braunfels MSA, TX",41700,2021,2017-2021 5-year,median_home_value,199200,1756
+msa,"San Antonio-New Braunfels MSA, TX",41700,2024,2020-2024 5-year,median_gross_rent,1363,11
+msa,"San Antonio-New Braunfels MSA, TX",41700,2024,2020-2024 5-year,median_home_value,278800,1687
+msa,"Nashville-Davidson--Murfreesboro--Franklin MSA, TN",34980,2021,2017-2021 5-year,median_gross_rent,1211,10
+msa,"Nashville-Davidson--Murfreesboro--Franklin MSA, TN",34980,2021,2017-2021 5-year,median_home_value,286800,1779
+msa,"Nashville-Davidson--Murfreesboro--Franklin MSA, TN",34980,2024,2020-2024 5-year,median_gross_rent,1528,16
+msa,"Nashville-Davidson--Murfreesboro--Franklin MSA, TN",34980,2024,2020-2024 5-year,median_home_value,409600,2934

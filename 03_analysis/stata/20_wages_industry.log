@@ -1,0 +1,2335 @@
+
+  ___  ____  ____  ____  ____ ®
+ /__    /   ____/   /   ____/      StataNow 19.5
+___/   /   /___/   /   /___/       MP—Parallel Edition
+
+ Statistics and Data Science       Copyright 1985-2025 StataCorp LLC
+                                   StataCorp
+                                   4905 Lakeway Drive
+                                   College Station, Texas 77845 USA
+                                   800-782-8272        https://www.stata.com
+                                   979-696-4600        service@stata.com
+
+Stata license: 4-user 4-core network, expiring  6 May 2027
+Serial number: 501909369296
+  Licensed to: Eric Booth
+               Texas 2036
+
+Notes:
+      1. Stata is running in batch mode.
+      2. Unicode is supported; see help unicode_advice.
+      3. More than 2 billion observations are allowed; see help obs_advice.
+      4. Maximum number of variables is set to 5,000 but can be increased;
+          see help set_maxvar.
+
+
+Running /Users/ericbooth/Documents/Stata/ado/personal/profile.do ...
+-------------------------------------------------------------------------------
+  [1]  (BASE)      "/Applications/StataNow/ado/base/"
+  [2]  (SITE)      "/_codeshare/"
+  [3]              "."
+  [4]  (PERSONAL)  "/Users/ericbooth/Documents/Stata/ado/personal/"
+  [5]  (PLUS)      "/Users/ericbooth/Library/Application Support/Stata/ado/plus
+> /"
+  [6]  (OLDPLACE)  "~/ado/"
+ [view] [edit] [do]  10_pums_earnings.do 
+ [view] [edit] [do]  20_wages_industry.do 
+ [view] [edit] [do]  30_venues.do 
+ [view] [edit] [do]  _setup.do 
+ [view] [edit] [do]  build_numbers.do 
+ [view] [edit] [do]  run_all.do 
+
+Click [here] for other links
+-------------------------------------------------------------------------------
+
+. do 20_wages_industry.do 
+
+. *! 20_wages_industry.do - musician wages against comparison creative occupati
+> ons,
+. *!   the payroll-to-gig substitution, QCEW industry detail, and a four-metro
+. *!   nonemployer comparison.
+. *! Inputs  : 01_evidence/01_wages_oews_qcew/oews_musicians_creatives_2005_202
+> 5.csv
+. *!           01_evidence/01_wages_oews_qcew/qcew_arts_industries_2001_2025.cs
+> v
+. *!           01_evidence/02_pums_nes_microdata/nes_independent_artists_long.c
+> sv
+. *!           03_analysis/data/external/Census_PEP_TX_County_Components.dta
+. *!           03_analysis/data/external/BLS_OEWS_TX.dta (cross-check only)
+. *!           03_analysis/out/cpi_annual.dta (built by _setup.do)
+. *! Outputs : 04_figures/fig06_payroll_vs_nonemployer.png (+ .csv)
+. *!           04_figures/fig07_real_wage_trend.png (+ .csv)
+. *!           04_figures/fig08_metro_nonemployer.png (+ .csv)
+. *!           03_analysis/out/numbers/numbers_wages.csv
+. *!           03_analysis/out/tables/qcew_industry_detail.csv
+. *!           03_analysis/out/tables/nes_metro_detail.csv
+. 
+. clear all
+
+. do "_setup.do"
+
+. *! _setup.do - shared foundation for the Austin musician/creative-worker anal
+> ysis.
+. *! Every module do-file starts with:  do "_setup.do"
+. *!
+. *! WHAT THIS DOES
+. *!   1. Finds the project root by searching upward for a sentinel file, so th
+> e
+. *!      whole folder can be zipped, moved to another machine, and run without
+. *!      editing a single path.
+. *!   2. Points Stata at the project-local ado library, so reghdfe, estout,
+. *!      spmap and the rest travel with the folder. No ssc install needed on a
+. *!      new machine.
+. *!   3. Builds a CPI-U deflator once and stores it, so every dollar figure in
+. *!      the report sits in the same base year (2025).
+. *!   4. Defines the report palette and graph styling, matched to the LaTeX fi
+> le.
+. *!   5. Defines two helper programs: numadd (register a number the report wil
+> l
+. *!      quote) and figsave (export a figure at consistent size).
+. *!
+. *! CONVENTIONS FOR MODULE AUTHORS
+. *!   - Set  global CURMODULE "<name>"  then call  numinit  before registering
+> .
+. *!   - Figure titles state the FINDING; subtitles qualify it. Source notes an
+> d
+. *!     caveats do NOT go in the image; they go in the LaTeX caption.
+. *!   - All dollars real, 2025 base, via the cpi_annual lookup.
+. 
+. version 17
+
+. set more off
+
+. set varabbrev off
+
+. 
+. * ---------------------------------------------------------------- 1. ROOT --
+. * Search the working directory and its parents for a file that only exists in
+. * this project. Whichever candidate contains it is the project root.
+. local sentinel "01_evidence/01_wages_oews_qcew/_sources.md"
+
+. local found 0
+
+. foreach cand in "`c(pwd)'" "`c(pwd)'/.." "`c(pwd)'/../.." "`c(pwd)'/../../.."
+>  {
+  2.     capture confirm file "`cand'/`sentinel'"
+  3.     if (_rc == 0) & (`found' == 0) {
+  4.         global PROJ "`cand'"
+  5.         local found 1
+  6.     }
+  7. }
+
+. if `found' == 0 {
+.     display as error "_setup.do could not locate the project root."
+.     display as error "Run Stata from 03_analysis/stata/ (or the project root)
+>  and try again."
+.     display as error "Current directory: `c(pwd)'"
+.     exit 601
+. }
+
+. 
+. global EVID     "${PROJ}/01_evidence"
+
+. global ANALYSIS "${PROJ}/03_analysis"
+
+. global DATAX    "${ANALYSIS}/data/external"
+
+. global OUT      "${ANALYSIS}/out"
+
+. global NUMDIR   "${OUT}/numbers"
+
+. global TABDIR   "${OUT}/tables"
+
+. global FIGS     "${PROJ}/04_figures"
+
+. global STATADIR "${ANALYSIS}/stata"
+
+. 
+. * Evidence subfolders, named for the workstream each one came from.
+. global EV_WAGES  "${EVID}/01_wages_oews_qcew"
+
+. global EV_PUMS   "${EVID}/02_pums_nes_microdata"
+
+. global EV_BEA    "${EVID}/03_creative_economy_bea"
+
+. global EV_CITY   "${EVID}/04_city_programs_lmf"
+
+. global EV_SURVEY "${EVID}/05_music_census_pay_surveys"
+
+. global EV_STATE  "${EVID}/06_state_policy_benchmark"
+
+. global EV_SVOG   "${EVID}/07_svog_federal_relief"
+
+. global EV_VENUE  "${EVID}/08_venues_ecosystem"
+
+. global EV_COL    "${EVID}/09_cost_of_living"
+
+. global EV_APP    "${EVID}/10_apprenticeship_workforce"
+
+. global EV_STREAM "${EVID}/11_streaming_royalties"
+
+. 
+. capture mkdir "${OUT}"
+
+. capture mkdir "${NUMDIR}"
+
+. capture mkdir "${TABDIR}"
+
+. capture mkdir "${FIGS}"
+
+. 
+. * ------------------------------------------------------------- 2. ADO PATH -
+> -
+. * Prepend the project-local library. Using adopath rather than sysdir set PLU
+> S
+. * keeps any packages already installed on this machine visible as a fallback,
+. * while guaranteeing the bundled copies win.
+. adopath ++ "${STATADIR}/ado/s"
+  [1]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/s"
+  [2]  (BASE)      "/Applications/StataNow/ado/base/"
+  [3]  (SITE)      "/_codeshare/"
+  [4]              "."
+  [5]  (PERSONAL)  "/Users/ericbooth/Documents/Stata/ado/personal/"
+  [6]  (PLUS)      "/Users/ericbooth/Library/Application Support/Stata/ado/plus
+> /"
+  [7]  (OLDPLACE)  "~/ado/"
+
+. adopath ++ "${STATADIR}/ado/plus"
+  [1]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/plus"
+  [2]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/s"
+  [3]  (BASE)      "/Applications/StataNow/ado/base/"
+  [4]  (SITE)      "/_codeshare/"
+  [5]              "."
+  [6]  (PERSONAL)  "/Users/ericbooth/Documents/Stata/ado/personal/"
+  [7]  (PLUS)      "/Users/ericbooth/Library/Application Support/Stata/ado/plus
+> /"
+  [8]  (OLDPLACE)  "~/ado/"
+
+. adopath ++ "${STATADIR}/ado"
+  [1]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado"
+  [2]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/plus"
+  [3]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/s"
+  [4]  (BASE)      "/Applications/StataNow/ado/base/"
+  [5]  (SITE)      "/_codeshare/"
+  [6]              "."
+  [7]  (PERSONAL)  "/Users/ericbooth/Documents/Stata/ado/personal/"
+  [8]  (PLUS)      "/Users/ericbooth/Library/Application Support/Stata/ado/plus
+> /"
+  [9]  (OLDPLACE)  "~/ado/"
+
+. 
+. * --------------------------------------------------------- 3. CPI DEFLATOR -
+> -
+. * Base year for every real-dollar figure in the report.
+. global BASEYEAR 2025
+
+. 
+. * Build the annual CPI lookup once. Rebuilt only if missing, so modules that
+. * run in sequence do not each redo it.
+. capture confirm file "${OUT}/cpi_annual.dta"
+
+. if _rc != 0 {
+.     preserve
+.     use "${DATAX}/BLS_CPI.dta", clear
+.     keep if area_name == "U.S. city average" & item_name == "All items"
+.     keep if is_annualavg == 0 & seas_adj == 0 & !missing(month)
+.     keep year month cpi
+.     duplicates drop year month, force
+. 
+.     * BLS never published a CPI-U value for October 2025 because the federal
+.     * funding lapse suspended collection. Fill that single month by averaging
+.     * September and November and flag it. October matters here because it is
+.     * the month of the Austin City Limits festival, so leaving a hole would
+.     * distort the venue-receipts series specifically.
+.     generate byte cpi_imputed = 0
+.     sort year month
+.     quietly count if year == 2025 & month == 10 & missing(cpi)
+.     if r(N) > 0 {
+.         quietly summarize cpi if year == 2025 & month == 9, meanonly
+.         local sep = r(mean)
+.         quietly summarize cpi if year == 2025 & month == 11, meanonly
+.         local nov = r(mean)
+.         quietly replace cpi = (`sep' + `nov') / 2 if year == 2025 & month == 
+> 10
+.         quietly replace cpi_imputed = 1 if year == 2025 & month == 10
+.     }
+.     drop if missing(cpi)
+. 
+.     * Keep only years with a full twelve months, so a partial year (2026 at t
+> he
+.     * time of writing) never masquerades as an annual average.
+.     bysort year: generate byte nmon = _N
+.     keep if nmon == 12
+.     collapse (mean) cpi (max) cpi_imputed, by(year)
+. 
+.     quietly summarize cpi if year == ${BASEYEAR}, meanonly
+.     local base = r(mean)
+.     generate double defl = `base' / cpi
+.     label variable defl "Multiply nominal dollars of `year' by this to get ${
+> BASEYEAR} dollars"
+.     label variable cpi_imputed "1 = annual average uses an imputed month"
+.     sort year
+.     save "${OUT}/cpi_annual.dta", replace
+.     restore
+. }
+
+. 
+. * Convenience: put the base-year CPI in a global for ad hoc use.
+. preserve
+
+. use "${OUT}/cpi_annual.dta", clear
+
+. quietly summarize cpi if year == ${BASEYEAR}, meanonly
+
+. global CPIBASE = r(mean)
+
+. restore
+
+. 
+. * ------------------------------------------------------------- 4. PALETTE --
+. * RGB triples matching 05_report/style/austinmusic.sty, so figures and docume
+> nt
+. * agree without anyone re-typing hex codes.
+. global NAVY    "27 45 85"
+
+. global ORANGE  "212 69 0"
+
+. global BLUE    "43 108 176"
+
+. global MUTED   "108 122 141"
+
+. global LIGHTBG "245 247 250"
+
+. global BORDER  "222 226 230"
+
+. global GREEN   "46 125 87"
+
+. global GOLD    "200 137 27"
+
+. global RED     "192 57 43"
+
+. global TEXTC   "26 26 46"
+
+. 
+. * Orange marks the musician or Austin series throughout; navy and muted mark
+. * comparison series. Keeping that constant across figures means a reader lear
+> ns
+. * the convention once.
+. global SERIES1 "${NAVY}"
+
+. global SERIES2 "${ORANGE}"
+
+. global SERIES3 "${BLUE}"
+
+. global SERIES4 "${GREEN}"
+
+. global SERIES5 "${GOLD}"
+
+. global SERIES6 "${MUTED}"
+
+. 
+. * Standard title and subtitle options. Modules pass these straight through:
+. *   twoway ... , title("Finding", $TITLEOPT) subtitle("Qualifier", $SUBOPT)
+. global TITLEOPT `"size(4.1) color("${NAVY}") justification(left) position(11)
+>  span margin(b=1)"'
+
+. global SUBOPT   `"size(3.0) color("${MUTED}") justification(left) position(11
+> ) span margin(b=3)"'
+
+. global XTOPT    `"size(3.0)"'
+
+. global YTOPT    `"size(3.0)"'
+
+. global LEGOPT   `"size(3.0) region(lstyle(none)) symxsize(6)"'
+
+. 
+. capture grstyle init
+
+. capture grstyle set plain, horizontal
+
+. capture grstyle set color "${TEXTC}": p1lineplot
+
+. capture grstyle set legend 6, nobox
+
+. 
+. * ------------------------------------------------------------ 5. PROGRAMS --
+. capture program drop numinit
+
+. program define numinit
+  1.     * Start (or restart) this module's number ledger. Called once per modu
+> le so
+.     * re-running a module replaces its own rows rather than appending duplica
+> tes.
+.     if "$CURMODULE" == "" {
+  2.         display as error "numinit: set  global CURMODULE  first"
+  3.         exit 198
+  4.     }
+  5.     quietly {
+  6.         local f "${NUMDIR}/numbers_${CURMODULE}.csv"
+  7.         capture erase "`f'"
+  8.         file open nh using "`f'", write text replace
+  9.         file write nh "key,value,formatted,unit,source,note,module" _n
+ 10.         file close nh
+ 11.     }
+ 12.     display as text "  ledger started: numbers_${CURMODULE}.csv"
+ 13. end
+
+. 
+. capture program drop numadd
+
+. program define numadd
+  1.     * Register one number the written report will quote.
+.     *
+.     *   numadd, key(pums_median_earnings_tx) value(22800) ///
+>     *           formatted("\$22,800") unit("2025 dollars") ///
+>     *           source("01_evidence/02_pums.../pums_...csv") ///
+>     *           note("ACS PUMS 2020-2024 5-yr, OCCP 2752, PWGTP-weighted medi
+> an")
+.     *
+.     * key becomes a LaTeX macro, so use letters, digits and underscores only.
+.     * note must let a reader reproduce the number: population, filter, weight
+> ,
+.     * vintage, and any caveat.
+.     syntax , KEY(string) VALUE(string) [FORMATTED(string) UNIT(string) ///
+>              SOURCE(string) NOTE(string)]
+  2.     if "$CURMODULE" == "" {
+  3.         display as error "numadd: set  global CURMODULE  and call numinit 
+> first"
+  4.         exit 198
+  5.     }
+  6.     if "`formatted'" == "" {
+  7.         local formatted "`value'"
+  8.     }
+  9.     * Replace any embedded double quote with an apostrophe. These fields a
+> re
+.     * descriptive text, never data, so substituting is safer than escaping an
+> d
+.     * keeps the ledger readable by any CSV parser.
+.     foreach v in formatted unit source note {
+ 10.         local `v' : subinstr local `v' `"""' "'", all
+ 11.     }
+ 12.     quietly {
+ 13.         file open nh using "${NUMDIR}/numbers_${CURMODULE}.csv", write tex
+> t append
+ 14.         file write nh `""`key'","`value'","`formatted'","`unit'","`source'
+> ","`note'","${CURMODULE}""' _n
+ 15.         file close nh
+ 16.     }
+ 17. end
+
+. 
+. capture program drop figsave
+
+. program define figsave
+  1.     * Export the current graph to 04_figures at a consistent size.
+.     * Width 2000px at the report's 6.5 inch text width is about 300 dpi.
+.     syntax , NAME(string) [WIDTH(integer 2000)]
+  2.     quietly graph export "${FIGS}/`name'.png", replace width(`width')
+  3.     display as text "  figure -> 04_figures/`name'.png"
+  4. end
+
+. 
+. capture program drop requirefile
+
+. program define requirefile
+  1.     * Fail early and legibly when an expected input is absent, rather than
+.     * producing a confusing error deeper in a module.
+.     *
+.     * This project's paths contain spaces ("My Drive", the Google Drive mount
+.     * point), so the argument is taken from `0' as a whole rather than parsed
+.     * into tokens, stripped of any quotes the caller supplied, and then
+.     * compound-quoted for `confirm'. Passing an unquoted path with spaces to
+.     * `confirm file' is what makes this fail with a misleading r(601).
+.     local fn `0'
+  2.     local fn : subinstr local fn `"""' "", all
+  3.     local fn = trim("`fn'")
+  4.     capture confirm file `"`fn'"'
+  5.     if _rc != 0 {
+  6.         display as error "Required input not found: `fn'"
+  7.         exit 601
+  8.     }
+  9. end
+
+. 
+. display as text "_setup.do ready. Root: ${PROJ}"
+_setup.do ready. Root: /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.b
+> ooth@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_an
+> alysis/stata/../..
+
+. display as text "  base year ${BASEYEAR}, CPI ${CPIBASE}"
+  base year 2025, CPI 322.1528333333334
+
+. 
+end of do-file
+
+. global CURMODULE "wages"
+
+. numinit
+  ledger started: numbers_wages.csv
+
+. 
+. requirefile "${EV_WAGES}/oews_musicians_creatives_2005_2025.csv"
+
+. requirefile "${EV_WAGES}/qcew_arts_industries_2001_2025.csv"
+
+. requirefile "${EV_PUMS}/nes_independent_artists_long.csv"
+
+. requirefile "${DATAX}/Census_PEP_TX_County_Components.dta"
+
+. requirefile "${DATAX}/BLS_OEWS_TX.dta"
+
+. 
+. * Occupation codes analyzed throughout, with short slugs for registry keys.
+. * Order fixed across all loops below so occ-code and slug stay aligned.
+. local occ_codes "27-2042 27-2041 27-4014 27-1024 27-3043 27-2011 00-0000"
+
+. local occ_slugs "musicians musicdirectors soundeng graphicdesign writers acto
+> rs allocc"
+
+. local occ_labs  `""Musicians and Singers" "Music Directors and Composers" "So
+> und Engineering Technicians" "Graphic Designers" "Writers and Authors" "Actor
+> s" "All Occupations""'
+
+. 
+. local geo_levels "MSA State National"
+
+. local geo_slugs  "austin tx us"
+
+. local geo_labs   `""Austin MSA" "Texas" "United States""'
+
+. 
+. 
+. * ================================================================
+. * SECTION 1. Build the OEWS analysis panel: real hourly/annual wages
+. *            and payroll employment, 2005-2025, 7 occupations x 3 geos.
+. * ================================================================
+. import delimited "${EV_WAGES}/oews_musicians_creatives_2005_2025.csv", ///
+>     varnames(1) case(preserve) clear
+(encoding automatically selected: ISO-8859-1)
+(21 vars, 473 obs)
+
+. keep if inlist(occ_code, "27-2042","27-2041","27-4014","27-1024","27-3043","2
+> 7-2011","00-0000")
+(63 observations deleted)
+
+. keep year geo_level occ_code occ_title tot_emp h_mean h_median a_mean a_media
+> n
+
+. 
+. * Real dollars: merge the shared CPI-U deflator and multiply. Every wage
+. * variable below carries a _real suffix; the nominal columns are left alone
+. * so nothing is ambiguous about which is which.
+. merge m:1 year using "${OUT}/cpi_annual.dta", keep(master match) nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                             0
+    Matched                               410  
+    -----------------------------------------
+
+. foreach v in h_mean h_median a_mean a_median {
+  2.     generate double `v'_real = `v' * defl
+  3.     label variable `v'_real "`v', 2025 dollars"
+  4. }
+(5 missing values generated)
+(5 missing values generated)
+(103 missing values generated)
+(103 missing values generated)
+
+. label variable tot_emp "Wage-and-salary employment (OEWS), payroll jobs only"
+
+. 
+. quietly count
+
+. display as text "OEWS analysis panel: `r(N)' rows (7 occupations x up to 3 ge
+> ographies x up to 21 years)."
+OEWS analysis panel: 410 rows (7 occupations x up to 3 geographies x up to 21 y
+> ears).
+
+. tempfile oews_panel
+
+. save `oews_panel'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St56069.000001 saved
+    as .dta format
+
+. 
+. 
+. * ================================================================
+. * SECTION 2. Cross-check: Texas OEWS figures in the evidence CSV against
+. *            BLS_OEWS_TX.dta, an independently maintained Texas OEWS panel.
+. * ================================================================
+. use `oews_panel', clear
+
+. keep if geo_level == "State"
+(270 observations deleted)
+
+. keep year occ_code occ_title tot_emp a_mean a_median
+
+. rename (tot_emp a_mean a_median) (tot_emp_ev a_mean_ev a_median_ev)
+
+. tempfile ev_tx
+
+. save `ev_tx'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St56069.000002 saved
+    as .dta format
+
+. 
+. use "${DATAX}/BLS_OEWS_TX.dta", clear
+
+. keep if inlist(occ_code, "27-2042","27-2041","27-4014","27-1024","27-3043","2
+> 7-2011","00-0000")
+(16,071 observations deleted)
+
+. rename (tot_emp a_mean a_median) (tot_emp_chk a_mean_chk a_median_chk)
+
+. merge 1:1 occ_code year using `ev_tx', keep(match master using) generate(mrg_
+> check)
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                             7
+        from master                         0  (mrg_check==1)
+        from using                          7  (mrg_check==2)
+
+    Matched                               133  (mrg_check==3)
+    -----------------------------------------
+
+. 
+. display as text _newline "{hline 72}"
+
+------------------------------------------------------------------------
+
+. display as text "CROSS-CHECK: evidence CSV (Texas rows) vs BLS_OEWS_TX.dta, 2
+> 005-2024 overlap"
+CROSS-CHECK: evidence CSV (Texas rows) vs BLS_OEWS_TX.dta, 2005-2024 overlap
+
+. display as text "{hline 72}"
+------------------------------------------------------------------------
+
+. tabulate mrg_check
+
+   Matching result from |
+                  merge |      Freq.     Percent        Cum.
+------------------------+-----------------------------------
+         Using only (2) |          7        5.00        5.00
+            Matched (3) |        133       95.00      100.00
+------------------------+-----------------------------------
+                  Total |        140      100.00
+
+. * mrg_check==3 is the only comparable set (present in both files); 1=evidence
+> -only
+. * (2025, since the cross-check library stops at 2024), 2=cross-check-only (oc
+> cupations
+. * outside this module's 7-code list, dropped above by the keep).
+. 
+. generate diff_emp    = tot_emp_ev    - tot_emp_chk    if mrg_check==3
+(9 missing values generated)
+
+. generate diff_amean  = a_mean_ev     - a_mean_chk      if mrg_check==3
+(40 missing values generated)
+
+. generate diff_amedian= a_median_ev   - a_median_chk    if mrg_check==3
+(40 missing values generated)
+
+. 
+. quietly count if mrg_check==3
+
+. local n_comparable = r(N)
+
+. quietly count if mrg_check==3 & diff_emp==0
+
+. local n_emp_exact = r(N)
+
+. quietly count if mrg_check==3 & !missing(diff_emp) & diff_emp!=0
+
+. local n_emp_diff = r(N)
+
+. quietly summarize diff_emp if mrg_check==3, detail
+
+. local emp_maxabsdiff = max(abs(r(min)), abs(r(max)))
+
+. 
+. quietly count if mrg_check==3 & !missing(a_median_ev) & !missing(a_median_chk
+> )
+
+. local n_amedian_both = r(N)
+
+. quietly count if mrg_check==3 & !missing(a_median_ev) & !missing(a_median_chk
+> ) & diff_amedian==0
+
+. local n_amedian_exact = r(N)
+
+. 
+. display as text "Comparable occupation-year cells (both files, 7 target occ c
+> odes, 2005-2024): `n_comparable'"
+Comparable occupation-year cells (both files, 7 target occ codes, 2005-2024): 1
+> 33
+
+. display as text "  Employment (tot_emp): exact match `n_emp_exact' of `n_comp
+> arable'; " ///
+>     "max abs diff = `emp_maxabsdiff' jobs"
+  Employment (tot_emp): exact match 131 of 133; max abs diff = 0 jobs
+
+. display as text "  Annual median wage, cells where BOTH files publish a value
+> : " ///
+>     "`n_amedian_exact' of `n_amedian_both' exact"
+  Annual median wage, cells where BOTH files publish a value: 100 of 100 exact
+
+. list occ_code year tot_emp_ev tot_emp_chk diff_emp a_median_ev a_median_chk d
+> iff_amedian ///
+>     if mrg_check==3 & (diff_emp!=0 & !missing(diff_emp)), clean
+
+. 
+. numadd, key(crosscheck_emp_exact_share) value(`=cond(`n_comparable'>0, round(
+> 100*`n_emp_exact'/`n_comparable',0.1), .)') ///
+>     formatted("`=string(round(100*`n_emp_exact'/`n_comparable',0.1),"%4.1f")'
+> %") unit("percent of comparable cells") ///
+>     source("03_analysis/data/external/BLS_OEWS_TX.dta") ///
+>     note("Cross-check of evidence CSV Texas OEWS employment against the autho
+> r's independent BLS_OEWS_TX.dta panel, 7 target occ codes, 2005-2024 overlap 
+> (n=`n_comparable' cells). `n_emp_exact' cells match exactly; max abs diff `em
+> p_maxabsdiff' jobs. See module return notes for any discrepancy detail.")
+
+. 
+. drop mrg_check
+
+. tempfile crosscheck_result
+
+. save `crosscheck_result'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St56069.000003 saved
+    as .dta format
+
+. 
+. 
+. * ================================================================
+. * TASK 1. Real hourly wage trends, 2005-2025, and TASK 2. payroll employment
+. *         trends + pct change 2005-2025, for each of the 7 occupations x 3
+. *         geographies. BLS does not publish an annual wage for Musicians and
+. *         Actors in most rows (a standing BLS convention for occupations with
+. *         heavy part-year work, not an extraction gap), so hourly wages are
+. *         the only series comparable across all 7 occupations; this module
+. *         uses the hourly median throughout and records the reason here.
+. * ================================================================
+. use `oews_panel', clear
+
+. 
+. * Verify directly, rather than assume, how absolute the annual-wage gap is.
+. quietly count if occ_code=="27-2042"
+
+. local n_musi_rows = r(N)
+
+. quietly count if occ_code=="27-2042" & missing(a_median)
+
+. local n_musi_blank = r(N)
+
+. quietly count if occ_code=="27-2011"
+
+. local n_act_rows = r(N)
+
+. quietly count if occ_code=="27-2011" & missing(a_median)
+
+. local n_act_blank = r(N)
+
+. display as text "Annual median wage (a_median) blank: Musicians `n_musi_blank
+> ' of `n_musi_rows' rows; Actors `n_act_blank' of `n_act_rows' rows (expect bo
+> th ratios to be 100%, an absolute non-publication, not partial suppression)."
+Annual median wage (a_median) blank: Musicians 63 of 63 rows; Actors 39 of 39 r
+> ows (expect both ratios to be 100%, an absolute non-publication, not partial 
+> suppression).
+
+. assert `n_musi_blank' == `n_musi_rows'
+
+. assert `n_act_blank'  == `n_act_rows'
+
+. 
+. numadd, key(wage_series_choice_hourly) value(1) formatted("hourly, not annual
+> ") ///
+>     unit("methodological note") ///
+>     source("01_evidence/01_wages_oews_qcew/oews_musicians_creatives_2005_2025
+> .csv") ///
+>     note("BLS does not publish an annual wage for Musicians and Singers (a_me
+> dian blank in all `n_musi_rows' of `n_musi_rows' occupation-geography-year ro
+> ws in this extract) or for Actors (blank in all `n_act_rows' of `n_act_rows' 
+> rows). This is an absolute, standing BLS non-publication for occupations with
+>  too much part-year/irregular work to annualize meaningfully, not disclosure 
+> suppression and not a data-collection gap. This module therefore uses the med
+> ian HOURLY wage (h_median) as the one series comparable across all 7 occupati
+> ons and 3 geographies, and at no point constructs an annual figure for musici
+> ans or actors by multiplying an hourly wage by assumed hours; annual figures 
+> are used only for the other 5 occupations, where BLS publishes them directly.
+> ")
+
+. 
+. display as text _newline "{hline 72}"
+
+------------------------------------------------------------------------
+
+. display as text "TASK 1/2: real hourly wage and payroll employment, by occupa
+> tion x geography"
+TASK 1/2: real hourly wage and payroll employment, by occupation x geography
+
+. display as text "{hline 72}"
+------------------------------------------------------------------------
+
+. 
+. local i = 0
+
+. foreach oc of local occ_codes {
+  2.     local i = `i' + 1
+  3.     local os : word `i' of `occ_slugs'
+  4.     local ol : word `i' of `occ_labs'
+  5.     local j = 0
+  6.     foreach gl of local geo_levels {
+  7.         local j = `j' + 1
+  8.         local gs : word `j' of `geo_slugs'
+  9.         local gll : word `j' of `geo_labs'
+ 10. 
+.         * ---- wage: median hourly, real 2025$ ----
+.         quietly count if occ_code=="`oc'" & geo_level=="`gl'" & !missing(h_me
+> dian_real)
+ 11.         local nvalid = r(N)
+ 12.         if `nvalid' >= 2 {
+ 13.             quietly summarize year if occ_code=="`oc'" & geo_level=="`gl'"
+>  & !missing(h_median_real)
+ 14.             local fy = r(min)
+ 15.             local ly = r(max)
+ 16.             quietly summarize h_median_real if occ_code=="`oc'" & geo_leve
+> l=="`gl'" & year==`fy', meanonly
+ 17.             local v0 = r(mean)
+ 18.             quietly summarize h_median_real if occ_code=="`oc'" & geo_leve
+> l=="`gl'" & year==`ly', meanonly
+ 19.             local v1 = r(mean)
+ 20.             local pct = (`v1'/`v0' - 1)*100
+ 21.             local yrnote = ""
+ 22.             if `fy'!=2005 | `ly'!=2025 {
+ 23.                 local yrnote " Actual window `fy'-`ly', not 2005-2025: BLS
+>  did not publish an Austin MSA hourly wage for `ol' in every year of the full
+>  series."
+ 24.             }
+ 25.             numadd, key(wage_hourly_real_`os'_`gs'_first) value(`=round(`v
+> 0',0.01)') ///
+>                 formatted("$`=string(round(`v0',0.01),"%9.2f")'") unit("2025 
+> dollars per hour") ///
+>                 source("01_evidence/01_wages_oews_qcew/oews_musicians_creativ
+> es_2005_2025.csv") ///
+>                 note("`ol', `gll', median hourly wage, `fy', OEWS. Deflated f
+> rom nominal `fy' dollars using ${OUT}/cpi_annual.dta.")
+ 26.             numadd, key(wage_hourly_real_`os'_`gs'_last) value(`=round(`v1
+> ',0.01)') ///
+>                 formatted("$`=string(round(`v1',0.01),"%9.2f")'") unit("2025 
+> dollars per hour") ///
+>                 source("01_evidence/01_wages_oews_qcew/oews_musicians_creativ
+> es_2005_2025.csv") ///
+>                 note("`ol', `gll', median hourly wage, `ly', OEWS. 2025 dolla
+> rs.")
+ 27.             numadd, key(wage_hourly_pctchg_`os'_`gs') value(`=round(`pct',
+> 0.1)') ///
+>                 formatted("`=cond(`pct'>=0,"+","")'`=string(round(`pct',0.1),
+> "%4.1f")'%") unit("percent change, real hourly median wage") ///
+>                 source("01_evidence/01_wages_oews_qcew/oews_musicians_creativ
+> es_2005_2025.csv") ///
+>                 note("`ol', `gll', real median hourly wage change `fy' to `ly
+> ': $`=string(round(`v0',0.01),"%9.2f")' to $`=string(round(`v1',0.01),"%9.2f"
+> )', 2025 dollars.`yrnote'")
+ 28.         }
+ 29.         else {
+ 30.             display as text "  [skip wage] `os' `gs': fewer than 2 non-mis
+> sing years"
+ 31.         }
+ 32. 
+.         * ---- employment: payroll jobs, no deflation (a count, not a dollar 
+> figure) ----
+.         quietly count if occ_code=="`oc'" & geo_level=="`gl'" & !missing(tot_
+> emp)
+ 33.         local nvalid2 = r(N)
+ 34.         if `nvalid2' >= 2 {
+ 35.             quietly summarize year if occ_code=="`oc'" & geo_level=="`gl'"
+>  & !missing(tot_emp)
+ 36.             local fy2 = r(min)
+ 37.             local ly2 = r(max)
+ 38.             quietly summarize tot_emp if occ_code=="`oc'" & geo_level=="`g
+> l'" & year==`fy2', meanonly
+ 39.             local e0 = r(mean)
+ 40.             quietly summarize tot_emp if occ_code=="`oc'" & geo_level=="`g
+> l'" & year==`ly2', meanonly
+ 41.             local e1 = r(mean)
+ 42.             local pcte = (`e1'/`e0' - 1)*100
+ 43.             local yrnote2 = ""
+ 44.             if `fy2'!=2005 | `ly2'!=2025 {
+ 45.                 local yrnote2 " Actual window `fy2'-`ly2', not 2005-2025: 
+> BLS did not publish Austin MSA payroll employment for `ol' in every year (occ
+> upation too small/volatile at the metro level to clear OEWS publication thres
+> holds in every year)."
+ 46.             }
+ 47.             numadd, key(emp_payroll_`os'_`gs'_first) value(`=round(`e0',1)
+> ') ///
+>                 formatted("`=string(`e0',"%9.0fc")'") unit("wage-and-salary j
+> obs") ///
+>                 source("01_evidence/01_wages_oews_qcew/oews_musicians_creativ
+> es_2005_2025.csv") ///
+>                 note("`ol', `gll', OEWS payroll employment, `fy2'. Excludes t
+> he self-employed.")
+ 48.             numadd, key(emp_payroll_`os'_`gs'_last) value(`=round(`e1',1)'
+> ) ///
+>                 formatted("`=string(`e1',"%9.0fc")'") unit("wage-and-salary j
+> obs") ///
+>                 source("01_evidence/01_wages_oews_qcew/oews_musicians_creativ
+> es_2005_2025.csv") ///
+>                 note("`ol', `gll', OEWS payroll employment, `ly2'. Excludes t
+> he self-employed.")
+ 49.             numadd, key(emp_payroll_pctchg_`os'_`gs') value(`=round(`pcte'
+> ,0.1)') ///
+>                 formatted("`=cond(`pcte'>=0,"+","")'`=string(round(`pcte',0.1
+> ),"%4.1f")'%") unit("percent change, payroll employment") ///
+>                 source("01_evidence/01_wages_oews_qcew/oews_musicians_creativ
+> es_2005_2025.csv") ///
+>                 note("`ol', `gll', payroll employment change `fy2' to `ly2': 
+> `=string(`e0',"%9.0fc")' to `=string(`e1',"%9.0fc")' jobs.`yrnote2'")
+ 50.             display as text "  `os'/`gs': wage n=`nvalid' (`fy'-`ly'), emp
+>  n=`nvalid2' (`fy2'-`ly2') change=`=string(round(`pcte',0.1),"%4.1f")'%"
+ 51.         }
+ 52.         else {
+ 53.             display as text "  [skip emp] `os' `gs': fewer than 2 non-miss
+> ing years"
+ 54.         }
+ 55.     }
+ 56. }
+  musicians/austin: wage n=20 (2005-2025), emp n=19 (2005-2025) change=-20.0%
+  musicians/tx: wage n=21 (2005-2025), emp n=21 (2005-2025) change=-50.2%
+  musicians/us: wage n=21 (2005-2025), emp n=21 (2005-2025) change=-28.2%
+  musicdirectors/austin: wage n=13 (2008-2021), emp n=13 (2009-2021) change=-66
+> .7%
+  musicdirectors/tx: wage n=21 (2005-2025), emp n=21 (2005-2025) change=242.9%
+  musicdirectors/us: wage n=21 (2005-2025), emp n=21 (2005-2025) change=45.6%
+  soundeng/austin: wage n=21 (2005-2025), emp n=20 (2005-2025) change=150.0%
+  soundeng/tx: wage n=21 (2005-2025), emp n=21 (2005-2025) change=50.9%
+  soundeng/us: wage n=21 (2005-2025), emp n=21 (2005-2025) change=3.2%
+  graphicdesign/austin: wage n=21 (2005-2025), emp n=21 (2005-2025) change=52.8
+> %
+  graphicdesign/tx: wage n=21 (2005-2025), emp n=21 (2005-2025) change=26.9%
+  graphicdesign/us: wage n=21 (2005-2025), emp n=21 (2005-2025) change=10.8%
+  writers/austin: wage n=21 (2005-2025), emp n=21 (2005-2025) change=5.0%
+  writers/tx: wage n=21 (2005-2025), emp n=21 (2005-2025) change=39.8%
+  writers/us: wage n=21 (2005-2025), emp n=21 (2005-2025) change=11.4%
+  actors/austin: wage n=3 (2013-2024), emp n=3 (2017-2025) change=-30.4%
+  actors/tx: wage n=12 (2005-2025), emp n=12 (2009-2025) change=-41.9%
+  actors/us: wage n=21 (2005-2025), emp n=21 (2005-2025) change=-7.7%
+  allocc/austin: wage n=21 (2005-2025), emp n=21 (2005-2025) change=88.5%
+  allocc/tx: wage n=21 (2005-2025), emp n=21 (2005-2025) change=49.3%
+  allocc/us: wage n=21 (2005-2025), emp n=21 (2005-2025) change=19.3%
+
+. 
+. * Key Austin-specific comparison for 2025: does the musician's real hourly
+. * wage actually beat the metro's typical worker and Graphic Designers, as
+. * the underlying findings note? Verify directly rather than assume.
+. quietly summarize h_median_real if occ_code=="27-2042" & geo_level=="MSA" & y
+> ear==2025, meanonly
+
+. local musi25 = r(mean)
+
+. quietly summarize h_median_real if occ_code=="00-0000" & geo_level=="MSA" & y
+> ear==2025, meanonly
+
+. local allo25 = r(mean)
+
+. quietly summarize h_median_real if occ_code=="27-1024" & geo_level=="MSA" & y
+> ear==2025, meanonly
+
+. local graf25 = r(mean)
+
+. quietly summarize h_median_real if occ_code=="27-2042" & geo_level=="MSA" & y
+> ear==2005, meanonly
+
+. local musi05 = r(mean)
+
+. quietly summarize h_median_real if occ_code=="00-0000" & geo_level=="MSA" & y
+> ear==2005, meanonly
+
+. local allo05 = r(mean)
+
+. 
+. display as text _newline "Austin MSA, 2025: musicians $`=string(`musi25',"%4.
+> 2f")' vs all-occ $`=string(`allo25',"%4.2f")' vs graphic designers $`=string(
+> `graf25',"%4.2f")' (real hourly median)"
+
+Austin MSA, 2025: musicians $31.49 vs all-occ $27.38 vs graphic designers $31.2
+> 8 (real hourly median)
+
+. display as text "Austin MSA, 2005: musicians $`=string(`musi05',"%4.2f")' vs 
+> all-occ $`=string(`allo05',"%4.2f")'"
+Austin MSA, 2005: musicians $22.57 vs all-occ $23.72
+
+. local musi_above_allocc_2025 = (`musi25' > `allo25')
+
+. local musi_above_allocc_2005 = (`musi05' > `allo05')
+
+. display as text "Musicians above all-occ median? 2005: `musi_above_allocc_200
+> 5'  2025: `musi_above_allocc_2025'"
+Musicians above all-occ median? 2005: 0  2025: 1
+
+. 
+. numadd, key(wage_austin_musicians_vs_allocc_2025) value(`=round(`musi25'-`all
+> o25',0.01)') ///
+>     formatted("$`=string(round(`musi25',0.01),"%4.2f")' vs $`=string(round(`a
+> llo25',0.01),"%4.2f")'") ///
+>     unit("2025 dollars per hour, real median") ///
+>     source("01_evidence/01_wages_oews_qcew/oews_musicians_creatives_2005_2025
+> .csv") ///
+>     note("Austin MSA, May 2025: median hourly wage for Musicians and Singers 
+> ($`=string(round(`musi25',0.01),"%4.2f")') against the MSA all-occupation med
+> ian ($`=string(round(`allo25',0.01),"%4.2f")'). MSA musician employment is on
+> ly ~120 wage-and-salary jobs in 2025, so this is a small and volatile estimat
+> e, not a claim about the far larger self-employed/gig musician population.")
+
+. 
+. * Build the wide, year-indexed series used by fig07 (Austin MSA is the report
+> 's
+. * core geography; Texas Musicians and Singers is the one context line, per th
+> e
+. * figure spec "Austin MSA with Texas ... as context").
+. preserve
+
+.     keep if occ_code=="27-2042" & geo_level=="MSA"
+(389 observations deleted)
+
+.     keep year h_median_real
+
+.     rename h_median_real msa_musicians
+
+.     tempfile f7_a
+
+.     save `f7_a'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St56069.000005 saved
+    as .dta format
+
+. restore
+
+. preserve
+
+.     keep if occ_code=="00-0000" & geo_level=="MSA"
+(389 observations deleted)
+
+.     keep year h_median_real
+
+.     rename h_median_real msa_allocc
+
+.     tempfile f7_b
+
+.     save `f7_b'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St56069.000007 saved
+    as .dta format
+
+. restore
+
+. preserve
+
+.     keep if occ_code=="27-1024" & geo_level=="MSA"
+(389 observations deleted)
+
+.     keep year h_median_real
+
+.     rename h_median_real msa_graphic
+
+.     tempfile f7_c
+
+.     save `f7_c'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St56069.000009 saved
+    as .dta format
+
+. restore
+
+. preserve
+
+.     keep if occ_code=="27-2042" & geo_level=="State"
+(389 observations deleted)
+
+.     keep year h_median_real
+
+.     rename h_median_real tx_musicians
+
+.     tempfile f7_d
+
+.     save `f7_d'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St56069.00000b saved
+    as .dta format
+
+. restore
+
+. 
+. clear
+
+. use `f7_a'
+
+. merge 1:1 year using `f7_b', nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                             0
+    Matched                                21  
+    -----------------------------------------
+
+. merge 1:1 year using `f7_c', nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                             0
+    Matched                                21  
+    -----------------------------------------
+
+. merge 1:1 year using `f7_d', nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                             0
+    Matched                                21  
+    -----------------------------------------
+
+. sort year
+
+. tempfile fig07_wide
+
+. save `fig07_wide'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St56069.00000c saved
+    as .dta format
+
+. 
+. 
+. * ================================================================
+. * FIGURE 7: real hourly wage trend, Austin MSA, 2005-2025.
+. * ================================================================
+. use `fig07_wide', clear
+
+. 
+. * Direct labels at each line's own last non-missing year (a line can end
+. * early if a series has a gap; label it where it actually stops).
+. foreach s in msa_musicians msa_allocc msa_graphic tx_musicians {
+  2.     quietly summarize year if !missing(`s')
+  3.     local ly_`s' = r(max)
+  4. }
+
+. generate lbl_musicians = "Austin musicians" if year==`ly_msa_musicians'
+(20 missing values generated)
+
+. generate lbl_allocc    = "All occupations" if year==`ly_msa_allocc'
+(20 missing values generated)
+
+. generate lbl_graphic   = "Graphic designers" if year==`ly_msa_graphic'
+(20 missing values generated)
+
+. generate lbl_txmusi    = "Texas musicians" if year==`ly_tx_musicians'
+(20 missing values generated)
+
+. 
+. * Title check against the plotted data: the "overtook" framing is only used
+. * if musicians are actually above the all-occupation median in the LAST
+. * plotted year (verified above against the loaded panel, not assumed), since
+. * that is what a reader can check by eye against the chart as drawn.
+. local ttl_ok = (`musi_above_allocc_2025'==1)
+
+. display as text "fig07 title check: musicians above Austin all-occ median in 
+> 2025 = `ttl_ok' (must be 1 to use the overtake framing)"
+fig07 title check: musicians above Austin all-occ median in 2025 = 1 (must be 1
+>  to use the overtake framing)
+
+. 
+. local fig7_title  = "Austin’s payroll musician wage now sits above the area m
+> edian"
+
+. local fig7_sub1   = "Real median hourly wage, 2025 dollars, OEWS May 2005 to 
+> May 2025."
+
+. local fig7_sub2   = "OEWS counts payroll jobs only and excludes the self-empl
+> oyed; the Austin line rests on about 120 jobs."
+
+. if `ttl_ok'==0 {
+.     local fig7_title = "Austin payroll musician wages against comparison occu
+> pations"
+. }
+
+. local _tlen = length("`fig7_title'")
+
+. display as text "fig07 title length check: `_tlen' characters (target under ~
+> 70)."
+fig07 title length check: 63 characters (target under ~70).
+
+. 
+. twoway ///
+>     (line msa_musicians year, lcolor("${ORANGE}") lwidth(medthick)) ///
+>     (line msa_allocc year, lcolor("${MUTED}") lpattern(solid)) ///
+>     (line msa_graphic year, lcolor("${NAVY}")) ///
+>     (line tx_musicians year, lcolor("${ORANGE}") lpattern(shortdash)) ///
+>     (scatter msa_musicians year if year==`ly_msa_musicians', mlabel(lbl_music
+> ians) mlabcolor("${ORANGE}") mlabposition(1) mlabsize(3) msymbol(none)) ///
+>     (scatter msa_allocc year if year==`ly_msa_allocc', mlabel(lbl_allocc) mla
+> bcolor("${MUTED}") mlabposition(3) mlabsize(3) msymbol(none)) ///
+>     (scatter msa_graphic year if year==`ly_msa_graphic', mlabel(lbl_graphic) 
+> mlabcolor("${NAVY}") mlabposition(5) mlabsize(3) msymbol(none)) ///
+>     (scatter tx_musicians year if year==`ly_tx_musicians', mlabel(lbl_txmusi)
+>  mlabcolor("${ORANGE}") mlabposition(1) mlabsize(3) msymbol(none)) ///
+>     , ///
+>     title("`fig7_title'", $TITLEOPT) ///
+>     subtitle("`fig7_sub1'" "`fig7_sub2'", $SUBOPT) ///
+>     xtitle("", $XTOPT) ytitle("2025 dollars per hour", $YTOPT) ///
+>     xlabel(2005(5)2025) ylabel(, angle(horizontal)) ///
+>     xscale(range(2005 2034)) ///
+>     legend(off) ///
+>     graphregion(color(white)) plotregion(margin(zero)) ///
+>     name(g_fig07, replace)
+
+. 
+. figsave, name(fig07_real_wage_trend)
+  figure -> 04_figures/fig07_real_wage_trend.png
+
+. 
+. preserve
+
+.     export delimited year msa_musicians msa_allocc msa_graphic tx_musicians /
+> //
+>         using "${OUT}/fig07_real_wage_trend.csv", replace
+file /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.booth@texas2036.org
+> /My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analysis/stata/../..
+> /03_analysis/out/fig07_real_wage_trend.csv saved
+
+. restore
+
+. 
+. display as text "fig07 complete."
+fig07 complete.
+
+. 
+. 
+. * ================================================================
+. * SECTION 3. Build the QCEW analysis panel (real average annual pay) and
+. *            answer TASK 4: industry detail for NAICS 71113 and 7115.
+. * ================================================================
+. import delimited "${EV_WAGES}/qcew_arts_industries_2001_2025.csv", ///
+>     varnames(1) case(preserve) clear
+(encoding automatically selected: ISO-8859-1)
+(15 vars, 733 obs)
+
+. 
+. * Correction check before doing anything else: 01_evidence/01_wages_oews_qcew
+> 's
+. * own documentation claims the broader NAICS 71 aggregate is never disclosure
+> -
+. * suppressed at the Austin MSA level. Verify rather than repeat that claim.
+. quietly count if geography=="Austin_RoundRock_MSA" & industry_code==71 & own_
+> code==5 & disclosure_code=="N"
+
+. local naics71_msa_supp = r(N)
+
+. if `naics71_msa_supp' > 0 {
+.     quietly levelsof year if geography=="Austin_RoundRock_MSA" & industry_cod
+> e==71 & own_code==5 & disclosure_code=="N", local(naics71_supp_years)
+.     display as error "CORRECTION to 01_evidence/01_wages_oews_qcew/_findings.
+> md and _sources.md: both state NAICS 71 (the broad Arts/Entertainment/Recreat
+> ion aggregate) is never disclosure-suppressed at the Austin MSA level. That c
+> laim does not hold: `naics71_msa_supp' area-year(s) (`naics71_supp_years') ar
+> e suppressed for NAICS 71, own_code=5, Austin MSA. This module does not use N
+> AICS 71 in any figure or registered number, so the error does not propagate i
+> nto this module's outputs, but the evidence folder's documentation should be 
+> corrected at the source."
+CORRECTION to 01_evidence/01_wages_oews_qcew/_findings.md and _sources.md: both
+>  state NAICS 71 (the broad Arts/Entertainment/Recreation aggregate) is never 
+> disclosure-suppressed at the Austin MSA level. That claim does not hold: 2 ar
+> ea-year(s) (2012 2013) are suppressed for NAICS 71, own_code=5, Austin MSA. T
+> his module does not use NAICS 71 in any figure or registered number, so the e
+> rror does not propagate into this module's outputs, but the evidence folder's
+>  documentation should be corrected at the source.
+. }
+
+. numadd, key(naics71_msa_suppression_correction) value(`naics71_msa_supp') ///
+>     formatted("`naics71_msa_supp' area-year(s) suppressed") ///
+>     unit("correction to evidence-folder documentation, not used in this modul
+> e") ///
+>     source("01_evidence/01_wages_oews_qcew/_findings.md") ///
+>     note("_findings.md and _sources.md in 01_evidence/01_wages_oews_qcew stat
+> e NAICS 71 is not disclosure-suppressed at the Austin MSA level. Direct inspe
+> ction of disclosure_code on the underlying CSV found `naics71_msa_supp' suppr
+> essed area-year(s) (`naics71_supp_years', own_code=5). This module does not u
+> se NAICS 71 for any figure or number, so the error does not affect anything r
+> egistered here, but the evidence folder's own documentation should be correct
+> ed.")
+
+. 
+. * This module's own industries: NAICS 71113 and 7115, private sector.
+. keep if inlist(industry_code, 71113, 7115) & own_code==5
+(535 observations deleted)
+
+. keep year geography industry_code industry_title annual_avg_estabs annual_avg
+> _emplvl avg_annual_pay disclosure_code
+
+. 
+. * Disclosure-suppressed rows do NOT arrive as missing: BLS zeroes out
+. * annual_avg_emplvl and avg_annual_pay (establishment counts still show) and
+. * flags disclosure_code=="N". Averaging or plotting without checking that fla
+> g
+. * would silently pull real zeros into the series and understate every affecte
+> d
+. * year, so count suppression per code first, then null the affected cells
+. * explicitly before any computation touches them.
+. quietly count if geography=="Austin_RoundRock_MSA" & industry_code==71113
+
+. local msa_n_71113 = r(N)
+
+. quietly count if geography=="Austin_RoundRock_MSA" & industry_code==71113 & d
+> isclosure_code=="N"
+
+. local msa_supp_71113 = r(N)
+
+. quietly count if geography=="Austin_RoundRock_MSA" & industry_code==7115
+
+. local msa_n_7115 = r(N)
+
+. quietly count if geography=="Austin_RoundRock_MSA" & industry_code==7115 & di
+> sclosure_code=="N"
+
+. local msa_supp_7115 = r(N)
+
+. display as text _newline "QCEW Austin MSA suppression (own_code=5): NAICS 711
+> 13 = `msa_supp_71113' of `msa_n_71113' area-years; NAICS 7115 = `msa_supp_711
+> 5' of `msa_n_7115' area-years. No MSA-level rows exist at all for 2025 (BLS m
+> etro rollups not yet finalized for that vintage), so the MSA series stops at 
+> 2024 regardless of suppression."
+
+QCEW Austin MSA suppression (own_code=5): NAICS 71113 = 8 of 24 area-years; NAI
+> CS 7115 = 10 of 24 area-years. No MSA-level rows exist at all for 2025 (BLS m
+> etro rollups not yet finalized for that vintage), so the MSA series stops at 
+> 2024 regardless of suppression.
+
+. 
+. replace annual_avg_emplvl = . if disclosure_code=="N"
+(18 real changes made, 18 to missing)
+
+. replace avg_annual_pay    = . if disclosure_code=="N"
+(18 real changes made, 18 to missing)
+
+. 
+. numadd, key(qcew_suppression_handling_note) value(1) formatted("zeros nulled 
+> where disclosure_code equals N") ///
+>     unit("methodological note") ///
+>     source("01_evidence/01_wages_oews_qcew/qcew_arts_industries_2001_2025.csv
+> ") ///
+>     note("QCEW disclosure-suppressed rows do not arrive as missing: BLS recor
+> ds annual_avg_emplvl and avg_annual_pay as 0 in those rows (establishment cou
+> nts still shown) and flags disclosure_code=N. This module explicitly replaces
+>  annual_avg_emplvl and avg_annual_pay with missing wherever disclosure_code=N
+>  before any average, trend, or registered figure, so a suppressed zero is nev
+> er averaged into a real series. Travis County, Texas, and U.S. rows (own_code
+> =5), this module's 3 headline geographies, carry no suppressed years for NAIC
+> S 71113 or 7115 across 2001-2025; suppression is confined to the Austin MSA l
+> evel.")
+
+. 
+. numadd, key(qcew_msa_suppression_71113) value(`msa_supp_71113') formatted("`m
+> sa_supp_71113' of `msa_n_71113' years") ///
+>     unit("count of suppressed area-years") ///
+>     source("01_evidence/01_wages_oews_qcew/qcew_arts_industries_2001_2025.csv
+> ") ///
+>     note("NAICS 71113 (Musical Groups and Artists), private sector, Austin-Ro
+> und Rock(-San Marcos) MSA: `msa_supp_71113' of `msa_n_71113' area-years (2001
+> -2024; no 2025 MSA rows exist yet) have annual_avg_emplvl/avg_annual_pay with
+> held (disclosure_code=N; establishment counts still shown). Travis County has
+>  no suppressed years for this code and is used as the primary sub-state geogr
+> aphy throughout this module for that reason.")
+
+. 
+. numadd, key(qcew_msa_suppression_7115) value(`msa_supp_7115') formatted("`msa
+> _supp_7115' of `msa_n_7115' years") ///
+>     unit("count of suppressed area-years") ///
+>     source("01_evidence/01_wages_oews_qcew/qcew_arts_industries_2001_2025.csv
+> ") ///
+>     note("NAICS 7115 (Independent Artists, Writers, and Performers), private 
+> sector, Austin-Round Rock(-San Marcos) MSA: `msa_supp_7115' of `msa_n_7115' a
+> rea-years (2001-2024) have annual_avg_emplvl/avg_annual_pay withheld (disclos
+> ure_code=N). Travis County has no suppressed years for this code.")
+
+. 
+. merge m:1 year using "${OUT}/cpi_annual.dta", keep(master match) nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                             0
+    Matched                               198  
+    -----------------------------------------
+
+. generate double avg_annual_pay_real = avg_annual_pay * defl
+(18 missing values generated)
+
+. label variable avg_annual_pay_real "Average annual pay per private-sector wor
+> ker, 2025 dollars"
+
+. 
+. * Keep the 3 headline geographies for the report; Austin MSA stays in the
+. * saved table (for the suppression note) but Travis County stands in for the
+. * metro throughout this module's figures and registry entries.
+. tempfile qcew_full
+
+. save `qcew_full'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St56069.00000e saved
+    as .dta format
+
+. 
+. preserve
+
+.     export delimited using "${TABDIR}/qcew_industry_detail.csv", replace
+file /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.booth@texas2036.org
+> /My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analysis/stata/../..
+> /03_analysis/out/tables/qcew_industry_detail.csv saved
+
+. restore
+
+. 
+. display as text _newline "{hline 72}"
+
+------------------------------------------------------------------------
+
+. display as text "TASK 4: QCEW industry detail, NAICS 71113 and 7115, Travis/T
+> exas/US"
+TASK 4: QCEW industry detail, NAICS 71113 and 7115, Travis/Texas/US
+
+. display as text "{hline 72}"
+------------------------------------------------------------------------
+
+. 
+. use `qcew_full', clear
+
+. keep if inlist(geography, "Travis_County","TX_state","US_national")
+(48 observations deleted)
+
+. 
+. local ind_codes "71113 7115"
+
+. local ind_slugs "musicalgroups indepartists"
+
+. local geoq_codes "Travis_County TX_state US_national"
+
+. local geoq_slugs "travis tx us"
+
+. local geoq_labs  `""Travis County" "Texas" "United States""'
+
+. 
+. local i = 0
+
+. foreach ic of local ind_codes {
+  2.     local i = `i' + 1
+  3.     local is : word `i' of `ind_slugs'
+  4.     local j = 0
+  5.     foreach gc of local geoq_codes {
+  6.         local j = `j' + 1
+  7.         local gqs : word `j' of `geoq_slugs'
+  8.         local gql : word `j' of `geoq_labs'
+  9. 
+.         quietly count if industry_code==`ic' & geography=="`gc'" & !missing(a
+> nnual_avg_estabs)
+ 10.         if r(N) < 2 {
+ 11.             display as text "  [skip] naics `ic' `gqs': insufficient years
+> "
+ 12.             continue
+ 13.         }
+ 14.         quietly summarize year if industry_code==`ic' & geography=="`gc'" 
+> & !missing(annual_avg_estabs)
+ 15.         local fy = r(min)
+ 16.         local ly = r(max)
+ 17. 
+.         foreach metric in annual_avg_estabs annual_avg_emplvl avg_annual_pay_
+> real {
+ 18.             quietly summarize `metric' if industry_code==`ic' & geography=
+> ="`gc'" & year==`fy', meanonly
+ 19.             local v0 = r(mean)
+ 20.             quietly summarize `metric' if industry_code==`ic' & geography=
+> ="`gc'" & year==`ly', meanonly
+ 21.             local v1 = r(mean)
+ 22.             if !missing(`v0') & !missing(`v1') & `v0'!=0 {
+ 23.                 local pct = (`v1'/`v0' - 1)*100
+ 24.                 local mslug = cond("`metric'"=="annual_avg_estabs","estabs
+> ", cond("`metric'"=="annual_avg_emplvl","emplvl","paynreal"))
+ 25.                 local munit = cond("`metric'"=="annual_avg_estabs","establ
+> ishments", cond("`metric'"=="annual_avg_emplvl","private-sector jobs","2025 d
+> ollars, average annual pay"))
+ 26.                 local fmt0 = cond("`metric'"=="avg_annual_pay_real", "$"+s
+> tring(round(`v0',1),"%9.0fc"), string(round(`v0',1),"%9.0fc"))
+ 27.                 local fmt1 = cond("`metric'"=="avg_annual_pay_real", "$"+s
+> tring(round(`v1',1),"%9.0fc"), string(round(`v1',1),"%9.0fc"))
+ 28.                 numadd, key(qcew_`mslug'_`is'_`gqs'_first) value(`=round(`
+> v0',1)') formatted("`fmt0'") unit("`munit'") ///
+>                     source("01_evidence/01_wages_oews_qcew/qcew_arts_industri
+> es_2001_2025.csv") ///
+>                     note("NAICS `ic', `gql', private sector, `fy'.")
+ 29.                 numadd, key(qcew_`mslug'_`is'_`gqs'_last) value(`=round(`v
+> 1',1)') formatted("`fmt1'") unit("`munit'") ///
+>                     source("01_evidence/01_wages_oews_qcew/qcew_arts_industri
+> es_2001_2025.csv") ///
+>                     note("NAICS `ic', `gql', private sector, `ly'.")
+ 30.                 numadd, key(qcew_`mslug'_pctchg_`is'_`gqs') value(`=round(
+> `pct',0.1)') ///
+>                     formatted("`=cond(`pct'>=0,"+","")'`=string(round(`pct',0
+> .1),"%4.1f")'%") unit("percent change") ///
+>                     source("01_evidence/01_wages_oews_qcew/qcew_arts_industri
+> es_2001_2025.csv") ///
+>                     note("NAICS `ic' (`is'), `gql', `munit' change `fy' to `l
+> y': `fmt0' to `fmt1'.")
+ 31.             }
+ 32.         }
+ 33.     }
+ 34. }
+
+. 
+. * Registered caveats specific to Task 4's honesty requirements.
+. quietly summarize avg_annual_pay_real if industry_code==71113 & geography=="T
+> X_state" & year==2024, meanonly
+
+. local tx71113_2024 = r(mean)
+
+. quietly summarize avg_annual_pay_real if industry_code==71113 & geography=="T
+> X_state" & year==2025, meanonly
+
+. local tx71113_2025 = r(mean)
+
+. quietly summarize avg_annual_pay_real if industry_code==71113 & geography=="U
+> S_national" & year==2024, meanonly
+
+. local us71113_2024 = r(mean)
+
+. quietly summarize avg_annual_pay_real if industry_code==71113 & geography=="U
+> S_national" & year==2025, meanonly
+
+. local us71113_2025 = r(mean)
+
+. display as text "71113 avg pay real: TX 2024=`tx71113_2024' 2025=`tx71113_202
+> 5' | US 2024=`us71113_2024' 2025=`us71113_2025'"
+71113 avg pay real: TX 2024=103177.8159348994 2025=71744 | US 2024=98618.015176
+> 92959 2025=81260
+
+. 
+. numadd, key(qcew_71113_2025_provisional_caveat) value(1) ///
+>     formatted("TX $`=string(round(`tx71113_2024',1),"%9.0fc")' to $`=string(r
+> ound(`tx71113_2025',1),"%9.0fc")'; US $`=string(round(`us71113_2024',1),"%9.0
+> fc")' to $`=string(round(`us71113_2025',1),"%9.0fc")'") ///
+>     unit("2025 dollars, average annual pay, methodological caveat") ///
+>     source("01_evidence/01_wages_oews_qcew/qcew_arts_industries_2001_2025.csv
+> ") ///
+>     note("NAICS 71113 (Musical Groups and Artists) average annual pay fell 20
+> 24-to-2025 in both Texas and the U.S. even as establishment counts kept growi
+> ng. One year of data cannot confirm a reversal of the two-decade upward trend
+> ; it may be ordinary year-to-year noise in a small industry code, or the conc
+> urrent transition to the NAICS 2022 six-digit code (711130), which BLS publis
+> hed in parallel with the legacy five-digit code for 2025 only. This project's
+>  evidence extract captured only the legacy 71113 series, not the parallel 711
+> 130 file, so no direct cross-check between the two was possible here; if the 
+> 2025 figure looks anomalous, the code transition is a plausible but unconfirm
+> ed explanation. Treat the 2025 figure as provisional until a second year conf
+> irms the direction.")
+
+. 
+. quietly summarize avg_annual_pay_real if industry_code==7115 & geography=="Tr
+> avis_County", meanonly
+
+. local travis7115_min = r(min)
+
+. local travis7115_max = r(max)
+
+. numadd, key(qcew_7115_travis_pay_volatility) value(`=round(`travis7115_max'-`
+> travis7115_min',1)') ///
+>     formatted("$`=string(round(`travis7115_min',1),"%9.0fc")' to $`=string(ro
+> und(`travis7115_max',1),"%9.0fc")'") ///
+>     unit("2025 dollars, range across 2001-2025") ///
+>     source("01_evidence/01_wages_oews_qcew/qcew_arts_industries_2001_2025.csv
+> ") ///
+>     note("NAICS 7115 (Independent Artists, Writers, and Performers) average a
+> nnual pay in Travis County, private sector, real 2025 dollars, 2001-2025 rang
+> e. This code covers independent contractors and loan-out corporations; a hand
+> ful of high-earning individuals who incorporate can swing the county average 
+> sharply. Read this as sensitive to a small number of outliers, not as a typic
+> al independent artist's income.")
+
+. 
+. display as text "20_wages_industry.do: Task 4 (QCEW) registry complete."
+20_wages_industry.do: Task 4 (QCEW) registry complete.
+
+. 
+. 
+. * ================================================================
+. * SECTION 4. Build the NES analysis panel (independent-artist nonemployer
+. *            establishments, NAICS 7115) and answer TASK 3 (substitution)
+. *            and part of TASK 5 (metro comparison).
+. * ================================================================
+. import delimited "${EV_PUMS}/nes_independent_artists_long.csv", ///
+>     varnames(1) case(preserve) clear
+(encoding automatically selected: ISO-8859-1)
+(11 vars, 1,073 obs)
+
+. keep if naics==7115
+(953 observations deleted)
+
+. * True Census disclosure suppression is flagged "D" on estab_flag/rcptot_flag
+> ;
+. * confirm none of the target cells for this module are suppressed before use.
+. quietly count if estab_flag=="D" | rcptot_flag=="D"
+
+. display as text "NES naics=7115 rows with true suppression (D flag): `r(N)' o
+> f `=_N' (expect 0 for this module's counties)."
+NES naics=7115 rows with true suppression (D flag): 0 of 120 (expect 0 for this
+>  module's counties).
+
+. assert estab_flag!="D" & rcptot_flag!="D"
+
+. 
+. merge m:1 year using "${OUT}/cpi_annual.dta", keep(master match) nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                             0
+    Matched                               120  
+    -----------------------------------------
+
+. generate double rcptot_real_thousands = rcptot_thousands * defl
+
+. generate double receipts_per_estab_real = rcptot_real_thousands*1000/estab
+
+. label variable rcptot_real_thousands "Total receipts, 2025 dollars (thousands
+> )"
+
+. label variable receipts_per_estab_real "Real receipts per establishment, 2025
+>  dollars"
+
+. 
+. * Other flag columns (rcptot_not_avail_flag: G/H/J for most rows) are Census'
+> s
+. * standard disclosure-avoidance/noise-infusion annotations, not suppression;
+. * register that once here rather than repeating it at every number below.
+. numadd, key(nes_noise_infusion_note) value(1) formatted("noise-infused, not s
+> uppressed") ///
+>     unit("methodological note") ///
+>     source("01_evidence/02_pums_nes_microdata/nes_independent_artists_long.cs
+> v") ///
+>     note("Nearly every NES row in this module carries a non-blank rcptot_not_
+> avail_flag (G, H, or J), which is Census's standard disclosure-avoidance/nois
+> e-infusion annotation on receipts, not a suppression marker; true suppression
+>  is flagged D on estab_flag/rcptot_flag and none of that occurs in the county
+> -industry cells this module uses. Small year-to-year swings in receipts may p
+> artly reflect injected statistical noise rather than only real change.")
+
+. 
+. tempfile nes_panel
+
+. save `nes_panel'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St56069.00000g saved
+    as .dta format
+
+. 
+. 
+. * ================================================================
+. * TASK 3: the substitution story. Payroll music jobs (OEWS 27-2042, Texas
+. *         and Austin MSA) against independent-artist nonemployer
+. *         establishments (NES 7115, Texas and Travis County), each indexed
+. *         to its own first available year. These count different things —
+. *         jobs against businesses, over different universes (musicians
+. *         specifically against all independent artists, writers, and
+. *         performers) — so this is a comparison of DIRECTION, never levels,
+. *         and never a combined headcount.
+. * ================================================================
+. display as text _newline "{hline 72}"
+
+------------------------------------------------------------------------
+
+. display as text "TASK 3: substitution story (payroll jobs index vs nonemploye
+> r index)"
+TASK 3: substitution story (payroll jobs index vs nonemployer index)
+
+. display as text "{hline 72}"
+------------------------------------------------------------------------
+
+. 
+. * ---- OEWS payroll jobs, Musicians and Singers, indexed to 2005=100 ----
+. use `oews_panel', clear
+
+. keep if occ_code=="27-2042" & inlist(geo_level,"State","MSA")
+(368 observations deleted)
+
+. keep year geo_level tot_emp
+
+. reshape wide tot_emp, i(year) j(geo_level) string
+(j = MSA State)
+
+Data                               Long   ->   Wide
+-----------------------------------------------------------------------------
+Number of observations               42   ->   21          
+Number of variables                   3   ->   3           
+j variable (2 values)         geo_level   ->   (dropped)
+xij variables:
+                                tot_emp   ->   tot_empMSA tot_empState
+-----------------------------------------------------------------------------
+
+. rename tot_empState emp_tx
+
+. rename tot_empMSA emp_austin
+
+. quietly summarize emp_tx if year==2005, meanonly
+
+. local base_tx = r(mean)
+
+. quietly summarize emp_austin if year==2005, meanonly
+
+. local base_austin = r(mean)
+
+. generate double idx_payroll_tx = emp_tx/`base_tx'*100
+
+. generate double idx_payroll_austin = emp_austin/`base_austin'*100
+(2 missing values generated)
+
+. sort year
+
+. tempfile payroll_idx
+
+. save `payroll_idx'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St56069.00000h saved
+    as .dta format
+
+. 
+. quietly summarize emp_tx if year==2025, meanonly
+
+. local tx_2025 = r(mean)
+
+. local tx_pct = (`tx_2025'/`base_tx'-1)*100
+
+. numadd, key(substitution_payroll_tx_pctchg) value(`=round(`tx_pct',0.1)') ///
+>     formatted("`=string(round(`tx_pct',0.1),"%4.1f")'%") unit("percent change
+> , payroll jobs, 2005-2025") ///
+>     source("01_evidence/01_wages_oews_qcew/oews_musicians_creatives_2005_2025
+> .csv") ///
+>     note("OEWS Musicians and Singers (27-2042), Texas, payroll employment 200
+> 5 (`=string(`base_tx',"%9.0fc")') to 2025 (`=string(`tx_2025',"%9.0fc")'). In
+> dexed 2005=100 for fig06.")
+
+. 
+. quietly count if !missing(emp_austin)
+
+. local n_austin_valid = r(N)
+
+. display as text "Austin MSA musician payroll employment: `n_austin_valid' non
+> -missing years out of 21; series ranges from `=string(emp_austin[1],"%9.0f")'
+>  in 2005 and is highly volatile (small base, BLS min-threshold occupation at 
+> the metro level). Registered but not charted in fig06 for that reason; Texas 
+> is the OEWS geography used in the figure."
+Austin MSA musician payroll employment: 19 non-missing years out of 21; series 
+> ranges from 150 in 2005 and is highly volatile (small base, BLS min-threshold
+>  occupation at the metro level). Registered but not charted in fig06 for that
+>  reason; Texas is the OEWS geography used in the figure.
+
+. numadd, key(substitution_payroll_austin_note) value(`n_austin_valid') formatt
+> ed("`n_austin_valid' of 21 years published") ///
+>     unit("count of non-missing years") ///
+>     source("01_evidence/01_wages_oews_qcew/oews_musicians_creatives_2005_2025
+> .csv") ///
+>     note("Austin MSA OEWS payroll employment for Musicians and Singers is sma
+> ll (roughly 100-700 jobs) and volatile, with 2 years (2014, 2015) entirely un
+> published. Because an index built on such a thin, volatile base could itself 
+> mislead, fig06 uses Texas (not Austin MSA) as the payroll-jobs geography; the
+>  Austin MSA series is registered here for the record instead of charted.")
+
+. 
+. * ---- NES nonemployer establishments, NAICS 7115, indexed to 2012=100 ----
+. use `nes_panel', clear
+
+. keep if (geo_level=="county" & county_name=="Travis") | (geo_level=="state")
+(96 observations deleted)
+
+. keep year geo_level estab
+
+. reshape wide estab, i(year) j(geo_level) string
+(j = county state)
+
+Data                               Long   ->   Wide
+-----------------------------------------------------------------------------
+Number of observations               24   ->   12          
+Number of variables                   3   ->   3           
+j variable (2 values)         geo_level   ->   (dropped)
+xij variables:
+                                  estab   ->   estabcounty estabstate
+-----------------------------------------------------------------------------
+
+. rename estabcounty estab_travis
+
+. rename estabstate estab_tx
+
+. quietly summarize estab_travis if year==2012, meanonly
+
+. local base_travis = r(mean)
+
+. quietly summarize estab_tx if year==2012, meanonly
+
+. local base_tx_nes = r(mean)
+
+. generate double idx_nonemployer_travis = estab_travis/`base_travis'*100
+
+. generate double idx_nonemployer_tx = estab_tx/`base_tx_nes'*100
+
+. sort year
+
+. tempfile nonemployer_idx
+
+. save `nonemployer_idx'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St56069.00000i saved
+    as .dta format
+
+. 
+. quietly summarize estab_travis if year==2023, meanonly
+
+. local travis_2023 = r(mean)
+
+. local travis_pct = (`travis_2023'/`base_travis'-1)*100
+
+. quietly summarize estab_tx if year==2023, meanonly
+
+. local tx_nes_2023 = r(mean)
+
+. local tx_nes_pct = (`tx_nes_2023'/`base_tx_nes'-1)*100
+
+. 
+. numadd, key(substitution_nonemployer_travis_pctchg) value(`=round(`travis_pct
+> ',0.1)') ///
+>     formatted("+`=string(round(`travis_pct',0.1),"%4.1f")'%") unit("percent c
+> hange, nonemployer establishments, 2012-2023") ///
+>     source("01_evidence/02_pums_nes_microdata/nes_independent_artists_long.cs
+> v") ///
+>     note("NES NAICS 7115 (Independent Artists, Writers, and Performers), Trav
+> is County, establishments 2012 (`=string(`base_travis',"%9.0fc")') to 2023 (`
+> =string(`travis_2023',"%9.0fc")'). Indexed 2012=100 for fig06. Counts busines
+> ses, not people; excludes anyone with no reported receipts.")
+
+. numadd, key(substitution_nonemployer_tx_pctchg) value(`=round(`tx_nes_pct',0.
+> 1)') ///
+>     formatted("+`=string(round(`tx_nes_pct',0.1),"%4.1f")'%") unit("percent c
+> hange, nonemployer establishments, 2012-2023") ///
+>     source("01_evidence/02_pums_nes_microdata/nes_independent_artists_long.cs
+> v") ///
+>     note("NES NAICS 7115, Texas statewide, establishments 2012 (`=string(`bas
+> e_tx_nes',"%9.0fc")') to 2023 (`=string(`tx_nes_2023',"%9.0fc")'). Indexed 20
+> 12=100, registered for context; not charted (fig06 uses Travis County as the 
+> sub-state nonemployer geography, pairing with Texas on the payroll side).")
+
+. 
+. numadd, key(substitution_honesty_note) value(1) formatted("directions only, n
+> ot levels") ///
+>     unit("methodological note") ///
+>     source("multiple") ///
+>     note("OEWS payroll employment counts wage-and-salary JOBS in one occupati
+> on (Musicians and Singers). NES nonemployer establishments counts BUSINESSES 
+> across a broader occupational universe (all independent artists, writers, and
+>  performers, NAICS 7115). The two series are never summed or presented as one
+>  workforce total; fig06 plots each as its own index (own first available year
+>  = 100) in its own panel so only the direction of each trend is compared.")
+
+. 
+. display as text "Task 3 complete: payroll index (Texas, 2005=100) and nonempl
+> oyer index (Travis, 2012=100) built."
+Task 3 complete: payroll index (Texas, 2005=100) and nonemployer index (Travis,
+>  2012=100) built.
+
+. 
+. 
+. * ================================================================
+. * FIGURE 6: the substitution story, two stacked panels sharing an index
+. *           scale. Two DIFFERENT quantities (payroll jobs; nonemployer
+. *           businesses) are never drawn as one line implying one total.
+. * ================================================================
+. use `payroll_idx', clear
+
+. merge 1:1 year using `nonemployer_idx', nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                             9
+        from master                         9  
+        from using                          0  
+
+    Matched                                12  
+    -----------------------------------------
+
+. sort year
+
+. 
+. * A shared y-axis range across both panels, computed from the data rather
+. * than assumed, so "sharing an index axis" is literally true of the export.
+. quietly summarize idx_payroll_tx
+
+. local ymax1 = r(max)
+
+. quietly summarize idx_nonemployer_travis
+
+. local ymax2 = r(max)
+
+. local ymax_shared = 20*ceil(max(`ymax1',`ymax2')/20) + 10
+
+. 
+. twoway (line idx_payroll_tx year, lcolor("${NAVY}") lwidth(medthick)), ///
+>     title("Payroll jobs (OEWS 27-2042, Texas)", size(3) color("${NAVY}")) ///
+>     xtitle("") ytitle("Index, 2005 = 100", size(3)) ///
+>     yscale(range(0 `ymax_shared')) ylabel(0(50)`ymax_shared', angle(horizonta
+> l)) ///
+>     xlabel(2005(5)2025) ///
+>     graphregion(color(white)) plotregion(margin(zero)) ///
+>     name(g_payroll, replace)
+
+. 
+. twoway (line idx_nonemployer_travis year, lcolor("${ORANGE}") lwidth(medthick
+> )), ///
+>     title("Nonemployer businesses (NES 7115, Travis County)", size(3) color("
+> ${ORANGE}")) ///
+>     xtitle("") ytitle("Index, 2012 = 100", size(3)) ///
+>     yscale(range(0 `ymax_shared')) ylabel(0(50)`ymax_shared', angle(horizonta
+> l)) ///
+>     xlabel(2005(5)2025) xscale(range(2005 2025)) ///
+>     graphregion(color(white)) plotregion(margin(zero)) ///
+>     name(g_nonemployer, replace)
+
+. 
+. * Title states direction for BOTH series without implying they are the same
+. * quantity or that one outnumbers the other (they measure different things).
+. local fig6_title = "Music payroll jobs fell in Texas as gig businesses multip
+> lied"
+
+. local _tlen = length("`fig6_title'")
+
+. display as text "fig06 title length check: `_tlen' characters (target under ~
+> 70)."
+fig06 title length check: 61 characters (target under ~70).
+
+. 
+. graph combine g_payroll g_nonemployer, rows(2) ycommon ///
+>     title("`fig6_title'", $TITLEOPT) ///
+>     subtitle("Each series indexed to its own first available year = 100", $SU
+> BOPT) ///
+>     graphregion(color(white)) ///
+>     name(g_fig06, replace)
+
+. 
+. figsave, name(fig06_payroll_vs_nonemployer)
+  figure -> 04_figures/fig06_payroll_vs_nonemployer.png
+
+. 
+. preserve
+
+.     export delimited year idx_payroll_tx idx_nonemployer_travis emp_tx estab_
+> travis ///
+>         using "${OUT}/fig06_payroll_vs_nonemployer.csv", replace
+file /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.booth@texas2036.org
+> /My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analysis/stata/../..
+> /03_analysis/out/fig06_payroll_vs_nonemployer.csv saved
+
+. restore
+
+. 
+. display as text "fig06 complete."
+fig06 complete.
+
+. 
+. 
+. * ================================================================
+. * SECTION 5. Population denominators (Census PEP Vintage 2025) for TASK 5.
+. *            NOTE: this file covers 2020-2025 only (post-2020-Census
+. *            vintage). The NES panel runs 2012-2023. The true overlap for a
+. *            population-denominated rate is 2020-2023, not the full
+. *            2012-2023 NES window; this module computes the per-10,000-
+. *            residents series honestly over that overlap and says so in the
+. *            figure subtitle and registry rather than inventing pre-2020
+. *            populations or holding population constant across the decade.
+. * ================================================================
+. use "${DATAX}/Census_PEP_TX_County_Components.dta", clear
+(PEP Vintage 2025: TX county population + components of change (county-year))
+
+. generate county_name = subinstr(ctyname, " County", "", .)
+
+. keep county_name year population
+
+. quietly summarize year
+
+. display as text _newline "Census_PEP_TX_County_Components.dta year range: `r(
+> min)'-`r(max)' (`=r(max)-r(min)+1' years). NES establishment panel runs 2012-
+> 2023; per-capita overlap is limited to `r(min)'-2023."
+
+Census_PEP_TX_County_Components.dta year range: 2020-2025 (6 years). NES establ
+> ishment panel runs 2012-2023; per-capita overlap is limited to 2020-2023.
+
+. local pep_min = r(min)
+
+. local pep_max = r(max)
+
+. keep if inlist(county_name,"Travis","Harris","Dallas","Bexar")
+(1,500 observations deleted)
+
+. tempfile pep_panel
+
+. save `pep_panel'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St56069.00000k saved
+    as .dta format
+
+. 
+. numadd, key(pep_population_coverage_gap) value(1) formatted("PEP covers `pep_
+> min'-`pep_max' only") ///
+>     unit("methodological limitation") ///
+>     source("03_analysis/data/external/Census_PEP_TX_County_Components.dta") /
+> //
+>     note("This project's Census PEP extract is Vintage 2025, which covers cou
+> nty population only for `pep_min'-`pep_max' (the post-2020-Census series; spl
+> icing in an older vintage's 2012-2019 estimates would introduce a vintage-met
+> hodology discontinuity at the seam rather than a clean series). The NES nonem
+> ployer panel runs 2012-2023. Establishments-per-10,000-residents in fig08 and
+>  its registry entries therefore cover `pep_min'-2023, the true overlap, not t
+> he full 2012-2023 NES window; raw establishment counts and real receipts per 
+> establishment (which need no population denominator) are reported for the ful
+> l 2012-2023 span instead.")
+
+. 
+. 
+. * ================================================================
+. * TASK 5: metro comparison of nonemployer growth. Travis against Harris,
+. *         Dallas, and Bexar, NAICS 7115, 2012-2023: establishments per
+. *         10,000 residents (2020-2023, see the coverage-gap note above) and
+. *         real receipts per establishment (full 2012-2023).
+. * ================================================================
+. display as text _newline "{hline 72}"
+
+------------------------------------------------------------------------
+
+. display as text "TASK 5: metro nonemployer comparison, Travis/Harris/Dallas/B
+> exar"
+TASK 5: metro nonemployer comparison, Travis/Harris/Dallas/Bexar
+
+. display as text "{hline 72}"
+------------------------------------------------------------------------
+
+. 
+. use `nes_panel', clear
+
+. keep if geo_level=="county" & inlist(county_name,"Travis","Harris","Dallas","
+> Bexar")
+(72 observations deleted)
+
+. keep year county_name estab rcptot_real_thousands receipts_per_estab_real
+
+. 
+. preserve
+
+.     export delimited using "${TABDIR}/nes_metro_detail.csv", replace
+file /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.booth@texas2036.org
+> /My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analysis/stata/../..
+> /03_analysis/out/tables/nes_metro_detail.csv saved
+
+. restore
+
+. 
+. * ---- real receipts per establishment, full 2012-2023, all 4 counties ----
+. foreach c in Travis Harris Dallas Bexar {
+  2.     quietly summarize year if county_name=="`c'"
+  3.     local fy = r(min)
+  4.     local ly = r(max)
+  5.     quietly summarize receipts_per_estab_real if county_name=="`c'" & year
+> ==`fy', meanonly
+  6.     local r0 = r(mean)
+  7.     quietly summarize receipts_per_estab_real if county_name=="`c'" & year
+> ==`ly', meanonly
+  8.     local r1 = r(mean)
+  9.     local rpct = (`r1'/`r0'-1)*100
+ 10.     local cl = lower("`c'")
+ 11.     numadd, key(nes_receipts_per_estab_`cl'_first) value(`=round(`r0',1)')
+>  formatted("$`=string(round(`r0',1),"%9.0fc")'") ///
+>         unit("2025 dollars per establishment") source("01_evidence/02_pums_ne
+> s_microdata/nes_independent_artists_long.csv") ///
+>         note("NES NAICS 7115, `c' County, real receipts per establishment, `f
+> y'.")
+ 12.     numadd, key(nes_receipts_per_estab_`cl'_last) value(`=round(`r1',1)') 
+> formatted("$`=string(round(`r1',1),"%9.0fc")'") ///
+>         unit("2025 dollars per establishment") source("01_evidence/02_pums_ne
+> s_microdata/nes_independent_artists_long.csv") ///
+>         note("NES NAICS 7115, `c' County, real receipts per establishment, `l
+> y'.")
+ 13.     numadd, key(nes_receipts_per_estab_pctchg_`cl') value(`=round(`rpct',0
+> .1)') ///
+>         formatted("`=cond(`rpct'>=0,"+","")'`=string(round(`rpct',0.1),"%4.1f
+> ")'%") unit("percent change, real receipts per establishment") ///
+>         source("01_evidence/02_pums_nes_microdata/nes_independent_artists_lon
+> g.csv") ///
+>         note("NES NAICS 7115, `c' County, real receipts per establishment cha
+> nge `fy' to `ly': $`=string(round(`r0',1),"%9.0fc")' to $`=string(round(`r1',
+> 1),"%9.0fc")', 2025 dollars.")
+ 14. 
+.     quietly summarize estab if county_name=="`c'" & year==`fy', meanonly
+ 15.     local e0 = r(mean)
+ 16.     quietly summarize estab if county_name=="`c'" & year==`ly', meanonly
+ 17.     local e1 = r(mean)
+ 18.     local epct = (`e1'/`e0'-1)*100
+ 19.     numadd, key(nes_estab_pctchg_`cl') value(`=round(`epct',0.1)') ///
+>         formatted("+`=string(round(`epct',0.1),"%4.1f")'%") unit("percent cha
+> nge, nonemployer establishments, 2012-2023") ///
+>         source("01_evidence/02_pums_nes_microdata/nes_independent_artists_lon
+> g.csv") ///
+>         note("NES NAICS 7115, `c' County, establishments `fy' (`=string(`e0',
+> "%9.0fc")') to `ly' (`=string(`e1',"%9.0fc")').")
+ 20. }
+
+. 
+. * ---- establishments per 10,000 residents, 2020-2023 overlap only ----
+. merge m:1 county_name year using `pep_panel', keep(match master) generate(mrg
+> _pep)
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                            32
+        from master                        32  (mrg_pep==1)
+        from using                          0  (mrg_pep==2)
+
+    Matched                                16  (mrg_pep==3)
+    -----------------------------------------
+
+. quietly count if mrg_pep==1
+
+. display as text "NES county-years without a PEP population match (expected ou
+> tside 2020-2023): `r(N)'"
+NES county-years without a PEP population match (expected outside 2020-2023): 3
+> 2
+
+. generate double estab_per10k = estab*10000/population if mrg_pep==3
+(32 missing values generated)
+
+. 
+. foreach c in Travis Harris Dallas Bexar {
+  2.     local cl = lower("`c'")
+  3.     quietly summarize estab_per10k if county_name=="`c'" & year==2020, mea
+> nonly
+  4.     local p0 = r(mean)
+  5.     quietly summarize estab_per10k if county_name=="`c'" & year==2023, mea
+> nonly
+  6.     local p1 = r(mean)
+  7.     if !missing(`p0') & !missing(`p1') {
+  8.         numadd, key(nes_estab_per10k_`cl'_2020) value(`=round(`p0',0.01)')
+>  formatted("`=string(round(`p0',0.01),"%4.2f")'") ///
+>             unit("nonemployer establishments per 10,000 residents") source("m
+> ultiple") ///
+>             note("NES NAICS 7115 establishments in `c' County per 10,000 resi
+> dents, 2020. Population: Census PEP Vintage 2025.")
+  9.         numadd, key(nes_estab_per10k_`cl'_2023) value(`=round(`p1',0.01)')
+>  formatted("`=string(round(`p1',0.01),"%4.2f")'") ///
+>             unit("nonemployer establishments per 10,000 residents") source("m
+> ultiple") ///
+>             note("NES NAICS 7115 establishments in `c' County per 10,000 resi
+> dents, 2023. Population: Census PEP Vintage 2025.")
+ 10.     }
+ 11. }
+
+. 
+. * Rank Travis among the 4 for 2023 (needed to write a title that is literally
+. * true; verify rather than assume which county actually ranks highest).
+. preserve
+
+.     keep if year==2023 & !missing(estab_per10k)
+(44 observations deleted)
+
+.     sort estab_per10k
+
+.     display as text _newline "2023 establishments per 10,000 residents, ascen
+> ding:"
+
+2023 establishments per 10,000 residents, ascending:
+
+.     list county_name estab_per10k, clean
+
+       county~e   estab~10k  
+  1.     Harris   22.601826  
+  2.      Bexar   25.104666  
+  3.     Dallas   28.630545  
+  4.     Travis   64.258785  
+
+.     local nrows = _N
+
+.     local top_county = county_name[`nrows']
+
+. restore
+
+. display as text "Highest per-10,000 rate in 2023: `top_county'"
+Highest per-10,000 rate in 2023: Travis
+
+. 
+. tempfile fig08_data
+
+. save `fig08_data'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St56069.00000n saved
+    as .dta format
+
+. 
+. 
+. * ================================================================
+. * FIGURE 8: independent-artist nonemployer establishments per 10,000
+. *           residents, Travis/Harris/Dallas/Bexar. Population data available
+. *           only 2020-2023 in this project's extract (see the registered
+. *           coverage-gap note); the subtitle states the true window.
+. * ================================================================
+. use `fig08_data', clear
+
+. keep if !missing(estab_per10k)
+(32 observations deleted)
+
+. keep year county_name estab_per10k
+
+. reshape wide estab_per10k, i(year) j(county_name) string
+(j = Bexar Dallas Harris Travis)
+
+Data                               Long   ->   Wide
+-----------------------------------------------------------------------------
+Number of observations               16   ->   4           
+Number of variables                   3   ->   5           
+j variable (4 values)       county_name   ->   (dropped)
+xij variables:
+                           estab_per10k   ->   estab_per10kBexar estab_per10kDa
+> llas ... estab_per10kTravis
+-----------------------------------------------------------------------------
+
+. rename estab_per10kTravis pc_travis
+
+. rename estab_per10kHarris pc_harris
+
+. rename estab_per10kDallas pc_dallas
+
+. rename estab_per10kBexar pc_bexar
+
+. sort year
+
+. 
+. foreach s in pc_travis pc_harris pc_dallas pc_bexar {
+  2.     quietly summarize year if !missing(`s')
+  3.     local ly_`s' = r(max)
+  4. }
+
+. generate lbl_travis = "Travis" if year==`ly_pc_travis'
+(3 missing values generated)
+
+. generate lbl_harris = "Harris" if year==`ly_pc_harris'
+(3 missing values generated)
+
+. generate lbl_dallas = "Dallas" if year==`ly_pc_dallas'
+(3 missing values generated)
+
+. generate lbl_bexar  = "Bexar"  if year==`ly_pc_bexar'
+(3 missing values generated)
+
+. 
+. * Verify the title against the actual last-year ranking before writing it.
+. local r_travis = pc_travis[_N]
+
+. local r_harris = pc_harris[_N]
+
+. local r_dallas = pc_dallas[_N]
+
+. local r_bexar  = pc_bexar[_N]
+
+. display as text "2023 per-10,000 rates: Travis `r_travis' Harris `r_harris' D
+> allas `r_dallas' Bexar `r_bexar'"
+2023 per-10,000 rates: Travis 64.25878496509955 Harris 22.6018261589333 Dallas 
+> 28.63054539084619 Bexar 25.10466619545871
+
+. local travis_is_max = (`r_travis' >= `r_harris' & `r_travis' >= `r_dallas' & 
+> `r_travis' >= `r_bexar')
+
+. 
+. if `travis_is_max' {
+.     local fig8_title = "Travis County has the most independent-artist busines
+> ses per capita"
+. }
+
+. else {
+.     local fig8_title = "Travis County’s independent-artist businesses, agains
+> t 3 big metros"
+. }
+
+. local _tlen = length("`fig8_title'")
+
+. display as text "fig08 title length check: `_tlen' characters."
+fig08 title length check: 67 characters.
+
+. 
+. twoway ///
+>     (line pc_travis year, lcolor("${ORANGE}") lwidth(medthick)) ///
+>     (line pc_harris year, lcolor("${NAVY}")) ///
+>     (line pc_dallas year, lcolor("${BLUE}")) ///
+>     (line pc_bexar year, lcolor("${MUTED}")) ///
+>     (scatter pc_travis year if year==`ly_pc_travis', mlabel(lbl_travis) mlabc
+> olor("${ORANGE}") mlabposition(3) mlabsize(3) msymbol(none)) ///
+>     (scatter pc_harris year if year==`ly_pc_harris', mlabel(lbl_harris) mlabc
+> olor("${NAVY}") mlabposition(3) mlabsize(3) msymbol(none)) ///
+>     (scatter pc_dallas year if year==`ly_pc_dallas', mlabel(lbl_dallas) mlabc
+> olor("${BLUE}") mlabposition(3) mlabsize(3) msymbol(none)) ///
+>     (scatter pc_bexar year if year==`ly_pc_bexar', mlabel(lbl_bexar) mlabcolo
+> r("${MUTED}") mlabposition(3) mlabsize(3) msymbol(none)) ///
+>     , ///
+>     title("`fig8_title'", $TITLEOPT) ///
+>     subtitle("Nonemployer establishments (NAICS 7115) per 10,000 residents, 2
+> 020-2023", $SUBOPT) ///
+>     xtitle("", $XTOPT) ytitle("Establishments per 10,000 residents", $YTOPT) 
+> ///
+>     xlabel(2020(1)2023) xscale(range(2020 2023.6)) ///
+>     ylabel(, angle(horizontal)) ///
+>     legend(off) ///
+>     graphregion(color(white)) plotregion(margin(zero)) ///
+>     name(g_fig08, replace)
+
+. 
+. figsave, name(fig08_metro_nonemployer)
+  figure -> 04_figures/fig08_metro_nonemployer.png
+
+. 
+. preserve
+
+.     export delimited year pc_travis pc_harris pc_dallas pc_bexar ///
+>         using "${OUT}/fig08_metro_nonemployer.csv", replace
+file /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.booth@texas2036.org
+> /My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analysis/stata/../..
+> /03_analysis/out/fig08_metro_nonemployer.csv saved
+
+. restore
+
+. 
+. display as text "fig08 complete."
+fig08 complete.
+
+. 
+. numadd, key(fig08_year_range_caveat) value(1) formatted("2020-2023, not 2012-
+> 2023") ///
+>     unit("methodological limitation") ///
+>     source("03_analysis/data/external/Census_PEP_TX_County_Components.dta") /
+> //
+>     note("fig08 plots 2020-2023 (the years with a real Census PEP Vintage 202
+> 5 population match), not the full 2012-2023 NES window, because this project'
+> s population extract does not reach back to 2012. Raw establishment growth fo
+> r the full 2012-2023 window is registered separately (nes_estab_pctchg_* keys
+> ) and is not population-denominated.")
+
+. 
+. 
+. * ================================================================
+. * Done.
+. * ================================================================
+. display as text _newline "{hline 72}"
+
+------------------------------------------------------------------------
+
+. display as text "20_wages_industry.do complete"
+20_wages_industry.do complete
+
+. display as text "{hline 72}"
+------------------------------------------------------------------------
+
+. 
+end of do-file

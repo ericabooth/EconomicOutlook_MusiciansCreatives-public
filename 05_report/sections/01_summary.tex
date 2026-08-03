@@ -1,0 +1,200 @@
+% Executive summary, one page. Every quantity is a macro from
+% canonical_numbers.tex, so the text cannot drift from the analysis.
+\section*{Summary}
+
+Austin calls itself the Live Music Capital of the World, and both the city and
+the state spend public money on that claim. This study asks a narrower question
+than the slogan: what can be measured about how the people who work in music are
+actually doing, and how do the programs aimed at them compare with what other
+states and cities run?
+
+The city and the state have both built real institutions for music. Those
+institutions are small, unevenly administered, and pointed more at venues and
+tourism than at what musicians earn. The people they exist to serve are also
+largely invisible in the statistics governments use to make decisions.
+
+\vspace{5pt}
+\noindent\stattile{0.235\textwidth}{\NPumsAustinMusMedpernpPos}{Median earnings from all work, Austin musicians, 2025 dollars}
+\stattile{0.235\textwidth}{\NPumsAustinMusSelfemp}{Of Austin musicians work for themselves, against \NPumsAustinAllworkSelfemp\ of all Austin workers}
+\stattile{0.235\textwidth}{\NCityLmfShareOfHotFyTwoFive}{Of Austin hotel-tax revenue reaches the Live Music Fund}
+\stattile{0.235\textwidth}{\NVenueCorePctTwoZeroOneNineTwoZeroTwoFive}{Real change in receipts at core live-music venues, 2019 to 2025}
+\par\vspace{5pt}
+\srcnote{Sources for the four tiles: Austin musician earnings and self-employment, U.S.\ Census Bureau American Community Survey 2020--2024 five-year Public Use Microdata Sample for Texas, Musicians and Singers only (occupation code 2752), \NPumsAustinMusNPos\ Austin records pooled over five years, downloaded from \url{https://www2.census.gov/programs-surveys/acs/data/pums/2024/5-Year/}. Live Music Fund share of hotel-tax revenue, City of Austin open budget data on data.austintexas.gov, fiscal 2025 actuals. Real change in core live-music venue receipts, Texas Comptroller Mixed Beverage Gross Receipts (dataset \texttt{naix-2893} at \url{https://data.texas.gov/}) matched to \NVenuePanelIsCurated\ named Austin live-music rooms, deflated to 2025 dollars with the national consumer price index. Each source is developed in the section that uses it and listed in the technical appendix.}
+\par\vspace{6pt}
+
+\subsection*{Austin musicians earn about half what other Austin workers earn, and hours worked do not account for it}
+
+Austin musicians report median earnings from work of \NPumsAustinMusMedpernpPos\
+(\NPumsAustinMusMedpernpPosMoe) against \NPumsAustinAllworkMedpernpPos\ for all
+Austin workers, both measured in the American Community Survey among employed
+adults aged 18 to 64 with positive earnings (developed in Section~\ref{sec:earnings}). Their median usual week is
+\NPumsAustinMusMedwkhp\ hours and their median year \NPumsAustinMusMedwkwn\
+weeks, matching the Austin workforce on both. Across employed Texans, a model
+that holds age, sex, education, hours, weeks and metro area fixed still places
+music occupations \NPumsRegMusicPctgap\ below otherwise similar workers, so
+schedule length is not where the gap comes from. That figure is an association
+among the characteristics the survey records, not the cost of choosing music.
+Comparing Austin with other large Texas metros requires a broader occupation
+definition, because Musicians and Singers alone yield too few records for a
+Houston or Dallas-Fort Worth cell. On the broader music-occupation definition
+(Musicians and Singers plus Music Directors and Composers), Austin's median is
+\NPumsMetroAustinMusicMedpernp, against \NPumsMetroDfwMusicMedpernp\ in
+Dallas-Fort Worth and \NPumsMetroHoustonMusicMedpernp\ in Houston. Austin has
+the lowest point estimate, but the Austin sample is small and the margins
+overlap in both pairwise comparisons, so the ordering is not statistically firm;
+the author makes no claim beyond that no comparison here supports the assumption
+that Austin pays musicians better than the other large Texas metros.
+
+\subsection*{Most of this workforce is self-employed, which is why the official numbers miss it}
+
+The American Community Survey shows that \NPumsAustinMusSelfemp\ of Austin
+musicians work for themselves, against \NPumsAustinAllworkSelfemp\ of all
+Austin workers.\footnote{Class-of-worker categories 6 and 7 (self-employed,
+unincorporated and incorporated), Musicians and Singers only (occupation code
+2752), employed 18--64 with positive earnings, ACS 2020--2024 five-year PUMS.
+See Section~\ref{sec:payroll} for the composition of that self-employed group
+and its trend since 2005.} The Bureau of Labor Statistics Occupational
+Employment and Wage Statistics program builds its wage series from employer
+reports rather than household responses, so it can see only payroll
+jobs.\footnote{OEWS is a semi-annual establishment survey administered by BLS
+and the state workforce agencies; establishments report the wage of every
+worker on their payroll but report nothing for the self-employed, who fall
+outside the sampling frame. Program documentation:
+\url{https://www.bls.gov/oes/oes_ques.htm}. BLS also does not publish an
+\emph{annual} musician wage for any city or year, because the work is too
+irregular to annualise from an hourly rate.} That survey records
+\NEmpPayrollMusiciansAustinLast\ musician jobs in the Austin metro in 2025, a
+count much smaller than the household survey implies because self-employed
+musicians never enter the payroll survey at all (see Section~\ref{sec:payroll}). The City of Austin bought a
+third series, from the Creative Vitality Suite database, which combines federal
+wage data with self-employment records and so does count self-employed
+earnings.\footnote{City of Austin open data,
+\textit{Median Earnings for Creative Occupations}, dataset
+\texttt{2qxc-8cme} at \url{https://data.austintexas.gov/}, retrieved 1 August
+2026. Creative Vitality Suite is maintained by Employment and Cultural Vitality
+Data (EMSI). The city's series covers 2016 and 2017 only.} That series put 2017
+musician pay at \NColAnchorCityWageVsOewsTwoZeroOneSeven\ of the federal figure
+for the same occupation and year, direct evidence of what payroll data miss (see Section~\ref{sec:measurement}).
+
+\subsection*{Live-music rooms are being lost; the ones that stay open trade like the market around them}
+
+The Texas Comptroller receives a monthly filing from every business selling
+liquor, reporting the location's gross mixed-beverage receipts. This study
+tracks the subset of those filings that come from named Austin live-music
+rooms.\footnote{The venue panel comprises \NVenuePanelIsCurated\ Austin
+live-music rooms tracked monthly from January 2007 through June 2026, matched
+to Comptroller filings by taxpayer name and location address, and deflated to
+2025 dollars with the national consumer price index. It is a \emph{curated} set
+rather than a census, so it over-represents established rooms in the central
+city and excludes venues that hold no liquor permit. Receipts measure alcohol
+sales at each room, not attendance, ticket revenue or what performers were
+paid. Filings by festival companies operating under venue-linked names are
+excluded from the panel; leaving them in would make one room appear to grow
+more than thirteenfold. The panel and its construction are described in
+Section~\ref{sec:venues} and the technical appendix.} Between 2019 and 2025,
+receipts changed \NVenueCorePctTwoZeroOneNineTwoZeroTwoFive\ at the panel's
+core live-music tier (rooms whose main business is live performance) and
+\NVenueCitywidePctTwoZeroOneNineTwoZeroTwoFive\ across the full citywide
+mixed-beverage universe. The two totals do not compare room for room, because
+the city added
+\NVenueCitywidePermitsPctTwoZeroOneNineTwoZeroTwoFive\ more permit locations
+over the period; the tracked rooms held
+\NVenuePanelShareTwoZeroOneNine\ of citywide receipts in 2019 and
+\NVenuePanelShareTwoZeroTwoFive\ in 2025. Once each venue's own trend and
+seasonality are absorbed, live-music rooms and other bars trade
+indistinguishably on log monthly receipts after March 2020, an average
+difference of \NVenueDidPct\ with a 95 percent interval running from about 14
+percent below to about 17 percent above the rest of the market
+(Section~\ref{sec:venues}). The aggregate decline is therefore explained by
+which rooms exist, not by weaker per-room trade among survivors. What changed is which
+rooms exist: \NVenueExitsTwoZeroTwoZeroTwoZeroTwoSixCore\ exits from the tracked
+panel from 2020 onward were core live-music rooms, and the panel's net additions
+since 2016 come to \NVenueNetAddsTwoZeroOneSixTwoZeroTwoSix\ rooms against
+\NVenueNetAddsTwoZeroZeroSevenTwoZeroOneFive\ over the previous nine years, a
+comparison Section~\ref{sec:venues} qualifies because the earlier figure counts
+every room already trading when the receipts file opens in 2007.
+
+\subsection*{Census respondents expect to stay in music; renters are far less sure they will stay in Austin}
+
+The 2022 Greater Austin Music Census surveyed \NCensusNRespondents\ people
+working in and around Austin's music economy: musicians and other music
+creatives (\NCensusNSectorCreative\ respondents), music-industry workers such
+as managers, technicians and studio staff (\NCensusNSectorIndustry), and venue
+operators or independent promoters (\NCensusNSectorPresenter), plus a smaller
+group outside those three sectors.\footnote{Sound Music Cities and City of
+Austin Music \& Entertainment Division, \textit{Greater Austin Music Census},
+2022. The instrument was distributed through music-community mailing lists and
+city channels between 15 July and 12 September 2022. Respondent-level microdata
+downloaded from City of Austin open data, dataset \texttt{an3p-3yqx}, retrieved
+1 August 2026. It is a self-selected online sample rather than a probability
+sample of Austin's music workforce, so its shares describe the people who
+answered and no margin of error can be computed for any of them; a
+probability-sample benchmark for the same population does not exist. This study
+treats the census as the best available direct measurement of the workforce's
+non-earnings answers, with that caveat carried into every figure it produces.}
+Of \NCensusRetentionDenom\ respondents who answered both three-year questions,
+\NCensusIntendContinueMusic\ expected to still be working in music in three
+years and \NCensusIntendStayAustin\ expected to still live in greater Austin.
+Housing tenure separates the Austin-retention answer more sharply than any other
+characteristic tested:
+\NCensusStayHousingTenureHomeowner\ of homeowners expected to stay against
+\NCensusStayHousingTenureRenter\ of renters, with years of experience the next
+strongest discriminant (Section~\ref{sec:census}). Most respondents who did not
+say yes to Austin answered ``unsure'' rather than ``no.''
+
+\subsection*{Austin and Texas have built real music programs; the record shows how small and uneven they are}
+
+The left column is what the record shows has been built, the right what the same
+record shows about size and reach.
+
+\vspace{3pt}
+{\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.0}
+\noindent\begin{tabular}{@{}P{0.485\textwidth} P{0.485\textwidth}@{}}
+\toprule
+\textbf{What is working} & \textbf{What is not} \\
+\midrule
+Austin runs a dedicated public fund for musicians, financed by a fixed share of
+hotel-tax revenue rather than by an annual appropriation.
+& The fund is \NCityLmfShareOfHotFyTwoFive\ of city hotel-tax revenue, and
+historic preservation draws \NCityHpToLmfRatioFyTwoFive\ as much from the same
+tax, because it draws on hotel-tax money beyond the equal share of the 2019
+increase the ordinance gave each fund (see Section~\ref{sec:city}). \\
+\rowrule
+Texas is the only state compared here that subsidises operating music venues,
+and in the one rebate round with a published total it awarded its full annual
+dedication.
+& Through the same state office, Texas has dedicated moving-image money against
+music money for the 2026--27 biennium at \NTxFilmMusicRatio\ (see Section~\ref{sec:state}). \\
+\rowrule
+Federal shuttered-venue grants brought \NSvogAustinTotal\ in nominal award
+dollars to Austin-area recipients, a one-off federal program in which motion
+picture theatre operators took slightly more than live venues did (see Section~\ref{sec:state}).
+& Neither the 2017 extended-hours pilot nor the 2024 venue grants left a
+detectable mark on venue receipts (see Section~\ref{sec:venues}). \\
+\rowrule
+Health coverage among Austin musicians is \NPumsAustinMusHicov\
+(\NPumsAustinMusHicovMoe), indistinguishable within that margin from
+\NPumsAustinAllworkHicov\ for all Austin workers.
+& Neither the city nor the state provides that coverage, and private coverage
+runs \NPumsAustinMusPrivcov\ for musicians against
+\NPumsAustinAllworkPrivcov\ for the wider Austin workforce (see Section~\ref{sec:earnings}). \\
+\rowrule
+The city publishes an awardee list for each Live Music Fund cycle.
+& What a musician could receive depended heavily on the year they applied, and
+one cycle was skipped entirely (see Section~\ref{sec:city}). \\
+\rowrule
+Austin rents and home values have fallen further from their peaks than in any
+comparison metro (see Section~\ref{sec:costs}).
+& Austin's own music census has not asked a musician what they earn since the
+2014 fielding, whose income questions covered calendar 2013 (see Section~\ref{sec:measurement}). \\
+\bottomrule
+\end{tabular}
+}
+
+\vspace{6pt}
+{\footnotesize\itshape The state Comptroller records every venue's alcohol sales
+and the city records what it spends. No public source records what a musician is
+paid for a night's work, the thing the argument is actually about. This study
+takes no position in that argument.}

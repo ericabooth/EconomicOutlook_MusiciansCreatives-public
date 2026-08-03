@@ -1,0 +1,247 @@
+% Section 4: the shift from payroll to self-employment, seen in two federal
+% series that count different things. The honesty constraint is not to present
+% them as one workforce total.
+\section{Payroll music jobs have fallen; solo creative businesses have risen}
+\label{sec:payroll}
+
+The Bureau of Labor Statistics has counted fewer payroll musician jobs in Texas
+every survey vintage since 2005, and higher real hourly wages for the jobs that
+remain.\footnote{The Occupational Employment and Wage Statistics program
+(OEWS) is a semi-annual establishment survey the U.S.\ Bureau of Labor
+Statistics runs jointly with each state workforce agency. Sampled employers
+report the occupation and wage of every worker on their payroll; a
+self-employed musician, a musician paid off the books, and a musician
+performing under an independent-contractor arrangement never enter the
+sampling frame at all. This section therefore reads OEWS as a payroll-only
+ceiling on measured wage-and-salary music work rather than as a count of the
+workforce. Program documentation at \url{https://www.bls.gov/oes/oes_ques.htm};
+the tables read here are the May 2005 through May 2025 state and metropolitan
+estimates for Musicians and Singers, Standard Occupational Classification code
+27-2042, published at \url{https://www.bls.gov/oes/tables.htm}. BLS does not
+publish an annual wage for this occupation in most cells because the work is
+too irregular to annualise from an hourly rate.} On its own that pattern reads
+as an occupation getting smaller and better paid. Set against the household
+microdata in Section~\ref{sec:earnings}, a second reading opens: the same
+work has moved out of payroll and into self-employment, which no payroll
+wage series covers. The last subsection here tests that reading against the
+timing of the two series and finds it weaker than a first look suggests.
+
+In Texas, OEWS records \NEmpPayrollMusiciansTxFirst\ payroll musician jobs in
+2005 and \NEmpPayrollMusiciansTxLast\ in 2025, a change of
+\NEmpPayrollPctchgMusiciansTx\ over twenty years. The same program records a
+national change of \NEmpPayrollPctchgMusiciansUs\ over the same window. For
+the payroll jobs that remained in Texas, the real median hourly wage rose
+\NWageHourlyPctchgMusiciansTx, from \NWageHourlyRealMusiciansTxFirst\ in 2005
+to \NWageHourlyRealMusiciansTxLast\ in 2025, both in 2025 dollars
+(Figure~\ref{fig:wagetrend}).\footnote{Every percentage change quoted in
+this section is an endpoint change over the whole span,
+\(100\,(X_T / X_0 - 1)\), where \(X_0\) is the first year with a published
+value and \(X_T\) the last, so it is not an annual rate and it says nothing
+about the path between the two years. Job counts are compared as published,
+because a count of jobs is not a dollar figure and nothing in it needs
+deflating. The wage is deflated before it is differenced,
+\(w^{\mathrm{real}}_y = w_y \times d_y\) with \(d_y = C_{2025}/C_y\) the ratio
+of national consumer price index annual averages, so the change reported here
+is the change in purchasing power and not the change in the posted wage. Where
+a series has no published value for a year, the endpoints move inward to the
+first and last years that do, which for the Austin musician wage shortens the
+window. These are the OEWS program's own published medians and counts; BLS
+publishes no margin of error for these cells, so none is shown.}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{fig07_real_wage_trend.png}
+\caption{Real median hourly wage for selected occupations, Austin metro and
+Texas, 2005--2025, in 2025 dollars. Source: U.S.\ Bureau of Labor Statistics,
+Occupational Employment and Wage Statistics, May 2005 through May 2025 tables
+for Musicians and Singers (SOC 27-2042), deflated with the national consumer
+price index (CPI-U, annual average). How to read it: the axis does not start
+at zero. The Austin musician line swings widely because it rests on between
+about 100 and 700 payroll jobs depending on the year, so movements of several
+dollars between years reflect sampling variation rather than changes in what
+Austin musicians are paid. Caveat: OEWS excludes the self-employed by design,
+so this series describes a small and better-paid slice of the occupation
+rather than the occupation itself.}
+\label{fig:wagetrend}
+\end{figure}
+
+\subsection{Solo creative businesses grew while payroll music jobs fell}
+
+The U.S.\ Census Bureau publishes a separate account of solo creative work
+through Nonemployer Statistics, an administrative tabulation the Bureau builds
+from federal tax filings rather than from a survey.\footnote{Nonemployer
+Statistics counts business establishments with no paid employees and at least
+one thousand dollars of annual receipts (one dollar in construction), drawn
+from the Internal Revenue Service's business tax records: Form 1040 Schedule C
+for sole proprietors, Form 1065 for partnerships, and the corporate returns
+1120 and 1120S. The sampling frame is therefore tax filings, not households
+or payrolls, so the file captures registered solo businesses that OEWS
+structurally cannot see but omits cash gig work that never enters the tax
+record. The industry code used here, NAICS 7115, is Independent Artists,
+Writers, and Performers, a category broader than musicians alone. County-level
+release: \url{https://www2.census.gov/programs-surveys/nonemployer-statistics/datasets/2023/historical-datasets/nonemp23co.zip}.
+Program documentation:
+\url{https://www.census.gov/programs-surveys/nonemployer-statistics.html}.
+The Census Bureau protects county cells with noise infusion, adding small
+random errors to published values instead of suppressing them, which matters
+more for a county cell than for a state one.} That series counts a different
+unit (a solo business, not a job) over a different universe (all independent
+artists, writers and performers, not musicians alone) than OEWS. The two
+files are therefore not additive, and Figure~\ref{fig:substitution} draws
+them as separate panels so no reader adds them.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{fig06_payroll_vs_nonemployer.png}
+\caption{Payroll music jobs against independent-artist businesses without
+employees, each indexed to its own first available year. Sources: U.S.\
+Bureau of Labor Statistics, OEWS, for payroll employment in Musicians and
+Singers (SOC 27-2042); U.S.\ Census Bureau, Nonemployer Statistics, for
+establishments in NAICS 7115 (Independent Artists, Writers, and Performers).
+How to read it: the two series count different things over different
+universes, jobs against businesses and musicians against all independent
+artists, so the figure shows the direction each is moving and nothing more.
+The panels must not be added or netted.}
+\label{fig:substitution}
+\end{figure}
+
+Nonemployer establishments in NAICS 7115 rose
+\NSubstitutionNonemployerTravisPctchg\ in Travis County between 2012 and
+2023 and \NSubstitutionNonemployerTxPctchg\ across Texas over the same
+window.\footnote{Nonemployer Statistics reports Travis County
+establishments in NAICS 7115 at 5{,}382 in 2012 and 8{,}696 in 2023, and
+Texas statewide at 45{,}021 and 74{,}834 over the same years. Both figures
+are business counts, not people, and the Bureau's noise-infusion procedure
+means a single county cell has a slightly larger measurement error than the
+state total.} Texas payroll music jobs, measured over their own longer OEWS
+window of 2005 to 2025, changed
+\NEmpPayrollPctchgMusiciansTx.\footnote{Figure~\ref{fig:substitution}
+rebases each series on its own first available year,
+\(I_{s,t} = 100 \times X_{s,t} / X_{s,t_0(s)}\), where \(X_{s,t}\) is the
+level of series \(s\) in year \(t\) and \(t_0(s)\) is that series' first
+year: 2005 for OEWS payroll jobs, 2012 for the Nonemployer Statistics
+establishment count. Rebasing is what allows two series measured in
+different units, jobs in one case and businesses in the other, to sit on a
+common vertical scale, and it is also the reason the two panels cannot be
+added or netted: an index number carries no unit and no count, only a
+direction and a rate of movement relative to its own starting point.} These
+two series do not count the same people. This study makes no estimate of
+the total size of the Austin music workforce, because no public source
+supports one.
+
+Among the four large Texas counties compared here, Travis County has the
+highest rate of independent-artist businesses relative to its population:
+\NNesEstabPerOneZerokTravisTwoZeroTwoThree\ nonemployer establishments in
+NAICS 7115 per 10{,}000 residents in 2023, against
+\NNesEstabPerOneZerokDallasTwoZeroTwoThree\ in Dallas,
+\NNesEstabPerOneZerokBexarTwoZeroTwoThree\ in Bexar and
+\NNesEstabPerOneZerokHarrisTwoZeroTwoThree\ in Harris
+(Figure~\ref{fig:metrones}).\footnote{The rate is
+\(10^{4} \times E_{c,y} / N_{c,y}\), where \(E_{c,y}\) is the count of
+Nonemployer Statistics establishments in NAICS 7115 in county \(c\) and
+year \(y\), and \(N_{c,y}\) is that county's resident population in the
+same year, taken from the U.S.\ Census Bureau's Vintage 2025 Population
+Estimates Program release
+(\url{https://www2.census.gov/programs-surveys/popest/datasets/2020-2025/counties/totals/}).
+Both sides share a year, so the measure is a rate rather than a count and
+counties of different sizes can sit beside one another. The numerator
+counts businesses and not people, and one person can hold more than one,
+so this rate is a proxy for how common solo creative work is rather than
+a headcount of solo creatives. Four of Texas's 254 counties appear here,
+so the ranking is bounded by those four.}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.86\textwidth]{fig08_metro_nonemployer.png}
+\caption{Independent-artist businesses without employees per 10,000
+residents, four Texas counties, 2020--2023. Sources: U.S.\ Census Bureau,
+Nonemployer Statistics, NAICS 7115; county population from the U.S.\ Census
+Bureau's Vintage 2025 Population Estimates Program. How to read it: a
+higher line means more solo creative businesses relative to population.
+Caveats: NAICS 7115 covers independent artists, writers and performers
+together, so the count is a proxy for solo creative work rather than a
+headcount of musicians; the series is shorter than the 2012--2023
+establishment counts because the population denominator comes from the
+Vintage 2025 estimates, which do not reach back to 2012; and four of
+Texas's 254 counties appear here, so the ranking is bounded by those
+four.}
+\label{fig:metrones}
+\end{figure}
+
+Travis County's concentration of solo creative businesses is real; what
+those businesses take in is less clear. Nonemployer Statistics reports
+gross receipts before any expense: real receipts per Travis County
+establishment in NAICS 7115 rose \NNesReceiptsPerEstabPctchgTravis\
+between 2012 and 2023, to
+\NNesReceiptsPerEstabTravisLast\ in 2025
+dollars.\footnote{Receipts per business is
+\(\bar{r}_{c,y} = R^{\mathrm{real}}_{c,y} / E_{c,y}\), where
+\(R^{\mathrm{real}}_{c,y}\) is total NAICS 7115 receipts in county \(c\)
+and year \(y\), deflated to 2025 dollars by \(d_y = C_{2025}/C_y\), and
+\(E_{c,y}\) is the establishment count. This is an arithmetic mean with no
+distribution behind it: the Census Bureau publishes only totals and counts
+for this category, so a small number of high-earning businesses can carry
+the average and no median is available. Noise infusion further complicates
+year-to-year comparisons at the county level.} Alongside that receipts
+figure sits a separate reading of the cost side of solo music work. The
+2022 Greater Austin Music Census, a self-selected online survey of Austin
+music workers with no probability sample behind it, asked respondents to
+report annual spending on their own music business across eight categories;
+the \NCensusSpendCompleteN\ music creatives who answered every one of those
+eight categories reported a median of \NCensusSpendTotalMedian\ a year in
+2025 dollars.\footnote{Sound Music Cities and City of Austin Music \&
+Entertainment Division, \textit{Greater Austin Music Census}, 2022;
+respondent-level microdata downloaded from City of Austin open data,
+dataset \texttt{an3p-3yqx}, at
+\url{https://data.austintexas.gov/}, retrieved 1 August 2026. The
+instrument was distributed through music-community mailing lists and city
+channels between 15 July and 12 September 2022, drew 2{,}227 respondent
+records, and carried no probability weights. The complete-spender base of
+\NCensusSpendCompleteN\ is 22.5 percent of respondents; the eight
+categories are gear and rentals, publicity and promotion, rehearsal or
+work space, new recordings, merchandise, supplies, web and social media,
+and accounting and legal. The median above is the median of respondent
+totals, not a sum of category medians.} The receipts figure is Census
+Bureau administrative data on all Travis County solo businesses in NAICS
+7115; the spending figure is a self-selected survey of Austin music
+creatives specifically. The two describe different populations in
+different years and cannot be subtracted from one another. They sit
+together here because a receipts figure alone overstates what a solo
+creative keeps.
+
+\subsection{The substitution reading is an inference, not a tracked transition}
+
+The two series do not move in the same years, which weakens the reading
+that payroll music jobs became solo creative businesses rather than
+supporting it. Most of the Texas OEWS payroll decline happened between 2005
+and 2012, and the payroll count has moved sideways since; the Nonemployer
+Statistics series begins in 2012, after that fall. What the two files show
+together is a payroll count far below its 2005 level and a nonemployer
+establishment count that has risen since 2012. Alongside them sits the ACS
+PUMS microdata finding that \NPumsAustinMusSelfemp\
+(\NPumsAustinMusSelfempMoe) of Austin musicians worked for themselves over
+2020 to 2024, which is a single pooled cross-section from a household
+survey and carries no time path of its own.\footnote{Musicians and Singers
+(OCCP 2752), Austin-Round Rock-San Marcos metro, ages 18--64, employed
+(ESR 1/2/4/5), classified self-employed if Class of Worker equals 6
+(unincorporated) or 7 (incorporated), from the U.S.\ Census Bureau's
+American Community Survey 2020--2024 five-year Public Use Microdata
+Sample for Texas
+(\url{https://www2.census.gov/programs-surveys/acs/data/pums/2024/5-Year/csv_ptx.zip}).
+The share rests on 77 unweighted records; the margin of error uses the
+Bureau's successive-difference replication method against the 80
+replicate weights.} No public dataset follows individual musicians across
+employment arrangements, so nothing here shows that particular OEWS
+payroll jobs became particular Nonemployer Statistics businesses.
+
+What the evidence does establish is narrower and still consequential: the
+number of music jobs any payroll statistic can observe is lower now than in
+2005, while the count of solo creative businesses in the same broad
+category has risen since 2012, so payroll records describe less of Austin's
+music work than they once did. No public source estimates what fraction of
+Austin's music workforce now sits outside payroll records altogether,
+because no source combining the payroll and self-employed sides at the
+metro level exists. Section~\ref{sec:venues} turns from workers to
+workplaces, and tracks the Austin live-music rooms where those solo careers
+are performed, using the state Comptroller's monthly alcohol-tax filings as
+a room-level receipts record the payroll surveys cannot supply.

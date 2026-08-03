@@ -1,0 +1,1032 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Austin's Musicians in the Numbers &mdash; a data story and calculator</title>
+<meta name="description" content="A scrollytelling companion to the working paper Economic Opportunity for Musicians and Creative Workers, with an interactive calculator that lets a reader simulate one Austin musician's year and test which policy levers matter most.">
+<style>
+:root{
+  --navy:#1B2D55; --navy-2:#22366a; --orange:#D44500; --blue:#2B6CB0;
+  --green:#2E7D57; --gold:#C8891B; --red:#C0392B;
+  --light:#F5F7FA; --ink:#14203D; --muted:#6C7A8D; --line:#dfe4ec;
+  --sans:'Inter','Montserrat','Avenir Next','Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif;
+  --maxw:920px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--navy);color:#eaf0fb;font-family:var(--sans);
+  font-weight:400;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+
+/* progress + brand */
+.progress{position:fixed;top:0;left:0;height:4px;width:0;background:var(--orange);z-index:50;transition:width .08s linear}
+.brandbar{position:fixed;top:0;right:0;padding:14px 18px;z-index:40;font-size:12px;letter-spacing:.14em;
+  text-transform:uppercase;color:#9fb0d0;font-weight:700;mix-blend-mode:difference}
+.readtime{position:absolute;top:56px;right:20px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+  font-weight:700;color:#9fb0d0;border:1px solid #ffffff33;border-radius:999px;padding:6px 13px}
+
+/* acts */
+.act{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+  padding:96px 24px;position:relative}
+.act--dark{background:var(--navy);color:#eaf0fb}
+.act--deep{background:linear-gradient(160deg,#16264d 0%,#0f1c3a 100%);color:#eaf0fb}
+.act--light{background:var(--light);color:var(--ink)}
+.act--orange{background:linear-gradient(160deg,#3a1810 0%,#1a0c08 100%);color:#eaf0fb}
+.wrap{max-width:var(--maxw);width:100%;margin:0 auto}
+.center{text-align:center}
+
+/* type */
+.eyebrow{font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:var(--orange);margin:0 0 18px}
+.lede{font-size:clamp(1.7rem,4.4vw,3.1rem);font-weight:800;line-height:1.08;letter-spacing:-.015em;
+  text-wrap:balance;margin:0 0 22px}
+.sub{font-size:clamp(1.05rem,2vw,1.32rem);font-weight:400;color:#c3d0e8;max-width:660px;margin:0 auto}
+.act--light .sub{color:#48566f}
+.valueadd{max-width:680px;margin:24px auto 0;padding-top:20px;border-top:1px solid #ffffff2b;
+  font-size:clamp(.96rem,1.7vw,1.1rem);line-height:1.55;color:#b9c7e4}
+.valueadd b{color:#fff;font-weight:700}
+.huge{font-size:clamp(3rem,12vw,7.5rem);font-weight:800;line-height:.92;letter-spacing:-.03em;
+  font-variant-numeric:tabular-nums;margin:.08em 0 .12em;color:#fff;max-width:100%;overflow-wrap:normal}
+.huge--orange{color:var(--orange)}
+.huge--navy{color:var(--navy)}
+.act--light .huge{color:var(--navy)}
+.cap{font-size:14px;letter-spacing:.04em;text-transform:uppercase;font-weight:700;color:#9fb0d0;max-width:640px;margin:0 auto}
+.act--light .cap{color:var(--muted)}
+
+/* reveal */
+.fade{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.act.in .fade{opacity:1;transform:none}
+.act.in .fade.d1{transition-delay:.12s}.act.in .fade.d2{transition-delay:.24s}
+.act.in .fade.d3{transition-delay:.36s}.act.in .fade.d4{transition-delay:.48s}
+.act.in .fade.d5{transition-delay:.60s}
+.cue{margin-top:40px;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#8ea3c7;font-weight:700}
+.cue span{display:inline-block;animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+
+/* cards */
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px;text-align:left}
+@media (max-width:640px){.cards{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+.card h3{margin:0 0 6px;font-size:1.12rem;color:var(--navy)}
+.card p{margin:0;font-size:.97rem;color:#48566f;line-height:1.5}
+.card .tag{display:inline-block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:800;
+  padding:3px 9px;border-radius:999px;margin-bottom:12px}
+.tag--o{background:#fbe3d6;color:var(--orange)}.tag--b{background:#dde8f6;color:var(--blue)}
+.tag--n{background:#dee3ee;color:var(--navy)}
+.tag--g{background:#d5eadf;color:var(--green)}
+
+/* horizontal bar chart */
+.barchart{margin-top:32px;text-align:left}
+.barrow{display:grid;grid-template-columns:170px 1fr auto;align-items:center;gap:14px;margin:12px 0}
+@media (max-width:640px){.barrow{grid-template-columns:120px 1fr auto;gap:8px}}
+.barrow .lab{font-size:.95rem;font-weight:700}
+.track{height:26px;border-radius:6px;background:#e6ebf3;overflow:hidden}
+.act--dark .track,.act--deep .track,.act--orange .track{background:#22366a}
+.fillbar{height:100%;width:0;border-radius:6px;transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
+.act.in .fillbar{width:var(--w)}
+.val{font-weight:800;font-variant-numeric:tabular-nums;min-width:92px;text-align:right}
+
+/* stacked split */
+.stack{display:flex;height:44px;border-radius:8px;overflow:hidden;margin-top:30px;background:#22366a;max-width:720px;margin-left:auto;margin-right:auto}
+.act--light .stack{background:#e6ebf3}
+.seg{height:100%;width:0;transition:width 1.2s cubic-bezier(.2,.7,.2,1);display:flex;align-items:center;
+  justify-content:center;color:#fff;font-weight:800;font-size:.9rem;white-space:nowrap;padding:0 12px}
+.act.in .seg{width:var(--w)}
+.legend{display:flex;gap:26px;flex-wrap:wrap;margin-top:16px;font-size:.95rem;color:#c3d0e8;justify-content:center}
+.act--light .legend{color:#48566f}
+.legend b{color:#fff}
+.act--light .legend b{color:var(--ink)}
+
+/* stat row */
+.statrow{display:flex;gap:40px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+.stat .n{font-size:clamp(2.6rem,7vw,4.4rem);font-weight:800;line-height:1;font-variant-numeric:tabular-nums;color:var(--navy)}
+.act--dark .stat .n,.act--deep .stat .n,.act--orange .stat .n{color:#fff}
+.stat .l{font-size:.9rem;letter-spacing:.05em;text-transform:uppercase;font-weight:700;color:var(--muted);margin-top:6px}
+.act--dark .stat .l,.act--deep .stat .l,.act--orange .stat .l{color:#9fb0d0}
+
+/* explicit comparison — two numbers side by side */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}
+@media (max-width:640px){.duo{grid-template-columns:1fr}}
+.duoBox{padding:22px 20px;border-radius:14px;background:#fff}
+.act--dark .duoBox,.act--deep .duoBox,.act--orange .duoBox{background:#22366a}
+.duoBox .n{font-size:clamp(2rem,5.5vw,3.4rem);font-weight:800;line-height:1;font-variant-numeric:tabular-nums;color:var(--navy)}
+.act--dark .duoBox .n,.act--deep .duoBox .n,.act--orange .duoBox .n{color:#fff}
+.duoBox .n.orange{color:var(--orange)}
+.duoBox .l{font-size:.9rem;color:var(--muted);letter-spacing:.03em;margin-top:8px;font-weight:600}
+.act--dark .duoBox .l,.act--deep .duoBox .l,.act--orange .duoBox .l{color:#9fb0d0}
+
+/* SVG chart wrapper */
+.chartbox{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;margin-top:24px;text-align:left}
+.act--dark .chartbox,.act--deep .chartbox,.act--orange .chartbox{background:#0f1c3a;border-color:#1e2f5f;color:#eaf0fb}
+.chartbox h3{margin:0 0 4px;font-size:1.05rem;color:var(--navy)}
+.act--dark .chartbox h3,.act--deep .chartbox h3,.act--orange .chartbox h3{color:#fff}
+.chartbox p.note{font-size:.85rem;color:var(--muted);margin:6px 0 12px;line-height:1.4}
+.act--dark .chartbox p.note,.act--deep .chartbox p.note,.act--orange .chartbox p.note{color:#9fb0d0}
+.chartbox svg{width:100%;height:auto;display:block}
+
+/* CTA */
+.cta{display:inline-flex;align-items:center;gap:12px;background:var(--orange);color:#fff;text-decoration:none;
+  font-weight:800;font-size:1.15rem;padding:18px 30px;border-radius:12px;margin-top:8px;
+  box-shadow:0 14px 34px rgba(212,69,0,.4);transition:transform .15s ease,box-shadow .15s ease}
+.cta:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(212,69,0,.5)}
+.cta--ghost{background:transparent;color:#fff;border:2px solid #ffffff55;box-shadow:none}
+.cta--ghost:hover{background:#ffffff11;transform:none;box-shadow:none}
+
+/* subtle labels */
+.disc{font-size:.85rem;color:#8ea3c7;margin-top:26px;max-width:720px;margin-left:auto;margin-right:auto;line-height:1.5}
+.act--light .disc{color:var(--muted)}
+.foot{font-size:1rem;color:#c3d0e8;max-width:660px;margin:24px auto 0}
+
+/* ------------ CALCULATOR ------------ */
+.calc{background:#fff;color:var(--ink);border-radius:16px;box-shadow:0 24px 60px rgba(0,0,0,.35);
+  max-width:1100px;margin:20px auto 0;overflow:hidden;text-align:left}
+.calc__head{background:var(--navy);color:#fff;padding:22px 28px}
+.calc__head h3{margin:0 0 4px;font-size:1.3rem}
+.calc__head p{margin:0;color:#c3d0e8;font-size:.95rem}
+.calc__body{display:grid;grid-template-columns:1.05fr 1fr;gap:0}
+@media (max-width:820px){.calc__body{grid-template-columns:1fr}}
+.calc__controls{padding:24px 28px;border-right:1px solid var(--line);background:#fafbfd}
+@media (max-width:820px){.calc__controls{border-right:none;border-bottom:1px solid var(--line)}}
+.calc__results{padding:24px 28px;background:#fff}
+
+.ctlgroup{margin-bottom:18px}
+.ctlgroup > .ctlhdr{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--muted);
+  margin:0 0 10px;border-bottom:1px solid var(--line);padding-bottom:6px}
+.ctl{margin-bottom:12px}
+.ctl label{display:flex;justify-content:space-between;align-items:baseline;font-size:.92rem;color:#3b4a66;font-weight:600}
+.ctl .cur{font-variant-numeric:tabular-nums;color:var(--navy);font-weight:800}
+.ctl input[type=range]{width:100%;margin-top:6px;-webkit-appearance:none;background:transparent;height:20px}
+.ctl input[type=range]:focus{outline:none}
+.ctl input[type=range]::-webkit-slider-runnable-track{height:4px;background:#dce3ee;border-radius:4px}
+.ctl input[type=range]::-moz-range-track{height:4px;background:#dce3ee;border-radius:4px}
+.ctl input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;height:18px;width:18px;
+  background:var(--orange);border-radius:50%;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.2);margin-top:-7px;cursor:pointer}
+.ctl input[type=range]::-moz-range-thumb{height:18px;width:18px;background:var(--orange);border-radius:50%;
+  border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.2);cursor:pointer}
+.ctl .hint{font-size:.8rem;color:var(--muted);margin-top:3px;line-height:1.35}
+
+/* segmented control */
+.seg-ctl{display:flex;background:#eef1f6;border-radius:8px;padding:3px;margin-top:4px}
+.seg-ctl button{flex:1;background:transparent;border:0;padding:7px 10px;border-radius:6px;font-size:.85rem;
+  font-weight:700;color:#48566f;cursor:pointer;font-family:inherit}
+.seg-ctl button.active{background:#fff;color:var(--navy);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+
+/* toggle */
+.tog{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-top:1px dashed var(--line)}
+.tog:first-child{border-top:0}
+.tog label{font-size:.92rem;color:#3b4a66;font-weight:600;padding-right:12px}
+.tog .subl{font-size:.78rem;color:var(--muted);font-weight:400;margin-top:2px;line-height:1.4}
+.switch{position:relative;width:44px;height:24px;flex-shrink:0}
+.switch input{opacity:0;width:0;height:0}
+.switch span{position:absolute;inset:0;cursor:pointer;background:#c9d1de;border-radius:24px;transition:.2s}
+.switch span::before{content:"";position:absolute;left:3px;top:3px;width:18px;height:18px;background:#fff;border-radius:50%;transition:.2s;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.switch input:checked + span{background:var(--orange)}
+.switch input:checked + span::before{transform:translateX(20px)}
+
+/* results side */
+.result-hero{background:linear-gradient(160deg,#eaf0fb 0%,#f5f7fa 100%);padding:22px;border-radius:12px;margin-bottom:18px}
+.result-hero .lbl{font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;font-weight:800;color:var(--muted)}
+.result-hero .big{font-size:clamp(2rem,5vw,2.7rem);font-weight:800;font-variant-numeric:tabular-nums;color:var(--navy);
+  margin-top:2px;line-height:1.05}
+.result-hero .big.neg{color:var(--red)}
+.result-hero .delta{font-size:.9rem;color:var(--muted);margin-top:4px}
+.result-hero .delta b{font-variant-numeric:tabular-nums}
+
+.result-row{display:grid;grid-template-columns:1fr auto;align-items:baseline;padding:6px 0;border-bottom:1px solid var(--line);font-size:.94rem}
+.result-row:last-child{border-bottom:0}
+.result-row .k{color:#48566f}
+.result-row .v{font-weight:800;font-variant-numeric:tabular-nums;color:var(--navy)}
+.result-row .v.neg{color:var(--red)}
+.result-row.sub{font-size:.85rem;color:var(--muted);padding-left:14px}
+.result-row.sub .v{color:var(--muted);font-weight:600}
+.result-row.total{border-top:2px solid var(--navy);border-bottom:0;padding-top:10px;margin-top:6px;font-size:1.05rem}
+.result-row.total .v{color:var(--navy)}
+
+.pill-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.pill{font-size:.78rem;font-weight:700;padding:4px 10px;border-radius:999px;background:#eef2f7;color:#48566f}
+.pill.on{background:#fbe3d6;color:var(--orange)}
+.pill.hint{background:transparent;color:var(--muted);padding-left:0}
+
+.presets{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}
+@media (max-width:820px){.presets{grid-template-columns:1fr 1fr}}
+.preset{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:12px;text-align:left;font-family:inherit;
+  cursor:pointer;transition:border-color .15s ease,background .15s ease}
+.preset:hover{border-color:var(--orange);background:#fff9f4}
+.preset .pname{font-weight:800;color:var(--navy);font-size:.9rem;margin-bottom:2px}
+.preset .pdesc{font-size:.78rem;color:var(--muted);line-height:1.35}
+.calc__presets{padding:16px 28px;background:#eef2f8;border-bottom:1px solid var(--line)}
+.calc__presets .plead{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--muted);margin:0 0 10px}
+.calc__presets .presets{margin-top:0}
+
+/* bars for calc result */
+.calc-bars{margin-top:12px}
+.calc-bar{margin:6px 0}
+.calc-bar .cbl{display:flex;justify-content:space-between;font-size:.82rem;color:#48566f;margin-bottom:2px}
+.calc-bar .cbl .v{font-variant-numeric:tabular-nums;font-weight:700;color:var(--navy)}
+.calc-bar .cbt{height:14px;background:#eef2f7;border-radius:6px;overflow:hidden}
+.calc-bar .cbf{height:100%;border-radius:6px;transition:width .3s ease}
+
+.warning{margin-top:12px;padding:10px 14px;background:#fff9f4;border-left:3px solid var(--orange);
+  border-radius:6px;font-size:.85rem;color:#7a4520;line-height:1.5}
+.warning.info{background:#eef4fc;border-left-color:var(--blue);color:#2d4258}
+
+/* explainer panel */
+.explain{background:#0f1c3a;color:#c3d0e8;padding:36px 24px 40px;font-size:.95rem;line-height:1.6}
+.explain .wrap{max-width:820px}
+.explain h4{color:#fff;margin:0 0 8px;font-size:1.15rem;letter-spacing:-.005em}
+.explain h5{color:#fff;margin:24px 0 6px;font-size:.95rem;text-transform:uppercase;letter-spacing:.08em}
+.explain a{color:#8fb3ec}
+.explain .tinygrid{display:grid;grid-template-columns:170px 1fr;gap:8px 20px;margin-top:6px;font-size:.87rem}
+.explain .tinygrid dt{color:#9fb0d0;font-weight:600}
+.explain .tinygrid dd{margin:0;color:#eaf0fb}
+
+/* formal specification */
+.spec{background:#0b1730;color:#c3d0e8;padding:40px 24px 48px;font-size:.92rem;line-height:1.6}
+.spec .wrap{max-width:840px}
+.spec h4{color:#fff;margin:0 0 10px;font-size:1.18rem;letter-spacing:-.005em}
+.spec h5{color:#fff;margin:28px 0 8px;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em}
+.spec p{margin:8px 0}
+.spec var{font-style:italic;color:#eaf0fb}
+.spec .eqn{font-family:'Cambria Math','STIX Two Math','Latin Modern Math',Georgia,'Times New Roman',serif;
+  background:#0f1c3a;border:1px solid #22366a;border-radius:8px;padding:11px 15px;margin:8px 0;
+  font-size:1.03rem;color:#eaf0fb;overflow-x:auto;white-space:nowrap}
+.spec .eqn sub{font-size:.72em}
+.spec table{width:100%;border-collapse:collapse;margin-top:8px;font-size:.85rem;display:block;overflow-x:auto}
+.spec th,.spec td{text-align:left;padding:6px 10px;border-bottom:1px solid #22366a;vertical-align:top;white-space:nowrap}
+.spec td:last-child,.spec th:last-child{white-space:normal}
+.spec th{color:#9fb0d0;text-transform:uppercase;letter-spacing:.06em;font-size:.7rem;font-weight:800}
+.spec .flag{font-size:.68rem;font-weight:800;padding:1px 8px;border-radius:999px;white-space:nowrap}
+.spec .flag.meas{background:#123a2a;color:#83dcac}
+.spec .flag.assum{background:#3a2412;color:#f0b078}
+.spec ul{margin:10px 0 0;padding-left:20px}
+.spec li{margin:8px 0}
+.spec li b{color:#fff}
+
+/* footer */
+footer{background:#0f1c3a;color:#8ea3c7;font-size:.85rem;padding:34px 24px;line-height:1.6}
+footer .wrap{max-width:820px;margin:0 auto}
+footer a{color:#8fb3ec}
+footer h5{color:#fff;margin:20px 0 6px;font-size:.95rem;text-transform:uppercase;letter-spacing:.08em}
+footer p{margin:6px 0}
+</style>
+</head>
+<body>
+
+<div class="progress" id="prog"></div>
+<div class="brandbar">Working Paper &nbsp;&middot;&nbsp; Aug 2026</div>
+
+<!-- ACT 1 : cold open -->
+<section class="act act--deep center" data-act>
+  <div class="readtime">6 minute read</div>
+  <div class="wrap">
+    <p class="eyebrow fade">Austin's Musicians in the Numbers</p>
+    <h1 class="lede fade d1">The Live Music Capital's musicians are largely invisible in the statistics that shape public policy.</h1>
+    <p class="sub fade d2">The federal wage survey counts roughly 120 musician jobs in Austin. The Census Bureau estimates there are 2,126 people working as musicians here. Almost everything a policymaker sees describes the smaller group.</p>
+    <p class="valueadd fade d3">The working paper behind this story builds a fuller picture by triangulating public records that are rarely brought together: federal household microdata, state alcohol&#8209;tax filings, city permits and budgets, benchmark data from peer states, and Austin's own music&#8209;community surveys. That is how it surfaces the working musicians the standard wage numbers leave out.</p>
+    <div class="cue fade d4"><span>&darr;</span> Scroll</div>
+  </div>
+</section>
+
+<!-- ACT 2 : the big fact -->
+<section class="act act--dark center" data-act>
+  <div class="wrap">
+    <p class="eyebrow fade">One number, most of the story</p>
+    <div class="huge huge--orange fade d1" data-count="72.2" data-suffix="%" data-dec="1">0%</div>
+    <p class="cap fade d1">of Austin musicians work for themselves</p>
+    <p class="sub fade d2" style="margin-top:24px">Against 10.4% of all Austin workers. That single fact explains why Austin's musicians are hard to see: the federal wage survey behind the usual &ldquo;musician wage&rdquo; asks employers, not workers, so 72 percent of the workforce is outside its sampling frame by construction.</p>
+  </div>
+</section>
+
+<!-- ACT 3 : payroll vs household counts -->
+<section class="act act--light center" data-act>
+  <div class="wrap">
+    <p class="eyebrow fade">What each source can and cannot see</p>
+    <h2 class="lede fade d1" style="font-size:clamp(1.4rem,3.4vw,2.2rem)">One survey asks employers. The other asks households. They report very different Austin musician counts.</h2>
+    <div class="duo fade d2">
+      <div class="duoBox"><div class="n orange">120</div><div class="l">Musician <b>jobs on employer payrolls</b> in Austin. This survey asks employers, so the self-employed are outside it by design. BLS Occupational Employment and Wage Statistics, May 2025</div></div>
+      <div class="duoBox"><div class="n">2,126</div><div class="l">People working as musicians in Austin, <b>including the self-employed</b>. Weighted estimate from the American Community Survey 2020&ndash;2024 five-year PUMS</div></div>
+    </div>
+    <p class="sub fade d3" style="margin-top:22px">The 120 is not BLS getting it wrong, and it is not a headcount of Austin's musicians. It counts one specific thing: wage-and-salary jobs on employer payrolls. By the survey's design, the self-employed, who are most working musicians, are not in it. The 2,126 is a household-survey estimate that does include them; like any survey estimate it carries a margin of error rather than being a hard count. Both are real. They measure different populations, and almost everything public policy is built around comes from the smaller one.</p>
+  </div>
+</section>
+
+<!-- ACT 4 : the earnings gap -->
+<section class="act act--deep center" data-act>
+  <div class="wrap">
+    <p class="eyebrow fade">The gap that matters most</p>
+    <h2 class="lede fade d1">Austin musicians earn about half what the typical Austin worker earns.</h2>
+    <div class="chartbox fade d2" style="max-width:720px;margin-left:auto;margin-right:auto">
+      <h3 style="color:#fff">Median personal earnings from work, 2025 dollars</h3>
+      <p class="note">American Community Survey 2020&ndash;2024 five-year PUMS, Austin metro, employed adults 18&ndash;64 with positive earnings.</p>
+      <div class="barchart" style="margin-top:8px">
+        <div class="barrow"><span class="lab" style="color:#eaf0fb">All Austin workers</span><div class="track"><div class="fillbar" style="--w:100%;background:#4a6fa5"></div></div><span class="val" style="color:#fff">$62,500</span></div>
+        <div class="barrow"><span class="lab" style="color:#eaf0fb">Austin musicians</span><div class="track"><div class="fillbar" style="--w:46%;background:var(--orange)"></div></div><span class="val" style="color:#fff">$28,700</span></div>
+      </div>
+    </div>
+    <p class="sub fade d3" style="margin-top:20px">This estimate rests on just 77 Austin musician records in the survey, pooled over five years. With a sample that small, trust the broad comparison (musicians earn roughly half of what the typical worker earns), not the exact dollar figure of $28,700.</p>
+  </div>
+</section>
+
+<!-- ACT 5 : same schedule -->
+<section class="act act--dark center" data-act>
+  <div class="wrap">
+    <p class="eyebrow fade">Not because they work less</p>
+    <div class="statrow fade d1">
+      <div class="stat"><div class="n" data-count="40" data-dec="0">0</div><div class="l">median usual hours per week</div></div>
+      <div class="stat"><div class="n" data-count="52" data-dec="0">0</div><div class="l">median weeks worked last year</div></div>
+    </div>
+    <p class="sub fade d2" style="margin-top:28px">Austin musicians report the same hours and the same weeks as the wider Austin workforce. A full-time schedule at about half the pay.</p>
+    <p class="sub fade d3" style="margin-top:14px;font-size:1rem;color:#9fb0d0">A regression that holds age, sex, education, hours, weeks and metro area fixed still places music occupations <b style="color:#fff">25.2 percent</b> below otherwise similar workers, so schedule length is not where the gap comes from. That is an association among the characteristics the survey records, not a causal estimate of choosing music.</p>
+  </div>
+</section>
+
+<!-- ACT 6 : venues divergence -->
+<section class="act act--light center" data-act>
+  <div class="wrap">
+    <p class="eyebrow fade" style="color:var(--orange)">The rooms</p>
+    <h2 class="lede fade d1" style="font-size:clamp(1.5rem,3.6vw,2.4rem)">Between 2019 and 2025, real receipts at Austin's live-music rooms fell, while the surrounding bar market grew in both receipts and the number of venues.</h2>
+    <div class="chartbox fade d2" style="max-width:740px;margin:24px auto 0">
+      <h3>Real change in mixed-beverage receipts, Austin, 2019 to 2025</h3>
+      <p class="note">Comptroller mixed-beverage gross receipts, deflated to 2025 dollars. The tracked panel is 114 named Austin live-music rooms, identified from a research list of the city's venues and matched to state alcohol-tax records by taxpayer name and address; citywide is every Travis/Austin permit holder. The panel is a curated list, not a complete census, so it leans toward established central-city rooms.</p>
+      <div class="barchart" style="margin-top:8px">
+        <div class="barrow"><span class="lab">Core live-music tier</span><div class="track"><div class="fillbar" style="--w:65%;background:var(--orange)"></div></div><span class="val">&minus;18.6%</span></div>
+        <div class="barrow"><span class="lab">All tracked venues</span><div class="track"><div class="fillbar" style="--w:24%;background:var(--orange)"></div></div><span class="val">&minus;7.0%</span></div>
+        <div class="barrow"><span class="lab">Citywide bar market</span><div class="track"><div class="fillbar" style="--w:10%;background:var(--blue)"></div></div><span class="val">+2.8%</span></div>
+        <div class="barrow"><span class="lab">Citywide permit count</span><div class="track"><div class="fillbar" style="--w:80%;background:var(--blue)"></div></div><span class="val">+30.5%</span></div>
+      </div>
+    </div>
+    <p class="sub fade d3" style="margin-top:22px">That divergence may overstate a true decline in live music. Some performance likely shifted to informal or non-dedicated stages these datasets do not see, such as a coffee shop, restaurant, or brewery with a weekend act. Those settings tend to pay less, and less reliably, and are not where a full-time musician makes a living.</p>
+  </div>
+</section>
+
+<!-- ACT 7 : which rooms exist -->
+<section class="act act--deep center" data-act>
+  <div class="wrap">
+    <p class="eyebrow fade">Why the aggregate fell</p>
+    <div class="huge huge--orange fade d1" data-count="16" data-dec="0">0</div>
+    <p class="cap fade d1">of the 20 rooms in the tracked panel whose last alcohol-tax filing came in 2020 or later were core live-music rooms</p>
+    <p class="sub fade d2" style="margin-top:22px">The rooms that stayed open trade at the same rate against 2019 as comparable non-music bars. The aggregate decline is not a per-room revenue gap. It is a room-loss gap: rooms close, and no one replaces them. Outdoor music venue permits issued by the City stand <b style="color:#fff">31.9 percent</b> below their 2014 and 2017 peak.</p>
+  </div>
+</section>
+
+<!-- ACT 8 : where the rooms are -->
+<section class="act act--dark center" data-act>
+  <div class="wrap">
+    <p class="eyebrow fade">Concentrated in one part of Austin</p>
+    <h2 class="lede fade d1" style="font-size:clamp(1.5rem,3.6vw,2.4rem)">The conditions that shape Austin's live-music economy are mostly a downtown story.</h2>
+    <p class="sub fade d2" style="margin-top:14px">District 9 is central Austin &mdash; downtown and the near-in corridors. Three in four of the city's outdoor-music-venue permits sit inside it, so downtown property values, downtown noise rules, and downtown parking press on this workforce harder than they do anywhere else in the city.</p>
+    <div class="chartbox fade d3" style="background:#fff;border-color:#e3e8f0;margin-top:26px;max-width:780px;margin-left:auto;margin-right:auto">
+      <img src="district_permits_map.png" alt="Choropleth map of Austin's ten city council districts shaded by the number of outdoor music venue sound permits issued 2009 to 2018. District 9, covering downtown and central Austin, is by far the darkest, holding 764 of the 1,029 permits; surrounding central districts 3 and 5 are next, and outlying districts are nearly empty." style="width:100%;height:auto;display:block;border-radius:8px">
+      <p class="note" style="color:var(--muted);margin-top:10px">Source: City of Austin sound-ordinance permits (Outdoor Music Venue permits, 2009&ndash;2018), geocoded to council district. District 9 holds 764 of the 1,029 permits.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ACT 9 : city money -->
+<section class="act act--light center" data-act>
+  <div class="wrap">
+    <p class="eyebrow fade">What the city spends on music</p>
+    <div class="statrow fade d1">
+      <div class="stat"><div class="n" data-count="2.90" data-suffix="%" data-dec="2">0%</div><div class="l">Of Austin hotel-tax revenue</div></div>
+      <div class="stat"><div class="n" data-count="4.42" data-suffix="&times;" data-dec="2">0&times;</div><div class="l">Historic preservation gets, from the same tax</div></div>
+    </div>
+    <p class="sub fade d2" style="margin-top:24px">A 2019 city ordinance set the Live Music Fund at a fixed slice of a hotel-tax increase. Its budget therefore rises and falls with hotel and tourism activity, rather than being set each year by a City Council decision about what musicians need.</p>
+    <div class="chartbox fade d3" style="max-width:640px;margin:24px auto 0">
+      <h3>Live Music Fund awards by cycle</h3>
+      <p class="note">Nominal dollars per awardee, from City of Austin awardee lists.</p>
+      <div class="barchart" style="margin-top:8px">
+        <div class="barrow"><span class="lab">FY 2023 (368 awards)</span><div class="track"><div class="fillbar" style="--w:29%;background:#4a6fa5"></div></div><span class="val">$9,458</span></div>
+        <div class="barrow"><span class="lab">FY 2024 (136 awards)</span><div class="track"><div class="fillbar" style="--w:100%;background:var(--orange)"></div></div><span class="val">$32,096</span></div>
+        <div class="barrow"><span class="lab">FY 2025 (no cycle)</span><div class="track"><div class="fillbar" style="--w:2%;background:#c9d1de"></div></div><span class="val" style="color:#8794a8">skipped</span></div>
+        <div class="barrow"><span class="lab">FY 2026 (399 awards)</span><div class="track"><div class="fillbar" style="--w:56%;background:#4a6fa5"></div></div><span class="val">$17,895</span></div>
+      </div>
+    </div>
+    <p class="sub fade d4" style="margin-top:20px">A musician's expected grant depended heavily on which year they applied, and one cycle was skipped entirely. Predictability matters more than average size when a program serves people with irregular income.</p>
+  </div>
+</section>
+
+<!-- ACT 10 : state money -->
+<section class="act act--deep center" data-act>
+  <div class="wrap">
+    <p class="eyebrow fade">The state, through the same office</p>
+    <h2 class="lede fade d1" style="font-size:clamp(1.5rem,3.6vw,2.4rem)">Texas dedicates about $15 to moving-image work for every $1 it dedicates to music.</h2>
+    <div class="chartbox fade d2" style="background:#0f1c3a;border-color:#1e2f5f;max-width:720px;margin:24px auto 0">
+      <h3 style="color:#fff">Texas 2026&ndash;27 biennium dedications</h3>
+      <p class="note" style="color:#9fb0d0">Governor's office, Music, Film, Television and Multimedia Office. Same office, same session.</p>
+      <div class="barchart" style="margin-top:8px">
+        <div class="barrow"><span class="lab" style="color:#eaf0fb">Moving-image incentive</span><div class="track"><div class="fillbar" style="--w:100%;background:#4a6fa5"></div></div><span class="val" style="color:#fff">$300.0M</span></div>
+        <div class="barrow"><span class="lab" style="color:#eaf0fb">Music incubator rebate</span><div class="track"><div class="fillbar" style="--w:7%;background:var(--orange)"></div></div><span class="val" style="color:#fff">$20.2M</span></div>
+      </div>
+    </div>
+    <p class="sub fade d3" style="margin-top:22px">A statutory cap is not a measure of support. Georgia authorised $15 million a year for a music tax credit and paid out $0 across the program's five-year life. Ranked by dollars actually disbursed per resident, Texas sits at <b style="color:#fff">$0.32</b> against New York's <b style="color:#fff">$4.52</b>. Texas is also the one state in this comparison where the amount authorised was actually spent.</p>
+  </div>
+</section>
+
+<!-- ACT 11 : housing -->
+<section class="act act--light center" data-act>
+  <div class="wrap">
+    <p class="eyebrow fade" style="color:var(--orange)">The cost side</p>
+    <h2 class="lede fade d1" style="font-size:clamp(1.5rem,3.6vw,2.4rem)">Austin's overall prices sit near the national average; only its housing costs run well above it.</h2>
+    <div class="chartbox fade d2" style="max-width:640px;margin:24px auto 0">
+      <h3>Austin against the national average, BEA Regional Price Parities 2024</h3>
+      <p class="note">Index sets the United States at 100 in each category.</p>
+      <div class="barchart" style="margin-top:8px">
+        <div class="barrow"><span class="lab">All items, Austin</span><div class="track"><div class="fillbar" style="--w:98%;background:#4a6fa5"></div></div><span class="val">98.1</span></div>
+        <div class="barrow"><span class="lab">Housing, Austin</span><div class="track"><div class="fillbar" style="--w:120%;background:var(--orange)"></div></div><span class="val">120.4</span></div>
+      </div>
+    </div>
+    <p class="sub fade d3" style="margin-top:22px">Real market rent has fallen <b>23.5%</b> from its late-2021 peak, the steepest decline in the five metros compared. A study that showed only the run-up and stopped in 2022 would be describing a market that no longer exists. So a large part of the affordability squeeze looks more like a housing-cost problem than a broad cost-of-living problem.</p>
+  </div>
+</section>
+
+<!-- ACT 12 : retention -->
+<section class="act act--dark center" data-act>
+  <div class="wrap">
+    <p class="eyebrow fade">Musicians expect to stay in music, and renters do not expect to stay in Austin</p>
+    <div class="duo fade d1">
+      <div class="duoBox"><div class="n orange">88.8%</div><div class="l">Expect to still be working in music in three years</div></div>
+      <div class="duoBox"><div class="n">64.1%</div><div class="l">Expect to still be living in greater Austin</div></div>
+    </div>
+    <p class="sub fade d2" style="margin-top:22px">Both figures come from the same people: about 1,900 respondents to the 2022 Greater Austin Music Census answered both questions, so the gap reflects one person's two answers rather than two different groups. Housing tenure separates the stay-in-Austin answer more sharply than any other characteristic measured:</p>
+    <div class="chartbox fade d3" style="background:#0f1c3a;border-color:#1e2f5f;max-width:640px;margin:20px auto 0">
+      <h3 style="color:#fff">Share expecting to stay in Austin, by housing tenure</h3>
+      <p class="note" style="color:#9fb0d0">Self-selected online survey, respondents only; not comparable to the workforce.</p>
+      <div class="barchart" style="margin-top:8px">
+        <div class="barrow"><span class="lab" style="color:#eaf0fb">Homeowners</span><div class="track"><div class="fillbar" style="--w:76%;background:#4a6fa5"></div></div><span class="val" style="color:#fff">75.5%</span></div>
+        <div class="barrow"><span class="lab" style="color:#eaf0fb">Renters</span><div class="track"><div class="fillbar" style="--w:52%;background:var(--orange)"></div></div><span class="val" style="color:#fff">52.3%</span></div>
+      </div>
+    </div>
+    <p class="sub fade d4" style="margin-top:22px">Austin's cost problem is centered on housing, and its retention problem is centered on renters. The two look like facets of the same housing-cost challenge.</p>
+  </div>
+</section>
+
+<!-- ACT 13 : what works -->
+<section class="act act--light center" data-act>
+  <div class="wrap">
+    <p class="eyebrow fade" style="color:var(--green)">Something is working</p>
+    <div class="huge fade d1" style="color:var(--navy)" data-count="90.1" data-suffix="%" data-dec="1">0%</div>
+    <p class="cap fade d1">of Austin musicians hold health coverage</p>
+    <p class="sub fade d2" style="margin-top:20px">That is about the same as the 87.7% for all Austin workers; the small difference is well within the survey's margin of error, so musicians are not measurably less insured than other workers. The 2022 music census found that health-insurance coverage among the musicians it surveyed had risen about five points from its 2014 survey, and credited the Health Alliance for Austin Musicians (HAAM) &mdash; a nonprofit founded in 2005 that has grown from 450 members to more than 3,100.</p>
+    <p class="sub fade d3" style="margin-top:12px;font-size:1rem;color:var(--muted)">Musicians lean on public insurance far more than other Austin workers &mdash; roughly a quarter carry it, against about one in twenty &mdash; which is what pulls their total coverage up to parity even though they hold private employer coverage less often (77.9% against 84.7%). The SIMS Foundation, founded in 1995, delivers mental-health and substance-use care on a similar subsidised-fee model.</p>
+  </div>
+</section>
+
+<!-- ACT 14 : calculator handoff -->
+<section class="act act--orange center" data-act>
+  <div class="wrap">
+    <p class="eyebrow fade" style="color:#f2c9b6">Try it yourself</p>
+    <h2 class="lede fade d1">Enough averages. What does a year actually look like for one Austin musician, and which levers move the number most?</h2>
+    <p class="sub fade d2" style="max-width:700px;margin:20px auto 0;color:#f2c9b6">The calculator below simulates a solo working musician's year using anchors from the study. Move the pay rate, the number of gigs, the setup and travel time. Turn policy levers on and off. The point is not the exact dollar figure. It is which lever moves it most.</p>
+    <div class="cue fade d3" style="color:#f2c9b6"><span>&darr;</span> Simulator</div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="act act--deep" data-act style="min-height:auto;padding:60px 20px">
+  <div class="wrap" style="max-width:1140px">
+    <div class="calc">
+      <div class="calc__head">
+        <h3>The Austin Working-Musician Calculator</h3>
+        <p>Simulates one solo musician's year using anchors from the study. <a id="pdfLink" href="#" style="color:#f4a672;text-decoration:underline">Read the full working paper (PDF)</a>.</p>
+      </div>
+      <div class="calc__presets">
+        <p class="plead">Start with a scenario, then adjust the sliders</p>
+        <div class="presets">
+          <button class="preset" data-preset="base">
+            <div class="pname">Base case</div><div class="pdesc">Solo musician, central Austin, $125/hour, one weekend gig, no policy support.</div>
+          </button>
+          <button class="preset" data-preset="cityrate">
+            <div class="pname">City pay floor</div><div class="pdesc">Rate rises to $200/hour, the city's own musician-pay standard.</div>
+          </button>
+          <button class="preset" data-preset="extras">
+            <div class="pname">$20 bar tab vs $10/hr raise</div><div class="pdesc">A venue's $20 bar-tab per gig adds about $1,400 a year. A $10-an-hour raise adds about $2,300, more money at half the size. This loads the bar tab; set the rate to $135 to compare.</div>
+          </button>
+          <button class="preset" data-preset="stack">
+            <div class="pname">Support stack</div><div class="pdesc">HAAM + parking subsidy + LMF grant + rent voucher, but no rate change.</div>
+          </button>
+        </div>
+      </div>
+      <div class="calc__body">
+        <!-- CONTROLS -->
+        <div class="calc__controls">
+          <div class="ctlgroup">
+            <p class="ctlhdr">Gig work</p>
+
+            <div class="ctl">
+              <label>Pay per performance hour <span class="cur">$<span id="v-rate">125</span></span></label>
+              <input id="i-rate" type="range" min="40" max="200" step="5" value="125">
+              <div class="hint">$40 is a low reported market rate; $200 is the City of Austin's own musician-pay floor for city-hired performances (Resolution 20230720-123).</div>
+            </div>
+
+            <div class="ctl">
+              <label>Performance hours per gig <span class="cur"><span id="v-perf">3</span> h</span></label>
+              <input id="i-perf" type="range" min="1" max="5" step="0.5" value="3">
+              <div class="hint">Pay is the rate above times the hours actually on stage, so a longer set is paid more. Setup and travel time is unpaid, so more stage time per gig also raises the all-in effective hourly rate.</div>
+            </div>
+
+            <div class="ctl">
+              <label>Setup + travel per gig <span class="cur"><span id="v-travel">2.5</span> h</span></label>
+              <input id="i-travel" type="range" min="1" max="6" step="0.5" value="2.5">
+              <div class="hint">Load-in, setup, sound check, load-out, drive time. Backline-equipped venues and short drives cut this.</div>
+            </div>
+
+            <div class="ctl">
+              <label>Weekend gigs per week <span class="cur"><span id="v-wknd">1</span></span></label>
+              <input id="i-wknd" type="range" min="0" max="4" step="1" value="1">
+              <div class="hint">Weekend and prime-slot gigs are modelled to pay about 20% more per hour than weekday gigs, so adding one raises the year more than a weekday gig does.</div>
+            </div>
+
+            <div class="ctl">
+              <label>Weekday gigs per week <span class="cur"><span id="v-wkdy">0.5</span></span></label>
+              <input id="i-wkdy" type="range" min="0" max="2" step="0.5" value="0.5">
+            </div>
+
+            <div class="ctl">
+              <label>Working weeks per year <span class="cur"><span id="v-weeks">46</span></span></label>
+              <input id="i-weeks" type="range" min="30" max="52" step="1" value="46">
+            </div>
+
+            <div class="ctl">
+              <label>Venue &ldquo;extras&rdquo; per gig <span class="cur">$<span id="v-extras">10</span></label>
+              <input id="i-extras" type="range" min="0" max="50" step="5" value="10">
+              <div class="hint">Meal, drink tab, sometimes a small tip pool. The calculator counts this as income, then compares it against a straight rate raise.</div>
+            </div>
+          </div>
+
+          <div class="ctlgroup">
+            <p class="ctlhdr">Where they live</p>
+
+            <div class="ctl">
+              <label>Location</label>
+              <div class="seg-ctl" id="i-loc">
+                <button data-v="central" class="active">Central Austin</button>
+                <button data-v="suburb">Suburban ring</button>
+                <button data-v="exurb">Exurban</button>
+              </div>
+              <div class="hint">Central: near-in Austin, 1&#8209;BR rent about $1,600. Suburban: Round Rock or Pflugerville, about $1,250. Exurban: Bastrop, Elgin or Lockhart, about $1,050 but a longer commute.</div>
+            </div>
+          </div>
+
+          <div class="ctlgroup">
+            <p class="ctlhdr">Policy levers</p>
+            <div class="tog">
+              <div>
+                <label for="i-haam">HAAM enrolment</label>
+                <div class="subl">Health Alliance for Austin Musicians. Coordinated primary, dental, vision, mental-health, and hearing care at subsidised fees. Eligibility caps at 400% of the federal poverty line.</div>
+              </div>
+              <label class="switch"><input type="checkbox" id="i-haam"><span></span></label>
+            </div>
+            <div class="tog">
+              <div>
+                <label for="i-lmf">Live Music Fund grant</label>
+                <div class="subl">One-time award averaging $17,895 in the FY 2026 cycle. Roughly 400 awards a year against 1,000+ applicants.</div>
+              </div>
+              <label class="switch"><input type="checkbox" id="i-lmf"><span></span></label>
+            </div>
+            <div class="tog">
+              <div>
+                <label for="i-park">Downtown parking subsidy</label>
+                <div class="subl">A city credit at Iron Works or 2nd&nbsp;Street garages during evening load-in windows. Saves about $15 a gig for the roughly two-thirds that are downtown.</div>
+              </div>
+              <label class="switch"><input type="checkbox" id="i-park"><span></span></label>
+            </div>
+            <div class="tog">
+              <div>
+                <label for="i-fmr">Rent voucher tied to Fair Market Rent</label>
+                <div class="subl">Illustrative only. Caps housing at 30% of income, the federal cost-burden line.</div>
+              </div>
+              <label class="switch"><input type="checkbox" id="i-fmr"><span></span></label>
+            </div>
+          </div>
+        </div>
+
+        <!-- RESULTS -->
+        <div class="calc__results">
+          <div class="result-hero" id="hero">
+            <div class="lbl">Net income for the year</div>
+            <div class="big" id="netbig">$0</div>
+            <div class="delta" id="netdelta">of <b id="grossbig">$0</b> gross &middot; <span id="hourly"></span></div>
+          </div>
+
+          <div class="result-row"><span class="k">Gigs this year</span><span class="v" id="r-gigs">0</span></div>
+          <div class="result-row"><span class="k">Total hours worked (setup + travel + performance)</span><span class="v" id="r-hours">0</span></div>
+          <div class="result-row"><span class="k">Effective hourly rate, all-in</span><span class="v" id="r-effhr">$0</span></div>
+
+          <div style="margin-top:14px;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;font-weight:800;color:var(--muted)">Income</div>
+          <div class="result-row"><span class="k">Gig performance pay</span><span class="v" id="r-perfpay">$0</span></div>
+          <div class="result-row sub"><span class="k">&middot; venue extras (meals, drink tab)</span><span class="v" id="r-extraspay">$0</span></div>
+          <div class="result-row"><span class="k">Teaching, sessions, streaming</span><span class="v" id="r-other">$8,500</span></div>
+          <div class="result-row"><span class="k">Live Music Fund grant</span><span class="v" id="r-lmf">$0</span></div>
+
+          <div style="margin-top:14px;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;font-weight:800;color:var(--muted)">Costs</div>
+          <div class="result-row"><span class="k">Rent (12 months)</span><span class="v neg" id="r-rent">$0</span></div>
+          <div class="result-row"><span class="k">Commute + gas</span><span class="v neg" id="r-gas">$0</span></div>
+          <div class="result-row"><span class="k">Downtown parking at gigs</span><span class="v neg" id="r-park">$0</span></div>
+          <div class="result-row"><span class="k">Health coverage</span><span class="v neg" id="r-health">$0</span></div>
+          <div class="result-row"><span class="k">Music work spending (gear, promo, rehearsal)</span><span class="v neg" id="r-work">$0</span></div>
+
+          <div class="result-row total"><span class="k">Net</span><span class="v" id="r-net">$0</span></div>
+
+          <div class="pill-row" id="pillrow"></div>
+
+          <div id="warnbox"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="disc" style="max-width:1100px;text-align:left;margin-top:22px">
+      This is a stylised simulator using anchors from the study. It is designed to compare the direction and magnitude of change across levers, not to project any real musician's income. Every default is documented in the Sources block below. Numbers a serious reader would demand: sample size behind the earnings figures is 77 Austin records over five years; the FY 2026 Live Music Fund cycle funded roughly 40 percent of applicants; rent figures are Fair Market Rent, which lags the market.
+    </div>
+  </div>
+</section>
+
+<!-- Explainer / policy hook -->
+<section class="act act--dark" data-act style="min-height:auto;padding:60px 20px">
+  <div class="wrap" style="max-width:820px">
+    <p class="eyebrow fade">A policy hook</p>
+    <h2 class="lede fade d1" style="font-size:clamp(1.5rem,3.6vw,2.4rem)">The rate-per-hour lever moves the year more than any combination of benefits does.</h2>
+    <p class="sub fade d2" style="margin-top:18px;max-width:none">A meal and a drink tab worth $10 to $20 a gig adds up to roughly $700 to $1,400 a year at a typical gig count. Raising the per-hour rate by the same $20 raises the year by more than three times as much, because it multiplies through every performance hour rather than only every gig. A grant, a health-care subsidy, or a parking credit each closes a real gap on the cost side, and together they can add several thousand dollars in a year. None of them is a substitute for what a musician earns at the show.</p>
+    <p class="sub fade d3" style="margin-top:18px;max-width:none">That is why the levers that most reliably move a musician's year are the ones that either raise the rate directly (the city's $200 floor already sets a benchmark on city-commissioned work) or reduce the setup-and-travel drag on rate-hours (backline sharing, load-in windows, downtown parking during evening hours, and lease predictability at the rooms). The room-loss story in Section 5 of the working paper is a musician-pay story in a different guise: fewer central rooms means more travel time, more setup, and lower effective hourly.</p>
+    <p class="foot fade d4" style="margin-top:18px">This is a working paper, not a recommendation set. The point of the calculator is to make the shape of the trade-offs visible before the discussion of which lever to pull.</p>
+  </div>
+</section>
+
+<!-- Explainer -->
+<div class="explain">
+  <div class="wrap">
+    <h4>How the calculator is built</h4>
+    <p>The calculator is a stylised model, not a prediction. It scales one solo musician's year from a small set of anchors drawn from the study and from public records. Every anchor is listed here.</p>
+
+    <h5>Gig work</h5>
+    <dl class="tinygrid">
+      <dt>Pay rate range</dt><dd>$40 to $200 per performance hour. Lower bound is a rate reported in Austin music-community press coverage; upper bound is the City of Austin's own musician-pay floor for city-hired performances, adopted in 2023 (Resolution 20230720-123, $200 per musician for groups of six or fewer).</dd>
+      <dt>Weekend gigs</dt><dd>Gigs per weekend times the working-weeks slider, up to four a weekend. Weekend and prime-slot gigs are modelled to pay 20% more per performance hour than weekday gigs. That premium is a modelling assumption rather than a measured Austin figure, and a reviewer can change it in one constant (weekendPremium).</dd>
+      <dt>Weekday gigs</dt><dd>Gigs per weekday times weeks worked, paid at the base hourly rate.</dd>
+      <dt>Extras</dt><dd>Meal, drink tab, tip pool. Treated as income equivalent per gig.</dd>
+    </dl>
+
+    <h5>Base non-gig income</h5>
+    <dl class="tinygrid">
+      <dt>Teaching, sessions, streaming</dt><dd>Fixed at $8,500. From two national musician surveys (Future of Music Coalition 2011; MIRA 2017) live performance and teaching together supply about two-thirds of a working musician's income, with recordings and streaming a small share.</dd>
+    </dl>
+
+    <h5>Living costs, by location</h5>
+    <dl class="tinygrid">
+      <dt>Central Austin</dt><dd>1&#8209;bedroom rent about $1,600 per month, commute cost about $50 per month. Rent anchor from HUD Fair Market Rent FY2026 for the Austin-Round Rock-San Marcos MSA and current Zillow ZORI, which peaked in late 2021 and has come down since.</dd>
+      <dt>Suburban ring</dt><dd>1&#8209;bedroom rent about $1,250 per month, commute cost about $180 per month, and downtown gigs still incur parking. Round Rock and Pflugerville medians from Zillow.</dd>
+      <dt>Exurban</dt><dd>1&#8209;bedroom rent about $1,050 per month, commute cost about $290 per month. Bastrop, Elgin, or Lockhart. Travel time on top of every gig, not modelled as extra hours here but relevant to burn-out.</dd>
+    </dl>
+
+    <h5>Health coverage</h5>
+    <dl class="tinygrid">
+      <dt>Without HAAM</dt><dd>Priced at about $450 per month, in the range of a subsidised marketplace silver plan for a single adult at the earnings levels the calculator produces. Independent workers typically buy through the ACA marketplace or go without.</dd>
+      <dt>With HAAM</dt><dd>Priced at about $50 per month effective cost after HAAM subsidies. HAAM is a 501(c)(3) launched in 2005; membership grew from 450 in 2005 to 3,149 in 2023. The 2022 Greater Austin Music Census reports a five-point rise in respondent coverage since 2014 and attributes it to HAAM.</dd>
+    </dl>
+
+    <h5>Music-work spending</h5>
+    <dl class="tinygrid">
+      <dt>Anchor</dt><dd>$5,394 per year median, from the 2022 Greater Austin Music Census, for the 501 respondents who answered all eight spending categories (recording, gear, publicity, rehearsal, supplies, web, merchandise, accounting). Scaled to gig count.</dd>
+    </dl>
+
+    <h5>Policy levers</h5>
+    <dl class="tinygrid">
+      <dt>Live Music Fund grant</dt><dd>Adds $17,895, the FY 2026 cycle's average award. Toggle assumes the modelled musician is one of the roughly 400 funded applicants against a pool of 1,000+.</dd>
+      <dt>Parking subsidy</dt><dd>Removes about $15 per gig on the two-thirds of gigs that are downtown, based on average evening garage rates.</dd>
+      <dt>Rent voucher</dt><dd>Illustrative only. Caps housing at 30 percent of income, the federal cost-burden line. No such municipal voucher exists for musicians as a class; the point is to visualise the hole.</dd>
+    </dl>
+
+    <h5>What the calculator does not include</h5>
+    <p>Self-employment tax and federal income tax, health-care out-of-pocket costs beyond premiums, band-splitting on gig pay, instrument depreciation and replacement, retirement contributions, family or caregiving costs, side gigs outside music. It is a headline-year model for comparing policy levers, not a personal budget.</p>
+  </div>
+</div>
+
+<!-- Formal specification -->
+<div class="spec">
+  <div class="wrap">
+    <h4>Formal specification</h4>
+    <p>The calculator is a deterministic accounting identity, not a statistical estimator. It maps one musician's inputs to one year of income and cost through the equations below, returns point values with no sampling distribution and no standard errors, and estimates no population parameter. Every constant appears in the parameter table with its value and a flag for whether it is a data anchor or a modelling assumption, so a reviewer can trace or change any of them. Square brackets denote an indicator equal to 1 when a lever is on and 0 otherwise.</p>
+
+    <h5>Inputs (decision variables)</h5>
+    <table>
+      <thead><tr><th>Symbol</th><th>Range</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td><var>r</var></td><td>40 to 200</td><td>Performance rate, dollars per performance-hour</td></tr>
+        <tr><td><var>h</var><sub>p</sub></td><td>1 to 5</td><td>Performance hours per gig</td></tr>
+        <tr><td><var>h</var><sub>t</sub></td><td>1 to 6</td><td>Setup and travel hours per gig</td></tr>
+        <tr><td><var>n</var><sub>we</sub></td><td>0 to 4</td><td>Weekend gigs per week</td></tr>
+        <tr><td><var>n</var><sub>wd</sub></td><td>0 to 2</td><td>Weekday gigs per week</td></tr>
+        <tr><td><var>W</var></td><td>30 to 52</td><td>Working weeks per year</td></tr>
+        <tr><td><var>x</var></td><td>0 to 50</td><td>Venue extras per gig, dollars</td></tr>
+        <tr><td><var>&#8467;</var></td><td>3 levels</td><td>Location: central, suburb, or exurb</td></tr>
+        <tr><td>[HAAM], [LMF], [park], [voucher]</td><td>0 or 1</td><td>Policy levers</td></tr>
+      </tbody>
+    </table>
+
+    <h5>Fixed parameters</h5>
+    <table>
+      <thead><tr><th>Symbol</th><th>Value</th><th>Type</th><th>Basis</th></tr></thead>
+      <tbody>
+        <tr><td><var>&rho;</var></td><td>0.20</td><td><span class="flag assum">assumption</span></td><td>Weekend and prime-slot rate premium over weekday gigs</td></tr>
+        <tr><td>rent<sub>&#8467;</sub></td><td>1,600 / 1,250 / 1,050 per mo.</td><td><span class="flag meas">data anchor</span></td><td>HUD Fair Market Rent FY2026 and Zillow ZORI, central / suburb / exurb</td></tr>
+        <tr><td>com<sub>&#8467;</sub></td><td>50 / 180 / 290 per mo.</td><td><span class="flag assum">assumption</span></td><td>Illustrative vehicle and fuel cost by commute distance</td></tr>
+        <tr><td><var>&delta;</var><sub>&#8467;</sub></td><td>0.85 / 0.70 / 0.55</td><td><span class="flag assum">assumption</span></td><td>Share of gigs played downtown, by location</td></tr>
+        <tr><td><var>k</var></td><td>15 per downtown gig</td><td><span class="flag meas">data anchor</span></td><td>Downtown evening garage rate</td></tr>
+        <tr><td><var>m</var><sub>0</sub></td><td>450 per mo.</td><td><span class="flag meas">data anchor</span></td><td>Subsidised marketplace silver premium, single adult</td></tr>
+        <tr><td><var>m</var><sub>H</sub></td><td>50 per mo.</td><td><span class="flag assum">assumption</span></td><td>Net premium after HAAM subsidies</td></tr>
+        <tr><td><var>A</var><sub>LMF</sub></td><td>17,895</td><td><span class="flag meas">data anchor</span></td><td>FY2026 average Live Music Fund award</td></tr>
+        <tr><td><var>I</var><sub>other</sub></td><td>8,500</td><td><span class="flag meas">data anchor</span></td><td>Teaching, sessions, streaming; national musician income-share surveys</td></tr>
+        <tr><td><var>S</var><sub>0</sub></td><td>5,394</td><td><span class="flag meas">data anchor</span></td><td>Median music-work spending, 2022 Greater Austin Music Census, 501 respondents</td></tr>
+        <tr><td><var>&tau;</var></td><td>0.30</td><td><span class="flag meas">data anchor</span></td><td>Federal housing cost-burden threshold</td></tr>
+      </tbody>
+    </table>
+
+    <h5>Counts and hours</h5>
+    <div class="eqn"><var>G</var><sub>we</sub> = <var>n</var><sub>we</sub> &middot; <var>W</var> ,&nbsp;&nbsp;&nbsp; <var>G</var><sub>wd</sub> = <var>n</var><sub>wd</sub> &middot; <var>W</var> ,&nbsp;&nbsp;&nbsp; <var>G</var> = <var>G</var><sub>we</sub> + <var>G</var><sub>wd</sub></div>
+    <div class="eqn"><var>H</var><sub>perf</sub> = <var>G</var> &middot; <var>h</var><sub>p</sub> ,&nbsp;&nbsp;&nbsp; <var>T</var> = <var>G</var> &middot; ( <var>h</var><sub>p</sub> + <var>h</var><sub>t</sub> )</div>
+
+    <h5>Income (annual)</h5>
+    <div class="eqn"><var>Y</var><sub>perf</sub> = ( <var>G</var><sub>we</sub> &middot; (1 + <var>&rho;</var>) + <var>G</var><sub>wd</sub> ) &middot; <var>h</var><sub>p</sub> &middot; <var>r</var></div>
+    <div class="eqn"><var>Y</var><sub>extra</sub> = <var>G</var> &middot; <var>x</var></div>
+    <div class="eqn"><var>Y</var><sub>LMF</sub> = [LMF] &middot; <var>A</var><sub>LMF</sub></div>
+    <div class="eqn"><var>Y</var> = <var>Y</var><sub>perf</sub> + <var>Y</var><sub>extra</sub> + <var>I</var><sub>other</sub> + <var>Y</var><sub>LMF</sub></div>
+
+    <h5>Costs (annual)</h5>
+    <div class="eqn"><var>R</var><sub>0</sub> = 12 &middot; rent<sub>&#8467;</sub> ;&nbsp;&nbsp;&nbsp; <var>R</var> = [voucher] &middot; min( <var>R</var><sub>0</sub> , <var>&tau;</var> &middot; <var>Y</var> ) + (1 &minus; [voucher]) &middot; <var>R</var><sub>0</sub></div>
+    <div class="eqn"><var>C</var> = 12 &middot; com<sub>&#8467;</sub></div>
+    <div class="eqn"><var>K</var> = (1 &minus; [park]) &middot; ( <var>&delta;</var><sub>&#8467;</sub> &middot; <var>G</var> ) &middot; <var>k</var></div>
+    <div class="eqn"><var>&Phi;</var> = 12 &middot; ( [HAAM] &middot; <var>m</var><sub>H</sub> + (1 &minus; [HAAM]) &middot; <var>m</var><sub>0</sub> )</div>
+    <div class="eqn"><var>S</var> = max( <var>S</var><sub>0</sub> &middot; ( 0.6 + 0.6 &middot; min(<var>G</var>, 120) / 120 ) , 2000 )</div>
+    <div class="eqn"><var>C</var><sub>total</sub> = <var>R</var> + <var>C</var> + <var>K</var> + <var>&Phi;</var> + <var>S</var></div>
+
+    <h5>Outcomes</h5>
+    <div class="eqn"><var>N</var> = <var>Y</var> &minus; <var>C</var><sub>total</sub></div>
+    <div class="eqn"><var>w</var><sub>eff</sub> = <var>Y</var> / <var>T</var></div>
+    <div class="eqn"><var>w</var><sub>perf</sub> = <var>Y</var><sub>perf</sub> / <var>H</var><sub>perf</sub> = <var>r</var> &middot; ( <var>G</var><sub>we</sub> &middot; (1 + <var>&rho;</var>) + <var>G</var><sub>wd</sub> ) / <var>G</var></div>
+
+    <h5>Assumptions and scope a reviewer should weigh</h5>
+    <ul>
+      <li><b>Deterministic scenario, not an estimator.</b> The output is one arithmetic path with no error term. It does not estimate a mean, a rate, or any population quantity, and carries no confidence interval.</li>
+      <li><b>One solo musician, one year.</b> There is no band-splitting of gig pay and no adjustment for the number of members; all gig income accrues to one person.</li>
+      <li><b>Non-gig income is fixed.</b> <var>I</var><sub>other</sub> does not vary with gig count, location, or rate, so it enters as a constant additive term.</li>
+      <li><b>Extras enter at face value.</b> <var>Y</var><sub>extra</sub> treats a meal or drink tab as cash-equivalent, which overstates its fungible worth, so it is an upper bound on the cash value of in-kind extras.</li>
+      <li><b>Work spending is a stylised curve.</b> <var>S</var> rises linearly in <var>G</var> to a knot at <var>G</var> = 120 and is flat above it, with a floor of $2,000. The 0.6 base multiplier, the knot, and the floor set the shape; none is estimated from a regression.</li>
+      <li><b>The weekend premium is an assumption.</b> Setting <var>&rho;</var> = 0 prices every gig at the base rate. The default 0.20 is a modelling choice, not a measured Austin differential.</li>
+      <li><b>The rent voucher is illustrative.</b> No municipal program caps a musician's rent at <var>&tau;</var> &middot; <var>Y</var>. The lever exists to size the cost-burden gap, not to model an existing benefit.</li>
+      <li><b>Health cost is a premium net of subsidy.</b> <var>&Phi;</var> excludes deductibles, copays, and out-of-pocket spending, so it understates the full cost of care.</li>
+      <li><b>Net is pre-tax and partial.</b> <var>N</var> excludes self-employment and income tax, instrument depreciation and replacement, retirement contributions, caregiving costs, and any non-music day-job income. It is net of the modelled costs only, not disposable take-home pay.</li>
+      <li><b>Read the effective hourly with care.</b> <var>w</var><sub>eff</sub> divides gross income, which includes the fixed non-gig income and any grant, by gig hours <var>T</var> alone. At a low gig count it is inflated by the fixed income and falls toward the per-gig blended rate as <var>G</var> grows, so it is illustrative rather than a wage.</li>
+      <li><b>The earnings anchors are small-sample.</b> The Austin musician earnings figures rest on 77 unweighted American Community Survey records pooled over five years, so a single dollar value is imprecise and reads best as a range.</li>
+      <li><b>Vintages are mixed by design.</b> Anchors combine the ACS 2020&ndash;2024 five-year sample, the 2022 Greater Austin Music Census, HUD Fair Market Rent FY2026, and BLS OEWS May 2025, each dated in the sources below.</li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <h5>Sources for the story panels</h5>
+    <p><b>Earnings and self-employment:</b> U.S. Census Bureau, American Community Survey 2020&ndash;2024 five-year Public Use Microdata Sample for Texas, Musicians and Singers only (OCCP 2752), employed 18&ndash;64 with positive earnings. The Austin cell rests on 77 unweighted records.</p>
+    <p><b>Payroll job count:</b> Bureau of Labor Statistics Occupational Employment and Wage Statistics, May 2025, SOC 27-2042, Austin-Round Rock-San Marcos MSA.</p>
+    <p><b>Venue receipts panel:</b> Texas Comptroller of Public Accounts, Mixed Beverage Gross Receipts (data.texas.gov, dataset naix-2893), matched to 114 named Austin live-music rooms and deflated to 2025 dollars.</p>
+    <p><b>Council-district permit map:</b> City of Austin Sound Ordinance Permits (data.austintexas.gov, dataset ryu3-tuin), Outdoor Music Venue permits 2009&ndash;2018, geocoded to council district.</p>
+    <p><b>Live Music Fund:</b> City of Austin awardee lists and Open Budget data; totals use each document's stated headline.</p>
+    <p><b>State comparison:</b> Texas General Appropriations Act 2026&ndash;27 (Rider 40 to the Governor's Office); Senate Bill 22, 89th Legislature, 2025; Georgia Department of Audits and Accounts evaluation of the music tax credit, December 2023; state statutes and agency reports for peer states; Census Bureau Vintage 2025 population estimates.</p>
+    <p><b>Housing:</b> HUD Fair Market Rent FY 2026, Austin-Round Rock-San Marcos; Zillow Observed Rent Index; BEA Regional Price Parities 2024.</p>
+    <p><b>Retention and health coverage:</b> 2022 Greater Austin Music Census (Sound Music Cities and City of Austin Music & Entertainment Division), respondent-level microdata (data.austintexas.gov, dataset an3p-3yqx). Self-selected online sample of 2,227, no probability-sample benchmark; percentages describe respondents rather than the Austin music workforce.</p>
+    <p><b>HAAM:</b> Health Alliance for Austin Musicians annual reports 2005&ndash;2025, at myhaam.org.</p>
+
+    <h5>How to read this</h5>
+    <p>This is a companion to the working paper &ldquo;<a id="pdfLinkFooter" href="#">Economic Opportunity for Musicians and Creative Workers: Austin in State and National Context</a>.&rdquo; The paper carries the full methodology, the margins of error, and the qualifiers that this scrollytelling shortens. Every figure quoted here is registered in the paper's numbers ledger and traceable to the code and source that produced it.</p>
+
+    <p style="margin-top:22px;color:#5f7091;font-size:.8rem">Prepared by Eric&nbsp;A.&nbsp;Booth. Working paper, August 2026. Data pulls retrieved 1&ndash;2 August 2026. This calculator is a scenario tool; it is not a projection and no dollar figure it produces should be read as a forecast for any individual musician.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // ----- SCROLL PROGRESS + REVEAL -----
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var prog = document.getElementById('prog');
+  function onScroll(){
+    var st = window.scrollY || document.documentElement.scrollTop;
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    prog.style.width = (h>0 ? (st/h*100) : 0) + '%';
+  }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  function fmt(v, dec){ return v.toLocaleString('en-US', {minimumFractionDigits:dec, maximumFractionDigits:dec}); }
+  function countUp(el){
+    var target = parseFloat(el.getAttribute('data-count'));
+    var dec = parseInt(el.getAttribute('data-dec')||'0',10);
+    var pre = el.getAttribute('data-prefix')||''; var suf = el.getAttribute('data-suffix')||'';
+    if(reduce){ el.innerHTML = pre + fmt(target,dec) + suf; return; }
+    var dur = 1200, t0 = null;
+    function step(ts){
+      if(!t0) t0 = ts; var p = Math.min((ts-t0)/dur,1);
+      var e = 1 - Math.pow(1-p,3);
+      el.innerHTML = pre + fmt(target*e, dec) + suf;
+      if(p<1) requestAnimationFrame(step); else el.innerHTML = pre + fmt(target,dec) + suf;
+    }
+    requestAnimationFrame(step);
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){
+        en.target.classList.add('in');
+        en.target.querySelectorAll('[data-count]').forEach(function(n){
+          if(!n.dataset.done){ n.dataset.done='1'; countUp(n); }
+        });
+      }
+    });
+  }, {threshold:0.35});
+  document.querySelectorAll('[data-act]').forEach(function(s){ io.observe(s); });
+
+  // ----- PDF LINK -----
+  // The report PDF will live on GitHub Pages next to this file.
+  // Point to the raw file inside the same site; users can edit this URL when the
+  // repo layout changes without touching anything else.
+  var PDF_URL = 'musicians_austin.pdf';
+  var l1 = document.getElementById('pdfLink'); if(l1) l1.href = PDF_URL;
+  var l2 = document.getElementById('pdfLinkFooter'); if(l2) l2.href = PDF_URL;
+
+  // ----- CALCULATOR -----
+  // The model deliberately keeps a small anchor set. Every default is documented
+  // in the explainer block above; a reviewer should be able to change a single
+  // constant here and predict the effect on the display.
+  var CFG = {
+    // Location profiles: rent (monthly), commute cost (monthly), share of gigs downtown.
+    locations: {
+      central: { name: 'Central Austin',   rent: 1600, commute:  50, dtShare: 0.85 },
+      suburb:  { name: 'Suburban ring',    rent: 1250, commute: 180, dtShare: 0.70 },
+      exurb:   { name: 'Exurban',          rent: 1050, commute: 290, dtShare: 0.55 }
+    },
+    weekendPremium: 0.20,  // weekend/prime-slot gigs pay this fraction more per performance hour than weekday gigs (modelling assumption; see explainer)
+    healthMonthly: 450,    // no HAAM: modelled subsidised marketplace silver plan
+    healthMonthlyHAAM: 50, // with HAAM: net premium after program subsidies
+    parkingPerGig: 15,     // downtown evening garage rate
+    lmfAward: 17895,       // FY 2026 average award
+    otherIncome: 8500,     // teaching + sessions + streaming, held flat
+    workSpendingBase: 5394,// median for census respondents who answered every category
+    fmrShareCap: 0.30      // rent voucher illustrative cap
+  };
+
+  var state = {
+    rate: 125, perf: 3, travel: 2.5, weekend: 1, weekday: 0.5, weeks: 46, extras: 10,
+    loc: 'central', haam: false, lmf: false, park: false, fmr: false
+  };
+
+  function $(id){ return document.getElementById(id); }
+  function money(n){ return '$' + Math.round(n).toLocaleString('en-US'); }
+
+  function bind(sliderId, valueId, key, disp){
+    $(sliderId).addEventListener('input', function(){
+      state[key] = parseFloat(this.value);
+      $(valueId).textContent = (disp ? disp(state[key]) : state[key]);
+      compute();
+    });
+  }
+
+  bind('i-rate','v-rate','rate');
+  bind('i-perf','v-perf','perf');
+  bind('i-travel','v-travel','travel');
+  bind('i-wknd','v-wknd','weekend');
+  bind('i-wkdy','v-wkdy','weekday');
+  bind('i-weeks','v-weeks','weeks');
+  bind('i-extras','v-extras','extras');
+
+  document.querySelectorAll('#i-loc button').forEach(function(b){
+    b.addEventListener('click', function(){
+      document.querySelectorAll('#i-loc button').forEach(function(x){ x.classList.remove('active'); });
+      this.classList.add('active');
+      state.loc = this.getAttribute('data-v');
+      compute();
+    });
+  });
+  ['haam','lmf','park','fmr'].forEach(function(k){
+    $('i-'+k).addEventListener('change', function(){ state[k] = this.checked; compute(); });
+  });
+
+  // Preset scenarios. Each writes back into the sliders so the UI reflects the change.
+  function applyPreset(state2){
+    for(var k in state2){ state[k] = state2[k]; }
+    // reflect into controls
+    ['rate','perf','travel','weekend','weekday','weeks','extras'].forEach(function(k){
+      var i = $('i-'+({rate:'rate',perf:'perf',travel:'travel',weekend:'wknd',weekday:'wkdy',weeks:'weeks',extras:'extras'}[k]));
+      var v = $('v-'+({rate:'rate',perf:'perf',travel:'travel',weekend:'wknd',weekday:'wkdy',weeks:'weeks',extras:'extras'}[k]));
+      i.value = state[k]; v.textContent = state[k];
+    });
+    document.querySelectorAll('#i-loc button').forEach(function(x){
+      x.classList.toggle('active', x.getAttribute('data-v') === state.loc);
+    });
+    $('i-haam').checked = state.haam;
+    $('i-lmf').checked = state.lmf;
+    $('i-park').checked = state.park;
+    $('i-fmr').checked = state.fmr;
+    compute();
+  }
+  var presets = {
+    base:     { rate:125, perf:3, travel:2.5, weekend:1, weekday:0.5, weeks:46, extras:10, loc:'central', haam:false, lmf:false, park:false, fmr:false },
+    cityrate: { rate:200, perf:3, travel:2.5, weekend:1, weekday:0.5, weeks:46, extras:10, loc:'central', haam:false, lmf:false, park:false, fmr:false },
+    extras:   { rate:125, perf:3, travel:2.5, weekend:1, weekday:0.5, weeks:46, extras:30, loc:'central', haam:false, lmf:false, park:false, fmr:false },
+    stack:    { rate:125, perf:3, travel:2.5, weekend:1, weekday:0.5, weeks:46, extras:10, loc:'central', haam:true,  lmf:true,  park:true,  fmr:true }
+  };
+  document.querySelectorAll('.preset').forEach(function(b){
+    b.addEventListener('click', function(){ applyPreset(presets[this.getAttribute('data-preset')]); });
+  });
+
+  // The model.
+  //   weekend gigs = weekend/week * weeks ; weekday gigs = weekday/week * weeks
+  //   perf pay  = (weekend_gigs * (1 + weekendPremium) + weekday_gigs) * perf_hours * rate
+  //   extras    = gigs * extras_per_gig  (same on any night)
+  //   costs are annualised and location-scaled.
+  function compute(){
+    var loc = CFG.locations[state.loc];
+    var weekendGigs = state.weekend * state.weeks;
+    var weekdayGigs = state.weekday * state.weeks;
+    var gigs = weekendGigs + weekdayGigs;
+    var perfHours = gigs * state.perf;
+    var totalHours = gigs * (state.perf + state.travel);
+    // Weekend/prime-slot gigs pay a premium on the hourly rate; weekday gigs pay the base rate.
+    var perfPay = (weekendGigs * (1 + CFG.weekendPremium) + weekdayGigs) * state.perf * state.rate;
+    var extrasPay = gigs * state.extras;
+
+    var lmf = state.lmf ? CFG.lmfAward : 0;
+    var other = CFG.otherIncome;
+
+    var gross = perfPay + extrasPay + other + lmf;
+
+    var rent = loc.rent * 12;
+    if(state.fmr){
+      // Cap rent at 30 percent of gross when the voucher toggle is on.
+      var cap = gross * CFG.fmrShareCap;
+      if(rent > cap) rent = cap;
+    }
+    var commute = loc.commute * 12;
+    var downtownGigs = gigs * loc.dtShare;
+    var parking = state.park ? 0 : downtownGigs * CFG.parkingPerGig;
+    var health = (state.haam ? CFG.healthMonthlyHAAM : CFG.healthMonthly) * 12;
+    // Music work spending scales with gig count but keeps the median floor
+    // (a working musician spends on gear and promotion even in a low-gig year).
+    var work = Math.max(CFG.workSpendingBase * (0.6 + Math.min(gigs,120)/120*0.6), 2000);
+
+    var costs = rent + commute + parking + health + work;
+    var net = gross - costs;
+
+    // Display.
+    $('r-gigs').textContent = Math.round(gigs);
+    $('r-hours').textContent = Math.round(totalHours) + ' h';
+    var effHr = totalHours > 0 ? gross / totalHours : 0;
+    $('r-effhr').textContent = money(effHr) + '/hr';
+
+    $('r-perfpay').textContent = money(perfPay);
+    $('r-extraspay').textContent = money(extrasPay);
+    $('r-other').textContent = money(other);
+    $('r-lmf').textContent = money(lmf);
+
+    $('r-rent').textContent = '-' + money(rent);
+    $('r-gas').textContent = '-' + money(commute);
+    $('r-park').textContent = '-' + money(parking);
+    $('r-health').textContent = '-' + money(health);
+    $('r-work').textContent = '-' + money(work);
+    $('r-net').textContent = money(net);
+
+    $('netbig').textContent = money(net);
+    $('netbig').classList.toggle('neg', net < 0);
+    $('grossbig').textContent = money(gross);
+    var perfEff = perfHours > 0 ? perfPay / perfHours : 0;
+    $('hourly').innerHTML = 'performance-hour rate <b>' + money(perfEff) + '</b>, all-in <b>' + money(effHr) + '</b>';
+
+    // Compact pill row summarising which levers are on.
+    var pills = [];
+    pills.push('<span class="pill hint">Levers:</span>');
+    pills.push('<span class="pill ' + (state.haam?'on':'') + '">HAAM ' + (state.haam?'on':'off') + '</span>');
+    pills.push('<span class="pill ' + (state.lmf ?'on':'') + '">LMF grant ' + (state.lmf ?'on':'off') + '</span>');
+    pills.push('<span class="pill ' + (state.park?'on':'') + '">Parking ' + (state.park?'on':'off') + '</span>');
+    pills.push('<span class="pill ' + (state.fmr ?'on':'') + '">Voucher ' + (state.fmr ?'on':'off') + '</span>');
+    $('pillrow').innerHTML = pills.join(' ');
+
+    // Warnings and callouts appear conditionally so a reader sees the caveat
+    // where it actually matters, not scattered across the whole page.
+    var warns = [];
+    if(state.rate < 60){
+      warns.push('<div class="warning">At $' + state.rate + ' per performance hour, a full three-hour gig pays $' + Math.round(state.rate*state.perf) + '. This is inside the range that Austin musicians reported in 2022 KUT coverage, but below the $100+ market rate commonly cited for local shows.</div>');
+    }
+    if(state.rate >= 180){
+      warns.push('<div class="warning info">At $' + state.rate + ' per performance hour, the rate matches the City of Austin’s own musician-pay floor for city-hired performances (Resolution 20230720-123, $200 per musician for small groups). Very few private venues pay at this rate.</div>');
+    }
+    if(rent / gross > 0.30 && gross > 0 && !state.fmr){
+      var burden = 100 * rent / gross;
+      warns.push('<div class="warning">Rent is ' + burden.toFixed(0) + '% of gross income, above the 30% federal cost-burden threshold. Toggle the voucher lever to see the effect of capping rent at that line.</div>');
+    }
+    if(net < 0){
+      warns.push('<div class="warning">Net is negative. Real musicians close a gap like this with a non-music day job, a partner’s income, or accumulated debt; none of those are in this model.</div>');
+    }
+    if(gigs < 30){
+      warns.push('<div class="warning info">' + Math.round(gigs) + ' gigs a year is a light gig calendar. Setup+travel per gig sinks the effective hourly rate faster than the per-hour rate raises it.</div>');
+    }
+    $('warnbox').innerHTML = warns.join('');
+  }
+
+  compute();
+})();
+</script>
+</body>
+</html>

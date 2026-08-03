@@ -1,0 +1,216 @@
+fiscal_year,area_label,county_name,fips_cousub,hud_metro_code,hud_area_name_as_published,percentile_basis,br0,br1,br2,br3,br4
+1983,"Austin, TX (Travis County)",Travis County,4845399999,640,,45,306,366,421,518,576
+1985,"Austin, TX (Travis County)",Travis County,4845399999,640,,45,317,378,434,531,590
+1986,"Austin, TX (Travis County)",Travis County,4845399999,640,,45,317,381,448,560,627
+1987,"Austin, TX (Travis County)",Travis County,4845399999,640,,45,326,391,460,575,644
+1988,"Austin, TX (Travis County)",Travis County,4845399999,640,,45,336,403,474,593,664
+1989,"Austin, TX (Travis County)",Travis County,4845399999,640,,45,341,409,482,603,675
+1990,"Austin, TX (Travis County)",Travis County,4845399999,640,,45,348,418,493,616,690
+1991,"Austin, TX (Travis County)",Travis County,4845399999,640,,45,357,429,506,632,708
+1992,"Austin, TX (Travis County)",Travis County,4845399999,640,,45,369,444,523,654,732
+1993,"Austin, TX (Travis County)",Travis County,4845399999,640,,45,380,457,538,673,753
+1994,"Austin, TX (Travis County)",Travis County,4845399999,640,,45,381,460,613,851,1006
+1995,"Austin, TX (Travis County)",Travis County,4845399999,640,,40,387,467,623,865,1022
+1996,"Austin, TX (Travis County)",Travis County,4845399999,640,,40,405,489,652,905,1069
+1997,"Austin, TX (Travis County)",Travis County,4845399999,640,,40,416,503,670,930,1099
+1998,"Austin, TX (Travis County)",Travis County,4845399999,640,,40,427,516,687,954,1128
+1999,"Austin, TX (Travis County)",Travis County,4845399999,640,,40,434,525,699,970,1147
+2000,"Austin, TX (Travis County)",Travis County,4845399999,640,,40,435,526,700,972,1149
+2001,"Austin, TX (Travis County)",Travis County,4845399999,640,,50,533,645,858,1192,1409
+2002,"Austin, TX (Travis County)",Travis County,4845399999,640,,50,551,667,887,1233,1457
+2003,"Austin, TX (Travis County)",Travis County,4845399999,640,,50,565,684,911,1265,1496
+2004,"Austin, TX (Travis County)",Travis County,4845399999,640,,50,567,686,914,1269,1501
+2005,"Austin, TX (Travis County)",Travis County,4845399999,640,,50,656,747,912,1240,1435
+2006,"Austin, TX (Travis County)",Travis County,4845399999,METRO12420M12420,,50,578,658,804,1093,1265
+2007,"Austin, TX (Travis County)",Travis County,4845399999,METRO12420M12420,,50,601,685,836,1137,1315
+2008,"Austin, TX (Travis County)",Travis County,4845399999,METRO12420M12420,,50,672,766,935,1272,1471
+2009,"Austin, TX (Travis County)",Travis County,4845399999,METRO12420M12420,,40,658,749,912,1228,1398
+2010,"Austin, TX (Travis County)",Travis County,4845399999,METRO12420M12420,,40,688,783,954,1284,1462
+2011,"Austin, TX (Travis County)",Travis County,4845399999,METRO12420M12420,,40,694,791,963,1296,1476
+2012,"Austin, TX (Travis County)",Travis County,4845399999,METRO12420M12420,,50,713,812,989,1331,1516
+2013,"Austin, TX (Travis County)",Travis County,4845399999,METRO12420M12420,,50,681,834,1050,1421,1723
+2014,"Austin, TX (Travis County)",Travis County,4845399999,METRO12420M12420,,50,696,853,1074,1454,1762
+2015,"Austin, TX (Travis County)",Travis County,4845399999,METRO12420M12420,,40,681,834,1050,1421,1723
+2016,"Austin, TX (Travis County)",Travis County,4845399999,METRO12420M12420,,40,740,902,1126,1523,1845
+2017,"Austin, TX (Travis County)",Travis County,4845399999,METRO12420M12420,,40,799,968,1195,1619,1948
+2018,"Austin, TX (Travis County)",Travis County,4845399999,METRO12420M12420,,40,860,1023,1251,1679,2018
+2019,"Austin, TX (Travis County)",Travis County,4845399999,METRO12420M12420,,40,931,1086,1315,1734,2099
+2020,"Austin, TX (Travis County)",Travis County,4845399999,METRO12420M12420,,40,988,1134,1356,1763,2128
+2021,"Austin, TX (Travis County)",Travis County,4845399999,METRO12420M12420,,40,1059,1212,1434,1848,2207
+2022,"Austin, TX (Travis County)",Travis County,4845399999,METRO12420M12420,"Austin-Round Rock, TX MSA",40,1092,1236,1451,1867,2194
+2023,"Austin, TX (Travis County)",Travis County,4845399999,METRO12420M12420,"Austin-Round Rock, TX MSA",40,1253,1386,1626,2088,2416
+2024,"Austin, TX (Travis County)",Travis County,4845399999,METRO12420M12420,"Austin-Round Rock, TX MSA",,1519,1635,1924,2470,2840
+2025,"Austin, TX (Travis County)",Travis County,4845399999,METRO12420M12420,"Austin-Round Rock, TX MSA",,1549,1650,1949,2484,2882
+2026,"Austin, TX (Travis County)",Travis County,4845399999,METRO12420M12420,"Austin-Round Rock-San Marcos, TX MSA",,1474,1562,1852,2347,2760
+1983,"Dallas, TX (Dallas County)",Dallas County,4811399999,1920,,45,267,316,366,450,496
+1985,"Dallas, TX (Dallas County)",Dallas County,4811399999,1920,,45,285,335,387,472,520
+1986,"Dallas, TX (Dallas County)",Dallas County,4811399999,1920,,45,285,350,410,515,575
+1987,"Dallas, TX (Dallas County)",Dallas County,4811399999,1920,,45,290,356,417,523,584
+1988,"Dallas, TX (Dallas County)",Dallas County,4811399999,1920,,45,296,364,427,535,598
+1989,"Dallas, TX (Dallas County)",Dallas County,4811399999,1920,,45,292,359,421,528,590
+1990,"Dallas, TX (Dallas County)",Dallas County,4811399999,1920,,45,368,448,527,658,737
+1991,"Dallas, TX (Dallas County)",Dallas County,4811399999,1920,,45,369,450,529,661,740
+1992,"Dallas, TX (Dallas County)",Dallas County,4811399999,1920,,45,380,463,545,681,762
+1993,"Dallas, TX (Dallas County)",Dallas County,4811399999,1920,,45,398,485,571,713,798
+1994,"Dallas, TX (Dallas County)",Dallas County,4811399999,1920,,45,386,444,570,788,931
+1995,"Dallas, TX (Dallas County)",Dallas County,4811399999,1920,,40,383,440,565,782,924
+1996,"Dallas, TX (Dallas County)",Dallas County,4811399999,1920,,40,397,456,586,811,959
+1997,"Dallas, TX (Dallas County)",Dallas County,4811399999,1920,,40,411,472,606,839,992
+1998,"Dallas, TX (Dallas County)",Dallas County,4811399999,1920,,40,471,541,694,961,1136
+1999,"Dallas, TX (Dallas County)",Dallas County,4811399999,1920,,40,487,560,718,994,1175
+2000,"Dallas, TX (Dallas County)",Dallas County,4811399999,1920,,40,508,584,749,1036,1225
+2001,"Dallas, TX (Dallas County)",Dallas County,4811399999,1920,,50,562,647,830,1148,1358
+2002,"Dallas, TX (Dallas County)",Dallas County,4811399999,1920,,50,548,631,810,1120,1325
+2003,"Dallas, TX (Dallas County)",Dallas County,4811399999,1920,,50,575,662,850,1176,1391
+2004,"Dallas, TX (Dallas County)",Dallas County,4811399999,1920,,50,589,678,871,1205,1425
+2005,"Dallas, TX (Dallas County)",Dallas County,4811399999,1920,,50,633,713,868,1147,1412
+2006,"Dallas, TX (Dallas County)",Dallas County,4811399999,METRO19100M19100,,40,548,607,733,954,1129
+2007,"Dallas, TX (Dallas County)",Dallas County,4811399999,METRO19100M19100,,50,591,658,798,1059,1283
+2008,"Dallas, TX (Dallas County)",Dallas County,4811399999,METRO19100M19100,,50,645,718,871,1156,1401
+2009,"Dallas, TX (Dallas County)",Dallas County,4811399999,METRO19100M19100,,50,670,746,905,1201,1455
+2010,"Dallas, TX (Dallas County)",Dallas County,4811399999,METRO19100M19100,,40,669,740,894,1164,1377
+2011,"Dallas, TX (Dallas County)",Dallas County,4811399999,METRO19100M19100,,40,666,738,891,1160,1372
+2012,"Dallas, TX (Dallas County)",Dallas County,4811399999,METRO19100M19100,,40,649,719,868,1130,1337
+2013,"Dallas, TX (Dallas County)",Dallas County,4811399999,METRO19100M19100,,40,585,701,887,1183,1429
+2014,"Dallas, TX (Dallas County)",Dallas County,4811399999,METRO19100M19100,,40,602,722,913,1218,1471
+2015,"Dallas, TX (Dallas County)",Dallas County,4811399999,METRO19100M19100,,40,607,728,921,1229,1484
+2016,"Dallas, TX (Dallas County)",Dallas County,4811399999,METRO19100M19100,,40,667,796,986,1337,1692
+2017,"Dallas, TX (Dallas County)",Dallas County,4811399999,METRO19100M19100,,40,689,837,1031,1390,1774
+2018,"Dallas, TX (Dallas County)",Dallas County,4811399999,METRO19100M19100,,40,730,878,1077,1447,1856
+2019,"Dallas, TX (Dallas County)",Dallas County,4811399999,METRO19100M19100,,40,836,989,1201,1600,2080
+2020,"Dallas, TX (Dallas County)",Dallas County,4811399999,METRO19100M19100,,40,957,1093,1314,1727,2262
+2021,"Dallas, TX (Dallas County)",Dallas County,4811399999,METRO19100M19100,,40,1029,1134,1352,1746,2309
+2022,"Dallas, TX (Dallas County)",Dallas County,4811399999,METRO19100M19100,"Dallas, TX HUD Metro FMR Area",40,1076,1150,1362,1736,2280
+2023,"Dallas, TX (Dallas County)",Dallas County,4811399999,METRO19100M19100,"Dallas, TX HUD Metro FMR Area",40,1259,1326,1565,1972,2572
+2024,"Dallas, TX (Dallas County)",Dallas County,4811399999,METRO19100M19100,"Dallas, TX HUD Metro FMR Area",,1426,1500,1758,2212,2847
+2025,"Dallas, TX (Dallas County)",Dallas County,4811399999,METRO19100M19100,"Dallas, TX HUD Metro FMR Area",,1531,1606,1884,2361,3033
+2026,"Dallas, TX (Dallas County)",Dallas County,4811399999,METRO19100M19100,"Dallas, TX HUD Metro FMR Area",,1582,1648,1931,2431,3091
+1983,"Houston, TX (Harris County)",Harris County,4820199999,3360,,45,266,321,375,465,513
+1985,"Houston, TX (Harris County)",Harris County,4820199999,3360,,45,266,321,375,465,513
+1986,"Houston, TX (Harris County)",Harris County,4820199999,3360,,45,280,340,400,500,560
+1987,"Houston, TX (Harris County)",Harris County,4820199999,3360,,45,280,340,400,500,560
+1988,"Houston, TX (Harris County)",Harris County,4820199999,3360,,45,280,340,400,500,560
+1989,"Houston, TX (Harris County)",Harris County,4820199999,3360,,45,272,330,388,486,544
+1990,"Houston, TX (Harris County)",Harris County,4820199999,3360,,45,280,340,400,500,560
+1991,"Houston, TX (Harris County)",Harris County,4820199999,3360,,45,300,364,429,537,601
+1992,"Houston, TX (Harris County)",Harris County,4820199999,3360,,45,318,386,455,570,638
+1993,"Houston, TX (Harris County)",Harris County,4820199999,3360,,45,341,414,488,612,685
+1994,"Houston, TX (Harris County)",Harris County,4820199999,3360,,45,381,426,553,769,907
+1995,"Houston, TX (Harris County)",Harris County,4820199999,3360,,40,380,426,553,768,906
+1996,"Houston, TX (Harris County)",Harris County,4820199999,3360,,40,390,437,567,788,929
+1997,"Houston, TX (Harris County)",Harris County,4820199999,3360,,40,394,442,573,797,939
+1998,"Houston, TX (Harris County)",Harris County,4820199999,3360,,40,404,454,588,818,964
+1999,"Houston, TX (Harris County)",Harris County,4820199999,3360,,40,413,464,601,837,986
+2000,"Houston, TX (Harris County)",Harris County,4820199999,3360,,40,426,479,620,864,1018
+2001,"Houston, TX (Harris County)",Harris County,4820199999,3360,,50,470,529,684,954,1124
+2002,"Houston, TX (Harris County)",Harris County,4820199999,3360,,50,487,548,709,988,1165
+2003,"Houston, TX (Harris County)",Harris County,4820199999,3360,,50,514,578,747,1042,1227
+2004,"Houston, TX (Harris County)",Harris County,4820199999,3360,,50,523,588,760,1060,1248
+2005,"Houston, TX (Harris County)",Harris County,4820199999,3360,,50,539,601,733,980,1232
+2006,"Houston, TX (Harris County)",Harris County,4820199999,METRO26420M26420,,50,551,612,743,990,1245
+2007,"Houston, TX (Harris County)",Harris County,4820199999,METRO26420M26420,,50,569,633,768,1024,1287
+2008,"Houston, TX (Harris County)",Harris County,4820199999,METRO26420M26420,,50,631,702,852,1136,1428
+2009,"Houston, TX (Harris County)",Harris County,4820199999,METRO26420M26420,,50,642,714,866,1154,1451
+2010,"Houston, TX (Harris County)",Harris County,4820199999,METRO26420M26420,,50,661,735,892,1189,1495
+2011,"Houston, TX (Harris County)",Harris County,4820199999,METRO26420M26420,,50,690,767,931,1241,1560
+2012,"Houston, TX (Harris County)",Harris County,4820199999,METRO26420M26420,,50,694,772,937,1249,1570
+2013,"Houston, TX (Harris County)",Harris County,4820199999,METRO26420M26420,,50,636,765,945,1290,1595
+2014,"Houston, TX (Harris County)",Harris County,4820199999,METRO26420M26420,,50,623,750,926,1264,1563
+2015,"Houston, TX (Harris County)",Harris County,4820199999,METRO26420M26420,,40,599,721,890,1215,1502
+2016,"Houston, TX (Harris County)",Harris County,4820199999,METRO26420M26420,,40,684,773,948,1291,1650
+2017,"Houston, TX (Harris County)",Harris County,4820199999,METRO26420M26420,,40,701,797,976,1333,1690
+2018,"Houston, TX (Harris County)",Harris County,4820199999,METRO26420M26420,,40,772,871,1066,1456,1844
+2019,"Houston, TX (Harris County)",Harris County,4820199999,METRO26420M26420,,40,812,907,1104,1509,1897
+2020,"Houston, TX (Harris County)",Harris County,4820199999,METRO26420M26420,,40,826,908,1096,1485,1878
+2021,"Houston, TX (Harris County)",Harris County,4820199999,METRO26420M26420,,40,908,983,1176,1576,2010
+2022,"Houston, TX (Harris County)",Harris County,4820199999,METRO26420M26420,"Houston-The Woodlands-Sugar Land, TX HUD Metro FMR Area",40,944,1014,1208,1603,2058
+2023,"Houston, TX (Harris County)",Harris County,4820199999,METRO26420M26420,"Houston-The Woodlands-Sugar Land, TX HUD Metro FMR Area",40,1030,1095,1307,1722,2226
+2024,"Houston, TX (Harris County)",Harris County,4820199999,METRO26420M26420,"Houston-The Woodlands-Sugar Land, TX HUD Metro FMR Area",,1073,1135,1357,1792,2303
+2025,"Houston, TX (Harris County)",Harris County,4820199999,METRO26420M26420,"Houston-The Woodlands-Sugar Land, TX HUD Metro FMR Area",,1226,1279,1529,2038,2568
+2026,"Houston, TX (Harris County)",Harris County,4820199999,METRO26420M26420,"Houston-The Woodlands-Sugar Land, TX HUD Metro FMR Area",,1280,1323,1573,2116,2639
+1983,"Nashville, TN (Davidson County)",Davidson County,4703799999,5360,,45,257,321,378,466,522
+1985,"Nashville, TN (Davidson County)",Davidson County,4703799999,5360,,45,267,332,391,479,536
+1986,"Nashville, TN (Davidson County)",Davidson County,4703799999,5360,,45,296,360,423,529,593
+1987,"Nashville, TN (Davidson County)",Davidson County,4703799999,5360,,45,303,369,434,542,608
+1988,"Nashville, TN (Davidson County)",Davidson County,4703799999,5360,,45,312,380,447,558,626
+1989,"Nashville, TN (Davidson County)",Davidson County,4703799999,5360,,45,316,386,454,566,636
+1990,"Nashville, TN (Davidson County)",Davidson County,4703799999,5360,,45,323,394,464,579,650
+1991,"Nashville, TN (Davidson County)",Davidson County,4703799999,5360,,45,331,404,476,594,667
+1992,"Nashville, TN (Davidson County)",Davidson County,4703799999,5360,,45,342,418,492,614,690
+1993,"Nashville, TN (Davidson County)",Davidson County,4703799999,5360,,45,351,429,505,631,709
+1994,"Nashville, TN (Davidson County)",Davidson County,4703799999,5360,,45,348,415,512,697,784
+1995,"Nashville, TN (Davidson County)",Davidson County,4703799999,5360,,40,346,412,509,694,780
+1996,"Nashville, TN (Davidson County)",Davidson County,4703799999,5360,,40,357,426,526,717,806
+1997,"Nashville, TN (Davidson County)",Davidson County,4703799999,5360,,40,406,485,598,815,916
+1998,"Nashville, TN (Davidson County)",Davidson County,4703799999,5360,,40,417,498,614,837,940
+1999,"Nashville, TN (Davidson County)",Davidson County,4703799999,5360,,40,425,508,626,853,958
+2000,"Nashville, TN (Davidson County)",Davidson County,4703799999,5360,,40,427,511,630,858,963
+2001,"Nashville, TN (Davidson County)",Davidson County,4703799999,5360,,40,434,520,641,873,979
+2002,"Nashville, TN (Davidson County)",Davidson County,4703799999,5360,,40,447,535,660,898,1007
+2003,"Nashville, TN (Davidson County)",Davidson County,4703799999,5360,,40,458,548,676,921,1033
+2004,"Nashville, TN (Davidson County)",Davidson County,4703799999,5360,,40,460,550,678,924,1036
+2005,"Nashville, TN (Davidson County)",Davidson County,4703799999,5360,,40,492,564,654,854,879
+2006,"Nashville, TN (Davidson County)",Davidson County,4703799999,METRO34980M34980,,40,507,579,666,864,889
+2007,"Nashville, TN (Davidson County)",Davidson County,4703799999,METRO34980M34980,,40,528,603,693,899,925
+2008,"Nashville, TN (Davidson County)",Davidson County,4703799999,METRO34980M34980,,40,551,629,723,938,965
+2009,"Nashville, TN (Davidson County)",Davidson County,4703799999,METRO34980M34980,,40,580,662,761,987,1016
+2010,"Nashville, TN (Davidson County)",Davidson County,4703799999,METRO34980M34980,,40,615,702,807,1047,1077
+2011,"Nashville, TN (Davidson County)",Davidson County,4703799999,METRO34980M34980,,40,627,716,823,1067,1099
+2012,"Nashville, TN (Davidson County)",Davidson County,4703799999,METRO34980M34980,,40,572,653,751,974,1003
+2013,"Nashville, TN (Davidson County)",Davidson County,4703799999,METRO34980M34980,,40,593,684,819,1089,1168
+2014,"Nashville, TN (Davidson County)",Davidson County,4703799999,METRO34980M34980,,40,616,711,851,1131,1214
+2015,"Nashville, TN (Davidson County)",Davidson County,4703799999,METRO34980M34980,,40,616,710,850,1130,1213
+2016,"Nashville, TN (Davidson County)",Davidson County,4703799999,METRO34980M34980,,40,661,756,925,1228,1433
+2017,"Nashville, TN (Davidson County)",Davidson County,4703799999,METRO34980M34980,,40,700,780,959,1274,1503
+2018,"Nashville, TN (Davidson County)",Davidson County,4703799999,METRO34980M34980,,40,731,816,1002,1327,1564
+2019,"Nashville, TN (Davidson County)",Davidson County,4703799999,METRO34980M34980,,40,830,911,1103,1455,1738
+2020,"Nashville, TN (Davidson County)",Davidson County,4703799999,METRO34980M34980,,40,898,957,1136,1484,1822
+2021,"Nashville, TN (Davidson County)",Davidson County,4703799999,METRO34980M34980,,40,998,1031,1197,1539,1930
+2022,"Nashville, TN (Davidson County)",Davidson County,4703799999,METRO34980M34980,"Nashville-Davidson--Murfreesboro--Franklin, TN HUD Metro FMR Area",40,1079,1100,1253,1587,1975
+2023,"Nashville, TN (Davidson County)",Davidson County,4703799999,METRO34980M34980,"Nashville-Davidson--Murfreesboro--Franklin, TN HUD Metro FMR Area",40,1218,1245,1406,1758,2173
+2024,"Nashville, TN (Davidson County)",Davidson County,4703799999,METRO34980M34980,"Nashville-Davidson--Murfreesboro--Franklin, TN HUD Metro FMR Area",,1404,1442,1619,2035,2482
+2025,"Nashville, TN (Davidson County)",Davidson County,4703799999,METRO34980M34980,"Nashville-Davidson--Murfreesboro--Franklin, TN HUD Metro FMR Area",,1589,1650,1827,2308,2840
+2026,"Nashville, TN (Davidson County)",Davidson County,4703799999,METRO34980M34980,"Nashville-Davidson--Murfreesboro--Franklin, TN HUD Metro FMR Area",,1507,1578,1730,2211,2696
+1983,"San Antonio, TX (Bexar County)",Bexar County,4802999999,7240,,45,263,319,372,459,511
+1985,"San Antonio, TX (Bexar County)",Bexar County,4802999999,7240,,45,273,330,385,472,524
+1986,"San Antonio, TX (Bexar County)",Bexar County,4802999999,7240,,45,275,330,390,490,545
+1987,"San Antonio, TX (Bexar County)",Bexar County,4802999999,7240,,45,282,339,401,503,560
+1988,"San Antonio, TX (Bexar County)",Bexar County,4802999999,7240,,45,291,349,413,519,577
+1989,"San Antonio, TX (Bexar County)",Bexar County,4802999999,7240,,45,295,354,420,527,586
+1990,"San Antonio, TX (Bexar County)",Bexar County,4802999999,7240,,45,329,399,470,588,658
+1991,"San Antonio, TX (Bexar County)",Bexar County,4802999999,7240,,45,337,409,482,603,675
+1992,"San Antonio, TX (Bexar County)",Bexar County,4802999999,7240,,45,357,434,511,638,715
+1993,"San Antonio, TX (Bexar County)",Bexar County,4802999999,7240,,45,331,402,473,591,662
+1994,"San Antonio, TX (Bexar County)",Bexar County,4802999999,7240,,45,338,389,504,701,827
+1995,"San Antonio, TX (Bexar County)",Bexar County,4802999999,7240,,40,339,391,507,705,832
+1996,"San Antonio, TX (Bexar County)",Bexar County,4802999999,7240,,40,346,399,517,719,849
+1997,"San Antonio, TX (Bexar County)",Bexar County,4802999999,7240,,40,356,410,531,739,873
+1998,"San Antonio, TX (Bexar County)",Bexar County,4802999999,7240,,40,365,421,545,758,896
+1999,"San Antonio, TX (Bexar County)",Bexar County,4802999999,7240,,40,371,428,554,771,911
+2000,"San Antonio, TX (Bexar County)",Bexar County,4802999999,7240,,40,372,429,555,772,913
+2001,"San Antonio, TX (Bexar County)",Bexar County,4802999999,7240,,50,399,461,596,829,980
+2002,"San Antonio, TX (Bexar County)",Bexar County,4802999999,7240,,50,413,477,616,857,1014
+2003,"San Antonio, TX (Bexar County)",Bexar County,4802999999,7240,,50,424,489,633,880,1041
+2004,"San Antonio, TX (Bexar County)",Bexar County,4802999999,7240,,50,425,491,635,883,1044
+2005,"San Antonio, TX (Bexar County)",Bexar County,4802999999,7240,,50,519,574,716,957,1139
+2006,"San Antonio, TX (Bexar County)",Bexar County,4802999999,METRO41700M41700,,40,500,556,687,886,1077
+2007,"San Antonio, TX (Bexar County)",Bexar County,4802999999,METRO41700M41700,,40,521,579,715,922,1120
+2008,"San Antonio, TX (Bexar County)",Bexar County,4802999999,METRO41700M41700,,40,568,632,780,1006,1222
+2009,"San Antonio, TX (Bexar County)",Bexar County,4802999999,METRO41700M41700,,40,577,642,792,1022,1241
+2010,"San Antonio, TX (Bexar County)",Bexar County,4802999999,METRO41700M41700,,40,579,645,796,1027,1247
+2011,"San Antonio, TX (Bexar County)",Bexar County,4802999999,METRO41700M41700,,40,613,682,842,1086,1319
+2012,"San Antonio, TX (Bexar County)",Bexar County,4802999999,METRO41700M41700,,40,553,616,760,980,1191
+2013,"San Antonio, TX (Bexar County)",Bexar County,4802999999,METRO41700M41700,,40,550,693,870,1134,1244
+2014,"San Antonio, TX (Bexar County)",Bexar County,4802999999,METRO41700M41700,,40,542,683,857,1117,1226
+2015,"San Antonio, TX (Bexar County)",Bexar County,4802999999,METRO41700M41700,,40,551,695,872,1137,1247
+2016,"San Antonio, TX (Bexar County)",Bexar County,4802999999,METRO41700M41700,,40,597,739,929,1222,1430
+2017,"San Antonio, TX (Bexar County)",Bexar County,4802999999,METRO41700M41700,,40,623,768,964,1273,1529
+2018,"San Antonio, TX (Bexar County)",Bexar County,4802999999,METRO41700M41700,,40,649,801,1001,1321,1604
+2019,"San Antonio, TX (Bexar County)",Bexar County,4802999999,METRO41700M41700,,40,688,844,1050,1379,1689
+2020,"San Antonio, TX (Bexar County)",Bexar County,4802999999,METRO41700M41700,,40,702,851,1051,1372,1691
+2021,"San Antonio, TX (Bexar County)",Bexar County,4802999999,METRO41700M41700,,40,761,912,1114,1446,1793
+2022,"San Antonio, TX (Bexar County)",Bexar County,4802999999,METRO41700M41700,"San Antonio-New Braunfels, TX HUD Metro FMR Area",40,815,961,1165,1500,1849
+2023,"San Antonio, TX (Bexar County)",Bexar County,4802999999,METRO41700M41700,"San Antonio-New Braunfels, TX HUD Metro FMR Area",40,918,1057,1282,1631,1987
+2024,"San Antonio, TX (Bexar County)",Bexar County,4802999999,METRO41700M41700,"San Antonio-New Braunfels, TX HUD Metro FMR Area",,1067,1197,1458,1846,2206
+2025,"San Antonio, TX (Bexar County)",Bexar County,4802999999,METRO41700M41700,"San Antonio-New Braunfels, TX HUD Metro FMR Area",,1116,1231,1501,1907,2243
+2026,"San Antonio, TX (Bexar County)",Bexar County,4802999999,METRO41700M41700,"San Antonio-New Braunfels, TX HUD Metro FMR Area",,1077,1177,1426,1830,2132

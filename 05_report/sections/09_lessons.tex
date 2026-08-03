@@ -1,0 +1,219 @@
+% Section 8: what the data suggest, kept to one page. Lessons from the evidence
+% and from what other places have done. Framed as options, not prescriptions.
+\section{What the data suggest}
+\label{sec:lessons}
+
+The evidence in this study points toward options rather than a program, and
+each row below shows the evidence behind its option so a reader can judge the
+inference for themselves. None of these is a recommendation about how much
+Austin or Texas should spend, which is a political judgment this study does not
+make. The table names the source behind each row in the second column and, in
+the third, the closest precedent this study located; every finding is developed
+in the section listed, and every underlying figure is registered in the numbers
+ledger at
+\texttt{03\_analysis/out/canonical\_numbers.csv}.
+
+\vspace{2pt}
+{\footnotesize
+% Tighter intercolumn padding: with three text columns the default 6pt on each
+% side of every column consumes about 9mm of the text block.
+\setlength{\tabcolsep}{3.5pt}
+% tabularx guarantees the table fits the text block exactly, rather than
+% relying on fixed widths that have to be re-tuned whenever a cell changes.
+\begin{longtable}{@{}>{\bfseries\color{amnavy}\RaggedRight\arraybackslash}p{4.3cm} >{\RaggedRight\arraybackslash}p{6.6cm} >{\RaggedRight\arraybackslash}p{5.7cm}@{}}
+\toprule
+\textbf{What the evidence shows} & \textbf{Option it points toward} & \textbf{Precedent or supporting evidence} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{What the evidence shows} & \textbf{Option it points toward} & \textbf{Precedent or supporting evidence} \\
+\midrule
+\endhead
+Austin's own music census stopped asking respondents what they earned after its
+2014 fielding, whose income questions covered calendar 2013, and no local
+survey has replaced the question.\footnote{Titan Music Group, \emph{The Austin
+Music Census: A Data-Driven Assessment of Austin's Commercial Music Economy},
+published for the City of Austin Economic Development Department, June 2015,
+fielded through community mailing lists and industry channels in late 2014,
+n=3{,}968 self-selected online respondents, at
+\url{https://austin.widen.net/content/om7zqn1qbx/pdf/Austin_Music_Census_Interactive_PDF_53115.pdf};
+Sound Music Cities and the City of Austin Music \& Entertainment Division,
+\emph{2022 Greater Austin Music Census}, fielded 15 July to 12 September 2022,
+n=2{,}260 self-selected online respondents, at
+\url{https://www.austinmusiccensus.org/s/2022-Greater-Austin-Music-Census-SUMMARY-REPORT-v13-optimized.pdf}.
+The 2022 instrument replaced the 2014 income-quantification items with an
+ordinal share-of-income scale that reports no dollars.}
+& Consider restoring a short earnings module to the next music survey and
+running it on a fixed cycle. Five consistent questions asked every two years
+rebuild the series; consistency matters more than length.
+& Other cities in the same census cohort still publish musician income
+figures. The 2022 Austin instrument dropped the income-quantification items
+its 2014 predecessor asked and replaced them with an ordinal share-of-income
+scale that reports no dollars. \\
+\rowrule
+The Austin Live Music Fund received \NCityLmfFyTwoFourApplicants\
+applications in its fiscal 2024 cycle and \NCityLmfFyTwoThreeApplicants\ in
+fiscal 2023, both figures from press reporting rather than a primary
+tabulation, and neither cycle's applicant-level distribution has been
+published.\footnote{The applicant counts trace to \emph{Austin Chronicle}
+reporting on the fund (FY2024 count published 28 March 2025); the fund's own
+FY2023 dashboard is a JavaScript-gated Power BI embed with no static export,
+and no primary applicant tabulation was located for either cycle. Development
+in Section~\ref{sec:city}. Both cycles' awardee lists are public: fiscal 2023
+at
+\url{https://austin.widen.net/content/jfxwxsxktx/pdf/2023LiveMusicFundEventProgramAwardeeList.pdf}
+and fiscal 2024 at
+\url{https://austin.widen.net/content/bpzuacfkk8/pdf/FY24-AwardeeList_Austin-Live-Music-Fund.pdf}.
+The applicant-level submissions the fund gathers, including geography,
+sector and requested amount, have not been released in aggregate.}
+& Consider publishing the applicant-level distributions the Live Music Fund
+already gathers, in aggregate. This costs no new collection.
+& The Texas Legislature attached a budget rider to the state film incentive
+that requires the Governor's office to report film-incentive awards, recipient
+by recipient, to the Legislative Budget Board (the Legislature's fiscal
+research office) twice a year; no parallel rider covers the state music
+rebate, and neither program is required to publish a recipient
+list.\footnote{Rider 40 to the Governor's office in the 2026--27 General
+Appropriations Act; Senate Bill 22, 89th Legislature, 2025. The parallel
+music-rebate statute is Senate Bill 609, 87th Legislature, 2021.} \\
+\rowrule
+Between January 2020 and mid-2026, the Austin venue tracking panel recorded
+more exits from its core live-music tier than it added, while the surviving
+rooms in that tier traded no worse than the rest of the Austin mixed-beverage
+market once venue-level trend and month-of-year seasonality are absorbed
+(Section~\ref{sec:venues}).\footnote{The tracking panel is
+\NVenuePanelIsCurated\ curated Austin live-music rooms matched to Texas
+Comptroller mixed-beverage receipts (Open Data Portal dataset
+\texttt{naix-2893} at
+\url{https://data.texas.gov/dataset/Mixed-Beverage-Gross-Receipts/naix-2893}),
+not a census. Section~\ref{sec:venues} tabulates the exits and the two-way
+fixed-effects regression that supports the same-as-market finding, and the
+technical appendix in Section~\ref{sec:appendix} lists the four ways the panel
+can and cannot be read.}
+& Consider directing support at room survival and replacement rather than at
+operating margins. Property costs and lease security are among the pressures
+venue operators report most often.
+& Austin's own Iconic Venue Fund is aimed at exactly this. At its first award
+in August 2023, requests ran to \NCityIvfRequestedToAwardRatio\ the size of
+that award; the fund has awarded more since, and no updated recipient list
+has been published (Section~\ref{sec:city}). \\
+\rowrule
+In the news timeline behind the venue panel, as many dated Austin
+live-music-room closures cite a property cause (rent increase, sale of
+property, redevelopment or lease expiration) as cite the pandemic, and
+presenters who answered the 2022 Greater Austin Music Census ranked property
+tax first among nine business pressures.\footnote{The closure counts come
+from a 71-row news timeline compiled by this study from \emph{Austin
+Chronicle}, \emph{Austin American-Statesman}, KUT/KUTX and industry
+reporting; 36 rows carry a closure year and a coded cause (13 property, 13
+pandemic, 2 regulatory, 3 uncoded, 5 other), and the property share appears
+in the ledger as \texttt{census\_closures\_property\_share}. The presenter
+ranking runs over the 2022 Greater Austin Music Census presenter-and-promoter
+subsample (respondents self-identified as booking or presenting live music);
+the census is a self-selected online sample, so the ranking describes
+presenters who answered rather than a probability sample of Austin
+presenters. Sources: news timeline at
+\texttt{01\_evidence/08\_venues\_ecosystem/venue\_timeline.csv}; census
+microdata dataset \texttt{an3p-3yqx} at
+\url{https://data.austintexas.gov/}.}
+& Consider whether venue support is best delivered through property-side
+instruments rather than through grants.
+& Other states run property or occupancy relief for cultural uses, and Texas
+has built comparable mechanisms for other industries. \\
+\rowrule
+A musician applying to the Live Music Fund faced a different average award
+depending on which fiscal year they applied, and the fund made no awards in
+its fiscal 2025 cycle (Section~\ref{sec:city}).
+& Consider fixing award sizes and cycle timing in advance and publishing the
+schedule. Predictability is a design feature for people with irregular income.
+& The fund's own year-to-year variation is the evidence; no external model is
+needed. \\
+\rowrule
+The Texas Music Incubator Rebate returns a share of the mixed-beverage and
+sales taxes a qualifying venue or promoter has already remitted, so the
+subsidy scales with a venue's alcohol sales, and the statute requires a
+written artist contract but sets no floor on what the contract pays the
+performer.\footnote{Senate Bill 609, 87th Legislature Regular Session, 2021,
+creating Government Code Chapter 485, Subchapter C, at
+\url{https://capitol.texas.gov/tlodocs/87R/billtext/pdf/SB00609F.pdf}. Program
+page: Texas Music Office, Texas Music Incubator Rebate Program, at
+\url{https://gov.texas.gov/music/tmir}. Neither the statute nor the program
+guidelines specify a minimum artist compensation.}
+& Consider whether public support intended to reach musicians should be
+conditioned on documented artist payments.
+& Georgia authorised a music tax credit at \$15 million a year and paid out
+nothing over the program's five-year life, so a headline cap alone says
+nothing about what reached anyone.\footnote{Georgia Department of Audits and
+Accounts and Georgia Southern University CBAER, \emph{Georgia Music Tax
+Credit: Economic and Fiscal Impact Analysis}, December 2023, at
+\url{https://www.audits.ga.gov/ReportSearch/download/30448}.} \\
+\rowrule
+Among respondents to the 2022 Greater Austin Music Census who answered the
+three-year-retention items, housing tenure and health insurance separate who
+expects to still be in Austin in three years; primary sector and workspace
+status do not (Section~\ref{sec:census}).\footnote{The 2022 Greater Austin
+Music Census carries no design weights, so every share here describes
+respondents to a self-selected online instrument and not the Austin music
+workforce; no margin of error can be computed for any of them. Development,
+including the logit that isolates the tenure and insurance effects, is in
+Section~\ref{sec:census}.}
+& Consider treating musician retention as a housing question, with
+instruments aimed at renters.
+& The 2022 census respondents' cost pressure sits in housing rather than in
+overall living costs: the Austin metro's Regional Price Parity, the Bureau of
+Economic Analysis series that indexes local price levels against a national
+100, sits near 100 on all items and above 100 on the housing item alone
+(Section~\ref{sec:costs}). Any generalisation of these shares to the Austin
+music workforce would rest on the assumption that the self-selected sample
+resembles that workforce on tenure and insurance, which no source can
+verify. \\
+\rowrule
+Federal shuttered-venue relief went to venues, cinemas and organisations
+rather than to individuals, and the largest city instrument for buildings
+(the Iconic Venue Fund) is capital support.\footnote{U.S. Small Business
+Administration, Shuttered Venue Operators Grant awards file, awards as of
+5~July 2022, at
+\url{https://data.sba.gov/sites/default/files/distribution/SBA-ODA-2022-09-001/awards-as-of-7-5-22.xlsx}.
+The program was authorised by section~324 of the Economic Aid to
+Hard-Hit Small Businesses, Nonprofits, and Venues Act of 2020 and its
+eligibility categories are venue operators, promoters, theatrical producers,
+performing-arts organisations, motion picture theatre operators and talent
+representatives, none of which is an individual worker.}
+& Consider what share of support should follow the worker rather than the
+building, and measure it.
+& The Live Music Fund is the main city channel reaching individuals, and it
+is the smallest of the three named here. Health coverage among Austin
+musicians, at \NPumsAustinMusHicov\ (\NPumsAustinMusHicovMoe), is close within
+that margin to \NPumsAustinAllworkHicov\ for all Austin
+workers.\footnote{Both figures are from the American Community Survey
+2020--2024 five-year Public Use Microdata Sample for Texas (dataset
+released 5 March 2026 at
+\url{https://www2.census.gov/programs-surveys/acs/data/pums/2024/5-Year/}),
+Musicians and Singers (occupation code 2752) against all employed Austin
+workers aged 18--64 with any-coverage flag HICOV=1, PWGTP-weighted, margin of
+error at 90 percent from the 80 replicate weights; the musician cell rests on
+\NPumsAustinMusNPos\ unweighted person records. See
+Section~\ref{sec:appendix} for the population and weighting.} Austin's
+independent nonprofit health programs for musicians reach individuals
+directly, though this study cannot attribute the coverage rate to them. \\
+\bottomrule
+\end{longtable}
+}
+
+\vspace{5pt}
+{\footnotesize\textbf{Cautions on reading this table.} Two policy
+interventions this study tested left no detectable change in venue receipts:
+the City of Austin's 2017 extended-hours pilot on Red River (a temporary
+2 a.m.\ closing time for a defined set of Red River rooms; the design
+detected no effect and rules out receipts effects larger than roughly 14
+percent) and the fiscal 2024 round of Live Music Fund venue grants
+(Section~\ref{sec:venues}). A third test found that receipts near the new
+downtown arena that opened in April 2022 moved no differently from receipts
+far from it, which is a test of proximity to the arena rather than of the
+arena's overall effect. None of that means those interventions failed at
+what they were trying to do; alcohol receipts at a venue are the wrong
+instrument for detecting effects on what performers are paid, and no public
+Austin dataset currently measures those payments directly. The largest
+intervention during the study period was also federal, one-off, and
+directed at venues and cinemas, so a local plan that assumes similar money
+will come again is building on an unusual year.}

@@ -1,0 +1,63 @@
+="Live-music rooms against the rest of the Austin mixed-beverage market"
+
+="",="(1)",="(2)",="(3)",="(4)"
+="",="lnreal",="lnreal",="lnreal",="ihsreal"
+
+="Post-March-2020 x curated live-music panel",="0.0727",="",="",=""
+="",="(0.0720)",="",="",=""
+
+="Post-March-2020 x core live-music tier",="",="0.0026",="",="-1.5264***"
+="",="",="(0.0766)",="",="(0.2717)"
+
+="2013 x core live-music tier",="",="",="-0.1757**",=""
+="",="",="",="(0.0828)",=""
+
+="2014 x core live-music tier",="",="",="-0.1302*",=""
+="",="",="",="(0.0758)",=""
+
+="2015 x core live-music tier",="",="",="-0.0860",=""
+="",="",="",="(0.0615)",=""
+
+="2016 x core live-music tier",="",="",="-0.0407",=""
+="",="",="",="(0.0602)",=""
+
+="2017 x core live-music tier",="",="",="-0.0133",=""
+="",="",="",="(0.0498)",=""
+
+="2018 x core live-music tier",="",="",="0.0115",=""
+="",="",="",="(0.0368)",=""
+
+="2020 x core live-music tier",="",="",="-0.5410***",=""
+="",="",="",="(0.1209)",=""
+
+="2021 x core live-music tier",="",="",="-0.1946*",=""
+="",="",="",="(0.1015)",=""
+
+="2022 x core live-music tier",="",="",="0.0107",=""
+="",="",="",="(0.0827)",=""
+
+="2023 x core live-music tier",="",="",="0.0727",=""
+="",="",="",="(0.0770)",=""
+
+="2024 x core live-music tier",="",="",="0.0119",=""
+="",="",="",="(0.0830)",=""
+
+="2025 x core live-music tier",="",="",="0.0945",=""
+="",="",="",="(0.0806)",=""
+
+="2026 x core live-music tier",="",="",="0.0000",=""
+="",="",="",="(.)",=""
+
+="Constant",="10.4758***",="10.4548***",="10.4572***",="9.9162***"
+="",="(0.0019)",="(0.0012)",="(0.0019)",="(0.0046)"
+
+="Observations",="175638",="171724",="171724",="193586"
+="Comparison group",="Panel vs all others",="Core tier vs all others",="Core tier vs all others",="Core tier vs all others"
+="Dependent variable",="log real receipts",="log real receipts",="log real receipts, 2019 base",="asinh real receipts"
+
+="Standard errors in parentheses"
+="Two-way fixed effects: venue or permit location, and calendar month."
+="Standard errors clustered by venue or permit location."
+="Real receipts in 2025 dollars; ten festival concession venue-months excluded."
+="Descriptive divergence test, not a causal estimate of any policy."
+="* p<0.10, ** p<0.05, *** p<0.01"

@@ -1,0 +1,407 @@
+                             2024 Third Extraordinary Session
+                                 Legislative Summaries
+Contents
+Act 1 Constitutional Amendment.................................................................................................................... 2
+Act 5 Corporation Income Tax ......................................................................................................................... 2
+Act 6 Corporation Franchise Tax .................................................................................................................... 3
+Act 10 Digital Products ....................................................................................................................................... 3
+Act 11 Personal Income and Sales and Use Taxes .................................................................................... 5
+Act 13 Dedication of Motor Vehicle Sales Tax............................................................................................ 8
+Act 16 Oilfield Site Restoration Fund and Fees ......................................................................................... 8
+Act 18 Severance Tax ........................................................................................................................................... 9
+
+
+
+
+INFORMAL ADVICE
+This communication constitutes "informal advice" from the Louisiana Department of Revenue as contemplated
+by LAC 61:III.101 and is not binding on the Department of Revenue or the person seeking the advice.
+2024 Third Extraordinary Session
+Legislative Summaries
+Page 2 of 9
+
+Act 1 Constitutional Amendment
+Act 1 (House Bill 7) proposes a rewrite of Article VII of the Louisiana Constitution and is
+dependent on the approval of the voters at a statewide election to be held on March 29, 2025.
+Reduces the maximum allowable state individual income tax rate from 4.75% to 3.75% and
+grants taxpayers 65 years of age or older an additional standard deduction equal to the
+standard deduction allowed for single individuals beginning January 1, 2026.
+
+Requires a two-thirds vote of each house of the legislature for the enactment of an
+exemption, exclusion, deduction, credit, or rebate, as well as an increase in the amount of a
+deduction, credit or rebate. Further, any new sales tax exclusion or exemption must be
+applicable to both state and local sales and use taxes.
+
+Maintains the state sales tax exclusions for food for home consumption, residential utilities
+and prescription drugs.
+
+Provides for the dedication of one-half of the severance taxes collected on certain brine to
+the governing authority of the parish in which the severance occurs. Removes the limitations
+on the amount of severance tax collections dedicated to locals from the constitution and
+authorizes the legislature to (1) increase or decrease the portion of collections to be
+distributed to local governing authorities and (2) establish annual caps on those
+distributions.
+
+Authorizes the exemption of business inventory from ad valorem taxes and provides for one-
+time payments to local governments who adopt exemptions. Establishes business inventory
+as a separate class of property and authorizes local tax authorities to reduce the applicable
+percentage of fair market value at which inventory is taxed. Requires a three-fourths vote of
+both houses of the legislature to enact new property tax exemptions.
+
+
+
+Act 5 Corporation Income Tax
+Act 5 (House Bill 2) eliminates the three brackets for corporation income tax; provides for a
+flat rate of 5.5% beginning January 1, 2025, and provides for a $20,000 corporate standard
+deduction. Repeals the deduction for expenses disallowed by 26 U.S.C. 280C and the
+provision that treats moveable property within a Foreign Trade Zone as located outside of
+Louisiana for purposes of the apportionment calculation.
+
+Authorizes a bonus depreciation deduction (or 100% expensing) for qualified property or
+qualified improvement property and a bonus amortization deduction for research and
+experimental expenditures, at the election of the taxpayer, for costs of qualified property,
+qualified improvement property, and research and experimental expenditures.
+
+
+INFORMAL ADVICE
+This communication constitutes "informal advice" from the Louisiana Department of Revenue as contemplated
+by LAC 61:III.101 and is not binding on the Department of Revenue or the person seeking the advice.
+2024 Third Extraordinary Session
+Legislative Summaries
+Page 3 of 9
+
+Sunsets the inventory tax credit for entities taxed as C-corporations for federal purposes
+effective June 30, 2026. Extends carryforwards of unused inventory tax credits (currently 10
+years) by 5 additional years. Limits the applicability of the inventory tax credit to individual
+income taxes, including credits from pass-through entities, for taxable periods beginning on
+or after July 1, 2026.
+
+Decreases the annual cap for the issuance of motion picture production tax credits by the
+Department of Economic Development from $150M to $125M beginning July 1, 2025, and
+decreases the annual cap for the claiming of these credits from $180M to $125M. Prohibits
+the rollover of any unused portion of the cap beginning July 1, 2025.
+
+Decreases the cap for the rehabilitation of historic structures from $125M to $85M for Part
+II applications received on or after January 1, 2025, and establishes an annual cap of $12M
+for the research and development tax credit beginning July 1, 2025.
+
+Establishes a June 30, 2025 sunset for multiple incentive programs including the Louisiana
+work opportunity tax credit, Louisiana Qualify Jobs Program, Angel Investor Tax Credit
+Program, Sound Recording Investor Tax Credit, and Enterprise Zones program. No credits
+can be granted to applications submitted after that date; however, credits can continue to be
+earned pursuant to applications and contracts submitted prior to June 30, 2025.
+
+Repeals expired and underutilized income and franchise tax credits and incentives. Repeals
+outdated language regarding review of certain credits by the legislature.
+
+
+
+Act 6 Corporation Franchise Tax
+Act 6 (House Bill 3) repeals the corporation franchise tax for taxable periods beginning on
+or after January 1, 2026, and removes references to the franchise tax in certain credit
+statutes.
+
+
+
+
+Act 10 Digital Products
+Act 10 (House Bill 8) expands the sales tax base to include the taxation of digital products
+effective for taxable periods beginning on or after January 1, 2025. Provides that Digital
+Products are products that are transferred electronically and include:
+        1.     Digital audiovisual works
+        2.     Digital audio works
+        3.     Digital books
+        4.     Digital codes
+
+INFORMAL ADVICE
+This communication constitutes "informal advice" from the Louisiana Department of Revenue as contemplated
+by LAC 61:III.101 and is not binding on the Department of Revenue or the person seeking the advice.
+2024 Third Extraordinary Session
+Legislative Summaries
+Page 4 of 9
+
+        5.      Digital applications and games
+        6.      Digital periodicals and discussion forums
+
+Digital audiovisual works are images that, when shown in succession, impart an impression
+of motion, together with accompanying sounds.
+
+Digital audio works are works that result from the fixation of a series of musical, spoken, or
+other sounds that are transferred electronically.
+
+Digital books are books that are transferred electronically.
+
+Digital codes are codes that provide a right to obtain one or more digital products. Includes
+codes used to access or obtain any digital products that have been previously purchased, but
+does not include traditional gift cards with monetary value redeemable for non-digital
+products.
+
+Digital applications and games are any applications or games, including add-ons or
+additional content that can be used by a computer, mobile device, or tablet.
+
+Digital periodicals and discussion forums are digital newspapers, digital magazines, other
+digital periodicals, chat room discussions, weblogs or other similar products.
+
+Provides that the following are not included as Digital Products:
+   1. Intangibles such as a patents, stocks, bonds, goodwill, trademarks, franchises, or
+      copyrights.
+   2. Telecommunications services and ancillary services.
+   3. Internet access service charges.
+   4. The representation of a professional service in an electronic form (such as an
+      electronic copy of an engineering report prepared by an engineer).
+   5. Digital products where the purchaser holds an intellectual property interest if the
+      purchaser uses the product only for commercial purposes.
+   6. Cable television services, direct-to-home satellite services, video programing
+      services, or satellite digital audio radio services.
+
+Excludes the following:
+   1. Digital products consumed in producing a new product for sale, where the digital
+      product becomes an ingredient or component of the new product.
+   2. Digital products that are made available free of charge.
+
+Exempts the following:
+   1. Digital products (as well as software, prewritten computer software access services,
+      information services) that are (1) purchased exclusively for commercial purposes, (2)
+      used directly in the production of goods and services for sale to customers, and (3)
+
+INFORMAL ADVICE
+This communication constitutes "informal advice" from the Louisiana Department of Revenue as contemplated
+by LAC 61:III.101 and is not binding on the Department of Revenue or the person seeking the advice.
+2024 Third Extraordinary Session
+Legislative Summaries
+Page 5 of 9
+
+       the goods or services produced and sold are subject to sales and use tax or insurance
+       premium tax.
+    2. Digital products (as well as prewritten computer software access services and
+       information services) purchased and used by FDIC insured financial institutions (or
+       their affiliates) for storing, transmitting, processing, or analyzing customer and
+       account information, facilitating transactions, account processes, investment
+       processes, lending processes, security and compliance.
+    3. Digital products used by licensed healthcare facilities and providers for storing or
+       transmitting healthcare information or for the diagnosis or treatment of a medical
+       condition.
+
+Provides that exclusions and exemptions applicable to tangible personal property also apply
+to digital products, so that all digital products have the same tax treatment as equivalent
+versions of tangible personal property.
+
+Eliminates the definition of custom computer software and treats all software the same. The
+previous exemption for customer computer software has been suspended or partly
+suspended since April 1, 2016.
+
+
+
+
+Act 11 Personal Income and Sales and Use Taxes
+Act 11 (House Bill 10) transfers most exclusions out of the definition section (R.S. 47:301)
+into various exemption provisions and consolidates related exemptions for the following
+categories:
+     Medical
+     Agricultural
+     Manufacturing machinery and equipment
+     Schools and educational materials
+     Intergovernmental and government
+
+Updates the definition of sales price to specifically include transportation charges.
+Transportation charges are already included in the definition of cost price. With the
+inclusion of these charges in both definitions, charges for delivery (or transportation) of
+goods by the retailer to the consumer must be included in cost price and sales price for
+purposes of calculating the sales and use tax.
+
+Provides that telecommunication services (intra and interstate) are subject to the total state
+sales tax rate of 5% beginning January 1, 2025.
+
+Establishes the state sales tax rate of 5% beginning January 1, 2025 through the following:
+
+INFORMAL ADVICE
+This communication constitutes "informal advice" from the Louisiana Department of Revenue as contemplated
+by LAC 61:III.101 and is not binding on the Department of Revenue or the person seeking the advice.
+2024 Third Extraordinary Session
+Legislative Summaries
+Page 6 of 9
+
+
+Increases the rate of tax imposed by R.S. 47:331 from 0.97% to 1%. Repeals the 0.03% levied
+in R.S. 51:1286; dedicates 0.03% of the tax collections from R.S. 47:331 annually to the
+Louisiana Tourism Promotion District. Retains the 0.45% and levies an additional 0.55% in
+R.S. 47:321.1 beginning January 1, 2025. Provides for a reduction beginning January 1, 2030.
+
+Removes taxable services from R.S. 47:301 and reenacts in a section specific to services.
+Updates the service of furnishing of accommodations to reflect current practices by
+clarifying that accommodations can be sold by any provider or seller, including property
+management companies and accommodations intermediaries. Clarifies that the sales price
+includes service, facilitator, processing and other similar fees and charges whether
+separately stated or not.
+
+Clarifies the service of furnishing of admissions to places of amusement, entertainment,
+recreational events and others similar events to include the sales of tickets and other charges
+for admissions and for participation in games and amusement activities are taxable. Includes
+coin-operated amusement devices. Includes any service, facility, processing, facilitator or
+other similar fee or charge as part of the sales price for purposes of calculating the sales tax.
+
+Adds two new services:
+   1. Prewritten computer software access; and
+   2. Information services, which includes charges for furnishing of newsletters, tax guides,
+      research publications, various reports, mailing lists, title abstracts, subscriptions to
+      genealogical, financial, or similar databases, GPS systems and cable television
+      services, direct-to-home satellite services, video programming services and satellite
+      digital audio radio services
+
+Levies an additional state sales and use tax at the rate of 5% on telecommunications services,
+cable television services, direct-to-home satellite services, video programming services and
+satellite digital audio radio services. These services are subject to a total state sales tax rate
+of 10% beginning January 1, 2025. Collections from the additional state levy are dedicated
+to the Local Revenue Fund, subject to a 1% collection fee to be retained by the Department
+of Revenue.
+
+Provides for a maximum use tax, after credit for taxes paid, of $90 when a new resident
+registers a motor vehicle previously registered in another state to the taxpayer as owner or
+lessee. Applies only to vehicles primarily used for personal purposes and registered within
+90 days. All other vehicles continue to be subject to the general credit for taxes paid.
+
+Reduces the maximum monthly amount of vendor’s compensation from $1,500 to $750.
+
+Converts the data center sales tax rebate to a sales tax exemption.
+
+
+INFORMAL ADVICE
+This communication constitutes "informal advice" from the Louisiana Department of Revenue as contemplated
+by LAC 61:III.101 and is not binding on the Department of Revenue or the person seeking the advice.
+2024 Third Extraordinary Session
+Legislative Summaries
+Page 7 of 9
+
+Establishes sourcing rules and bundling rules.
+
+Repeals several exemptions and exclusions and aligns the state and local sales tax bases with
+limited exceptions for food, prescription drugs and medical devices, manufacturing
+machinery and equipment and business utilities.
+
+Act 11 repeals the graduated brackets and rates for individual income tax and establishes a
+flat 3% rate beginning January 1, 2025. Increases the standard deduction for single
+individuals and married filing separate from $4,500 to $12,500. The standard deduction for
+taxpayers with filing status of married filing joint, qualified surviving spouse and head of
+household is double (200%) the amount for single individuals.
+
+Increases the annual retirement exemption for individuals age 65+ from $6,000 to $12,000.
+
+Provides for annual adjustments to the standard deduction and retirement exemption based
+on the percentage increase in the CPI for all urban consumers, as published by the U.S.
+Department of Labor, for the previous calendar year.
+
+Repeals the following deductions:
+    Additional $1,000 deduction for persons 65+, blind, and dependents
+    Net capital gain deduction
+    IRC Section 280C deduction
+
+Repeals the requirement for tax tables and the individual income tax triggers.
+
+Authorizes a bonus depreciation deduction (or 100% expensing) for qualified property or
+qualified improvement property and a bonus amortization deduction for research and
+experimental expenditures, at the election of the taxpayer, for costs of qualified property,
+qualified improvement property, and research and experimental expenditures.
+
+Sunsets the inventory tax credit for entities taxed as C-corporations for federal purposes
+effective June 30, 2026. Extends carryforwards of unused inventory tax credits (currently 10
+years) by 5 additional years. Limits the applicability of the inventory tax credit to individual
+income taxes, including credits from pass-through entities, for taxable periods beginning on
+or after July 1, 2026.
+
+Decreases the annual cap for the issuance of motion picture production tax credits by the
+Department of Economic Development from $150M to $125M beginning July 1, 2025, and
+decreases the annual cap for the claiming of these credits from $180M to $125M. Prohibits
+the rollover of any unused portion of the cap beginning July 1, 2025.
+
+
+
+
+INFORMAL ADVICE
+This communication constitutes "informal advice" from the Louisiana Department of Revenue as contemplated
+by LAC 61:III.101 and is not binding on the Department of Revenue or the person seeking the advice.
+2024 Third Extraordinary Session
+Legislative Summaries
+Page 8 of 9
+
+Decreases the cap for the rehabilitation of historic structures from $125M to $85M for Part
+II applications received on or after January 1, 2025, and establishes an annual cap of $12M
+for the research and development tax credit beginning July 1, 2025.
+
+Establishes a June 30, 2025 sunset for multiple incentive programs including the Louisiana
+work opportunity tax credit, Louisiana Qualify Jobs Program, Angel Investor Tax Credit
+Program, Sound Recording Investor Tax Credit, and Enterprise Zones program. No credits
+can be granted to applications submitted after that date; however, credits can continue to be
+earned pursuant to applications and contracts submitted prior to June 30, 2025.
+
+Repeals expired and underutilized income and franchise tax credits and incentives. Repeals
+outdated language regarding review of certain credits by the legislature.
+
+Repeals the graduated rates for pass-through entities that elect to be taxed as a corporation
+and sets the rate as the individual income tax rate by reference beginning January 1, 2025.
+
+Provides for a flat 3% rate for income of an estate or trust.
+
+
+
+
+Act 13 Dedication of Motor Vehicle Sales Tax
+Act 13 (House Bill 12) changes various treasury funds.
+
+Revises the dedication of motor vehicle sales tax collections for fiscal years 2025-2026 and
+2026-2027. For those two fiscal years, $40M will be deposited into the Megaprojects
+Leverage Fund for the I-10 Calcasieu River Bridge and I-10 Improvement Accounts. No other
+dedications will be made during those years. Beginning in fiscal year 2027-2028, the
+dedication will return to its current level – 60% of collections will be dedicated to the
+Construction Subfund of the Transportation Trust Fund and the Megaprojects Leverage
+Fund, split 25% and 75%, respectively. This change is effective July 1, 2025.
+
+
+
+Act 16 Oilfield Site Restoration Fund and Fees
+Act 16 (House Bill 23) increases the Oilfield Site Restoration Fee for oil and gas wells
+beginning July 1, 2025.
+
+Provides that the fee for wells that produce crude oil and condensate is as follows:
+   (i)    The fee shall be two cents per barrel on crude oil and condensate if the price of oil
+          is at or below $60 per barrel.
+
+
+INFORMAL ADVICE
+This communication constitutes "informal advice" from the Louisiana Department of Revenue as contemplated
+by LAC 61:III.101 and is not binding on the Department of Revenue or the person seeking the advice.
+2024 Third Extraordinary Session
+Legislative Summaries
+Page 9 of 9
+
+    (ii)    The fee shall be four cents per barrel on crude oil and condensate if the price of
+            oil is above $60 and at or below $90 per barrel.
+    (iii)   The fee shall be six cents per barrel on crude oil and condensate if the price of oil
+            is above $90 per barrel.
+
+Provides that the fee for natural gas and casing head gas is as follows:
+   (i)    The fee shall be three-tenths of one cent per thousand cubic feet if the price of gas
+          is at or below $2.50 per thousand cubic feet.
+   (ii)   The fee shall be four-tenths of one cent per thousand cubic feet if the price of gas
+          is above $2.50 and at or below $4.50 per thousand cubic feet.
+   (iii) The fee shall be five-tenths of one cent per thousand cubic feet if the price of gas is
+          above $4.50 per thousand cubic feet.
+
+Repeals R.S. 30:86(C) which contains the floor and cap for the Oilfield Site Restoration Fund.
+Under current law, when the balance in the fund reaches the cap, the Treasurer certifies that
+balance to the Department of Revenue and collections are ceased. Once this provision is
+repealed, there will no longer be any triggers to cease and/or resume collections.
+
+
+Act 18 Severance Tax
+Act 18 (House Bill 25) enacts various definitions related to the determination of payout of
+well cost for purposes of the horizontal well exemption. Going forward, the well cost
+statement submitted to the Department of Energy and Natural Resources must be verified
+by a qualified accountant.
+
+
+
+
+INFORMAL ADVICE
+This communication constitutes "informal advice" from the Louisiana Department of Revenue as contemplated
+by LAC 61:III.101 and is not binding on the Department of Revenue or the person seeking the advice.
+

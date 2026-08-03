@@ -1,0 +1,369 @@
+state,industry,year,acpsa_value_added_thousands,acpsa_employment_jobs,acpsa_compensation_thousands
+California,"Independent artists, writers, and performers",2001,9000907.0,22873,3994637
+California,"Independent artists, writers, and performers",2002,10506047.0,23297,4330333
+California,"Independent artists, writers, and performers",2003,12832016.0,25954,5153649
+California,"Independent artists, writers, and performers",2004,13081235.0,23433,5225350
+California,"Independent artists, writers, and performers",2005,12670934.0,22367,4892526
+California,"Independent artists, writers, and performers",2006,14006245.0,23855,5456982
+California,"Independent artists, writers, and performers",2007,13720514.0,23097,5686334
+California,"Independent artists, writers, and performers",2008,15320922.0,23657,6016302
+California,"Independent artists, writers, and performers",2009,16126288.0,23260,5789497
+California,"Independent artists, writers, and performers",2010,16911994.0,24107,5932747
+California,"Independent artists, writers, and performers",2011,18129619.0,25368,5999899
+California,"Independent artists, writers, and performers",2012,19737252.0,25699,6084081
+California,"Independent artists, writers, and performers",2013,18436586.0,27148,5861214
+California,"Independent artists, writers, and performers",2014,18524961.0,28208,5666310
+California,"Independent artists, writers, and performers",2015,17876822.0,26302,5836155
+California,"Independent artists, writers, and performers",2016,17799203.0,25425,5466815
+California,"Independent artists, writers, and performers",2017,18824007.0,25079,5492558
+California,"Independent artists, writers, and performers",2018,20291038.0,25650,5762110
+California,"Independent artists, writers, and performers",2019,22332820.0,27431,6623281
+California,"Independent artists, writers, and performers",2020,19215663.0,19971,7529284
+California,"Independent artists, writers, and performers",2021,24314425.0,23720,7509169
+California,"Independent artists, writers, and performers",2022,26480249.0,30182,8737770
+California,"Independent artists, writers, and performers",2023,24242807.0,31452,7310257
+California,Performing arts companies,2001,1850653.0,6688,1010333
+California,Performing arts companies,2002,1531770.0,6559,763503
+California,Performing arts companies,2003,2221175.0,6825,1048827
+California,Performing arts companies,2004,2486172.0,7206,1246506
+California,Performing arts companies,2005,2613988.0,7202,1262236
+California,Performing arts companies,2006,2443079.0,7167,1158909
+California,Performing arts companies,2007,2323474.0,7180,1095880
+California,Performing arts companies,2008,2622238.0,7271,1189295
+California,Performing arts companies,2009,2479023.0,6948,1016973
+California,Performing arts companies,2010,2391148.0,6720,999098
+California,Performing arts companies,2011,2769155.0,6899,1124732
+California,Performing arts companies,2012,2726756.0,6945,1117940
+California,Performing arts companies,2013,2799750.0,7253,1134741
+California,Performing arts companies,2014,2760820.0,7617,1094493
+California,Performing arts companies,2015,2730415.0,7514,1183146
+California,Performing arts companies,2016,3411849.0,7918,1467559
+California,Performing arts companies,2017,3578998.0,8163,1531213
+California,Performing arts companies,2018,3580471.0,8239,1559941
+California,Performing arts companies,2019,3857209.0,8474,1691844
+California,Performing arts companies,2020,2815826.0,5590,1380560
+California,Performing arts companies,2021,2029747.0,6764,1162815
+California,Performing arts companies,2022,2756171.0,9074,1409057
+California,Performing arts companies,2023,4181052.0,10070,1852741
+Florida,"Independent artists, writers, and performers",2001,266861.0,2339,100461
+Florida,"Independent artists, writers, and performers",2002,339565.0,2656,118464
+Florida,"Independent artists, writers, and performers",2003,342892.0,2424,117119
+Florida,"Independent artists, writers, and performers",2004,455601.0,3070,156146
+Florida,"Independent artists, writers, and performers",2005,587372.0,3618,195359
+Florida,"Independent artists, writers, and performers",2006,636823.0,4048,215487
+Florida,"Independent artists, writers, and performers",2007,1025483.0,4597,375026
+Florida,"Independent artists, writers, and performers",2008,791917.0,4282,265025
+Florida,"Independent artists, writers, and performers",2009,747351.0,3844,219684
+Florida,"Independent artists, writers, and performers",2010,865958.0,3926,240413
+Florida,"Independent artists, writers, and performers",2011,787364.0,3651,196728
+Florida,"Independent artists, writers, and performers",2012,1016541.0,3754,226296
+Florida,"Independent artists, writers, and performers",2013,979217.0,3774,226854
+Florida,"Independent artists, writers, and performers",2014,1073670.0,4030,239883
+Florida,"Independent artists, writers, and performers",2015,1215903.0,4138,293176
+Florida,"Independent artists, writers, and performers",2016,1417070.0,4391,321192
+Florida,"Independent artists, writers, and performers",2017,1280209.0,4680,276571
+Florida,"Independent artists, writers, and performers",2018,1504565.0,4867,315645
+Florida,"Independent artists, writers, and performers",2019,1448641.0,4956,318383
+Florida,"Independent artists, writers, and performers",2020,1104740.0,3188,331561
+Florida,"Independent artists, writers, and performers",2021,1211125.0,3657,279450
+Florida,"Independent artists, writers, and performers",2022,1812719.0,4673,446029
+Florida,"Independent artists, writers, and performers",2023,1841147.0,5176,417327
+Florida,Performing arts companies,2001,547655.0,2614,279013
+Florida,Performing arts companies,2002,441602.0,2692,205070
+Florida,Performing arts companies,2003,479770.0,3210,219428
+Florida,Performing arts companies,2004,582473.0,3302,294960
+Florida,Performing arts companies,2005,494410.0,3316,250625
+Florida,Performing arts companies,2006,513681.0,3557,265864
+Florida,Performing arts companies,2007,453476.0,3647,242749
+Florida,Performing arts companies,2008,543153.0,3468,269662
+Florida,Performing arts companies,2009,607140.0,3687,262414
+Florida,Performing arts companies,2010,658400.0,3782,276614
+Florida,Performing arts companies,2011,765672.0,3800,295991
+Florida,Performing arts companies,2012,739053.0,3709,273964
+Florida,Performing arts companies,2013,790083.0,3979,293436
+Florida,Performing arts companies,2014,853058.0,4297,314445
+Florida,Performing arts companies,2015,842780.0,4432,345041
+Florida,Performing arts companies,2016,983186.0,4564,405231
+Florida,Performing arts companies,2017,927967.0,4460,386504
+Florida,Performing arts companies,2018,934109.0,4286,396535
+Florida,Performing arts companies,2019,999818.0,4504,426878
+Florida,Performing arts companies,2020,759862.0,3176,362811
+Florida,Performing arts companies,2021,437260.0,3496,245903
+Florida,Performing arts companies,2022,615993.0,3890,306342
+Florida,Performing arts companies,2023,941302.0,4289,403828
+Georgia,"Independent artists, writers, and performers",2001,97965.0,1152,35510
+Georgia,"Independent artists, writers, and performers",2002,110648.0,1084,36811
+Georgia,"Independent artists, writers, and performers",2003,161379.0,1213,52367
+Georgia,"Independent artists, writers, and performers",2004,188963.0,1747,61797
+Georgia,"Independent artists, writers, and performers",2005,247118.0,1723,77843
+Georgia,"Independent artists, writers, and performers",2006,239323.0,1785,77329
+Georgia,"Independent artists, writers, and performers",2007,267943.0,1953,93493
+Georgia,"Independent artists, writers, and performers",2008,265678.0,1938,86228
+Georgia,"Independent artists, writers, and performers",2009,257827.0,2062,75249
+Georgia,"Independent artists, writers, and performers",2010,244069.0,1857,68074
+Georgia,"Independent artists, writers, and performers",2011,268876.0,1741,69363
+Georgia,"Independent artists, writers, and performers",2012,287545.0,1918,67906
+Georgia,"Independent artists, writers, and performers",2013,320816.0,1904,80117
+Georgia,"Independent artists, writers, and performers",2014,383511.0,2089,93884
+Georgia,"Independent artists, writers, and performers",2015,428779.0,2333,115403
+Georgia,"Independent artists, writers, and performers",2016,414427.0,2545,107515
+Georgia,"Independent artists, writers, and performers",2017,415506.0,2302,104234
+Georgia,"Independent artists, writers, and performers",2018,569127.0,2145,139952
+Georgia,"Independent artists, writers, and performers",2019,370132.0,2070,95133
+Georgia,"Independent artists, writers, and performers",2020,316438.0,1504,109045
+Georgia,"Independent artists, writers, and performers",2021,427039.0,1616,114396
+Georgia,"Independent artists, writers, and performers",2022,426415.0,1963,121845
+Georgia,"Independent artists, writers, and performers",2023,500208.0,2139,132104
+Georgia,Performing arts companies,2001,294087.0,2276,147783
+Georgia,Performing arts companies,2002,209811.0,1185,95353
+Georgia,Performing arts companies,2003,119416.0,619,51892
+Georgia,Performing arts companies,2004,120378.0,546,56939
+Georgia,Performing arts companies,2005,127256.0,621,58434
+Georgia,Performing arts companies,2006,114921.0,627,52951
+Georgia,Performing arts companies,2007,103758.0,681,48307
+Georgia,Performing arts companies,2008,111229.0,659,48817
+Georgia,Performing arts companies,2009,133049.0,727,51857
+Georgia,Performing arts companies,2010,145383.0,648,56235
+Georgia,Performing arts companies,2011,202671.0,776,74463
+Georgia,Performing arts companies,2012,186833.0,814,68069
+Georgia,Performing arts companies,2013,184625.0,880,65875
+Georgia,Performing arts companies,2014,195572.0,880,67581
+Georgia,Performing arts companies,2015,187303.0,906,70872
+Georgia,Performing arts companies,2016,228984.0,950,85798
+Georgia,Performing arts companies,2017,277977.0,1212,102636
+Georgia,Performing arts companies,2018,286653.0,1237,108763
+Georgia,Performing arts companies,2019,285887.0,1264,109136
+Georgia,Performing arts companies,2020,230556.0,927,99263
+Georgia,Performing arts companies,2021,171544.0,1094,88184
+Georgia,Performing arts companies,2022,259744.0,1287,116899
+Georgia,Performing arts companies,2023,347141.0,1417,132962
+Louisiana,"Independent artists, writers, and performers",2001,34279.0,263,10811
+Louisiana,"Independent artists, writers, and performers",2002,27055.0,249,7815
+Louisiana,"Independent artists, writers, and performers",2003,30759.0,225,8684
+Louisiana,"Independent artists, writers, and performers",2004,30022.0,200,8680
+Louisiana,"Independent artists, writers, and performers",2005,46559.0,143,13170
+Louisiana,"Independent artists, writers, and performers",2006,24484.0,186,7272
+Louisiana,"Independent artists, writers, and performers",2007,26385.0,194,8607
+Louisiana,"Independent artists, writers, and performers",2008,17607.0,128,5523
+Louisiana,"Independent artists, writers, and performers",2009,35479.0,127,10339
+Louisiana,"Independent artists, writers, and performers",2010,159500.0,148,46440
+Louisiana,"Independent artists, writers, and performers",2011,155560.0,150,43371
+Louisiana,"Independent artists, writers, and performers",2012,82511.0,177,22027
+Louisiana,"Independent artists, writers, and performers",2013,116158.0,181,31501
+Louisiana,"Independent artists, writers, and performers",2014,164224.0,242,42301
+Louisiana,"Independent artists, writers, and performers",2015,142182.0,334,38450
+Louisiana,"Independent artists, writers, and performers",2016,122934.0,336,30851
+Louisiana,"Independent artists, writers, and performers",2017,120098.0,402,28090
+Louisiana,"Independent artists, writers, and performers",2018,155412.0,407,35207
+Louisiana,"Independent artists, writers, and performers",2019,208571.0,516,49188
+Louisiana,"Independent artists, writers, and performers",2020,120320.0,325,38322
+Louisiana,"Independent artists, writers, and performers",2021,191835.0,432,46773
+Louisiana,"Independent artists, writers, and performers",2022,208253.0,530,54873
+Louisiana,"Independent artists, writers, and performers",2023,218059.0,1111,52844
+Louisiana,Performing arts companies,2001,40771.0,379,20974
+Louisiana,Performing arts companies,2002,38663.0,320,18082
+Louisiana,Performing arts companies,2003,30547.0,323,13423
+Louisiana,Performing arts companies,2004,35853.0,334,16988
+Louisiana,Performing arts companies,2005,29301.0,222,13377
+Louisiana,Performing arts companies,2006,29072.0,209,13267
+Louisiana,Performing arts companies,2007,27994.0,230,12785
+Louisiana,Performing arts companies,2008,29186.0,(D),(D)
+Louisiana,Performing arts companies,2009,36817.0,204,14914
+Louisiana,Performing arts companies,2010,31597.0,186,13180
+Louisiana,Performing arts companies,2011,39575.0,219,16158
+Louisiana,Performing arts companies,2012,34737.0,(D),(D)
+Louisiana,Performing arts companies,2013,34768.0,222,14389
+Louisiana,Performing arts companies,2014,42164.0,254,17149
+Louisiana,Performing arts companies,2015,37365.0,226,16512
+Louisiana,Performing arts companies,2016,40858.0,233,18022
+Louisiana,Performing arts companies,2017,45652.0,292,20048
+Louisiana,Performing arts companies,2018,47713.0,281,21290
+Louisiana,Performing arts companies,2019,51299.0,323,22929
+Louisiana,Performing arts companies,2020,35143.0,213,17448
+Louisiana,Performing arts companies,2021,33176.0,232,19164
+Louisiana,Performing arts companies,2022,41800.0,354,21644
+Louisiana,Performing arts companies,2023,57071.0,351,25572
+New York,"Independent artists, writers, and performers",2001,1997880.0,6492,839396
+New York,"Independent artists, writers, and performers",2002,2073858.0,6015,808397
+New York,"Independent artists, writers, and performers",2003,2251558.0,5426,859869
+New York,"Independent artists, writers, and performers",2004,2677673.0,5952,1024065
+New York,"Independent artists, writers, and performers",2005,2693342.0,6204,999774
+New York,"Independent artists, writers, and performers",2006,3340614.0,5876,1262525
+New York,"Independent artists, writers, and performers",2007,2916453.0,6164,1184774
+New York,"Independent artists, writers, and performers",2008,3152784.0,7077,1212189
+New York,"Independent artists, writers, and performers",2009,3316058.0,7084,1170061
+New York,"Independent artists, writers, and performers",2010,3523552.0,6495,1208952
+New York,"Independent artists, writers, and performers",2011,3281005.0,6622,1056234
+New York,"Independent artists, writers, and performers",2012,3920807.0,7179,1175346
+New York,"Independent artists, writers, and performers",2013,3969078.0,7761,1230130
+New York,"Independent artists, writers, and performers",2014,3988776.0,7851,1191522
+New York,"Independent artists, writers, and performers",2015,4702698.0,8380,1502879
+New York,"Independent artists, writers, and performers",2016,4447589.0,8823,1342496
+New York,"Independent artists, writers, and performers",2017,4360065.0,9512,1259341
+New York,"Independent artists, writers, and performers",2018,5530622.0,9920,1555296
+New York,"Independent artists, writers, and performers",2019,5333222.0,9774,1564157
+New York,"Independent artists, writers, and performers",2020,4730613.0,6477,1834487
+New York,"Independent artists, writers, and performers",2021,5629701.0,7029,1712148
+New York,"Independent artists, writers, and performers",2022,6605097.0,8455,2146308
+New York,"Independent artists, writers, and performers",2023,5825644.0,8988,1750947
+New York,Performing arts companies,2001,2012716.0,7226,1038655
+New York,Performing arts companies,2002,1807608.0,7270,848300
+New York,Performing arts companies,2003,1744173.0,7468,784256
+New York,Performing arts companies,2004,2151819.0,7964,1044555
+New York,Performing arts companies,2005,2202014.0,8159,1041235
+New York,Performing arts companies,2006,2264269.0,8349,1068153
+New York,Performing arts companies,2007,2173052.0,8953,1036087
+New York,Performing arts companies,2008,2516655.0,9414,1141552
+New York,Performing arts companies,2009,2535854.0,8805,1033020
+New York,Performing arts companies,2010,2664153.0,9085,1088193
+New York,Performing arts companies,2011,2939968.0,9039,1147991
+New York,Performing arts companies,2012,2885569.0,9542,1124718
+New York,Performing arts companies,2013,2818326.0,9849,1080657
+New York,Performing arts companies,2014,3129663.0,10315,1167596
+New York,Performing arts companies,2015,3030047.0,10498,1234301
+New York,Performing arts companies,2016,3303600.0,10650,1332370
+New York,Performing arts companies,2017,3492454.0,10948,1400936
+New York,Performing arts companies,2018,3539473.0,11690,1447686
+New York,Performing arts companies,2019,3596933.0,11913,1479667
+New York,Performing arts companies,2020,2160780.0,6618,998662
+New York,Performing arts companies,2021,1392278.0,7315,757155
+New York,Performing arts companies,2022,2617624.0,10905,1260669
+New York,Performing arts companies,2023,3541266.0,11510,1459786
+Tennessee,"Independent artists, writers, and performers",2001,66951.0,683,27416
+Tennessee,"Independent artists, writers, and performers",2002,156272.0,1269,59161
+Tennessee,"Independent artists, writers, and performers",2003,194491.0,1255,68965
+Tennessee,"Independent artists, writers, and performers",2004,185285.0,1377,62763
+Tennessee,"Independent artists, writers, and performers",2005,242180.0,1508,75911
+Tennessee,"Independent artists, writers, and performers",2006,352165.0,1707,106914
+Tennessee,"Independent artists, writers, and performers",2007,276612.0,1739,87078
+Tennessee,"Independent artists, writers, and performers",2008,338277.0,1798,101962
+Tennessee,"Independent artists, writers, and performers",2009,389501.0,1738,108062
+Tennessee,"Independent artists, writers, and performers",2010,359899.0,1812,98606
+Tennessee,"Independent artists, writers, and performers",2011,387058.0,1787,100607
+Tennessee,"Independent artists, writers, and performers",2012,498440.0,1852,122513
+Tennessee,"Independent artists, writers, and performers",2013,516935.0,2134,134863
+Tennessee,"Independent artists, writers, and performers",2014,816217.0,2388,209245
+Tennessee,"Independent artists, writers, and performers",2015,942531.0,2443,264770
+Tennessee,"Independent artists, writers, and performers",2016,790092.0,2437,214607
+Tennessee,"Independent artists, writers, and performers",2017,782468.0,2645,207005
+Tennessee,"Independent artists, writers, and performers",2018,690902.0,2456,178192
+Tennessee,"Independent artists, writers, and performers",2019,787591.0,2529,213553
+Tennessee,"Independent artists, writers, and performers",2020,407575.0,1442,148384
+Tennessee,"Independent artists, writers, and performers",2021,756583.0,1557,214876
+Tennessee,"Independent artists, writers, and performers",2022,966193.0,2025,290764
+Tennessee,"Independent artists, writers, and performers",2023,1145269.0,2218,318693
+Tennessee,Performing arts companies,2001,342727.0,1464,181466
+Tennessee,Performing arts companies,2002,288803.0,1409,139153
+Tennessee,Performing arts companies,2003,342983.0,1587,159089
+Tennessee,Performing arts companies,2004,419965.0,1689,210352
+Tennessee,Performing arts companies,2005,469298.0,1726,230291
+Tennessee,Performing arts companies,2006,577019.0,1755,282794
+Tennessee,Performing arts companies,2007,503091.0,1886,250446
+Tennessee,Performing arts companies,2008,550022.0,1807,260349
+Tennessee,Performing arts companies,2009,560556.0,1788,237303
+Tennessee,Performing arts companies,2010,677414.0,1830,286306
+Tennessee,Performing arts companies,2011,812723.0,1827,326891
+Tennessee,Performing arts companies,2012,799173.0,1924,320033
+Tennessee,Performing arts companies,2013,799432.0,2082,324741
+Tennessee,Performing arts companies,2014,836421.0,2180,340572
+Tennessee,Performing arts companies,2015,1129167.0,2251,512391
+Tennessee,Performing arts companies,2016,960971.0,2248,445202
+Tennessee,Performing arts companies,2017,1119546.0,2289,528759
+Tennessee,Performing arts companies,2018,1192173.0,2520,573668
+Tennessee,Performing arts companies,2019,1013756.0,2622,492581
+Tennessee,Performing arts companies,2020,576090.0,(D),(D)
+Tennessee,Performing arts companies,2021,519371.0,(D),(D)
+Tennessee,Performing arts companies,2022,882076.0,2490,490643
+Tennessee,Performing arts companies,2023,1415304.0,2671,689256
+Texas,"Independent artists, writers, and performers",2001,229773.0,2257,94905
+Texas,"Independent artists, writers, and performers",2002,269646.0,2310,103308
+Texas,"Independent artists, writers, and performers",2003,262347.0,2172,97717
+Texas,"Independent artists, writers, and performers",2004,298412.0,2558,110391
+Texas,"Independent artists, writers, and performers",2005,282232.0,2525,99861
+Texas,"Independent artists, writers, and performers",2006,343654.0,2266,122616
+Texas,"Independent artists, writers, and performers",2007,373510.0,2646,141859
+Texas,"Independent artists, writers, and performers",2008,438915.0,3133,154890
+Texas,"Independent artists, writers, and performers",2009,450949.0,3211,143225
+Texas,"Independent artists, writers, and performers",2010,458914.0,3348,140377
+Texas,"Independent artists, writers, and performers",2011,648836.0,3379,183041
+Texas,"Independent artists, writers, and performers",2012,786745.0,3713,202336
+Texas,"Independent artists, writers, and performers",2013,738346.0,3875,198138
+Texas,"Independent artists, writers, and performers",2014,966104.0,4328,251640
+Texas,"Independent artists, writers, and performers",2015,896686.0,4691,251260
+Texas,"Independent artists, writers, and performers",2016,901827.0,5053,238374
+Texas,"Independent artists, writers, and performers",2017,917899.0,5535,231705
+Texas,"Independent artists, writers, and performers",2018,1063675.0,6354,262323
+Texas,"Independent artists, writers, and performers",2019,1138159.0,7111,292714
+Texas,"Independent artists, writers, and performers",2020,872294.0,4065,302569
+Texas,"Independent artists, writers, and performers",2021,1199219.0,4796,323696
+Texas,"Independent artists, writers, and performers",2022,1572150.0,6098,450803
+Texas,"Independent artists, writers, and performers",2023,1642800.0,6610,433232
+Texas,Performing arts companies,2001,373526.0,2336,202262
+Texas,Performing arts companies,2002,336381.0,2301,166528
+Texas,Performing arts companies,2003,337886.0,2269,160105
+Texas,Performing arts companies,2004,378819.0,2325,192443
+Texas,Performing arts companies,2005,380029.0,2340,186779
+Texas,Performing arts companies,2006,358059.0,2422,174722
+Texas,Performing arts companies,2007,346452.0,2410,169619
+Texas,Performing arts companies,2008,364593.0,2479,171918
+Texas,Performing arts companies,2009,499714.0,2764,215181
+Texas,Performing arts companies,2010,535775.0,2938,235800
+Texas,Performing arts companies,2011,555663.0,2965,237957
+Texas,Performing arts companies,2012,510189.0,2828,220942
+Texas,Performing arts companies,2013,537070.0,3079,232239
+Texas,Performing arts companies,2014,593779.0,3217,254242
+Texas,Performing arts companies,2015,543004.0,3350,254097
+Texas,Performing arts companies,2016,642475.0,3591,300673
+Texas,Performing arts companies,2017,684210.0,3821,321186
+Texas,Performing arts companies,2018,656246.0,3999,314451
+Texas,Performing arts companies,2019,669798.0,3968,322089
+Texas,Performing arts companies,2020,574429.0,2808,306591
+Texas,Performing arts companies,2021,382651.0,3273,235605
+Texas,Performing arts companies,2022,551679.0,4201,304591
+Texas,Performing arts companies,2023,875728.0,4451,421683
+Washington,"Independent artists, writers, and performers",2001,113963.0,1129,40943
+Washington,"Independent artists, writers, and performers",2002,107107.0,948,35569
+Washington,"Independent artists, writers, and performers",2003,116699.0,880,36719
+Washington,"Independent artists, writers, and performers",2004,110162.0,848,33611
+Washington,"Independent artists, writers, and performers",2005,110361.0,739,31425
+Washington,"Independent artists, writers, and performers",2006,143708.0,719,40247
+Washington,"Independent artists, writers, and performers",2007,151958.0,748,44842
+Washington,"Independent artists, writers, and performers",2008,172969.0,759,50258
+Washington,"Independent artists, writers, and performers",2009,170588.0,754,47259
+Washington,"Independent artists, writers, and performers",2010,169848.0,729,48308
+Washington,"Independent artists, writers, and performers",2011,134856.0,759,37574
+Washington,"Independent artists, writers, and performers",2012,135733.0,816,36691
+Washington,"Independent artists, writers, and performers",2013,142494.0,824,39140
+Washington,"Independent artists, writers, and performers",2014,156269.0,832,40722
+Washington,"Independent artists, writers, and performers",2015,141307.0,877,39147
+Washington,"Independent artists, writers, and performers",2016,140550.0,943,36412
+Washington,"Independent artists, writers, and performers",2017,149939.0,1030,36653
+Washington,"Independent artists, writers, and performers",2018,176724.0,1154,42283
+Washington,"Independent artists, writers, and performers",2019,195699.0,1191,48903
+Washington,"Independent artists, writers, and performers",2020,143278.0,752,48035
+Washington,"Independent artists, writers, and performers",2021,189116.0,777,49274
+Washington,"Independent artists, writers, and performers",2022,202532.0,964,56386
+Washington,"Independent artists, writers, and performers",2023,205636.0,1026,52812
+Washington,Performing arts companies,2001,161241.0,1361,96043
+Washington,Performing arts companies,2002,146534.0,1315,80785
+Washington,Performing arts companies,2003,150664.0,1372,79343
+Washington,Performing arts companies,2004,188533.0,1508,105045
+Washington,Performing arts companies,2005,197572.0,1543,106449
+Washington,Performing arts companies,2006,207115.0,1541,110038
+Washington,Performing arts companies,2007,185665.0,1597,98690
+Washington,Performing arts companies,2008,212358.0,1665,108531
+Washington,Performing arts companies,2009,239287.0,1626,111703
+Washington,Performing arts companies,2010,228809.0,1539,108297
+Washington,Performing arts companies,2011,250814.0,1486,114587
+Washington,Performing arts companies,2012,221349.0,1477,101172
+Washington,Performing arts companies,2013,239078.0,1532,109022
+Washington,Performing arts companies,2014,245834.0,1578,111215
+Washington,Performing arts companies,2015,230607.0,1576,114585
+Washington,Performing arts companies,2016,259876.0,1644,130612
+Washington,Performing arts companies,2017,288332.0,1722,146665
+Washington,Performing arts companies,2018,288268.0,1782,149641
+Washington,Performing arts companies,2019,264963.0,1802,138093
+Washington,Performing arts companies,2020,203864.0,1189,116277
+Washington,Performing arts companies,2021,120067.0,1219,78156
+Washington,Performing arts companies,2022,217984.0,(D),(D)
+Washington,Performing arts companies,2023,311247.0,2006,162629

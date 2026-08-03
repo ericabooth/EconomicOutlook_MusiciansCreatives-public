@@ -1,0 +1,18 @@
+st_fips,county_fips,county_name,puma20_5ce,puma20_geoid,notes
+48,021,Bastrop,05100,4805100,"Combined multi-county PUMA (Bastrop + Caldwell); below the ~100k population threshold to stand alone"
+48,055,Caldwell,05100,4805100,"Combined multi-county PUMA (Bastrop + Caldwell); below the ~100k population threshold to stand alone"
+48,209,Hays,05401,4805401,
+48,209,Hays,05402,4805402,
+48,453,Travis,05301,4805301,
+48,453,Travis,05302,4805302,
+48,453,Travis,05303,4805303,
+48,453,Travis,05304,4805304,
+48,453,Travis,05305,4805305,
+48,453,Travis,05306,4805306,
+48,453,Travis,05307,4805307,
+48,453,Travis,05308,4805308,
+48,453,Travis,05309,4805309,
+48,491,Williamson,05201,4805201,
+48,491,Williamson,05202,4805202,
+48,491,Williamson,05203,4805203,
+48,491,Williamson,05204,4805204,

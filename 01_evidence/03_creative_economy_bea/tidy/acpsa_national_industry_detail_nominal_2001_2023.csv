@@ -1,0 +1,116 @@
+year,industry,acpsa_value_added_millions,industry_output_millions,acpsa_employment_thousands,acpsa_compensation_millions
+2001,Performing Arts Companies,9028,15776,50,4844
+2001,Promoters of performing arts and similar events,4203,11290,43,1556
+2001,"Independent Artists, Writers, And Performers",14941,20239,62,6314
+2001,Sound Recording,18009,29973,20,2081
+2001,Musical Instruments Manufacturing,662,1697,9,559
+2002,Performing Arts Companies,8040,14960,49,3944
+2002,Promoters of performing arts and similar events,6017,14486,44,2572
+2002,"Independent Artists, Writers, And Performers",16896,22722,62,6644
+2002,Sound Recording,15892,24640,19,1735
+2002,Musical Instruments Manufacturing,726,1774,9,587
+2003,Performing Arts Companies,8666,15596,50,4069
+2003,Promoters of performing arts and similar events,6445,15824,43,2589
+2003,"Independent Artists, Writers, And Performers",19606,25910,62,7548
+2003,Sound Recording,14118,23712,18,1717
+2003,Musical Instruments Manufacturing,730,1816,9,606
+2004,Performing Arts Companies,10175,17820,51,5117
+2004,Promoters of performing arts and similar events,6191,15472,43,2274
+2004,"Independent Artists, Writers, And Performers",20294,26590,63,7791
+2004,Sound Recording,14773,23021,19,1886
+2004,Musical Instruments Manufacturing,616,1519,9,507
+2005,Performing Arts Companies,10438,18428,52,5089
+2005,Promoters of performing arts and similar events,6499,16927,43,2403
+2005,"Independent Artists, Writers, And Performers",20324,26917,63,7508
+2005,Sound Recording,11230,23146,18,1756
+2005,Musical Instruments Manufacturing,642,1603,9,534
+2006,Performing Arts Companies,10425,18728,54,5040
+2006,Promoters of performing arts and similar events,7512,20377,44,2838
+2006,"Independent Artists, Writers, And Performers",22727,30250,65,8499
+2006,Sound Recording,11997,23265,18,1803
+2006,Musical Instruments Manufacturing,778,1912,9,641
+2007,Performing Arts Companies,9891,19490,56,4796
+2007,Promoters of performing arts and similar events,7391,22396,46,2938
+2007,"Independent Artists, Writers, And Performers",22761,31837,67,9062
+2007,Sound Recording,13130,20996,19,1773
+2007,Musical Instruments Manufacturing,739,1883,8,629
+2008,Performing Arts Companies,11141,20445,56,5153
+2008,Promoters of performing arts and similar events,8222,23266,46,3163
+2008,"Independent Artists, Writers, And Performers",24779,32640,68,9335
+2008,Sound Recording,14664,20007,19,2523
+2008,Musical Instruments Manufacturing,639,1899,8,532
+2009,Performing Arts Companies,11775,20694,54,4908
+2009,Promoters of performing arts and similar events,9169,24418,45,3320
+2009,"Independent Artists, Writers, And Performers",25775,32682,67,8866
+2009,Sound Recording,14073,18162,18,2351
+2009,Musical Instruments Manufacturing,664,1809,7,536
+2010,Performing Arts Companies,12183,20833,54,5104
+2010,Promoters of performing arts and similar events,9424,24238,43,3026
+2010,"Independent Artists, Writers, And Performers",26987,33285,68,9043
+2010,Sound Recording,13590,16784,18,2276
+2010,Musical Instruments Manufacturing,740,1919,7,569
+2011,Performing Arts Companies,13523,21714,55,5436
+2011,Promoters of performing arts and similar events,9557,23415,43,3011
+2011,"Independent Artists, Writers, And Performers",28456,33996,69,8959
+2011,Sound Recording,11931,15314,18,2246
+2011,Musical Instruments Manufacturing,740,2063,7,563
+2012,Performing Arts Companies,13245,20955,56,5319
+2012,Promoters of performing arts and similar events,11462,26498,43,3457
+2012,"Independent Artists, Writers, And Performers",31562,36255,72,9216
+2012,Sound Recording,11397,14643,17,1863
+2012,Musical Instruments Manufacturing,824,1896,7,654
+2013,Performing Arts Companies,13237,21337,59,5298
+2013,Promoters of performing arts and similar events,11768,28209,45,3785
+2013,"Independent Artists, Writers, And Performers",30382,36399,75,9144
+2013,Sound Recording,10352,14510,17,1753
+2013,Musical Instruments Manufacturing,762,1910,7,605
+2014,Performing Arts Companies,14033,22535,62,5551
+2014,Promoters of performing arts and similar events,13113,31475,48,4217
+2014,"Independent Artists, Writers, And Performers",31383,38908,79,9090
+2014,Sound Recording,10311,15010,17,1822
+2014,Musical Instruments Manufacturing,759,2032,7,578
+2015,Performing Arts Companies,13683,24414,63,5950
+2015,Promoters of performing arts and similar events,12965,35381,48,4534
+2015,"Independent Artists, Writers, And Performers",31696,41576,80,9809
+2015,Sound Recording,11205,16359,19,1891
+2015,Musical Instruments Manufacturing,743,2057,8,580
+2016,Performing Arts Companies,15651,26150,65,6808
+2016,Promoters of performing arts and similar events,14588,37891,50,5004
+2016,"Independent Artists, Writers, And Performers",31142,42948,82,9088
+2016,Sound Recording,11696,16935,20,1730
+2016,Musical Instruments Manufacturing,883,2066,8,640
+2017,Performing Arts Companies,16133,27902,67,7067
+2017,Promoters of performing arts and similar events,15807,42133,51,5437
+2017,"Independent Artists, Writers, And Performers",32153,46453,84,8957
+2017,Sound Recording,13689,18350,21,1746
+2017,Musical Instruments Manufacturing,961,2093,8,677
+2018,Performing Arts Companies,16577,28956,69,7398
+2018,Promoters of performing arts and similar events,17162,45587,53,5967
+2018,"Independent Artists, Writers, And Performers",35924,51365,88,9729
+2018,Sound Recording,13545,20006,21,2056
+2018,Musical Instruments Manufacturing,945,2192,8,671
+2019,Performing Arts Companies,16642,30343,71,7449
+2019,Promoters of performing arts and similar events,18268,49316,55,6380
+2019,"Independent Artists, Writers, And Performers",37845,54864,90,10725
+2019,Sound Recording,13310,21994,21,2337
+2019,Musical Instruments Manufacturing,1009,2219,8,726
+2020,Performing Arts Companies,11734,21757,46,5880
+2020,Promoters of performing arts and similar events,10541,28738,35,4839
+2020,"Independent Artists, Writers, And Performers",31387,42805,58,11851
+2020,Sound Recording,14408,23013,15,2344
+2020,Musical Instruments Manufacturing,988,2119,7,706
+2021,Performing Arts Companies,8089,21860,53,4715
+2021,Promoters of performing arts and similar events,12349,40302,42,4742
+2021,"Independent Artists, Writers, And Performers",40591,59695,68,11999
+2021,Sound Recording,17012,26246,18,2770
+2021,Musical Instruments Manufacturing,1153,2447,8,827
+2022,Performing Arts Companies,12428,28965,68,6446
+2022,Promoters of performing arts and similar events,20946,63777,54,8284
+2022,"Independent Artists, Writers, And Performers",46388,72385,87,14580
+2022,Sound Recording,20491,29696,22,3326
+2022,Musical Instruments Manufacturing,1268,2649,8,887
+2023,Performing Arts Companies,17772,34863,74,8069
+2023,Promoters of performing arts and similar events,28039,75404,58,9719
+2023,"Independent Artists, Writers, And Performers",43920,63657,94,12620
+2023,Sound Recording,21133,30835,19,3119
+2023,Musical Instruments Manufacturing,1580,2965,8,1021

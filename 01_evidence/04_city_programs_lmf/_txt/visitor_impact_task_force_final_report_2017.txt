@@ -1,0 +1,2123 @@
+        Visitor Impact Task Force
+Final Report to Austin City Council
+
+
+
+
+                           June 30, 2017
+
+This document provides the analyses and deliberations of the Visitor Impact Task
+ Force, to develop and report recommendations relevant to Austin City Council
+                         Resolution No. 20160818-075.
+Table of Contents
+Executive Summary............................................................................................................................................... 3
+Introduction .......................................................................................................................................................... 8
+   Task Force Scope............................................................................................................................................... 8
+   Membership...................................................................................................................................................... 9
+   Meeting Details ............................................................................................................................................... 10
+   Council Resolution .......................................................................................................................................... 10
+   Extension of Due Date .................................................................................................................................... 10
+Data Provided to the Visitor Impact Task Force ................................................................................................. 10
+Key Findings ........................................................................................................................................................ 13
+   Review of Texas Tax Code Chapter 351 and allowable uses of Hotel Occupancy Taxes ................................ 13
+   Review of current uses of Hotel Occupancy Taxes and the impact of those activities and expenditures on
+   tourism in the City .......................................................................................................................................... 14
+   Review of State and National best practices for tourism programs ............................................................... 22
+   Study the impact of tourism on City infrastructure, services, and facilities ................................................... 24
+   Review of current tourist activity in the City of Austin and what events, venues, or facilities those tourists
+   attend while visiting........................................................................................................................................ 25
+   Review the Austin Convention Center expansion, all possible design options and potential funding
+   mechanisms .................................................................................................................................................... 29
+   Consideration of the creation of a Tourism Public Improvement District...................................................... 33
+   Additional Topic Covered by Task Force – Welcome Centers ........................................................................ 33
+Detailed Recommendations ............................................................................................................................... 34
+Appendices ......................................................................................................................................................... 39
+   Appendix A ...................................................................................................................................................... 40
+       Council Resolution 20160818-075 .............................................................................................................. 40
+   Appendix B ...................................................................................................................................................... 43
+       Recommendation Discussion Notes ........................................................................................................... 43
+
+
+
+
+                                                                                                                                                        2|Page
+Executive Summary
+The Visitor Impact Task Force (VITF or Task Force) was created by resolution 20160818-075 approved by the
+Austin City Council (Council) on August 18, 2016. The Task Force held its first meeting on December 12, 2016,
+when 17 of 18 members were seated. The 18-member Task Force represented a variety of visitor industry
+interests, including representatives from the following communities and groups: hotel, restaurant, workforce,
+arts, music, events, parks, historic preservation, environment, public safety, convention center, and convention
+and visitors bureau.
+As intended by Council, there were many different viewpoints expressed by Task Force members. The
+recommendations were unanimously adopted by the 14 Task Force members present, plus one abstention.
+The success of the Task Force has been predicated on a philosophy of inclusion and not from the standpoint of
+any one person or group.
+
+The Task Force was subject to the provisions of the Texas Open Meetings Act, and all meetings were open to
+the public and included opportunities for public comment.
+The Council resolution directed the Task Force to “make recommendations to the City Council about how best
+to utilize all hotel occupancy revenue to impact tourism.”
+This overarching directive guided the Task Force through its deliberations and informed the following key Task
+Force recommendations:
+       Overarching Recommendations:
+            o With regard to all uses of the Hotel Occupancy Tax, equity should be considered and funding
+                 should be inclusive and reflect the diversity of this community, with inclusive consideration
+                 for under-served areas and under-represented communities.
+            o Sustainability practices should be considered in the expansion of the Convention Center so
+                 that community values and input are included in the process and put into practice.
+                       Visit Austin should conduct a dialogue with community stakeholders, the
+                         Environmental Commission, and the Joint Sustainability Committee on the
+                         “greening” and sustainability practices of the tourism industry
+       The Visitor Impact Task Force recommends expansion of the Austin Convention Center (ACC) following
+        the consultant’s recommended option to the West, non-contiguous (leaving Trinity Street open), IF:
+            o Financing concept 2b, increasing the Ch. 351 Hotel Occupancy Tax (HOT) by 2%, and retiring
+                 the current debt as soon as possible (estimated in the year 2021) is utilized, and
+            o The City seeks land acquisition through a long-term ground lease, or some other development
+                 agreement, that provides for the land and any additional development to remain on the tax
+                 roll. More specifically:
+                       Expanding the Convention Center should be integrated with other uses, such as
+                         street-level restaurant/retail space in order to activate the area, and residential
+                         (including affordable housing) and/or office, with the possibility of reducing project
+                         costs.
+
+
+
+
+                                                                                                    3|Page
+Executive Summary (continued)
+
+                      The City should issue a Request for Information for integrating the expansion of the
+                       Convention Center with other uses that would contribute to street activity and a
+                       healthy urban fabric in downtown’s southeast quadrant while maintaining the City’s
+                       intact street grid and valuable land and development on the property tax rolls for the
+                       benefit of the entire City.
+                   The Convention Center expansion should be used to repair the urban framework in
+                       the immediate vicinity of the convention center. Improvements should include those
+                       described in the Waller Creek Conservancy vision for the Convention Center area as
+                       well as the Red River Cultural District and pedestrian connections between the
+                       Convention Center and the Rainey Street neighborhood.
+                   Through the geographic expansion of the Waller Creek Tax Increment Financing
+                       District and/or a similar mechanism, additional property tax revenues from the
+                       expansion should be considered to address urgent social problems in this area of
+                       downtown.
+         o Involve the Design Commission and the community in ongoing conversations about the design
+             of the expansion, and
+         o The expansion project includes additional allowable area improvements that are important to
+             the community (to be finally determined as project moves forward, but should consider
+             capital improvements involving acquisition and development of Palm School, improvements
+             to: Waller Creek (in conjunction with the Waller Creek Conservancy), Mexican-American
+             Cultural Center, Red River Cultural District, nearby historic landmarks, etc.), and
+         o The bond covenants include in the Flow of Funds direction that excess funds remaining after
+             debt service and convention center operations and capital funding, as outlined in the funding
+             illustrations, be utilized for:
+                   A fund for allowable uses related to commercial music, up the maximum allowed by
+                       law, while leaving the current 15% allocation of the 7% Ch. 351 HOT for the current
+                       Cultural Arts Funding, and
+                   A fund for historic preservation, up the maximum allowed by law, and
+                   Excess funding should be split 50/50 between the music fund and historic
+                       preservation fund until the allocation to music reaches the maximum allowed by law
+                       (15% of the additional 2% Ch. 351 assessment), at which point funding in excess of
+                       that music threshold will be allocated to historic preservation. Should funding ever
+                       exceed the maximum allowed for historic preservation, Council should evaluate the
+                       need for allocations to additional allowable uses.
+     Music/Arts
+         o Consider the following for the Economic Development Department’s Cultural Arts Division
+             grant program:
+                   Marketing/Access/Outreach
+                              Website - Grants Funding page(s) more user friendly.
+                              Enhanced Community Outreach/Marketing - Dedicated interactive
+                               monthly outreach events to under-served communities that includes
+                               previous recipients as presenters: arts organizations, musicians, artists.
+                              Marketing - Increased visibility in under-served community via targeted
+                               outreach campaign. Make materials more relevant visually and culturally
+
+                                                                                                  4|Page
+Executive Summary (continued)
+
+          o   Consider the following for use of a portion of the additional funding allocated to music from
+              the convention center expansion funding:
+                      Grant Funding
+                            Artist-as-Entrepreneur (Core Funding) - Austin musicians and artists add
+                                tremendous value to culture, and even further, to economic growth in the
+                                ‘Live Music Capital.’ Funding preference to ideas and plans that stimulate
+                                growth, and develop tourism opportunities in under-served communities.
+                            Specific funding to expand and develop individual artists that are building
+                                successful arts ventures with a history of growth
+                                 Incubator ($2,000-$10,000) - business with 1-2-year history. Funding
+                                     delivery includes mentorship.
+                                 Growth ($10,000-$25,000) - business with 3-5-year history, proven
+                                     growth, and strategic plan. Funding delivery includes mentorship.
+                                 Expansion ($25,000-$100,000)- 5-7-year history, previous funding from
+                                     CAD, clear community partnership/investment. Funding delivery
+                                     includes mentorship.
+                            Artists’ receiving funding in Growth and Expansion phases must become
+                                mentors as a stipulation of their participation in the program.
+                            Each funding level can only be received once per artist.
+     Historic Preservation Activities should be amended as follows:
+          o   Transfer administration of the Historic Preservation and Heritage Grant program from the
+              Austin Convention and Visitors Bureau (ACVB or Visit Austin) to a non-profit (e.g. Austin
+              Community Foundation) or City department with an advisory board that make the decisions
+              on the grants. The Advisory Board should be composed of a broad and inclusive set of
+              stakeholders representing a variety of historic preservation, cultural heritage, and tourism
+              interests. Look to other grant programs as a model including the Texas Historical
+              Commission’s Texas Preservation Trust Fund (TPTF), and History Colorado’s State Historical
+              Fund (SHF).
+          o   Maintain percentage funding levels from HOT revenues for the Cultural Arts grant program
+              and ACVB Tourism Promotion Fund.
+          o   Revise eligibility and grant administration guidelines while retaining consistency with State
+              law and City Code:
+                   Remove the requirement that three bids be received for all work.
+                   Eliminate the cap on the maximum amount for individual grants.
+                   Allow for funding of privately-owned properties that are regularly open to the public
+                       (e.g. commercial properties).
+                   Establish grant scoring criteria to favor properties owned by public and non-profit
+                       entities, projects that impact culturally-significant historic sites that have been under-
+                       represented, and entertainment and cultural districts that have the capacity to
+                       attract a more diverse tourist audience.
+                   Establish grant scoring criteria to encourage funding to assist sites to be more “visitor-
+                       ready”, or that attract tourists to areas that have not traditionally served tourists.
+                   Expand the type of projects eligible for funding to include interior work, building
+                       systems, interpretive signage, etc.
+                   Look to other grant programs as a model for eligible scopes of work, selection
+
+
+                                                                                                     5|Page
+Executive Summary (continued)
+
+                       processes, and restrictions based upon the type of grant recipient including the TPTF
+                       and SHF.
+                   Remove any caps on the amount of grant funds that can be provided toward a specific
+                       site or total project cost at a site.
+          o   Establish percentage of revenue from HOT associated with the expansion of the Austin
+              Convention Center (plan 2b) or from a Tourism Public Improvement District (TPID) to be
+              dedicated to a Historic Preservation and Heritage Grant Program.
+                   Prior to any expansion of the HOT tax due to ACC or TPID, continue to allocate $1.5
+                       million to a Historic Preservation and Heritage Grant Program. Until ACC expansion
+                       is creating additional 2 percent, would come out of Tourism Promotion, but if/when
+                       expansion and/or TPID approved, funds would come from waterfall dollars.
+
+     Visit Austin
+           o Establish a Marketing Advisory Committee that would meet quarterly and include local small
+               business groups (i.e. Red River Cultural District and Austin Independent Business Alliance
+               (AIBA)), arts and cultural organizations, under-represented community stakeholders, and
+               other impacted stakeholders to advise and collaborate with Visit Austin on tourism marketing
+               plans and diversity tourism.
+           o Visit Austin should continue to support the areas of cultural, heritage, music and local business
+               and develop marketing efforts to support robust tourism plans in each of those areas.
+     Tourism Public Improvement District (TPID)
+           o The City Council should begin the process of formation of a TPID with the hotel industry at the
+               maximum allowable rate amenable to the industry, mindful of the potential hotel occupancy
+               tax rate changes as the convention center debt/venue tax is retired and the HOT rate returns
+               to an overall 15 percent rate.
+           o The City Council should direct staff to identify specific ways the City can use TPID dollars to
+               offset public safety and business district infrastructure costs associated with tourism.
+     Short-term Rental Tax Collection –
+           o The City Council should direct City staff to establish a mechanism to collect HOT directly from
+               online marketplaces where transactions occur.
+     Welcome Center –
+           o Within the expansion bonding capacity, determine if there is a possibility to provide funding
+               (estimated at $5 million) for a Welcome Center located in Zilker Park near Barton Springs Pool,
+               or other qualifying tourist destination areas that promote tourism and the convention and
+               hotel industry.
+           o In future years, as the additional annual funding available to music and historic preservation
+               through the convention center expansion financing flow of funds increases, and the amount
+               available for music reaches the 15% maximum, consideration should be given to allocating a
+               portion of the excess funding available for historic preservation to costs associated with
+               welcome centers located on City-owned property.
+           o As funding is assigned to a specific welcome center, the percentage of funding allocated to
+               covers costs should be aligned with the percentage of welcome center visitors who are from
+               out-of-town.
+
+
+
+
+                                                                                                  6|Page
+Executive Summary (continued)
+
+Impact of Recommendations to the City’s economy, taxpayer, and general fund
+As discussed later in this report, hotel occupancy tax is not the only local tax contribution from the visitor
+industry. Visitor spending results in sales, alcohol beverage, vehicle rental taxes, as well as passenger facility
+charges to the airport. The overall economic impact of the visitor industry also extends beyond the local tax
+contributions bringing significant revenue to hotels, restaurants, bars, and local businesses, thus creating jobs
+for local residents.
+The Task Force recommendations will result in a positive impact to the local economy, as well as all recipients
+of the local tax contributions, including the City’s general fund. Through additional annual funding for historic
+preservation projects for Parks and Recreation Department assets, the transfer of general fund dollars to those
+project funds is reduced, providing for other general fund services to utilize those funds. Through the
+identification of additional funding for promotion of music and musicians, a key initiative of City Council, efforts
+to address certain challenges facing local musicians will be funded through hotel occupancy tax, as opposed to
+general fund dollars.
+Through the creation of a Tourism Public Improvement District with agreed-upon funds provided to the City,
+certain costs typically covered by the general fund will also be alternately funded.
+The combined effect of the Task Force recommendations provides for the continued success of the Austin
+Convention Center and Visit Austin, maintains the funding for the City’s well-established Cultural Arts grant
+program, and allows for the additional funding for music and historic preservation. For these reasons, the Task
+Force encourages the City Council to move forward with all of the recommendations as outlined.
+The Task Force members appreciate the opportunity to serve our community and produce this report for the
+Council.
+
+
+
+
+James Russell, Chair                                                            MariBen Ramsey, Vice-chair
+Visitor Impact Task Force                                                       Visitor Impact Task Force
+
+
+
+
+                                                                                                        7|Page
+Introduction
+Beginning with its first meeting in December 2016, the Task Force held public meetings in 4 main locations:
+Pan American Recreation Center, Palmer Events Center, Austin Convention Center, and the Hyatt Regency
+Austin.
+A related speakupaustin! discussion forum was also available for public comment submissions. The forum
+generated 78 responses from 28 participants. The complete discussion content has been posted to the VITF
+website.
+The Task Force received regular support from the following City of Austin departments:
+       Austin Convention Center Department (ACCD)
+       Corporate Public Information Office (CPIO)
+       Economic Development Department (EDD)
+       Law Department
+       Parks and Recreation Department (PARD)
+
+Task Force Scope
+The scope of work for the VITF included:
+    1. Study the impact of tourism on City infrastructure, services, and facilities, and investigate
+       opportunities to offset those impacts by using Hotel Occupancy Tax revenues;
+    2. Review of current uses of Hotel Occupancy Taxes and the impact of those activities and expenditures
+       on tourism in the City;
+    3. Review of current tourist activity in the City of Austin and what events, venues, or facilities those
+       tourists attend while visiting;
+    4. Review of State and National best practices for tourism programs;
+    5. Review of Texas Tax Code Chapter 351 and allowable uses of Hotel Occupancy Taxes under the Tax
+       Code including parks, historic preservation, cultural heritage, music, arts, special events, fee waivers,
+       convention, visitors bureau, transportation, downtown districts, venues and other facilities and debt
+       defeasance for city-owned hotels and convention facilities;
+    6. Review the Austin Convention Center expansion, all possible design options and potential funding
+       mechanisms; and
+    7. Make recommendations to the City Council about how to best utilize all hotel occupancy revenue to
+       impact tourism.
+
+
+
+
+                                                                                                    8|Page
+Introduction (continued)
+Membership
+Membership of the VITF consisted of:
+       2 members of the music industry nominated by the Music Commission;
+       2 members of the arts community nominated by the Arts Commission;
+       2 members of the special events industry; one nominated by the Parkland Events Task Force and one
+        nominated by the Economic Opportunity Committee;
+       1 member nominated by the Austin Convention and Visitors Bureau;
+       1 member of the hotel industry nominated by the Economic Opportunity Committee;
+       1 member of the public safety community nominated by the Public Safety Commission;
+       1 member of the preservation community nominated by the Historic Landmark Commission;
+       1 member of the parks community nominated by the Parks & Recreation Board;
+       1 member from the Convention Center;
+       1 member nominated by the Downtown Commission;
+       2 community members who represent the tourism workforce nominated by the Economic Opportunity
+        Committee;
+       1 community member appointed by the Planning and Neighborhood Committee;
+       1 member of the environmental community nominated by the Environmental Commission;
+       1 member representing the restaurant industry nominated by the Economic Opportunity Committee;
+       1 ex officio member from the Public Works Department; and
+       1 ex officio member from the Austin Transportation Department
+          Task Force Member             Area Represented
+          Gavin Garcia                  Music Industry Representative
+          Catlin Whitington             Music Industry Representative
+          Lulu Flores                   Arts Community Representative
+          MariBen Ramsey                Arts Community Representative
+          James Russell                 Special Events Industry Representative
+          Julie Niehoff                 Special Events Industry Representative
+          Tom Noonan                    Austin Convention & Visitors Bureau Representative
+          Shelly Schadegg               Hotel Industry Representative
+          Bill Worsham                  Public Safety Community Representative
+          Alyson McGee                  Preservation Community Representative
+          Dan Keshet                    Parks Community Representative
+          Mark Tester                   Convention Center Representative
+          Dewitt Peart                  Downtown Commission Representative
+          Ashwin Ghatalia               Tourism Workforce Representative
+          Stephen Sternschein           Tourism Workforce Representative
+          Jonathan Mahone               Community Member Representative
+          Pam Thompson                  Environmental Community Representative
+          Skeeter Miller                Restaurant Industry Representative
+          Richard Mendoza               Public Works Department Representative (ex-officio)
+          Gordon Derr                   Transportation Department Representative (ex-officio)
+
+
+
+
+                                                                                                9|Page
+Introduction (continued)
+Meeting Details
+       Range of Meeting Dates:                            December 12, 2016 – May 23, 2017
+       Public Meetings:                                   13 meetings held
+       Public Meeting Hours:                              Nearly 41 hours of public meeting time
+       Staff Time at Meetings:                            192+ hours
+       Meeting Locations                                  4 locations
+    VITF was subject to the provisions of the Texas Open Meetings Act, and all meetings were open to the
+    public and included opportunities for public comment.
+
+Council Resolution
+                                        RESOLUTION NO. 20160818-075
+
+See full resolution at the above link, or in Appendix A.
+
+The resolution established the 18-member Visitor Impact Task Force and directed the group to study various
+aspects of the visitor industry in Austin, the use of Hotel Occupancy Tax, and provide related recommendations
+to Council.
+
+
+Extension of Due Date
+The VITF voted to seek an extension to the April 1, 2017 deadline established in Council’s resolution. A memo
+from Assistant City Manager Mark Washington was sent to Council on April 7, 2017.
+
+
+Data Provided to the Visitor Impact Task Force
+The Austin Convention Center Department staff, the Austin Convention and Visitors Bureau staff, and the City’s
+Economic Development Department staff provided information to the Visitor Impact Task Force. Hard copies
+of presentations, historical reports, and other reference information was provided to each Task Force member
+at each meeting.
+Visitor Impact Task Force members submitted questions for City staff to the Task Force’s staff liaison, Felicia
+Ojeda, Marketing and Public Relations Coordinator, Austin Convention Center Department. City staff
+responded to questions in writing, and all responses were posted to the Visitor Impact Task Force Resource
+Website.
+Over the course of the meetings, staff from various City departments presented information, participated in
+panel discussions, and provided additional resource information. City departments included Austin Convention
+Center Department, Economic Development Department, Law Department, Parks and Recreation Department,
+Public Works Department, Austin Resource Recovery, Austin Transportation Department, Austin Police
+Department, Austin Center for Events, Aviation and Financial Services Department.
+The Task Force also heard from representatives from the Cities of San Antonio, Texas, and El Paso, Texas,
+regarding how those cities utilize Hotel Occupancy Tax.
+
+
+
+
+                                                                                                  10 | P a g e
+Data Provided to Visitor Impact Task Force (continued)
+Information presented/provided by staff from City of Austin, ACVB, Task Force members, City of El Paso, and
+City of San Antonio during VITF meetings included:
+    1. Ethics and Conflicts of Interest
+    2. Hotel Occupancy Tax (HOT) legal uses authorized by Chapter 351 of Texas Tax Code and Chapter 334
+        of Texas Local Government Code
+    3. Current uses of HOT in the City of Austin
+    4. City’s historic grant program
+    5. Austin Convention Center Department operations
+    6. Austin Convention and Visitors Bureau use of HOT
+    7. Cultural Arts Division use of HOT
+    8. Austin Convention Center Long-Range Plan and proposed plans for expansion
+    9. City of Austin HOT collections
+    10. Review of Council Resolution 20170209-033
+    11. Impacts of tourism on City of Austin Departments via panel discussions
+    12. Visitor contributions to the City’s general fund
+    13. PARD relationship with tourism and heritage/historic tourism
+    14. Best practices in other cities – via conference call session with other cities
+    15. City’s financial reporting
+    16. Austin Convention Center Department presentation of cash, financial position, capital project
+        financing, and debt
+    17. Economic Impact of Historic Preservation in Texas executive summary
+Additional Information Provided by City Staff – Posted on VITF website included:
+    1. Hotel Occupancy Tax references
+           a. Texas Tax Code Chapter 351
+           b. Texas Local Government Code Chapter 334
+           c. Texas Hotel Lodging Association’s What Cities Need to Know to Administer Municipal Hotel
+               Occupancy Taxes
+           d. Texas Municipal League’s The Hotel Tax “Two-Step”
+           e. City of Austin Code of Ordinances Chapter 11-2
+           f. Texas Tourism Economic Impact Report
+    2. Responses to VITF questions
+           a. Answers covering ACCD budget, financial reporting, venue and debt information
+           b. Answers covering ACCD Financial Presentation
+           c. ACCD Property Tax Analysis
+           d. ACCD expansion financial projections
+           e. ACCD attendance, occupancy, vacant days, events, hotel stays, Austin meeting space
+           f. VITF FAQ Fact Sheet
+    3. Additional Information from City Departments
+           a. ACCD
+                      i. Supplemental Information – Expansion Financing Concepts Illustrations
+                     ii. Local Tax Contribution by Visitors
+                    iii. Chapter 351 HOT Assessment 7% Allocation
+                    iv. Response to Council Resolution 20151112-033
+
+
+                                                                                              11 | P a g e
+Data Provided to Visitor Impact Task Force (continued)
+                     v. Town Hall Meeting Flyer, Illustration, Presentation, and Responses to Related
+                         Comments
+                    vi. Florida TaxWatch Report - Impact on Tourism(Draft), and Impact on Tourism(Final)
+                   vii. State of Tennessee Draft Report – Lodging Taxes
+                   viii. PricewaterhouseCoopers LLP - Economic Significant of Meetings Study
+                    ix. Piper Jaffray – Convention Center Expansion and Hotel Projects
+          b. EDD
+                      i. Cultural Arts Division 2017 Funding Matrix
+                     ii. Department website
+          c. PARD
+                      i. Annual Report 2016
+                     ii. HOT Spending Plan and Memo
+          d. Austin Center for Events
+                      i. Special Events Alternative Funding Report
+                     ii. Center’s website
+    4. Additional Information from ACVB
+          a. Estimated Economic Impact Calculator – 2016 Event
+          b. Economic Impact – Research Reports
+          c. JD Power Report, Study Exec Summary, Study
+          d. Texas Tourism and MSA
+          e. Destination Marketing Organization (DMO) Study
+          f. Official response to Citizen Communication letter
+Several citizens representing themselves, various interests, and stakeholder groups also attended the VITF
+meetings. Each VITF meeting included time allotted for Citizen’s Communication. Speakers also provided
+information to the VITF that was posted on the website, including:
+    1. Downtown Grids Image
+    2. Think Big Presentation
+    3. Barton Springs Conservancy Presentation
+    4. Parks & Historic Preservation Tourism Presentation
+    5. Palm School Preservation
+    6. The Austin Music Plan
+    7. The 12 Immutable Laws of the Universe
+    8. Letter to Council and City Manager and City Management Response
+    9. Project Consideration
+    10. April 24, 2017 Citizen Communication Handouts
+            a. African American Resource Advisory Commission
+            b. Convention Center Expansion/Industry
+            c. Preservation Austin
+            d. Austin Independent Business Alliance
+            e. Austin History Center Association
+            f. Friends of the Parks of Austin
+    11. May 2, 2017 Citizen Communication Handout
+    12. Design Commission recommendation
+    13. May 23, 2017 Citizen Communication letter
+
+                                                                                              12 | P a g e
+Key Findings
+Review of Texas Tax Code Chapter 351 and allowable uses of Hotel Occupancy
+Taxes
+The State of Texas authorizes hotel occupancy tax (HOT) assessments under Chapter 351 of the Texas Tax Code
+and under Chapter 334 of the Texas Local Government Code.
+Chapter 351 requires HOT assessed under this chapter must first meet the criteria of promoting tourism and
+convention and hotel industry, and also fall into one of the authorized categories, not all of which are applicable
+to Austin. Those categories allowable in Austin include:
+
+                the acquisition of sites for and the construction, improvement, enlarging, equipping,
+                 repairing, operation, and maintenance of convention center facilities or visitor
+                 information centers, or both;
+                the furnishing of facilities, personnel, and materials for the registration of convention
+                 delegates or registrants;
+                advertising and conducting solicitations and promotional programs to attract tourists and
+                 convention delegates or registrants to the municipality or its vicinity;
+                the encouragement, promotion, improvement, and application of the arts, including
+                 instrumental and vocal music, dance, drama, folk art, creative writing, architecture,
+                 design and allied fields, painting, sculpture, photography, graphic and craft arts, motion
+                 pictures, radio, television, tape and sound recording, and other arts related to the
+                 presentation, performance, execution, and exhibition of these major art forms;
+                historical restoration and preservation projects or activities or advertising and conducting
+                 solicitations and promotional programs to encourage tourists and convention delegates
+                 to visit preserved historic sites or museums:
+                      o   at or in the immediate vicinity of convention center facilities or visitor information
+                          centers; or
+                      o   located elsewhere in the municipality or its vicinity that would be frequented by
+                          tourists and convention delegates;
+                signage directing the public to sights and attractions that are visited frequently by hotel
+                 guests in the municipality;
+
+Chapter 351 prohibits HOT use for general government activities.
+Chapter 334 requires HOT assessed under this chapter be spent only on venues that are approved by voters.
+Authorized venues applicable to Austin include convention center, arena, coliseum, stadium, and potentially a
+tourism development along an inland waterway.
+
+
+                                                                                                      13 | P a g e
+Note: Key Findings section represents data provided to the Visitor Impact Task Force
+Key Findings (continued)
+The maximum combined HOT allowed for most Texas cities, including Austin, is 17%. Included in that
+percentage is the State’s portion of the assessment of 6%.
+There were several bills introduced at the Texas State Legislature affecting HOT during the 2017 Legislative
+Session. A number of those bills sought to change how HOT can be used, including increasing the maximum
+Chapter 351 HOT assessment that can be spent on promotion of arts from 15% to 19.30%, allowing Chapter
+334 HOT to be used on parkland, and creating an allowable use of HOT for costs associated with homeless
+issues. No bills ultimately passed that expanded how Austin can use HOT.
+
+Review of current uses of Hotel Occupancy Taxes and the impact of those activities
+and expenditures on tourism in the City
+
+Austin Tourism
+The Office of the Governor’s latest Economic Impact of Travel on Texas report (2015) includes the following:
+        The multi-billion dollar travel industry in Texas is a vital part of the state and local economies. The
+        industry is represented primarily by retail and service firms, including lodging establishments,
+        restaurants, retail stores, gasoline service stations, and other types of businesses that sell their
+        products and services to travelers. The money that visitors spend on various goods and services while
+        in Texas produces business receipts at these firms, which in turn, employ Texas residents and pay their
+        wages and salaries. State and local government units benefit from travel as well, primarily in the form
+        of excise taxes on the goods and services purchased by visitors.
+
+    Source: https://travel.texas.gov/tti/media/PDFs/TXImp15pRev2_1.pdf , 2016, pg. 6
+
+
+The report also includes the following for Austin:
+
+
+
+
+    Source: https://travel.texas.gov/tti/media/PDFs/TXImp15pRev2_1.pdf , 2016, pg. 118
+
+
+
+
+                                                                                                  14 | P a g e
+Note: Key Findings section represents data provided to the Visitor Impact Task Force
+Key Findings (continued)
+The Tourism/Visitor Industry is part of the Leisure and Hospitality Industry, which is the 3 rd largest employment
+sector in Austin, employing over 127,000. This industry employs Austin residents from all parts of the City.
+Analyzing a subset of hospitality
+workers (food service workers
+across the City) depicts how
+industry      employees      are
+dispersed across the city in
+terms of worker’s place of
+residence, and is shown in the
+image to the right.       Similar
+distributions exist when looking
+at downtown hotel workers and
+relevant City employees as well.
+
+
+
+
+                                                              Source: Visit Austin (aka Austin Convention and Visitors Bureau)
+
+
+Austin’s Hotel Occupancy Tax
+The City of Austin currently assesses 15% HOT, made up of 6% for the State, 9% for the City. Of the City’s 9%,
+7% is assessed under Chapter 351, and 2% is assessed under Chapter 334. The additional 2% HOT capacity,
+which would take the combined rate to the maximum 17% allowed by law, is available to either the City for
+expansion of the convention center under Chapter 351, or the County for a voter-approved venue under
+Chapter 334.
+Chapter 351 limits the spending on promotion of arts to 15% of the Chapter 351 portion of the assessment.
+The City of Austin currently allocated the maximum 15% of its Chapter 351 assessment to the promotion of the
+arts. (Any additional arts-related uses would require use of the current arts allocation, unless expansion of
+convention center is pursued using Ch 351 additional tax financing.) Chapter 351 also limits spending on
+historic preservation to 15% of the Chapter 351 portion of the assessment. The City of Austin currently does
+not allocate a full 15% to historic preservation activities. In Fiscal Year 2016, heritage grant awards totaled
+$212,075, which is 0.31% of the Chapter 351 HOT tax collected for the year.
+The portion of the Chapter 351 HOT allocation for the Convention Center is pledged to related debt and further
+governed by bond covenants. The Chapter 334 HOT assessed for the voter-approved venue Convention Center
+Expansion/Waller Creek Tunnel Project is also pledged to related debt and further governed by bond
+covenants. The Chapter 334 venue HOT is set to expire in 2029 when the debt is scheduled to be paid off.
+The current allocation is outlined in City Code Chapter 11-2. The allocations in percentages, as described in
+City Code, and cents (% times 7 cent assessment) are depicted in the charts on the following page. The 2 %
+venue assessment is a stand-alone assessment in City Code.
+
+
+
+                                                                                                         15 | P a g e
+Note: Key Findings section represents data provided to the Visitor Impact Task Force
+Key Findings (continued)
+
+
+
+
+                                                        (Cents)
+
+
+
+
+            Source: City of Austin Code of Ordinances
+
+
+
+
+                                  (Cents)
+
+
+
+
+        Source: City of Austin Code of Ordinances
+
+
+
+
+                                                                                       16 | P a g e
+Note: Key Findings section represents data provided to the Visitor Impact Task Force
+Key Findings (continued)
+Convention Center
+The Convention Center HOT allocation is used for debt service payments, convention center operations, and
+capital improvement projects (CIP). Annual debt services payments are between $15-$20 million. None of
+the Convention Center requirements (i.e. costs) are covered by the City’s general fund.
+As of January 2017, Convention Center total principal outstanding was $133,991,000, made up of the following
+debt issuances:
+
+o Series 2013 - $14,115,000
+o Series 2012 - $16,995,000
+o Series 2008 - $87,820,000 (variable rate)
+o GO Debt - $15,061,000
+
+
+The Convention Center operating budget covers costs associated with events, facilities, and administration.
+The distribution across those areas is as follows:
+
+
+
+
+The Austin Convention Center Department Approved Budget requirements for Fiscal Year 2017 total $102.2
+million. The Austin Convention Center Operating portion of that total is $63 million.
+
+                                                                                               17 | P a g e
+Note: Key Findings section represents data provided to the Visitor Impact Task Force
+Key Findings (continued)
+The Austin Convention Center Department cash funds over 95% of its normal/on-going capital improvement
+projects (i.e. non-expansion projects typical of a facility of its type, such as elevator/escalator refurbishment,
+roof replacement/repair, technology upgrades, parking facility repairs, modernization of meeting space). This
+is vastly different than nearly all other City departments, who rely heavily on debt financing for their capital
+improvement projects. The City utilizes a 5-year CIP plan and Council approves annual CIP appropriation for
+multi-year projects at the same time the operating budget is approved. The Fiscal Year 2016 CIP plan included
+$37 million in identified capital improvement projects. The continued success of convention center operations
+requires that the facilities remain in a sellable/desirable condition. Therefore, deferred maintenance of the
+facilities is not an option. Adequate funding for capital improvement projects is a significant component of the
+Austin Convention Center Department operations.
+The estimated return on investment (ROI) of the Austin Convention Center’s HOT allocation is best determined
+when considered along with the HOT allocation for convention sales from the Austin Convention and Visitors
+Bureau, as the two entities partner to bring events to Austin. The estimated combined ROI of over 275% is
+highlighted on page 19.
+
+
+Cultural Arts
+The Cultural Arts Division of the
+Economic Development Department
+manages the cultural arts funding
+allocation of HOT. Annually, a panel
+reviews the applications submitted by
+arts organizations and awards cultural
+grants using certain set parameters
+and matrix scoring. The funding plan
+seeks      to    support     equitable
+distribution,     and      categorizes
+applicants according to size of
+budgets so that, while larger
+organizations receive larger dollar
+amounts, they receive a smaller
+percentage of their budget than do
+smaller organizations.      The total
+cultural arts allocation for FY 2017
+was $11.6 million. The maximum
+award for FY 2017 was $210,000 and
+the minimum award amount was
+$1,000.      Grants were awarded to
+nearly 500 organizations in FY 2017.
+The funding plan summary for FY
+2016 and FY 2017 is shown in the
+table on the right.                        Source: City of Austin Economic Development Department
+
+
+
+
+                                                                                                     18 | P a g e
+Note: Key Findings section represents data provided to the Visitor Impact Task Force
+Key Findings (continued)
+The investment of HOT for the promotion of cultural arts shows a positive return on that investment. Utilizing
+a 2012 study of the Austin Creative Sector Economic Impact, the estimated direct impact ROI of the not-for-
+profit creative sector (which closely mirrors the City’s Cultural Arts HOT program) is 156%. The ROI is calculated
+from the output and value-added inputs included in the following table.
+                                                                                         The economic impact of the not-for-
+                                                                                         profit creative sector provides an
+                                                                                         estimated direct ROI of 156%
+                                                                                         (based on output and value-added),
+                                                                                         which is even higher than the
+                                                                                         estimated direct ROI of 92% for the
+                                                                                         total sector. Both estimates are
+                                                                                         positive results for the Austin
+                                                                                         economy, and the non-for-profit
+                                                                                         estimate most closely aligns with
+                                                                                         the City’s Cultural Arts HOT
+                                                                                         program.
+ Source: City of Austin Economic Development Department
+
+
+
+
+Austin Convention and Visitors Bureau
+The Austin Convention and Visitors Bureau (ACVB), now known as Visit Austin, is the official sales and marketing
+partner of the Austin Convention Center, and markets Austin as a destination. Visit Austin/ACVB’s main areas
+of focus include: Convention Sales and Services, Marketing, Film Commission, and Public Relations and
+Communications. Visit Austin/ACVB’s marketing efforts focus on Austin as an overall destination, segment
+niche areas of heritage/diversity, art/culture, adventure, and international markets. ACVB utilizes music in
+much of its marketing efforts, booking musicians for both conventions and marketing tours, as well as
+facilitating booking musicians for events. Visit Austin/ACVB also administers a heritage grant program. Key
+metrics and information representing ACVBs performance are below and on the following pages.
+The reported estimated economic impact of $673M related to ACVB bookings (shown below), relates to $285M
+in estimated economic impact of the events ACVB booked for the Convention Center.
+
+                                                                      Based on the estimated direct economic impact of
+                                                                      $285 million for FY 2016, when adding ACVB’s HOT
+                                                                      allocation to the Convention Center’s, the combined
+                                                                      HOT investment of convention center bookings
+                                                                      results in a conservative estimated return on that
+                                                                      investment (ROI) of over 275% for the Austin
+                                                                      economy. This is a minimum estimate, as it does not
+                                                                      include ACVB’s tourism marketing impact, or the
+                                                                      economic impact of events booked directly by the
+                                                                      Convention Center. This estimate also does not
+                                                                      include the impact from indirect or induced spending
+                                                                      tied to direct spending.
+Source: Visit Austin (aka Austin Convention and Visitors Bureau)
+
+                                                                                                     19 | P a g e
+Note: Key Findings section represents data provided to the Visitor Impact Task Force
+     Key Findings (continued)
+
+
+
+
+                                                                                            20 | P a g e
+     Note: Key Findings section represents data provided to the Visitor Impact Task Force
+Source: Visit Austin (aka Austin Convention and Visitors Bureau)
+Key Findings (continued)
+
+
+
+
+ Source: Visit Austin (aka Austin Convention and Visitors Bureau)
+
+Additional Heritage Tourism Information
+In a 2015 report on the Economic Impact of Historic Preservation in Texas by the University of Texas at Austin
+and Rutgers, the significance of heritage-related travel is discussed. The report notes that “more than 10.5
+percent of all travel in Texas is heritage-related” and “heritage tourists contribute about 12.5% of total visitor
+spending in Texas”. The report also connects heritage preservation to nearly 80,000 jobs in Texas. As discussed
+in a subsequent section, in the Austin-Round Rock MSA, approximately 28% of visitors enjoyed cultural
+activities while visiting the area, irrespective of the purpose of their trip. Of those 28%, just over 10% enjoyed
+concerts/theater/dance, just over 8% enjoyed touring/sightseeing, and just under 8% visited historic sites.
+
+
+
+
+                                                                                                     21 | P a g e
+Note: Key Findings section represents data provided to the Visitor Impact Task Force
+Key Findings (continued)
+Additional Historic Preservation Activities
+During adoption of the FY 2017
+budget,     Council    directed
+additional funding be used for
+historic preservation activities
+from the allocation historically
+provided to ACVB.        Council
+increased the allocation to the
+heritage     grant     program
+administered by ACVB from
+$200,000 to $500,000.         In
+addition, Council allocated
+nearly $1 million for historic
+preservation projects within the
+City’s Parks and Recreation
+Department (PARD). PARD has
+identified several projects, as
+                                        Source: City of Austin Parks and Recreation Department
+shown to the right.
+Short-term Rental Activity
+Short-term rentals (STRs) or Vacation rental by owner (VRBOs) are also required to collect and remit hotel
+occupancy tax on qualified rentals. The City also requires STRs and VRBOs to register with the City’s Austin
+Code Department annually. Austin Code and the City’s Controller’s Office share information about hotel
+occupancy taxpayers to ensure that registered taxpayers have an STR license and the all registered STR taxes
+are paid.
+Over the last three fiscal years, STRs hotel tax collections have represented approximately 3% of the City’s total
+hotel occupancy tax collections.
+
+Review of State and
+National best practices
+for tourism programs
+
+Texas’ major cities utilize HOT
+in similar ways, but each city
+does employ slightly different
+business models for its
+convention center operations
+and variations in their
+respective HOT allocations
+(shown to the right).
+
+
+
+
+                                       Source: City of Austin Convention Center Department
+
+                                                                                                     22 | P a g e
+Note: Key Findings section represents data provided to the Visitor Impact Task Force
+Key Findings (continued)
+Every city researched funds its Convention Center and a Convention and Visitors Bureau with a portion of its
+HOT, as does Austin.
+El Paso assesses the highest HOT rate in the state at 17.5%, and is the only city in the state that is allowed to
+go above the 17% max rate. El Paso allocates 13.5% to arts, and combines the funds with general funds to
+support art-related activities.
+San Antonio assesses a HOT rate of 16.75%, and includes a County venue assessment. All of the City of San
+Antonio’s HOT is pledged to debt, with the allocation to the remaining uses calculated on the net available
+after debt service (i.e. the 15% allocation of the net HOT to arts and historic preservation results in an allocation
+a less than 15%).
+State Laws governing hotel occupancy tax vary from state to state, making comparisons across state lines
+difficult and less meaningful. A draft report from the State of Tennessee examined how lodging taxes differ
+across states. With regards to how states differ in terms of authorizing lodging taxes for cities and counties,
+the draft report notes:
+o Forty-three states authorize lodging taxes for at least some cities or counties.
+o Most (37 of the 43) do so by general law for either all cities or all counties—21 authorize both—
+  and usually up to a certain rate—though many make exceptions to the standard rate limit for
+  specific, individual jurisdictions.
+o Iowa and Texas generally cap rates at 7%; cities in Wisconsin are allowed to go to 8% with a
+  referendum.
+o A small number of states have no caps and allow rates to be set at the local level, either by the
+  legislative body adopting the tax or by referendum, including seven that authorize local lodging
+  taxes for cities generally (Alabama, Alaska, Arizona, California, Colorado, Nebraska, and Oregon),
+  three of which (Alaska, California, and Oregon) grant similar authority to counties.
+o In Tennessee and four others (Louisiana, Mississippi, New York, and North Carolina), most local
+  governments must have specific, individual authorization from their state legislature to adopt a
+  new lodging tax or increase the authorized rate for an existing lodging tax.
+o Twenty-eight states including Tennessee allow city and county taxes to overlap.
+    Source: https://www.tn.gov/assets/entities/tacir/attachments/2015OctoberTab6HotelMotelTax.pdf, 2015, pg. 20
+
+The draft report also describes differences among states in terms of earmarking lodging taxes, stating:
+o With few exceptions, general earmarks of lodging tax revenue in other states are tied to general
+  authorizations to impose local lodging taxes.
+o Of the 33 states with general local-lodging-tax authorizations for cities, counties or both, only 13
+  earmark all of the revenue, 14 earmark a portion of it, and 6 do not earmark any of it.
+o Missouri grants local authority only to certain categories of cities and counties with certain
+  exceptions and earmarks all of the revenue.
+o Michigan, Nevada, and Texas similarly limit authority to certain categories and earmark a portion
+  of the revenue. The amount earmarked varies from 25% to 100% or applies only to revenue
+  collected from rates above a certain level.
+    Source: https://www.tn.gov/assets/entities/tacir/attachments/2015OctoberTab6HotelMotelTax.pdf, 2015, pg. 4
+
+
+
+                                                                                                         23 | P a g e
+Note: Key Findings section represents data provided to the Visitor Impact Task Force
+Key Findings (continued)
+Study the impact of tourism on City infrastructure, services, and facilities
+A review of the State’s Tourism Impact Report shows that HOT makes up 41% of the visitor-related local tax
+contribution. Besides HOT, the visitor-related local tax contribution includes sales tax, alcohol beverage tax,
+passenger facility charges, as shown in the
+illustration on the right.
+Further analysis of the current visitor-related
+local tax contribution estimates that over
+$40 million goes to the City’s general fund in
+the form of sales tax, alcohol beverage tax,
+etc. General fund costs directly tied to
+tourism cannot be readily identified/
+quantified, as further discussed next. A
+preliminary review of Austin’s general fund
+costs most related to tourism identified
+approximately $20 million in costs. This
+preliminary analysis did not include an
+allocation of the costs between residents and
+non-residents. Thus, the $20 million in
+identified costs represents the total costs for
+those budget line items, not just a portion
+attributable to visitors.                                  Source: City of Austin Convention Center Department
+This information is illustrated below.
+
+
+
+
+            Source: City of Austin Convention Center Department, City of Austin Financial System
+
+
+
+                                                                                                           24 | P a g e
+Note: Key Findings section represents data provided to the Visitor Impact Task Force
+Key Findings (continued)
+Quantifying a cost to a city from visitors is very difficult – no study or estimate was identified and a calculation
+was not attempted by the VITF. A search for similar studies did find a discussion regarding the challenges in
+determining the cost on a city from tourism. The topic is discussed in a Florida Report written by a PhD with
+Florida TaxWatch Research Institute, Inc. The report found that current data suitable for a comprehensive
+cost-benefit analysis was not available, and included the following in Appendix B of the report:
+        Florida TaxWatch’s search for timely, Florida-specific cost-benefit tourism data reveals that tourism
+        studies and related data collection efforts by-and-large have been directed more toward the benefit
+        rather than the cost side of the equation.
+
+        Florida TaxWatch’s search for tourism cost-benefit data also reveals that, although benefits are visible
+        in the form of jobs, earnings, business output, and tax revenues, explicit data with which to measure
+        costs are relatively invisible or indistinguishable from other cost-related impacts. This is because they
+        tend to meld with, and are difficult to separate from, more general social and quality-of-life factors.
+        Traffic congestion, health care needs and costs, public safety, and similar issues are all part of
+        Floridians’ daily lives. To what extent these are increased by tourists to the state is difficult to isolate.
+
+        A Florida household government benefits and tax burden study conducted for Florida TaxWatch by
+        Drs. Keith G. Baker and Craig E. Reese shows that Florida tourists consume/use far less government
+        services than do Florida residents in a variety of government services arenas.
+
+    Source: http://www.floridataxwatch.org/resources/pdf/tourismreportmarch2006.pdf , 2006, pgs. 34-35
+
+Review of current tourist activity in the City of Austin and what events, venues, or
+facilities those tourists attend while visiting
+
+As the “Live Music Capital of
+the World”, Austin’s music
+scene is a draw for tourists.
+The City’s current cultural arts
+program funded by HOT
+provides funding for certain
+music organizations, but the
+requirement that the recipient
+be a non-profit organization
+currently      keeps      many
+musicians and music venues
+from being eligible for any
+funding.
+Austin     also    has    many
+attractions and amenities that
+are popular among tourists.
+Many of these attractions are
+PARD assets. Barton Springs
+pool is one of those assets, with an estimated 16% of the visitors to the pool being non-residents. PARD has
+
+
+                                                                                                         25 | P a g e
+Note: Key Findings section represents data provided to the Visitor Impact Task Force
+      Key Findings (continued)
+      identified several of its historical assets that are visited by tourists, many of which have needs that could be
+      eligible for HOT funding under the historic preservation category of Ch 351.
+      An overview of Austin-Round Rock MSA visitors for 2015 is shown on the previous page.
+      Visitors come to Austin for many reasons. A summary of the purpose for visits to the Austin-Round Rock MSA
+      in 2015 is below.
+
+
+
+
+      Reported visitors coming to the area for meetings, seem to be in line with a national study that analyzed the
+      economic impact of the meetings industry. In that study completed in 2014 by PricewaterhouseCoopers, LLP
+      (PwC), found that the meetings sector generates approximately 15% of the direct tourism output of the Travel
+      and Tourism industry. Additional information about the PwC study is included below.
+
+
+
+
+Source: http://www.eventscouncil.org/Files/2012%20ESS/CIC%20Meetings%20ESS%20Update%20EXECUTIVE%20SUMMARY-FINAL.pdf , 2014, p6
+
+                                                                                                         26 | P a g e
+      Note: Key Findings section represents data provided to the Visitor Impact Task Force
+  Key Findings (continued)
+
+
+
+
+Source: http://www.eventscouncil.org/Files/2012%20ESS/CIC%20Meetings%20ESS%20Update%20EXECUTIVE%20SUMMARY-FINAL.pdf , 2014, p8
+
+  Visitors to Austin-Round Rock MSA in 2015 took part in a variety of activities while they were in the area in
+  2015, irrespective of the purpose of their visit.
+
+
+
+
+                                                                                                    27 | P a g e
+  Note: Key Findings section represents data provided to the Visitor Impact Task Force
+Key Findings (continued)
+Visit Austin/ACVB includes information about Austin’s amenities on its website, including information about
+Austin’s cultural, heritage, and outdoor offerings. Images of areas highlighted on Visit Austin/ACVBs site are
+below.
+
+
+
+
+ Source: Visit Austin (aka Austin Convention and Visitors Bureau)
+
+
+
+
+                                                                                                 28 | P a g e
+Note: Key Findings section represents data provided to the Visitor Impact Task Force
+Key Findings (continued)
+Review the Austin Convention Center expansion, all possible design options and
+potential funding mechanisms
+Austin Convention Center is the smallest in size among its competitors, as shown in the chart below.
+
+
+
+
+                                                    Source: Visit Austin (aka Austin Convention and Visitors Bureau)
+Additional key information regarding the Austin Convention Center includes:
+   The Austin Convention Center opened in1992 and was last expanded in 2002.
+   Many competitors have recently completed expansion or are currently considering expansion.
+   Half of Austin Convention Center’s lost business is due to lack of availability or inadequate space.
+   Austin Convention Center is at practical maximum capacity at 65% occupancy.
+   An independent consulting team studied ACC expansion and considered 5 options, including no expansion,
+    complete relocation, and expansion to the east, south, and west of the current facility. The consulting
+    team recommended expansion to the west.
+   Urban Land Institute, an organization providing leadership in responsible land use related to complex land
+    use planning and development projects, programs, and policies, also reviewed the consultant’s report and
+    agreed with their expansion recommendation.
+Two main HOT funding concepts have been proposed by Austin Convention Center staff for expansion – one
+under Ch. 334 and another under Ch. 351. The Ch. 351 concept has variations of both % of addition Ch. 351
+HOT and duration of current Ch 334 Venue.
+
+
+                                                                                                       29 | P a g e
+Note: Key Findings section represents data provided to the Visitor Impact Task Force
+    Key Findings (continued)
+    Multiple financing concepts are available for expansion of the Austin Convention Center – expansion/extension
+    of Ch 334 venue, if voter approved, or increasing Ch 351 up to 2% more. The option selected determines
+    possibilities for expansion components and the potential for other annual funding available for other allowable
+    uses.
+    A review of financing of several other convention centers shows that many convention centers are financed
+    with hotel tax as well as portions of other taxes, surcharges, fees, such as sales tax, alcohol beverage tax, and
+    rental car tax. Austin currently has a separate Vehicle Rental Car Tax venue in place until 2029. Any use of a
+    portion of sales tax or alcohol beverage tax would divert those revenues away from the City’s general fund.
+    The various financing sources for some of the nation’s large convention centers are highlighted below.
+
+
+
+
+Source: http://www.conventioncentertaskforce.org/resources/presentations/TF%20Present%20June%2015%202009-PiperJaffey.pdf , 2009, p 9-10
+
+                                                                                                             30 | P a g e
+    Note: Key Findings section represents data provided to the Visitor Impact Task Force
+Key Findings (continued)
+The Austin Convention Center Department has continued to seek and receive stakeholder input on its proposed
+expansion. The desire for a walkable, street-activated facility that includes community space, restaurant/retail
+space, and development of area/convention center district improvements have been communicated by
+numerous Austin residents and groups. The conceptual design of a proposed expansion continues to evolve.
+Actual design of an expanded facility and area improvements would occur following Council approval to move
+forward with the plan, should Council decide to do so. The financing concept selected would ultimately
+determine what components could be part of the project.
+
+Any details regarding land acquisition – either through acquisition, ground lease, or another alternate method
+– are also still to be determined. ACCD does not believe that it should be a foregone conclusion that the
+property will be fully removed from the tax rolls, and believes one acquisition option that should be explored
+is through a long-term lease versus a purchase. There is also potential for additional development components
+within the expansion design, depending on the land acquisition method and/or a development agreement that
+could have significant impacts on
+the analysis, but are unknowns at
+this point. There is also potential
+for a new downtown fire station
+and another Austin Energy chiller
+to be incorporated into the
+expansion      design,     meeting
+important needs of the City that
+have not identified other solution
+options.
+
+In addition, financing with
+additional tax assessed under Ch.
+351 has the potential for
+additional funding being available
+each year for other authorized
+uses. An example of one of the
+Ch. 351 financing illustrations is
+shown to the right. The elements
+described are for illustration
+purposes only. The ultimate
+project components and flow of
+fund components will continue to
+be defined through stakeholder
+input, Council direction, and
+architectural design.
+
+
+
+
+                                     Source: City of Austin Convention Center Department
+                                                                                                   31 | P a g e
+Note: Key Findings section represents data provided to the Visitor Impact Task Force
+Key Findings (continued)
+Conceptual images representing expansion elements of interest by stakeholders are below.
+
+
+
+
+Source: City of Austin Convention Center Department                                        32 | P a g e
+Note: Key Findings section represents data provided to the Visitor Impact Task Force
+Key Findings (continued)
+Consideration of the creation of a Tourism Public Improvement District
+
+The Council Resolution directed the City Manager to begin conversations with the downtown hotels related to
+the creation of a Tourism Public Improvement District (TPID), which could be a potential mechanism used for
+the expansion of the Austin Convention Center or any other uses allowed under state law regarding a TPID.
+
+
+The Task Force also studied the Tourism Public Improvement District, and as it relates to Austin, noted the
+following:
+
+       Operation of City public safety departments (Police, Fire, EMS) consumes a majority (almost 70%) of
+        general fund revenue.
+       To support tourism, especially during peak times such as South by Southwest and F1, there is a need
+        to provide additional public safety services, which result in increased costs to the City’s general fund,
+        some of which are not reimbursed by the event holders.
+       Upon formation of a TPID, the annual TPID spending plan could include an annual concession provided
+        to the City.
+             o The City could use this funding for an agreed to purpose between the City and the hoteliers.
+             o This funding commitment would need to be reflected in the 10-year TPID service plan that is
+                 part of the petition that is approved by the hoteliers within the District, and then presented
+                 to the City Council for approval.
+                       For example, if the City wanted to use the annual concession from the District for
+                          public safety costs related to city wide tourism events (e.g.; SXSW), it would be
+                          permissible to include this expenditure under the statutory category for related
+                          public safety costs under the Public Improvement District statutes.
+
+
+Additional Topic Covered by Task Force – Welcome Centers
+
+As noted previously, an allowable use of HOT is for a visitor information center. Visit Austin currently operates
+the Austin Visitor Center located at 602 E. Fourth Street. The Austin Visitor Center offers visitor information,
+shopping, and tours.
+There may be other opportunities for welcome centers in Austin for tourists to obtain information about
+Austin’s attractions. One such possible location is at Zilker Park near Barton Springs Pool, where many out-of-
+town visitors frequent. This center could educate visitors about the heritage, natural history, and eco-system
+of Barton Springs, as well as serve as a point of orientation for other City parks.
+
+
+
+
+                                                                                                     33 | P a g e
+Note: Key Findings section represents data provided to the Visitor Impact Task Force
+Detailed Recommendations
+
+     Overarching Recommendations:
+           o With regard to all uses of the Hotel Occupancy Tax, equity should be considered and funding
+               should be inclusive and reflect the diversity of this community, with inclusive consideration
+               for under-served areas and under-represented communities.
+           o Sustainability practices should be considered in the expansion of the Convention Center so
+               that community values and input are included in the process and put into practice.
+                     Visit Austin should conduct a dialogue with community stakeholders, the
+                        Environmental Commission, and the Joint Sustainability Committee on the
+                        “greening” and sustainability practices of the tourism industry.
+     The Visitor Impact Task Force recommends expansion of the Austin Convention Center (ACC)
+      following the consultant’s recommended option to the West, non-contiguous (leaving Trinity Street
+      open), IF:
+           o Financing concept 2b, increasing the Ch. 351 Hotel Occupancy Tax (HOT) by 2%, and retiring
+               the current debt as soon as possible (estimated in the year 2021) is utilized, and
+           o The City seeks land acquisition through a long-term ground lease, or some other
+               development agreement, that provides for the land and any additional development to
+               remain on the tax roll. More specifically:
+                     Expanding the Convention Center should be integrated with other uses, such as
+                        street-level restaurant/retail space in order to activate the area, and residential
+                        (including affordable housing) and/or office, with the possibility of reducing project
+                        costs.
+                     The City should issue a Request for Information for integrating the expansion of the
+                        Convention Center with other uses that would contribute to street activity and a
+                        healthy urban fabric in downtown’s southeast quadrant while maintaining the city’s
+                        intact street grid and valuable land and development on the property tax rolls for
+                        the benefit of the entire City.
+                     The Convention Center expansion should be used to repair the urban framework in
+                        the immediate vicinity of the convention center. Improvements should include
+                        those described in the Waller Creek Conservancy vision for the Convention Center
+                        are as well as the Red River Cultural District and pedestrian connections between the
+                        Convention Center and the Rainey Street neighborhood.
+                     Through the Waller Creek Tax Increment Financing District and/or a similar
+                        mechanism, additional property tax revenues from the expansion should be
+                        considered to address urgent social problems in this area of downtown.
+           o Involve the Design Commission and the community in ongoing conversations about the
+               design of the expansion, and
+           o The expansion project includes additional allowable area improvements that are important
+               to the community (to be finally determined as project moves forward, but should consider
+               capital improvements involving acquisition and development of Palm School, improvements
+               to: Waller Creek (in conjunction with the WallerCreek Conservancy), Mexican-American
+               Cultural Center, Red River Cultural District, nearby historic landmarks, etc.), and
+
+
+
+
+                                                                                                 34 | P a g e
+Detailed Recommendations (continued)
+         o  The bond covenants include in the Flow of Funds direction that excess funds remaining after
+            debt service and convention center operations and capital funding, as outlined in the funding
+            illustrations, be utilized for:
+                  Funds for allowable uses related to commercial music, up the maximum allowed by
+                      law, while leaving the current 15% allocation of the 7% Ch. 351 HOT for the current
+                      Cultural Arts Funding, and
+                  Funds for historic preservation, up the maximum allowed by law, and
+                  Excess funding should be split 50/50 between the music and historic preservation
+                      uses until the allocation to music reaches the maximum allowed by law (15% of the
+                      additional 2% Ch. 351 assessment), at which point funding in excess of that music
+                      threshold will be allocated to historic preservation. Should funding ever exceed the
+                      maximum allowed for historic preservation, Council should evaluate the need for
+                      allocations to additional allowable uses.
+    Music/Arts
+        o Consider the following for the Economic Development Department’s Cultural Arts Division
+            grant program:
+                  Marketing/Access/Outreach
+                             Website - Grants Funding page(s) more user friendly. There should be a
+                              video (2-3 minutes) on the landing page that explains each grant. Each grant
+                              program also needs a video (2-3 minutes), and graphics explaining
+                              regulations, deadlines, details.
+                             Enhanced Community Outreach/Marketing - Dedicated interactive
+                              monthly outreach events to under-served communities that includes
+                              previous recipients as presenters: arts organizations, musicians, artists.
+                              Grant videos should be screened at these meetings.
+                             Marketing - Increased visibility in under-served community via targeted
+                              outreach campaign. Make materials more relevant visually and culturally
+         o   Consider the following for use of a portion of the additional funding allocated to music from
+             the convention center expansion funding:
+                    Grant Funding
+                         Artist-as-Entrepreneur (Core Funding) - Austin musicians and artists add
+                             tremendous value to culture, and even further, to economic growth in the
+                             ‘Live Music Capital.’ There are artists in Austin building careers outside of
+                             performance on stage that can ultimately develop their creative ventures
+                             into larger economic engines, fueling tourism in new markets - beyond
+                             traditional, historic locales. These business-oriented artists need greater
+                             opportunity to develop their ideas, and access to increased resources.
+                             Funding preference to ideas and plans that stimulate growth, and develop
+                             tourism opportunities in under-served communities.
+                         Specific funding to expand and develop individual artists that are building
+                             successful arts ventures with a history of growth
+                              Incubator ($2,000-$10,000) - business with 1-2-year history. Funding
+                                  delivery includes mentorship.
+
+
+
+                                                                                             35 | P a g e
+Detailed Recommendations (continued)
+                                  Growth ($10,000-$25,000) - business with 3-5-year history, proven
+                                   growth, and strategic plan. Funding delivery includes mentorship.
+                               Expansion ($25,000-$100,000) - 5-7-year history, previous funding from
+                                   CAD, clear community
+                                   partnerships/investment. Funding delivery includes mentorship.
+                             Artists’ receiving funding in Growth and Expansion phases must become
+                              mentors as a stipulation of their participation in the program.
+                             Each funding level can only be received once per artist.
+
+    Historic Preservation Activities should be amended as follows:
+         o   Transfer administration of the Historic Preservation and Heritage Grant program from the
+             ACVB to a non-profit (i.e. Austin Community Foundation) or City department with an advisory
+             board composed of a broad and inclusive set of stakeholders representing a variety of historic
+             preservation, cultural heritage, and tourism interests. Look to other grant programs as a
+             model including the Texas Historical Commission’s Texas Preservation Trust Fund (TPTF), and
+             History Colorado’s State Historical Fund (SHF).
+
+         o   Maintain percentage funding levels from HOT revenues for the Cultural Arts grant program
+             and ACVB Tourism Promotion Fund.
+
+         o   Revise eligibility and grant administration guidelines while retaining consistency with State
+             law and City Code:
+                  Remove the requirement that three bids be received for all work. For much historic
+                     preservation-related restoration and rehabilitation work there may not be three
+                     contractors or tradespeople available locally with the skills and experience to carry
+                     out specialized work, and for multi-phase work it can be more efficient to contract
+                     with the same architects and tradespeople as in earlier phases.
+                  Eliminate the cap on the maximum amount for individual grants. This serves multiple
+                     purposes: 1) increases efficiency for grant recipients by reducing the time spent on
+                     grant-writing; 2) allows funds to be used on higher impact projects with larger
+                     budget needs; 3) reduces the number of times an individual property owner has to
+                     return to the grant program for funding, 4) allows for large restoration/rehabilitation
+                     projects to be completed in a more timely and cost-efficient manner.
+                  Allow for funding of privately-owned properties that are regularly open to the public
+                     (e.g. commercial properties). Other publicly-funded grant programs provide funding
+                     to privately-owned properties including the TPTF and SHF programs. Establish grant
+                     scoring criteria and guidelines that put a higher burden on private, commercial grant
+                     recipients than on non-profit and public recipients. The funding can serve as an
+                     incentive for property owners in areas such as East Sixth Street, or the Red River
+                     District to make improvements to their historic buildings that make them more
+                     attractive to tourists, alleviates development pressures on those historic resources,
+                     and also benefits the community. (If market factors in the future make low-interest
+                     loans more attractive to privately-owned, commercial properties, strongly
+                     encourage that City Council consider establishing a loan program in lieu of grants for
+                     these types of projects.)
+                  Establish grant scoring criteria to favor properties owned by public and non-profit
+                     entities, projects that impact culturally-significant historic sites that have been
+
+
+
+                                                                                               36 | P a g e
+Detailed Recommendations (continued)
+                      under-represented, and entertainment and cultural districts that have the capacity
+                      to attract a more diverse tourist audience.
+                  Establish grant scoring criteria to encourage funding to assist sites to be more
+                      “visitor-ready”, or that attract tourists to areas that have not traditionally served
+                      tourists. This can diversify Austin’s tourism options and better tell all the stories of
+                      our community’s heritage.
+                  Expand the type of projects eligible for funding to include interior work, building
+                      systems, interpretive signage, etc.
+                  Look to other grant programs as a model for eligible scopes of work, selection
+                      processes, and restrictions based upon the type of grant recipient including the TPTF
+                      and SHF.
+                  Remove any caps on the amount of grant funds that can be provided toward a
+                      specific site or total project cost at a site.
+         o   Establish % of revenue from HOT associated with the expansion of the Austin Convention
+             Center (plan 2b) or from a Tourism Public Improvement District to be dedicated to a Historic
+             Preservation and Heritage Grant Program.
+
+         o   Prior to any expansion of the HOT tax due to ACC or TPID, continue to allocate $1.5 million to
+             a Historic Preservation and Heritage Grant Program. Until ACC expansion is creating
+             additional 2 percent, would come out of Tourism Promotion, but if/when expansion and/or
+             TPID approved, funds would come from waterfall dollars.
+
+    Visit Austin
+          o Establish a Marketing Advisory Committee that would meet quarterly and include local small
+              business groups (i.e. Red River Cultural District and Austin Independent Business Alliance
+              (AIBA)), arts and cultural organizations, under-represented community stakeholders, and
+              other impacted stakeholders to advise and collaborate with Visit Austin on tourism marketing
+              plans and diversity tourism.
+          o Visit Austin should continue to support the areas of cultural, heritage, music and local
+              business and develop marketing efforts to support robust tourism plans in each of those
+              areas.
+
+
+    Tourism Public Improvement District (TPID)
+        o The City Council should begin the process of formation of a TPID with the hotel industry at
+             the maximum allowable rate amenable to the industry, mindful of the potential hotel
+             occupancy tax rate changes as the convention center debt/venue tax is retired and the HOT
+             rate returns to an overall 15 percent rate.
+        o The City Council should direct staff to identify specific ways the City can use TPID dollars to
+             offset public safety and business district infrastructure costs associated with tourism.
+
+    Short-term Rental Tax Collection –
+         o The City Council should direct City staff to establish a mechanism to collect HOT directly from
+             online marketplaces where transactions occur.
+
+
+
+
+                                                                                                37 | P a g e
+Detailed Recommendations (continued)
+    Welcome Center –
+        o Within the expansion bonding capacity, determine if there is a possibility to provide funding
+           (estimated at $5 million) for a Welcome Center, located in Zilker Park near Barton Springs
+           Pool, or other qualifying tourist destination areas that promote tourism and the convention
+           and hotel industry.
+        o In future years, as the additional annual funding available to music and historic preservation
+           through the convention center expansion financing flow of funds increases, and the amount
+           available for music reaches the 15% maximum, consideration should be given to allocating a
+           portion of the excess funding available for historic preservation to costs associated with
+           welcome centers located on City-owned property.
+        o As funding is assigned to a specific welcome center, the percentage of funding allocated to
+           covers costs should be aligned with the percentage of welcome center visitors who are from
+           out-of-town.
+
+
+
+
+                                                                                           38 | P a g e
+Appendices
+
+
+
+
+             39 | P a g e
+Appendix A
+
+Council Resolution 20160818-075
+
+WHEREAS, the City of Austin has become an internationally recognized destination for live music, special
+events, parks, culture, food, and history; and
+
+WHEREAS, the City of Austin has been termed the "Live Music Capital of the World"; and
+
+WHEREAS, according to Austin Convention & Visitors Bureau, in 2013 more than 21.5 million people from
+around the globe visited Austin; and
+
+WHEREAS, according to the Austin Convention Center Long Range Master Plan, the total Convention
+attendance for 2014 was 449,464, approximately 2% of all visitors to Austin; and
+
+WHEREAS, in Fiscal Year 2016/17, it is estimated that visitors will generate more than $90 million in Hotel
+Occupancy Taxes which has become the third largest source of tax revenue for the City of Austin; and
+
+WHEREAS, currently the City of Austin uses Hotel Occupancy Taxes for the Austin Convention Center, Austin
+Convention & Visitors Bureau, and the Cultural Arts Program; and
+
+WHEREAS, in addition to those departments and programs, other events, activities, districts, and facilities
+bring visitors to town and support the tourist industry; and
+
+WHEREAS, the Spring Festivals attract tourists, artists, musicians, professionals and companies from all over
+the world; and
+
+WHEREAS, Texas Tax Code, Chapter 351.101 (e) states that "hotel occupancy tax revenue spent for a purpose
+authorized by this section may be spent for day-to-day operations, supplies, salaries, office rental, travel
+expenses, and other administrative costs" only if those costs are incurred by activities that promote tourism
+and the convention and hotel industry and that fit within the authorized uses set out in Texas Tax Code
+351.101(a); and
+
+WHEREAS, Zilker Park, which includes Barton Springs, and which is the site for Austin City Limits as well as
+other large events, is nationally-recognized as one of the best Urban Park's to visit; and
+
+WHEREAS, the Parks Department markets and supports a number of other facilities and events, including
+cultural centers, theaters, and museums, that are attended by tourists and visitors; and
+
+WHEREAS, in 2014, the Zilker Botanical Gardens, the Hillside Theater, Dougherty Arts Center, the Carver
+Museum, and O. Henry Museum had total attendance of 423,069; and
+
+WHEREAS, the City of El Paso uses local Hotel Occupancy Taxes to fund the Department of Museums and
+Cultural Affairs; and
+
+WHEREAS, with the aggressive expansion of hotel rooms being built, tourists are visiting the City in growing
+numbers and therefore total Hotel Occupancy Tax revenues are expected to increase more than $11 million
+in Fiscal Year 2016/17; and
+
+
+
+                                                                                                40 | P a g e
+Appendix A (continued)
+WHEREAS, to ensure the effective investment of taxpayer money, reporting data and information on the effect
+of each expenditure on tourist activity and economic development is critical; and
+
+WHEREAS, providing public oversight and input regarding both the use of and the effect of the City use of
+hotel occupancy tax revenue would ensure public confidence in the City use of tax dollars; NOW, THEREFORE,
+
+BE IT RESOLVED BY THE CITY COUNCIL OF THE CITY OF AUSTIN:
+City Council establishes a Visitor Impact Task Force.
+     1. The scope of the Task Force shall include:
+             • Study the impact of tourism on City infrastructure, services, and facilities, and investigate
+                 opportunities to offset those impacts.by using Hotel Occupancy Tax revenues;
+             • Review of current uses of Hotel Occupancy Taxes and the impact of those activities and
+                 expenditures on tourism in the City;
+             • Review of current tourist activity in the City of Austin and what events, venues, or facilities
+                 those tourists attend while visiting;
+             • Review of State and National best practices for tourism programs;
+             • Review of Texas Tax Code Chapter 351 and allowable uses of Hotel Occupancy Taxes under
+                 the Tax Code including parks, historic preservation, cultural heritage, music, arts, special
+                 events, fee waivers, convention, visitors bureau, transportation, downtown districts, venues
+                 and other facilities and debt defeasance for city-owned hotels and convention facilities;
+             • Review the Austin Convention Center expansion, all possible design options and potential
+                 funding mechanisms; and
+             • Make recommendations to the City Council about how to best utilize all hotel occupancy
+                 revenue to impact tourism by April 1, 2017.
+     2. The Task Force shall be comprised of 18 voting members and two ex officio members appointed by
+        the City Council:
+        o 2 members of the music industry nominated by the Music Commission;
+        o 2 members of the arts community nominated by the Arts Commission;
+        o 2 members of the special events industry; one nominated by the Parkland Events Task Force and
+             one nominated by the Economic Opportunity Committee;
+        o 1 member nominated by the Austin Convention and Visitors Bureau;
+        o 1 member of the hotel industry nominated by the Economic Opportunity Committee;
+        o 1 member of the public safety community nominated by the Public Safety Commission;
+        o 1 member of the preservation community nominated by the Historic Landmark Commission;
+        o 1 member of the parks community nominated by the Parks & Recreation Board;
+        o 1 member from the Convention Center;
+        o 1 member nominated by the Downtown Commission;
+        o 2 community members who represent the tourism workforce nominated by the Economic
+             Opportunity Committee;
+        o 1 community member appointed by the Planning and Neighborhood Committee;
+        o 1 member of the environmental community nominated by the Environmental Commission;
+        o 1 member representing the restaurant industry nominated by the Economic Opportunity
+             Committee;
+        o 1 ex officio member from the Public Works Department; and
+        o 1 ex officio member from the Austin Transportation Department.
+     3. A quorum for the conduct of business is a majority of Task Force members who have been appointed
+        by Council. The Task Force shall elect a chair and vice-chair at its first meeting.
+     4. The Task Force will be subject to the Open Meetings Act, all meetings will be open to Public, and
+        public will be given a reasonable amount of time to provide input.
+
+
+
+
+                                                                                                 41 | P a g e
+Appendix A (continued)
+    5.  The City Manager shall provide reasonably necessary resources and technical assistance to the Task
+       Force.
+    6. Any City Council Member may recommend nominees for consideration to the Economic Opportunity
+       Committee no later than October 9th 2016.
+    7. The City Council shall determine whether to dissolve the Task Force or make it a permanent
+       Commission no later than adoption of the Task Force Report or December 31, 2017, whichever occurs
+       first.
+
+BE IT FURTHER RESOLVED
+The City Manager is directed to consider creation of a Parks & Cultural Center Tourism Fund, Special Events
+Tourism Fund, and a Historic Preservation Tourism Fund, funded by Hotel Occupancy Taxes.
+
+BE IT FURTHER RESOLVED
+Should City Council amend City Code to add any new types of expenditure category for Hotel Occupancy Taxes,
+the City Manager is directed to provide reporting similar to the reporting for Cultural Arts grants, for the new
+types of expenditures.
+
+BE IT FURTHER RESOLVED
+The City Manager is directed to report back to Council in conjunction with the Visitor Impact Task Force Report
+no later than April 1, 2017.
+
+BE IT FURTHER RESOLVED
+The City Manager is directed to begin conversations with the downtown hotels related to the creation of a
+Tourism Public Improvement District (PID), which could be a potential mechanism used for the expansion of
+the Austin Convention Center or any other uses allowed under state law regarding a Tourism PID.
+
+
+
+
+                                                                                                   42 | P a g e
+Appendix B
+
+Recommendation Discussion Notes
+
+Summary of notes and VITF member submittals utilized during the May 23, 2017 meeting to develop
+the recommendations included in the report.
+
+NOTE: The recommendations included in the report represent the VITF’s final approved
+recommendations. The information on the following pages was used as a starting point for
+discussion, and therefore may differ from the final approved recommendations.
+
+      TPID
+          o Whereas, The first item in the Task force scope per council Resolution No.
+            20160818-075 reads: “Study the impact of tourism on City infrastructures,
+            services, and facilities, and investigate opportunities to offset those impacts by
+            using Hotel Occupancy Tax revenues” and
+          o Operation of city public safety departments (Police, Fire, EMS) consumes a
+            majority (almost 70%) of general fund revenue; and
+          o To support tourism, especially during peak times such as South by Southwest
+            and F1, there is a need to provide additional public safety services; and
+          o Other Texas cities have found legal ways to utilize a TPID to offset public safety
+            costs of tourism;
+          o Therefore, be it resolved:
+          o That the City Council begin the process of the formation of a TPID with the hotel
+            industry at the maximum allowable rate amenable to the industry, mindful of
+            potential rate changes as the debt/venue tax is retired and 2 cents of the tax
+            returns to 15 cents; and
+          o The VITF recommends that City Council direct staff to identify specific ways the
+            City can use TPID dollars to offset public safety and business district infrastructure
+            costs associated with tourism.
+
+      Short term rental tax collection: “Establish a mechanism to collect Hotel Occupancy Tax
+       directly from online marketplaces where transactions occur.” Consensus
+
+      Convention Center Expansion 2B++
+          o Other projects to be considered for inclusion as part of expansion (e.g., Palm
+             School, Waller Creek District (in concert with the Conservancy), Mexican
+             American Cultural Center, Red River Cultural District, nearby historic landmarks,
+             etc.)
+
+      Cultural, Heritage, Music Tourism planning => perhaps funneled to new tourism
+       marketing committee at Visit Austin. Support of robust cultural/heritage/music/local
+       business tourism plans.
+
+
+
+
+                                                                                       43 | P a g e
+Appendix B (continued)
+
+     Visit Austin will establish a Marketing Advisory Committee that would include local small
+      business groups (i.e. Red River Cultural District and AIBA), arts and cultural
+      organizations, under-represented community stakeholders, and other impacted
+      stakeholders to advise and collaborate with Visit Austin on tourism marketing plans and
+      diversity tourism.
+
+     Overlay language for equity and sustainability: “With regard to all uses of the Hotel Occupancy
+      Tax, equity should be considered and funding should be inclusive and reflect the diversity of
+      this community, with special consideration for under-served areas and under-represented
+      communities.”
+
+      “Sustainability practices should be considered in the expansion of the CC so that
+      community values and input are included in the process and into practice.” “Visit Austin
+      should conduct a dialogue with community stakeholders, the Environmental Commission,
+      and the Joint Sustainability Committee on the ‘greening’ and sustainability practices of
+      the tourism industry.”
+
+
+
+
+                                                                                         44 | P a g e
+Appendix B (continued)
+
+                                        Welcome Center Funds
+Austin has many premiere tourism attractions - including our City parks. While tourists may need to
+visit the city to conduct business, attend a convention, or visit family, our attractions are why visitors
+jump to make the trip and why they come back and bring their friends. They are also part of the “wow
+factor” that makes Austin such a coveted location for conventions, music festivals, and group travel.
+The Welcome Center fund would invest in centers to improve visitor experience at specific areas
+frequented by a large number of tourists by providing information and direction to visitors.
+
+An example of such a such a center is the Visitor Education Center envisioned by the Barton Springs
+Conservancy to be located in Zilker Park near Barton Springs Pool. This center would educate visitors
+about the heritage, natural history, and eco-system of Barton Springs, as well as serve as an point of
+orientation for other City parks.
+
+While Welcome Centers are authorized under the same portion of Chapter 351 as Austin’s existing
+Visitor Information Centers, they are conceptually distinct. While Visitor Information Centers provide
+information to visitors about the whole city, Welcome Centers guide visitors around specific tourist
+areas.
+
+Recommendations
+   1. Create a new fund called the Welcome Center Fund to help with the construction,
+      improvement, expansion, equipping, repair, operations, and maintenance of Welcome
+      Centers on City-owned land at tourist destination parks, such as Zilker Park, or other qualifying
+      tourist destination areas that promote tourism and the convention and hotel industry.
+   2. Solely fund the Welcome Center Fund out of the “waterfall” or “ending balance bucket” funds
+      identified as part of Scenario 2B of the Convention Center Expansion. Assess costs needed
+      to build Welcome Centers as opposed to establishing defined % of HOT funds.
+   3. Set a maximum limit amount of the “ending balance bucket” (1/3 of remainder of waterfall after
+      maximum allocation made to music) to be allocated to the Welcome Center Fund in any given
+      year, aligning funding with the percentage of visitors who are tourists. In the event no
+      allocation is made to the Welcome Center, those funds would remit to heritage grant, or if
+      heritage grant funds aren’t being spent, could reassess.
+   4. Assign administration and operation of the Welcome Center Fund to an appropriate body
+      which would create a special committee composed of a broad set of stakeholders representing
+      tourist destination parks and other tourist destination areas.
+   5. Establish eligibility and grant administration guidelines while retaining consistency with state
+      law and city code.
+   6. Prior to construction funding for a Welcome Center, require funds be identified for operation
+      and maintenance of the Welcome Center that will not be drawn from Tourism Promotion Fund
+      or other Visit Austin funds.
+
+
+
+
+                                                                                              45 | P a g e
+Appendix B (continued)
+
+Convention Center Design Amendments
+
+
+The convention experience of today is more than a building; it is the authentic experience of a city. More
+visitors than ever are forgoing cars in favor of a completely walkable convention experience. Austin needs a
+new model for a convention center — one that adds to instead of subtracting from the vibrancy and
+connectivity of its surroundings. An expansion of the convention center should minimize negative impacts
+and maximize positive impacts on the city which supports it.
+
+
+Therefore, we recommend:
+
+    1. The costs of expanding the Convention Center should be met in part by integrating the expansion
+        with other uses, such as street-level restaurant/retail space in order to activate the area, and
+        residential or office. This would benefit the convention center and the city by ensuring that the
+        surrounding area is active at times when no conventions are taking place.
+
+    2. The city should issue a Request for Information for integrating the expansion of the Convention
+        Center with other uses that would contribute to street activity and a healthy urban fabric in
+        downtown’s southeast quadrant while maintaining the city’s intact street grid and valuable land and
+        development on the property tax rolls for the benefit of the entire City.
+
+    3. The Convention Center expansion should be used to repair the urban framework in the immediate
+        vicinity of the convention center. Improvements should include those described in the Waller Creek
+        Conservancy vision for the Convention Center area as well as the Red River Cultural District and
+        pedestrian connections between the Convention Center and the Rainey Street neighborhood.
+
+    4. Through the Waller Creek Tax Increment Financing District and/or a similar mechanism, additional
+        property tax revenues from the expansion should be considered to address urgent social problems in
+        this area of downtown.
+Involve the Design Commission and the community in ongoing conversations about the design of the
+expansion.
+General Recommendations for CAD with increased funding:
+Make a determination as to which pots of money should be drawn from (i.e., music-waterfall funds, cultural
+arts division funds, etc.).
+
+Consider programs such as the ones listed below under the grantee program.
+
+    1. Marketing/Access/Outreach
+
+
+                                                                                               46 | P a g e
+Appendix B (continued)
+
+          a. Website - Grants Funding page(s) more user friendly. There should be a       video        (2-3
+              minutes) on the landing page that explains each grant. Each grant program also needs a video
+              (2-3 minutes), and graphics explaining regulations, deadlines, details.
+          b. Enhanced Community Outreach/Marketing - Dedicated interactive monthly outreach events
+              to under-served communities that includes previous recipients as presenters: arts
+              organizations, musicians, artists. Grant videos should be screened at these meetings.
+          c. Marketing - Increased visibility in under-served community via targeted outreach campaign.
+              Make materials more relevant visually and culturally            .
+  2. Grant Funding
+        a. Artist-as-Entrepreneur (Core Funding) - Austin musicians and artists add tremendous value to
+              culture, and even further, to economic growth in the ‘Live Music Capital.’ There are artists in
+              Austin building careers outside of performance on stage that can ultimately develop their
+              creative ventures into larger economic engines, fueling tourism in new markets - beyond
+              traditional, historic locales. These business-oriented artists need greater opportunity to
+              develop their ideas, and access to increased resources. Funding preference to ideas and plans
+              that stimulate growth, and develop tourism opportunities in under-served communities.
+                i.     Specific funding to expand and develop individual artists that are building successful
+                       arts ventures with a history of growth
+                           1. Incubator ($2,000-$10,000) - business with 1-2 year history.
+                               Funding delivery includes mentorship.
+
+                           2. Growth ($10,000-$25,000) - business with 3-5 year history, proven growth,
+                               and strategic plan. Funding delivery includes mentorship.
+                           3. Expansion ($25,000-$100,000) - 5-7 year history, previous funding         from
+                               CAD, clear community partnerships/investment. Funding delivery includes
+                               mentorship.
+
+                ii.    Artists’ receiving funding in Growth and Expansion phases must become mentors as
+                       a stipulation of their participation in the program.
+                iii.   Each funding level can only be received once per artist.
+
+
+
+
+                                                                                                47 | P a g e
+Appendix B (continued)
+
+Sustainable Tourism Program
+Recommendation: To consider that City Council request Visit Austin, formerly Austin Convention and Visitors
+Bureau, review the Global Sustainable Tourism criteria for implementing in Austin. Seems that this would
+simplify & define common goals initially in regards to expectations of business models.
+One example: vendors agreeing to recycle in the convention center.
+Other possibilities include:
+A) Special consideration for the allocation of HOT funds to recipients who are requesting funds for the first
+   time.
+B) Inject into the tourism conversation the idea of a carrying capacity for hard and soft infrastructure.
+C) Use the plan to focus more resources on transportation safety and developing new, low-emission mobility
+   options.
+D) To protect green space in the urban core from encroachment and to enhance the tree canopy.
+
+Funding could come from the cultural/arts program. It could be tourism promotion, it could be historic
+preservation, it could even be fashioned as a "venue" if it was linking places in a common plan that were not
+geographically linked. For example, part of a sustainable tourism plan could be agri-tourism, linking our local
+farms and remaining operating ranches with local breweries and farm to table restaurants with other
+sustainable sites, including, for example, Austin Energy's East Austin solar farm.
+The VITF encourages the City Council to ask the Joint Sustainable Committee and the Environmental Board to
+be involved in the review, at a minimum.
+http://www.gstcouncil.org/en/gstc-criteria-hotels-tour-operatorsdestinations/criteria-for-hotels-tour-
+operators-industry.html? id=1296:global-sustainable-tourism-criteria-hotels
+
+Other recommendations are:
+A) Recommend to the City Council to use the HOT for a COA Sustainable Tourism Plan.
+B) Evaluate the Austin Convention Center to determine how the existing space could be redesigned for better
+   utilization of the hallways, vertical space and the roof.
+C) Designate Trinity St. from Cesar Chavez to 4th St. as a low emission zone for vehicles and have the Austin
+   Convention Center post no engine idling signs to existing posts.
+D) Include in calculations for the actual or projected economic benefit of conventions the cost of lost hours
+   in reduced mobility due to traffic congestion in the impacted area surrounding the Convention Center and
+   the supporting hotels.
+E) Consider increasing convention center space by constructing a new building in the Domain or other part
+   of Austin in the Desired Development Zone that has existing hotel infrastructure.
+
+
+
+
+                                                                                                  48 | P a g e
+Appendix B (continued)
+
+
+                              Funding for Heritage Grant Program
+
+
+Current Use of HOT Revenues for Heritage Grant Program:
+Since 1996 the City of Austin has contracted with the Austin Convention and Visitors Bureau
+(ACVB) to, among other tourism-related services, administer a grant program funding projects
+involving historic sites. Known as the Heritage Grants Program, the funds are provided from the
+collection of Hotel Occupancy Taxes (HOT) as allowed by Chapter 351 of the Texas Tax Code. The
+amount of funding allocated to the Heritage Grant Program has not been based upon a set
+percentage of HOT revenues as it is with other HOT-fund programs, but as a specific amount
+determined by the ACVB, and agreed upon by City Council each year.
+
+
+Currently Austin’s assessed HOT rate is 15%, which is divided between the State and City, which
+receive 6% and 9% respectfully. Of the 9% the City receives, approximately 20 5/7% is allocated
+to ACVB for tourism promotion and the Heritage Grants Program. Recipients of Heritage grants
+have included the Paramount and Stateside Theaters, the French Legation, the Contemporary,
+the Elisabet Ney Museum, Pease Park, and the Austin Symphony.
+
+
+Since 2009 the ACVB has distributed approximately, on average, $200,000 annually through the
+Heritage Grants Program. As the table below shows that amount has equated to an average of
+less than 0.50% of the total HOT tax revenues collected annually by the City. Until 2017, the
+amount awarded to historic preservation projects had not increased (and some years has
+decreased), while the City’s HOT revenues have increased by nearly 70%.
+
+
+In 2017, City Council directed the ACVB to set aside $500,000 toward the Heritage Grants
+Program. Additionally, Council allocated $1,000,000 to the Parks and Recreation Department for
+use on Chapter 351-eligible historic restoration projects located within parks. Through a diligent
+planning process, PARD decided to allocate the funds for projects at the Elisabet Ney Museum,
+the O Henry Museum, the Oakwood Cemetery Chapel, and Mayfield Park.
+
+
+
+
+                                                                                       49 | P a g e
+Appendix B (continued)
+
+
+
+  Fiscal    HOT Revenues   Convention      Convention    ACVB Tourism   Cultural Arts      Heritage
+  Year                       Center          Center      & Promo Fund      Grants           Grants
+                 (9%
+                                                                                           Program
+             assessment)     Ch. 334        Ch. 351         Ch. 351       Ch. 351
+                                                                                            grants
+                           (2% of total)   (64 2/7% of    (20 5/7% of   (15% of 7%)
+                                                                                           awarded
+                                               7%)            7%)
+
+
+  2011       $46,727,283   $10,383,841     $23,363,641    $7,528,284    $5,451,516      Data not avail.
+                                                                                        to committee
+
+
+  2012       $50,959,067   $11,324,237     $25,479,534    $8,210,072    $5,945,225        $195,988
+                                                                                         (.49% of 7%)
+
+
+  2013       $59,549,080   $13,233,129     $29,774,540    $9,594,018    $6,947,393        $115,260
+                                                                                         (.25% of 7%)
+
+
+  2014       $67,999,894   $15,111,088     $33,999,947    $10,955,538   $7,933,321        $137,876
+                                                                                         (.26% of 7%)
+
+
+  2015       $79,184,384   $17,596,530     $39,592,192    $12,757,484   $9,238,178        $117,500
+                                                                                         (.19% of 7%)
+
+
+  2016       $87,529,652   $19,451,034     $43,764,826    $14,101,999   $10,211,793       $212,075
+                                                                                         (.31% of 7%)
+
+From data.austintexas.gov and data distributed to VITF.
+
+
+Allowable Use of HOT Taxes Per Chapter 351 of Texas Tax Code:
+Per Section 351.101 of the Texas Tax Code revenue from Hotel Occupancy Taxes may be used to
+promote tourism and the convention and hotel industry, for purposes that include:
+
+
+   “5) historical restoration and preservation projects or activities or advertising and
+   conducting solicitations and promotional programs to encourage tourists and
+   convention delegates to visit preserved historic sites or museums:
+     (A)     at or in the immediate vicinity of convention center facilities or visitor
+           information centers; or
+
+
+                                                                                          50 | P a g e
+Appendix B (continued)
+
+     (B) located elsewhere in the municipality or its vicinity that would be frequented by
+         tourists and convention delegates;”
+
+
+Cities may delegate management of funds (e.g. for a grant program) to another governmental
+entity or private organization and may use tax revenues to pay for administrative expenses
+related to activities funded by HOT.
+
+
+ACVB Heritage Grant Program:
+The City of Austin contracts with the ACVB to market Austin as a premier travel destination, and
+administer the Heritage Grant Program. According to the ACVB the purpose of the grant program
+is to promote tourism through the preservation, restoration, and rehabilitation of historic sites
+and properties. In 2006 the City and ACVB established the following set of general eligibility
+requirements for the grant program:
+
+
+   1. Eligible properties:
+      a. Properties owned or leased by a governmental or non-profit entity.
+      b. Properties designated as City of Austin Landmark, Recorded Texas Historic Landmark,
+          State Antiquities Landmark, or on the National Register of Historic Places, as well as
+          those listed as contributing to a National Register or Local Historic District.
+      c. Properties that are “tourism” ready with regular open hours and accessible to hotels
+          for out-of-town travelers, and that can document promotional advertising to tourists.
+
+   2. Eligible projects include exterior work for facade or exterior restoration and rehabilitation
+      of sites including buildings, accessory structures and grounds.
+
+
+   3. Applicants must provide at least a 50% match in the form of cash or donated services or
+      goods.
+
+
+   4. Maximum grant amount is $58,000 as of 2017 (maximum amount was previously
+      $47,000).
+
+
+   5. Payment of grant funds is made after the work is complete. Scheduled payments may be
+      approved on a case-by-case basis.
+
+
+   6. Award recipients must obtain 3 bids for work.
+
+
+                                                                                       51 | P a g e
+Appendix B (continued)
+
+
+
+   7. Repayment of all grant funds is required if the following occurs within 3 years after
+      completion of work:
+       a. Property is conveyed to a private, for-profit owner.
+       b. Applicant fails to maintain the property as required by City code.
+       c. Historic zoning or designation is removed.
+       d. Work is not completed in accordance with preservation agreement.
+       e. Applicant fails to provide proof of insurance annually.
+
+
+The amount of funding ACVB makes available each year has averaged $200,000, yet most years
+less than this amount has been awarded to applicants. Additionally, the same few applicants have
+submitted for funding each year.
+
+
+Citizens and organizations that have attended VITF meetings have expressed a desire for changes
+to the grant program and its guidelines to expand the type and number of projects receiving this
+funding.
+
+
+Issues That May Be Limiting Use of the Heritage Grant Program:
+   1. Eligible entities being unaware of the program.
+
+   2. Rules and guidelines that are too restrictive to encourage use including:
+         a. Restricted only to non-profit and public entities.
+         b. Requiring applicants to provide detailed documentation on visitor information
+             prior to funding and for two years after funding received.
+         c. Funding limited to work on façade or exterior of buildings.
+         d. Requiring three bids for funded work.
+         e. Funding provided on a reimbursement method after 100% of work complete.
+         f. Grants amounts being too modest to encourage entities to submit applications.
+
+
+Need for Funding for Historic Resources on Parks & Recreation Department Land:
+The Parks and Recreation Department (PARD) has identified horizon projects for use of future
+HOT funds on PARD properties. These projects include the restoration of the Barton Springs
+Bathhouse, Phase II of the O Henry Museum, Elisabet Ney Museum, and Mayfield Parks projects,
+as well as projects in the downtown historic squares and the Tejano Trail. Additionally, there are
+many other historic sites and objects on PARD land that could benefit from funding. Having
+
+
+                                                                                      52 | P a g e
+Appendix B (continued)
+
+dedicated future funding would allow larger multi-phased projects without fear of leaving later
+phases uncompleted, and will result in economic efficiency in carrying out projects.
+
+
+
+
+Potential Economic Impacts of Funding Heritage Tourism and Historic Preservation Projects
+Numerous studies conducted across the United States have shown that heritage tourism and
+historic preservation activities provide communities with significant economic benefits. The
+report “Economic Impact of Historic Preservation in Texas”, commissioned by the Texas Historical
+Commission in 2015, and carried out by University of Texas and Rutgers University, found that
+Texas heritage attracts tourists, creates jobs, attracts reinvestment, and brings economic vitality
+to our communities. In fact, more than 10.5% of all travel in Texas is heritage-related and results
+in $2.25 billion in spending each year. Heritage day and overnight travelers spend on average
+over $175 per day, while non-heritage travelers spend less than $145 per day. Heritage travelers
+also stay longer resulting in more “heads in beds”, and greater HOT revenues. Heritage tourism
+alone created more than 54,000 jobs in Texas in 2013. It also creates jobs in retail and service
+sectors, and the physical work on historic properties creates jobs in architecture, engineering and
+construction – and these tend to be more skilled, and higher paid jobs than found in new
+construction. In 2013, Texas realized $772 million in private and public historic rehabilitation
+investment – having a significant impact on our economy.
+
+
+Comments From VITF Members re. Funding for Historic Preservation:
+The following comments were generated by the VITF members. In many cases a single comment
+below reflects comments provided by multiple members.
+   ● Revise criteria and guidelines for Heritage Grants.
+   ● Provide transparent process for Heritage Grants program.
+   ● Move administration of the Heritage Grants program to an entity whose mission is historic
+     preservation.
+   ● Allow private venues within historic entertainment and cultural districts to be eligible for
+     funding through the Heritage Grant program.
+   ● Increase annual amount allocated to Heritage Grant program to be closer to State cap.
+   ● Fund improvements to downtown sites through new heritage tourism and/or parks
+     tourism funding.
+
+Recommendations from VITF for Funding a Grant Program for Historic Preservation and
+Heritage-Related Projects:
+
+
+
+                                                                                       53 | P a g e
+Appendix B (continued)
+
+  1. Transfer administration of the Historic Preservation and Heritage Grant program from the
+     ACVB to a non-profit or City department with an advisory board composed of a broad and
+     inclusive set of stakeholders representing a variety of historic preservation, cultural
+     heritage, and tourism interests. Look to other grant programs as a model including the
+     Texas Historical Commission’s Texas Preservation Trust Fund (TPTF), and History
+     Colorado’s State Historical Fund (SHF).
+
+  2. Maintain percentage funding levels from HOT revenues for the Cultural Arts grant
+     program and ACVB Tourism Promotion Fund.
+
+  3. Revise eligibility and grant administration guidelines while retaining consistency with
+     State law and City Code:
+         a. Remove the requirement that three bids be received for all work. For much
+             historic preservation-related restoration and rehabilitation work there may not be
+             three contractors or tradespeople available locally with the skills and experience
+             to carry out specialized work, and for multi-phase work it can be more efficient to
+             contract with the same architects and tradespeople as in earlier phases.
+         b. Eliminate the cap on the maximum amount for individual grants. This serves
+             multiple purposes: 1) increases efficiency for grant recipients by reducing the time
+             spent on grant-writing; 2) allows funds to be used on higher impact projects with
+             larger budget needs; 3) reduces the number of times an individual property owner
+             has to return to the grant program for funding, 4) allows for large
+             restoration/rehabilitation projects to be completed in a more timely and cost-
+             efficient manner.
+         c. Allow for funding of privately-owned properties that are regularly open to the
+             public (e.g. commercial properties). Other publicly-funded grant programs
+             provide funding to privately-owned properties including the TPTF and SHF
+             programs. Establish grant scoring criteria and guidelines that put a higher burden
+             on private, commercial grant recipients than on non-profit and public recipients.
+             The funding can serve as an incentive for property owners in areas such as East
+             Sixth Street, or the Red River District to make improvements to their historic
+             buildings that make them more attractive to tourists, alleviates development
+             pressures on those historic resources, and also benefits the community.
+
+             If market factors in the future make low-interest loans more attractive to
+             privately-owned, commercial properties, strongly encourage that City Council
+             consider establishing a loan program in lieu of grants for these types of projects.
+
+         d. Establish grant scoring criteria to favor properties owned by public and non-profit
+            entities, projects that impact culturally-significant historic sites that have been
+            under-represented, and entertainment and cultural districts that have the
+
+                                                                                     54 | P a g e
+Appendix B (continued)
+
+             capacity to attract a more diverse tourist audience.
+          e. Establish grant scoring criteria to encourage funding to assist sites to be more
+             “visitor-ready”, or that attract tourists to areas that haven’t traditionally served
+             tourists. This can diversify Austin’s tourism options and better tell all the stories
+             of our community’s heritage.
+          f. Expand the type of projects eligible for funding to include interior work, building
+             systems, interpretive signage, etc.
+          g. Look to other grant programs as a model for eligible scopes of work, selection
+             processes, and restrictions based upon the type of grant recipient including the
+             TPTF and SHF.
+          h. Remove any caps on the amount of grant funds that can be provided toward a
+             specific site or total project cost at a site.
+
+Recommendations from VITF Regarding Funding:
+   1. Establish      % of revenue from HOT associated with the expansion of the Austin
+      Convention Center (plan 2b) or from a Tourism Public Improvement District to be
+      dedicated to a Historic Preservation and Heritage Grant Program.
+
+   2. Prior to any expansion of the HOT tax due to ACC or TPID, continue to allocate $1.5 million
+      to a Historic Preservation and Heritage Grant Program. Until ACC expansion is creating
+      additional 2 percent, would come out of Tourism Promotion, but if/when expansion
+      and/or TPID approved, funds would come from waterfall dollars.
+
+
+
+
+                                                                                      55 | P a g e
+Appendix B (continued)
+
+                                  Additional Funding for Music
+
+The Austin Convention Center is to expand, based on proposed scenario 2B. Under this proposed
+expansion, Austin City Council would implement a 2% increase in HOT based on State Chapter
+351. The total HOT tax collected from applicable revenues for Austin properties would be 17%
+($0.17) of which the following allocations are identified:
+
+   •   $0.06 State of Texas
+   •   $0.02 Existing Chpt.334 Venue Tax – Convention Center Expansion Debt
+       Service
+   •   $0.0105 Cultural Arts
+   •   $0.0145 ACVB
+   •   $.045 Austin Convention Center
+   •   $0.02 New CHPT 351 funding to Austin Convention Center debt service
+
+ACCD’s financial model has identified available funds through excesses built into their forecasted
+budget needs stated to be $6.4MM in available funds.
+
+Austin’s music economy and entertainment districts have numerous shortfalls as outlined in the
+music census and the resultant omnibus resolution. The value of the music industry in Austin,
+specifically live music, to tourism cannot be overstated. If the Convention Center is to expand,
+and Hotel Occupancy Taxes are to increase there must be consideration for the Music Industry
+made within applicable uses.
+
+From this follows:
+
+   -   A recommendation to allocate sustainable funding from annual excesses, as identified in the
+       ACCD Financing model, towards the identified needs of Music Infrastructure and Historical
+       Preservation. Funds would be split between Music Infrastructure and Historic Preservation not
+       to fall below 80% of the ending CIP & Annual end balance as identified in funding model 2B.
+
+   -   A recommendation that a body of governmental and non-governmental representatives, to be
+       identified, be formed in order to establish criteria and vet proposals relating to the dispersal of
+       these funds for allowable uses.
+
+   -   A recommendation to form or identify a non-profit body or bodies to manage these funds,
+       separate from the ACVB, Cultural Arts or the Austin Convention Center.
+
+   -   A recommendation to transfer the management of the existing Heritage Grant program and
+       funding to the new management body.
+
+These recommendations aim to create a sustainable funding model to support the needs of
+Austin’s cultural and community assets as well as to create an accessible, needs-based approach
+to allocating funds for these assets moving forward. Music Infrastructure funding in these
+recommendations is separate from Music Marketing (which should still be part of the ACVB
+directive) or Cultural Arts funding for music programming.
+
+
+
+
+                                                                                             56 | P a g e
+

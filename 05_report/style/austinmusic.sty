@@ -1,0 +1,181 @@
+% austinmusic.sty - layout and styling for the Austin working-musician report.
+%
+% Design goals, in priority order:
+%   1. Fit a figure-heavy policy report into a tight page budget without
+%      crowding. Margins, float spacing, and caption sizing are all tuned for
+%      density rather than for a conventional academic page.
+%   2. Keep every figure legible at printed size.
+%   3. Stay self-contained: no external logo files, no downloaded fonts, so the
+%      project folder compiles anywhere.
+%
+% Compile with xelatex (preferred, for system fonts) or pdflatex (falls back to
+% a Latin Modern sans). latexmk handles either; see 05_report/Makefile.
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{austinmusic}[2026/08/01 Austin working-musician report style]
+
+% ---------------------------------------------------------------- packages --
+\RequirePackage{iftex}
+% Maths support: the report states the formula behind every statistical
+% estimate, mostly inside footnotes, so inline and display maths must work.
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage[table]{xcolor}
+\RequirePackage{geometry}
+\RequirePackage{graphicx}
+\RequirePackage{booktabs}
+\RequirePackage{array}
+\RequirePackage{tabularx}
+\RequirePackage{longtable}
+\RequirePackage{ragged2e}
+\RequirePackage{titlesec}
+\RequirePackage{enumitem}
+\RequirePackage{caption}
+\RequirePackage[most]{tcolorbox}
+\RequirePackage{fancyhdr}
+\RequirePackage{microtype}
+\RequirePackage{xspace}
+\RequirePackage{needspace}
+\RequirePackage{multicol}
+\RequirePackage{flafter}
+\RequirePackage[section]{placeins}
+% hang+flushmargin keeps the many footnotes this report carries from eating
+% into the text block. Footnotes hold the methodological detail deliberately,
+% so they need to stay cheap in vertical space.
+\RequirePackage[hang,flushmargin,bottom]{footmisc}
+
+\ifXeTeX
+  \RequirePackage{fontspec}
+  % Try a humanist sans in order of likely availability, then fall back to a
+  % font every TeX installation ships. No font files are bundled, so the build
+  % never depends on an asset that might not travel with the folder.
+  \IfFontExistsTF{Inter}{\setsansfont{Inter}[Numbers=Lining]}{%
+    \IfFontExistsTF{Helvetica Neue}{\setsansfont{Helvetica Neue}}{%
+      \IfFontExistsTF{Arial}{\setsansfont{Arial}}{\setsansfont{TeX Gyre Heros}}}}
+  \IfFontExistsTF{Charter}{\setmainfont{Charter}}{%
+    \IfFontExistsTF{Georgia}{\setmainfont{Georgia}}{\setmainfont{TeX Gyre Pagella}}}
+\else
+  \RequirePackage[T1]{fontenc}
+  \RequirePackage{lmodern}
+\fi
+
+% ------------------------------------------------------------------ colors --
+% One palette shared with the figure scripts (03_analysis/src/common.py), so
+% charts and document agree without anyone matching hex codes by hand.
+\definecolor{amnavy}{HTML}{1B2D55}
+\definecolor{amorange}{HTML}{D44500}
+\definecolor{amblue}{HTML}{2B6CB0}
+\definecolor{amlightbg}{HTML}{F5F7FA}
+\definecolor{ammuted}{HTML}{6C7A8D}
+\definecolor{amborder}{HTML}{DEE2E6}
+\definecolor{amtext}{HTML}{1A1A2E}
+\definecolor{amgreen}{HTML}{2E7D57}
+\definecolor{amred}{HTML}{C0392B}
+
+% ---------------------------------------------------------------- geometry --
+% 0.85in side margins with 10pt type gives roughly 95 characters per line,
+% which is dense but still comfortable, and buys about three extra pages of
+% content across a report this length compared with 1in margins.
+\geometry{letterpaper,left=0.85in,right=0.85in,top=0.85in,bottom=0.95in,
+          footskip=0.45in}
+
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{1.2em}
+\linespread{1.04}
+
+% ------------------------------------------------------------------ titles --
+\titleformat{\section}{\normalfont\sffamily\bfseries\large\color{amnavy}}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\normalfont\sffamily\bfseries\normalsize\color{amnavy}}{\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}{\normalfont\sffamily\bfseries\small\color{amnavy}}{}{0em}{}
+\titlespacing*{\section}{0pt}{11pt plus 2pt minus 2pt}{4pt}
+\titlespacing*{\subsection}{0pt}{8pt plus 1pt minus 1pt}{3pt}
+\titlespacing*{\subsubsection}{0pt}{6pt plus 1pt minus 1pt}{2pt}
+
+% ---------------------------------------------------------------- captions --
+% Captions run small and justified because they carry the source notes, the
+% reading guidance, and the caveats that deliberately stay out of the figures.
+\captionsetup{font={footnotesize},labelfont={sf,bf,color=amnavy},
+              justification=justified,singlelinecheck=false,
+              skip=3pt,belowskip=0pt}
+\captionsetup[table]{position=above}
+
+% ------------------------------------------------------------------ floats --
+% Tight float spacing. A figure-dense report wastes a surprising amount of page
+% to default float separation.
+\setlength{\textfloatsep}{9pt plus 2pt minus 2pt}
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{9pt plus 2pt minus 2pt}
+\setlength{\abovecaptionskip}{3pt}
+\setlength{\belowcaptionskip}{0pt}
+\renewcommand{\topfraction}{0.92}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.08}
+\renewcommand{\floatpagefraction}{0.80}
+
+% ------------------------------------------------------------------- lists --
+\setlist[itemize]{leftmargin=1.1em,itemsep=1.2pt,topsep=3pt,parsep=0pt}
+\setlist[enumerate]{leftmargin=1.4em,itemsep=1.2pt,topsep=3pt,parsep=0pt}
+
+% ------------------------------------------------------------- table types --
+\newcolumntype{P}[1]{>{\RaggedRight\arraybackslash}m{#1}}   % wrapping text
+\newcolumntype{B}[1]{>{\bfseries\color{amnavy}\RaggedRight\arraybackslash}m{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{R}[1]{>{\RaggedLeft\arraybackslash}m{#1}}
+\newcommand{\rowrule}{\arrayrulecolor{ammuted!35}\specialrule{0.4pt}{2.2pt}{2.2pt}\arrayrulecolor{black}}
+\renewcommand{\arraystretch}{1.12}
+
+% ------------------------------------------------------------------ header --
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[C]{\footnotesize\color{ammuted}\thepage}
+\fancyfoot[R]{\footnotesize\color{ammuted}\reporttag}
+\newcommand{\reporttag}{}
+\newcommand{\setreporttag}[1]{\renewcommand{\reporttag}{#1}}
+
+% ------------------------------------------------------------------- boxes --
+% Callout used for the report's boxed sidebars.
+\newtcolorbox{sidebar}[1][]{enhanced,breakable,
+  colback=amlightbg,colframe=amborder,boxrule=0.5pt,
+  left=8pt,right=8pt,top=6pt,bottom=6pt,
+  fonttitle=\sffamily\bfseries\small\color{amnavy},
+  coltitle=amnavy,colbacktitle=amlightbg,
+  attach boxed title to top left={yshift=-2mm,xshift=6pt},
+  boxed title style={colframe=amlightbg,boxrule=0pt},
+  #1}
+
+% Full-width banner used on the title block and the one-page summaries.
+\newtcolorbox{bannerbox}{enhanced,colback=amnavy,colframe=amnavy,sharp corners,
+  boxrule=0pt,left=10pt,right=10pt,top=7pt,bottom=7pt}
+
+% Key-finding box, used sparingly for the numbers the report most wants read.
+\newtcolorbox{keyfinding}[1][]{enhanced,breakable,
+  colback=white,colframe=amorange,boxrule=0pt,leftrule=2.2pt,
+  sharp corners,left=8pt,right=6pt,top=5pt,bottom=5pt,#1}
+
+% ------------------------------------------------------------ small pieces --
+% A compact statistic tile, for the infographic-style half-page summaries where
+% a chart would not add anything.
+\newcommand{\stattile}[3]{%
+  \begin{minipage}[t]{#1}
+    \raggedright
+    {\sffamily\bfseries\fontsize{15}{17}\selectfont\color{amnavy}#2}\\[1pt]
+    {\footnotesize\color{amtext}#3}
+  \end{minipage}\hfill}
+
+\newcommand{\srcnote}[1]{\par\vspace{2pt}{\scriptsize\color{ammuted}#1\par}}
+
+% Inline term gloss, for defining jargon at point of use rather than in a
+% glossary the reader has to go find.
+\newcommand{\term}[1]{\textit{#1}}
+
+% Simple wordmark so the appendix can name the typesetting engine without
+% pulling in the hologo package.
+\newcommand{\XeLaTeX}{X\kern-.125em\lower.5ex\hbox{E}\kern-.1667em\LaTeX}
+
+\RequirePackage[hidelinks]{hyperref}
+\RequirePackage{xurl}
+\hypersetup{colorlinks=true,linkcolor=amnavy,citecolor=amnavy,urlcolor=amblue}
+
+\endinput

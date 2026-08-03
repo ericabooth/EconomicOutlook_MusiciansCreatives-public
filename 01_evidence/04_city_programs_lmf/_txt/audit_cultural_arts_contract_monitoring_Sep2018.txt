@@ -1,0 +1,442 @@
+City of Austin
+Office of the City Auditor
+
+
+Audit Report
+
+
+Cultural Arts Contract
+Monitoring
+September 2018
+
+
+
+
+The Cultural Arts Division’s contract monitoring practices are generally aligned with best
+practices. However, there are opportunities to improve documentation of processes and
+verification of information reported by contractors. Furthermore, the Division does not use
+a contract template developed by the Law Department for three of its cultural arts programs
+and therefore contracts for these programs lack some clauses that protect the City’s
+interests.
+                                            Objective and Background                                                       2
+   Contents                                 What We Found                                                                  4
+                                            Recommendations and Management Response                                        8
+                                            Scope and Methodology                                                         11
+                                            Cover: Graffiti Wall Austin Texas, https://pixabay.com/en/graffiti-wall-
+                                            austin-texas-austin-2527331/
+
+
+
+   Objective                                The objective of this audit was to determine if cultural arts contracts are
+                                            being administered and monitored effectively to ensure compliance with
+                                            contract requirements.
+
+
+
+   Background                               The Cultural Arts Division of the Economic Development Department (the
+                                            Division) is responsible for managing the City’s cultural arts programs and
+                                            promoting the economic development of creative industries in the City of
+                                            Austin. The Division oversees four main cultural arts funding programs,
+                                            as shown in Exhibit 1. The Core, Community Initiatives, and Cultural
+                                            Heritage Festival programs are funded by Hotel Occupancy Tax (HOT)
+                                            revenue, while the Capacity Building program is paid for out of the General
+   The cultural arts are the conscious      Fund. These programs fund projects and activities in all disciplines that
+   use of skill and creative imagination,   provide arts and cultural programming and also support the professional
+   especially in the production of
+                                            development of artists and arts organizations.
+   aesthetic objects such as music,
+   dance, theater, folk art, literature,    The Division provides financial support to organizations and individuals
+   performance art, visual art, and         through a competitive application and review process. Following the
+   media.                                   approval of funding, the City enters into a contract with the organization
+                                            or individual for specific services. These contracts are developed based
+                                            on templates and establish responsibilities for both the City and the
+                                            contractor. The Division conducts monitoring to verify compliance with the
+                                            contract requirements.
+
+
+
+
+Cultural Arts Contract Monitoring                             2                                     Office of the City Auditor
+                                      Exhibit 1: Funding and Number of Contracts for Cultural Arts Programs
+                         Program                    Number of                   Funding amount                          Types of projects
+                                                    contracts                                                           funded
+                                                    FY16          FY17          FY16             FY17
+                         Core Funding                     227          292 $8,212,763              $9,951,957 Operational support
+                         Program                                                                              and/or specific
+                                                                                                              projects
+                         Community                          90           70      $373,158             $322,657 Specific, smaller
+                         Initiatives Program                                                                   projects
+                         Capacity Building                  17           20      $163,600             $176,500 Professional
+                         Program                                                                               development of
+                                                                                                               individual artists or
+                                                                                                               arts organizations
+                         Cultural Heritage                  12              9    $188,902             $190,388 Festivals with a focus
+                         Festivals Program                                                                     on a cultural heritage
+                                                                                                               and its arts
+                         TOTAL                            348          391 $8,938,423             $10,641,502
+                        SOURCE: OCA analysis of cultural arts contract information and program guidelines, April 2018
+
+
+
+
+Cultural Arts Contract Monitoring                                       3                                                 Office of the City Auditor
+   What We Found
+   Summary                                The Cultural Arts Division’s contract monitoring practices are generally
+                                          aligned with best practices. However, there are opportunities to improve
+                                          documentation of processes and verification of information reported by
+                                          contractors. Furthermore, the Division does not use a contract template
+                                          developed by the Law Department for three of its cultural arts programs
+                                          and therefore contracts for these programs lack some clauses that protect
+                                          the City’s interests.
+
+
+
+   Finding 1                              The Division follows best practices by providing regular training to staff on
+                                          contract monitoring, linking payment to contractor performance, receiving
+   The Cultural Arts                      performance reports from contractors, and applying consequences for
+   Division’s contract                    poor performance.1 However, in order to fully ensure that the contractors
+   monitoring practices are               are meeting the requirements of their contract, current practices related
+                                          to documentation of processes and verification of information reported by
+   generally aligned with                 the contractors can be further improved.
+   best practices. However,
+   we identified three areas              While the Division has a monitoring manual, the manual has not been
+                                          updated with current monitoring practices.
+   for improvement.
+                                          The current monitoring manual has not been updated since 2015 and as
+                                          a result the Division does not have consistent written guidance for staff
+                                          monitoring contracts and institutional knowledge may be lost with staff
+                                          transfers or retirements.
+
+                                          The current monitoring manual contains some outdated procedures, such
+                                          as instructions for a database system that the Division no longer uses and
+   Best practices require organizations
+                                          references to contract documents that are no longer in use. In addition,
+   to maintain up-to-date written
+   policies and procedures to ensure
+                                          the manual does not mention several new monitoring procedures, such as
+   consistent, high-quality contract      forms that staff complete when processing invoices for payment or when
+   monitoring.                            reviewing contractor reports. Although the manual has not been updated,
+                                          staff are following these practices as outlined later in this finding.
+
+                                          Division staff indicated that the since the employees responsible for
+                                          monitoring contracts are familiar with the contract monitoring procedures,
+                                          the manual has not been updated.
+
+                                          The Division does not document how contracts are selected for
+                                          monitoring.
+
+                                          The Division does not document its process for selecting contracts
+                                          for detailed review to ensure contractors comply with the contract
+                                          requirements. Without a consistent risk-based process for selecting
+                                          contracts, the Division may not monitor higher risk contracts.
+
+                                          1
+                                            Components of an Effective Contract Monitoring System, State of Georgia Department
+                                          of Audits and Accounts, 2003. This guide is a comprehensive list of contract monitoring
+                                          best practices, based on a survey of Georgia state government departments and the
+                                          governments of other states.
+
+
+
+Cultural Arts Contract Monitoring                               4                                           Office of the City Auditor
+                                          Report Review
+                                          The contract requires the contractors to submit both a final report and
+                                          an expense report. Staff performs a basic review of all contractor reports
+                                          and a detailed review of at least 10% of expense reports. Division staff
+                                          asserted that they do consider risk factors when selecting contracts for
+                                          detailed review, such as whether a contractor is new to the program
+                                          or whether they have had recent major staff turnover, but they do not
+   Best practices recommend that
+                                          document their justification for the selection of contracts. We found that
+   organizations maintain a plan that
+                                          in fiscal year 2016, Division staff performed a detailed review of 16% of
+   clearly outlines its monitoring
+                                          contracts, while in fiscal year 2017 they performed a detailed review of
+   methods and that its choice of
+   methods be based on an assessment      35% of contracts.
+   of risks related to the specific
+                                          Event Attendance
+   contract.
+                                          While the contract is still ongoing, staff ensure compliance with the
+                                          contract requirements by attending some sponsored events. During these
+                                          events, staff note whether the event is occurring as described in the
+                                          contract and whether the contractor is displaying appropriate indications
+                                          that the event is sponsored by the City. Staff asserted that they do not
+                                          select events for attendance on a risk basis. In fiscal year 2016, staff
+                                          attended seven events, while in fiscal year 2017 staff attended twelve
+                                          events.
+
+                                          The Division does not review documentation to verify that the
+                                          information reported by the contractor is accurate.
+
+                                          We noted that the current practices of the Division do not require staff
+   Best practices recommend that          to verify the accuracy of the information provided in the final reports and
+   organizations review documentation
+                                          expense reports.2 The Core program contracts require the contractors to
+   to verify actual information
+                                          retain these documents and for other programs Division staff stated that
+   against information reported by
+   the contractor. The contracts for
+                                          contractors are expected to retain the documentation. Since staff does not
+   verification of documentation          verify the supporting documentation for the reported information, there
+   may be selected based on a risk        is no assurance that the information submitted by the contractors in the
+   assessment.                            reports is accurate or that the contractor keeps records supporting the
+                                          information reported to the City.
+
+                                          In addition, the Economic Development Department reports audience
+                                          numbers provided by the contractors as a performance measure. The
+                                          Division does not verify these numbers or clarify that they are self-
+                                          reported.
+
+                                          Division staff generally follow the established practices for contract
+                                          monitoring.
+
+                                          Each contractor must submit a final report and an expense report at the
+   The Division holds regular trainings   end of their contract, which staff then review for compliance with contract
+   for contractors explaining how         requirements. We selected a random sample of 30 contracts (15 each
+   to complete the final reports and      from fiscal years 2016 and 2017) and based on a review of final reports
+   expense reports as required by the     and expense reports for these contracts, we noted that the Division’s staff
+   contract.                              generally follows monitoring processes to ensure that contractors comply
+                                          with established requirements.
+
+                                          2
+                                            Verification of reported information can be performed by reviewing bank records, credit
+                                          card statements, attendance information, personnel records, and other documents.
+
+
+
+Cultural Arts Contract Monitoring                               5                                           Office of the City Auditor
+                                              We noted a few cases where performance did not align with contract
+                                              requirements, as shown below in Exhibits 2 and 3 and, based on this
+                                              testing, we found that the Division may have paid two (6%) contractors
+                                              when work was not performed in accordance with the contract.3
+
+                                              These issues may have been caused by a lack of understanding of the
+                                              requirements on the contractor’s part due to a failure to attend a final
+                                              report workshop, or by newer Division staff members not being aware of
+                                              all monitoring requirements.
+
+                                                                Exhibit 2: Review of Final Reports
+                              Requirement                           Staff monitoring practices                Results of testing
+                              Submit a final report                 Withhold the final contract               Staff withheld payment
+                              within 30 days of the end             payment until the final report            until the final report was
+                              of the contract or the                has been submitted and                    submitted and approved
+                              last contracted event,                approved.                                 in all cases.
+                              whichever is sooner.
+                              Provide proof that                    Check that publicity materials            1 (3%) contractor did
+                              publicity materials                   with City logo are included in            not provide publicity
+                              indicated City support.               the final report.                         materials.
+                              Perform the work agreed               Review final reports to                   2 (6%) contractors’
+                              to in the contract.                   determine if the work                     reported work did not
+                                                                    performed by the contractor               align with the work as
+                                                                    aligns with the work agreed to            required by the contract.
+                                                                    in the contract.
+                              Include audience and                  Review final reports to                   2 (6%) final reports did
+                              personnel information in              determine if contractors                  not contain required
+                              the final report.                     provided this information.                information.
+                             SOURCE: OCA analysis of contract and program guidelines monitoring requirements and contract files,
+                             April 2018
+
+
+
+
+                                              3
+                                                Percentage figures in these exhibits are based on the total number of contracts to which
+                                              the requirements are applicable. The final two requirements of Exhibit 3 are applicable only
+                                              when the report is subject to a detailed review.
+
+
+
+Cultural Arts Contract Monitoring                                     6                                                Office of the City Auditor
+                                                              Exhibit 3: Review of Expense Reports
+                              Requirement                         Staff monitoring practices               Results of testing
+                              Do not allocate more                Compare expense report to                For 3 (10%) contracts,
+                              than 20% of the                     revised budget.                          staff did not request
+                              City award between                                                           explanations from
+                              budgeted items without                                                       contractors for changes to
+                              explanation.                                                                 their budget.
+                              Provide receipts for                Determine if required                    For 1 (6%) contract, receipts
+                              all cash expenses and               receipts were provided.                  were not present in the file.
+                              in-kind contributions, if
+                              necessary to meet the
+                              matching requirement.
+                              Match the City award                Review expense report       Contractors consistently
+                              with funds from other               to determine if the         met the matching
+                              sources.                            contractor met the matching requirement.
+                                                                  requirement.
+                              City and matching funds             Review expense report                   For 1 (3%) contract, staff
+                              are used for allowable              to determine if reported                did not note and follow up
+                              expenses.                           expenses are allowable.                 on an unallowable expense.
+                              Specify the name and    Review expense report to                            Required expense
+                              purpose of each expense determine if contractors                            information was provided
+                              in the expense report.  provided the required                               in all expense reports
+                                                      information.                                        reviewed by staff.
+                             SOURCE: OCA analysis of contract and program guidelines monitoring requirements and contract files,
+                             April 2018
+
+
+
+
+   Finding 2                                  To ensure that the City’s interests are protected when entering into
+                                              contracts, the Law Department is required by the Charter to pass upon
+   The cultural arts contracts                all City contracts. In response to the contract development and approval
+   for three programs                         audit conducted by our office in 2014, the Law Department developed
+                                              a template to be used by the Division for any cultural arts programs and
+   do not use a contract
+                                              reviews it after each session of the Texas Legislature to ensure it is up to
+   template developed by                      date.
+   the Law Department,
+                                              We found that the Division uses the template developed by the Law
+   and therefore contracts
+                                              Department for the Core funding program but does not use it to develop
+   for these programs are                     contracts for the other three cultural arts funding programs.
+   lacking some clauses
+                                              Division staff asserted that the some of these programs do not include
+   that protect the City’s
+                                              all the clauses suggested in the contract template developed by the Law
+   interests.                                 Department because the Division wanted to reduce barriers to entry for
+                                              contractors.
+
+                                              As a result the contract templates for these three funding programs lack
+                                              some important clauses which are included in the template developed
+                                              by the Law Department to protect the City’s interests. These include
+                                              clauses that give the City the right to audit contractors and provide for a
+                                              procedure to terminate the contract.
+
+
+
+
+Cultural Arts Contract Monitoring                                     7                                               Office of the City Auditor
+   Recommendations and Management Response
+             The Director of the Economic Development Department should strengthen the monitoring process for
+             cultural arts contracts by:
+
+             •   Ensuring that the Cultural Arts Division’s contract monitoring manual is updated to reflect current
+                 practice;
+             •   Ensuring that the Division consistently follows the updated manual;
+
+    1        •   Developing and implementing a documented, risk-based approach to select contracts for event
+                 attendance and detailed review;
+             •   Developing and implementing a documented, risk-based approach to select contractors for
+                 verification of reported information.
+             •   Developing a plan to verify the accuracy of the audience numbers reported as a performance
+                 measure or clarify that the numbers are self-reported.
+
+             Management Response:        Agree
+             Proposed Implementation Plan:       Staff will:
+             •   Update the Cultural Arts Division’s contract monitoring manual to reflect current best practices.
+             •   Develop standard operating procedures for assessing risk and selecting contracts for site
+                 monitoring, including contract compliance and verification of reported information.
+             •   Schedule and assign staff to monitor selected contracts.
+             •   Develop messaging to communicate the monitoring process to contractors.
+             •   Develop a plan to verify accuracy of audience numbers reported through request of documentation
+                 from contractors.
+             Proposed Implementation Date: Staff has already begun to update standard operating procedures
+             to align with the monitoring manual and ensure that the manual is consistent with operating practices.
+             Staff plans to complete all items of the Implementation Plan by November 2018.
+
+
+
+             The Director of the Economic Development Department should work with the Law Department to
+    2        ensure all cultural arts contract templates include clauses that safeguard the City’s interests.
+             Management Response:        Agree
+             Proposed Implementation Plan:    Staff will, on an annual basis, submit contract templates to the
+             Law Department for review and incorporate any recommended edits for legal compliance and best
+             practices.
+             Proposed Implementation Date: Staff has already initiated conversation with the Law Department
+             regarding this item and plans to complete this Implementation Plan item by September 2018.
+
+
+
+
+Cultural Arts Contract Monitoring                              8                                 Office of the City Auditor
+   Management Response
+
+
+
+
+Cultural Arts Contract Monitoring   9   Office of the City Auditor
+   Management Response
+
+
+
+
+Cultural Arts Contract Monitoring   10   Office of the City Auditor
+                                    The audit scope included the contract administration and monitoring
+   Scope                            practices for cultural arts contracts in FY16 and FY17.
+
+
+
+   Methodology                      To accomplish our audit objectives, we performed the following steps:
+
+                                    •   interviewed Cultural Arts Division staff and Law Department staff;
+                                    •   reviewed cultural arts program guidelines and requirements;
+                                    •   identified and reviewed best practices criteria applicable to contract
+                                        management;
+                                    •   reviewed cultural arts contracts templates;
+                                    •   selected a sample of 30 contract files randomly from the population of
+                                        contracts administered by the Cultural Arts Division in FY16 and FY17;
+                                        •   Source: lists of contracts for FY16 and FY17
+                                        •   NOTE: This sample cannot be projected to the population
+                                    •   reviewed the sampled contract files for monitoring of compliance with
+                                        contract requirements;
+                                    •   evaluated the risk of fraud, waste, and abuse with regard to cultural
+                                        arts contracts; and
+                                    •   evaluated internal controls related to the monitoring of cultural arts
+                                        contracts.
+
+
+
+   Audit Standards                  We conducted this performance audit in accordance with Generally
+                                    Accepted Government Auditing Standards. Those standards require that
+                                    we plan and perform the audit to obtain sufficient, appropriate evidence
+                                    to provide a reasonable basis for our findings and conclusions based on
+                                    our audit objectives. We believe that the evidence obtained provides
+                                    a reasonable basis for our findings and conclusions based on our audit
+                                    objectives.
+
+
+
+
+Cultural Arts Contract Monitoring                     11                                    Office of the City Auditor
+The Office of the City Auditor was created by the Austin City
+Charter as an independent office reporting to City Council to help
+establish accountability and improve City services. We conduct
+performance audits to review aspects of a City service or program
+and provide recommendations for improvement.
+
+
+
+
+Audit Team
+Neha Sharma, Audit Manager
+Sam Naik, Auditor-in-Charge
+Kathie Harrison
+Kate Murdock
+
+
+City Auditor
+Corrie Stokes
+
+
+Deputy City Auditor
+Jason Hadavi
+
+
+Office of the City Auditor
+phone: (512) 974-2805
+email: AustinAuditor@austintexas.gov
+website: http://www.austintexas.gov/auditor
+
+   AustinAuditor
+   @AustinAuditor
+
+
+Copies of our audit reports are available at
+http://www.austintexas.gov/page/audit-reports
+
+
+
+
+                      Alternate formats available upon request
+

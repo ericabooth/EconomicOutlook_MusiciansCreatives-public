@@ -1,0 +1,31 @@
+="Receipts by distance from the Moody Center, before and after its April 2022 opening"
+
+="",="(1)",="(2)"
+="",="Log real monthly receipts, 2025 dollars",="Log real monthly receipts, 2025 dollars"
+
+="Post-opening x under 1 mile",="-0.2948",=""
+="",="(0.2457)",=""
+
+="Post-opening x 1 to 2 miles",="-0.3847",=""
+="",="(0.2729)",=""
+
+="Post-opening x 2 to 4 miles",="-0.2880",=""
+="",="(0.2644)",=""
+
+="Post-opening x log distance in miles",="",="0.1265"
+="",="",="(0.1711)"
+
+="Constant",="11.5692***",="11.3519***"
+="",="(0.1199)",="(0.0530)"
+
+="Observations",="2589",="2589"
+="Specification",="Distance bands, over 4 miles omitted",="Continuous log distance"
+="Sample",="2018-2019 and 2022H2-2025, large rooms excluded",="2018-2019 and 2022H2-2025, large rooms excluded"
+
+="Standard errors in parentheses"
+="Outcome is log real monthly receipts in 2025 dollars."
+="Pre-period 2018-01 to 2019-12; post-period 2022-07 to 2025-12; the pandemic window is dropped."
+="Venue and calendar-month fixed effects; standard errors clustered by venue."
+="Distance is not random: near venues are central-city rooms and differ from far ones in many ways."
+="Descriptive comparison by distance band. Not a displacement estimate."
+="* p<0.10, ** p<0.05, *** p<0.01"

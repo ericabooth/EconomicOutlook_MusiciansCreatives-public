@@ -1,0 +1,2549 @@
+
+  ___  ____  ____  ____  ____ ®
+ /__    /   ____/   /   ____/      StataNow 19.5
+___/   /   /___/   /   /___/       MP—Parallel Edition
+
+ Statistics and Data Science       Copyright 1985-2025 StataCorp LLC
+                                   StataCorp
+                                   4905 Lakeway Drive
+                                   College Station, Texas 77845 USA
+                                   800-782-8272        https://www.stata.com
+                                   979-696-4600        service@stata.com
+
+Stata license: 4-user 4-core network, expiring  6 May 2027
+Serial number: 501909369296
+  Licensed to: Eric Booth
+               Texas 2036
+
+Notes:
+      1. Stata is running in batch mode.
+      2. Unicode is supported; see help unicode_advice.
+      3. More than 2 billion observations are allowed; see help obs_advice.
+      4. Maximum number of variables is set to 5,000 but can be increased;
+          see help set_maxvar.
+
+
+Running /Users/ericbooth/Documents/Stata/ado/personal/profile.do ...
+-------------------------------------------------------------------------------
+  [1]  (BASE)      "/Applications/StataNow/ado/base/"
+  [2]  (SITE)      "/_codeshare/"
+  [3]              "."
+  [4]  (PERSONAL)  "/Users/ericbooth/Documents/Stata/ado/personal/"
+  [5]  (PLUS)      "/Users/ericbooth/Library/Application Support/Stata/ado/plus
+> /"
+  [6]  (OLDPLACE)  "~/ado/"
+ [view] [edit] [do]  10_pums_earnings.do 
+ [view] [edit] [do]  20_wages_industry.do 
+ [view] [edit] [do]  30_venues.do 
+ [view] [edit] [do]  40_city_money.do 
+ [view] [edit] [do]  50_state_national.do 
+ [view] [edit] [do]  60_cost_of_living.do 
+ [view] [edit] [do]  70_quasi_experiments.do 
+ [view] [edit] [do]  80_census_microdata.do 
+ [view] [edit] [do]  _setup.do 
+ [view] [edit] [do]  build_numbers.do 
+ [view] [edit] [do]  run_all.do 
+
+Click [here] for other links
+-------------------------------------------------------------------------------
+
+. do 60_cost_of_living.do 
+
+. *! 60_cost_of_living.do - Is Austin cost of living, or Austin housing cost,
+. *!   the thing squeezing musicians? Real rent and home-value trends (HUD FMR,
+. *!   Zillow ZORI/ZHVI) for Austin and 4 peer metros; CPI Housing against CPI
+. *!   All items nationally; BEA Regional Price Parity for Austin against
+. *!   peers; the hours of musician work needed to cover one month of Austin
+. *!   rent, including the city wage series that appears to cover the
+. *!   self-employed; and, where available, a PUMS-based share-of-income
+. *!   anchor that also covers the self-employed.
+. *!
+. *! FRAMING THIS MODULE MUST GET RIGHT
+. *!   1. BLS publishes no Austin-area CPI at all (verified against
+. *!      BLS_CPI.dta below, not assumed). Every real-dollar figure in this
+. *!      report, including every one here, deflates by the U.S. city
+. *!      average because that is the only series available for a metro BLS
+. *!      does not price on its own. If Austin costs have actually risen
+. *!      faster than the nation, that deflation UNDERSTATES Austin's true
+. *!      cost increase -- so a real-dollar DECLINE this module finds is a
+. *!      conservative reading, not an overstated one.
+. *!   2. Austin rents and home values ran up hard through 2022, then fell.
+. *!      This module shows both legs on every trend figure; it never crops
+. *!      the decline out and never hides the run-up either.
+. *!   3. BEA Regional Price Parity says Austin is near the national average
+. *!      on all items but far above average on housing specifically --
+. *!      verified against the file below, not copied from prior prose.
+. *!
+. *! Inputs  : 01_evidence/09_cost_of_living/hud_fmr_1983_2026_5area_long.csv
+. *!           01_evidence/09_cost_of_living/zillow_zori_seasadj_5metro_long.cs
+> v
+. *!           01_evidence/09_cost_of_living/zillow_zori_notseasadj_5metro_long
+> .csv
+. *!           01_evidence/09_cost_of_living/zillow_zhvi_allhomes_seasadj_5metr
+> o_long.csv
+. *!           01_evidence/09_cost_of_living/acs_median_rent_homevalue_5geo_lon
+> g.csv
+. *!           01_evidence/09_cost_of_living/bea_rpp_marpp_5metro_long.csv
+. *!           01_evidence/09_cost_of_living/mit_living_wage_travis_county_2026
+> 0801.md
+. *!           01_evidence/01_wages_oews_qcew/oews_musicians_creatives_2005_202
+> 5.csv
+. *!           01_evidence/04_city_programs_lmf/socrata/2qxc-8cme_median_earnin
+> gs_creative_occupations.csv
+. *!           03_analysis/data/external/BLS_CPI.dta
+. *!           03_analysis/out/cpi_annual.dta               (built by _setup.do
+> )
+. *!           03_analysis/out/numbers/numbers_pums.csv      (optional; gates T
+> ask 5)
+. *! Outputs : 04_figures/fig19_rent_vs_wages.png (+ out/fig19_rent_vs_wages.cs
+> v)
+. *!           04_figures/fig20_metro_rent.png    (+ out/fig20_metro_rent.csv)
+. *!           03_analysis/out/numbers/numbers_costliving.csv
+. 
+. clear all
+
+. do "_setup.do"
+
+. *! _setup.do - shared foundation for the Austin musician/creative-worker anal
+> ysis.
+. *! Every module do-file starts with:  do "_setup.do"
+. *!
+. *! WHAT THIS DOES
+. *!   1. Finds the project root by searching upward for a sentinel file, so th
+> e
+. *!      whole folder can be zipped, moved to another machine, and run without
+. *!      editing a single path.
+. *!   2. Points Stata at the project-local ado library, so reghdfe, estout,
+. *!      spmap and the rest travel with the folder. No ssc install needed on a
+. *!      new machine.
+. *!   3. Builds a CPI-U deflator once and stores it, so every dollar figure in
+. *!      the report sits in the same base year (2025).
+. *!   4. Defines the report palette and graph styling, matched to the LaTeX fi
+> le.
+. *!   5. Defines two helper programs: numadd (register a number the report wil
+> l
+. *!      quote) and figsave (export a figure at consistent size).
+. *!
+. *! CONVENTIONS FOR MODULE AUTHORS
+. *!   - Set  global CURMODULE "<name>"  then call  numinit  before registering
+> .
+. *!   - Figure titles state the FINDING; subtitles qualify it. Source notes an
+> d
+. *!     caveats do NOT go in the image; they go in the LaTeX caption.
+. *!   - All dollars real, 2025 base, via the cpi_annual lookup.
+. 
+. version 17
+
+. set more off
+
+. set varabbrev off
+
+. 
+. * ---------------------------------------------------------------- 1. ROOT --
+. * Search the working directory and its parents for a file that only exists in
+. * this project. Whichever candidate contains it is the project root.
+. local sentinel "01_evidence/01_wages_oews_qcew/_sources.md"
+
+. local found 0
+
+. foreach cand in "`c(pwd)'" "`c(pwd)'/.." "`c(pwd)'/../.." "`c(pwd)'/../../.."
+>  {
+  2.     capture confirm file "`cand'/`sentinel'"
+  3.     if (_rc == 0) & (`found' == 0) {
+  4.         global PROJ "`cand'"
+  5.         local found 1
+  6.     }
+  7. }
+
+. if `found' == 0 {
+.     display as error "_setup.do could not locate the project root."
+.     display as error "Run Stata from 03_analysis/stata/ (or the project root)
+>  and try again."
+.     display as error "Current directory: `c(pwd)'"
+.     exit 601
+. }
+
+. 
+. global EVID     "${PROJ}/01_evidence"
+
+. global ANALYSIS "${PROJ}/03_analysis"
+
+. global DATAX    "${ANALYSIS}/data/external"
+
+. global OUT      "${ANALYSIS}/out"
+
+. global NUMDIR   "${OUT}/numbers"
+
+. global TABDIR   "${OUT}/tables"
+
+. global FIGS     "${PROJ}/04_figures"
+
+. global STATADIR "${ANALYSIS}/stata"
+
+. 
+. * Evidence subfolders, named for the workstream each one came from.
+. global EV_WAGES  "${EVID}/01_wages_oews_qcew"
+
+. global EV_PUMS   "${EVID}/02_pums_nes_microdata"
+
+. global EV_BEA    "${EVID}/03_creative_economy_bea"
+
+. global EV_CITY   "${EVID}/04_city_programs_lmf"
+
+. global EV_SURVEY "${EVID}/05_music_census_pay_surveys"
+
+. global EV_STATE  "${EVID}/06_state_policy_benchmark"
+
+. global EV_SVOG   "${EVID}/07_svog_federal_relief"
+
+. global EV_VENUE  "${EVID}/08_venues_ecosystem"
+
+. global EV_COL    "${EVID}/09_cost_of_living"
+
+. global EV_APP    "${EVID}/10_apprenticeship_workforce"
+
+. global EV_STREAM "${EVID}/11_streaming_royalties"
+
+. 
+. capture mkdir "${OUT}"
+
+. capture mkdir "${NUMDIR}"
+
+. capture mkdir "${TABDIR}"
+
+. capture mkdir "${FIGS}"
+
+. 
+. * ------------------------------------------------------------- 2. ADO PATH -
+> -
+. * Prepend the project-local library. Using adopath rather than sysdir set PLU
+> S
+. * keeps any packages already installed on this machine visible as a fallback,
+. * while guaranteeing the bundled copies win.
+. adopath ++ "${STATADIR}/ado/s"
+  [1]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/s"
+  [2]  (BASE)      "/Applications/StataNow/ado/base/"
+  [3]  (SITE)      "/_codeshare/"
+  [4]              "."
+  [5]  (PERSONAL)  "/Users/ericbooth/Documents/Stata/ado/personal/"
+  [6]  (PLUS)      "/Users/ericbooth/Library/Application Support/Stata/ado/plus
+> /"
+  [7]  (OLDPLACE)  "~/ado/"
+
+. adopath ++ "${STATADIR}/ado/plus"
+  [1]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/plus"
+  [2]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/s"
+  [3]  (BASE)      "/Applications/StataNow/ado/base/"
+  [4]  (SITE)      "/_codeshare/"
+  [5]              "."
+  [6]  (PERSONAL)  "/Users/ericbooth/Documents/Stata/ado/personal/"
+  [7]  (PLUS)      "/Users/ericbooth/Library/Application Support/Stata/ado/plus
+> /"
+  [8]  (OLDPLACE)  "~/ado/"
+
+. adopath ++ "${STATADIR}/ado"
+  [1]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado"
+  [2]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/plus"
+  [3]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/s"
+  [4]  (BASE)      "/Applications/StataNow/ado/base/"
+  [5]  (SITE)      "/_codeshare/"
+  [6]              "."
+  [7]  (PERSONAL)  "/Users/ericbooth/Documents/Stata/ado/personal/"
+  [8]  (PLUS)      "/Users/ericbooth/Library/Application Support/Stata/ado/plus
+> /"
+  [9]  (OLDPLACE)  "~/ado/"
+
+. 
+. * --------------------------------------------------------- 3. CPI DEFLATOR -
+> -
+. * Base year for every real-dollar figure in the report.
+. global BASEYEAR 2025
+
+. 
+. * Build the annual CPI lookup once. Rebuilt only if missing, so modules that
+. * run in sequence do not each redo it.
+. capture confirm file "${OUT}/cpi_annual.dta"
+
+. if _rc != 0 {
+.     preserve
+.     use "${DATAX}/BLS_CPI.dta", clear
+.     keep if area_name == "U.S. city average" & item_name == "All items"
+.     keep if is_annualavg == 0 & seas_adj == 0 & !missing(month)
+.     keep year month cpi
+.     duplicates drop year month, force
+. 
+.     * BLS never published a CPI-U value for October 2025 because the federal
+.     * funding lapse suspended collection. Fill that single month by averaging
+.     * September and November and flag it. October matters here because it is
+.     * the month of the Austin City Limits festival, so leaving a hole would
+.     * distort the venue-receipts series specifically.
+.     generate byte cpi_imputed = 0
+.     sort year month
+.     quietly count if year == 2025 & month == 10 & missing(cpi)
+.     if r(N) > 0 {
+.         quietly summarize cpi if year == 2025 & month == 9, meanonly
+.         local sep = r(mean)
+.         quietly summarize cpi if year == 2025 & month == 11, meanonly
+.         local nov = r(mean)
+.         quietly replace cpi = (`sep' + `nov') / 2 if year == 2025 & month == 
+> 10
+.         quietly replace cpi_imputed = 1 if year == 2025 & month == 10
+.     }
+.     drop if missing(cpi)
+. 
+.     * Keep only years with a full twelve months, so a partial year (2026 at t
+> he
+.     * time of writing) never masquerades as an annual average.
+.     bysort year: generate byte nmon = _N
+.     keep if nmon == 12
+.     collapse (mean) cpi (max) cpi_imputed, by(year)
+. 
+.     quietly summarize cpi if year == ${BASEYEAR}, meanonly
+.     local base = r(mean)
+.     generate double defl = `base' / cpi
+.     label variable defl "Multiply nominal dollars of `year' by this to get ${
+> BASEYEAR} dollars"
+.     label variable cpi_imputed "1 = annual average uses an imputed month"
+.     sort year
+.     save "${OUT}/cpi_annual.dta", replace
+.     restore
+. }
+
+. 
+. * Convenience: put the base-year CPI in a global for ad hoc use.
+. preserve
+
+. use "${OUT}/cpi_annual.dta", clear
+
+. quietly summarize cpi if year == ${BASEYEAR}, meanonly
+
+. global CPIBASE = r(mean)
+
+. restore
+
+. 
+. * ------------------------------------------------------------- 4. PALETTE --
+. * RGB triples matching 05_report/style/austinmusic.sty, so figures and docume
+> nt
+. * agree without anyone re-typing hex codes.
+. global NAVY    "27 45 85"
+
+. global ORANGE  "212 69 0"
+
+. global BLUE    "43 108 176"
+
+. global MUTED   "108 122 141"
+
+. global LIGHTBG "245 247 250"
+
+. global BORDER  "222 226 230"
+
+. global GREEN   "46 125 87"
+
+. global GOLD    "200 137 27"
+
+. global RED     "192 57 43"
+
+. global TEXTC   "26 26 46"
+
+. 
+. * Orange marks the musician or Austin series throughout; navy and muted mark
+. * comparison series. Keeping that constant across figures means a reader lear
+> ns
+. * the convention once.
+. global SERIES1 "${NAVY}"
+
+. global SERIES2 "${ORANGE}"
+
+. global SERIES3 "${BLUE}"
+
+. global SERIES4 "${GREEN}"
+
+. global SERIES5 "${GOLD}"
+
+. global SERIES6 "${MUTED}"
+
+. 
+. * Standard title and subtitle options. Modules pass these straight through:
+. *   twoway ... , title("Finding", $TITLEOPT) subtitle("Qualifier", $SUBOPT)
+. global TITLEOPT `"size(4.1) color("${NAVY}") justification(left) position(11)
+>  span margin(b=1)"'
+
+. global SUBOPT   `"size(3.0) color("${MUTED}") justification(left) position(11
+> ) span margin(b=3)"'
+
+. global XTOPT    `"size(3.0)"'
+
+. global YTOPT    `"size(3.0)"'
+
+. global LEGOPT   `"size(3.0) region(lstyle(none)) symxsize(6)"'
+
+. 
+. capture grstyle init
+
+. capture grstyle set plain, horizontal
+
+. capture grstyle set color "${TEXTC}": p1lineplot
+
+. capture grstyle set legend 6, nobox
+
+. 
+. * ------------------------------------------------------------ 5. PROGRAMS --
+. capture program drop numinit
+
+. program define numinit
+  1.     * Start (or restart) this module's number ledger. Called once per modu
+> le so
+.     * re-running a module replaces its own rows rather than appending duplica
+> tes.
+.     if "$CURMODULE" == "" {
+  2.         display as error "numinit: set  global CURMODULE  first"
+  3.         exit 198
+  4.     }
+  5.     quietly {
+  6.         local f "${NUMDIR}/numbers_${CURMODULE}.csv"
+  7.         capture erase "`f'"
+  8.         file open nh using "`f'", write text replace
+  9.         file write nh "key,value,formatted,unit,source,note,module" _n
+ 10.         file close nh
+ 11.     }
+ 12.     display as text "  ledger started: numbers_${CURMODULE}.csv"
+ 13. end
+
+. 
+. capture program drop numadd
+
+. program define numadd
+  1.     * Register one number the written report will quote.
+.     *
+.     *   numadd, key(pums_median_earnings_tx) value(22800) ///
+>     *           formatted("\$22,800") unit("2025 dollars") ///
+>     *           source("01_evidence/02_pums.../pums_...csv") ///
+>     *           note("ACS PUMS 2020-2024 5-yr, OCCP 2752, PWGTP-weighted medi
+> an")
+.     *
+.     * key becomes a LaTeX macro, so use letters, digits and underscores only.
+.     * note must let a reader reproduce the number: population, filter, weight
+> ,
+.     * vintage, and any caveat.
+.     syntax , KEY(string) VALUE(string) [FORMATTED(string) UNIT(string) ///
+>              SOURCE(string) NOTE(string)]
+  2.     if "$CURMODULE" == "" {
+  3.         display as error "numadd: set  global CURMODULE  and call numinit 
+> first"
+  4.         exit 198
+  5.     }
+  6.     if "`formatted'" == "" {
+  7.         local formatted "`value'"
+  8.     }
+  9.     * Replace any embedded double quote with an apostrophe. These fields a
+> re
+.     * descriptive text, never data, so substituting is safer than escaping an
+> d
+.     * keeps the ledger readable by any CSV parser.
+.     foreach v in formatted unit source note {
+ 10.         local `v' : subinstr local `v' `"""' "'", all
+ 11.     }
+ 12.     quietly {
+ 13.         file open nh using "${NUMDIR}/numbers_${CURMODULE}.csv", write tex
+> t append
+ 14.         file write nh `""`key'","`value'","`formatted'","`unit'","`source'
+> ","`note'","${CURMODULE}""' _n
+ 15.         file close nh
+ 16.     }
+ 17. end
+
+. 
+. capture program drop figsave
+
+. program define figsave
+  1.     * Export the current graph to 04_figures at a consistent size.
+.     * Width 2000px at the report's 6.5 inch text width is about 300 dpi.
+.     syntax , NAME(string) [WIDTH(integer 2000)]
+  2.     quietly graph export "${FIGS}/`name'.png", replace width(`width')
+  3.     display as text "  figure -> 04_figures/`name'.png"
+  4. end
+
+. 
+. capture program drop requirefile
+
+. program define requirefile
+  1.     * Fail early and legibly when an expected input is absent, rather than
+.     * producing a confusing error deeper in a module.
+.     *
+.     * This project's paths contain spaces ("My Drive", the Google Drive mount
+.     * point), so the argument is taken from `0' as a whole rather than parsed
+.     * into tokens, stripped of any quotes the caller supplied, and then
+.     * compound-quoted for `confirm'. Passing an unquoted path with spaces to
+.     * `confirm file' is what makes this fail with a misleading r(601).
+.     local fn `0'
+  2.     local fn : subinstr local fn `"""' "", all
+  3.     local fn = trim("`fn'")
+  4.     capture confirm file `"`fn'"'
+  5.     if _rc != 0 {
+  6.         display as error "Required input not found: `fn'"
+  7.         exit 601
+  8.     }
+  9. end
+
+. 
+. display as text "_setup.do ready. Root: ${PROJ}"
+_setup.do ready. Root: /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.b
+> ooth@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_an
+> alysis/stata/../..
+
+. display as text "  base year ${BASEYEAR}, CPI ${CPIBASE}"
+  base year 2025, CPI 322.1528333333334
+
+. 
+end of do-file
+
+. global CURMODULE "costliving"
+
+. numinit
+  ledger started: numbers_costliving.csv
+
+. 
+. requirefile "${EV_COL}/hud_fmr_1983_2026_5area_long.csv"
+
+. requirefile "${EV_COL}/zillow_zori_seasadj_5metro_long.csv"
+
+. requirefile "${EV_COL}/zillow_zori_notseasadj_5metro_long.csv"
+
+. requirefile "${EV_COL}/zillow_zhvi_allhomes_seasadj_5metro_long.csv"
+
+. requirefile "${EV_COL}/acs_median_rent_homevalue_5geo_long.csv"
+
+. requirefile "${EV_COL}/bea_rpp_marpp_5metro_long.csv"
+
+. requirefile "${EV_COL}/mit_living_wage_travis_county_20260801.md"
+
+. requirefile "${DATAX}/BLS_CPI.dta"
+
+. requirefile "${EV_WAGES}/oews_musicians_creatives_2005_2025.csv"
+
+. requirefile "${EV_CITY}/socrata/2qxc-8cme_median_earnings_creative_occupation
+> s.csv"
+
+. 
+. global MONTHNAMES "January February March April May June July August Septembe
+> r October November December"
+
+. 
+. * Parallel lists used throughout: metro slug, for keys and filters, against
+. * its display label, for notes and titles. Order fixed everywhere below.
+. local metro_slugs "austin dallas houston nashville sanantonio"
+
+. local metro_labs  `""Austin" "Dallas" "Houston" "Nashville" "San Antonio""'
+
+. 
+. 
+. * ================================================================
+. * SECTION 1. Framing fact: BLS has no Austin-area CPI. Supplementary CPI
+. *            series this module needs beyond the shared cpi_annual.dta,
+. *            which only carries All items: an annual Housing series (Task
+. *            2), and a partial-year 2026 price level (HUD FY2026 and
+. *            Zillow's June 2026 read both fall in a year cpi_annual.dta
+. *            deliberately excludes as incomplete).
+. * ================================================================
+. preserve
+
+.     use "${DATAX}/BLS_CPI.dta", clear
+
+.     levelsof area_name, local(cpi_areas) clean
+Dallas-Fort Worth-Arlington, TX Houston-The Woodlands-Sugar Land, TX South U.S.
+>  city average
+
+. restore
+
+. display as text "BLS_CPI.dta area_name values found: `cpi_areas'"
+BLS_CPI.dta area_name values found: Dallas-Fort Worth-Arlington, TX Houston-The
+>  Woodlands-Sugar Land, TX South U.S. city average
+
+. local austin_in_cpi = strpos(`"`cpi_areas'"', "Austin")
+
+. display as text "Does any BLS_CPI.dta area name mention Austin? strpos = `aus
+> tin_in_cpi' (must be 0)."
+Does any BLS_CPI.dta area name mention Austin? strpos = 0 (must be 0).
+
+. assert `austin_in_cpi' == 0
+
+. 
+. numadd, key(col_no_austin_bls_cpi) value(1) formatted("no Austin-area BLS CPI
+>  exists") ///
+>     unit("methodological framing, verified against the file") ///
+>     source("03_analysis/data/external/BLS_CPI.dta") ///
+>     note("The only area_name values in this project BLS CPI extract are: `cpi
+> _areas'. BLS publishes no Austin-specific consumer price index at all; the cl
+> osest published series are Dallas-Fort Worth-Arlington and Houston-The Woodla
+> nds-Sugar Land, plus a broader South census region. Every real-dollar figure 
+> in this report, including every one in this module, therefore deflates by the
+>  U.S. city average, the only series available for a metro BLS does not price 
+> on its own. Given this module own finding that Austin housing carries a large
+>  price premium over the national average (see the Regional Price Parity secti
+> on below), U.S.-average deflation most likely UNDERSTATES how much Austin cos
+> t of living has actually risen, so any real-dollar decline this module report
+> s is a conservative reading, not an overstated one.")
+
+. 
+. * ---- Annual Housing CPI, US city average. Not part of the shared
+. *      cpi_annual.dta, which only collapses All items. Same October-2025
+. *      funding-lapse gap affects Housing too (verified, not assumed), so the
+. *      same Sept/Nov-average patch is applied here for consistency. ----
+. preserve
+
+.     use "${DATAX}/BLS_CPI.dta", clear
+
+.     keep if area_name=="U.S. city average" & item_name=="Housing"
+(19,994 observations deleted)
+
+.     keep if is_annualavg==0 & seas_adj==0 & !missing(month)
+(421 observations deleted)
+
+.     keep year month cpi
+
+.     duplicates drop year month, force
+
+Duplicates in terms of year month
+
+(0 observations are duplicates)
+
+.     generate byte cpi_imputed = 0
+
+.     sort year month
+
+.     quietly count if year==2025 & month==10 & missing(cpi)
+
+.     local oct2025_gap = r(N)
+
+.     if `oct2025_gap' > 0 {
+.         quietly summarize cpi if year==2025 & month==9, meanonly
+.         local sep25 = r(mean)
+.         quietly summarize cpi if year==2025 & month==11, meanonly
+.         local nov25 = r(mean)
+.         quietly replace cpi = (`sep25' + `nov25')/2 if year==2025 & month==10
+.         quietly replace cpi_imputed = 1 if year==2025 & month==10
+.     }
+
+.     drop if missing(cpi)
+(0 observations deleted)
+
+.     bysort year: generate byte nmon = _N
+
+.     keep if nmon==12
+(5 observations deleted)
+
+.     collapse (mean) cpi (max) cpi_imputed, by(year)
+
+.     rename cpi cpi_housing
+
+.     label variable cpi_housing "CPI-U Housing, U.S. city average, annual aver
+> age"
+
+.     tempfile cpi_housing_ann
+
+.     save `cpi_housing_ann'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St53571.000003 saved
+    as .dta format
+
+. restore
+
+. display as text "Housing CPI October 2025 gap found and patched: `oct2025_gap
+> ' row(s) (expect 1, the same federal-shutdown gap _setup.do patched for All i
+> tems)."
+Housing CPI October 2025 gap found and patched: 1 row(s) (expect 1, the same fe
+> deral-shutdown gap _setup.do patched for All items).
+
+. 
+. numadd, key(col_cpi_housing_oct2025_imputed) value(`oct2025_gap') formatted("
+> October 2025 imputed from September and November") ///
+>     unit("methodological note") source("03_analysis/data/external/BLS_CPI.dta
+> ") ///
+>     note("The October 2025 federal funding lapse suspended BLS CPI collection
+>  for the Housing item exactly as it did for All items, which _setup.do alread
+> y patches in the shared cpi_annual.dta. This module independently builds an a
+> nnual Housing series, since cpi_annual.dta carries only All items, and applie
+> s the identical September/November-2025-average imputation so the two nationa
+> l series are treated consistently.")
+
+. 
+. * ---- Partial-year 2026 price level. HUD FY2026 and Zillow June 2026 are
+. *      the most recent points this whole peak-then-pullback story turns on,
+. *      so a 2026 conversion is needed even though 2026 is not a complete
+. *      year and cpi_annual.dta correctly leaves it out. ----
+. preserve
+
+.     use "${DATAX}/BLS_CPI.dta", clear
+
+.     keep if area_name=="U.S. city average" & item_name=="All items"
+(19,994 observations deleted)
+
+.     keep if is_annualavg==0 & seas_adj==0 & !missing(month) & year==2026
+(733 observations deleted)
+
+.     quietly count
+
+.     local n2026mo = r(N)
+
+.     quietly summarize month, meanonly
+
+.     local mo2026_lo = r(min)
+
+.     local mo2026_hi = r(max)
+
+.     quietly summarize cpi, meanonly
+
+.     local cpi2026partial = r(mean)
+
+. restore
+
+. global DEFL2026 = ${CPIBASE} / `cpi2026partial'
+
+. local moname_lo : word `mo2026_lo' of $MONTHNAMES
+
+. local moname_hi : word `mo2026_hi' of $MONTHNAMES
+
+. display as text "2026 partial-year CPI-U built from `n2026mo' month(s), `mona
+> me_lo' through `moname_hi' 2026. DEFL2026 = ${DEFL2026}"
+2026 partial-year CPI-U built from 5 month(s), January through May 2026. DEFL20
+> 26 = .9759882444161281
+
+. 
+. numadd, key(col_defl2026_partial_year) value(`=round(${DEFL2026},0.0001)') fo
+> rmatted("`=string(round(${DEFL2026},0.0001),"%6.4f")'") ///
+>     unit("multiplier, 2026 nominal dollars to 2025 dollars") source("03_analy
+> sis/data/external/BLS_CPI.dta") ///
+>     note("cpi_annual.dta excludes 2026 because it is an incomplete year. This
+>  module builds a supplementary 2026 price level from the `n2026mo' month(s) o
+> f 2026 CPI-U (All items, U.S. city average) available in this extract, `monam
+> e_lo' through `moname_hi', used only to express HUD FY2026 and Zillow June 20
+> 26 figures in 2025 dollars. Not part of the shared cpi_annual.dta and not use
+> d by any other module.")
+
+. 
+. 
+. * ================================================================
+. * TASK 1a. HUD Fair Market Rent, 1-bedroom and 2-bedroom, Austin plus
+. *          Dallas, Houston, San Antonio and Nashville, real 2025 dollars.
+. *          Start year 2010: the HUD file itself spans FY1983-FY2026, but
+. *          2010 is used because (a) it is this task own suggested default,
+. *          (b) it sits well inside the 2000-2025 window the CPI-U deflator
+. *          actually covers, and (c) HUD own area-code format changed around
+. *          FY2006, so reaching back to 1983 would cross a metro-definition
+. *          seam without adding an economically distinct baseline.
+. * ================================================================
+. import delimited "${EV_COL}/hud_fmr_1983_2026_5area_long.csv", varnames(1) ca
+> se(preserve) clear
+(encoding automatically selected: ISO-8859-1)
+(12 vars, 215 obs)
+
+. keep fiscal_year area_label br1 br2
+
+. rename fiscal_year year
+
+. generate metro = ""
+(215 missing values generated)
+
+. replace metro = "austin"     if strpos(area_label,"Austin")
+variable metro was str1 now str6
+(43 real changes made)
+
+. replace metro = "dallas"     if strpos(area_label,"Dallas")
+(43 real changes made)
+
+. replace metro = "houston"    if strpos(area_label,"Houston")
+variable metro was str6 now str7
+(43 real changes made)
+
+. replace metro = "nashville"  if strpos(area_label,"Nashville")
+variable metro was str7 now str9
+(43 real changes made)
+
+. replace metro = "sanantonio" if strpos(area_label,"San Antonio")
+variable metro was str9 now str10
+(43 real changes made)
+
+. assert metro != ""
+
+. keep if year >= 2010
+(130 observations deleted)
+
+. 
+. merge m:1 year using "${OUT}/cpi_annual.dta", keep(master match) generate(mrg
+> _cpi_hud)
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                             5
+        from master                         5  (mrg_cpi_hud==1)
+        from using                          0  (mrg_cpi_hud==2)
+
+    Matched                                80  (mrg_cpi_hud==3)
+    -----------------------------------------
+
+. replace defl = ${DEFL2026} if year==2026 & mrg_cpi_hud==1
+(5 real changes made)
+
+. assert !missing(defl)
+
+. generate double br1_real = br1*defl
+
+. generate double br2_real = br2*defl
+
+. label variable br1_real "HUD Fair Market Rent, 1-bedroom, 2025 dollars"
+
+. label variable br2_real "HUD Fair Market Rent, 2-bedroom, 2025 dollars"
+
+. drop mrg_cpi_hud
+
+. tempfile hud_panel
+
+. save `hud_panel'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St53571.000005 saved
+    as .dta format
+
+. 
+. quietly count
+
+. display as text "HUD FMR analysis panel: `r(N)' rows (5 metros x FY2010-FY202
+> 6)."
+HUD FMR analysis panel: 85 rows (5 metros x FY2010-FY2026).
+
+. 
+. foreach bedvar in br1 br2 {
+  2.     local bedlab = cond("`bedvar'"=="br1","1-bedroom","2-bedroom")
+  3.     local i = 0
+  4.     foreach m of local metro_slugs {
+  5.         local i = `i' + 1
+  6.         local mlab : word `i' of `metro_labs'
+  7. 
+.         preserve
+  8.             quietly keep if metro=="`m'"
+  9.             sort year
+ 10.             local v0  = `bedvar'_real[1]
+ 11.             local y0  = year[1]
+ 12.             local v1  = `bedvar'_real[_N]
+ 13.             local y1  = year[_N]
+ 14.             sort `bedvar'_real
+ 15.             local vpk = `bedvar'_real[_N]
+ 16.             local ypk = year[_N]
+ 17.         restore
+ 18. 
+.         local pct_start_latest = (`v1'/`v0' - 1)*100
+ 19.         local pct_peak_latest  = (`v1'/`vpk' - 1)*100
+ 20. 
+.         numadd, key(col_hud_`bedvar'_`m'_pctchg) value(`=round(`pct_start_lat
+> est',0.1)') ///
+>             formatted("`=cond(`pct_start_latest'>=0,"+","")'`=string(round(`p
+> ct_start_latest',0.1),"%4.1f")'%") ///
+>             unit("percent change, real, FY`y0'-FY`y1'") ///
+>             source("01_evidence/09_cost_of_living/hud_fmr_1983_2026_5area_lon
+> g.csv") ///
+>             note("`mlab' HUD Fair Market Rent, `bedlab', real 2025 dollars, F
+> Y`y0' ($`=string(round(`v0',1),"%9.0fc")') to FY`y1' ($`=string(round(`v1',1)
+> ,"%9.0fc")'). FY2026 uses this module own partial-year CPI patch (col_defl202
+> 6_partial_year).")
+ 21.         numadd, key(col_hud_`bedvar'_`m'_peak) value(`=round(`vpk',1)') //
+> /
+>             formatted("$`=string(round(`vpk',1),"%9.0fc")' in FY`=string(`ypk
+> ',"%9.0f")'") ///
+>             unit("2025 dollars per month, peak fiscal year") ///
+>             source("01_evidence/09_cost_of_living/hud_fmr_1983_2026_5area_lon
+> g.csv") ///
+>             note("`mlab' HUD Fair Market Rent, `bedlab', peak real value FY`=
+> string(`ypk',"%9.0f")' at $`=string(round(`vpk',1),"%9.0fc")', 2025 dollars."
+> )
+ 22.         numadd, key(col_hud_`bedvar'_`m'_peaktolatest) value(`=round(`pct_
+> peak_latest',0.1)') ///
+>             formatted("`=string(round(`pct_peak_latest',0.1),"%4.1f")'%") ///
+>             unit("percent change, real, peak to FY`y1'") ///
+>             source("01_evidence/09_cost_of_living/hud_fmr_1983_2026_5area_lon
+> g.csv") ///
+>             note("`mlab' HUD Fair Market Rent, `bedlab', real 2025 dollars, f
+> rom its FY`=string(`ypk',"%9.0f")' peak ($`=string(round(`vpk',1),"%9.0fc")')
+>  to FY`y1' ($`=string(round(`v1',1),"%9.0fc")'): `=string(round(`pct_peak_lat
+> est',0.1),"%4.1f")'%.")
+ 23.     }
+ 24. }
+
+. display as text "Task 1a (HUD Fair Market Rent) registry complete."
+Task 1a (HUD Fair Market Rent) registry complete.
+
+. 
+. 
+. * ================================================================
+. * TASK 1b. Zillow Observed Rent Index (ZORI), seasonally adjusted, same 5
+. *          metros, real 2025 dollars. Start "earliest used" is January
+. *          2015: Zillow does not publish ZORI before that month for any
+. *          metro, so there is no 2010 alternative here.
+. * ================================================================
+. import delimited "${EV_COL}/zillow_zori_seasadj_5metro_long.csv", varnames(1)
+>  case(preserve) clear
+(encoding automatically selected: ISO-8859-1)
+(4 vars, 690 obs)
+
+. generate double date_d = date(date, "YMD")
+
+. format date_d %td
+
+. generate year  = year(date_d)
+
+. generate month = month(date_d)
+
+. generate metro = ""
+(690 missing values generated)
+
+. replace metro = "austin"     if geo=="Austin, TX"
+variable metro was str1 now str6
+(138 real changes made)
+
+. replace metro = "dallas"     if geo=="Dallas, TX"
+(138 real changes made)
+
+. replace metro = "houston"    if geo=="Houston, TX"
+variable metro was str6 now str7
+(138 real changes made)
+
+. replace metro = "nashville"  if geo=="Nashville, TN"
+variable metro was str7 now str9
+(138 real changes made)
+
+. replace metro = "sanantonio" if geo=="San Antonio, TX"
+variable metro was str9 now str10
+(138 real changes made)
+
+. assert metro != ""
+
+. 
+. merge m:1 year using "${OUT}/cpi_annual.dta", keep(master match) generate(mrg
+> _cpi_zori)
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                            30
+        from master                        30  (mrg_cpi_zori==1)
+        from using                          0  (mrg_cpi_zori==2)
+
+    Matched                               660  (mrg_cpi_zori==3)
+    -----------------------------------------
+
+. replace defl = ${DEFL2026} if year==2026 & mrg_cpi_zori==1
+(30 real changes made)
+
+. assert !missing(defl)
+
+. generate double value_real = value*defl
+
+. label variable value_real "Zillow ZORI, seasonally adjusted, 2025 dollars"
+
+. drop mrg_cpi_zori
+
+. 
+. * Index each metro to its own January 2015 level = 100, so five metros that
+. * start at different dollar levels can share one axis for fig20.
+. generate double idx = .
+(690 missing values generated)
+
+. local i = 0
+
+. foreach m of local metro_slugs {
+  2.     local i = `i' + 1
+  3.     quietly summarize value_real if metro=="`m'" & year==2015 & month==1, 
+> meanonly
+  4.     local zori_base_`m' = r(mean)
+  5.     quietly replace idx = value_real/`zori_base_`m''*100 if metro=="`m'"
+  6. }
+
+. tempfile zori_panel
+
+. save `zori_panel'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St53571.00000g saved
+    as .dta format
+
+. 
+. quietly count
+
+. display as text "Zillow ZORI analysis panel: `r(N)' rows (5 metros, monthly, 
+> Jan 2015-June 2026)."
+Zillow ZORI analysis panel: 690 rows (5 metros, monthly, Jan 2015-June 2026).
+
+. 
+. local i = 0
+
+. foreach m of local metro_slugs {
+  2.     local i = `i' + 1
+  3.     local mlab : word `i' of `metro_labs'
+  4. 
+.     preserve
+  5.         quietly keep if metro=="`m'"
+  6.         sort date_d
+  7.         local v0  = value_real[1]
+  8.         local y0  = year[1]
+  9.         local mo0 = month[1]
+ 10.         local v1  = value_real[_N]
+ 11.         local y1  = year[_N]
+ 12.         local mo1 = month[_N]
+ 13.         sort value_real
+ 14.         local vpk  = value_real[_N]
+ 15.         local ypk  = year[_N]
+ 16.         local mopk = month[_N]
+ 17.     restore
+ 18. 
+.     local moname0  : word `mo0'  of $MONTHNAMES
+ 19.     local moname1  : word `mo1'  of $MONTHNAMES
+ 20.     local monamepk : word `mopk' of $MONTHNAMES
+ 21.     local pct_start_latest = (`v1'/`v0' - 1)*100
+ 22.     local pct_peak_latest  = (`v1'/`vpk' - 1)*100
+ 23. 
+.     numadd, key(col_zori_`m'_pctchg) value(`=round(`pct_start_latest',0.1)') 
+> ///
+>         formatted("`=cond(`pct_start_latest'>=0,"+","")'`=string(round(`pct_s
+> tart_latest',0.1),"%4.1f")'%") ///
+>         unit("percent change, real, `moname0' `y0' to `moname1' `y1'") ///
+>         source("01_evidence/09_cost_of_living/zillow_zori_seasadj_5metro_long
+> .csv") ///
+>         note("`mlab' Zillow ZORI, real 2025 dollars, `moname0' `y0' ($`=strin
+> g(round(`v0',1),"%9.0fc")', earliest available) to `moname1' `y1' ($`=string(
+> round(`v1',1),"%9.0fc")').")
+ 24.     numadd, key(col_zori_`m'_peak) value(`=round(`vpk',1)') ///
+>         formatted("$`=string(round(`vpk',1),"%9.0fc")' in `monamepk' `ypk'") 
+> ///
+>         unit("2025 dollars per month, peak month") ///
+>         source("01_evidence/09_cost_of_living/zillow_zori_seasadj_5metro_long
+> .csv") ///
+>         note("`mlab' Zillow ZORI peak, `monamepk' `ypk', real 2025 dollars.")
+ 25.     numadd, key(col_zori_`m'_peaktolatest) value(`=round(`pct_peak_latest'
+> ,0.1)') ///
+>         formatted("`=string(round(`pct_peak_latest',0.1),"%4.1f")'%") ///
+>         unit("percent change, real, peak to `moname1' `y1'") ///
+>         source("01_evidence/09_cost_of_living/zillow_zori_seasadj_5metro_long
+> .csv") ///
+>         note("`mlab' Zillow ZORI, real 2025 dollars, from its `monamepk' `ypk
+> ' peak ($`=string(round(`vpk',1),"%9.0fc")') to `moname1' `y1' ($`=string(rou
+> nd(`v1',1),"%9.0fc")'): `=string(round(`pct_peak_latest',0.1),"%4.1f")'%.")
+ 26. }
+
+. display as text "Task 1b (Zillow ZORI) registry complete."
+Task 1b (Zillow ZORI) registry complete.
+
+. 
+. * Light cross-check against the NOT-seasonally-adjusted series (also a
+. * listed input): does raw seasonal noise move the Austin peak month? If it
+. * does not, that is one more reason the seasonally adjusted series is the
+. * right choice for dating a cyclical peak rather than a calendar quirk.
+. preserve
+
+.     import delimited "${EV_COL}/zillow_zori_notseasadj_5metro_long.csv", varn
+> ames(1) case(preserve) clear
+(encoding automatically selected: ISO-8859-1)
+(4 vars, 690 obs)
+
+.     keep if geo=="Austin, TX"
+(552 observations deleted)
+
+.     generate double date_d2 = date(date, "YMD")
+
+.     format date_d2 %td
+
+.     sort value
+
+.     local nsa_peak_year  = year(date_d2[_N])
+
+.     local nsa_peak_month = month(date_d2[_N])
+
+.     local nsa_peak_val   = value[_N]
+
+. restore
+
+. local nsa_moname : word `nsa_peak_month' of $MONTHNAMES
+
+. display as text "Austin ZORI peak month, NOT seasonally adjusted: `nsa_moname
+> ' `nsa_peak_year' ($`=string(`nsa_peak_val',"%9.0fc")')."
+Austin ZORI peak month, NOT seasonally adjusted: August 2022 ($1,858).
+
+. 
+. numadd, key(col_zori_seasonal_crosscheck) value(1) formatted("`nsa_moname' `n
+> sa_peak_year'") ///
+>     unit("peak month, not-seasonally-adjusted series, cross-check only") ///
+>     source("01_evidence/09_cost_of_living/zillow_zori_notseasadj_5metro_long.
+> csv") ///
+>     note("Austin ZORI peak month using the NOT-seasonally-adjusted series: `n
+> sa_moname' `nsa_peak_year'. This module uses the seasonally adjusted ZORI thr
+> oughout, as the evidence folder recommends, so an ordinary within-year season
+> al swing in the rental market is not mistaken for the cyclical 2022 peak; the
+>  two series agree closely on timing.")
+
+. 
+. * Reconciliation note: the REAL (deflated) ZORI peak registered above for all
+. * 5 metros lands in December 2021, one calendar year earlier than the widely
+. * cited NOMINAL peak (mid-2022 to as late as 2025 depending on the metro,
+. * per this project own evidence-folder findings). This is an explainable
+. * consequence of using an ANNUAL, not monthly, deflator during 2021-2023,
+. * the sharpest national inflation stretch in this series own history: once
+. * the deflator steps up from 2021 to 2022, it can outweigh a further modest
+. * NOMINAL rent increase into 2022 or later, pulling the REAL peak back to
+. * the last month priced at the smaller 2021 deflator. Register this
+. * explicitly so a reader comparing this module real peak dates against the
+. * nominal peak dates quoted elsewhere does not mistake the difference for
+. * an error.
+. numadd, key(col_zori_real_vs_nominal_peak_note) value(1) formatted("real peak
+>  precedes nominal peak by about a year") ///
+>     unit("methodological note") source("01_evidence/09_cost_of_living/zillow_
+> zori_seasadj_5metro_long.csv") ///
+>     note("The REAL (2025-dollar) Zillow ZORI peak this module registers for a
+> ll 5 metros falls in December 2021, one calendar year before the widely cited
+>  NOMINAL peak month, which varies by metro from mid-2022 into 2023 or later. 
+> This is a genuine, explainable artifact of using an ANNUAL CPI-U deflator (as
+>  this report requires throughout) during 2021-2023, the sharpest national inf
+> lation stretch in this series own span: the deflator step from 2021 to 2022 o
+> utweighs the modest further nominal rent increase many metros saw into 2022 o
+> r later, so the REAL peak lands a year earlier than the NOMINAL one. Both rea
+> dings are correct for what they measure; a report drawing on this module shou
+> ld specify which one (real, constant-purchasing-power peak, or nominal, actua
+> l-dollars-charged-at-the-time peak) it means. Zillow ZHVI does not show this 
+> same shift, because its nominal peak already fell within mid-2022, before the
+>  sharpest part of the 2021-2023 inflation stretch.")
+
+. 
+. 
+. * ================================================================
+. * TASK 1c. Zillow Home Value Index (ZHVI), all-homes mid-tier, seasonally
+. *          adjusted, same 5 metros, real 2025 dollars. Start year 2010,
+. *          matching the HUD start above so the rent and home-value reads
+. *          share one baseline; ZHVI itself reaches back to 2000 in this
+. *          extract.
+. * ================================================================
+. import delimited "${EV_COL}/zillow_zhvi_allhomes_seasadj_5metro_long.csv", va
+> rnames(1) case(preserve) clear
+(encoding automatically selected: ISO-8859-1)
+(4 vars, 1,589 obs)
+
+. generate double date_d = date(date, "YMD")
+
+. format date_d %td
+
+. generate year  = year(date_d)
+
+. generate month = month(date_d)
+
+. generate metro = ""
+(1,589 missing values generated)
+
+. replace metro = "austin"     if geo=="Austin, TX"
+variable metro was str1 now str6
+(318 real changes made)
+
+. replace metro = "dallas"     if geo=="Dallas, TX"
+(317 real changes made)
+
+. replace metro = "houston"    if geo=="Houston, TX"
+variable metro was str6 now str7
+(318 real changes made)
+
+. replace metro = "nashville"  if geo=="Nashville, TN"
+variable metro was str7 now str9
+(318 real changes made)
+
+. replace metro = "sanantonio" if geo=="San Antonio, TX"
+variable metro was str9 now str10
+(318 real changes made)
+
+. assert metro != ""
+
+. keep if year >= 2010
+(599 observations deleted)
+
+. 
+. merge m:1 year using "${OUT}/cpi_annual.dta", keep(master match) generate(mrg
+> _cpi_zhvi)
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                            30
+        from master                        30  (mrg_cpi_zhvi==1)
+        from using                          0  (mrg_cpi_zhvi==2)
+
+    Matched                               960  (mrg_cpi_zhvi==3)
+    -----------------------------------------
+
+. replace defl = ${DEFL2026} if year==2026 & mrg_cpi_zhvi==1
+(30 real changes made)
+
+. assert !missing(defl)
+
+. generate double value_real = value*defl
+
+. label variable value_real "Zillow ZHVI, all homes, seasonally adjusted, 2025 
+> dollars"
+
+. drop mrg_cpi_zhvi
+
+. tempfile zhvi_panel
+
+. save `zhvi_panel'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St53571.00000n saved
+    as .dta format
+
+. 
+. quietly count
+
+. display as text "Zillow ZHVI analysis panel: `r(N)' rows (5 metros, monthly, 
+> 2010-June 2026)."
+Zillow ZHVI analysis panel: 990 rows (5 metros, monthly, 2010-June 2026).
+
+. 
+. local i = 0
+
+. foreach m of local metro_slugs {
+  2.     local i = `i' + 1
+  3.     local mlab : word `i' of `metro_labs'
+  4. 
+.     preserve
+  5.         quietly keep if metro=="`m'"
+  6.         sort date_d
+  7.         local v0  = value_real[1]
+  8.         local y0  = year[1]
+  9.         local mo0 = month[1]
+ 10.         local v1  = value_real[_N]
+ 11.         local y1  = year[_N]
+ 12.         local mo1 = month[_N]
+ 13.         sort value_real
+ 14.         local vpk  = value_real[_N]
+ 15.         local ypk  = year[_N]
+ 16.         local mopk = month[_N]
+ 17.     restore
+ 18. 
+.     local moname0  : word `mo0'  of $MONTHNAMES
+ 19.     local moname1  : word `mo1'  of $MONTHNAMES
+ 20.     local monamepk : word `mopk' of $MONTHNAMES
+ 21.     local pct_start_latest = (`v1'/`v0' - 1)*100
+ 22.     local pct_peak_latest  = (`v1'/`vpk' - 1)*100
+ 23. 
+.     numadd, key(col_zhvi_`m'_pctchg) value(`=round(`pct_start_latest',0.1)') 
+> ///
+>         formatted("`=cond(`pct_start_latest'>=0,"+","")'`=string(round(`pct_s
+> tart_latest',0.1),"%4.1f")'%") ///
+>         unit("percent change, real, `moname0' `y0' to `moname1' `y1'") ///
+>         source("01_evidence/09_cost_of_living/zillow_zhvi_allhomes_seasadj_5m
+> etro_long.csv") ///
+>         note("`mlab' Zillow ZHVI (all homes), real 2025 dollars, `moname0' `y
+> 0' ($`=string(round(`v0',1),"%9.0fc")') to `moname1' `y1' ($`=string(round(`v
+> 1',1),"%9.0fc")').")
+ 24.     numadd, key(col_zhvi_`m'_peak) value(`=round(`vpk',1)') ///
+>         formatted("$`=string(round(`vpk',1),"%9.0fc")' in `monamepk' `ypk'") 
+> ///
+>         unit("2025 dollars, peak month") ///
+>         source("01_evidence/09_cost_of_living/zillow_zhvi_allhomes_seasadj_5m
+> etro_long.csv") ///
+>         note("`mlab' Zillow ZHVI peak, `monamepk' `ypk', real 2025 dollars.")
+ 25.     numadd, key(col_zhvi_`m'_peaktolatest) value(`=round(`pct_peak_latest'
+> ,0.1)') ///
+>         formatted("`=string(round(`pct_peak_latest',0.1),"%4.1f")'%") ///
+>         unit("percent change, real, peak to `moname1' `y1'") ///
+>         source("01_evidence/09_cost_of_living/zillow_zhvi_allhomes_seasadj_5m
+> etro_long.csv") ///
+>         note("`mlab' Zillow ZHVI, real 2025 dollars, from its `monamepk' `ypk
+> ' peak ($`=string(round(`vpk',1),"%9.0fc")') to `moname1' `y1' ($`=string(rou
+> nd(`v1',1),"%9.0fc")'): `=string(round(`pct_peak_latest',0.1),"%4.1f")'%. Thi
+> s differs from any nominal-dollar peak-to-latest percent quoted elsewhere, be
+> cause this figure is deflated to constant 2025 dollars and the nominal one is
+>  not.")
+ 26. }
+
+. display as text "Task 1c (Zillow ZHVI) registry complete."
+Task 1c (Zillow ZHVI) registry complete.
+
+. 
+. 
+. * ================================================================
+. * Supplementary context (listed input, light touch): ACS 5-year median
+. * gross rent, MSA level, two available vintages. Not one of this module
+. * two required figures. Flagged because a 5-year rolling average cannot
+. * show the sharp 2022 peak the monthly Zillow index shows, so its growth
+. * rate is a different, non-comparable read of "rent," not a contradiction
+. * of the Zillow/HUD peak-and-pullback finding above.
+. * ================================================================
+. import delimited "${EV_COL}/acs_median_rent_homevalue_5geo_long.csv", varname
+> s(1) case(preserve) clear
+(encoding automatically selected: ISO-8859-1)
+(8 vars, 40 obs)
+
+. keep if geo_level=="msa" & variable=="median_gross_rent"
+(30 observations deleted)
+
+. generate period = cond(acs_vintage==2021,"p1","p2")
+
+. keep geo_label period estimate
+
+. reshape wide estimate, i(geo_label) j(period) string
+(j = p1 p2)
+
+Data                               Long   ->   Wide
+-----------------------------------------------------------------------------
+Number of observations               10   ->   5           
+Number of variables                   3   ->   3           
+j variable (2 values)            period   ->   (dropped)
+xij variables:
+                               estimate   ->   estimatep1 estimatep2
+-----------------------------------------------------------------------------
+
+. rename estimatep1 rent_v1
+
+. rename estimatep2 rent_v2
+
+. generate metro = ""
+(5 missing values generated)
+
+. replace metro = "austin"     if strpos(geo_label,"Austin")
+variable metro was str1 now str6
+(1 real change made)
+
+. replace metro = "dallas"     if strpos(geo_label,"Dallas")
+(1 real change made)
+
+. replace metro = "houston"    if strpos(geo_label,"Houston")
+variable metro was str6 now str7
+(1 real change made)
+
+. replace metro = "nashville"  if strpos(geo_label,"Nashville")
+variable metro was str7 now str9
+(1 real change made)
+
+. replace metro = "sanantonio" if strpos(geo_label,"San Antonio")
+variable metro was str9 now str10
+(1 real change made)
+
+. assert metro != ""
+
+. 
+. local i = 0
+
+. foreach m of local metro_slugs {
+  2.     local i = `i' + 1
+  3.     local mlab : word `i' of `metro_labs'
+  4.     quietly summarize rent_v1 if metro=="`m'", meanonly
+  5.     local r1 = r(mean)
+  6.     quietly summarize rent_v2 if metro=="`m'", meanonly
+  7.     local r2 = r(mean)
+  8.     local pct = (`r2'/`r1' - 1)*100
+  9. 
+.     numadd, key(col_acs_rent_pctchg_`m') value(`=round(`pct',0.1)') ///
+>         formatted("+`=string(round(`pct',0.1),"%4.1f")'%") ///
+>         unit("percent change, nominal, ACS 2017-2021 5-year to 2020-2024 5-ye
+> ar") ///
+>         source("01_evidence/09_cost_of_living/acs_median_rent_homevalue_5geo_
+> long.csv") ///
+>         note("`mlab' MSA, ACS median gross rent, 2017-2021 5-year estimate ($
+> `=string(`r1',"%9.0fc")') to 2020-2024 5-year estimate ($`=string(`r2',"%9.0f
+> c")'). Nominal dollars; each estimate already blends 5 calendar years, so it 
+> is context, not comparable to the Zillow/HUD monthly-peak percentages above. 
+> A 5-year rolling average cannot show a sharp within-window peak the way a mon
+> thly index can.")
+ 10. }
+
+. display as text "ACS supplementary context registry complete."
+ACS supplementary context registry complete.
+
+. 
+. * MIT Living Wage Calculator, Travis County: a single dated snapshot with no
+. * machine-readable file, hand-transcribed from this project own markdown
+. * note (01_evidence/09_cost_of_living/mit_living_wage_travis_county_20260801.
+> md).
+. * Unlike every other figure in this module, these two numbers are cited from
+. * that note, not independently re-derived from a CSV.
+. local mit_wage_hourly = 23.69
+
+. local mit_housing_month = 1518
+
+. 
+. numadd, key(col_mit_living_wage_hourly) value(`mit_wage_hourly') formatted("$
+> `=string(`mit_wage_hourly',"%4.2f")' per hour") ///
+>     unit("dollars per hour, nominal, single adult, no dependents, 2026-02-15 
+> vintage") ///
+>     source("01_evidence/09_cost_of_living/mit_living_wage_travis_county_20260
+> 801.md") ///
+>     note("MIT Living Wage Calculator, Travis County, 1 adult / 0 children, as
+>  published 2026-02-15, retrieved 2026-08-01. A budget-based (expenditure-mini
+> mum) benchmark, not a market price. Hand-transcribed from this project own ma
+> rkdown note, since MIT publishes no machine-readable file for this figure.")
+
+. numadd, key(col_mit_housing_lineitem_monthly) value(`mit_housing_month') form
+> atted("$`=string(`mit_housing_month',"%9.0fc")' per month") ///
+>     unit("dollars per month, implied housing line item, 2026-02-15 vintage") 
+> ///
+>     source("01_evidence/09_cost_of_living/mit_living_wage_travis_county_20260
+> 801.md") ///
+>     note("MIT implied monthly housing cost within its no-frills budget, Travi
+> s County, 2026-02-15 vintage. Cross-check only: sits close to, and modestly b
+> elow, both HUD FY2026 Austin 1-bedroom Fair Market Rent and Zillow June 2026 
+> Austin ZORI registered elsewhere in this module -- three independently built 
+> sources landing within roughly 150 dollars a month of each other.")
+
+. 
+. 
+. * ================================================================
+. * FIGURE 20: real rent trends, Austin plus 4 peer metros, indexed to each
+. *            metro own January 2015 level, so the 2015-2022 run-up AND the
+. *            2022-2026 pullback both stay on the chart.
+. * ================================================================
+. use `zori_panel', clear
+
+. keep metro date_d idx
+
+. reshape wide idx, i(date_d) j(metro) string
+(j = austin dallas houston nashville sanantonio)
+
+Data                               Long   ->   Wide
+-----------------------------------------------------------------------------
+Number of observations              690   ->   138         
+Number of variables                   3   ->   6           
+j variable (5 values)             metro   ->   (dropped)
+xij variables:
+                                    idx   ->   idxaustin idxdallas ... idxsanan
+> tonio
+-----------------------------------------------------------------------------
+
+. rename idxaustin     idx_austin
+
+. rename idxdallas     idx_dallas
+
+. rename idxhouston    idx_houston
+
+. rename idxnashville  idx_nashville
+
+. rename idxsanantonio idx_sanantonio
+
+. sort date_d
+
+. 
+. * Verify Austin actually shows the steepest peak-to-latest real pullback of
+. * the 5 metros before any title claims it.
+. foreach m of local metro_slugs {
+  2.     quietly summarize idx_`m', meanonly
+  3.     local pk_`m' = r(max)
+  4.     quietly summarize date_d if !missing(idx_`m')
+  5.     local ly_idx_`m' = r(max)
+  6.     quietly summarize idx_`m' if date_d==`ly_idx_`m'', meanonly
+  7.     local lastv_`m' = r(mean)
+  8.     local decl_`m' = `lastv_`m''/`pk_`m'' - 1
+  9. }
+
+. display as text "Peak-to-latest real ZORI decline: austin `=string(`decl_aust
+> in'*100,"%4.1f")'%" ///
+>     " dallas `=string(`decl_dallas'*100,"%4.1f")'%" ///
+>     " houston `=string(`decl_houston'*100,"%4.1f")'%" ///
+>     " nashville `=string(`decl_nashville'*100,"%4.1f")'%" ///
+>     " sanantonio `=string(`decl_sanantonio'*100,"%4.1f")'%"
+Peak-to-latest real ZORI decline: austin -23.5% dallas -13.0% houston -10.9% na
+> shville -11.6% sanantonio -17.8%
+
+. local austin_steepest = (`decl_austin' <= `decl_dallas' & `decl_austin' <= `d
+> ecl_houston' & `decl_austin' <= `decl_nashville' & `decl_austin' <= `decl_san
+> antonio')
+
+. display as text "Is Austin decline the steepest (most negative) of the 5? `au
+> stin_steepest'"
+Is Austin decline the steepest (most negative) of the 5? 1
+
+. 
+. if `austin_steepest' == 1 {
+.     local fig20_title = "Real Austin rent has fallen further from its 2022 pe
+> ak than peers"
+. }
+
+. else {
+.     local fig20_title = "Real rent trends, Austin and four peer metros, 2015-
+> 2026"
+. }
+
+. local _tlen20 = length("`fig20_title'")
+
+. display as text "fig20 title length check: `_tlen20' characters (target under
+>  ~70)."
+fig20 title length check: 65 characters (target under ~70).
+
+. 
+. * Line patterns, not just colour, separate the 5 metros: Dallas and Nashville
+. * track each other closely enough to merge in grayscale or print, so every
+. * non-Austin line gets its own dash pattern; Austin stays solid and heaviest
+. * as the series this figure own title is about.
+. twoway ///
+>     (line idx_austin date_d, lcolor("${ORANGE}") lwidth(medthick) lpattern(so
+> lid)) ///
+>     (line idx_dallas date_d, lcolor("${NAVY}") lpattern(dash)) ///
+>     (line idx_houston date_d, lcolor("${BLUE}") lpattern(longdash)) ///
+>     (line idx_nashville date_d, lcolor("${GOLD}") lpattern(shortdash)) ///
+>     (line idx_sanantonio date_d, lcolor("${MUTED}") lpattern(dash_dot)) ///
+>     , ///
+>     title("`fig20_title'", $TITLEOPT) ///
+>     subtitle("Real Zillow rent index (ZORI), each metro indexed to its own Ja
+> n 2015 = 100" "Monthly, 2025 dollars, Jan 2015-June 2026; axis does not start
+>  at zero", $SUBOPT) ///
+>     xtitle("", $XTOPT) ytitle("Index, Jan 2015 = 100", $YTOPT) ///
+>     ylabel(, angle(horizontal)) ///
+>     xlabel(`=td(1jan2015)' `=td(1jan2017)' `=td(1jan2019)' `=td(1jan2021)' `=
+> td(1jan2023)' `=td(1jan2025)') ///
+>     xscale(range(`=td(1jan2015)' `=td(1sep2026)')) ///
+>     legend(order(1 "Austin" 2 "Dallas" 3 "Houston" 4 "Nashville" 5 "San Anton
+> io") position(6) rows(1) $LEGOPT) ///
+>     graphregion(color(white)) plotregion(margin(zero)) ///
+>     name(g_fig20, replace)
+
+. 
+. figsave, name(fig20_metro_rent)
+  figure -> 04_figures/fig20_metro_rent.png
+
+. 
+. preserve
+
+.     export delimited date_d idx_austin idx_dallas idx_houston idx_nashville i
+> dx_sanantonio ///
+>         using "${OUT}/fig20_metro_rent.csv", replace
+file /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.booth@texas2036.org
+> /My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analysis/stata/../..
+> /03_analysis/out/fig20_metro_rent.csv saved
+
+. restore
+
+. 
+. display as text "fig20 complete."
+fig20 complete.
+
+. 
+. 
+. * ================================================================
+. * TASK 2. Housing costs against general inflation: index CPI Housing
+. *         against CPI All items, both U.S. city average (the only
+. *         geography BLS offers; see Section 1), 2005-2025, and register the
+. *         cumulative gap.
+. * ================================================================
+. preserve
+
+.     use "${OUT}/cpi_annual.dta", clear
+
+.     keep year cpi
+
+.     rename cpi cpi_allitems
+
+.     merge 1:1 year using `cpi_housing_ann', nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                             0
+    Matched                                26  
+    -----------------------------------------
+
+.     keep if year>=2005 & year<=2025
+(5 observations deleted)
+
+.     quietly summarize cpi_allitems if year==2005, meanonly
+
+.     local base_all = r(mean)
+
+.     quietly summarize cpi_housing if year==2005, meanonly
+
+.     local base_hou = r(mean)
+
+.     generate double idx_allitems = cpi_allitems/`base_all'*100
+
+.     generate double idx_housing  = cpi_housing/`base_hou'*100
+
+.     sort year
+
+.     tempfile cpi_compare
+
+.     save `cpi_compare'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St53571.00000v saved
+    as .dta format
+
+. restore
+
+. 
+. use `cpi_compare', clear
+
+. quietly summarize idx_allitems if year==2025, meanonly
+
+. local all2025 = r(mean)
+
+. quietly summarize idx_housing if year==2025, meanonly
+
+. local hou2025 = r(mean)
+
+. local gap_points = `hou2025' - `all2025'
+
+. display as text "2025 index (2005=100): All items `=string(`all2025',"%6.1f")
+> ', Housing `=string(`hou2025',"%6.1f")', gap `=string(`gap_points',"%4.1f")' 
+> points."
+2025 index (2005=100): All items 165.0, Housing 177.3, gap 12.3 points.
+
+. 
+. numadd, key(col_cpi_allitems_index_2025) value(`=round(`all2025',0.1)') forma
+> tted("`=string(round(`all2025',0.1),"%6.1f")'") ///
+>     unit("index, 2005=100") source("03_analysis/data/external/BLS_CPI.dta") /
+> //
+>     note("CPI-U All items, U.S. city average, annual average, indexed to 2005
+> =100, 2025.")
+
+. numadd, key(col_cpi_housing_index_2025) value(`=round(`hou2025',0.1)') format
+> ted("`=string(round(`hou2025',0.1),"%6.1f")'") ///
+>     unit("index, 2005=100") source("03_analysis/data/external/BLS_CPI.dta") /
+> //
+>     note("CPI-U Housing, U.S. city average, annual average, indexed to 2005=1
+> 00, 2025. October 2025 imputed (col_cpi_housing_oct2025_imputed).")
+
+. numadd, key(col_cpi_housing_gap_2025) value(`=round(`gap_points',0.1)') forma
+> tted("`=string(round(`gap_points',0.1),"%4.1f")' points") ///
+>     unit("index points, cumulative gap since 2005") source("03_analysis/data/
+> external/BLS_CPI.dta") ///
+>     note("Housing index (`=string(round(`hou2025',0.1),"%6.1f")') minus All i
+> tems index (`=string(round(`all2025',0.1),"%6.1f")'), both 2005=100, 2025: na
+> tional housing prices have risen `=string(round(`gap_points',0.1),"%4.1f")' i
+> ndex points faster than the broad CPI basket since 2005. This is a NATIONAL s
+> eries -- BLS publishes no Austin-area CPI (col_no_austin_bls_cpi) -- used her
+> e to show housing outpacing general inflation nationally, a pattern the Regio
+> nal Price Parity section below shows is sharper still in Austin specifically.
+> ")
+
+. 
+. display as text "Task 2 (CPI Housing vs. All items) complete."
+Task 2 (CPI Housing vs. All items) complete.
+
+. 
+. 
+. * ================================================================
+. * TASK 3. BEA Regional Price Parity: Austin all-items against Austin
+. *         housing, with peer metros, latest available year. Numbers
+. *         verified directly against the file before being registered.
+. * ================================================================
+. import delimited "${EV_COL}/bea_rpp_marpp_5metro_long.csv", varnames(1) case(
+> preserve) clear
+(encoding automatically selected: ISO-8859-1)
+(5 vars, 510 obs)
+
+. keep if inlist(series,"all_items","services_housing")
+(306 observations deleted)
+
+. quietly summarize year, meanonly
+
+. local rpp_latest = r(max)
+
+. display as text "BEA Regional Price Parity latest available year in this extr
+> act: `rpp_latest'."
+BEA Regional Price Parity latest available year in this extract: 2024.
+
+. keep if year==`rpp_latest'
+(192 observations deleted)
+
+. 
+. generate metro = ""
+(12 missing values generated)
+
+. replace metro = "austin"     if strpos(geo_label,"Austin")
+variable metro was str1 now str6
+(2 real changes made)
+
+. replace metro = "dallas"     if strpos(geo_label,"Dallas")
+(2 real changes made)
+
+. replace metro = "houston"    if strpos(geo_label,"Houston")
+variable metro was str6 now str7
+(2 real changes made)
+
+. replace metro = "nashville"  if strpos(geo_label,"Nashville")
+variable metro was str7 now str9
+(2 real changes made)
+
+. replace metro = "sanantonio" if strpos(geo_label,"San Antonio")
+variable metro was str9 now str10
+(2 real changes made)
+
+. replace metro = "us"         if geo_label=="United States"
+(2 real changes made)
+
+. assert metro != ""
+
+. 
+. keep metro series rpp_index_us100
+
+. reshape wide rpp_index_us100, i(metro) j(series) string
+(j = all_items services_housing)
+
+Data                               Long   ->   Wide
+-----------------------------------------------------------------------------
+Number of observations               12   ->   6           
+Number of variables                   3   ->   3           
+j variable (2 values)            series   ->   (dropped)
+xij variables:
+                        rpp_index_us100   ->   rpp_index_us100all_items rpp_ind
+> ex_us100services_housing
+-----------------------------------------------------------------------------
+
+. rename rpp_index_us100all_items rpp_all
+
+. rename rpp_index_us100services_housing rpp_housing
+
+. generate double rpp_gap = rpp_housing - rpp_all
+
+. 
+. sort rpp_gap
+
+. local nrows = _N
+
+. local widest_metro = metro[`nrows']
+
+. display as text "Regional Price Parity gap (housing minus all-items), ascendi
+> ng:"
+Regional Price Parity gap (housing minus all-items), ascending:
+
+. list metro rpp_all rpp_housing rpp_gap, clean
+
+            metro   rpp_all   rpp_ho~g      rpp_gap  
+  1.   sanantonio    94.716     94.575   -.14100647  
+  2.           us       100    100.629     .6289978  
+  3.      houston    98.629     104.51    5.8810043  
+  4.    nashville    96.338    104.626     8.288002  
+  5.       dallas    103.09    117.874    14.784004  
+  6.       austin    98.066    120.361    22.294998  
+
+. display as text "Widest gap: `widest_metro' (should be austin)."
+Widest gap: austin (should be austin).
+
+. assert "`widest_metro'"=="austin"
+
+. 
+. tempfile rpp_panel
+
+. save `rpp_panel'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St53571.00000w saved
+    as .dta format
+
+. 
+. local metro_slugs_us "austin dallas houston nashville sanantonio us"
+
+. local metro_labs_us  `""Austin" "Dallas" "Houston" "Nashville" "San Antonio" 
+> "United States""'
+
+. local i = 0
+
+. foreach m of local metro_slugs_us {
+  2.     local i = `i' + 1
+  3.     local mlab : word `i' of `metro_labs_us'
+  4.     quietly summarize rpp_all if metro=="`m'", meanonly
+  5.     local va = r(mean)
+  6.     quietly summarize rpp_housing if metro=="`m'", meanonly
+  7.     local vh = r(mean)
+  8.     quietly summarize rpp_gap if metro=="`m'", meanonly
+  9.     local vg = r(mean)
+ 10. 
+.     numadd, key(col_rpp_allitems_`m') value(`=round(`va',0.1)') formatted("`=
+> string(round(`va',0.1),"%6.1f")'") ///
+>         unit("index, US average=100, `rpp_latest'") source("01_evidence/09_co
+> st_of_living/bea_rpp_marpp_5metro_long.csv") ///
+>         note("BEA Regional Price Parity, All items, `mlab', `rpp_latest' (lat
+> est BEA vintage in this extract).")
+ 11.     numadd, key(col_rpp_housing_`m') value(`=round(`vh',0.1)') formatted("
+> `=string(round(`vh',0.1),"%6.1f")'") ///
+>         unit("index, US average=100, `rpp_latest'") source("01_evidence/09_co
+> st_of_living/bea_rpp_marpp_5metro_long.csv") ///
+>         note("BEA Regional Price Parity, Housing services, `mlab', `rpp_lates
+> t'.")
+ 12.     numadd, key(col_rpp_gap_`m') value(`=round(`vg',0.1)') formatted("`=st
+> ring(round(`vg',0.1),"%4.1f")' points") ///
+>         unit("index points, housing RPP minus all-items RPP") source("01_evid
+> ence/09_cost_of_living/bea_rpp_marpp_5metro_long.csv") ///
+>         note("`mlab', `rpp_latest': housing RPP (`=string(round(`vh',0.1),"%6
+> .1f")') minus all-items RPP (`=string(round(`va',0.1),"%6.1f")') = `=string(r
+> ound(`vg',0.1),"%4.1f")' points. Austin gap is the widest of the 5 metros com
+> pared here (verified directly), meaning the Austin cost problem is specifical
+> ly a HOUSING problem: Austin sits near the national average on everything els
+> e.")
+ 13. }
+
+. 
+. preserve
+
+.     import delimited "${EV_COL}/bea_rpp_marpp_5metro_long.csv", varnames(1) c
+> ase(preserve) clear
+(encoding automatically selected: ISO-8859-1)
+(5 vars, 510 obs)
+
+.     keep if series=="services_housing" & strpos(geo_label,"Austin")
+(493 observations deleted)
+
+.     sort rpp_index_us100
+
+.     local austin_housing_peak = rpp_index_us100[_N]
+
+.     local austin_housing_peak_year = year[_N]
+
+.     quietly summarize year, meanonly
+
+.     local austin_rpp_minyr = r(min)
+
+.     quietly summarize rpp_index_us100 if year==`austin_rpp_minyr', meanonly
+
+.     local austin_housing_early = r(mean)
+
+. restore
+
+. quietly summarize rpp_housing if metro=="austin", meanonly
+
+. local austin_housing_latest = r(mean)
+
+. 
+. numadd, key(col_rpp_austin_housing_peak) value(`=round(`austin_housing_peak',
+> 0.1)') ///
+>     formatted("`=string(round(`austin_housing_peak',0.1),"%6.1f")' in `austin
+> _housing_peak_year'") ///
+>     unit("index, US average=100, peak year") source("01_evidence/09_cost_of_l
+> iving/bea_rpp_marpp_5metro_long.csv") ///
+>     note("Austin housing Regional Price Parity peaked at `=string(round(`aust
+> in_housing_peak',0.1),"%6.1f")' in `austin_housing_peak_year', up from `=stri
+> ng(round(`austin_housing_early',0.1),"%6.1f")' in `austin_rpp_minyr' (earlies
+> t year in this BEA extract), then eased to `=string(round(`austin_housing_lat
+> est',0.1),"%6.1f")' by `rpp_latest'. A third, methodologically independent so
+> urce (BEA regional accounts) corroborates the same 2022-2023 peak and pullbac
+> k that Zillow market index and HUD administrative Fair Market Rent both show.
+> ")
+
+. 
+. display as text "Task 3 (BEA Regional Price Parity) complete."
+Task 3 (BEA Regional Price Parity) complete.
+
+. 
+. 
+. * ================================================================
+. * TASK 4. THE ANCHOR CALCULATION: hours of work at the Austin median
+. *         musician hourly wage (OEWS 27-2042) needed to cover one month of
+. *         Austin 1-bedroom HUD Fair Market Rent, against the same
+. *         calculation at the Austin all-occupations median wage
+. *         (OEWS 00-0000), and against the City of Austin Creative Vitality
+. *         Suite/EMSI wage series where it appears to include the
+. *         self-employed. Matched by YEAR in NOMINAL dollars throughout:
+. *         hours = dollars / (dollars per hour) is unit-free, so deflating
+. *         both sides by the same factor would not change the answer -- left
+. *         nominal on purpose, not because deflation was forgotten.
+. * ================================================================
+. * occ_code values contain a hyphen ("27-2042"), which reshape cannot turn
+. * into a variable-name suffix, so build the wide panel with two separate
+. * extracts merged on year instead (the same workaround 20_wages_industry.do
+. * uses for this identical OEWS occ_code quirk).
+. import delimited "${EV_WAGES}/oews_musicians_creatives_2005_2025.csv", varnam
+> es(1) case(preserve) clear
+(encoding automatically selected: ISO-8859-1)
+(21 vars, 473 obs)
+
+. keep if geo_level=="MSA" & inlist(occ_code,"27-2042","00-0000")
+(431 observations deleted)
+
+. keep year occ_code h_median
+
+. 
+. preserve
+
+.     keep if occ_code=="27-2042"
+(21 observations deleted)
+
+.     keep year h_median
+
+.     rename h_median wage_musician
+
+.     tempfile oews_musi_only
+
+.     save `oews_musi_only'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St53571.000011 saved
+    as .dta format
+
+. restore
+
+. keep if occ_code=="00-0000"
+(21 observations deleted)
+
+. keep year h_median
+
+. rename h_median wage_allocc
+
+. merge 1:1 year using `oews_musi_only', nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                             0
+    Matched                                21  
+    -----------------------------------------
+
+. sort year
+
+. tempfile oews_austin
+
+. save `oews_austin'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St53571.000012 saved
+    as .dta format
+
+. 
+. quietly count
+
+. local n_oews_years = r(N)
+
+. quietly count if missing(wage_musician)
+
+. local n_musi_gap = r(N)
+
+. display as text "Austin MSA OEWS musician hourly wage: `n_musi_gap' year(s) o
+> f `n_oews_years' with no published value (small-occupation non-publication, n
+> ot an extraction gap)."
+Austin MSA OEWS musician hourly wage: 1 year(s) of 21 with no published value (
+> small-occupation non-publication, not an extraction gap).
+
+. 
+. numadd, key(col_anchor_oews_gap_note) value(`n_musi_gap') formatted("`n_musi_
+> gap' year(s) not published") ///
+>     unit("count of missing years in the OEWS musician wage series used by fig
+> 19") ///
+>     source("01_evidence/01_wages_oews_qcew/oews_musicians_creatives_2005_2025
+> .csv") ///
+>     note("Austin MSA OEWS median hourly wage for Musicians and singers is not
+>  published in `n_musi_gap' of `n_oews_years' years 2005-2025 (a small-occupat
+> ion non-publication, consistent with this project other modules noting the Au
+> stin musician OEWS estimate rests on roughly 100 to 700 payroll jobs). The ho
+> urs-of-work line in fig19 has a break at that year rather than an interpolate
+> d or invented value.")
+
+. 
+. import delimited "${EV_COL}/hud_fmr_1983_2026_5area_long.csv", varnames(1) ca
+> se(preserve) clear
+(encoding automatically selected: ISO-8859-1)
+(12 vars, 215 obs)
+
+. keep if strpos(area_label,"Austin")
+(172 observations deleted)
+
+. keep fiscal_year br1
+
+. rename fiscal_year year
+
+. tempfile hud_austin_1br
+
+. save `hud_austin_1br'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St53571.000013 saved
+    as .dta format
+
+. 
+. * City of Austin Creative Vitality Suite / EMSI series: appears to include
+. * the self-employed, unlike OEWS. Only 2 published years in this extract
+. * (2016 and 2017), not an ongoing annual series like OEWS.
+. preserve
+
+.     import delimited "${EV_CITY}/socrata/2qxc-8cme_median_earnings_creative_o
+> ccupations.csv", varnames(1) case(preserve) clear
+(encoding automatically selected: ISO-8859-1)
+(4 vars, 54 obs)
+
+.     keep if soc_code=="27-2042"
+(53 observations deleted)
+
+.     quietly count
+
+.     assert r(N)==1
+
+.     capture confirm string variable _2016_median_hourly_earnings
+
+.     if _rc==0 {
+.         generate double wage_city2016 = real(_2016_median_hourly_earnings)
+.     }
+
+.     else {
+.         generate double wage_city2016 = _2016_median_hourly_earnings
+.     }
+
+.     capture confirm string variable _2017_median_hourly_earnings
+
+.     if _rc==0 {
+.         generate double wage_city2017 = real(_2017_median_hourly_earnings)
+.     }
+
+.     else {
+.         generate double wage_city2017 = _2017_median_hourly_earnings
+.     }
+
+.     keep wage_city2016 wage_city2017
+
+.     generate id = 1
+
+.     reshape long wage_city, i(id) j(year)
+(j = 2016 2017)
+
+Data                               Wide   ->   Long
+-----------------------------------------------------------------------------
+Number of observations                1   ->   2           
+Number of variables                   3   ->   3           
+j variable (2 values)                     ->   year
+xij variables:
+            wage_city2016 wage_city2017   ->   wage_city
+-----------------------------------------------------------------------------
+
+.     drop id
+
+.     tempfile city_wage
+
+.     save `city_wage'
+file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St53571.000015 saved
+    as .dta format
+
+. restore
+
+. 
+. use `oews_austin', clear
+
+. merge 1:1 year using `hud_austin_1br', keep(match master) nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                             0
+    Matched                                21  
+    -----------------------------------------
+
+. merge 1:1 year using `city_wage', nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                            19
+        from master                        19  
+        from using                          0  
+
+    Matched                                 2  
+    -----------------------------------------
+
+. generate double hours_musician = br1/wage_musician
+(1 missing value generated)
+
+. generate double hours_allocc   = br1/wage_allocc
+
+. generate double hours_city     = br1/wage_city if !missing(wage_city)
+(19 missing values generated)
+
+. label variable hours_musician "Hours at the Austin median musician wage to co
+> ver one month of Austin 1BR FMR"
+
+. label variable hours_allocc   "Hours at the Austin all-occupations median wag
+> e to cover one month of Austin 1BR FMR"
+note: label truncated to 80 characters
+
+. label variable hours_city     "Hours at the City EMSI musician wage (incl. se
+> lf-employed) to cover one month of Austin 1BR FMR"
+note: label truncated to 80 characters
+
+. sort year
+
+. 
+. * City-wage-vs-OEWS comparison: only possible for 2017, since the Austin MSA
+. * OEWS musician wage is not published for 2016 (see col_anchor_oews_gap_note)
+> .
+. quietly summarize wage_city if year==2016, meanonly
+
+. local wcity2016 = r(mean)
+
+. numadd, key(col_anchor_city_wage_2016) value(`=round(`wcity2016',0.01)') form
+> atted("$`=string(round(`wcity2016',0.01),"%4.2f")' per hour") ///
+>     unit("dollars per hour, nominal, 2016") source("01_evidence/04_city_progr
+> ams_lmf/socrata/2qxc-8cme_median_earnings_creative_occupations.csv") ///
+>     note("City of Austin Creative Vitality Suite/EMSI median hourly earnings,
+>  Musicians and singers, 2016. No Austin MSA OEWS musician wage was published 
+> that year, so no same-year OEWS ratio is registered for 2016 (see col_anchor_
+> city_wage_vs_oews_2017 for 2017).")
+
+. 
+. quietly summarize wage_city if year==2017, meanonly
+
+. local wcity2017 = r(mean)
+
+. quietly summarize wage_musician if year==2017, meanonly
+
+. local wmusi2017 = r(mean)
+
+. local city_share_of_oews_2017 = `wcity2017'/`wmusi2017'*100
+
+. display as text "2017: City EMSI musician wage $`=string(`wcity2017',"%4.2f")
+> ' vs. OEWS musician wage $`=string(`wmusi2017',"%4.2f")' (`=string(round(`cit
+> y_share_of_oews_2017',0.1),"%4.1f")'% of OEWS)."
+2017: City EMSI musician wage $17.68 vs. OEWS musician wage $31.03 (57.0% of OE
+> WS).
+
+. 
+. numadd, key(col_anchor_city_wage_vs_oews_2017) value(`=round(`city_share_of_o
+> ews_2017',0.1)') ///
+>     formatted("`=string(round(`city_share_of_oews_2017',0.1),"%4.1f")'%") ///
+>     unit("City wage as a percent of the OEWS wage, 2017") ///
+>     source("01_evidence/04_city_programs_lmf/socrata/2qxc-8cme_median_earning
+> s_creative_occupations.csv; 01_evidence/01_wages_oews_qcew/oews_musicians_cre
+> atives_2005_2025.csv") ///
+>     note("City of Austin Creative Vitality Suite/EMSI median hourly earnings 
+> for Musicians and singers, which appears to include self-employed earners, wa
+> s $`=string(`wcity2017',"%4.2f")' in 2017 against OEWS payroll-only $`=string
+> (`wmusi2017',"%4.2f")' the same year -- `=string(round(`city_share_of_oews_20
+> 17',0.1),"%4.1f")'% of the OEWS figure, roughly half. The gap is consistent w
+> ith most Austin musicians being self-employed and therefore outside OEWS payr
+> oll coverage (see col_anchor_selfemployment_caveat).")
+
+. 
+. * MANDATORY CAVEAT for fig19: OEWS excludes the self-employed. Pull the
+. * verified PUMS self-employment share from the other module ledger if it
+. * has already run; register plainly if it has not.
+. capture confirm file `"${OUT}/numbers/numbers_pums.csv"'
+
+. local have_pums_ledger = (_rc==0)
+
+. local have_selfemp_key = 0
+
+. if `have_pums_ledger' {
+.     preserve
+.         import delimited "${OUT}/numbers/numbers_pums.csv", varnames(1) case(
+> preserve) stringcols(_all) clear
+(encoding automatically selected: ISO-8859-1)
+(7 vars, 485 obs)
+.         quietly count if key=="pums_austin_mus_selfemp"
+.         if r(N)==1 {
+.             local have_selfemp_key = 1
+.             quietly keep if key=="pums_austin_mus_selfemp"
+.             local selfemp_fmt = formatted[1]
+.         }
+.     restore
+. }
+
+. if `have_selfemp_key'==1 {
+.     display as text "Austin musician self-employment share, from numbers_pums
+> .csv: `selfemp_fmt'"
+Austin musician self-employment share, from numbers_pums.csv: 72.2%
+.     numadd, key(col_anchor_selfemployment_caveat) value(1) formatted("`selfem
+> p_fmt' self-employed") ///
+>         unit("percent, mandatory caveat for fig19") source("03_analysis/out/n
+> umbers/numbers_pums.csv") ///
+>         note("MANDATORY CAVEAT for fig19: OEWS counts payroll wage-and-salary
+>  jobs only and excludes the self-employed. This project own PUMS analysis (10
+> _pums_earnings.do) puts Austin-metro musician self-employment at `selfemp_fmt
+> ' -- most of the profession is not represented in the OEWS wage that fig19 mu
+> sician and all-occupations lines both use. The City EMSI line, which appears 
+> to include self-employed earnings, is the one line in fig19 not subject to th
+> is caveat, though it covers only 2016-2017.")
+. }
+
+. else {
+.     display as text "numbers_pums.csv or its pums_austin_mus_selfemp key was 
+> not found; registering the caveat without the exact share."
+.     numadd, key(col_anchor_selfemployment_caveat) value(0) formatted("share n
+> ot available this run") ///
+>         unit("percent, mandatory caveat for fig19, MISSING") source("03_analy
+> sis/out/numbers/numbers_pums.csv") ///
+>         note("MANDATORY CAVEAT for fig19: OEWS counts payroll wage-and-salary
+>  jobs only and excludes the self-employed, who are most Austin musicians. The
+>  exact share could not be pulled this run because numbers_pums.csv or its pum
+> s_austin_mus_selfemp key was not found; run 10_pums_earnings.do first to popu
+> late the exact figure here.")
+. }
+
+. 
+. * Verify the endpoint comparisons the title depends on before writing it.
+. quietly summarize year if !missing(hours_musician)
+
+. local hm_first_yr = r(min)
+
+. local hm_last_yr  = r(max)
+
+. quietly summarize hours_musician if year==`hm_first_yr', meanonly
+
+. local hm_first = r(mean)
+
+. quietly summarize hours_musician if year==`hm_last_yr', meanonly
+
+. local hm_last = r(mean)
+
+. quietly summarize hours_musician if year==2015, meanonly
+
+. local hm_2015 = r(mean)
+
+. quietly summarize hours_musician if year==2023, meanonly
+
+. local hm_2023 = r(mean)
+
+. quietly summarize year if !missing(hours_allocc)
+
+. local ha_first_yr = r(min)
+
+. local ha_last_yr  = r(max)
+
+. quietly summarize hours_allocc if year==`ha_first_yr', meanonly
+
+. local ha_first = r(mean)
+
+. quietly summarize hours_allocc if year==`ha_last_yr', meanonly
+
+. local ha_last = r(mean)
+
+. 
+. display as text "Musician hours-of-work anchor: `hm_first_yr'=`=string(`hm_fi
+> rst',"%4.1f")'" ///
+>     " | 2015=`=string(`hm_2015',"%4.1f")' | 2023=`=string(`hm_2023',"%4.1f")'
+> " ///
+>     " | `hm_last_yr' (latest)=`=string(`hm_last',"%4.1f")'"
+Musician hours-of-work anchor: 2005=54.6 | 2015=39.9 | 2023=40.8 | 2025 (latest
+> )=52.4
+
+. 
+. local fell_since_2023 = (`hm_last' < `hm_2023')
+
+. local above_2015      = (`hm_last' > `hm_2015')
+
+. display as text "Has the hours line fallen since 2023? `fell_since_2023'. Sti
+> ll above its 2015 level? `above_2015'."
+Has the hours line fallen since 2023? 0. Still above its 2015 level? 1.
+
+. 
+. if `fell_since_2023'==1 {
+.     local fig19_title = "Covering Austin rent takes fewer musician hours than
+>  it did in 2023"
+. }
+
+. else if `above_2015'==1 {
+.     * No persistence word ("still") belongs here: hours_musician dipped below
+.     * its 2015 level in 2017 (31.2) and 2022 (30.7), so only the endpoint
+.     * comparison this series actually supports goes in the title.
+.     local fig19_title = "Covering Austin rent takes more musician hours than 
+> in 2015"
+. }
+
+. else {
+.     local fig19_title = "Hours of musician work needed to cover Austin 1-bedr
+> oom rent"
+. }
+
+. local _tlen19 = length("`fig19_title'")
+
+. display as text "fig19 title length check: `_tlen19' characters (target under
+>  ~70)."
+fig19 title length check: 59 characters (target under ~70).
+
+. 
+. numadd, key(col_anchor_hours_musician_first) value(`=round(`hm_first',0.1)') 
+> formatted("`=string(round(`hm_first',0.1),"%4.1f")' hours") ///
+>     unit("hours per month, `hm_first_yr'") source("multiple: oews_musicians_c
+> reatives_2005_2025.csv, hud_fmr_1983_2026_5area_long.csv") ///
+>     note("Hours at the Austin MSA median musician hourly wage (OEWS, nominal)
+>  to cover one month of Austin 1-bedroom HUD Fair Market Rent (nominal), `hm_f
+> irst_yr'. Nominal-on-nominal ratio; no deflation applied or needed, since dol
+> lars per dollars is unit-free.")
+
+. numadd, key(col_anchor_hours_musician_latest) value(`=round(`hm_last',0.1)') 
+> formatted("`=string(round(`hm_last',0.1),"%4.1f")' hours") ///
+>     unit("hours per month, `hm_last_yr'") source("multiple") ///
+>     note("Same calculation, `hm_last_yr' (latest year with both an Austin MSA
+>  OEWS musician wage and a HUD Fair Market Rent).")
+
+. numadd, key(col_anchor_hours_allocc_first) value(`=round(`ha_first',0.1)') fo
+> rmatted("`=string(round(`ha_first',0.1),"%4.1f")' hours") ///
+>     unit("hours per month, `ha_first_yr'") source("multiple") ///
+>     note("Hours at the Austin all-occupations median hourly wage (OEWS, nomin
+> al) to cover one month of Austin 1-bedroom HUD Fair Market Rent (nominal), `h
+> a_first_yr'.")
+
+. numadd, key(col_anchor_hours_allocc_latest) value(`=round(`ha_last',0.1)') fo
+> rmatted("`=string(round(`ha_last',0.1),"%4.1f")' hours") ///
+>     unit("hours per month, `ha_last_yr'") source("multiple") ///
+>     note("Same calculation, `ha_last_yr'.")
+
+. numadd, key(col_anchor_hours_gap_latest) value(`=round(`hm_last'-`ha_last',0.
+> 1)') formatted("`=string(round(`hm_last'-`ha_last',0.1),"%4.1f")' more hours"
+> ) ///
+>     unit("hours per month, `hm_last_yr' musician minus all-occupations") sour
+> ce("multiple") ///
+>     note("At `hm_last_yr' Austin wages and rent, the median musician needs `=
+> string(round(`hm_last'-`ha_last',0.1),"%4.1f")' more hours per month than the
+>  typical Austin worker to cover the same 1-bedroom Fair Market Rent.")
+
+. numadd, key(col_anchor_hours_volatility_note) value(1) formatted("small, vola
+> tile OEWS sample") ///
+>     unit("methodological caveat for fig19") source("01_evidence/01_wages_oews
+> _qcew/oews_musicians_creatives_2005_2025.csv") ///
+>     note("The Austin MSA OEWS musician wage this figure hours-of-work line de
+> pends on rests on roughly 100 to 700 payroll jobs across the panel (see 20_wa
+> ges_industry.do own registered caveat on this same series), so year-to-year s
+> wings in hours_musician partly reflect sampling noise in a thin occupation es
+> timate, not only real changes in musician purchasing power. The all-occupatio
+> ns line rests on a far larger sample and is comparatively stable.")
+
+. numadd, key(col_anchor_timing_alignment_note) value(1) formatted("HUD fiscal 
+> year matched to OEWS calendar year") ///
+>     unit("methodological note") source("multiple") ///
+>     note("HUD Fair Market Rent is set by federal fiscal year (October-Septemb
+> er); OEWS reports a May-of-calendar-year wage. This module matches HUD fiscal
+>  year YYYY to OEWS calendar year YYYY directly, an approximate few-month alig
+> nment, not an exact-month match.")
+
+. 
+. * Reconciliation note: fig19 hours can move opposite the pure rent-level
+. * story in fig20, because hours depend on BOTH rent and wage, and both moved
+. * here. Register the explanation so it reads as an honest reconciliation,
+. * not a contradiction between two figures in the same module.
+. numadd, key(col_anchor_reconciliation_note) value(1) formatted("hours track w
+> ages and rent together, not rent alone") ///
+>     unit("methodological note, reconciles fig19 against fig20") source("multi
+> ple") ///
+>     note("fig20 shows Austin real rent pulling back from its 2022 peak. fig19
+>  hours-of-work line does not simply mirror that pullback, because it divides 
+> nominal HUD Fair Market Rent (which kept rising nominally through FY2025 befo
+> re easing in FY2026, a year with no paired OEWS wage yet) by the small-sample
+> , volatile Austin MSA OEWS musician wage (which itself fell from an unusually
+>  high 2022 reading). Both facts are registered above; this is an innocent, ex
+> plainable divergence between two measures of the same underlying housing pres
+> sure, not an inconsistency in this module.")
+
+. 
+. * Direct labels at each line own last non-missing year.
+. foreach s in hours_musician hours_allocc {
+  2.     quietly summarize year if !missing(`s')
+  3.     local ly_`s' = r(max)
+  4. }
+
+. generate lbl_musician = "Austin musicians" if year==`ly_hours_musician'
+(20 missing values generated)
+
+. generate lbl_allocc   = "All occupations"  if year==`ly_hours_allocc'
+(20 missing values generated)
+
+. 
+. * hours_city (City of Austin Creative Vitality Suite/EMSI series) has values
+. * in only 2 of these 21 years (2016 and 2017; col_anchor_city_wage_2016 and
+. * col_anchor_city_wage_vs_oews_2017), too thin a run to plot as a line
+. * without reading as a stray mark carrying an unfindable label. It stays out
+. * of this twoway call; the two values, the years, and the self-employment-
+. * coverage point they support (city wage is roughly half the same-year OEWS
+. * wage) stay in the registry (col_anchor_city_wage_vs_oews_2017) and in this
+. * figure own exported CSV, for the caption to carry instead.
+. 
+. twoway ///
+>     (line hours_musician year, lcolor("${ORANGE}") lwidth(medthick)) ///
+>     (line hours_allocc year, lcolor("${MUTED}")) ///
+>     (scatter hours_musician year if year==`ly_hours_musician', mlabel(lbl_mus
+> ician) mlabcolor("${ORANGE}") mlabposition(2) mlabsize(3) msymbol(none)) ///
+>     (scatter hours_allocc year if year==`ly_hours_allocc', mlabel(lbl_allocc)
+>  mlabcolor("${MUTED}") mlabposition(3) mlabsize(3) msymbol(none)) ///
+>     , ///
+>     title("`fig19_title'", $TITLEOPT) ///
+>     subtitle("Hours at the Austin median hourly wage to cover one month of Au
+> stin" "1-bedroom HUD Fair Market Rent; nominal dollars, 2005-2025", $SUBOPT) 
+> ///
+>     xtitle("", $XTOPT) ytitle("Hours per month", $YTOPT) ///
+>     xlabel(2005(5)2025) ylabel(0(20)80, angle(horizontal)) ///
+>     yscale(range(0 80)) ///
+>     xscale(range(2005 2036)) ///
+>     legend(off) ///
+>     graphregion(color(white)) plotregion(margin(zero)) ///
+>     name(g_fig19, replace)
+
+. 
+. figsave, name(fig19_rent_vs_wages)
+  figure -> 04_figures/fig19_rent_vs_wages.png
+
+. 
+. preserve
+
+.     export delimited year hours_musician hours_allocc hours_city wage_musicia
+> n wage_allocc wage_city br1 ///
+>         using "${OUT}/fig19_rent_vs_wages.csv", replace
+file /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.booth@texas2036.org
+> /My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analysis/stata/../..
+> /03_analysis/out/fig19_rent_vs_wages.csv saved
+
+. restore
+
+. 
+. display as text "fig19 complete."
+fig19 complete.
+
+. 
+. 
+. * ================================================================
+. * TASK 5. Annual Austin musician earnings against annual Austin 1-bedroom
+. *         Fair Market Rent, as a share-of-income measure, gated on whether
+. *         03_analysis/out/numbers/numbers_pums.csv exists.
+. *
+. *         PUMS is a single pooled 2020-2024 5-year cross-section, not an
+. *         annual panel like OEWS. There is no year-by-year PUMS earnings
+. *         series to pair with each year of FMR the way fig19 pairs OEWS
+. *         with FMR, so this section reports two POINT comparisons -- period-
+. *         matched and latest -- and says so, rather than implying an annual
+. *         trend the source data cannot support.
+. * ================================================================
+. capture confirm file `"${OUT}/numbers/numbers_pums.csv"'
+
+. local have_pums_ledger2 = (_rc==0)
+
+. local have_earn_key = 0
+
+. 
+. if `have_pums_ledger2' {
+.     preserve
+.         import delimited "${OUT}/numbers/numbers_pums.csv", varnames(1) case(
+> preserve) stringcols(_all) clear
+(encoding automatically selected: ISO-8859-1)
+(7 vars, 485 obs)
+.         quietly count if key=="pums_austin_mus_medpernp_pos"
+.         if r(N)==1 {
+.             local have_earn_key = 1
+.             quietly keep if key=="pums_austin_mus_medpernp_pos"
+.             local pums_earn_str = value[1]
+.         }
+.         quietly count if key=="pums_austin_mus_n_pos"
+.         local have_n_key = (r(N)==1)
+.         if `have_n_key' {
+.             quietly keep if key=="pums_austin_mus_n_pos"
+.             local pums_n_str = value[1]
+.         }
+.     restore
+. }
+
+. 
+. if `have_pums_ledger2'==0 {
+.     display as text "numbers_pums.csv not found: Task 5 skipped."
+.     numadd, key(col_pums_rent_share_skipped) value(0) formatted("skipped, num
+> bers_pums.csv not found") ///
+>         unit("status") source("03_analysis/out/numbers/numbers_pums.csv") ///
+>         note("Task 5 (musician earnings vs. Fair Market Rent as a share of in
+> come, PUMS-based) was skipped because 03_analysis/out/numbers/numbers_pums.cs
+> v did not exist when this module ran. Run 10_pums_earnings.do first, then rer
+> un this module; the code path immediately below is otherwise ready and needs 
+> no changes.")
+. }
+
+. else if `have_earn_key'==0 {
+.     display as text "numbers_pums.csv exists but key pums_austin_mus_medpernp
+> _pos was not found: Task 5 skipped."
+.     numadd, key(col_pums_rent_share_skipped) value(0) formatted("skipped, key
+>  not found in numbers_pums.csv") ///
+>         unit("status") source("03_analysis/out/numbers/numbers_pums.csv") ///
+>         note("numbers_pums.csv exists but its pums_austin_mus_medpernp_pos ke
+> y was not found (10_pums_earnings.do may have changed its key names). Task 5 
+> skipped; update the key name referenced in this module Task 5 block to match.
+> ")
+. }
+
+. else {
+.     local pums_earn = real("`pums_earn_str'")
+.     local pums_n = cond(`have_n_key', "`pums_n_str'", "not available")
+.     display as text "PUMS Austin musician median earnings (POS base, 2025 dol
+> lars, from numbers_pums.csv): $`=string(`pums_earn',"%9.0fc")' (n=`pums_n')."
+PUMS Austin musician median earnings (POS base, 2025 dollars, from numbers_pums
+> .csv): $28,683 (n=not available).
+. 
+.     * Period-matched comparison: average the 5 HUD fiscal years the ACS
+.     * 2020-2024 5-year estimate actually pools, rather than picking one
+.     * arbitrary year inside that window.
+.     preserve
+.         import delimited "${EV_COL}/hud_fmr_1983_2026_5area_long.csv", varnam
+> es(1) case(preserve) clear
+(encoding automatically selected: ISO-8859-1)
+(12 vars, 215 obs)
+.         keep if strpos(area_label,"Austin") & inrange(fiscal_year,2020,2024)
+(210 observations deleted)
+.         rename fiscal_year year
+.         keep year br1
+.         merge 1:1 year using "${OUT}/cpi_annual.dta", keep(match) nogenerate
+
+    Result                      Number of obs
+    -----------------------------------------
+    Not matched                             0
+    Matched                                 5  
+    -----------------------------------------
+.         generate double br1_real = br1*defl
+.         quietly summarize br1_real, meanonly
+.         local fmr_matched_real = r(mean)
+.     restore
+. 
+.     preserve
+.         import delimited "${EV_COL}/hud_fmr_1983_2026_5area_long.csv", varnam
+> es(1) case(preserve) clear
+(encoding automatically selected: ISO-8859-1)
+(12 vars, 215 obs)
+.         keep if strpos(area_label,"Austin") & fiscal_year==2026
+(214 observations deleted)
+.         local fmr_latest_nominal = br1[1]
+.     restore
+.     local fmr_latest_real = `fmr_latest_nominal' * ${DEFL2026}
+. 
+.     local share_matched = (`fmr_matched_real'*12) / `pums_earn' * 100
+.     local share_latest  = (`fmr_latest_real'*12)  / `pums_earn' * 100
+.     display as text "Rent share of income: period-matched (FY2020-2024 avg. F
+> MR) = `=string(round(`share_matched',0.1),"%4.1f")'%;" ///
+>         " latest (FY2026 FMR) = `=string(round(`share_latest',0.1),"%4.1f")'%
+> ."
+Rent share of income: period-matched (FY2020-2024 avg. FMR) = 61.6%; latest (FY
+> 2026 FMR) = 63.8%.
+. 
+.     numadd, key(col_pums_rent_share_matched) value(`=round(`share_matched',0.
+> 1)') ///
+>         formatted("`=string(round(`share_matched',0.1),"%4.1f")'%") ///
+>         unit("percent of annual earnings, period-matched") ///
+>         source("03_analysis/out/numbers/numbers_pums.csv; 01_evidence/09_cost
+> _of_living/hud_fmr_1983_2026_5area_long.csv") ///
+>         note("Annualized Austin 1-bedroom HUD Fair Market Rent (12 times the 
+> FY2020-FY2024 average 1-bedroom FMR, the same 5 fiscal years the ACS 5-year P
+> UMS estimate pools, real 2025 dollars) as a share of median Austin musician a
+> nnual earnings from work (ACS 2020-2024 5-year PUMS, positive-earnings base, 
+> employed ages 18-64, n=`pums_n' unweighted records, real 2025 dollars, $`=str
+> ing(round(`pums_earn',1),"%9.0fc")'). SNAPSHOT comparison, not a year-by-year
+>  trend: PUMS is a single pooled 5-year cross-section, unlike OEWS true annual
+>  panel used in fig19. Covers the self-employed, unlike the OEWS-based anchor 
+> above, which is the reason this measure exists.")
+.     numadd, key(col_pums_rent_share_latest) value(`=round(`share_latest',0.1)
+> ') ///
+>         formatted("`=string(round(`share_latest',0.1),"%4.1f")'%") ///
+>         unit("percent of annual earnings, latest FMR vs. pooled 2020-2024 ear
+> nings") ///
+>         source("03_analysis/out/numbers/numbers_pums.csv; 01_evidence/09_cost
+> _of_living/hud_fmr_1983_2026_5area_long.csv") ///
+>         note("Same PUMS earnings figure against the LATEST available Austin 1
+> -bedroom Fair Market Rent (FY2026, annualized, real 2025 dollars via this mod
+> ule partial-year patch) rather than the period-matched FY2020-2024 average. T
+> his mixes a 2026 rent level with an earnings estimate centered on 2020-2024; 
+> read as what today rent would cost out of that pooled-period income, not as a
+>  true 2026 earnings observation.")
+.     numadd, key(col_pums_rent_share_methodological_note) value(1) formatted("
+> 2 point estimates, not a trend") ///
+>         unit("methodological note") source("multiple") ///
+>         note("Task 5 share-of-income measure is two point comparisons (period
+> -matched and latest), not an annual trend like fig19 hours-of-work series, be
+> cause the underlying PUMS source is a single pooled 2020-2024 5-year cross-se
+> ction, not an annual panel. Do not chart this as a time series.")
+. }
+
+. 
+. display as text "Task 5 (PUMS share-of-income) complete."
+Task 5 (PUMS share-of-income) complete.
+
+. 
+. 
+. * ================================================================
+. * Done.
+. * ================================================================
+. display as text _newline "{hline 72}"
+
+------------------------------------------------------------------------
+
+. display as text "60_cost_of_living.do complete"
+60_cost_of_living.do complete
+
+. display as text "{hline 72}"
+------------------------------------------------------------------------
+
+. 
+end of do-file

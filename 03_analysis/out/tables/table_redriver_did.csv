@@ -1,0 +1,53 @@
+="Receipts at the five Red River extended-hours pilot venues, 2015 to 2019"
+
+="",="(1)",="(2)",="(3)",="(4)",="(5)",="(6)"
+="",="Log real monthly receipts, 2025 dollars",="Log real monthly receipts, 2025 dollars",="Log real monthly receipts, 2025 dollars",="Log real monthly receipts, 2025 dollars",="Log real monthly receipts, 2025 dollars",="Log real monthly receipts, 2025 dollars"
+
+="Pilot venue x reported pilot window",="-0.0385",="",="0.0321",="",="0.0064",=""
+="",="(0.1060)",="",="(0.1515)",="",="(0.0980)",=""
+
+="Pilot venue x ordinance pilot window",="",="0.0833",="",="",="",=""
+="",="",="(0.0699)",="",="",="",=""
+
+="Pilot venue x 2015H1",="",="",="",="0.1896***",="",="0.0387"
+="",="",="",="",="(0.0483)",="",="(0.0954)"
+
+="Pilot venue x 2015H2",="",="",="",="0.0796",="",="0.0550"
+="",="",="",="",="(0.0486)",="",="(0.0419)"
+
+="Pilot venue x 2016H1",="",="",="",="0.2727***",="",="0.1256"
+="",="",="",="",="(0.0713)",="",="(0.1202)"
+
+="Pilot venue x 2017H1",="",="",="",="0.2170***",="",="0.0851"
+="",="",="",="",="(0.0817)",="",="(0.1134)"
+
+="Pilot venue x 2017H2",="",="",="",="0.0554",="",="0.0545"
+="",="",="",="",="(0.1034)",="",="(0.1034)"
+
+="Pilot venue x 2018H1",="",="",="",="0.2881***",="",="0.1517***"
+="",="",="",="",="(0.0762)",="",="(0.0471)"
+
+="Pilot venue x 2018H2",="",="",="",="0.1400",="",="0.1429"
+="",="",="",="",="(0.0860)",="",="(0.0862)"
+
+="Pilot venue x 2019H1",="",="",="",="0.1374",="",="0.0000"
+="",="",="",="",="(0.1009)",="",="(.)"
+
+="Pilot venue x 2019H2",="",="",="",="-0.1313",="",="-0.1139"
+="",="",="",="",="(0.1124)",="",="(0.1063)"
+
+="Constant",="11.2366***",="11.2349***",="11.1910***",="11.2275***",="11.2509***",="11.2470***"
+="",="(0.0009)",="(0.0012)",="(0.0083)",="(0.0027)",="(0.0008)",="(0.0023)"
+
+="Observations",="4335",="4335",="513",="4335",="4254",="4254"
+="Specification",="Reported window, all comparison venues",="Ordinance window, all comparison venues",="Reported window, Red River comparison only",="Half-year event study, base 2016H2",="Reported window, venue seasonality absorbed",="Event study, venue seasonality absorbed"
+="Sample",="Panel venues 2015-2019, large rooms excluded",="Panel venues 2015-2019, large rooms excluded",="Red River Cultural District venues only",="Panel venues 2015-2019, large rooms excluded",="Panel venues 2015-2019, large rooms excluded",="Panel venues 2015-2019, large rooms excluded"
+
+="Standard errors in parentheses"
+="Outcome is log real monthly receipts in 2025 dollars."
+="Venue and calendar-month fixed effects; standard errors clustered by venue."
+="Columns 5 and 6 add venue-by-month-of-year effects, which absorb differential seasonality."
+="Five treated units, so the clustered errors are unreliable and are secondary."
+="Primary inference is randomization inference over 5000 permutations of the five treated venues."
+="Descriptive event study. Venues were named into the pilot, not drawn."
+="* p<0.10, ** p<0.05, *** p<0.01"

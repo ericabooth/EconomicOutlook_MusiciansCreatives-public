@@ -1,0 +1,1173 @@
+       Georgia Music Tax Credit
+Economic and Fiscal Impact Analysis
+
+
+
+                      Prepared for
+       Georgia Department of Audits and Accounts
+
+
+
+
+                      Prepared by
+   Center for Business Analytics and Economic Research
+               Georgia Southern University
+                   December 8, 2023
+This page was intentionally left blank
+                               Georgia Music Tax Credit
+                          Economic and Fiscal Impact Analysis
+
+
+
+
+                                   Prepared by the
+                Center for Business Analytics and Economic Research
+                             Business Innovation Group
+                             Georgia Southern University
+
+
+
+
+                                 Prepared for the
+                     Georgia Department of Audits and Accounts
+
+
+
+
+                                       Authors
+                                  Benjamin McKay
+                                Dr. P. Cary Christian
+                                  Wycliffe Lovelace
+
+
+
+
+The Center for Business Analysis and Economic Research (CBAER) of the Business
+Innovation Group (BIG) in the Office of Research at Georgia Southern University was
+engaged to conduct a study by the Georgia Department of Audits and Accounts.
+This page was intentionally left blank
+
+
+
+
+                                         i
+Executive Summary
+The Georgia Musical Investment Act (GMTC) provided tax credits for various segments of the
+music and entertainment industry. The Act targeted live musical or theatrical performances,
+recorded musical performances for entertainment production, but excluded recorded music.
+The tax credit is linked to two sectors of the live performance industry: music publishing and
+performing arts companies. The music publishing industry includes establishments that acquire
+and register copyrights for compositions used in television, motion pictures, live performances,
+and other forms of interactive entertainment. The performing arts companies are responsible
+for the production of live performances using actors and actresses, singers, dancers, musical
+groups/artists, and other performing artists. This report details the economic and fiscal impacts
+of the GMTC from January 1, 2018, through January 1, 2023, when it ended.
+The analysis revealed that throughout the GMTC's active period, no tax credits were awarded.
+Despite receiving six applications for the tax credit, none of these were approved, resulting in
+no company using the credit provisions. However, a hypothetical scenario suggests that if the
+tax credits had been granted, they would have supported approximately 45 jobs, contributing
+an estimated $6.89 million in economic impact. Applicants would have received an income tax
+credit ranging from 15 percent to 20 percent, varying based on the production location. This
+support could have added value of $4.4 million to the industries linked to the credit. Had these
+tax credits been utilized, the total new tax revenue associated with this economic activity for
+state and local governments from 2018 to 2022 was projected to be $160,900. This includes
+$103,700 for the state of Georgia and $51,200 for local government collections.
+It is important to note that this analysis does not account for the potential value of music
+tourism associated with the increased opportunities for musical events that the tax credit might
+have supported. However, the research conducted for this report indicates that the economic
+benefits of music tourism could be sizeable. The tax credit likely has an additional impact that
+goes beyond the direct effects analyzed in this report.
+The GMTC's lack of use can be understood when compared to similar programs in other states.
+The GMTC's required minimum qualified expenditure of $500,000 was notably higher than that
+of other states' programs. Further, the tax credit of 15 to 20 percent was less attractive
+compared to the 25 to 35 percent incentives available in other states. Industry professionals
+cite implementation issues as a primary reason for the GMTC's limited success. Initially, the
+credit was intended to boost recorded music performances for productions shot outside of
+Georgia, while in-state productions could benefit from the existing Film Tax Credit. This dual
+focus led to confusion among applicants and reviewers alike. Despite these challenges, it is
+important to recognize the untapped potential of the GMTC. If fully realized and restructured
+with Georgia’s unique music industry characteristics in mind, this program could have
+significantly enhanced the value of music tourism, live performances, and recorded music in the
+state.
+
+
+                                                                                                   ii
+Table of Contents
+Executive Summary ....................................................................................................................................... ii
+Tax Provision Background/Overview ............................................................................................................. 1
+Related Economic Activity ............................................................................................................................. 3
+   National Overview ..................................................................................................................................... 4
+   Georgia Economic Overview ..................................................................................................................... 5
+Other States Comparison .............................................................................................................................. 8
+Economic Activity ........................................................................................................................................ 13
+   Economic Contribution Analysis .............................................................................................................. 13
+   Use Analysis ............................................................................................................................................. 16
+   But For Analysis ....................................................................................................................................... 17
+Fiscal Analysis .............................................................................................................................................. 20
+Public Benefit .............................................................................................................................................. 21
+Summary and Conclusion ............................................................................................................................ 24
+
+
+
+
+                                                                                                                                                              iii
+Tax Provision Background/Overview
+This report analyzes the fiscal and economic impact of the Georgia Musical Tax Credit (Musical
+Tax Credit or GMTC) provided in GA Code § 48-7-40.33.1 The GMTC started on January 1, 2018,
+and is no longer available as of January 1, 2023. It provided credits for live musical or theatrical
+performances, recorded musical performances for entertainment production, and other
+qualified expenditures, excluding recorded music. It was managed jointly by the Georgia
+Department of Economic Development (GDEcD) and the Georgia Department of Revenue
+(DOR). The GMTC also excluded single musical performances not intended to go on tour,
+music/cultural festivals not intended to tour, industry seminars, trade shows, markets, and
+companies in default on tax obligations or loans guaranteed by the state.2
+The Musical Tax Credit focuses on two segments of the musical industry: theatrical
+performances and recorded musical performances for entertainment production. First, musical
+or theatrical performances include concerts, musical tours, ballet, dance, opera, or a live variety
+show. To qualify, productions must originate, be developed, and have an initial public
+performance before a live audience in this state. Additionally, the tour must last 12 months or
+longer than domestically developed shows. Productions originating in foreign countries must
+debut in Georgia and spend at least seven days in the state, preparing and rehearsing for the
+United States leg of their tour.3 Second, recorded musical performances must be linked to other
+productions, including a motion picture, a different type of film, television, a video game, or
+another form of interactive entertainment production.4
+Production companies had to meet a minimum spending level based on the production type to
+qualify for this income tax credit. For live musical or theatrical performances, production
+companies had to meet $500,000 in qualified expenditures; a recorded musical performance
+minimum was $250,000 for work that was part of a movie, television, or interactive
+entertainment production and $100,000 for any other qualifying recorded musical
+performance.5
+Once a production company believed it could meet these standards, the company would have
+to be pre-certified. GDEcD managed the pre-certification process by reviewing applications and
+issuing a pre-certification letter to the production companies that qualified for the tax credit.
+Then, DOR would be responsible for administering the issuing of tax credits, which could
+include collection and review of all required documentation. The tax credit was 15 percent on
+qualifying production expenditures, with an additional 5 percent credit for any qualified
+
+1
+ 2023 Georiga Code: Title 48 - Revenue and Taxation :: Chapter 7 – Income Taxes: § 48-7-40-33
+https://law.justia.com/codes/georgia/2019/title-48/chapter-7/article-2/section-48-7-40-33/
+2
+  Rule 159-1-2-.01 Musical Tax Credit https://rules.sos.ga.gov/gac/159-1-2
+3
+  GA HB155 | 2017-2018 | Regular Session. (2018, January 01). LegiScan. Retrieved August 15, 2023, from
+https://legiscan.com/GA/bill/HB155/2017
+4
+  Ibid.
+5 Ibid
+
+                                                                                                          1
+production expenditures if produced in tier 1 or 2 counties, providing a potential total credit of
+20 percent. Tier 3 and 4 counties are not eligible for this additional tax credit. All awards were
+issued on a first-come, first-served basis up to the amount of the annual cap.6
+The assigning of tiers in Georgia is managed by the Department of Community Affairs and the
+process is governed by code section 48-7-40 of Georgia state law. This law requires that all 159
+counties in Georgia be split into four tiers. The state uses three criteria which are all equally
+weighted and include: (1) highest unemployment rate for the most recent 36-month period, (2)
+lowest per capita income for the most recent 36-month period, and (3) highest percentage of
+residents whose incomes are below the poverty level according to the most recent data
+available. Counties in the 1st-71st rank of developed counties “shall be classified as tier 1,” those
+ranked 72nd -106th are “classified as tier 2,” then those designated 107th-141st in development
+are in tier 3, and lastly, the counties in tier 4 are ranked 142nd-159th in development.7
+Finally, awards are capped, and these vary by tax year. For projects taking place during the year
+2018, the tax credit cap was $5 million. This increased to $10 million during 2020 and then hit
+$15 million for 2021 and 2022. Starting at the beginning of 2023, the GMTC was allowed to
+expire and the credit was no longer available.8 During the lifespan of the provision, the Georgia
+General Assembly would make two minor changes. In 2017, the word “or” was replaced with
+“and” in section (g) paragraph 2, which linked carry forward and eligibility requirements to the
+disallowed uses for the tax credit.9 Also, in 2019, in subparagraph (b)(4)(A), the word “make-
+up” was replaced with “makeup. ”10 Other changes were proposed but never passed by the
+Georgia General Assembly. In 2020, SB 441 increased the amount of the tax credit given to a
+production company from 15 to 25 percent, lowering the spending thresholds for eligibility and
+removing the 12-month musical tour requirement.11 Next, in 2022, HB 1330 aimed to increase
+the tax credit to 30 percent of qualified expenditures, reduce the spending requirements, allow
+aggregation to meet that threshold, and remove the 12-month touring requirement.12 The
+proposed amendments did not pass the General Assembly on either occasion.
+
+
+
+6
+  Ibid.
+7
+  § 48-7-40 - Designation of counties as less developed areas; tax credits for certain business enterprises:: 2010
+Georgia Code :: US Codes and Statutes :: US Law :: Justia
+8
+  Georgia Musical Tax Credits on my Mind. (n.d.). Frazier & Deeter, LLC. Retrieved November 3, 2023, from
+https://www.frazierdeeter.com/insights/georgia-musical-tax-credits-on-my-
+mind/#:~:text=Credit%20Caps,the%20musical%20tax%20credit%20expires.
+9
+  GA SB 365, 2017 -2018, Region Session. LegiScoan retrieved December 1, 2023,
+https://www.legis.ga.gov/api/legislation/document/20172018/171897
+10
+   GA SB52 | 2019-2020 | Regular Session (2019, May 12) retrieved December 1, 2023
+https://legiscan.com/GA/text/SB52/2019
+11
+   GA SB441 | 2019-2020 | Regular Session (2020, March 10). Retrieved August 15, 2023, from
+https://legiscan.com/GA/bill/SB441/2019
+12
+  GA HB1330 | 2021-2022 | Regular Session. (2022, March 16). Retrieved August 15, 2023, from
+https://legiscan.com/GA/bill/HB1330/2021
+
+
+                                                                                                                     2
+Related Economic Activity
+The GMTC focused on supporting economic activity in live music performances and recorded
+musical performances for entertainment production segments of the music industry. CBAER has
+selected two North American Industry Classification System (NAICS) code sections to analyze
+the GMTC-related part of the music industry, which are Music Publishers (NAICS 51224) and
+Performing Arts Companies (NAICS 7111) industries. The Music Publishers industry includes
+establishments that acquire and register copyrights for compositions used in television, motion
+pictures, live performances, or other forms of interactive entertainment. Establishments in this
+industry either own copyright or act as the administrator of the music copyright on behalf of
+the owner. In contrast, establishments in the performing arts industry are engaged in producing
+live performances using actors and actresses, singers, dancers, musical groups/artists, and
+other performing artists.13 Combined, these two industries cover the majority of the activities
+included in the GMTC. Due to the targeted approach of the GMTC, not all of the economic data
+discussed in this section would be eligible for this tax credit. Rather, the information presented
+in this section is designed to outline the total economic value of the music publishers and
+performing arts industries in the United States and the state of Georgia. CBAER included
+information at the national level because the tax credit focused on performers and
+performances in Georgia sharing their work beyond the state of Georgia.
+The team began by examining the music publishing industry and how it has changed over time.
+In the past, physical album sales were a major driver of revenue for this industry. Now, as
+consumers move from physically owning music to streaming, those streaming platforms (e.g.,
+Spotify, Apple Music, SoundCloud, etc.) are producing the most revenue for these artists. For
+artists and producers, this shift away from physical album purchases has increased the value of
+having strong content licensing agreements. These licensing agreements typically have three
+main forms: performance royalties, mechanical royalties, and synchronization royalties.
+Performance royalties encompass music that is broadcasted through TV, radio, or other
+means.14 Mechanical royalties consist of funds that are created through tape recordings, music
+videos, and other sales of the video. This form of licensing could be a physical copy of the
+recording, such as on a tape or a vinyl record, or a digital reproduction of a digital song, its
+ringtone, and the broadcasting on streaming platforms such as Spotify, Amazon Music,
+Pandora, Apple Music, etc.15 The final type of royalty is the synchronization royalty, which
+includes music found within audiovisual productions or music used in films, TV programs, TV
+commercials, and video games. Many artists use this form of licensing to promote their music
+and drive engagement using visual media.16
+
+13
+   North American Industry Classification System (NAICS) U.S. Census Bureau. (n.d.).
+https://www.census.gov/naics/?input=71&chart=2022&details=7111
+14
+   IBISWorld (Jan 2023) Music Publishing in the US
+15
+   Zantal-Wiener. (2022, October 10). In the Streaming Era, How Do Most Users Consume Music? Retrieved
+November 15, 2023, from https://blog.hubspot.com/marketing/online-music-listening-preferences
+16
+   Ibid.
+
+                                                                                                         3
+National Overview
+The music publishing industry was estimated to have $7.2 billion in revenue in the United
+States in 2023. This revenue supports 790 establishments and a total employment of 6,063
+workers across the entire United States. Focusing on TV, film, radio, video, and advertisement
+production and performance accounted for $5.5 billion in revenue in 2023. This revenue
+accounts for 76.4 percent of the music publishing industry’s revenue. Film and TV production
+have typically used recorded music in their productions. Over time, these usages fluctuate
+based on the needs of film and TV producers. The current trend is away from pop songs and
+towards scores directly composed to follow the action in a scene. One future source of growth
+for the music publishing industry is that video game producers will become a larger part of this
+industry, as game creators are increasingly willing to pay for high-quality songs to enhance the
+gaming experience for consumers. Not only are video game producers taking advantage of
+music production, but advertisers are also finding that music can make their content more
+effective by using songs to promote their products. The need for engagement and new sources
+of revenue is changing how copyright holders and artists seek to promote and monetize music.
+The remainder of the music publishing industry focuses on the production of physical
+recordings and digital songs. This includes both physical album sales using mediums like vinyl
+records and songs played on streaming platforms or those as ringtones for cell phones. Also
+included in this segment are sheet musicals and films or books by music creators. In 2023, this
+part of the music publishing industry had $1.58 billion in revenue, which is 21.9 percent of the
+total revenue for this industry.17
+Over the next five years (2023-28), physical album sales are predicted to further decline by 8.3
+percent per year, while the demand for streaming services is expected to grow by 7.3 percent
+each year. However, due to the low royalty rates paid by streaming services, this increase will
+not account for the loss of revenue from the physical album sales. Therefore, many copyright
+holders are considering licensing agreements with other production companies and live
+performances to regain that revenue.18
+Since copyright holders are turning to production companies and live performances, CBAER
+next examined the musical or theatrical performance industry in the United States. In the live
+performance theaters industry, which includes musical theater and opera, non-musical
+performances, and other arts performances, revenue reached $8.4 billion in 2022 and
+employed over 92,800 people. It is projected to increase to $9.3 billion in 2027 and employ just
+over 107,000 people. Due in part to population growth, the southeastern United States has
+been noted as a growth area for this part of the industry as theaters track wider population
+growth.19 Finally, the team examined the industry from the perspective of performers. For
+theater performers, live performances of musical groups and artists are the single largest
+
+17
+   Ibid.
+18
+   Ibid.
+19
+   IBISWorld (Sep. 2023) Live Performance Theaters in the US
+
+                                                                                                   4
+source of revenue for the industry, with artists making up most of that revenue. This accounts
+for 39.2 percent of total industry revenue, which is equal to $2.8 billion in 2023. It is followed
+closely by recording and royalties at $1.4 billion and salaried and contract income of $1.3
+billion, which covers musicians who play in orchestras or choirs.20
+
+Georgia Economic Overview
+CBAER analyzed the current economic trends in Georgia using the same NAICS codes as used in
+the previous section. As noted previously, these codes likely included businesses that could
+benefit from the GMTC and some that would not. CBAER used three variables in this analysis:
+employment, establishments, and gross state product data for Music Publishers (NAICS 51224)
+and Performing Arts Companies (NAICS 7111). The team sought to highlight the current activity
+level in relevant associated industries and set a baseline for economic activity.
+CBAER used a five-year time frame spanning the years 2018 to 2022. The selected date range
+fits within the timeframe the GMTC was active. The NAICS code used in this section was not
+specifically included in the GMTC. Rather, CBAER used a similar analysis of the music industry
+prepared by other researchers to confirm the code selected for this analysis. In a report
+published by Portland State University prepared for Business Oregon, the economic
+development portion of the Oregon State Government, both NAICS 51224 and NAICS 7111 are
+included in the music and sound recording and performing arts trade clusters.21
+Table 1 illustrates the employees in Georgia within the industries linked to the GMTC
+throughout the years 2018 – 2022. The team looked into the music publishers and performing
+arts companies’ sectors in order to align with the Musical Tax Credit. In Table 1, there are
+notable changes that occurred within the five years.
+
+
+
+
+20
+  Ibid.
+21
+  Northwest Economic Research Center. (2023). The Power of Music - An Economic Analysis of Oregon’s Emerging
+Commercial Music Industry Final Report.
+https://www.oregon.gov/biz/Publications/Emerging_Industries/CommercialMusicIndustry.FullReport.pdf
+
+                                                                                                           5
+                       Table 1: Employment in GMTC Linked Industries
+                                     2018      2019    2020    2021          2022
+              Music Publishers        104       116     126     135          141
+              Performing Arts
+                                     3,231    3,352   2,370 2,606            3,143
+              Companies
+              Total                  3,335     3,468   2,496   2,741         3,284
+              Source: JobEQ®
+
+Between 2018 and 2022, both industries linked to the musical tax credit had a total average
+employment of 3,064 jobs statewide. Employment in music publishing industries and
+employment in performing arts companies had opposite trends between 2018 and 2022.
+Employment for music publishers has steadily increased since 2018. In contrast, employment
+for performing arts companies has steadily increased until 2020, followed by a decrease in 2021
+and a slight recovery period in 2022. Despite the recovery from the low point in 2020, the
+performing arts companies' employment rate remains lower than its 2018 value. Total
+employment in the industries closely linked to the musical tax credit decreased by 1.5 percent
+between the years 2018 and 2022.
+
+Next, the team examined total establishments for these same industries. Total establishments
+increased in Georgia between 2018 and 2022.
+                       Table 2: Establishments in GMTC Linked Industries
+                                       2018     2019     2020     2021     2022
+                Music Publishers        15        15      18       20       23
+                Performing Arts
+                                        210      218      250     272      298
+                Companies
+                Total                   225      233      268     292      321
+                Source: JobsEQ®
+
+Establishments in the music publishers and performing arts companies have increased steadily
+since 2018. The number of establishments in these sectors of the live performance industry was
+seemingly unaffected by the COVID-19 pandemic. When comparing 2022 to five years prior,
+establishments increased by 7.3 percent on an average annual basis.
+Finally, the team analyzed the Gross Domestic Product (GDP) linked to the Music Tax Credit
+industries. Table 3 illustrates the Gross Domestic Product for the Music Tax Provision in Georgia
+over the past five years, from 2018 to 2022.
+
+
+
+
+                                                                                                6
+                  Table 3: Gross Domestic Product for GMTC Industries - Georgia*
+                                          2018       2019     2020       2021                      2022
+        Music Publishers                    $164.53       $170.88      $111.63      $141.15     $191.56
+        Performing Arts Companies            $46.58        $52.84       $42.89      $42.91       $44.85
+        Total                               $211.12       $223.71      $154.52      $184.06     $236.42
+        Source: JobsEQ®
+        *Millions
+
+As seen in Table 3, the GDP for the musical tax credit has fluctuated over the past five years,
+with an initial increase from 2018-2019, a sharp decline in 2020, and a recovery from 2021-
+2022, with 2022 values of GDP surpassing that of 2019. Total GDP between both sectors
+declined in the year 2020 by 31 percent from the year prior. For these numbers to return to
+where they were in 2018, before the pandemic, GDP needs to increase by $56.6 million, or 37
+percent. Total GDP for both sectors rose again in 2022 by 24 percent, equaling a difference of
+$81.9 million. The music publishing sector was able to successfully achieve and surpass pre-
+COVID levels, while the performing arts companies sector is still recovering.
+To conclude this section of the analysis, CBAER included information that outlines the wider
+economic impact of this industry. The information included provides an upper bound for the
+potential economic value of the music industry. By design, the GMTC focuses on a narrow
+segment of this industry. Georgia Music Partners noted that the economic impact of the music
+industry is already a part of the economy of this state. The organization has examined a broad-
+based segment of live performances, which included concerts and other forms of live
+entertainment in Georgia. In 2019, the impact of all live performances in Georgia was $2.7
+billion, which supported 24,124 jobs and generated $113 million in total state and local tax
+revenues.22
+Additionally, Georgia Music Partners also examined the music recording industry. This analysis
+found that the industry contributed $2.5 billion to the state's gross domestic product, which, in
+turn, supported 45,122 jobs. This led to the development of 9,613 music establishments,
+13,167 royalty recipients, and 91,529 songwriters in Georgia.23 In summary, both reports
+demonstrate that the music industry goes beyond the segments covered by the GMTC.
+
+
+
+
+22
+   The Concerts and Live Entertainment Industry. (n.d.). In Georgia Music Partners. Oxford Economics. Retrieved
+November 15, 2023, from https://georgiamusicpartners.org/wp-content/uploads/2019/02/210723-GA-Live-
+Nation-State-One-Pager.pdf
+23
+   Georgia. (n.d.). In 50 States of Music. 50 States of Music. Retrieved November 15, 2023, from
+https://50statesofmusic.com/state-pdf/?sid=19
+
+
+                                                                                                                  7
+Other States Comparison
+To analyze how other states use tax policy incentives to support live musical or theatrical
+performances and recorded musical performances for entertainment production, CBAER
+created two different groups of states. First, CBAER selected nine other states that support
+musical or theatrical performances using tax incentives. These states include Illinois, Louisiana,
+Maryland, Missouri, New York, Ohio, Pennsylvania and Rhode Island. These states were
+selected because each had a tax credit program similar to the GMTC but focused on
+incentivizing live musical or theatrical performances. The second group of states is smaller and
+includes Louisiana, Tennessee, and Oklahoma. These states were selected because each
+provides a different example of how other states incentivized recorded musical performances
+for entertainment purposes.
+
+The analysis begins by examining the economic value of concerts and live entertainment in
+2019. The figure displayed in Table 4 came from Georgia Musical Partners and Oxford
+Economics, and the analysis was completed in 2021.
+
+               Table 4: Economic Impacts of Concerts and Live Entertainment in 2019
+                             Total Economic                              State & Local Taxes
+ State                       Output Impact*            Total Jobs             Generated*
+ New York                                $7,800                         48,264       $509
+ Illinois                                $3,900                         28,192       $294
+ Pennsylvania                            $3,900                         25,291       $315
+ Ohio                                    $2,900                         22,467       $170
+ Georgia                                 $2,700                         24,124       $113
+ Missouri                                $1,600                         12,071       $115
+ Maryland                                 $655                          5,139         $41
+ Rhode Island                             $551                          4,772         $28
+ Louisiana                                $543                          4,511         $57
+ *Millions
+ Source: Oxford Economics, The Concerts and Live Entertainment Industry, July 2021
+
+
+
+Table 4 illustrates that Georgia has a strong concert and live entertainment industry in terms of
+total economic output. Georgia ranks fifth in our sample with a total economic output impact of
+$2.7 billion, which includes direct, indirect, and induced transactions. Looking at total jobs,
+Georgia ranked fourth, moving past Ohio to just below Pennsylvania.
+Next, Table 5 below displays the credits, eligible applicants and activities, and tax caps.
+
+
+
+
+                                                                                                     8
+                          Table 5: Other State Music Industry Incentives and Tax Credits
+  State: Theater                Incentive                Eligibility Applicants and                            Tax Caps
+ Credit Program                  (Credit)                          Activities
+   Illinois – Live     20% of Illinois labor expenses and     Spend $100,000+ on labor and          $500,000 cap for each applicant
+       Theater         production spending per tax year     marketing for a scheduled Broadway             for each tax year
+                                                             production within 12 months of
+ Production Tax         Additional 15% credit for labor             Illinois presentation           $2 million cap for all applicants
+Credit Act (35 ILCS     expenses paid if high poverty or                                                  for each fiscal year
+         17/)           unemployment state residents         Or an Illinois production that lasts
+                                                                eight weeks and at least six
+                                                                 performances each week
+    Louisiana –       7% when investment is greater than                                            Cannot exceed base investment
+                                                                 Expenditures made from              in production or infrastructure
+   Musical and         $100,000 and less than or equal to
+                                                              investments in a state-certified                  projects
+     Theatrical                   $300,000.
+                                                              musical or theatrical production
+    Production         14% when investment is greater                                                    $1 million per project
+Income Tax Credit                                           Construction, Repair, or Renovations
+                       than $300,000 and less than or         of facilities of said productions
+   (RS 47:6034)              equal to $1 million                                                    $10 million for all projects per
+                                                                                                          given fiscal year
+                                                               Payroll of Louisiana residents
+                          7% of payroll for Louisiana
+                                  residents.                                                         Payroll credit is capped at $1
+                                                              Employment of college technical          million paid to any single
+                                                               students for said production                    individual
+                       Additional credit of 0.072% of the
+                       amount spent to employ students
+   Maryland –                                                  exceed $100,000 of direct cost
+    Theatrical                                                    incurred in Maryland for
+                                                                 development, production,           $2 million for a single theatrical
+ Production Tax                                                 performance, or operation of                   production
+      Credit            25% for all direct costs used for
+                                                                    theatrical production
+                      theatrical productions in Maryland
+ (Md. Code, Tax-                                                                                    $5 million for all production per
+  Gen. S 10-756)                                               Compensations for an individual               given fiscal year
+                                                                exceeding $100,000 cannot be
+                                                                  included in the total costs
+New York - Empire                                           Live Musical or theatrical production
+State Musical and                                            that has eight shows in more than
+                         25% of qualified expenditures          three locations may apply for:
+    Theatrical                                                                                      $8 million for all production per
+ Production Tax          $25 million infrastructure tax      Pre-tour production costs, salaries,                  year
+ Credit Program            incentive for reallocation       wages, and other compensation are
+ (5 NYCRR S 240)                                               capped at $200,000 per week,
+                                                            technical and crew production costs
+  Rhode Island -                                             Musical and theatrical production
+   Musical and                                              companies that have a minimum of
+                                                                                                        $5 million per taxpayer
+    Theatrical                                              $100,000 may claim for production,
+                       30% of total eligible expenditures
+  Production Tax                                             performance, and transportation
+                                                                                                      $15 million for all taxpayers
+Credits – (R) Gen.                                             expenses for pre- and post-
+                                                                  Broadway production
+ Law S 44-31.3-2)
+
+
+
+
+                                                                                                                         9
+(Continued) Table 5: Other State Music Industry Incentives and Tax Credits
+  State: Theater                  Incentive                   Eligibility Applicants and                            Tax Caps
+  Credit Program                   (Credit)                             Activities
+    New York –       At level one the production facility The facility must be in the Manhattan          At level one it is up to $3 million
+   Musical and        can receive tax credits of 25% of   area containing 500 seats or more, at
+                                   expenses               least one stage, and other production
+     Theatrical                                             amenities, and live performances
+  Production Tax
+  Credit (N.Y. Tax                                           Companies must implement N.Y.                Level two it is up to 350,000 if
+    Law S 24-C)       At level 2 the production facility  state-approved diversity and arts jobs            the production budget is
+                         can receive tax credits of 25% of      training plans to make these                        $750,000
+                                    expenses                 productions available to low-income
+                                                                          residents
+
+                                                             Ongoing productions with revenues
+                                                             exceeding 200% will be required to
+                                                             contribute 50% of their tax credit to
+                                                               The Arts Cultural Program Fund
+   Missouri –                                                                                             The beneficiary will receive no
+ Entertainment                                                                                             more than $1 million in tax
+                                                                                                         credits if expenses are less than
+Industry Jobs Act                                                                                                    $4 million.
+(Missouri SB 170)
+                                                               Tax credit for rehearsal and live
+                            30% of qualified expenses                                                       $2 million in tax credits if
+                                                                entertainment tour expenses
+                                                                                                         expenses exceed $4 million but
+                                                                                                              less than $8 million.
+
+                                                                                                          $3 million in tax credits if they
+                                                                                                            spend at least $8 million.
+ Pennsylvania –           25% for all qualified expenses
+ Entertainment          spent at class one and two venues.    Available for concert management
+                                                              companies that produce concerts
+    Economic              30% of qualified expenses are         with live musical performers
+  Enhancement                                                                                              Annual cap of $8 million and
+                           spent at class one and three
+                                                                                                            spend at least $3 million in
+Program(Pennsylv                      venues                  Must spend ten days rehearsing in
+                                                                                                          equipment from Pennsylvania
+  ania S 8774-D)                                             qualified rehearsal facility (at least in
+                                                                                                                   companies
+                          35% of qualified expenses are                  class 1 venue)
+                        spent on Class 1 and 3 venues that
+                                                                                                          A single tour can be as low as
+                               do not serve alcohol           Rehearsal expenses in Pennsylvania
+                                                                                                           $0.8 million to $2.0 million
+                                                              must accumulate to at least 60% of
+                          Additional 5% of tax credits of    rehearsal expenses during the whole
+                        qualified expenses spent on two or                  tour
+                            more class 2 and 3 venues
+   Ohio Motion                                                   Spend at least $300,000 per
+                                                                                                           $50 million per year for all
+Picture Tax Credit                                           production run by a professional cast
+                                                                                                          motion picture and Broadway
+                                                              and crew and associated with New
+ (Ohio S 122.85)                                             York City’s Broadway theater district
+                                                                                                                  productions
+                           30% of eligible expenditures
+                                                                                                             $5 million for theatrical
+                                                               Expenditures include goods and
+                                                                                                                  productions
+                                                             services purchased and consumed in
+                                                                the state related to production
+                                                                                                         $45 million for motion pictures
+                                                                            activities
+
+                                                                                                                             10
+As seen in Table 5, tax credits are provided for businesses that invest in rehearsal, production,
+performance, marketing, construction, renovations, and labor required to stage large-scale
+musical and theatrical productions. States like Illinois, Ohio, and Rhode Island require applicants
+to market and perform in a Broadway, pre-Broadway, post-Broadway, or Broadway touring
+production. Louisiana requires theatrical development within the state. Maryland also credits
+pre-Broadway productions as well as other national touring productions. States such as New
+York and Pennsylvania also have contingencies based on the level of the venue in which the
+production is being performed.
+With few exceptions, the eligibility requirements for all states that have a musical and theatrical
+production tax credit are similar in terms of basic structure. Applicants need to reach a
+minimum spending requirement and have numerous rehearsals and performances across a
+specified time, usually within the state.
+Illinois provides a 20 percent tax credit on labor and production expenses plus an additional 15
+percent tax credit for labor expenses to high-poverty individuals. This additional focus
+accounting for social and demographic considerations is also apparent in Louisiana, where they
+provide a 7 percent tax credit for the payroll of Louisiana residents and 0.072 percent of the
+amount spent on the employment of students. The New York Musical and Theatrical Production
+Tax Credit is the only tax credit that requires companies to implement the New York state-
+approved diversity and arts jobs training, which makes these productions available for low-
+income residents. Additionally, ongoing productions with revenues exceeding 200 percent of
+qualified expenditures must contribute 50 percent of the tax credit to the nonprofit Arts
+Cultural Program Fund. This program focuses solely on New York City, both Broadway and Off-
+Broadway. The New York Empire State Musical and Theatrical Production Tax Credit Program is
+the state program for areas outside of New York City. These are examples of incentivizing the
+arts not just for economic development but to target other social and welfare outcomes as
+well.
+Most states commonly include a 25 to 35 percent tax credit for all qualified expenditures, likely
+due to the competitive nature of the music industry. Some states have caveats, such as
+Pennsylvania, wherein tax credit is increased for all qualified expenses depending on the class
+of the venue in which the production is being performed. The annual cap for all theatrical
+productions ranges from $5 million to $15 million, with $1 million through $5 million usually
+being the cap for a single theatrical production. Meanwhile, in Missouri, the cap rises
+depending on the amount of investment put into a theatrical production. The most eligible
+applicant can receive $3 million in tax credits if they spend at least $8 million on qualified
+expenditures. In Pennsylvania, the cap is determined by the amount of tour-related equipment
+purchased or rented from local businesses, with caps increasing to $2 million to $3 million for
+equipment purchases or leases over $4 million and $8 million, respectively.
+Tax credits are refundable in Louisiana, Maryland, New York, and Ohio, which eliminates the
+need to carry forward periods of unused credits. Louisiana also allows the transfer of credit in
+                                                                                                   11
+addition to the credit being refundable. Illinois, Rhode Island, Missouri, and Pennsylvania also
+have provisions for the transfer of credits. Illinois and Missouri allow carryforwards of unused
+credits for five years, and Rhode Island and Pennsylvania allow three-year carryforwards.
+Next, the team examined three tax credit programs that support recorded musical
+performances for entertainment production in different ways. First, Oklahoma used music as an
+uplift within the film tax credit. The base incentive is 20 percent for projects shot in Oklahoma.
+If at least one percent of qualified expenditures are spent on music in Oklahoma, then the
+incentive can increase by 2 percent.24 Including music with film credits ensures that spending
+on music comes with other direct inputs.
+Next, the state of Louisiana has a Sound Recording Incentive Program, which offers an 18
+percent tax credit to qualifying projects. To qualify, the total project must be $25,000 in
+expenditures, with at least $10,000 coming from Louisiana residents. This program also has a
+$100,000 cap per project and a total program cap of $2.16 million in annual spending. Examples
+of activities included are music or vocal recording in the form of tracking and overdubbing, film
+scoring, spoken word performance, and live music performances.25
+Third, the state of Tennessee offers the Tennessee Entertainment Tax Credit, which specifically
+incentivizes post-production activities, including audio and visual post-production, visual effects
+(VFX), and music scoring. The minimum amount required is $50,000 for post-production
+activities. This is in addition to other activities, including features, episodic television (scripted
+and non-scripted), animation, and video game development. After this minimum is met, 40 to
+50 percent of Qualified Payroll Expenses is covered in tax credit based on county of residence.
+This credit has been linked to several video game musical scores, including Call of Duty,
+Madden, and Star Wars and TV series/films for Lost in Space (seasons 2 and 3), Fargo (season
+1), and The Shack.26
+Finally, comparisons to programs in other states provide indications as to why the GMTC was
+not used. The minimum qualified expenditures of at least $500,000 on the production of live
+musical or theatrical performances are above other state requirements, except when compared
+to those targeted to Broadway and Off-Broadway productions. Additionally, the credit of 15
+percent of qualified expenditures with an additional 5 percent for expenditures in tier 1 and tier
+2 counties is lower than the 25 to 35 percent incentive generally offered by other states. It
+appears that eligibility requirements in Georgia were higher than in other states, and the tax
+credit was not as competitive as provisions offered in other states.
+
+24
+   Oklahoma film + music office - filmed in Oklahoma act of 2021. (2015, June 23). Oklahoma Film and Music Office.
+https://www.okfilmmusic.org/incentives\
+25
+   Sound Recording Program. (n.d.). Louisianaentertainment.gov. Retrieved December 7, 2023, from
+https://www.louisianaentertainment.gov/music/sound-recording-program
+26
+   F&E Incentive. (n.d.). Tnentertainment.com. Retrieved December 7, 2023, from
+https://www.tnentertainment.com/film/incentives/fe-incentive
+
+
+                                                                                                               12
+Economic Activity
+Estimating the economic activity linked to the GMTC was complicated because this tax credit
+was never awarded. This led the research team to develop several different ways to estimate
+the potential economic impact of this tax credit. CBAER first conducted an economic
+contribution analysis based on the six instances when GMTC applications were received over
+the life of the credit. Using these applications, the team sought to provide information on the
+potential economic value based on past performance. Next, the team examined the potential
+amount of tax credit that could have been awarded. These figures will be compared to the job
+creation figures and a potential alternative use analysis that will provide an idea of what the
+credit was able to fund. This section will conclude with an analysis of possible factors that could
+influence the use of this tax credit.
+
+Economic Contribution Analysis
+This analysis is based on the six applications retained by the DOR for the GMTC program. These
+six applications lacked the pre-certification letter for the GDEcD required under the Georgia
+Music Tax Credit rules. These applications were forwarded to GDEcD and were denied the pre-
+certification. Following another search of records by DOR, it was determined that no tax credit
+was issued under this tax credit. The applications provided to CBAER were anonymized, so it
+was not possible to determine if the projects took place. However, 51 percent of proposed
+expenditures were in the recorded musical performances for entertainment production, and 49
+percent were in the live musical or theatrical performances. Due to the lack of issued credit,
+CBAER is treating applications as if they were approved. By operating under the assumption
+that these applications were approved, CBAER is working to provide information on what the
+impact of the tax credit could have been. This will provide one scenario of what a similarly
+designed music tax credit could do to future economic growth and state revenue.
+The economic impact analysis was calculated using IMPLAN, one of the most widely utilized
+input/output models. It was created as a partnership between the United States Forest Service
+(USFS) and the Federal Emergency Management Agency (FEMA) in the mid-70s. This model was
+privatized in 1991 and is now a fully private company. It is one of the most commonly used
+input/output models in the United States.
+IMPLAN uses four variables to describe the economic contributions linked to what is being
+studied: output, gross regional product, labor income, and employment. Output covers the
+value of industry production, which includes net sales and inventory changes estimated by
+using annual production estimators embedded in IMPLAN. Next, to measure the value added,
+the intermediate impact has been removed from the output category. Intermediate goods
+include the consumption of goods and services purchased from other industries or imported
+from outside the target area. The third variable is labor income, which consists of both
+employee compensation and proprietor’s income and includes both wages paid and benefits
+provided to employees. The inputs used in the IMPLAN model include both factors. The final
+variable is employment, which includes all full-time, part-time, and temporary labor. These four
+
+                                                                                                 13
+variables work across the economy to define the types of economic impacts linked to the
+GMTC.
+When combined, these variables will demonstrate the economic contribution linked to the
+direct inputs. It is the input variables that typically provide the starting point for the analysis.
+Generally, the larger the direct contribution made to the economy, the larger the corresponding
+increase in total economic impact.
+The spending linked to the GMTC represents the amount of economic activity linked to the
+applicant. This, in turn, represents the total amount of economic activity that could have been
+supported by this tax credit. The spending that was linked to these applications has been
+aggregated and modeled in the input/output model IMPLAN, and it covers the 2018 to 2022
+timeframe in which the credit was available.
+                       Table 6: 2018-2022 Potential Economic Contribution
+                                   Linked to GMTC Applications
+                                         Value
+                          Output*+                   Labor Income*+ Employment
+                                        Added*+
+              Direct       $3.65         $2.49           $1.79            26
+              Indirect     $1.29         $0.72           $0.41            7
+              Induced      $1.95         $1.14           $0.62            11
+              Total        $6.89         $4.35           $2.81            45
+              * Dollars in millions: + Current year dollars
+
+Between 2018 and 2022, the potential total output impact of these applications was $6.89
+million, which includes $3.65 million in direct transactions. Also included in these impacts are
+the secondary transactions, which include indirect spending, that is, business-to-business
+transactions. Regarding output, these reached $1.29 million in potential spending. The next
+category is induced effects, which covers business-to-consumer spending-induced effects,
+which reached $1.95 million.
+The potential GMTC spending also supported 26 direct jobs and 45 total jobs, totaling $2.81
+million in labor income; these job figures include full-time, part-time, and temporary workers.
+When these jobs are linked to the live performance segment of the industry, it is unclear which
+jobs are full-time year-round and which are contracted or time-limited, such as to support an
+event. As noted, IMPLAN does not distinguish between these types of positions.
+Additionally, this analysis did not include event spending by vendors or attendees. The
+economic value of an event comes from spending and transactions at the event and visitors to
+the local community. Due to data availability, CBAER did not have this type of information to
+include in the analysis.
+However, in the future, this type of economic impact analysis of a live event should include the
+number of visitors who traveled to the event from outside of the local area, the expenditure of
+
+                                                                                                   14
+each visitor, and the primary purpose of the trip. Following common best practice guidelines,
+local attendees of the festival are excluded from the analysis, as their contribution to the local
+economy is not unique. In other words, locals are spending funds at the event that likely would
+have been spent in the area in the absence of an event.27 In contrast, visitor spending is unique
+because these funds are temporary and vary over time, which can have a significant impact on
+the economic system. Furthermore, visitors from outside the area can be classified into two
+groups: those whose primary reason for visiting the area is the event and those whose primary
+reason for visiting the area is something else. For an economic impact analysis, events with
+more first-time or new visitors to the area are more valuable than those visitors who travel to
+the region primarily for another purpose and also attend the event.28
+Direct effects can be analyzed through the immediate purchases and expenditures of visitors
+and tourists who attend these events, including ticket sales, lodging/hospitality, food,
+transportation, entertainment, and more. Indirect effects of a live event would come from the
+goods and services purchased by businesses to fulfill the needs of the music festival and
+subsequent tourism industry. For example, due to consumer demand, restaurants and hotels
+will need to restock their inventory. Finally, induced effects occur when employees in the direct
+and indirect impact industries spend money on goods and services in the local economy.
+An example of the local impact comes from the Savannah Music Festival. According to a survey
+conducted by the University of Georgia School of Hospitality and Food Industry Management,
+more than 40 percent of the audience traveled from out of town, stayed four nights in
+Savannah hotels, and were responsible for $8.6 million in spending during the festival.29
+
+
+
+
+27
+   Bracalente, B., Chirieleison, C., Cossignani, M., Ferrucci, L., Gigliotti, M., & Ranalli, M. G. (2011). The Economic
+Impact of Cultural Events: The Umbria Jazz Music Festival. Tourism Economics, 17(6), 1235-1255.
+https://doi.org/10.5367/te.2011.0096
+28
+   Music Festival at Sunrise Ranch: Economic Impact Analysis. (n.d.). In Larimer County. Larimer County.
+29
+   Shumake, L. (2023, June 26). Box Office Breaks Records - Savannah, GA | Savannah.com. Savannah, GA |
+Savannah.com. https://www.savannah.com/box-office-breaks-records-for-savannah-music-festival-
+2023/#:~:text=The%20nonprofit%20organization%20also%20generated,%248.6%20million%20in%20direct%20spe
+nding
+
+                                                                                                                    15
+Use Analysis
+If all of the analyzed tax credits for the applications had been awarded between 2018 and 2022,
+the total amount of tax credit issued would have reached $561,000. Following the format used
+in the economic contribution analysis, CBAER analyzed this as if it had been awarded. This
+subsection of the report focuses on the contribution these funds made to the state economy
+and to tax collections using the not-credited tax credit as the direct input.
+                                 Table 7: State Government–
+                          2018-2022 Alternative Use Economic Impact
+                        Output*+     Value Added*+ Labor Income*+         Employment
+ Direct                  $561.0           $380.2          $270.7               4
+ Indirect                $200.1           $111.5          $63.8                1
+ Induced                 $296.3           $174.1          $93.8                2
+ Total                  $1,057.4          $665.8          $428.3               7
+ *Dollars in thousands, + Current year dollars
+
+The economic contribution of the not credited funds linked to state government spending
+supports four jobs in direct state employment and seven total jobs. Additionally, this spending
+increased the direct value added at the state level by $380 thousand in direct spending and
+$665.8 thousand in total after this spending moved through the economy. These jobs have pay
+and benefit packages that are close to $61,720 in annual compensation.
+Next, CBAER estimates the total amount of tax revenue that would have been collected
+following the economic contribution analysis. Table 8 displays the total tax collection for both
+state and local governments in Georgia from 2018-2022.
+                   Table 8: Combined State and Local Governments –
+            Average Alternative Use Tax Collections Without the Tax Credit *+
+                                                                State       Local Taxes
+ Georgia Income Tax Estimate                                   $14,135
+ Sales Tax Estimates                                           $3,530         $2,974
+ Georgia All Other Taxes (estimated at 22% of total GA tax)    $4,982
+ Property                                                                      $476
+ Total State and Local Tax Estimate                           $22,648         $3,451
+ * Whole numbers; + Current year dollars
+
+
+Using the economic contribution analysis, the total state tax collection reached $22,648 while
+local tax collection hit $3,451. These findings are not new tax collections, rather these are the
+proportion of existing tax collections that are estimated to be linked to the GMTC. Additionally,
+the revenue is connected to the secondary impact of individuals paying state and local taxes.
+For revenue collected at the state level 62.4 percent of payments made were income tax
+collections. In contrast, sales taxes made up 86.2 percent of local government revenue in the
+analysis.
+
+                                                                                                   16
+But For Analysis
+Estimating the But For was challenging because CBAER was working with randomized data. This
+made it unclear if any of the events/recording sections took place. Considering the substantial
+economic value of the recorded music and live performance industry highlighted in the Georgia
+Economic Overview Section, the modest economic contribution of GMTC makes this tax credit
+seem relatively insignificant. However, this tax credit could bring live theatrical performances to
+more communities across the state of Georgia by providing a launching pad for traveling shows.
+A typical Broadway-style show brings in 35 people from out of state to start a tour. This leads to
+an investment of $750,000 to $800,000 in the host theaters and other support services, with an
+average length of stay of seven days. This allows theaters to fill their building at off-peak times
+while being able to host a high-quality show at the end of this timeframe. For smaller theaters,
+this could be a strong revenue source because traveling shows like to start in smaller markets
+where it is more affordable to refine their process.30 In addition, touring musical acts can
+employ 200-300 people while on the road, and these acts also like to start in smaller markets
+and can take several weeks to get going.31
+When it came to recorded musical performances for entertainment production, the intent of
+the GMTC was to bring more independent film-scoring projects to Georgia. Under current law,
+projects shot in Georgia can do their scoring in this state as part of the Georgia Film Tax credit.
+However, projects shot outside of Georgia are not covered by this law. Records of the
+frequency of these requests were not readily available from either the industry or state
+government. Given the intent of the GMTC law, it was managed by the Georgia Film Office. This
+presented management challenges for both Film Office personnel and potential users of the
+GMTC.32
+Following the limited specific data available, CBAER conducted a shift-share analysis, which
+compared employment growth for performing arts companies and sound recording studios in
+Georgia to national growth rates to identify regional differences and economic changes.
+Table 9 displays a shift-share analysis for the musical performance industry within Georgia
+based on employment. A shift-share analysis is a type of analysis used to display growth for
+both employment and competitiveness within a given industry in set regions. It also displays
+differences between local and national economies. The percentages are calculated for each
+column, so they do not total 100 percent.33
+A shift-share analysis was used to determine the primary factors behind the growth within the
+performing arts industry and the sound recording industry. Specifically, the analysis was used to
+
+30
+   Interview with Norman Easterbook, Executive Director/CEO, RiverCenter For the Performing Arts, Colubmus
+Georgia, November 15, 2023
+31
+   Interview with Mala Sharma, Preisdent, Georgia Music Partners, November 3, 2023
+32
+   Interview with Mala Sharma, Preisdent, Georgia Music Partners, November 3, 2023
+33
+   Ziuznys, A. (2023, July 26). Shift-Share Analysis: Determine the Competitiveness of an Industry. Coresignal.
+https://coresignal.com/blog/shift-share/
+
+                                                                                                                  17
+determine if national economic growth, local properties, or the overall industry were the
+primary reasons for growth within Georgia.
+Table 9 displays national growth, local competitiveness, and industry mix share. National
+growth is the portion of growth of employment for a given industry attributed to overall
+national economic growth. Essentially, it measures how much an industry’s growth aligns with
+economic expansion in the country.34 Local competitiveness reflects the unique advantages
+that a given region offers to an industry. In the above case, local competitiveness would be the
+advantage that the state of Georgia provides to the industries that would qualify for the
+GMTC.35 The industry mix share describes what would happen in the local industry if only
+national-level factors were applied to the region.36 These factors together result in the shift-
+share analysis seen in Table 9.
+                  Table 9: Shift-Share Analysis of Live-Performance Industries 2018-2022
+                                                % National             % Local                 % Industry Mix
+     NAICS      Industry Title                   Growth             Competitiveness                Share
+                Performing Arts
+     7111                                           25%                     29%                      -45%
+                Companies
+                Sound Recording
+     51224                                          15%                     68%                      -17%
+                Studios
+     Source: Jobs EQ®
+
+
+This shift-share analysis focuses on the growth within the live performance industry,
+particularly in the sectors of performing arts companies and sound recording studios, over the
+past five years. A key highlight of this analysis is the role of local competitiveness in driving
+industry growth. With respect to performing arts companies, local factors account for 29% of
+the total employment growth in this sector. This indicates a significant influence of regional
+advantages in the expansion of performing arts companies in the state. For sound recording
+studios, an impressive 68% of the regional growth in Georgia can be attributed to local
+conditions and advantages. This substantial percentage underscores the importance of Georgia-
+specific factors in the development of the sound recording studios sector.
+The percent national growth column indicates how much economic growth in Georgia in these
+two sectors of the Live Performance industry can be attributed to the overall growth rates of
+
+
+34
+   Goodwin, K. (2018, February 15). How Shift Share Analysis Works. PropertyMetrics.
+https://propertymetrics.com/blog/shift-share-
+analysis/#:~:text=Shift%2Dshare%20is%20a%20standard,to%20unique%20regional%20growth%20factors.
+35
+   Goodwin, K. (2018, February 15). How Shift Share Analysis Works. PropertyMetrics.
+https://propertymetrics.com/blog/shift-share-
+analysis/#:~:text=Shift%2Dshare%20is%20a%20standard,to%20unique%20regional%20growth%20factors.
+36
+   Understanding Shift Share. (n.d.). In Economic Modeling Specialists, Inc. Resource Library. Economic Modeling
+Specialists, Inc. Retrieved November 15, 2023, from https://www.economicmodeling.com/wp-
+content/uploads/2007/10/emsi_understandingshiftshare.pdf
+
+                                                                                                                   18
+the sectors in the national economy. For the performing arts companies, 25 percent of its
+economic growth within Georgia can be attributed to the national growth of the industry
+sector. For the sound recording studios, 15 percent of this growth within Georgia can be
+attributed to national effects.
+In this case, the local competitiveness column indicates the advantages the state of Georgia has
+on the Live Performance industry in terms of performing arts companies and sound recording
+studios.37 For the performing arts companies, Georgia companies account for 29 percent of
+employment growth in this industry sector. Continuing with this logic, Georgia companies
+account for 68 percent of local employment growth for sound recording studios.
+Finally, the industry mix share column represents what would have happened if the national
+growth factors were solely applied to Georgia. In other words, what would have happened if
+Georgia did not have a live performance industry as defined in this report? For the performing
+arts industry, growth would have declined by 45 percent, and for the sound recording studios
+industry, growth would have declined by 17 percent.
+While the growth exhibited in the sound recording studio industry can be attributed primarily
+to the local advantages that Georgia has for these industries, the performing arts companies
+can attribute their growth equally to national economic advances as well as some of the local
+advantages that Georgia contains, such as its thriving film industry.
+
+
+
+
+37
+     Goodwin, K. (2018, February 15). How Shift Share Analysis Works. PropertyMetrics.
+
+
+                                                                                                19
+Fiscal Analysis
+The economic impact of the musical tax credit affects the state and local government tax
+collections, partly offsetting the revenue loss caused by credit utilization. Companies pay
+sales tax on particular non-exempt items purchased in-state, and their employees pay income
+tax on their wages. The impact of state and local tax receipts on economic activity is
+organized in Table 10.
+
+                   Table 10: GMTC Linked Potential Revenue 2018-2022*
+Type of Tax                              State Impact      Local Impact             Total
+Sales Tax                                   $26,414          $14,835               $41,249
+Property Taxes                                 $0            $40,568               $40,568
+Corporate Profits Tax                       $10,156             $0                 $10,156
+Other Taxes                                  $3,511           $1,853               $5,364
+Personal Income Tax                         $63,625             $0                 $63,625
+Total Tax Receipts                         $103,706          $57,256              $160,962
+*
+    Whole numbers
+
+
+To calculate the net revenue or loss due to the GMTC, the cost of the credit in terms of lower
+corporate income taxes is offset by the net of the new tax revenue generated by the economic
+activity spurred by the provision of the credit. Alternate governmental spending is not
+considered in this analysis due to the relative immateriality of the numbers. For this analysis,
+we will use the tax credit that would have been taken if the credits had been approved to
+illustrate the net impact. The net revenue gain or loss due to the musical investment tax credit
+is presented in Table 11 under the assumption that 25 percent of new economic activity occurs
+due to the provision of the GMTC, and the results if 100 percent of such activity were generated
+by the credit.
+
+            Table 11: Estimated Net State and Local Revenue Loss from the GMTC*
+Type of Tax                                                  25%               100%
+Corporate tax foregone due to tax credit utilized *       $-561,000        ,$-561,000
+New sales tax receipts                                     $10,000           $41,000
+New corporate profits tax                                   $2,000           $10,000
+New personal income tax                                    $16,000           $64,000
+New property taxes                                         $10,000           $41,000
+New other taxes                                             $1,000            $5,000
+Net tax gain or loss                                      $-522,000         $-400,000
+ROI                                                           -93.05%          -71.30%
+*Whole numbers
+
+
+Even if 100 percent of the new job creation were attributed to the music investment tax credit,
+the return would have been a negative 71.3 percent. Given the nature of many live events, such
+
+                                                                                             20
+as major concerts, the potential for the credit to provide a return on investment exists. Future
+evaluations of this credit, if reinstated in some form, should consider the type of event and
+whether it is an event that attracts out-of-state visitors. In this case, the projects were simply
+too small to have much of an impact.
+
+Public Benefit
+The public could benefit from a GMTC type tax credit in three different ways. First, by
+increasing the quality of live music and theater production, more parts of Georgia can become
+places for tourists to visit and enjoy live performances. Next, adding additional live music and
+theater production activities can enhance residents quality of life by providing more
+opportunities for entertainment and gathering places for community members. Third, by
+encouraging recorded musical performances for entertainment production, it is possible to
+expand the skills present within the workforce in Georgia.
+In Georgia, tourism is an important part of the economy. Between 2018 and 2022, spending by
+tourists has increased by 6 percent to $32.7 billion in 2022.38 In 2019, The U.S. Travel
+Association reported that the top five reasons for domestic travel were visiting relatives,
+shopping, visiting friends, fine dining, and rural sightseeing.39 Natural beauty, gastronomy, and
+historic sites are the main features that attract tourists to a particular location. Georgia
+possesses many of the aforementioned characteristics, and many of these tourist draws are
+located near population centers across the state. Developing a musical tourism landscape can
+bring value to the beauty, history, and industries already present in the state. Touring
+productions can increase the exposure of these areas, attracting new visitors and extending the
+length of stay of visitors and musical tourists alike.
+Nationally, music-related out-of-town attendees spend a total of $32.6 billion at local
+businesses, reportedly having higher sales than the organic food industry, museum and
+historical sites, theme parks and amusements, the cosmetic and beauty industry, and the
+agricultural industry. Generally, if an out-of-town attendee purchased a $100 event ticket, their
+local spending ranges between $335 and $435 on a per person per day basis.40 A healthy flow
+of music tourism can also foster a prominent reputation as an attractive location for tourists.
+Successfully promoting and cultivating music tourism could allow the state to become a
+prominent entertainment hub, increasing both cultural and economic value.
+
+
+
+
+38
+   Explore Georgia, Economic Impact of Tourism in Georgia, retrieved from.
+https://industry.exploregeorgia.org/research/tourism-economic-impact-data
+39
+   (N.d.-b). Ustravel.org. Retrieved December 7, 2023, retrieved from
+https://www.ustravel.org/system/files/media_root/document/Research_Fact-Sheet_US-Travel-Answer-Sheet.pdf
+40
+   Sacks, A. & Mariano M., (2021, July 26). The Concerts and Live Entertainment Industry: A Significant Economic
+Engine. Oxford Economics.
+
+                                                                                                              21
+Next, increasing existing residents' quality of life can be improved by access to live
+performances. Live entertainment allows for social bonding, public engagement, and the
+creation of community identity.41 The creation of a live music scene allows individuals to
+become a part of social groups, bond with others, and feel less isolated.42 The creation and
+incentivization of these social meeting spaces, including those that host live performances, can
+increase community outreach opportunities that might be unavailable otherwise.43
+Furthermore, residents gain a sense of identity through live music.44 For decades, blues, jazz,
+hip hop, and rock and roll have given Georgia a distinct cultural identity that is intertwined with
+its production of distinct musical styles. Identities created through live performances allow
+Georgia residents to feel connected to their community, allowing them to gain a sense of
+togetherness and unity. Live performances create a sense of cultural vibrancy through the
+creation and cultivation of a cultural ecology.45 Building local community identity through music
+can help to create a sense of place and, over time, can lead to increased investment and
+cultural opportunities for community members.
+Third, by supporting the development of a strong music industry linked to the entertainment
+industry, the state of Georgia is helping to build the capacity of film, television, and interactive
+entertainment production in the state. The economic value of these entertainment productions
+is split between the days these projects are in production and a support activity taking place
+around the project. One way to increase the economic value of these projects to the state of
+Georgia is to ensure that more of the post-production work on these projects is completed in
+the state. An important part of completing one of these projects is ensuring the post-
+production process Is handled efficiently and completely. This process includes the visual
+effects and the addition of music accompanying the images on screen. These musical scores can
+be a costly part of completing the project. These are funds that companies must spend, and if
+they are shot in Georgia, they are covered expenditures by the film tax credit. The GMTC was
+meant to cover projects not shot in Georgia, potentially providing more opportunities for
+companies to build the capacity of similar businesses in this state.
+
+
+
+
+41
+   Hoeven, A., & Hitters E. (2019). The social and cultural values of live music: Sustaining urban live music ecologies.
+Journal of Cities, 90, 263-271.
+42
+   Ibid.
+43
+   Ibid.
+44
+   Ibid.
+45
+   Ibid.
+
+                                                                                                                     22
+Intending to capitalize on the scoring of films, TV, and other recorded musical performances
+that were shot outside of the state of Georgia, the GMTC established an employment landscape
+for music publishing and recording occupations within the state. According to an analysis of the
+Georgia Film Tax Credit, many of the productions that received the tax credit were also shot in
+other states.46 Thus, the GMTC could have served to bolster music and sound design expertise
+within the state of Georgia by increasing the economic activity that would make it possible to
+finish production in the state.
+Finally, The Joint Georgia Heritage Study Committee in 2022 noted that Georgia is progressively
+losing business opportunities within the music industry due to the insufficiency of the tax
+credit.47 Many speakers in attendance noted that Georgia needs to utilize the tax credit for not
+only the expansion of live entertainment, but also must establish an office that is dedicated to
+the entertainment and music industry. Rob Evans, the chief engineer at Capricorn Sound
+Studios as well as owner of Creek Media at Capricorn, stated specifically that the addition of a
+commissioner for music at the state level would help aid and support music projects in
+Georgia.48
+
+
+
+
+46
+   Griffin Leslie McGuire, G. (2020). Impact of the Georgia Film Tax Credit.
+47
+   Georgia State Senate. (2022). Joint Georgia Music Heritage Report.
+https://www.senate.ga.gov/committees/Documents/JointGeorgiaMusicHeritageFinalReport.pdf
+48
+   Georgia State Senate. (2022). Joint Georgia Music Heritage Report.
+https://www.senate.ga.gov/committees/Documents/JointGeorgiaMusicHeritageFinalReport.pdf
+
+                                                                                              23
+Summary and Conclusion
+The Georgia Musical Tax Credit covered live musical or theatrical performances, recorded
+musical performances, and other qualified expenditures (equipment and labor) between the
+years 2018 through 2022. No tax credits were issued throughout the lifespan of the program. If
+applications linked to this credit were issued, the tax expenditure of $561,000 would have been
+produced, and the economic contribution could have reached a four-year total of $6.89 million
+in economic output (revenue) and $4.35 million in value added (gross domestic product). If the
+tax credits were awarded, it would have supported a total of 45 jobs. With the six applicants,
+each applicant would have received a 15 percent to 20 percent income tax credit, dependent
+on the location of the production. In terms of tax revenue, the musical tax credit state and local
+tax could have reached $160,900 between 2018 and 2022. The tax revenue for the state of
+Georgia culminated in $103,700, while the local government collection would have reached
+$51,200 in tax revenue.
+According to industry professionals, the GMTC was unsuccessful due to implementation issues.
+The initial spending threshold was set higher than what was requested by the industry, which
+proved to be difficult for many users to achieve. Furthermore, the credit was managed by the
+Georgia Film Office and was initially designed as another tool to incentivize recorded musical
+performances and other touring and theatrical productions that were either recorded or
+performed outside of the state. Productions shot within the state of Georgia were able to use
+the existing Film Tax Credit. Additionally, the live performance segment of the credit also
+contributed to the implementation issues, as it added complications for both applicants and
+reviewers.
+Through coalescence with the film industry, the GMTC has the ability to benefit the Georgia
+economy by creating a market for tourism and recording otherwise unavailable through the
+Film Tax Credit. This is especially true if the credit contains specific provisions for scoring, as do
+tax credits found within other states. In the live performance segments, states like Maryland
+and Illinois have a threshold for qualification of $100,000 as opposed to $500,000. This lowering
+of qualified expenditure requirements would allow more productions to benefit from the tax
+credit, incentivizing more productions to enter the state and contribute to the Georgia
+economy. The Film Tax Credit serves as an example of the economic contributions a successful
+tax credit can bring.
+
+
+
+
+                                                                                                   24
+

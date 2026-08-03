@@ -1,0 +1,478 @@
+% Section 2: what musicians earn, from the microdata. This is the report's
+% quantitative spine, because it is the only current source that sees the
+% self-employed majority of this workforce.
+\section{What Austin musicians earn}
+\label{sec:earnings}
+
+The Census Bureau's American Community Survey (ACS) is the one federal
+instrument that interviews households directly, records the occupation of the
+person answering, and asks about self-employment income alongside wages and
+salaries.\footnote{The specific extract used throughout this section is the
+Census Bureau's ACS 2020--2024 five-year Public Use Microdata Sample (PUMS) for
+Texas, released 2026-03-05 and downloaded from
+\url{https://www2.census.gov/programs-surveys/acs/data/pums/2024/5-Year/csv_ptx.zip}.
+The PUMS is the individual-record file that lets a researcher recompute any
+tabulation the Bureau publishes and many it does not; a parallel housing file
+supplies the household records used for the rent statistics later in this
+section. The Bureau samples roughly one percent of U.S.\ households each year
+and pools five successive samples to make small-cell estimates like the
+Austin-musician cell publishable, so the effective sample is the 2020, 2021,
+2022, 2023 and 2024 waves stacked into one file. Musicians and singers are
+Census occupation code (OCCP) 2752; music directors and composers are OCCP
+2751. The Austin metro throughout this section is the five-county
+Austin-Round Rock-San Marcos Metropolitan Statistical Area (Bastrop, Caldwell,
+Hays, Travis and Williamson counties), mapped from the survey's PUMA
+identifiers with the 2020 Census tract-to-PUMA relationship file. Employed
+status uses the Bureau's employment recode ESR in \{1, 2, 4, 5\} (civilian at
+work, civilian with a job but not at work, armed forces at work, or armed
+forces with a job but not at work).} That combination is what payroll surveys
+and administrative wage records cannot deliver: a payroll instrument sees only
+workers on someone else's payroll, and administrative wage records see only
+the covered universe of a particular tax or benefits program. Since
+Section~\ref{sec:payroll} shows that most Austin musicians work for
+themselves, the ACS is the one instrument whose universe includes them at all.
+Every estimate below pools five years of Texas
+microdata\footnote{We put dollar amounts on one basis in two steps, and the
+order matters. For person \(i\) the real value is
+\(y_i = Y_i \times (\mathrm{ADJINC}_i / 10^{6}) \times d_{2024}\), where \(Y_i\)
+is the amount as reported, \(\mathrm{ADJINC}_i\) is the survey's own income
+adjustment factor for that person's survey year, which restates all five
+survey years on a common 2024 basis and is published with six implied
+decimals, which is what dividing by \(10^{6}\) removes. The second factor is
+\(d_{2024} = C_{2025}/C_{2024}\), the ratio of Bureau of Labor Statistics
+Consumer Price Index for All Urban Consumers (CPI-U) annual averages, equal to
+\NPumsDeflTwoZeroTwoFourToTwoZeroTwoFive, and it carries 2024 dollars to this
+study's 2025 base. Housing dollars use the survey's housing factor, ADJHSG,
+in the same position. There is no merge on survey year and no year-specific
+deflator, because the survey factor has already removed the inflation inside
+the 2020 to 2024 window and applying a second one would remove it twice.} and
+apply two population definitions, each carried through to both sides of every
+comparison it enters. We compute the medians and the earnings regression on
+the positive-earnings base, employed adults aged 18 to 64 with personal
+earnings above zero. We compute the self-employment share, the health-coverage
+rates, the hours and weeks figures, and the earnings-threshold shares on the
+employed base, which drops the positive-earnings requirement so that people
+reporting zero or negative earnings from work stay in the denominator. Each
+figure below names the base it uses.\footnote{Matching the base on both sides
+matters more here than in most analyses. Comparing musicians drawn from an
+unrestricted file, one that includes people out of the labour force and
+people reporting zero earnings, against a baseline restricted to employed
+workers moves the musician median from about \$21,000 to about \$12,800 on
+the mismatch alone. Every estimate in this section uses matched bases and
+reports the unweighted record count behind it.} Margins of error come from
+the Census Bureau's replicate-weight method.\footnote{The Bureau's published
+variance method for this file is successive-difference replication, and it
+is the method it recommends for any statistic computed from the PUMS. We
+recompute every statistic on each of the 80 replicate weightings the Bureau
+distributes, and the spread of those 80 answers around the full-sample answer
+is the sampling variance:
+\[
+\widehat{\operatorname{Var}}(\hat\theta)
+  = \frac{4}{80}\sum_{r=1}^{80}\bigl(\hat\theta_r - \hat\theta\bigr)^{2},
+\]
+where \(\hat\theta\) is the estimate computed with the full person weight
+PWGTP, \(\hat\theta_r\) is the same estimate computed with replicate weight
+PWGTP\(r\), and the constant \(4/80\) is fixed by the Bureau's replicate
+design rather than chosen here. We take deviations around the full-sample
+estimate rather than around the average of the 80 replicates, the convention
+Stata labels \texttt{mse}, so the uncertainty on medians, means and
+regression coefficients in this section is directly comparable across
+statistics. The reported margin is
+\(\mathrm{MOE}_{90} = 1.645\,\sqrt{\widehat{\operatorname{Var}}(\hat\theta)}\),
+where 1.645 is the standard normal value that leaves 5 percent in each tail.
+Treating the records as an independent sample would understate the error
+substantially, because the Bureau's sample is clustered and its weights are
+calibrated to independent population controls. A small number of replicate
+weight cells are slightly negative, which the Bureau permits and which is an
+artefact of how the replicates are built; a weighted percentile is undefined
+with negative weights, so we floor the weight at zero inside the percentile
+calculation only, and means, shares and regressions use the replicate weights
+as published.}
+
+\subsection{Austin musicians earn about half what other Austin workers earn}
+
+Austin musicians report median personal earnings from work of
+\NPumsAustinMusMedpernpPos\ (\NPumsAustinMusMedpernpPosMoe) against
+\NPumsAustinAllworkMedpernpPos\ (\NPumsAustinAllworkMedpernpPosMoe) for all
+Austin workers on the same definition.\footnote{The universe on both sides is
+employed adults aged 18 to 64 living in the Austin-Round Rock-San Marcos MSA
+with positive personal earnings from work, drawn from the ACS 2020--2024
+five-year Texas PUMS. The musician cell uses OCCP 2752 (Musicians and
+Singers) and comes from \NPumsAustinMusNPos\ unweighted person records
+representing a weighted population of \NPumsAustinMusWtdPos\ people; the
+all-workers cell comes from 48,606 unweighted records representing 1.28 million
+people. Both figures use the Bureau's person weight PWGTP, so each record
+represents the number of people its weight says it represents. A weighted
+median is the smallest observed value at which the weight accumulated at or
+below that value reaches half of the total weight,
+\(\hat\theta_{0.5} = \inf\{\,y : \sum_i w_i\,\mathbf{1}(y_i \le y)
+   \ge 0.5\sum_i w_i\,\}\),
+where \(y_i\) is record \(i\)'s earnings in 2025 dollars, \(w_i\) is PWGTP,
+and \(\mathbf{1}(\cdot)\) is one when the condition inside holds and zero
+otherwise; adjacent order statistics are averaged when the accumulated weight
+lands exactly on half. A weighted share of some group \(G\) is
+\(\hat p = \sum_{i \in G} w_i a_i \big/ \sum_{i \in G} w_i\), with \(a_i\)
+equal to one when the record has the attribute being counted, so the
+denominator is the weighted size of the group and not the record count. Both
+are descriptive population estimates: they describe who the survey
+enumerated, and no statistical model stands behind them.} The estimation
+sample for the Austin musician median is \NPumsAustinMusNPos\ unweighted
+records over five survey years, enough to publish and not enough to break
+down further, so this study reports no Austin musician estimates by race,
+age or sex.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{fig02_earnings_gap.png}
+\caption{Median personal earnings from work and median total personal income by
+occupation, Texas workers aged 18 to 64 with positive earnings, 2025 dollars.
+Source: American Community Survey 2020--2024 five-year public use microdata,
+person-weighted; whiskers are 90 percent margins of error from the 80 replicate
+weights. How to read it: the orange bar is what the work pays and the navy bar
+is total personal income from all sources, so the gap between them is income
+from somewhere other than the person's own work. Caveats:
+the survey records one occupation per person, so a musician who reports a day
+job as their main work is counted in that occupation instead; the combined
+media, audio-visual and sound-equipment category is a single Census code, not
+sound engineers alone.}
+\label{fig:earningsgap}
+\end{figure}
+
+Figure~\ref{fig:earningsgap} covers Texas, and what matters in it is less the
+ranking than the distance between each occupation's two bars. Actors show the
+widest pair, with total personal income roughly twice their earnings from
+work; musicians show a smaller but visible pair, and all Texas workers show
+almost none. The Austin cell shows the same pattern. Austin musicians report
+median total personal income of \NPumsAustinMusMedpincpPos\ against
+\NPumsAustinMusMedpernpPos\ in earnings from work. For all Austin workers the
+same two figures are \NPumsAustinAllworkMedpincpPos\ and
+\NPumsAustinAllworkMedpernpPos, a difference of a few hundred dollars.
+The distance between two separately estimated medians is not any one person's
+non-work income, but it does say that Austin musicians as a group draw on
+income beyond their own work. The survey records income by source in seven
+separate fields (wages and salary, self-employment, interest and dividends,
+retirement, Social Security, Supplemental Security Income, and public
+assistance), and decomposing the gap into those fields would be a direct
+extension of the work here.
+
+Hours worked do not account for the low earnings either. The median Austin
+musician reports a usual week of \NPumsAustinMusMedwkhp\ hours (the survey
+variable WKHP) and \NPumsAustinMusMedwkwn\ weeks worked in the past year
+(WKWN), matching \NPumsAustinAllworkMedwkhp\ hours and
+\NPumsAustinAllworkMedwkwn\ weeks for the median Austin worker. Both medians
+come from the same 77-record Austin cell and both equal the modal answers,
+so they say little about the tails: statewide, where the sample is larger,
+the median musician's usual week is \NPumsTxMusMedwkhp\ hours against
+\NPumsTxAllworkMedwkhp\ for all Texas workers. Firmer evidence comes from
+the regression below, which holds hours and weeks fixed and still leaves a
+difference.
+
+To probe whether the raw gap comes from age, education, hours or geography
+rather than from something specific to music, we estimate a weighted least
+squares regression of log personal earnings on an indicator for music
+occupations, with the usual demographic and labor-supply controls and metro
+fixed effects.\footnote{The fitted equation is
+\[
+\ln y_i = \alpha + \beta\,\mathrm{music}_i
+  + \gamma_1 \mathrm{age}_i + \gamma_2 \mathrm{age}_i^{2}
+  + \gamma_3 \mathrm{female}_i
+  + \sum_{k=2}^{5}\delta_k\,\mathrm{educ}_{ki}
+  + \gamma_4 \mathrm{hours}_i + \gamma_5 \mathrm{weeks}_i
+  + \sum_{m}\lambda_m\,\mathrm{metro}_{mi} + \varepsilon_i .
+\]
+The dependent variable \(y_i\) is person \(i\)'s personal earnings from work
+in 2025 dollars (the ACS PERNP field, deflated as described above).
+\(\mathrm{music}_i\) is one when the person's occupation is musician, singer,
+music director or composer (OCCP 2751 or 2752) and zero otherwise;
+\(\mathrm{age}_i\) is AGEP, age in years; \(\mathrm{female}_i\) is one for
+women (SEX = 2); the \(\mathrm{educ}_{ki}\) are indicators for four
+educational-attainment bands drawn from SCHL, measured against a base of
+less than high school (band 2 is high-school diploma or GED, band 3 is some
+college, band 4 is bachelor's degree, band 5 is graduate or professional
+degree); \(\mathrm{hours}_i\) is WKHP (usual hours worked per week);
+\(\mathrm{weeks}_i\) is WKWN (weeks worked in the past twelve months); and
+the \(\mathrm{metro}_{mi}\) are Metropolitan Statistical Area indicators
+with the Austin-Round Rock-San Marcos MSA as the omitted reference, so each
+reported metro coefficient is a difference from Austin and the balance of
+the state enters as its own estimated term rather than as the base.
+\(\varepsilon_i\) is the residual. Estimation is by weighted least squares
+with the person weight PWGTP over the \NPumsRegN\ employed Texans aged 18 to
+64 with positive earnings, and the standard error comes from the same 80
+replicate weights used for the medians, the Census Bureau's own
+successive-difference method, rather than from an assumption that records
+are independent. Because the dependent variable is in logs, a coefficient
+converts to a percentage difference as \(100\,(e^{\hat\beta} - 1)\), and the
+same transformation applied to \(\hat\beta \pm 1.96\,\mathrm{se}(\hat\beta)\)
+gives the 95 percent interval. The music coefficient
+\NPumsRegMusicCoef\ with standard error \NPumsRegMusicSe\ puts the 95 percent
+interval at \(-32.7\) to \(-16.8\) percent. Two things change at once between
+this estimate and the Austin medians above: the population is every employed
+Texan aged 18 to 64 with positive earnings rather than the Austin metro cell,
+and the occupation is musicians, singers, music directors and composers (OCCP
+2751 and 2752) rather than musicians and singers alone (OCCP 2752). This is a
+descriptive conditional difference, not a causal estimate of what choosing
+music does to earnings: people who choose music differ from people who do
+not in ways the survey does not record, including talent, family resources
+and preference for the work itself. The full three-column table (metro fixed
+effects only, plus demographics, plus hours and weeks) is at
+\texttt{03\_analysis/out/tables/table\_earnings\_regression.csv}, and the
+figures reported in this paragraph come from column (3).}
+Among employed Texans aged 18 to 64 with positive earnings from work,
+adjusting for age, sex, education, usual hours, weeks worked and metro area,
+music occupations show a \NPumsRegMusicPctgap\ earnings difference, against a
+raw Austin shortfall of about half. Part of the raw gap therefore tracks
+those characteristics and part does not.
+
+\subsection{Most of this workforce works for itself}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.86\textwidth]{fig03_selfemp_share.png}
+\caption{Share of workers who are self-employed, incorporated or not, by
+occupation. Source: American Community Survey 2020--2024 five-year microdata,
+employed Texans aged 18 to 64; whiskers are 90 percent margins of error. How to
+read it: each bar is the share of workers in that occupation whose main job is
+their own business rather than someone else's payroll. Caveat: the survey
+records class of worker for the main job only, so a musician who also holds a
+payroll day job is counted under the day job.}
+\label{fig:selfemp}
+\end{figure}
+
+\NPumsAustinMusSelfemp\ (\NPumsAustinMusSelfempMoe) of Austin musicians work
+for themselves, against \NPumsAustinAllworkSelfemp\
+(\NPumsAustinAllworkSelfempMoe) of all Austin workers, which makes an Austin
+musician about seven times as likely to be self-employed as the typical Austin
+worker.\footnote{Universe: employed adults aged 18 to 64 in the
+Austin-Round Rock-San Marcos MSA, ACS 2020--2024 five-year Texas PUMS. The
+numerator on both sides is class-of-worker categories 6 (self-employed,
+unincorporated) and 7 (self-employed, incorporated) from the survey's COW
+field; the denominator is the employed base on that geography. The musician
+share comes from \NPumsAustinMusNEmp\ unweighted person records, so we do not
+break it down by demographic subgroup.} Statewide the musician rate is lower,
+\NPumsTxMusSelfemp\ (\NPumsTxMusSelfempMoe) against \NPumsTxAllworkSelfemp\
+for all Texas workers, so the Austin estimate is well above the state
+estimate on a cell of only \NPumsAustinMusNEmp\ records and should be read
+with that in mind.
+
+Self-employment at that rate accounts for much of the distance between the
+payroll count and the survey count, though not all of it. Applying the Austin
+self-employment share to the \NPumsAustinMusWtdPos\ musicians the survey
+estimates leaves roughly 600 on someone's payroll, against the
+\NEmpPayrollMusiciansAustinLast\ jobs the federal wage survey recorded in the
+Austin metro in 2025.\footnote{The federal wage survey here is the Bureau of
+Labor Statistics Occupational Employment and Wage Statistics (OEWS) program,
+a semi-annual establishment survey administered by BLS and the state
+workforce agencies. Program documentation:
+\url{https://www.bls.gov/oes/oes_ques.htm}. OEWS reports the wage of every
+worker on a sampled establishment's payroll and reports nothing for the
+self-employed, who fall outside its sampling frame; that is the arithmetic
+reason a survey which counts self-employment income and a payroll survey
+which does not disagree so widely on the same occupation and the same metro.
+Section~\ref{sec:payroll} takes up the payroll count separately.} It also
+explains why a payroll-based wage series can look healthy while a survey
+which counts self-employment income does not.
+
+\subsection{The distribution matters more than the median}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.86\textwidth]{fig04_earnings_distribution.png}
+\caption{Cumulative share of workers earning below each level, musicians against
+all workers, Texas, 2025 dollars. Source: American Community Survey 2020--2024
+five-year microdata, employed adults 18 to 64 with positive earnings. How to
+read it: the height of a line at a given earnings level is the share of that
+group earning less than that amount, so a line sitting higher and further left
+means more of the group earns little. Caveat: earnings here come from all work,
+not from music alone, so a musician with a day job appears at the combined
+figure.}
+\label{fig:earningsdist}
+\end{figure}
+
+The spread below the median is wide. Figure~\ref{fig:earningsdist} plots
+Texas, where the sample is large enough to draw a smooth curve; the shares
+below are for the Austin cell, which comes from 77 records and so has
+margins of error several times wider.
+\NPumsAustinMusLtOneZerok\ (\NPumsAustinMusLtOneZerokMoe) of employed Austin
+musicians aged 18 to 64 earn under \$10,000 from work, against
+\NPumsAustinAllworkLtOneZerok\ (\NPumsAustinAllworkLtOneZerokMoe) of all
+employed Austin workers on the same base;
+\NPumsAustinMusLtTwoFivek\ (\NPumsAustinMusLtTwoFivekMoe) earn under
+\$25,000 against \NPumsAustinAllworkLtTwoFivek; and
+\NPumsAustinMusLtFiveZerok\ (\NPumsAustinMusLtFiveZerokMoe) earn under
+\$50,000 against \NPumsAustinAllworkLtFiveZerok. Measured against the
+threshold the 2013 Austin Music Census used to define low income, restated
+to today's prices,\footnote{The 2013 threshold is the \$10,000 line the
+2014 Austin Music Census applied to its respondents' 2013 pre-tax music
+income. Titan Music Group, LLC, for the City of Austin Economic Development
+Department, Music and Entertainment Division, \textit{The Austin Music
+Census: A Data-Driven Assessment of Austin's Commercial Music Economy}
+(fielded late 2014; published June 1, 2015; income data are pre-tax calendar
+2013), \url{https://austin.widen.net/content/om7zqn1qbx/pdf/Austin_Music_Census_Interactive_PDF_53115.pdf}.
+That census was a self-selected online convenience sample of 3,968
+respondents drawn from the Austin music community; its published shares
+describe the people who answered, and no probability-sample margin of error
+attaches to them. Its microdata were never publicly released.}
+\NPumsAustinMusLtmusiccensus\ (\NPumsAustinMusLtmusiccensusMoe) of Austin
+musicians fall below the line that census drew, against
+\NPumsAustinAllworkLtmusiccensus\ of the wider Austin workforce. That share
+is not comparable with the 2014 census's own 68.4 percent: the 2014 census
+measured music income only, among self-selected respondents, while the ACS
+figure measures earnings from all work on a probability sample eight years
+later.\footnote{Each share is the weighted proportion defined above,
+\(\hat p = \sum_i w_i\,\mathbf{1}(y_i < \bar y)\big/\sum_i w_i\), where
+\(\bar y\) is the threshold and \(y_i\) is personal earnings in 2025 dollars.
+These four shares use the employed base (employed Austin musicians aged 18
+to 64), rather than the positive-earnings base used for the medians above:
+people reporting zero or negative earnings from work stay in the
+denominator, because dropping them would remove the worst-off cases from a
+statistic whose subject is how many people fall below a low threshold. The
+2013 threshold is carried forward as
+\(\$10{,}000 \times d_{2013}\), where \(d_{2013} = C_{2025}/C_{2013}\) is the
+ratio of CPI-U annual averages, equal to
+\NPumsDeflTwoZeroOneThreeToTwoZeroTwoFive, which puts the line at
+\NPumsMusiccensusTenkTwoZeroTwoFiveusd\ in today's prices.}
+
+\subsection{Nothing suggests Austin pays musicians better than other Texas metros}
+
+Austin's median-musician earnings are lower than the medians in Dallas-Fort
+Worth and Houston, but only by amounts small enough that the sampling error
+in each metro cell easily covers the difference. These three metro figures
+pool musicians, singers, music directors and composers (OCCP 2751 and 2752),
+a wider grouping than the musicians-and-singers headline above, which is
+what makes the metro cells large enough to publish.\footnote{The pooled
+sample sizes are: Austin \NPumsMetroAustinMusicN\ unweighted records
+representing \NPumsMetroAustinMusicWtd\ people; Dallas-Fort Worth 191 records
+representing 4,505 people; Houston 117 records representing 3,453 people.
+Each cell is drawn from the ACS 2020--2024 five-year Texas PUMS, employed
+adults aged 18 to 64 with positive earnings, and each metro is its full
+five- or ten-county MSA as defined by OMB's 2023 core-based statistical area
+delineation. Musicians and singers alone (OCCP 2752) yield 33 Dallas records
+and 26 Houston records, both under the 50-record suppression threshold this
+study uses.} Median personal earnings from work in these pooled music
+occupations are \NPumsMetroAustinMusicMedpernp\
+(\NPumsMetroAustinMusicMedpernpMoe) in Austin,
+\NPumsMetroDfwMusicMedpernp\ (\NPumsMetroDfwMusicMedpernpMoe) in Dallas-Fort
+Worth and \NPumsMetroHoustonMusicMedpernp\
+(\NPumsMetroHoustonMusicMedpernpMoe) in Houston. Austin has the lowest point
+estimate of the three, and every margin is wide, so neither pairwise gap is
+statistically firm.\footnote{Austin against Houston is a difference of about
+\$12,500 against a combined 90 percent margin of roughly \$18,600; Austin
+against Dallas-Fort Worth is about \$5,300 against roughly \$17,500. The
+margin on a difference between two metro medians is
+\(\mathrm{MOE}_{A-B} = \sqrt{\mathrm{MOE}_A^{2} + \mathrm{MOE}_B^{2}}\),
+where \(\mathrm{MOE}_A\) and \(\mathrm{MOE}_B\) are the two 90 percent
+margins computed from the replicate weights. The square-root form assumes
+the two metro subsamples are independent, which is the usual assumption for
+non-overlapping geographies in this file, and it is narrower than adding the
+two margins; a gap smaller than that combined margin is one the data cannot
+distinguish from zero. Nothing in these three medians supports an assumption
+that the Live Music Capital pays its musicians better than the rest of the
+state, and nothing in them establishes that it pays them worse.}
+
+\subsection{Austin musicians hold health coverage at roughly the workforce rate}
+
+Health coverage among Austin musicians is \NPumsAustinMusHicov\
+(\NPumsAustinMusHicovMoe) against \NPumsAustinAllworkHicov\
+(\NPumsAustinAllworkHicovMoe) for all Austin workers, a difference well
+inside the musician margin, so the two rates are indistinguishable at the
+sample sizes at hand.\footnote{Both shares use the survey's HICOV variable,
+which is one when the respondent reports any health insurance coverage
+(private, public or both) at the time of the interview, and zero otherwise.
+Universe: employed adults aged 18 to 64 in the Austin-Round Rock-San Marcos
+MSA, ACS 2020--2024 five-year Texas PUMS; the musician side comes from 77
+unweighted records (OCCP 2752), the all-workers side from 48,643. Private and
+public coverage are recorded separately (PRIVCOV and PUBCOV) and overlap for
+respondents who hold both, so those two shares do not sum to HICOV.}
+Private coverage runs the other way: \NPumsAustinMusPrivcov\
+(\NPumsAustinMusPrivcovMoe) of Austin musicians hold private insurance
+against \NPumsAustinAllworkPrivcov\ for the wider workforce, so the
+any-coverage parity holds up on the strength of public coverage and of
+Austin's music-specific nonprofit health infrastructure rather than on
+employer-sponsored plans.
+
+The 2022 Greater Austin Music Census reports that 84 percent of its
+respondents held health coverage in 2022, up from 79 percent in the 2014
+census, and its authors attribute that five-point rise to the Health
+Alliance for Austin Musicians.\footnote{Sound Music Cities and City of
+Austin Music \& Entertainment Division, \emph{2022 Greater Austin Music
+Census}, Data Appendix pp.\ 72--73 and Summary Report p.\ 10. Both
+comparison figures are self-selected respondent shares rather than
+population estimates, and the two censuses are not comparable samples, so
+this is a change in reported coverage among the people who answered rather
+than a measured change in the workforce as a whole.} The Health Alliance
+for Austin Musicians, HAAM, is a 501(c)(3) launched in 2005 that enrols
+low-income working Austin musicians (a 400 percent-of-federal-poverty-line
+eligibility ceiling) in a coordinated network of primary care, dental,
+vision, mental-health and hearing services at subsidised
+fees.\footnote{Health Alliance for Austin Musicians, \emph{Annual Impact
+Report}, 2005 through 2025 series at
+\url{https://www.myhaam.org/annual-reports}. Retrieved 1 August 2026.
+Membership rose from 450 in 2005 to 3{,}136 in 2022 and 3{,}149 in 2023;
+cumulative healthcare value delivered rose from an initial-year figure of
+\$115{,}000 in 2005 to \$46 million (2015), \$73.7 million (2019), \$123
+million (2022) and \$215 million (2025), figures drawn from HAAM's own
+annual reports. HAAM publishes a member-income share-below-threshold rather
+than a member median, so the report does not treat its threshold statistics
+as earnings measurements of the wider Austin musician workforce.} SIMS
+Foundation, founded in 1995, delivers mental-health and substance-use care
+to Austin musicians and their families on a similar
+reduced-fee model.\footnote{SIMS Foundation, at
+\url{https://simsfoundation.org/about/}, retrieved 1 August 2026.} The ACS
+does not identify HAAM or SIMS enrolees, so the coverage rate here is not
+causally attributable to either organisation, but the parity is consistent
+with what the census reports.
+
+\subsection{Musician households in Texas pay a higher median rent when they rent}
+
+Among Texas households with a working adult, musician households and other
+working households rent at close to the same rate: about 41 percent of
+musician households are renters, against 39 percent of working households as
+a whole.\footnote{Renter shares are weighted-household ratios computed from
+the ACS 2020--2024 five-year Texas PUMS housing extract, using registered
+renter and owner weighted counts, so the two shares are computed on
+comparable denominators; the small difference is well inside the musician
+margin. Age composition is also similar: median age of the two household
+references is close, so tenure differences do not reduce to a
+younger-therefore-not-yet-owning composition effect at the level the
+household file can measure. The Austin metro sub-cell is too small to
+publish tenure shares for.} \emph{Among renter households}, musician
+households pay a higher median gross rent than working households as a
+group.\footnote{The rent statistics come from the ACS housing extract for
+Texas (2020--2024 five-year PUMS), a separate file with its own household
+weight WGTP and its own 80 replicate weights (WGTP1--WGTP80), used in the
+same successive-difference formula as above. Rent is put on 2025 dollars
+by ADJHSG (which restates the five survey years on a 2024 basis) and the
+same CPI-U 2024-to-2025 factor. Universe: Texas households with at least
+one employed resident aged 18 to 64. A household counts as a musician
+household when at least one of those employed residents reports OCCP 2752
+(Musicians and Singers) as their current or most recent occupation; the
+comparison group is every Texas household with at least one employed
+resident, so the two groups nest rather than partition, and the comparison
+is musician households against all working households, not against a
+mutually exclusive remainder. The two sample sizes are 160 unweighted
+musician-renter households (representing 4,552 weighted households) and
+101,799 unweighted worker-renter households (representing 3.14 million).
+Both figures are Texas households rather than Austin ones, because the
+Austin-only musician cell is too small in the household file to publish.}
+The median monthly gross rent is \NPumsHhMusMedrent\ for musician renter
+households against \NPumsHhWorkerMedrent\ for renting Texas worker
+households. The rent level is higher, but the burden is not:
+\NPumsHhMusRentThreeZero\ (\NPumsHhMusRentThreeZeroMoe) of musician renter
+households pay more than 30 percent of household income in
+rent\footnote{The rent-burden variable is GRPIP, gross rent as a percentage
+of household income, computed by the Bureau from monthly gross rent (GRNTP,
+which is contract rent plus tenant-paid utilities) and household income
+(HINCP). GRPIP is a ratio of two same-year quantities, so no inflation
+adjustment applies; it is top-coded at 101, a category the Bureau also uses
+for households reporting zero or negative income. The 30 percent line is the
+standard federal cost-burden threshold used by HUD.} against
+\NPumsHhWorkerRentThreeZero\ (\NPumsHhWorkerRentThreeZeroMoe) of working
+renter households as a whole, a gap well inside the musician margin. Read
+together: a musician-renter household in Texas signs a lease on a more
+expensive unit than the average working-renter household does, but pays
+roughly the same share of household income for it, likely because a second
+earner or non-earnings income (a topic Section~\ref{sec:costs} takes up)
+makes the rent-to-income ratio hold even as the rent bill runs higher. What
+the household file cannot say is why the rent bill runs higher, since the ACS
+does not record which parts of the metro a household lives in or which
+features of the unit drive its rent.

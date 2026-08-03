@@ -1,0 +1,3914 @@
+
+  ___  ____  ____  ____  ____ ®
+ /__    /   ____/   /   ____/      StataNow 19.5
+___/   /   /___/   /   /___/       MP—Parallel Edition
+
+ Statistics and Data Science       Copyright 1985-2025 StataCorp LLC
+                                   StataCorp
+                                   4905 Lakeway Drive
+                                   College Station, Texas 77845 USA
+                                   800-782-8272        https://www.stata.com
+                                   979-696-4600        service@stata.com
+
+Stata license: 4-user 4-core network, expiring  6 May 2027
+Serial number: 501909369296
+  Licensed to: Eric Booth
+               Texas 2036
+
+Notes:
+      1. Stata is running in batch mode.
+      2. Unicode is supported; see help unicode_advice.
+      3. More than 2 billion observations are allowed; see help obs_advice.
+      4. Maximum number of variables is set to 5,000 but can be increased;
+          see help set_maxvar.
+
+
+Running /Users/ericbooth/Documents/Stata/ado/personal/profile.do ...
+-------------------------------------------------------------------------------
+  [1]  (BASE)      "/Applications/StataNow/ado/base/"
+  [2]  (SITE)      "/_codeshare/"
+  [3]              "."
+  [4]  (PERSONAL)  "/Users/ericbooth/Documents/Stata/ado/personal/"
+  [5]  (PLUS)      "/Users/ericbooth/Library/Application Support/Stata/ado/plus
+> /"
+  [6]  (OLDPLACE)  "~/ado/"
+ [view] [edit] [do]  10_pums_earnings.do 
+ [view] [edit] [do]  20_wages_industry.do 
+ [view] [edit] [do]  30_venues.do 
+ [view] [edit] [do]  40_city_money.do 
+ [view] [edit] [do]  50_state_national.do 
+ [view] [edit] [do]  60_cost_of_living.do 
+ [view] [edit] [do]  70_quasi_experiments.do 
+ [view] [edit] [do]  80_census_microdata.do 
+ [view] [edit] [do]  _setup.do 
+ [view] [edit] [do]  build_numbers.do 
+ [view] [edit] [do]  run_all.do 
+
+Click [here] for other links
+-------------------------------------------------------------------------------
+
+. do 80_census_microdata.do 
+
+. *! 80_census_microdata.do - What the 2022 Greater Austin Music Census microda
+> ta
+. *!                          says about income composition, the cost of workin
+> g,
+. *!                          and who is thinking about leaving Austin.
+. *!
+. *! Inputs  : 01_evidence/08_venues_ecosystem/austin_music_census_2022_details
+> _an3p-3yqx.csv
+. *!           01_evidence/08_venues_ecosystem/austin_music_census_2022_zipcode
+> s_p7ky-riuq.csv
+. *!           03_analysis/out/cpi_annual.dta            (built by _setup.do)
+. *!           03_analysis/out/venue_closure_reasons.csv (optional, from 30_ven
+> ues)
+. *!
+. *! Outputs : 04_figures/fig25_income_concentration.png (+ out/fig25_*.csv)
+. *!           04_figures/fig26_retention_split.png      (+ out/fig26_*.csv)
+. *!           04_figures/fig27_cost_of_working.png      (+ out/fig27_*.csv)
+. *!           04_figures/fig28_venue_pressures.png      (+ out/fig28_*.csv)
+. *!           03_analysis/out/tables/table_census_item_response.csv
+. *!           03_analysis/out/tables/table_census_geography.csv
+. *!           03_analysis/out/tables/table_census_spending.csv
+. *!           03_analysis/out/tables/table_census_retention_subgroups.csv
+. *!           03_analysis/out/tables/table_census_retention_logit.csv
+. *!           03_analysis/out/tables/table_census_venue_pressures.csv
+. *!           03_analysis/out/numbers/numbers_census.csv
+. *!
+. *! ------------------------------------------------------------------------
+. *! WHAT THIS SURVEY IS, AND WHAT IT IS NOT - read before quoting any number
+. *! ------------------------------------------------------------------------
+. *! The 2022 Greater Austin Music Census is a SELF-SELECTED ONLINE CONVENIENCE
+. *! SAMPLE fielded 15 July - 12 September 2022 by Sound Music Cities, LLC. It
+. *! carries NO SURVEY WEIGHTS. Every figure in this module is therefore a shar
+> e
+. *! of the respondents who answered a particular item, never an estimate of th
+> e
+. *! Austin music workforce. Nothing here may be compared with the ACS or PUMS
+. *! estimates elsewhere in this report as though the two measured the same
+. *! population: this instrument recruited through community partners, and the
+. *! federal series draw probability samples of households and establishments.
+. *!
+. *! It is a single snapshot. No comparable follow-up exists. Where the 2014
+. *! census asked a similar question, the comparison is between two different
+. *! self-selected samples eight years apart and is directional at best.
+. *!
+. *! THERE IS NO DOLLAR INCOME VARIABLE. On the advice of its community partner
+> s
+. *! the 2022 instrument removed the 2014 income-quantification questions, whic
+> h
+. *! the Summary Report (printed p.2) says had turned off many respondents. Wha
+> t
+. *! it kept is income-adjacent: the SHARE of music income coming from each
+. *! source, on a five-point All / Most / Some / Very little / None scale. This
+. *! module never converts that scale into dollars.
+. *!
+. *! The one dollar-denominated quantity the census did collect from creatives 
+> is
+. *! a COST: annual spending on their own music work, in eight categories. That
+. *! is section 5, and it is the half of the picture the Census Bureau Nonemplo
+> yer
+. *! Statistics receipts figure cannot see, because receipts are gross of expen
+> ses.
+. *!
+. *! ------------------------------------------------------------------------
+. *! ROUTING - why the denominators move so much
+. *! ------------------------------------------------------------------------
+. *! Respondents were routed into role-specific blocks. The creatives block was
+. *! answered almost only by people whose primary sector is Music Creative; the
+. *! presenter block was answered by primary presenters AND by creatives who al
+> so
+. *! present gigs. On top of routing there is heavy and uneven item nonresponse
+> :
+. *! the 2,227 respondents fall to 1,900 on the retention pair, 1,119 on the
+. *! income-source scale, 1,086 on gig volume, 728 on the largest spending item
+. *! and 177 on the presenter pressure ranking. Section 2 registers every
+. *! denominator and writes table_census_item_response.csv, so no reader has to
+. *! guess which block is solid and which is thin.
+. *!
+. *! ------------------------------------------------------------------------
+. *! A PUBLISHED-CHART ERROR THIS MODULE CORRECTS
+. *! ------------------------------------------------------------------------
+. *! Data Appendix slide 41 plots the 2022 share reporting any income from each
+. *! source with four of seven bars under the wrong labels. The microdata and
+. *! slide 40, which shows the full five-segment distribution, agree with each
+. *! other and with the published Socrata column dictionary, and all three
+. *! disagree with slide 41. The corrected pairing is in section 3 and in the
+. *! registry. The evidence note in this project
+. *! (01_evidence/05_music_census_pay_surveys/_findings.md, item 14) repeats
+. *! slide 41 and should be corrected with it.
+. 
+. clear all
+
+. do "_setup.do"                    // run from 03_analysis/stata/
+
+. *! _setup.do - shared foundation for the Austin musician/creative-worker anal
+> ysis.
+. *! Every module do-file starts with:  do "_setup.do"
+. *!
+. *! WHAT THIS DOES
+. *!   1. Finds the project root by searching upward for a sentinel file, so th
+> e
+. *!      whole folder can be zipped, moved to another machine, and run without
+. *!      editing a single path.
+. *!   2. Points Stata at the project-local ado library, so reghdfe, estout,
+. *!      spmap and the rest travel with the folder. No ssc install needed on a
+. *!      new machine.
+. *!   3. Builds a CPI-U deflator once and stores it, so every dollar figure in
+. *!      the report sits in the same base year (2025).
+. *!   4. Defines the report palette and graph styling, matched to the LaTeX fi
+> le.
+. *!   5. Defines two helper programs: numadd (register a number the report wil
+> l
+. *!      quote) and figsave (export a figure at consistent size).
+. *!
+. *! CONVENTIONS FOR MODULE AUTHORS
+. *!   - Set  global CURMODULE "<name>"  then call  numinit  before registering
+> .
+. *!   - Figure titles state the FINDING; subtitles qualify it. Source notes an
+> d
+. *!     caveats do NOT go in the image; they go in the LaTeX caption.
+. *!   - All dollars real, 2025 base, via the cpi_annual lookup.
+. 
+. version 17
+
+. set more off
+
+. set varabbrev off
+
+. 
+. * ---------------------------------------------------------------- 1. ROOT --
+. * Search the working directory and its parents for a file that only exists in
+. * this project. Whichever candidate contains it is the project root.
+. local sentinel "01_evidence/01_wages_oews_qcew/_sources.md"
+
+. local found 0
+
+. foreach cand in "`c(pwd)'" "`c(pwd)'/.." "`c(pwd)'/../.." "`c(pwd)'/../../.."
+>  {
+  2.     capture confirm file "`cand'/`sentinel'"
+  3.     if (_rc == 0) & (`found' == 0) {
+  4.         global PROJ "`cand'"
+  5.         local found 1
+  6.     }
+  7. }
+
+. if `found' == 0 {
+.     display as error "_setup.do could not locate the project root."
+.     display as error "Run Stata from 03_analysis/stata/ (or the project root)
+>  and try again."
+.     display as error "Current directory: `c(pwd)'"
+.     exit 601
+. }
+
+. 
+. global EVID     "${PROJ}/01_evidence"
+
+. global ANALYSIS "${PROJ}/03_analysis"
+
+. global DATAX    "${ANALYSIS}/data/external"
+
+. global OUT      "${ANALYSIS}/out"
+
+. global NUMDIR   "${OUT}/numbers"
+
+. global TABDIR   "${OUT}/tables"
+
+. global FIGS     "${PROJ}/04_figures"
+
+. global STATADIR "${ANALYSIS}/stata"
+
+. 
+. * Evidence subfolders, named for the workstream each one came from.
+. global EV_WAGES  "${EVID}/01_wages_oews_qcew"
+
+. global EV_PUMS   "${EVID}/02_pums_nes_microdata"
+
+. global EV_BEA    "${EVID}/03_creative_economy_bea"
+
+. global EV_CITY   "${EVID}/04_city_programs_lmf"
+
+. global EV_SURVEY "${EVID}/05_music_census_pay_surveys"
+
+. global EV_STATE  "${EVID}/06_state_policy_benchmark"
+
+. global EV_SVOG   "${EVID}/07_svog_federal_relief"
+
+. global EV_VENUE  "${EVID}/08_venues_ecosystem"
+
+. global EV_COL    "${EVID}/09_cost_of_living"
+
+. global EV_APP    "${EVID}/10_apprenticeship_workforce"
+
+. global EV_STREAM "${EVID}/11_streaming_royalties"
+
+. 
+. capture mkdir "${OUT}"
+
+. capture mkdir "${NUMDIR}"
+
+. capture mkdir "${TABDIR}"
+
+. capture mkdir "${FIGS}"
+
+. 
+. * ------------------------------------------------------------- 2. ADO PATH -
+> -
+. * Prepend the project-local library. Using adopath rather than sysdir set PLU
+> S
+. * keeps any packages already installed on this machine visible as a fallback,
+. * while guaranteeing the bundled copies win.
+. adopath ++ "${STATADIR}/ado/s"
+  [1]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/s"
+  [2]  (BASE)      "/Applications/StataNow/ado/base/"
+  [3]  (SITE)      "/_codeshare/"
+  [4]              "."
+  [5]  (PERSONAL)  "/Users/ericbooth/Documents/Stata/ado/personal/"
+  [6]  (PLUS)      "/Users/ericbooth/Library/Application Support/Stata/ado/plus
+> /"
+  [7]  (OLDPLACE)  "~/ado/"
+
+. adopath ++ "${STATADIR}/ado/plus"
+  [1]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/plus"
+  [2]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/s"
+  [3]  (BASE)      "/Applications/StataNow/ado/base/"
+  [4]  (SITE)      "/_codeshare/"
+  [5]              "."
+  [6]  (PERSONAL)  "/Users/ericbooth/Documents/Stata/ado/personal/"
+  [7]  (PLUS)      "/Users/ericbooth/Library/Application Support/Stata/ado/plus
+> /"
+  [8]  (OLDPLACE)  "~/ado/"
+
+. adopath ++ "${STATADIR}/ado"
+  [1]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado"
+  [2]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/plus"
+  [3]              "/Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.boot
+> h@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analy
+> sis/stata/../../03_analysis/stata/ado/s"
+  [4]  (BASE)      "/Applications/StataNow/ado/base/"
+  [5]  (SITE)      "/_codeshare/"
+  [6]              "."
+  [7]  (PERSONAL)  "/Users/ericbooth/Documents/Stata/ado/personal/"
+  [8]  (PLUS)      "/Users/ericbooth/Library/Application Support/Stata/ado/plus
+> /"
+  [9]  (OLDPLACE)  "~/ado/"
+
+. 
+. * --------------------------------------------------------- 3. CPI DEFLATOR -
+> -
+. * Base year for every real-dollar figure in the report.
+. global BASEYEAR 2025
+
+. 
+. * Build the annual CPI lookup once. Rebuilt only if missing, so modules that
+. * run in sequence do not each redo it.
+. capture confirm file "${OUT}/cpi_annual.dta"
+
+. if _rc != 0 {
+.     preserve
+.     use "${DATAX}/BLS_CPI.dta", clear
+.     keep if area_name == "U.S. city average" & item_name == "All items"
+.     keep if is_annualavg == 0 & seas_adj == 0 & !missing(month)
+.     keep year month cpi
+.     duplicates drop year month, force
+. 
+.     * BLS never published a CPI-U value for October 2025 because the federal
+.     * funding lapse suspended collection. Fill that single month by averaging
+.     * September and November and flag it. October matters here because it is
+.     * the month of the Austin City Limits festival, so leaving a hole would
+.     * distort the venue-receipts series specifically.
+.     generate byte cpi_imputed = 0
+.     sort year month
+.     quietly count if year == 2025 & month == 10 & missing(cpi)
+.     if r(N) > 0 {
+.         quietly summarize cpi if year == 2025 & month == 9, meanonly
+.         local sep = r(mean)
+.         quietly summarize cpi if year == 2025 & month == 11, meanonly
+.         local nov = r(mean)
+.         quietly replace cpi = (`sep' + `nov') / 2 if year == 2025 & month == 
+> 10
+.         quietly replace cpi_imputed = 1 if year == 2025 & month == 10
+.     }
+.     drop if missing(cpi)
+. 
+.     * Keep only years with a full twelve months, so a partial year (2026 at t
+> he
+.     * time of writing) never masquerades as an annual average.
+.     bysort year: generate byte nmon = _N
+.     keep if nmon == 12
+.     collapse (mean) cpi (max) cpi_imputed, by(year)
+. 
+.     quietly summarize cpi if year == ${BASEYEAR}, meanonly
+.     local base = r(mean)
+.     generate double defl = `base' / cpi
+.     label variable defl "Multiply nominal dollars of `year' by this to get ${
+> BASEYEAR} dollars"
+.     label variable cpi_imputed "1 = annual average uses an imputed month"
+.     sort year
+.     save "${OUT}/cpi_annual.dta", replace
+.     restore
+. }
+
+. 
+. * Convenience: put the base-year CPI in a global for ad hoc use.
+. preserve
+
+. use "${OUT}/cpi_annual.dta", clear
+
+. quietly summarize cpi if year == ${BASEYEAR}, meanonly
+
+. global CPIBASE = r(mean)
+
+. restore
+
+. 
+. * ------------------------------------------------------------- 4. PALETTE --
+. * RGB triples matching 05_report/style/austinmusic.sty, so figures and docume
+> nt
+. * agree without anyone re-typing hex codes.
+. global NAVY    "27 45 85"
+
+. global ORANGE  "212 69 0"
+
+. global BLUE    "43 108 176"
+
+. global MUTED   "108 122 141"
+
+. global LIGHTBG "245 247 250"
+
+. global BORDER  "222 226 230"
+
+. global GREEN   "46 125 87"
+
+. global GOLD    "200 137 27"
+
+. global RED     "192 57 43"
+
+. global TEXTC   "26 26 46"
+
+. 
+. * Orange marks the musician or Austin series throughout; navy and muted mark
+. * comparison series. Keeping that constant across figures means a reader lear
+> ns
+. * the convention once.
+. global SERIES1 "${NAVY}"
+
+. global SERIES2 "${ORANGE}"
+
+. global SERIES3 "${BLUE}"
+
+. global SERIES4 "${GREEN}"
+
+. global SERIES5 "${GOLD}"
+
+. global SERIES6 "${MUTED}"
+
+. 
+. * Standard title and subtitle options. Modules pass these straight through:
+. *   twoway ... , title("Finding", $TITLEOPT) subtitle("Qualifier", $SUBOPT)
+. global TITLEOPT `"size(4.1) color("${NAVY}") justification(left) position(11)
+>  span margin(b=1)"'
+
+. global SUBOPT   `"size(3.0) color("${MUTED}") justification(left) position(11
+> ) span margin(b=3)"'
+
+. global XTOPT    `"size(3.0)"'
+
+. global YTOPT    `"size(3.0)"'
+
+. global LEGOPT   `"size(3.0) region(lstyle(none)) symxsize(6)"'
+
+. 
+. capture grstyle init
+
+. capture grstyle set plain, horizontal
+
+. capture grstyle set color "${TEXTC}": p1lineplot
+
+. capture grstyle set legend 6, nobox
+
+. 
+. * ------------------------------------------------------------ 5. PROGRAMS --
+. capture program drop numinit
+
+. program define numinit
+  1.     * Start (or restart) this module's number ledger. Called once per modu
+> le so
+.     * re-running a module replaces its own rows rather than appending duplica
+> tes.
+.     if "$CURMODULE" == "" {
+  2.         display as error "numinit: set  global CURMODULE  first"
+  3.         exit 198
+  4.     }
+  5.     quietly {
+  6.         local f "${NUMDIR}/numbers_${CURMODULE}.csv"
+  7.         capture erase "`f'"
+  8.         file open nh using "`f'", write text replace
+  9.         file write nh "key,value,formatted,unit,source,note,module" _n
+ 10.         file close nh
+ 11.     }
+ 12.     display as text "  ledger started: numbers_${CURMODULE}.csv"
+ 13. end
+
+. 
+. capture program drop numadd
+
+. program define numadd
+  1.     * Register one number the written report will quote.
+.     *
+.     *   numadd, key(pums_median_earnings_tx) value(22800) ///
+>     *           formatted("\$22,800") unit("2025 dollars") ///
+>     *           source("01_evidence/02_pums.../pums_...csv") ///
+>     *           note("ACS PUMS 2020-2024 5-yr, OCCP 2752, PWGTP-weighted medi
+> an")
+.     *
+.     * key becomes a LaTeX macro, so use letters, digits and underscores only.
+.     * note must let a reader reproduce the number: population, filter, weight
+> ,
+.     * vintage, and any caveat.
+.     syntax , KEY(string) VALUE(string) [FORMATTED(string) UNIT(string) ///
+>              SOURCE(string) NOTE(string)]
+  2.     if "$CURMODULE" == "" {
+  3.         display as error "numadd: set  global CURMODULE  and call numinit 
+> first"
+  4.         exit 198
+  5.     }
+  6.     if "`formatted'" == "" {
+  7.         local formatted "`value'"
+  8.     }
+  9.     * Replace any embedded double quote with an apostrophe. These fields a
+> re
+.     * descriptive text, never data, so substituting is safer than escaping an
+> d
+.     * keeps the ledger readable by any CSV parser.
+.     foreach v in formatted unit source note {
+ 10.         local `v' : subinstr local `v' `"""' "'", all
+ 11.     }
+ 12.     quietly {
+ 13.         file open nh using "${NUMDIR}/numbers_${CURMODULE}.csv", write tex
+> t append
+ 14.         file write nh `""`key'","`value'","`formatted'","`unit'","`source'
+> ","`note'","${CURMODULE}""' _n
+ 15.         file close nh
+ 16.     }
+ 17. end
+
+. 
+. capture program drop figsave
+
+. program define figsave
+  1.     * Export the current graph to 04_figures at a consistent size.
+.     * Width 2000px at the report's 6.5 inch text width is about 300 dpi.
+.     syntax , NAME(string) [WIDTH(integer 2000)]
+  2.     quietly graph export "${FIGS}/`name'.png", replace width(`width')
+  3.     display as text "  figure -> 04_figures/`name'.png"
+  4. end
+
+. 
+. capture program drop requirefile
+
+. program define requirefile
+  1.     * Fail early and legibly when an expected input is absent, rather than
+.     * producing a confusing error deeper in a module.
+.     *
+.     * This project's paths contain spaces ("My Drive", the Google Drive mount
+.     * point), so the argument is taken from `0' as a whole rather than parsed
+.     * into tokens, stripped of any quotes the caller supplied, and then
+.     * compound-quoted for `confirm'. Passing an unquoted path with spaces to
+.     * `confirm file' is what makes this fail with a misleading r(601).
+.     local fn `0'
+  2.     local fn : subinstr local fn `"""' "", all
+  3.     local fn = trim("`fn'")
+  4.     capture confirm file `"`fn'"'
+  5.     if _rc != 0 {
+  6.         display as error "Required input not found: `fn'"
+  7.         exit 601
+  8.     }
+  9. end
+
+. 
+. display as text "_setup.do ready. Root: ${PROJ}"
+_setup.do ready. Root: /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.b
+> ooth@texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_an
+> alysis/stata/../..
+
+. display as text "  base year ${BASEYEAR}, CPI ${CPIBASE}"
+  base year 2025, CPI 322.1528333333334
+
+. 
+end of do-file
+
+. global CURMODULE "census"
+
+. numinit
+  ledger started: numbers_census.csv
+
+. 
+. * Paths carry spaces (the Google Drive "My Drive" mount), so every confirm is
+. * compound-quoted. An unquoted path with a space is what produces a misleadin
+> g
+. * r(601) here.
+. foreach f in "${EV_VENUE}/austin_music_census_2022_details_an3p-3yqx.csv" ///
+>              "${EV_VENUE}/austin_music_census_2022_zipcodes_p7ky-riuq.csv" //
+> /
+>              "${OUT}/cpi_annual.dta" {
+  2.     capture confirm file `"`f'"'
+  3.     if _rc != 0 {
+  4.         display as error "Required input not found: `f'"
+  5.         exit 601
+  6.     }
+  7. }
+
+. 
+. local SRC  "01_evidence/08_venues_ecosystem/austin_music_census_2022_details_
+> an3p-3yqx.csv"
+
+. local SRCZ "01_evidence/08_venues_ecosystem/austin_music_census_2022_zipcodes
+> _p7ky-riuq.csv"
+
+. 
+. * Repeated in the note of every registry row resting on this survey, so no
+. * number can travel into the report without its provenance. There is not one
+. * ASCII apostrophe anywhere in this file: one inside a local macro breaks mac
+> ro
+. * expansion, and this string is passed through several.
+. local CAV "2022 Greater Austin Music Census, self-selected online convenience
+>  sample fielded 15 Jul - 12 Sep 2022, 2,227 respondent records, NO SURVEY WEI
+> GHTS. Every figure is a sample share, not a population estimate, and none is 
+> comparable with ACS, PUMS, OEWS or QCEW."
+
+. 
+. 
+. * ============================================================== 0. HELPERS =
+> =
+. * Thin wrappers over numadd so the ledger formats consistently. This survey h
+> as
+. * no design weights and no replicate weights, so no margin of error is ever
+. * attached: inventing one would imply a probability sample that does not exis
+> t.
+. 
+. capture program drop cnum
+
+. program define cnum
+  1.     syntax , KEY(string) VALUE(real) [UNIT(string) SOURCE(string) NOTE(str
+> ing)]
+  2.     if "`unit'" == "" local unit "respondents"
+  3.     numadd, key(`key') value(`=string(`value',"%18.0g")') ///
+>             formatted("`=strtrim(string(round(`value'),"%15.0fc"))'") ///
+>             unit("`unit'") source("`source'") note("`note'")
+  4. end
+
+. 
+. capture program drop cpct
+
+. program define cpct
+  1.     * value arrives already on a 0-100 scale.
+.     syntax , KEY(string) VALUE(real) [SOURCE(string) NOTE(string)]
+  2.     numadd, key(`key') value(`=string(`value',"%18.0g")') ///
+>             formatted("`=strtrim(string(`value',"%9.1f"))'%") ///
+>             unit("percent of the denominator named in the note") ///
+>             source("`source'") note("`note'")
+  3. end
+
+. 
+. capture program drop cusd
+
+. program define cusd
+  1.     * char(36) is a dollar sign. Writing it literally would let Stata try 
+> to
+.     * expand it as a global macro.
+.     syntax , KEY(string) VALUE(real) [UNIT(string) SOURCE(string) NOTE(string
+> )]
+  2.     if "`unit'" == "" local unit "2025 dollars"
+  3.     local f = char(36) + strtrim(string(round(`value'), "%15.0fc"))
+  4.     numadd, key(`key') value(`=string(`value',"%18.0g")') formatted("`f'")
+>  ///
+>             unit("`unit'") source("`source'") note("`note'")
+  5. end
+
+. 
+. capture program drop keyify
+
+. program define keyify, rclass
+  1.     * Turn a human label into a legal registry key: letters, digits, under
+> scores.
+.     syntax , TEXT(string)
+  2.     local s = lower("`text'")
+  3.     foreach bad in "," "." "(" ")" "/" "-" ":" ";" {
+  4.         local s : subinstr local s "`bad'" "", all
+  5.     }
+  6.     local s : subinstr local s " " "_", all
+  7.     while strpos("`s'", "__") > 0 {
+  8.         local s : subinstr local s "__" "_", all
+  9.     }
+ 10.     return local key "`s'"
+ 11. end
+
+. 
+. 
+. * =============================================== 1. LOAD AND BUILD MEASURES 
+> ==
+. * Everything is imported as string. The file mixes true blanks, numeric strin
+> gs
+. * and multi-select strings joined with commas, and letting Stata guess types
+. * would silently turn a blank into a zero on the spending items.
+. 
+. import delimited using "${EV_VENUE}/austin_music_census_2022_details_an3p-3yq
+> x.csv", ///
+>     clear varnames(1) encoding("utf-8") case(preserve) stringcols(_all)
+(107 vars, 2,227 obs)
+
+. 
+. quietly foreach v of varlist _all {
+
+. 
+. quietly count
+
+. local NTOT = r(N)
+
+. display as text _newline "Respondent records loaded: `NTOT'"
+
+Respondent records loaded: 2227
+
+. 
+. * --- role and background --------------------------------------------------
+. generate byte sector = .
+(2,227 missing values generated)
+
+. replace sector = 1 if primary_music_ecosystem_sector == "Music Creative"
+(1,462 real changes made)
+
+. replace sector = 2 if primary_music_ecosystem_sector == "Music Industry"
+(489 real changes made)
+
+. replace sector = 3 if primary_music_ecosystem_sector == "Music Venue or Prese
+> nter"
+(108 real changes made)
+
+. replace sector = 4 if primary_music_ecosystem_sector == "None of these - Exit
+>  the Census"
+(69 real changes made)
+
+. label define sectorl 1 "Music creative" 2 "Music industry" 3 "Venue or presen
+> ter" 4 "Exited the census"
+
+. label values sector sectorl
+
+. label variable sector "Primary music ecosystem sector"
+
+. 
+. generate byte sector3 = sector if inlist(sector, 1, 2, 3)
+(168 missing values generated)
+
+. label values sector3 sectorl
+
+. label variable sector3 "Primary sector, excluding census exits"
+
+. 
+. generate byte yrsexp = .
+(2,227 missing values generated)
+
+. replace yrsexp = 1 if years_experience == "Less than 3"
+(130 real changes made)
+
+. replace yrsexp = 2 if years_experience == "3 to 5"
+(195 real changes made)
+
+. replace yrsexp = 3 if years_experience == "6 to 10"
+(357 real changes made)
+
+. replace yrsexp = 4 if years_experience == "More than 10"
+(1,297 real changes made)
+
+. label define yrsl 1 "Under 3 years" 2 "3 to 5 years" 3 "6 to 10 years" 4 "Mor
+> e than 10 years"
+
+. label values yrsexp yrsl
+
+. label variable yrsexp "Years working in music"
+
+. 
+. * --- geography ------------------------------------------------------------
+. generate byte austinres = .
+(2,227 missing values generated)
+
+. replace austinres = 1 if city_of_austin_resident == "true"
+(1,567 real changes made)
+
+. replace austinres = 0 if city_of_austin_resident == "false"
+(582 real changes made)
+
+. label define ar 0 "Outside City of Austin" 1 "City of Austin resident"
+
+. label values austinres ar
+
+. 
+. generate double miles = real(residence_distance_from)
+(77 missing values generated)
+
+. label variable miles "Self-reported miles from downtown Austin"
+
+. 
+. * --- retention (the headline pair) ---------------------------------------
+. * Both items are five-point. The published 89 / 64 pair aggregates the two
+. * affirmative options, so that is what is replicated here; the definitely-yes
+. * share alone is registered beside it so a reader can see how much of the
+. * affirmative rests on maybe.
+. generate byte contmusic = .
+(2,227 missing values generated)
+
+. replace contmusic = 1 if inlist(intent_to_continue_music, "Definitely Yes", "
+> Maybe Yes")
+(1,687 real changes made)
+
+. replace contmusic = 0 if inlist(intent_to_continue_music, "Unsure", "Maybe No
+> ", "Definitely No")
+(213 real changes made)
+
+. generate byte contdef = (intent_to_continue_music == "Definitely Yes") if con
+> tmusic < .
+(327 missing values generated)
+
+. 
+. generate byte stayaus = .
+(2,227 missing values generated)
+
+. replace stayaus = 1 if inlist(intent_to_stay_in_austin, "Definitely Yes", "Ma
+> ybe Yes")
+(1,218 real changes made)
+
+. replace stayaus = 0 if inlist(intent_to_stay_in_austin, "Unsure", "Maybe No",
+>  "Definitely No")
+(682 real changes made)
+
+. generate byte staydef = (intent_to_stay_in_austin == "Definitely Yes") if sta
+> yaus < .
+(327 missing values generated)
+
+. 
+. label define yn 0 "No, or unsure" 1 "Definitely or maybe yes"
+
+. label values contmusic yn
+
+. label values stayaus yn
+
+. label variable contmusic "Intends to continue music work over the next 3 year
+> s"
+
+. label variable stayaus "Intends to still live in greater Austin in 3 years"
+
+. 
+. * --- housing, insurance, workspace ---------------------------------------
+. * current_housing is a multi-select. A respondent who ticked both owner and
+. * renter is counted as an owner, the conservative choice for a story about
+. * renters being the least secure group.
+. generate byte tenure = .
+(2,227 missing values generated)
+
+. replace tenure = 1 if strpos(current_housing, "Homeowner") > 0
+(758 real changes made)
+
+. replace tenure = 2 if strpos(current_housing, "Renter") > 0 & tenure >= .
+(688 real changes made)
+
+. replace tenure = 3 if current_housing != "" & tenure >= .
+(174 real changes made)
+
+. label define tenl 1 "Homeowner" 2 "Renter" 3 "Other or unstable housing"
+
+. label values tenure tenl
+
+. label variable tenure "Housing tenure"
+
+. 
+. generate byte insured = .
+(2,227 missing values generated)
+
+. replace insured = 1 if health_insurance_currently == "Yes"
+(1,390 real changes made)
+
+. replace insured = 0 if inlist(health_insurance_currently, "Lack Recently Lost
+> ", ///
+>                               "Lack for Past 2 or More Years")
+(254 real changes made)
+
+. label define insl 0 "No health insurance" 1 "Has health insurance"
+
+. label values insured insl
+
+. label variable insured "Health insurance status"
+
+. 
+. generate byte wspace = .
+(2,227 missing values generated)
+
+. replace wspace = 1 if strpos(work_space_status_including, "Currently Own") > 
+> 0
+(51 real changes made)
+
+. replace wspace = 2 if strpos(work_space_status_including, "Renter Lessee") > 
+> 0 & wspace >= .
+(182 real changes made)
+
+. replace wspace = 3 if strpos(work_space_status_including, "Need But Lack") > 
+> 0 & wspace >= .
+(398 real changes made)
+
+. replace wspace = 4 if work_space_status_including == "Employer Provides or Do
+>  Not Need"
+(426 real changes made)
+
+. label define wsl 1 "Owns work space" 2 "Rents work space" ///
+>                  3 "Needs but lacks work space" 4 "Provided or not needed"
+
+. label values wspace wsl
+
+. label variable wspace "Work or performance space status"
+
+. 
+. * --- income composition ---------------------------------------------------
+. * Five-point share-of-music-income scale, one variable per source. Column nam
+> es
+. * come from the published Socrata dictionary for dataset an3p-3yqx; every
+. * mapping was re-verified against the full five-segment distribution on Data
+. * Appendix slide 40 before use, because slide 41 disagrees (see section 3).
+. local INCV creatives_income_from_live creatives_income_from_live_1 ///
+>            creatives_income_related creatives_income_related_2 ///
+>            creatives_income_related_3 creatives_income_related_1 ///
+>            creatives_income_related_4
+
+. local INCL `""Live performance, local" "Live performance, touring" "Recording
+> s and royalties" "Studio and session work" "Merchandise" "Songwriting and mec
+> hanicals" "Teaching""'
+
+. 
+. local k = 0
+
+. foreach v of local INCV {
+  2.     local ++k
+  3.     generate byte inc`k' = .
+  4.     replace inc`k' = 1 if `v' == "None"
+  5.     replace inc`k' = 2 if `v' == "Very Little"
+  6.     replace inc`k' = 3 if `v' == "Some"
+  7.     replace inc`k' = 4 if `v' == "Most"
+  8.     replace inc`k' = 5 if `v' == "All"
+  9. }
+(2,227 missing values generated)
+(85 real changes made)
+(195 real changes made)
+(271 real changes made)
+(425 real changes made)
+(143 real changes made)
+(2,227 missing values generated)
+(234 real changes made)
+(252 real changes made)
+(348 real changes made)
+(102 real changes made)
+(12 real changes made)
+(2,227 missing values generated)
+(272 real changes made)
+(389 real changes made)
+(215 real changes made)
+(41 real changes made)
+(11 real changes made)
+(2,227 missing values generated)
+(392 real changes made)
+(236 real changes made)
+(228 real changes made)
+(63 real changes made)
+(10 real changes made)
+(2,227 missing values generated)
+(368 real changes made)
+(241 real changes made)
+(197 real changes made)
+(28 real changes made)
+(5 real changes made)
+(2,227 missing values generated)
+(421 real changes made)
+(270 real changes made)
+(135 real changes made)
+(27 real changes made)
+(6 real changes made)
+(2,227 missing values generated)
+(533 real changes made)
+(125 real changes made)
+(122 real changes made)
+(106 real changes made)
+(17 real changes made)
+
+. label define incl 1 "None" 2 "Very little" 3 "Some" 4 "Most" 5 "All"
+
+. forvalues k = 1/7 {
+  2.     label values inc`k' incl
+  3. }
+
+. 
+. * Concentration of music income in local live performance. This is the closes
+> t
+. * thing the instrument has to an income variable, and it is WITHIN music: it 
+> is
+. * not the share of TOTAL income that comes from music, which was never asked.
+. generate byte liveconc = inc1
+(1,108 missing values generated)
+
+. label values liveconc incl
+
+. label variable liveconc "Music income from local live performance"
+
+. 
+. * --- work volume ----------------------------------------------------------
+. generate byte gigs = .
+(2,227 missing values generated)
+
+. replace gigs = 1 if creatives_paid_performances == "0"
+(152 real changes made)
+
+. replace gigs = 2 if creatives_paid_performances == "1 to 3"
+(555 real changes made)
+
+. replace gigs = 3 if creatives_paid_performances == "4 to 6"
+(197 real changes made)
+
+. replace gigs = 4 if creatives_paid_performances == "7 to 10"
+(85 real changes made)
+
+. replace gigs = 5 if creatives_paid_performances == "11 to 15"
+(51 real changes made)
+
+. replace gigs = 6 if creatives_paid_performances == "16 or more"
+(46 real changes made)
+
+. label define gigl 1 "0 a month" 2 "1 to 3" 3 "4 to 6" 4 "7 to 10" 5 "11 to 15
+> " 6 "16 or more"
+
+. label values gigs gigl
+
+. label variable gigs "Paid local performances per month"
+
+. 
+. generate double guarpct = real(creatives_percentage_of_gigs)
+(1,141 missing values generated)
+
+. label variable guarpct "Percent of gigs paying a base guarantee"
+
+. 
+. generate double localspend = real(creatives_percentage_of_annual)
+(1,339 missing values generated)
+
+. label variable localspend "Percent of music spending paid to local providers"
+
+. 
+. * NOT gig work outside music. The Socrata dictionary names this "CREATIVES Wo
+> rk
+. * Also as Gig Presenter" and Data Appendix slide 47 confirms it means present
+> ing
+. * or promoting other peoples gigs in addition to performing. The item that
+. * measured work outside music (Data Appendix slide 15) is absent from this
+. * microdata release entirely - see section 4.
+. generate byte gigpresent = .
+(2,227 missing values generated)
+
+. replace gigpresent = 0 if creatives_work_also_as_gig == "No"
+(608 real changes made)
+
+. replace gigpresent = 1 if creatives_work_also_as_gig != "" & creatives_work_a
+> lso_as_gig != "No"
+(543 real changes made)
+
+. label define gpl 0 "Performs only" 1 "Also presents or promotes gigs"
+
+. label values gigpresent gpl
+
+. 
+. generate byte restored = .
+(2,227 missing values generated)
+
+. replace restored = 1 if restored_pre_pandemic_workload == "true"
+(1,341 real changes made)
+
+. replace restored = 0 if restored_pre_pandemic_workload == "false"
+(485 real changes made)
+
+. 
+. * --- annual spending ------------------------------------------------------
+. * Eight categories, dollars, creatives only. Category order taken from the
+. * Socrata dictionary and cross-checked against the eight published category
+. * means on Data Appendix p.46, each matching within 2 percent.
+. local SPV creatives_annual_spending creatives_annual_spending_1 ///
+>           creatives_annual_spending_2 creatives_annual_spending_3 ///
+>           creatives_annual_spending_4 creatives_annual_spending_5 ///
+>           creatives_annual_spending_6 creatives_annual_spending_7
+
+. local SPL `""New recordings" "Publicity and promotion" "Web and social media"
+>  "Supplies" "Rehearsal or work space" "Gear and rentals" "Merchandise" "Accou
+> nting and legal""'
+
+. 
+. generate byte nspend = 0
+
+. local k = 0
+
+. foreach v of local SPV {
+  2.     local ++k
+  3.     generate double sp`k' = real(`v') if `v' != ""
+  4.     quietly replace nspend = nspend + (`v' != "")
+  5. }
+(1,499 missing values generated)
+(1,537 missing values generated)
+(1,518 missing values generated)
+(1,485 missing values generated)
+(1,581 missing values generated)
+(1,490 missing values generated)
+(1,602 missing values generated)
+(1,616 missing values generated)
+
+. label variable nspend "Number of the 8 spending categories answered"
+
+. 
+. * --- presenter block ------------------------------------------------------
+. generate byte cap = .
+(2,227 missing values generated)
+
+. replace cap = 1 if presenter_venue_capacity == "1 to 100"
+(28 real changes made)
+
+. replace cap = 2 if presenter_venue_capacity == "101 to 200"
+(26 real changes made)
+
+. replace cap = 3 if presenter_venue_capacity == "201 to 350"
+(19 real changes made)
+
+. replace cap = 4 if presenter_venue_capacity == "351 to 500"
+(18 real changes made)
+
+. replace cap = 5 if presenter_venue_capacity == "501 to 1000"
+(8 real changes made)
+
+. replace cap = 6 if presenter_venue_capacity == "1001 or more"
+(32 real changes made)
+
+. label define capl 1 "1 to 100" 2 "101 to 200" 3 "201 to 350" 4 "351 to 500" /
+> //
+>                   5 "501 to 1,000" 6 "1,001 or more"
+
+. label values cap capl
+
+. label variable cap "Legal capacity of the venue"
+
+. 
+. generate byte prestype = .
+(2,227 missing values generated)
+
+. replace prestype = 1 if cap < .
+(131 real changes made)
+
+. replace prestype = 2 if presenter_venue_capacity == "Independent Promoter"
+(43 real changes made)
+
+. replace prestype = 3 if presenter_venue_capacity == "Other"
+(17 real changes made)
+
+. label define ptl 1 "Venue operator" 2 "Independent promoter" 3 "Other present
+> er"
+
+. label values prestype ptl
+
+. 
+. local PRSV presenter_ranking_of_pressures presenter_ranking_of_pressures_1 //
+> /
+>            presenter_ranking_of_pressures_2 presenter_ranking_of_pressures_3 
+> ///
+>            presenter_ranking_of_pressures_4 presenter_ranking_of_pressures_5 
+> ///
+>            presenter_ranking_of_pressures_6 presenter_ranking_of_pressures_7 
+> ///
+>            presenter_ranking_of_pressures_8
+
+. local PRSL `""Talent costs" "Changing audience behavior" "Labor cost and rete
+> ntion" "Property tax" "Marketing" "Ordinances and permitting" "Unpredictable 
+> operating costs" "Neighborhood redevelopment" "Building operations and upkeep
+> ""'
+
+. 
+. local k = 0
+
+. foreach v of local PRSV {
+  2.     local ++k
+  3.     generate byte prs`k' = real(`v')
+  4. }
+(2,050 missing values generated)
+(2,050 missing values generated)
+(2,050 missing values generated)
+(2,050 missing values generated)
+(2,050 missing values generated)
+(2,050 missing values generated)
+(2,050 missing values generated)
+(2,050 missing values generated)
+(2,050 missing values generated)
+
+. 
+. 
+. * ================================================== 2. PROFILE THE SAMPLE ==
+. * Nothing downstream is quotable without its denominator, so the denominators
+. * come first.
+. 
+. cnum, key(census_n_respondents) value(`NTOT') source("`SRC'") ///
+>     note("Respondent records in the published microdata file. The Summary Rep
+> ort headline count is 2,260; the microdata release carries 2,227 rows, 33 few
+> er, and the release documents no reason. All shares in this module use the 2,
+> 227-row file. `CAV'")
+
+. 
+. quietly count if sector < .
+
+. local NSEC = r(N)
+
+. forvalues s = 1/4 {
+  2.     quietly count if sector == `s'
+  3.     local ns`s' = r(N)
+  4. }
+
+. cnum, key(census_n_sector_creative) value(`ns1') source("`SRC'") ///
+>     note("Respondents whose primary music ecosystem sector is Music Creative.
+>  The sector item itself was answered by `NSEC' of `NTOT'. `CAV'")
+
+. cnum, key(census_n_sector_industry) value(`ns2') source("`SRC'") ///
+>     note("Primary sector Music Industry, of `NSEC' who answered the sector it
+> em. `CAV'")
+
+. cnum, key(census_n_sector_presenter) value(`ns3') source("`SRC'") ///
+>     note("Primary sector Music Venue or Presenter, of `NSEC' who answered the
+>  sector item. This is the smallest of the three role groups and it caps every
+> thing the venue section can say. `CAV'")
+
+. cnum, key(census_n_sector_exited) value(`ns4') source("`SRC'") ///
+>     note("Selected None of these - Exit the Census, which terminated the ques
+> tionnaire. They remain in the 2,227-row file and in any all-respondent denomi
+> nator, but answer almost nothing else, so they are excluded from the sector b
+> reakouts. `CAV'")
+
+. 
+. * --- item response inventory ---------------------------------------------
+. * One row per analysed item: how many answered it, the share of all 2,227, an
+> d
+. * the block it was routed to. This is the file to consult before quoting
+. * anything from this module.
+. tempname irf
+
+. tempfile irtab
+
+. postfile `irf' str44 item str18 block int n_answer double pct_all using `irta
+> b', replace
+(file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St28869.000001 not
+    found)
+
+. 
+. capture program drop iradd
+
+. program define iradd
+  1.     syntax varname(string), IRF(string) ITEM(string) BLOCK(string) NTOT(in
+> teger)
+  2.     quietly count if `varlist' != ""
+  3.     post `irf' ("`item'") ("`block'") (r(N)) (100*r(N)/`ntot')
+  4. end
+
+. 
+. local ALLB "All respondents"
+
+. local CREB "Creatives block"
+
+. local PREB "Presenter block"
+
+. 
+. iradd county_of_residence,             irf(`irf') ntot(`NTOT') block("`ALLB'"
+> ) item("County of residence")
+
+. iradd residence_distance_from,         irf(`irf') ntot(`NTOT') block("`ALLB'"
+> ) item("Miles from downtown")
+
+. iradd city_of_austin_resident,         irf(`irf') ntot(`NTOT') block("`ALLB'"
+> ) item("City of Austin resident")
+
+. iradd primary_music_ecosystem_sector,  irf(`irf') ntot(`NTOT') block("`ALLB'"
+> ) item("Primary sector")
+
+. iradd music_business_structure,        irf(`irf') ntot(`NTOT') block("`ALLB'"
+> ) item("Business structure (multi-select)")
+
+. iradd work_location,                   irf(`irf') ntot(`NTOT') block("`ALLB'"
+> ) item("Work location")
+
+. iradd years_experience,                irf(`irf') ntot(`NTOT') block("`ALLB'"
+> ) item("Years of experience")
+
+. iradd music_education,                 irf(`irf') ntot(`NTOT') block("`ALLB'"
+> ) item("Music education (multi-select)")
+
+. iradd restored_pre_pandemic_workload,  irf(`irf') ntot(`NTOT') block("`ALLB'"
+> ) item("Work back to pre-pandemic level")
+
+. iradd intent_to_continue_music,        irf(`irf') ntot(`NTOT') block("`ALLB'"
+> ) item("Intent to continue in music")
+
+. iradd intent_to_stay_in_austin,        irf(`irf') ntot(`NTOT') block("`ALLB'"
+> ) item("Intent to stay in greater Austin")
+
+. iradd work_space_status_including,     irf(`irf') ntot(`NTOT') block("`ALLB'"
+> ) item("Work space status")
+
+. iradd conditions_of_current_lease,     irf(`irf') ntot(`NTOT') block("`ALLB'"
+> ) item("Conditions of current lease")
+
+. iradd intent_to_renew_current_lease,   irf(`irf') ntot(`NTOT') block("`ALLB'"
+> ) item("Intent to renew lease")
+
+. iradd current_housing,                 irf(`irf') ntot(`NTOT') block("`ALLB'"
+> ) item("Housing tenure")
+
+. iradd housing_changes_over_past,       irf(`irf') ntot(`NTOT') block("`ALLB'"
+> ) item("Housing changes over past 2 years")
+
+. iradd health_insurance_currently,      irf(`irf') ntot(`NTOT') block("`ALLB'"
+> ) item("Health insurance")
+
+. iradd affordability_struggles,         irf(`irf') ntot(`NTOT') block("`ALLB'"
+> ) item("Expenses hard to afford")
+
+. iradd received_covid_related_relief,   irf(`irf') ntot(`NTOT') block("`ALLB'"
+> ) item("Received COVID relief")
+
+. iradd age,                             irf(`irf') ntot(`NTOT') block("`ALLB'"
+> ) item("Age band")
+
+. iradd race,                            irf(`irf') ntot(`NTOT') block("`ALLB'"
+> ) item("Race")
+
+. iradd gender,                          irf(`irf') ntot(`NTOT') block("`ALLB'"
+> ) item("Gender")
+
+. iradd creatives_income_from_live,      irf(`irf') ntot(`NTOT') block("`CREB'"
+> ) item("Income share: local live performance")
+
+. iradd creatives_income_from_live_1,    irf(`irf') ntot(`NTOT') block("`CREB'"
+> ) item("Income share: touring")
+
+. iradd creatives_income_related,        irf(`irf') ntot(`NTOT') block("`CREB'"
+> ) item("Income share: recordings and royalties")
+
+. iradd creatives_income_related_1,      irf(`irf') ntot(`NTOT') block("`CREB'"
+> ) item("Income share: songwriting")
+
+. iradd creatives_income_related_2,      irf(`irf') ntot(`NTOT') block("`CREB'"
+> ) item("Income share: studio work")
+
+. iradd creatives_income_related_3,      irf(`irf') ntot(`NTOT') block("`CREB'"
+> ) item("Income share: merchandise")
+
+. iradd creatives_income_related_4,      irf(`irf') ntot(`NTOT') block("`CREB'"
+> ) item("Income share: teaching")
+
+. iradd creatives_paid_performances,     irf(`irf') ntot(`NTOT') block("`CREB'"
+> ) item("Paid local gigs per month")
+
+. iradd creatives_percentage_of_gigs,    irf(`irf') ntot(`NTOT') block("`CREB'"
+> ) item("Percent of gigs with a guarantee")
+
+. iradd creatives_work_also_as_gig,      irf(`irf') ntot(`NTOT') block("`CREB'"
+> ) item("Also presents or promotes gigs")
+
+. iradd creatives_annual_spending,       irf(`irf') ntot(`NTOT') block("`CREB'"
+> ) item("Spend: new recordings")
+
+. iradd creatives_annual_spending_1,     irf(`irf') ntot(`NTOT') block("`CREB'"
+> ) item("Spend: publicity and promotion")
+
+. iradd creatives_annual_spending_2,     irf(`irf') ntot(`NTOT') block("`CREB'"
+> ) item("Spend: web and social media")
+
+. iradd creatives_annual_spending_3,     irf(`irf') ntot(`NTOT') block("`CREB'"
+> ) item("Spend: supplies")
+
+. iradd creatives_annual_spending_4,     irf(`irf') ntot(`NTOT') block("`CREB'"
+> ) item("Spend: rehearsal or work space")
+
+. iradd creatives_annual_spending_5,     irf(`irf') ntot(`NTOT') block("`CREB'"
+> ) item("Spend: gear and rentals")
+
+. iradd creatives_annual_spending_6,     irf(`irf') ntot(`NTOT') block("`CREB'"
+> ) item("Spend: merchandise")
+
+. iradd creatives_annual_spending_7,     irf(`irf') ntot(`NTOT') block("`CREB'"
+> ) item("Spend: accounting and legal")
+
+. iradd creatives_percentage_of_annual,  irf(`irf') ntot(`NTOT') block("`CREB'"
+> ) item("Percent of spend paid locally")
+
+. iradd presenter_ownership_structure,   irf(`irf') ntot(`NTOT') block("`PREB'"
+> ) item("Venue ownership structure")
+
+. iradd presenter_venue_type,            irf(`irf') ntot(`NTOT') block("`PREB'"
+> ) item("Venue type")
+
+. iradd presenter_venue_capacity,        irf(`irf') ntot(`NTOT') block("`PREB'"
+> ) item("Legal capacity")
+
+. iradd presenter_outdoor_live_music,    irf(`irf') ntot(`NTOT') block("`PREB'"
+> ) item("Can host live music outdoors")
+
+. iradd presenter_ranking_of_pressures,  irf(`irf') ntot(`NTOT') block("`PREB'"
+> ) item("Pressure ranking of 9 items")
+
+. iradd presenter_local_talent,          irf(`irf') ntot(`NTOT') block("`PREB'"
+> ) item("Local talent share of bookings")
+
+. iradd presenter_confidence_booking,    irf(`irf') ntot(`NTOT') block("`PREB'"
+> ) item("Confidence booking local talent")
+
+. postclose `irf'
+
+. 
+. preserve
+
+. use `irtab', clear
+
+. gsort -n_answer
+
+. export delimited using "${TABDIR}/table_census_item_response.csv", replace
+file /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.booth@texas2036.org
+> /My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analysis/stata/../..
+> /03_analysis/out/tables/table_census_item_response.csv saved
+
+. display as text _newline "Item response inventory, n answering out of `NTOT':
+> "
+
+Item response inventory, n answering out of 2227:
+
+. list item block n_answer pct_all, noobs sep(0) abbreviate(24)
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |                    County of residence | All respondents |     2227 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                                    100                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |                    Miles from downtown | All respondents |     2150 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              96.542434                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |                City of Austin resident | All respondents |     2149 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                               96.49753                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |                         Primary sector | All respondents |     2128 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              95.554558                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |      Business structure (multi-select) | All respondents |     2023 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              90.839695                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |                          Work location | All respondents |     1991 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              89.402784                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |                    Years of experience | All respondents |     1979 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              88.863943                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |       Intent to stay in greater Austin | All respondents |     1900 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              85.316569                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |            Intent to continue in music | All respondents |     1900 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              85.316569                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |        Work back to pre-pandemic level | All respondents |     1826 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              81.993714                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |                       Health insurance | All respondents |     1654 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              74.270319                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |                Expenses hard to afford | All respondents |     1631 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              73.237539                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |                  Received COVID relief | All respondents |     1629 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              73.147732                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |                         Housing tenure | All respondents |     1620 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              72.743601                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |      Housing changes over past 2 years | All respondents |     1612 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              72.384374                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |                                   Race | All respondents |     1612 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              72.384374                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |                               Age band | All respondents |     1607 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              72.159856                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |                                 Gender | All respondents |     1607 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              72.159856                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |         Music education (multi-select) | All respondents |     1157 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                                51.9533                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |         Also presents or promotes gigs | Creatives block |     1151 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                               51.68388                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |   Income share: local live performance | Creatives block |     1119 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              50.246969                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |              Paid local gigs per month | Creatives block |     1086 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              48.765155                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |       Percent of gigs with a guarantee | Creatives block |     1086 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              48.765155                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |                      Work space status | All respondents |     1057 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              47.462955                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |                  Income share: touring | Creatives block |      948 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              42.568478                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |              Income share: studio work | Creatives block |      929 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              41.715312                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  | Income share: recordings and royalties | Creatives block |      928 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              41.670409                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |                 Income share: teaching | Creatives block |      903 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              40.547822                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |          Percent of spend paid locally | Creatives block |      888 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                               39.87427                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |              Income share: songwriting | Creatives block |      859 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                               38.57207                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |              Income share: merchandise | Creatives block |      839 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              37.674001                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |                        Spend: supplies | Creatives block |      742 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              33.318366                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |                Spend: gear and rentals | Creatives block |      737 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              33.093848                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |                  Spend: new recordings | Creatives block |      728 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              32.689717                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |            Spend: web and social media | Creatives block |      709 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              31.836551                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |         Spend: publicity and promotion | Creatives block |      690 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              30.983386                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |         Spend: rehearsal or work space | Creatives block |      646 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              29.007634                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |                     Spend: merchandise | Creatives block |      625 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              28.064661                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |            Spend: accounting and legal | Creatives block |      611 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              27.436013                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |              Venue ownership structure | Presenter block |      217 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              9.7440503                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |                             Venue type | Presenter block |      209 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              9.3848226                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |                         Legal capacity | Presenter block |      191 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              8.5765604                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |           Can host live music outdoors | Presenter block |      185 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              8.3071396                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |                  Intent to renew lease | All respondents |      181 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              8.1275258                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |            Pressure ranking of 9 items | Presenter block |      177 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                               7.947912                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |        Confidence booking local talent | Presenter block |      167 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              7.4988774                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |         Local talent share of bookings | Presenter block |      163 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              7.3192636                              |
+  +---------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------+
+  |                                   item |           block | n_answer |
+  |            Conditions of current lease | All respondents |      131 |
+  |---------------------------------------------------------------------|
+  |                                pct_all                              |
+  |                              5.8823529                              |
+  +---------------------------------------------------------------------+
+
+. restore
+
+. 
+. * --- geography ------------------------------------------------------------
+. quietly count if austinres < .
+
+. local NAR = r(N)
+
+. quietly count if austinres == 1
+
+. local NAR1 = r(N)
+
+. cnum, key(census_n_city_item) value(`NAR') source("`SRC'") ///
+>     note("Respondents who answered the City of Austin residency item. `CAV'")
+
+. cpct, key(census_pct_city_of_austin) value(`=100*`NAR1'/`NAR'') source("`SRC'
+> ") ///
+>     note("Share who are City of Austin residents: `NAR1' of the `NAR' who ans
+> wered the item. On the full 2,227-row denominator it is 70.4 percent, because
+>  78 respondents skipped the item. Quote the denominator with the share. `CAV'
+> ")
+
+. 
+. quietly count if county_of_residence == "Travis"
+
+. local NTRAV = r(N)
+
+. cpct, key(census_pct_travis) value(`=100*`NTRAV'/`NTOT'') source("`SRC'") ///
+>     note("Share living in Travis County: `NTRAV' of `NTOT'. County is the onl
+> y item with complete response, which suggests it gated entry to the survey. T
+> he rest of the five-county field: Williamson 220, Hays 142, Bastrop 50, Caldw
+> ell 30. `CAV'")
+
+. 
+. quietly summarize miles, detail
+
+. local MMEAN = r(mean)
+
+. local MMED  = r(p50)
+
+. local MN    = r(N)
+
+. numadd, key(census_miles_mean) value(`=string(`MMEAN',"%9.4f")') ///
+>     formatted("`=strtrim(string(`MMEAN',"%9.1f"))' miles") unit("miles") sour
+> ce("`SRC'") ///
+>     note("Mean self-reported distance from downtown Austin, `MN' respondents 
+> who answered. Matches the published 10.6-mile average. `CAV'")
+
+. numadd, key(census_miles_median) value(`=string(`MMED',"%9.4f")') ///
+>     formatted("`=strtrim(string(`MMED',"%9.0f"))' miles") unit("miles") sourc
+> e("`SRC'") ///
+>     note("Median self-reported distance from downtown Austin, `MN' respondent
+> s. Matches the published 8-mile median. `CAV'")
+
+. 
+. preserve
+
+. contract county_of_residence, freq(n_respondents)
+
+. generate double pct_of_all = 100*n_respondents/`NTOT'
+
+. gsort -n_respondents
+
+. export delimited using "${TABDIR}/table_census_geography.csv", replace
+file /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.booth@texas2036.org
+> /My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analysis/stata/../..
+> /03_analysis/out/tables/table_census_geography.csv saved
+
+. display as text _newline "County of residence:"
+
+County of residence:
+
+. list, noobs sep(0)
+
+  +-----------------------------------+
+  | county_o~e   n_resp~s   pct_of_~l |
+  |-----------------------------------|
+  |     Travis       1785   80.152672 |
+  | Williamson        220   9.8787607 |
+  |       Hays        142    6.376291 |
+  |    Bastrop         50   2.2451729 |
+  |   Caldwell         30   1.3471037 |
+  +-----------------------------------+
+
+. restore
+
+. 
+. * The ZIP export is a separate Socrata dataset with no respondent key, so it
+. * cannot be joined to the detail file. It is reported as a standalone margina
+> l.
+. preserve
+
+. import delimited using "${EV_VENUE}/austin_music_census_2022_zipcodes_p7ky-ri
+> uq.csv", ///
+>     clear varnames(1) encoding("utf-8") case(preserve) stringcols(_all)
+(3 vars, 2,150 obs)
+
+. quietly count
+
+. local NZIP = r(N)
+
+. quietly levelsof home_zip_code, local(zl)
+
+. local NZIPD : word count `zl'
+
+. cnum, key(census_zip_rows) value(`NZIP') source("`SRCZ'") ///
+>     note("Rows in the companion ZIP-code export, stamped 2022-08-28, which is
+>  BEFORE the 12 September field close, so it is an interim extract and is 77 r
+> ows short of the detail file. It carries no respondent identifier and cannot 
+> be joined to the 2,227-row detail file; it supports a marginal distribution o
+> f home ZIPs and nothing else. `CAV'")
+
+. cnum, key(census_zip_distinct) value(`NZIPD') unit("distinct ZIP codes") sour
+> ce("`SRCZ'") ///
+>     note("Distinct home ZIP codes among the `NZIP' rows of the companion expo
+> rt. The four most common are 78745 (210 rows), 78704 (132), 78723 (101) and 7
+> 8702 (85). `CAV'")
+
+. restore
+
+. 
+. 
+. * ============================ 3. INCOME COMPOSITION, WITHOUT ANY DOLLARS ==
+. * FIGURE 25.
+. *
+. * The five-point scale is the survey substitute for an earnings question. It
+. * answers something no federal source can: how concentrated a music income is
+. * in live performance. It says nothing about how large that income is.
+. 
+. tempname icf
+
+. tempfile ictab
+
+. postfile `icf' int srcid str30 srclab int nresp int cat double share using `i
+> ctab', replace
+(file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St28869.000005 not
+    found)
+
+. forvalues k = 1/7 {
+  2.     local L : word `k' of `INCL'
+  3.     quietly count if inc`k' < .
+  4.     local n = r(N)
+  5.     forvalues c = 1/5 {
+  6.         quietly count if inc`k' == `c'
+  7.         post `icf' (`k') ("`L'") (`n') (`c') (100*r(N)/`n')
+  8.     }
+  9. }
+
+. postclose `icf'
+
+. 
+. preserve
+
+. use `ictab', clear
+
+. 
+. * Rank sources by the share saying the source supplies ALL or MOST of their
+. * music income. That is the concentration measure this figure is about.
+. bysort srcid: egen double allmost = total(share*inlist(cat, 4, 5))
+
+. bysort srcid: egen double anyinc  = total(share*(cat > 1))
+
+. generate double negam = -allmost
+
+. egen double rk = group(negam)
+
+. generate double ypos = 8 - rk
+
+. 
+. * Stack All first at the left, None last at the right.
+. generate byte ord = 6 - cat
+
+. sort srcid ord
+
+. by srcid: generate double x1 = sum(share)
+
+. generate double x0 = x1 - share
+
+. generate double xmid = (x0 + x1)/2
+
+. generate str8 slab = strtrim(string(share, "%4.0f")) + "%" if share >= 6.5
+(9 missing values generated)
+
+. label define catl 1 "None" 2 "Very little" 3 "Some" 4 "Most" 5 "All"
+
+. label values cat catl
+
+. 
+. sort srcid cat
+
+. export delimited srcid srclab nresp cat share x0 x1 allmost anyinc ypos ///
+>     using "${OUT}/fig25_income_concentration.csv", replace
+file /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.booth@texas2036.org
+> /My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analysis/stata/../..
+> /03_analysis/out/fig25_income_concentration.csv saved
+
+. 
+. display as text _newline "Share of music income by source (corrected labels):
+> "
+
+Share of music income by source (corrected labels):
+
+. list srclab nresp cat share allmost anyinc, noobs sep(5) abbreviate(14)
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |     Live performance, local |  1119 |        None | 7.5960679 | 50.759607 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                 92.403932                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |     Live performance, local |  1119 | Very little | 17.426273 | 50.759607 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                 92.403932                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |     Live performance, local |  1119 |        Some | 24.218052 | 50.759607 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                 92.403932                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |     Live performance, local |  1119 |        Most |  37.98034 | 50.759607 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                 92.403932                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |     Live performance, local |  1119 |         All | 12.779267 | 50.759607 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                 92.403932                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |   Live performance, touring |   948 |        None | 24.683544 | 12.025316 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                 75.316456                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |   Live performance, touring |   948 | Very little | 26.582278 | 12.025316 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                 75.316456                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |   Live performance, touring |   948 |        Some | 36.708861 | 12.025316 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                 75.316456                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |   Live performance, touring |   948 |        Most | 10.759494 | 12.025316 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                 75.316456                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |   Live performance, touring |   948 |         All | 1.2658228 | 12.025316 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                 75.316456                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |    Recordings and royalties |   928 |        None | 29.310345 | 5.6034483 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                 70.689655                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |    Recordings and royalties |   928 | Very little | 41.918103 | 5.6034483 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                 70.689655                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |    Recordings and royalties |   928 |        Some | 23.168103 | 5.6034483 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                 70.689655                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |    Recordings and royalties |   928 |        Most | 4.4181034 | 5.6034483 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                 70.689655                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |    Recordings and royalties |   928 |         All | 1.1853448 | 5.6034483 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                 70.689655                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |     Studio and session work |   929 |        None |  42.19591 | 7.8579117 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                  57.80409                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |     Studio and session work |   929 | Very little |  25.40366 | 7.8579117 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                  57.80409                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |     Studio and session work |   929 |        Some | 24.542519 | 7.8579117 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                  57.80409                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |     Studio and session work |   929 |        Most | 6.7814855 | 7.8579117 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                  57.80409                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |     Studio and session work |   929 |         All | 1.0764263 | 7.8579117 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                  57.80409                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |                 Merchandise |   839 |        None |  43.86174 | 3.9332539 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                  56.13826                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |                 Merchandise |   839 | Very little | 28.724672 | 3.9332539 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                  56.13826                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |                 Merchandise |   839 |        Some | 23.480334 | 3.9332539 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                  56.13826                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |                 Merchandise |   839 |        Most | 3.3373063 | 3.9332539 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                  56.13826                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |                 Merchandise |   839 |         All | .59594756 | 3.9332539 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                  56.13826                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  | Songwriting and mechanicals |   859 |        None | 49.010477 | 3.8416764 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                 50.989523                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  | Songwriting and mechanicals |   859 | Very little | 31.431898 | 3.8416764 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                 50.989523                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  | Songwriting and mechanicals |   859 |        Some | 15.715949 | 3.8416764 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                 50.989523                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  | Songwriting and mechanicals |   859 |        Most | 3.1431898 | 3.8416764 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                 50.989523                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  | Songwriting and mechanicals |   859 |         All | .69848661 | 3.8416764 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                 50.989523                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |                    Teaching |   903 |        None | 59.025471 | 13.621262 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                 40.974529                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |                    Teaching |   903 | Very little | 13.842746 | 13.621262 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                 40.974529                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |                    Teaching |   903 |        Some |  13.51052 | 13.621262 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                 40.974529                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |                    Teaching |   903 |        Most | 11.738649 | 13.621262 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                 40.974529                                 |
+  +---------------------------------------------------------------------------+
+
+  +---------------------------------------------------------------------------+
+  |                      srclab | nresp |         cat |     share |   allmost |
+  |                    Teaching |   903 |         All | 1.8826135 | 13.621262 |
+  |---------------------------------------------------------------------------|
+  |                                    anyinc                                 |
+  |                                 40.974529                                 |
+  +---------------------------------------------------------------------------+
+
+. 
+. forvalues s = 1/7 {
+  2.     quietly summarize allmost if srcid == `s', meanonly
+  3.     local am = r(mean)
+  4.     quietly summarize anyinc if srcid == `s', meanonly
+  5.     local ai = r(mean)
+  6.     quietly summarize nresp if srcid == `s', meanonly
+  7.     local nn = r(mean)
+  8.     quietly levelsof srclab if srcid == `s', local(lv) clean
+  9.     keyify, text("`lv'")
+ 10.     local kk = r(key)
+ 11.     cpct, key(census_incshare_allmost_`kk') value(`am') source("`SRC'") //
+> /
+>         note("Share of music creatives saying ALL or MOST of their music inco
+> me comes from `lv'. Denominator `nn' creatives who answered this item. Within
+> -music share only: the instrument never asked what fraction of TOTAL income c
+> omes from music, so this cannot be read as a share of a livelihood. `CAV'")
+ 12.     cpct, key(census_incshare_any_`kk') value(`ai') source("`SRC'") ///
+>         note("Share of music creatives reporting any income at all from `lv' 
+> - all, most, some or very little, excluding none. Denominator `nn'. Source la
+> bels follow the Socrata column dictionary for dataset an3p-3yqx and the five-
+> segment distributions on Data Appendix slide 40, which agree with each other 
+> and with the microdata; see census_caveat_slide41 before quoting the same val
+> ue from slide 41. `CAV'")
+ 13. }
+
+. 
+. local ylab ""
+
+. forvalues s = 1/7 {
+  2.     quietly summarize ypos if srcid == `s', meanonly
+  3.     local yp = r(mean)
+  4.     quietly summarize nresp if srcid == `s', meanonly
+  5.     local nn = strtrim(string(r(mean), "%9.0fc"))
+  6.     quietly levelsof srclab if srcid == `s', local(lv) clean
+  7.     local ylab `"`ylab' `yp' "`lv' (n = `nn')""'
+  8. }
+
+. 
+. * A five-step ramp from dark to light, so the chart survives grayscale.
+. local C1 "27 45 85"
+
+. local C2 "43 108 176"
+
+. local C3 "125 170 214"
+
+. local C4 "190 210 230"
+
+. local C5 "222 226 230"
+
+. 
+. * A thin white outline on every stacked segment: "Very little" (C4) and
+. * "None" (C5) sit close in both hue and lightness, most visibly on the
+. * Teaching row, so the outline draws a clean edge at every segment boundary
+. * without changing any of the 5 ramp colours or the legend.
+. twoway (rbar x0 x1 ypos if cat == 5, horizontal barwidth(0.62) color("`C1'") 
+> lcolor(white) lwidth(vthin)) ///
+>        (rbar x0 x1 ypos if cat == 4, horizontal barwidth(0.62) color("`C2'") 
+> lcolor(white) lwidth(vthin)) ///
+>        (rbar x0 x1 ypos if cat == 3, horizontal barwidth(0.62) color("`C3'") 
+> lcolor(white) lwidth(vthin)) ///
+>        (rbar x0 x1 ypos if cat == 2, horizontal barwidth(0.62) color("`C4'") 
+> lcolor(white) lwidth(vthin)) ///
+>        (rbar x0 x1 ypos if cat == 1, horizontal barwidth(0.62) color("`C5'") 
+> lcolor(white) lwidth(vthin)) ///
+>        (scatter ypos xmid if cat >= 4, msymbol(none) mlabel(slab) mlabcolor(w
+> hite) ///
+>             mlabsize(2.1) mlabposition(0)) ///
+>        (scatter ypos xmid if cat <= 3, msymbol(none) mlabel(slab) mlabcolor("
+> ${TEXTC}") ///
+>             mlabsize(2.1) mlabposition(0)) ///
+>        , title("Half of music creatives get most or all music income from loc
+> al gigs", $TITLEOPT) ///
+>          subtitle("Share of a creative’s own music income coming from each so
+> urce, music creatives only." ///
+>                   "2022 Greater Austin Music Census; self-selected sample, no
+>  weights, own base per row.", $SUBOPT) ///
+>          ylabel(`ylab', angle(0) labsize(2.5) notick nogrid) ytitle("") ///
+>          yscale(range(0.4 7.6)) ///
+>          xlabel(0(20)100, format(%3.0f) labsize(2.8)) xscale(range(0 100)) //
+> /
+>          xtitle("Percent of creatives answering the item", size(2.8)) ///
+>          legend(order(1 "All" 2 "Most" 3 "Some" 4 "Very little" 5 "None") ///
+>                 rows(1) position(6) $LEGOPT) ///
+>          graphregion(color(white)) plotregion(margin(l=0)) ///
+>          ysize(4.4) xsize(7.2)
+
+. figsave, name(fig25_income_concentration)
+  figure -> 04_figures/fig25_income_concentration.png
+
+. restore
+
+. 
+. 
+. * ================================================ 4. WORK VOLUME AND GIGS ==
+. 
+. quietly count if gigs < .
+
+. local NG = r(N)
+
+. cnum, key(census_n_gigs_item) value(`NG') source("`SRC'") ///
+>     note("Music creatives who answered the paid-local-performances-per-month 
+> item. `CAV'")
+
+. 
+. * The gig bands are coded 1 = zero a month, 2 = 1 to 3, 3 = 4 to 6, and up. S
+> o
+. * "more than 3 a month", the band the 2014 comparison uses, starts at gigs ==
+>  3.
+. quietly count if gigs == 1
+
+. cpct, key(census_gigs_zero) value(`=100*r(N)/`NG'') source("`SRC'") ///
+>     note("Share of music creatives reporting zero paid local performances a m
+> onth, of `NG' who answered. Replicates the published 14 percent (Data Appendi
+> x p.42) against 7.6 percent in the 2014 census - but that is a comparison of 
+> two different self-selected samples eight years apart, not a measured change.
+>  `CAV'")
+
+. quietly count if gigs >= 3 & gigs < .
+
+. cpct, key(census_gigs_over3) value(`=100*r(N)/`NG'') source("`SRC'") ///
+>     note("Share reporting more than 3 paid local performances a month - the 4
+> -to-6, 7-to-10, 11-to-15 and 16-or-more bands - of `NG' who answered. Replica
+> tes the published 35 percent against 43 percent in 2014, again two different 
+> self-selected samples. `CAV'")
+
+. quietly count if gigs >= 5 & gigs < .
+
+. cpct, key(census_gigs_over10) value(`=100*r(N)/`NG'') source("`SRC'") ///
+>     note("Share reporting more than 10 paid local performances a month, of `N
+> G' who answered. A working-musician week is four or more gigs; this is the sh
+> are at something close to full-time performing. `CAV'")
+
+. quietly count if gigs >= 2 & gigs < .
+
+. cpct, key(census_gigs_any) value(`=100*r(N)/`NG'') source("`SRC'") ///
+>     note("Share reporting at least one paid local performance a month, of `NG
+> ' who answered. `CAV'")
+
+. 
+. quietly count if gigs < . & restored == 1
+
+. local nrd = r(N)
+
+. quietly count if gigs >= 3 & gigs < . & restored == 1
+
+. local nrx = r(N)
+
+. if `nrd' >= 50 {
+.     cpct, key(census_gigs_over3_restored) value(`=100*`nrx'/`nrd'') source("`
+> SRC'") ///
+>         note("Share reporting more than 3 paid local performances a month amo
+> ng the `nrd' creatives who also said their music work has returned to pre-pan
+> demic levels. The published pandemic-adjusted comparison figure is 38 percent
+> . `CAV'")
+. }
+
+. 
+. quietly summarize guarpct, detail
+
+. cpct, key(census_gig_guarantee_mean) value(`=r(mean)') source("`SRC'") ///
+>     note("Mean self-reported percent of gigs paying a base guarantee rather t
+> han a door or bar percentage, `=r(N)' creatives. Replicates the published 54 
+> percent. The median is `=strtrim(string(r(p50),"%4.0f"))' percent and the dis
+> tribution is close to bimodal at 0 and 100, so the mean describes no typical 
+> musician. No dollar amount was ever collected for a gig. `CAV'")
+
+. 
+. quietly count if gigpresent < .
+
+. local NGP = r(N)
+
+. quietly count if gigpresent == 1
+
+. cpct, key(census_also_presents_gigs) value(`=100*r(N)/`NGP'') source("`SRC'")
+>  ///
+>     note("Share of music creatives who also present or promote gigs, casually
+>  or professionally, of `NGP' who answered. THIS IS NOT WORK OUTSIDE MUSIC: th
+> e Socrata dictionary names the variable CREATIVES Work Also as Gig Presenter 
+> and Data Appendix slide 47 confirms the reading. See census_no_outside_work_i
+> tem. `CAV'")
+
+. 
+. numadd, key(census_no_outside_work_item) value(0) formatted("not in the micro
+> data") ///
+>     unit("flag") source("`SRC'") ///
+>     note("The census DID ask about work outside music - Data Appendix slide 1
+> 5 reports 38 percent in a non-creative industry, 24 percent in another creati
+> ve industry, 32 percent with no outside work and 22 percent calling the outsi
+> de job primary. None of the 107 columns in the public microdata carries that 
+> item, so it cannot be reproduced, cross-tabulated or tested here. Quote it fr
+> om the appendix with the appendix denominator, or not at all.")
+
+. 
+. display as text _newline "Gig volume by primary sector (routing check):"
+
+Gig volume by primary sector (routing check):
+
+. tabulate gigs sector, column
+
++-------------------+
+| Key               |
+|-------------------|
+|     frequency     |
+| column percentage |
++-------------------+
+
+Paid local |
+performanc |     Primary music
+    es per |   ecosystem sector
+     month | Music cre  Music ind |     Total
+-----------+----------------------+----------
+ 0 a month |       152          0 |       152 
+           |     14.02       0.00 |     14.00 
+-----------+----------------------+----------
+    1 to 3 |       553          2 |       555 
+           |     51.01     100.00 |     51.10 
+-----------+----------------------+----------
+    4 to 6 |       197          0 |       197 
+           |     18.17       0.00 |     18.14 
+-----------+----------------------+----------
+   7 to 10 |        85          0 |        85 
+           |      7.84       0.00 |      7.83 
+-----------+----------------------+----------
+  11 to 15 |        51          0 |        51 
+           |      4.70       0.00 |      4.70 
+-----------+----------------------+----------
+16 or more |        46          0 |        46 
+           |      4.24       0.00 |      4.24 
+-----------+----------------------+----------
+     Total |     1,084          2 |     1,086 
+           |    100.00     100.00 |    100.00 
+
+. * tabulate returns r(chi2) and r(p) but not the degrees of freedom, so it is
+. * built from the realised table dimensions rather than assumed from the codin
+> g.
+. display as text _newline "Gig volume by years of experience:"
+
+Gig volume by years of experience:
+
+. tabulate gigs yrsexp, column chi2
+
++-------------------+
+| Key               |
+|-------------------|
+|     frequency     |
+| column percentage |
++-------------------+
+
+Paid local |
+performanc |
+    es per |           Years working in music
+     month | Under 3 y  3 to 5 ye  6 to 10 y  More than |     Total
+-----------+--------------------------------------------+----------
+ 0 a month |         4          7         18        123 |       152 
+           |     10.81       7.87      10.17      15.73 |     14.01 
+-----------+--------------------------------------------+----------
+    1 to 3 |        23         42        100        390 |       555 
+           |     62.16      47.19      56.50      49.87 |     51.15 
+-----------+--------------------------------------------+----------
+    4 to 6 |         9         22         32        134 |       197 
+           |     24.32      24.72      18.08      17.14 |     18.16 
+-----------+--------------------------------------------+----------
+   7 to 10 |         0         10         12         62 |        84 
+           |      0.00      11.24       6.78       7.93 |      7.74 
+-----------+--------------------------------------------+----------
+  11 to 15 |         1          4         10         36 |        51 
+           |      2.70       4.49       5.65       4.60 |      4.70 
+-----------+--------------------------------------------+----------
+16 or more |         0          4          5         37 |        46 
+           |      0.00       4.49       2.82       4.73 |      4.24 
+-----------+--------------------------------------------+----------
+     Total |        37         89        177        782 |     1,085 
+           |    100.00     100.00     100.00     100.00 |    100.00 
+
+         Pearson chi2(15) =  19.9626   Pr = 0.173
+
+. local CHI_GY = r(chi2)
+
+. local P_GY   = r(p)
+
+. local DF_GY  = (r(r)-1)*(r(c)-1)
+
+. display as text _newline "Also presents gigs, by years of experience:"
+
+Also presents gigs, by years of experience:
+
+. tabulate gigpresent yrsexp, column chi2
+
++-------------------+
+| Key               |
+|-------------------|
+|     frequency     |
+| column percentage |
++-------------------+
+
+                      |           Years working in music
+           gigpresent | Under 3 y  3 to 5 ye  6 to 10 y  More than |     Total
+----------------------+--------------------------------------------+----------
+        Performs only |        22         49         93        444 |       608 
+                      |     47.83      54.44      51.67      53.24 |     52.87 
+----------------------+--------------------------------------------+----------
+Also presents or prom |        24         41         87        390 |       542 
+                      |     52.17      45.56      48.33      46.76 |     47.13 
+----------------------+--------------------------------------------+----------
+                Total |        46         90        180        834 |     1,150 
+                      |    100.00     100.00     100.00     100.00 |    100.00 
+
+          Pearson chi2(3) =   0.7090   Pr = 0.871
+
+. local CHI_PY = r(chi2)
+
+. local P_PY   = r(p)
+
+. local DF_PY  = (r(r)-1)*(r(c)-1)
+
+. display as text _newline "Also presents gigs, by gig volume:"
+
+Also presents gigs, by gig volume:
+
+. tabulate gigpresent gigs, column chi2
+
++-------------------+
+| Key               |
+|-------------------|
+|     frequency     |
+| column percentage |
++-------------------+
+
+                      |      Paid local performances per month
+           gigpresent | 0 a month     1 to 3     4 to 6    7 to 10 |     Total
+----------------------+--------------------------------------------+----------
+        Performs only |        92        265        102         34 |       539 
+                      |     63.45      48.62      53.40      40.00 |     50.85 
+----------------------+--------------------------------------------+----------
+Also presents or prom |        53        280         89         51 |       521 
+                      |     36.55      51.38      46.60      60.00 |     49.15 
+----------------------+--------------------------------------------+----------
+                Total |       145        545        191         85 |     1,060 
+                      |    100.00     100.00     100.00     100.00 |    100.00 
+
+
+                      |      Paid local
+                      |   performances per
+                      |         month
+           gigpresent |  11 to 15  16 or mor |     Total
+----------------------+----------------------+----------
+        Performs only |        23         23 |       539 
+                      |     46.94      51.11 |     50.85 
+----------------------+----------------------+----------
+Also presents or prom |        26         22 |       521 
+                      |     53.06      48.89 |     49.15 
+----------------------+----------------------+----------
+                Total |        49         45 |     1,060 
+                      |    100.00     100.00 |    100.00 
+
+          Pearson chi2(5) =  15.0919   Pr = 0.010
+
+. local CHI_PG = r(chi2)
+
+. local P_PG   = r(p)
+
+. local DF_PG  = (r(r)-1)*(r(c)-1)
+
+. 
+. numadd, key(census_gigs_by_experience_chi2) value(`=string(`CHI_GY',"%9.3f")'
+> ) ///
+>     formatted("chi-squared(`DF_GY') = `=strtrim(string(`CHI_GY',"%9.1f"))', p
+>  = `=strtrim(string(`P_GY',"%6.3f"))'") ///
+>     unit("Pearson chi-squared") source("`SRC'") ///
+>     note("Test of independence between the monthly paid-gig band and years of
+>  experience among music creatives. Not distinguishable: gig volume looks flat
+>  across career stage in this sample, which cuts against a story in which expe
+> rience buys work. The p-value assumes simple random sampling, which a self-se
+> lected convenience sample is not, so read it as a descriptive discriminant am
+> ong respondents. `CAV'")
+
+. numadd, key(census_presents_by_experience_chi2) value(`=string(`CHI_PY',"%9.3
+> f")') ///
+>     formatted("chi-squared(`DF_PY') = `=strtrim(string(`CHI_PY',"%9.1f"))', p
+>  = `=strtrim(string(`P_PY',"%6.3f"))'") ///
+>     unit("Pearson chi-squared") source("`SRC'") ///
+>     note("Test of independence between also presenting or promoting gigs and 
+> years of experience. Not distinguishable. Association only; the p-value assum
+> es a random sample. `CAV'")
+
+. numadd, key(census_presents_by_gigs_chi2) value(`=string(`CHI_PG',"%9.3f")') 
+> ///
+>     formatted("chi-squared(`DF_PG') = `=strtrim(string(`CHI_PG',"%9.1f"))', p
+>  = `=strtrim(string(`P_PG',"%6.3f"))'") ///
+>     unit("Pearson chi-squared") source("`SRC'") ///
+>     note("Test of independence between also presenting or promoting gigs and 
+> the monthly paid-gig band. Creatives who play more also promote more. Associa
+> tion, not causation, and the p-value assumes a random sample. `CAV'")
+
+. 
+. quietly count if sector == 1 & gigs < .
+
+. local ngc = r(N)
+
+. cpct, key(census_gigs_item_from_creatives) value(`=100*`ngc'/`NG'') source("`
+> SRC'") ///
+>     note("Share of the gig-volume respondents whose primary sector is Music C
+> reative. Because it is essentially 100 percent, a sector cross-tabulation of 
+> any creatives-block item carries no information and none is published here. Y
+> ears of experience and business structure are the usable splits inside that b
+> lock. `CAV'")
+
+. 
+. 
+. * =========================== 5. THE COST SIDE, IN 2025 DOLLARS (FIGURE 27) =
+> =
+. * The census collected exactly one dollar quantity from creatives, and it is 
+> a
+. * cost. That makes it the missing half of the Census Bureau Nonemployer
+. * Statistics picture, which reports gross receipts BEFORE any expense.
+. *
+. * The published headline of about 10,500 dollars a year is a SUM OF EIGHT
+. * CATEGORY MEANS, each computed on a different set of respondents. It is
+. * replicated here, then set beside the two per-respondent totals a reader wou
+> ld
+. * more naturally assume it to be.
+. 
+. preserve
+
+.     use "${OUT}/cpi_annual.dta", clear
+
+.     quietly summarize defl if year == 2022, meanonly
+
+.     global DEFL22 = r(mean)
+
+. restore
+
+. display as text _newline "CPI-U factor, 2022 nominal to 2025 dollars: ${DEFL2
+> 2}"
+
+CPI-U factor, 2022 nominal to 2025 dollars: 1.100794194755541
+
+. 
+. tempname spf
+
+. tempfile sptab
+
+. postfile `spf' int catid str30 catlab int n double mean_nom double med_nom //
+> /
+>     double p75_nom double mean_real double med_real double p75_real using `sp
+> tab', replace
+(file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St28869.000008 not
+    found)
+
+. local summeans = 0
+
+. forvalues k = 1/8 {
+  2.     local L : word `k' of `SPL'
+  3.     quietly summarize sp`k', detail
+  4.     local summeans = `summeans' + r(mean)
+  5.     post `spf' (`k') ("`L'") (r(N)) (r(mean)) (r(p50)) (r(p75)) ///
+>         (r(mean)*${DEFL22}) (r(p50)*${DEFL22}) (r(p75)*${DEFL22})
+  6. }
+
+. postclose `spf'
+
+. 
+. cusd, key(census_spend_sumofmeans_2022) value(`summeans') unit("2022 dollars"
+> ) source("`SRC'") ///
+>     note("Sum of the eight category MEANS, each on its own base of between 61
+> 1 and 742 creatives. This reproduces the published average annual spend of ab
+> out 10,500 dollars (Data Appendix p.46) to within 1 percent, and shows what t
+> hat headline is: an addition of eight separately based averages, not the mean
+>  of any single respondent total. `CAV'")
+
+. cusd, key(census_spend_sumofmeans_2025) value(`=`summeans'*${DEFL22}') source
+> ("`SRC'") ///
+>     note("The same sum of eight category means, inflated from 2022 to 2025 do
+> llars with the CPI-U annual factor from out/cpi_annual.dta. `CAV'")
+
+. 
+. * Per-respondent totals. Two versions, both stated, because the choice of bas
+> e
+. * moves the number by more than the inflation adjustment does.
+. generate double sptot = 0
+
+. forvalues k = 1/8 {
+  2.     quietly replace sptot = sptot + cond(missing(sp`k'), 0, sp`k')
+  3. }
+
+. replace sptot = . if nspend == 0
+(1,354 real changes made, 1,354 to missing)
+
+. generate double sptot_real = sptot * ${DEFL22}
+(1,354 missing values generated)
+
+. label variable sptot_real "Total annual music business spending, 2025 dollars
+> "
+
+. 
+. quietly count if nspend == 8
+
+. local T8N = r(N)
+
+. quietly summarize sptot_real if nspend == 8, detail
+
+. local T8M   = r(mean)
+
+. local T8D   = r(p50)
+
+. local T8P25 = r(p25)
+
+. local T8P75 = r(p75)
+
+. local T8P90 = r(p90)
+
+. quietly count if nspend >= 1
+
+. local T1N = r(N)
+
+. quietly summarize sptot_real if nspend >= 1, detail
+
+. local T1M = r(mean)
+
+. local T1D = r(p50)
+
+. 
+. display as text _newline "Total annual spending, 2025 dollars, complete respo
+> nders only:"
+
+Total annual spending, 2025 dollars, complete responders only:
+
+. summarize sptot_real if nspend == 8, detail
+
+     Total annual music business spending, 2025 dollars
+-------------------------------------------------------------
+      Percentiles      Smallest
+ 1%            0              0
+ 5%            0              0
+10%     330.2383              0       Obs                 501
+25%      1816.31              0       Sum of wgt.         501
+
+50%     5393.892                      Mean            10287.9
+                        Largest       Std. dev.      17562.66
+75%     11833.54       127692.1
+90%     22015.88       137599.3       Variance       3.08e+08
+95%     33574.22       140901.7       Skewness       4.727531
+99%      94117.9       159615.2       Kurtosis        31.5142
+
+. 
+. cnum, key(census_spend_complete_n) value(`T8N') source("`SRC'") ///
+>     note("Music creatives who gave a figure for all eight spending categories
+> . This is the only base on which a per-respondent total is complete, and it i
+> s 22.5 percent of the 2,227 respondents. `CAV'")
+
+. cusd, key(census_spend_total_mean) value(`T8M') source("`SRC'") ///
+>     note("MEAN total annual spending on their own music work, 2025 dollars, a
+> ll eight categories, `T8N' creatives who answered every category. The publish
+> ed 10,500-dollar headline is a sum of category means on eight different bases
+>  and is NOT this number. `CAV'")
+
+. cusd, key(census_spend_total_median) value(`T8D') source("`SRC'") ///
+>     note("MEDIAN total annual spending on their own music work, 2025 dollars,
+>  `T8N' creatives who answered every category. It is roughly half the mean, be
+> cause the distribution is severely right-skewed. This is the number to quote 
+> for a typical creative. `CAV'")
+
+. cusd, key(census_spend_total_p25) value(`T8P25') source("`SRC'") ///
+>     note("25th percentile of total annual spending, 2025 dollars, `T8N' creat
+> ives answering all eight categories. `CAV'")
+
+. cusd, key(census_spend_total_p75) value(`T8P75') source("`SRC'") ///
+>     note("75th percentile of total annual spending, 2025 dollars, `T8N' creat
+> ives answering all eight categories. `CAV'")
+
+. cusd, key(census_spend_total_p90) value(`T8P90') source("`SRC'") ///
+>     note("90th percentile of total annual spending, 2025 dollars, `T8N' creat
+> ives answering all eight categories. The gap between this and the median is w
+> hy the report should not lead with a mean. `CAV'")
+
+. cusd, key(census_spend_total_mean_anyitem) value(`T1M') source("`SRC'") ///
+>     note("MEAN total annual spending, 2025 dollars, over the `T1N' creatives 
+> who answered at least one category, treating unanswered categories as zero. A
+>  deliberate lower bound: some blanks are true zeros and some are simply unans
+> wered, and the release cannot tell them apart. `CAV'")
+
+. cusd, key(census_spend_total_median_anyitem) value(`T1D') source("`SRC'") ///
+>     note("MEDIAN total annual spending, 2025 dollars, `T1N' creatives who ans
+> wered at least one category, blanks treated as zero. Lower bound, same reason
+> . `CAV'")
+
+. 
+. numadd, key(census_spend_vs_nes_receipts) value(`T8D') ///
+>     formatted("the missing cost side of a receipts figure") unit("2025 dollar
+> s, median") source("`SRC'") ///
+>     note("Census Bureau Nonemployer Statistics reports average gross receipts
+>  of roughly 32,962 dollars for NAICS 7115 establishments, BEFORE any expense.
+>  This census puts median self-reported annual business spending by Austin mus
+> ic creatives at the value in this row and the mean well above it, both 2025 d
+> ollars. The two cannot be differenced: different populations, different years
+> , different units - NES counts businesses while the census counts people - an
+> d NES misses cash gig work entirely. Use the pairing to show that the expense
+>  side is material and unmeasured, never to compute a net figure.")
+
+. 
+. preserve
+
+. use `sptab', clear
+
+. gsort -mean_real
+
+. export delimited using "${TABDIR}/table_census_spending.csv", replace
+file /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.booth@texas2036.org
+> /My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analysis/stata/../..
+> /03_analysis/out/tables/table_census_spending.csv saved
+
+. export delimited using "${OUT}/fig27_cost_of_working.csv", replace
+file /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.booth@texas2036.org
+> /My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analysis/stata/../..
+> /03_analysis/out/fig27_cost_of_working.csv saved
+
+. display as text _newline "Annual spending by category, 2025 dollars:"
+
+Annual spending by category, 2025 dollars:
+
+. list catlab n mean_real med_real p75_real, noobs sep(0) abbreviate(16)
+
+  +-------------------------------------------------------------------+
+  |                  catlab     n   mean_real    med_real    p75_real |
+  |-------------------------------------------------------------------|
+  |          New recordings   728    3916.969   1651.1913    5503.971 |
+  | Rehearsal or work space   646   1536.4889   275.19855   1100.7942 |
+  |        Gear and rentals   737    1521.674    550.3971   1651.1913 |
+  | Publicity and promotion   690   1505.6344   330.23826   1100.7942 |
+  |             Merchandise   625   1029.3342   330.23826   1100.7942 |
+  |                Supplies   742   959.53797    550.3971   1100.7942 |
+  |    Accounting and legal   611   669.97109           0    550.3971 |
+  |    Web and social media   709   527.56455   220.15884    550.3971 |
+  +-------------------------------------------------------------------+
+
+. 
+. forvalues i = 1/`=_N' {
+  2.     local L = catlab[`i']
+  3.     keyify, text("`L'")
+  4.     local kk = r(key)
+  5.     local nn = n[`i']
+  6.     cusd, key(census_spend_mean_`kk') value(`=mean_real[`i']') source("`SR
+> C'") ///
+>         note("Mean annual spending on `L', 2025 dollars, `nn' music creatives
+>  who answered this category. `CAV'")
+  7.     cusd, key(census_spend_median_`kk') value(`=med_real[`i']') source("`S
+> RC'") ///
+>         note("Median annual spending on `L', 2025 dollars, `nn' music creativ
+> es who answered this category. `CAV'")
+  8. }
+
+. 
+. generate double ypos = _N - _n + 1
+
+. generate double y1 = ypos + 0.18
+
+. generate double y2 = ypos - 0.18
+
+. generate str12 lm = strtrim(string(round(mean_real), "%12.0fc"))
+
+. generate str12 ld = strtrim(string(round(med_real), "%12.0fc"))
+
+. 
+. local ylab ""
+
+. forvalues i = 1/`=_N' {
+  2.     local L = catlab[`i']
+  3.     local N = strtrim(string(n[`i'], "%9.0fc"))
+  4.     local Y = ypos[`i']
+  5.     local ylab `"`ylab' `Y' "`L' (n = `N')""'
+  6. }
+
+. 
+. twoway (bar mean_real y1, horizontal barwidth(0.34) color("${NAVY}") lwidth(n
+> one)) ///
+>        (bar med_real y2, horizontal barwidth(0.34) color("${ORANGE}") lwidth(
+> none)) ///
+>        (scatter y1 mean_real, msymbol(none) mlabel(lm) mlabcolor("${NAVY}") /
+> //
+>             mlabsize(2.1) mlabposition(3) mlabgap(1.1)) ///
+>        (scatter y2 med_real, msymbol(none) mlabel(ld) mlabcolor("${ORANGE}") 
+> ///
+>             mlabsize(2.1) mlabposition(3) mlabgap(1.1)) ///
+>        , title("Recording is the largest cost of working, on the mean and the
+>  median", $TITLEOPT) ///
+>          subtitle("Annual spending on their own music work, 2025 dollars; mus
+> ic creatives only, 2022 Greater" ///
+>                   "Austin Music Census. Self-selected sample, no weights; eac
+> h category has its own base.", $SUBOPT) ///
+>          ylabel(`ylab', angle(0) labsize(2.5) notick nogrid) ytitle("") ///
+>          yscale(range(0.4 `=_N+0.6')) ///
+>          xlabel(0(1000)4000, format(%12.0fc) labsize(2.8)) xscale(range(0 490
+> 0)) ///
+>          xtitle("2025 dollars a year", size(2.8)) ///
+>          legend(order(1 "Mean" 2 "Median") rows(1) position(6) $LEGOPT) ///
+>          graphregion(color(white)) plotregion(margin(l=0)) ///
+>          ysize(4.4) xsize(7.2)
+
+. figsave, name(fig27_cost_of_working)
+  figure -> 04_figures/fig27_cost_of_working.png
+
+. restore
+
+. 
+. quietly summarize localspend, detail
+
+. cpct, key(census_spend_share_local) value(`=r(mean)') source("`SRC'") ///
+>     note("Mean self-reported percent of annual music business spending that g
+> oes to providers inside the Austin area, `=r(N)' creatives; median `=strtrim(
+> string(r(p50),"%4.0f"))' percent. Replicates the published 60 percent. This i
+> s the channel through which a creative expense becomes local economic activit
+> y, and it is the only local-multiplier quantity the census measured. `CAV'")
+
+. 
+. 
+. * ================================ 6. RETENTION - THE HEADLINE (FIGURE 26) ==
+. * The 89 / 64 pair is already public. Who the 36 percent are is not, and that
+>  is
+. * what this section adds.
+. 
+. quietly count if contmusic < .
+
+. local NRET = r(N)
+
+. quietly count if contmusic == 1
+
+. local PCONT = 100*r(N)/`NRET'
+
+. quietly count if contdef == 1
+
+. local PCONTD = 100*r(N)/`NRET'
+
+. quietly count if stayaus < .
+
+. local NSTAY = r(N)
+
+. quietly count if stayaus == 1
+
+. local PSTAY = 100*r(N)/`NSTAY'
+
+. quietly count if staydef == 1
+
+. local PSTAYD = 100*r(N)/`NSTAY'
+
+. local GAP = `PCONT' - `PSTAY'
+
+. 
+. display as text _newline "Retention pair: continue " %5.1f `PCONT' "%, stay "
+>  %5.1f `PSTAY' "%, base `NRET'"
+
+Retention pair: continue  88.8%, stay  64.1%, base 1900
+
+. 
+. cnum, key(census_retention_denom) value(`NRET') source("`SRC'") ///
+>     note("Respondents answering the three-year intent items. Both items have 
+> exactly the same `NRET' answers out of 2,227, so the 89 and the 64 rest on an
+>  identical base and the gap between them is a within-person comparison rather
+>  than a comparison of two different groups. `CAV'")
+
+. cpct, key(census_intend_continue_music) value(`PCONT') source("`SRC'") ///
+>     note("Share intending to continue their music work over the next three ye
+> ars - definitely yes plus maybe yes - `NRET' respondents. Verifies the publis
+> hed 89 percent (Summary Report printed p.7). KUT reported 84 percent; use 89 
+> and cite the report, not the coverage. `CAV'")
+
+. cpct, key(census_intend_continue_definitely) value(`PCONTD') source("`SRC'") 
+> ///
+>     note("Share answering DEFINITELY yes to continuing music work, `NRET' res
+> pondents. The published 89 percent folds in maybe yes; this is the firm part 
+> of it. `CAV'")
+
+. cpct, key(census_intend_stay_austin) value(`PSTAY') source("`SRC'") ///
+>     note("Share intending to still live in greater Austin in three years - de
+> finitely yes plus maybe yes - `NSTAY' respondents. Verifies the published 64 
+> percent (Summary Report printed p.7). The 36 percent complement is mostly unc
+> ertainty rather than a stated intention to leave: unsure 25.6 points, maybe n
+> o 6.7, definitely no 3.6. Say so whenever the 36 percent is quoted. `CAV'")
+
+. cpct, key(census_intend_stay_definitely) value(`PSTAYD') source("`SRC'") ///
+>     note("Share answering DEFINITELY yes to still living in greater Austin in
+>  three years, `NSTAY' respondents. Below half. `CAV'")
+
+. numadd, key(census_retention_gap) value(`=string(`GAP',"%9.4f")') ///
+>     formatted("`=strtrim(string(`GAP',"%9.1f"))' points") unit("percentage po
+> ints") source("`SRC'") ///
+>     note("Gap between the share intending to continue in music and the share 
+> intending to stay in greater Austin, on the same `NRET' respondents. The Summ
+> ary Report reads it as a third of the ecosystem considering leaving the metro
+>  entirely. `CAV'")
+
+. 
+. * --- subgroup breakouts and independence tests ---------------------------
+. tempname rtf
+
+. tempfile rttab
+
+. postfile `rtf' str30 varlab str40 grouplab int n double pct_stay int n_cont /
+> //
+>     double pct_continue double chi2 double pval int df using `rttab', replace
+(file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St28869.00000a not
+    found)
+
+. 
+. capture program drop retbreak
+
+. program define retbreak
+  1.     syntax varname(numeric), RTF(string) VARLAB(string)
+  2.     quietly tabulate `varlist' stayaus, chi2
+  3.     local c = r(chi2)
+  4.     local p = r(p)
+  5.     local d = (r(r)-1)*(r(c)-1)
+  6.     quietly levelsof `varlist', local(gl)
+  7.     foreach g of local gl {
+  8.         quietly count if `varlist' == `g' & stayaus < .
+  9.         local n = r(N)
+ 10.         quietly count if `varlist' == `g' & stayaus == 1
+ 11.         local ps = 100*r(N)/`n'
+ 12.         quietly count if `varlist' == `g' & contmusic < .
+ 13.         local nc = r(N)
+ 14.         quietly count if `varlist' == `g' & contmusic == 1
+ 15.         local pc = 100*r(N)/`nc'
+ 16.         local lab : label (`varlist') `g'
+ 17.         post `rtf' ("`varlab'") ("`lab'") (`n') (`ps') (`nc') (`pc') (`c')
+>  (`p') (`d')
+ 18.     }
+ 19. end
+
+. 
+. retbreak sector3,  rtf(`rtf') varlab("Primary sector")
+
+. retbreak yrsexp,   rtf(`rtf') varlab("Years of experience")
+
+. retbreak liveconc, rtf(`rtf') varlab("Music income from local gigs")
+
+. retbreak wspace,   rtf(`rtf') varlab("Work space status")
+
+. retbreak tenure,   rtf(`rtf') varlab("Housing tenure")
+
+. retbreak insured,  rtf(`rtf') varlab("Health insurance")
+
+. postclose `rtf'
+
+. 
+. preserve
+
+. use `rttab', clear
+
+. export delimited using "${TABDIR}/table_census_retention_subgroups.csv", repl
+> ace
+file /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.booth@texas2036.org
+> /My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analysis/stata/../..
+> /03_analysis/out/tables/table_census_retention_subgroups.csv saved
+
+. display as text _newline "Intent to stay in greater Austin, by subgroup:"
+
+Intent to stay in greater Austin, by subgroup:
+
+. list varlab grouplab n pct_stay pct_continue chi2 pval, noobs sep(0) abbrevia
+> te(18)
+
+  +------------------------------------------------------------------+
+  |                       varlab |                   grouplab |    n |
+  |               Primary sector |             Music creative | 1359 |
+  |------------------------------------------------------------------|
+  |    pct_stay   |   pct_continue   |        chi2   |        pval   |
+  |   64.753495   |      90.360559   |   1.2513188   |    .5349086   |
+  +------------------------------------------------------------------+
+
+  +------------------------------------------------------------------+
+  |                       varlab |                   grouplab |    n |
+  |               Primary sector |             Music industry |  444 |
+  |------------------------------------------------------------------|
+  |    pct_stay   |   pct_continue   |        chi2   |        pval   |
+  |   61.936937   |      84.684685   |   1.2513188   |    .5349086   |
+  +------------------------------------------------------------------+
+
+  +------------------------------------------------------------------+
+  |                       varlab |                   grouplab |    n |
+  |               Primary sector |         Venue or presenter |   96 |
+  |------------------------------------------------------------------|
+  |    pct_stay   |   pct_continue   |        chi2   |        pval   |
+  |      65.625   |      85.416667   |   1.2513188   |    .5349086   |
+  +------------------------------------------------------------------+
+
+  +------------------------------------------------------------------+
+  |                       varlab |                   grouplab |    n |
+  |          Years of experience |              Under 3 years |  120 |
+  |------------------------------------------------------------------|
+  |    pct_stay   |   pct_continue   |        chi2   |        pval   |
+  |   66.666667   |      93.333333   |   38.518197   |   2.195e-08   |
+  +------------------------------------------------------------------+
+
+  +------------------------------------------------------------------+
+  |                       varlab |                   grouplab |    n |
+  |          Years of experience |               3 to 5 years |  181 |
+  |------------------------------------------------------------------|
+  |    pct_stay   |   pct_continue   |        chi2   |        pval   |
+  |   62.983425   |       88.39779   |   38.518197   |   2.195e-08   |
+  +------------------------------------------------------------------+
+
+  +------------------------------------------------------------------+
+  |                       varlab |                   grouplab |    n |
+  |          Years of experience |              6 to 10 years |  340 |
+  |------------------------------------------------------------------|
+  |    pct_stay   |   pct_continue   |        chi2   |        pval   |
+  |   49.705882   |      82.941176   |   38.518197   |   2.195e-08   |
+  +------------------------------------------------------------------+
+
+  +------------------------------------------------------------------+
+  |                       varlab |                   grouplab |    n |
+  |          Years of experience |         More than 10 years | 1255 |
+  |------------------------------------------------------------------|
+  |    pct_stay   |   pct_continue   |        chi2   |        pval   |
+  |   67.808765   |      90.039841   |   38.518197   |   2.195e-08   |
+  +------------------------------------------------------------------+
+
+  +------------------------------------------------------------------+
+  |                       varlab |                   grouplab |    n |
+  | Music income from local gigs |                       None |   85 |
+  |------------------------------------------------------------------|
+  |    pct_stay   |   pct_continue   |        chi2   |        pval   |
+  |   54.117647   |      83.529412   |   14.418784   |   .00607172   |
+  +------------------------------------------------------------------+
+
+  +------------------------------------------------------------------+
+  |                       varlab |                   grouplab |    n |
+  | Music income from local gigs |                Very little |  195 |
+  |------------------------------------------------------------------|
+  |    pct_stay   |   pct_continue   |        chi2   |        pval   |
+  |   62.051282   |       90.25641   |   14.418784   |   .00607172   |
+  +------------------------------------------------------------------+
+
+  +------------------------------------------------------------------+
+  |                       varlab |                   grouplab |    n |
+  | Music income from local gigs |                       Some |  271 |
+  |------------------------------------------------------------------|
+  |    pct_stay   |   pct_continue   |        chi2   |        pval   |
+  |   73.431734   |      97.416974   |   14.418784   |   .00607172   |
+  +------------------------------------------------------------------+
+
+  +------------------------------------------------------------------+
+  |                       varlab |                   grouplab |    n |
+  | Music income from local gigs |                       Most |  425 |
+  |------------------------------------------------------------------|
+  |    pct_stay   |   pct_continue   |        chi2   |        pval   |
+  |   65.411765   |      94.117647   |   14.418784   |   .00607172   |
+  +------------------------------------------------------------------+
+
+  +------------------------------------------------------------------+
+  |                       varlab |                   grouplab |    n |
+  | Music income from local gigs |                        All |  143 |
+  |------------------------------------------------------------------|
+  |    pct_stay   |   pct_continue   |        chi2   |        pval   |
+  |   61.538462   |      82.517483   |   14.418784   |   .00607172   |
+  +------------------------------------------------------------------+
+
+  +------------------------------------------------------------------+
+  |                       varlab |                   grouplab |    n |
+  |            Work space status |            Owns work space |   51 |
+  |------------------------------------------------------------------|
+  |    pct_stay   |   pct_continue   |        chi2   |        pval   |
+  |   64.705882   |      94.117647   |   4.8762128   |   .18108913   |
+  +------------------------------------------------------------------+
+
+  +------------------------------------------------------------------+
+  |                       varlab |                   grouplab |    n |
+  |            Work space status |           Rents work space |  182 |
+  |------------------------------------------------------------------|
+  |    pct_stay   |   pct_continue   |        chi2   |        pval   |
+  |   67.032967   |      93.406593   |   4.8762128   |   .18108913   |
+  +------------------------------------------------------------------+
+
+  +------------------------------------------------------------------+
+  |                       varlab |                   grouplab |    n |
+  |            Work space status | Needs but lacks work space |  398 |
+  |------------------------------------------------------------------|
+  |    pct_stay   |   pct_continue   |        chi2   |        pval   |
+  |   59.798995   |      86.432161   |   4.8762128   |   .18108913   |
+  +------------------------------------------------------------------+
+
+  +------------------------------------------------------------------+
+  |                       varlab |                   grouplab |    n |
+  |            Work space status |     Provided or not needed |  426 |
+  |------------------------------------------------------------------|
+  |    pct_stay   |   pct_continue   |        chi2   |        pval   |
+  |   66.431925   |      89.671362   |   4.8762128   |   .18108913   |
+  +------------------------------------------------------------------+
+
+  +------------------------------------------------------------------+
+  |                       varlab |                   grouplab |    n |
+  |               Housing tenure |                  Homeowner |  758 |
+  |------------------------------------------------------------------|
+  |    pct_stay   |   pct_continue   |        chi2   |        pval   |
+  |   75.461741   |      91.952507   |   84.224646   |   5.139e-19   |
+  +------------------------------------------------------------------+
+
+  +------------------------------------------------------------------+
+  |                       varlab |                   grouplab |    n |
+  |               Housing tenure |                     Renter |  688 |
+  |------------------------------------------------------------------|
+  |    pct_stay   |   pct_continue   |        chi2   |        pval   |
+  |   52.325581   |      86.046512   |   84.224646   |   5.139e-19   |
+  +------------------------------------------------------------------+
+
+  +------------------------------------------------------------------+
+  |                       varlab |                   grouplab |    n |
+  |               Housing tenure |  Other or unstable housing |  174 |
+  |------------------------------------------------------------------|
+  |    pct_stay   |   pct_continue   |        chi2   |        pval   |
+  |   63.218391   |      90.804598   |   84.224646   |   5.139e-19   |
+  +------------------------------------------------------------------+
+
+  +------------------------------------------------------------------+
+  |                       varlab |                   grouplab |    n |
+  |             Health insurance |        No health insurance |  254 |
+  |------------------------------------------------------------------|
+  |    pct_stay   |   pct_continue   |        chi2   |        pval   |
+  |   53.149606   |      83.464567   |   15.690485   |    .0000746   |
+  +------------------------------------------------------------------+
+
+  +------------------------------------------------------------------+
+  |                       varlab |                   grouplab |    n |
+  |             Health insurance |       Has health insurance | 1390 |
+  |------------------------------------------------------------------|
+  |    pct_stay   |   pct_continue   |        chi2   |        pval   |
+  |   66.115108   |      89.928058   |   15.690485   |    .0000746   |
+  +------------------------------------------------------------------+
+
+. 
+. forvalues i = 1/`=_N' {
+  2.     local vl = varlab[`i']
+  3.     local gl = grouplab[`i']
+  4.     keyify, text("`vl' `gl'")
+  5.     local kk = r(key)
+  6.     local nn = strtrim(string(n[`i'], "%9.0fc"))
+  7.     cpct, key(census_stay_`kk') value(`=pct_stay[`i']') source("`SRC'") //
+> /
+>         note("Share intending to still live in greater Austin in three years 
+> among the `nn' respondents in the group `gl' (breakout variable: `vl') who an
+> swered the item. `CAV'")
+  8. }
+
+. quietly levelsof varlab, local(vls)
+
+. foreach v of local vls {
+  2.     quietly summarize chi2 if varlab == "`v'", meanonly
+  3.     local c = r(mean)
+  4.     quietly summarize pval if varlab == "`v'", meanonly
+  5.     local p = r(mean)
+  6.     quietly summarize df if varlab == "`v'", meanonly
+  7.     local d = r(mean)
+  8.     keyify, text("`v'")
+  9.     local kk = r(key)
+ 10.     numadd, key(census_staychi2_`kk') value(`=string(`c',"%9.3f")') ///
+>         formatted("chi-squared(`=strtrim(string(`d',"%2.0f"))') = `=strtrim(s
+> tring(`c',"%9.1f"))', p = `=strtrim(string(`p',"%6.4f"))'") ///
+>         unit("Pearson chi-squared") source("`SRC'") ///
+>         note("Test of independence between intending to stay in greater Austi
+> n and `v'. Report as association, never as causation. The p-value assumes sim
+> ple random sampling; this is a self-selected convenience sample, so treat the
+>  test as a descriptive discriminant among respondents rather than inference t
+> o the Austin music workforce. `CAV'")
+ 11. }
+
+. restore
+
+. 
+. * --- the logits -----------------------------------------------------------
+. * Three nested models, so a reader can see what the requested covariates do
+. * before and after housing and insurance enter, and how much sample each cost
+> s.
+. eststo clear
+
+. quietly eststo m1: logit stayaus i.sector3 i.yrsexp
+
+. quietly eststo m2: logit stayaus i.sector3 i.yrsexp i.tenure i.insured
+
+. quietly eststo m3: logit stayaus i.yrsexp i.tenure i.insured i.liveconc i.wsp
+> ace if sector == 1
+
+. esttab m1 m2 m3 using "${TABDIR}/table_census_retention_logit.csv", replace c
+> sv ///
+>     eform b(3) se(3) label nogaps ///
+>     stats(N ll r2_p, fmt(0 2 3) labels("Respondents" "Log likelihood" "Pseudo
+>  R-squared")) ///
+>     title("Odds of intending to stay in greater Austin, 2022 Greater Austin M
+> usic Census") ///
+>     addnotes("Odds ratios. Self-selected convenience sample, no survey weight
+> s; association only, not causal." ///
+>              "M1 all respondents. M2 adds housing tenure and health insurance
+> . M3 music creatives only.")
+(output written to /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.booth
+> @texas2036.org/My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analys
+> is/stata/../../03_analysis/out/tables/table_census_retention_logit.csv)
+
+. display as text _newline "Retention logits written to out/tables/table_census
+> _retention_logit.csv"
+
+Retention logits written to out/tables/table_census_retention_logit.csv
+
+. esttab m1 m2 m3, eform b(3) se(3) label nogaps stats(N ll r2_p, fmt(0 2 3))
+
+--------------------------------------------------------------------
+                              (1)             (2)             (3)   
+                     Intends to~r    Intends to~r    Intends to~r   
+--------------------------------------------------------------------
+Intends to still l~r                                                
+Music creative              1.000           1.000                   
+                              (.)             (.)                   
+Music industry              0.932           0.923                   
+                          (0.108)         (0.118)                   
+Venue or presenter          1.112           1.049                   
+                          (0.251)         (0.271)                   
+Under 3 years               1.000           1.000           1.000   
+                              (.)             (.)             (.)   
+3 to 5 years                0.847           0.904           2.003   
+                          (0.210)         (0.263)         (1.053)   
+6 to 10 years               0.491**         0.396***        0.853   
+                          (0.109)         (0.104)         (0.419)   
+More than 10 years          1.046           0.706           1.726   
+                          (0.214)         (0.173)         (0.785)   
+Homeowner                                   1.000           1.000   
+                                              (.)             (.)   
+Renter                                      0.388***        0.502** 
+                                          (0.048)         (0.109)   
+Other or unstable ~g                        0.550**         0.754   
+                                          (0.104)         (0.241)   
+No health insurance                         1.000           1.000   
+                                              (.)             (.)   
+Has health insurance                        1.214           1.071   
+                                          (0.182)         (0.266)   
+None                                                        1.000   
+                                                              (.)   
+Very little                                                 1.281   
+                                                          (0.559)   
+Some                                                        2.109   
+                                                          (0.905)   
+Most                                                        1.135   
+                                                          (0.459)   
+All                                                         1.346   
+                                                          (0.621)   
+Owns work space                                             1.000   
+                                                              (.)   
+Rents work space                                            1.430   
+                                                          (0.780)   
+Needs but lacks wo~e                                        1.361   
+                                                          (0.713)   
+Provided or not ne~d                                        1.930   
+                                                          (1.023)   
+--------------------------------------------------------------------
+N                            1895            1607             554   
+ll                       -1218.37         -989.80         -341.91   
+r2_p                        0.015           0.055           0.056   
+--------------------------------------------------------------------
+Exponentiated coefficients; Standard errors in parentheses
+* p<0.05, ** p<0.01, *** p<0.001
+
+. 
+. quietly logit stayaus i.sector3 i.yrsexp i.tenure i.insured
+
+. local NLOG = e(N)
+
+. quietly lincom 2.tenure, eform
+
+. local ORREN = r(estimate)
+
+. local PREN  = r(p)
+
+. numadd, key(census_logit_renter_or) value(`=string(`ORREN',"%9.4f")') ///
+>     formatted("`=strtrim(string(`ORREN',"%9.2f"))'") unit("odds ratio") sourc
+> e("`SRC'") ///
+>     note("Odds ratio on renting, relative to owning, in a logit of intending 
+> to stay in greater Austin on primary sector, years of experience, housing ten
+> ure and health insurance. `NLOG' respondents, p = `=strtrim(string(`PREN',"%6
+> .4f"))'. Association only: tenure is not randomly assigned, and income, age a
+> nd family stage all move with it. None of those can be controlled for, becaus
+> e the census collected no income variable and age is missing for 28 percent o
+> f respondents. `CAV'")
+
+. cnum, key(census_logit_n) value(`NLOG') source("`SRC'") ///
+>     note("Estimation sample for the retention logit that includes housing ten
+> ure and insurance. It is smaller than the 1,900 who answered the retention it
+> em, because tenure and insurance are themselves unevenly answered. `CAV'")
+
+. 
+. * --- FIGURE 26 -------------------------------------------------------------
+. * Housing tenure is the breakout that discriminates most, by a wide margin: a
+. * 23-point spread and much the largest chi-squared of the six tested. It is a
+> lso
+. * the one the brief did not ask for, so the four requested breakouts stay in
+. * table_census_retention_subgroups.csv and in the registry.
+. preserve
+
+. use `rttab', clear
+
+. keep if varlab == "Housing tenure"
+(18 observations deleted)
+
+. gsort -pct_stay
+
+. local NROW = _N
+
+. set obs `=`NROW'+1'
+Number of observations (_N) was 3, now 4.
+
+. replace varlab       = "All"             in `=`NROW'+1'
+(1 real change made)
+
+. replace grouplab     = "All respondents" in `=`NROW'+1'
+(1 real change made)
+
+. replace n            = `NSTAY'           in `=`NROW'+1'
+(1 real change made)
+
+. replace pct_stay     = `PSTAY'           in `=`NROW'+1'
+(1 real change made)
+
+. replace pct_continue = `PCONT'           in `=`NROW'+1'
+(1 real change made)
+
+. 
+. generate double ypos = 4 - _n
+
+. replace ypos = 4.25 if varlab == "All"
+(1 real change made)
+
+. 
+. * Round each endpoint once, then derive the gap label from those SAME
+. * rounded values rather than from the unrounded difference. Two independently
+. * rounded endpoints do not always subtract to what their unrounded difference
+. * rounds to (Homeowner: 75.46 -> 75 and 91.95 -> 92 subtract to 17, while the
+. * unrounded gap 16.49 itself rounds to 16), and a reader can catch that kind
+. * of mismatch just by subtracting the two printed numbers. Deriving the gap
+. * from the rounded endpoints keeps the three printed numbers self-consistent
+. * on every row; it changes only the displayed gap label, never the
+. * underlying pct_stay or pct_continue values, their marker positions, or the
+. * logit/chi-squared results computed earlier from the unrounded shares.
+. generate double pct_stay_r     = round(pct_stay)
+
+. generate double pct_continue_r = round(pct_continue)
+
+. generate str8 ls = strtrim(string(pct_stay_r, "%4.0f")) + "%"
+
+. generate str8 lc = strtrim(string(pct_continue_r, "%4.0f")) + "%"
+
+. generate str10 gaplab = strtrim(string(pct_continue_r - pct_stay_r, "%4.0f"))
+>  + " points"
+
+. generate double xgap = (pct_stay + pct_continue)/2
+
+. generate double ygap = ypos + 0.30
+
+. 
+. local ylab ""
+
+. forvalues i = 1/`=_N' {
+  2.     local L = grouplab[`i']
+  3.     local N = strtrim(string(n[`i'], "%9.0fc"))
+  4.     local Y = ypos[`i']
+  5.     local ylab `"`ylab' `Y' "`L' (n = `N')""'
+  6. }
+
+. 
+. export delimited grouplab n pct_stay pct_continue chi2 pval ///
+>     using "${OUT}/fig26_retention_split.csv", replace
+file /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.booth@texas2036.org
+> /My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analysis/stata/../..
+> /03_analysis/out/fig26_retention_split.csv saved
+
+. 
+. twoway (rspike pct_stay pct_continue ypos, horizontal lcolor("${MUTED}") lwid
+> th(medthick)) ///
+>        (scatter ypos pct_continue, msymbol(O) mcolor("${NAVY}") msize(2.4) //
+> /
+>             mlabel(lc) mlabcolor("${NAVY}") mlabsize(2.5) mlabposition(3) mla
+> bgap(1.3)) ///
+>        (scatter ypos pct_stay, msymbol(D) mcolor("${ORANGE}") msize(2.4) ///
+>             mlabel(ls) mlabcolor("${ORANGE}") mlabsize(2.5) mlabposition(9) m
+> labgap(1.3)) ///
+>        (scatter ygap xgap, msymbol(none) mlabel(gaplab) mlabcolor("${MUTED}")
+>  ///
+>             mlabsize(2.2) mlabposition(0)) ///
+>        , title("Nearly all will stay in music; renters least expect to stay i
+> n Austin", $TITLEOPT) ///
+>          subtitle("Share answering definitely or maybe yes to continuing musi
+> c work, and to living in greater" ///
+>                   "Austin, three years on. 2022 census; self-selected, no wei
+> ghts; axis does not start at zero.", $SUBOPT) ///
+>          ylabel(`ylab', angle(0) labsize(2.7) notick nogrid) ytitle("") ///
+>          yscale(range(0.4 4.85)) ///
+>          xlabel(40(10)100, format(%3.0f) labsize(2.8)) xscale(range(40 102)) 
+> ///
+>          xtitle("Percent of respondents answering the item", size(2.8)) ///
+>          legend(order(2 "Will continue music work" 3 "Will still live in grea
+> ter Austin") ///
+>                 rows(1) position(6) $LEGOPT) ///
+>          graphregion(color(white)) plotregion(margin(l=0)) ///
+>          ysize(3.9) xsize(7.2)
+
+. figsave, name(fig26_retention_split)
+  figure -> 04_figures/fig26_retention_split.png
+
+. restore
+
+. 
+. 
+. * ============================== 7. THE VENUE SIDE (FIGURE 28) ==============
+. * The presenter block is answered by 177 respondents, above this reports
+. * 50-record floor, so it is published. The operator-versus-promoter split tha
+> t
+. * the Data Appendix publishes is NOT reproduced: the promoter cell is 42.
+. 
+. quietly count if prs1 < .
+
+. local NPRS = r(N)
+
+. quietly count if prestype == 1
+
+. local NVOP = r(N)
+
+. quietly count if prestype == 2
+
+. local NIPR = r(N)
+
+. 
+. cnum, key(census_n_presenters_ranking) value(`NPRS') source("`SRC'") ///
+>     note("Respondents who completed the nine-item ranking of business pressur
+> es. Above the 50-record floor in aggregate, so it is published, but it is 8 p
+> ercent of the survey and the thinnest block in this module. Only 77 of the 10
+> 8 respondents whose PRIMARY sector is venue or presenter answered it; the oth
+> er 100 are creatives and industry professionals who also present gigs, so thi
+> s is a presenter-activity population, not a venue census. `CAV'")
+
+. cnum, key(census_n_venue_operators) value(`NVOP') source("`SRC'") ///
+>     note("Presenters reporting a numeric legal capacity band, that is, operat
+> ors of a physical room. `CAV'")
+
+. cnum, key(census_n_independent_promoters) value(`NIPR') source("`SRC'") ///
+>     note("Presenters identifying as independent promoters rather than room op
+> erators. Below the 50-record floor, so no statistic is published for this gro
+> up alone and the Data Appendix operator-versus-promoter split (slides 56 and 
+> 57) is not reproduced. `CAV'")
+
+. 
+. quietly count if cap < .
+
+. local NCAP = r(N)
+
+. display as text _newline "Venue legal capacity distribution, n = `NCAP':"
+
+Venue legal capacity distribution, n = 131:
+
+. tabulate cap
+
+        Legal |
+  capacity of |
+    the venue |      Freq.     Percent        Cum.
+--------------+-----------------------------------
+     1 to 100 |         28       21.37       21.37
+   101 to 200 |         26       19.85       41.22
+   201 to 350 |         19       14.50       55.73
+   351 to 500 |         18       13.74       69.47
+ 501 to 1,000 |          8        6.11       75.57
+1,001 or more |         32       24.43      100.00
+--------------+-----------------------------------
+        Total |        131      100.00
+
+. forvalues c = 1/6 {
+  2.     quietly count if cap == `c'
+  3.     local nc = r(N)
+  4.     local L : label capl `c'
+  5.     cpct, key(census_venue_capacity_`c') value(`=100*`nc'/`NCAP'') source(
+> "`SRC'") ///
+>         note("Share of responding venue operators whose legal capacity is `L'
+> : `nc' of `NCAP' operators who gave a capacity band. Individual cells run as 
+> low as 8 records, so read the distribution as a whole and do not quote a sing
+> le band on its own. `CAV'")
+  6. }
+
+. quietly count if inlist(cap, 1, 2)
+
+. local NSMALL = r(N)
+
+. cpct, key(census_venue_capacity_under200) value(`=100*`NSMALL'/`NCAP'') sourc
+> e("`SRC'") ///
+>     note("Share of responding venue operators with a legal capacity of 200 or
+>  fewer: `NSMALL' of `NCAP'. Small rooms are the modal responding venue, which
+>  matters because the fixed costs those same respondents rank highest - proper
+> ty tax, building operations - do not scale down with capacity. `CAV'")
+
+. 
+. tempname prf
+
+. tempfile prtab
+
+. postfile `prf' int pid str34 plab int n double pct_first double pct_top3 doub
+> le meanrank using `prtab', replace
+(file /var/folders/5n/6s4drlks0734vkn04zv4l0tr0000gp/T//St28869.00000d not
+    found)
+
+. forvalues k = 1/9 {
+  2.     local L : word `k' of `PRSL'
+  3.     quietly count if prs`k' < .
+  4.     local n = r(N)
+  5.     quietly count if prs`k' == 1
+  6.     local f = 100*r(N)/`n'
+  7.     quietly count if inrange(prs`k', 1, 3)
+  8.     local t = 100*r(N)/`n'
+  9.     quietly summarize prs`k', meanonly
+ 10.     post `prf' (`k') ("`L'") (`n') (`f') (`t') (r(mean))
+ 11. }
+
+. postclose `prf'
+
+. 
+. preserve
+
+. use `prtab', clear
+
+. gsort -pct_top3
+
+. export delimited using "${TABDIR}/table_census_venue_pressures.csv", replace
+file /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.booth@texas2036.org
+> /My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analysis/stata/../..
+> /03_analysis/out/tables/table_census_venue_pressures.csv saved
+
+. export delimited using "${OUT}/fig28_venue_pressures.csv", replace
+file /Users/ericbooth/Library/CloudStorage/GoogleDrive-eric.booth@texas2036.org
+> /My Drive/EconomicOutlook_MusiciansCreatives_20260801/03_analysis/stata/../..
+> /03_analysis/out/fig28_venue_pressures.csv saved
+
+. display as text _newline "Presenter pressure ranking, n = `NPRS':"
+
+Presenter pressure ranking, n = 177:
+
+. list plab n pct_first pct_top3 meanrank, noobs sep(0) abbreviate(22)
+
+  +--------------------------------------------------------------------------+
+  |                           plab     n   pct_first    pct_top3    meanrank |
+  |--------------------------------------------------------------------------|
+  |                   Property tax   177   20.338983   44.067797   4.6271186 |
+  |                   Talent costs   177   13.559322   38.418079   4.9548023 |
+  |       Labor cost and retention   177   11.299435    35.59322   4.8248588 |
+  |  Unpredictable operating costs   177   11.299435   33.898305   4.6440678 |
+  |      Ordinances and permitting   177   12.429379   33.333333   4.9717514 |
+  |     Neighborhood redevelopment   177   8.4745763    32.20339   5.3389831 |
+  |     Changing audience behavior   177   10.734463   31.638418   5.1299435 |
+  | Building operations and upkeep   177   7.9096045   31.638418   4.8700565 |
+  |                      Marketing   177   3.9548023    19.20904   5.6384181 |
+  +--------------------------------------------------------------------------+
+
+. 
+. forvalues i = 1/`=_N' {
+  2.     local L = plab[`i']
+  3.     keyify, text("`L'")
+  4.     local kk = r(key)
+  5.     cpct, key(census_pressure_top3_`kk') value(`=pct_top3[`i']') source("`
+> SRC'") ///
+>         note("Share of the `NPRS' responding presenters who ranked `L' among 
+> their three greatest business pressures. Nine items, each respondent ranked a
+> ll nine, so the nine top-three shares sum to about 300 percent. Venue operato
+> rs and independent promoters are pooled because the promoter cell is 42 recor
+> ds. `CAV'")
+  6.     cpct, key(census_pressure_first_`kk') value(`=pct_first[`i']') source(
+> "`SRC'") ///
+>         note("Share of the `NPRS' responding presenters who ranked `L' their 
+> single greatest business pressure. The nine first-place shares sum to 100 per
+> cent. `CAV'")
+  7. }
+
+. 
+. generate double zero = 0
+
+. generate double ypos = _N - _n + 1
+
+. * Total (top-3) value label at each bar end, for consistency with the other
+. * nine bar charts in this report, all of which carry value labels.
+. generate str8 lbltot = strtrim(string(pct_top3, "%4.0f")) + "%"
+
+. local ylab ""
+
+. forvalues i = 1/`=_N' {
+  2.     local L = plab[`i']
+  3.     local Y = ypos[`i']
+  4.     local ylab `"`ylab' `Y' "`L'""'
+  5. }
+
+. 
+. twoway (rbar pct_first pct_top3 ypos, horizontal barwidth(0.58) color("${MUTE
+> D}") lwidth(none)) ///
+>        (rbar zero pct_first ypos, horizontal barwidth(0.58) color("${ORANGE}"
+> ) lwidth(none)) ///
+>        (scatter ypos pct_top3, msymbol(none) mlabel(lbltot) mlabcolor("${TEXT
+> C}") ///
+>             mlabsize(2.4) mlabposition(3) mlabgap(1.1)) ///
+>        , title("More presenters rank property tax a top-three pressure than a
+> ny other", $TITLEOPT) ///
+>          subtitle("Share ranking each of nine business pressures in their top
+>  three, top-ranked share in orange." ///
+>                   "177 Austin venue operators and promoters, 2022 census; sel
+> f-selected sample, no weights.", $SUBOPT) ///
+>          ylabel(`ylab', angle(0) labsize(2.6) notick nogrid) ytitle("") ///
+>          yscale(range(0.4 9.6)) ///
+>          xlabel(0(10)50, format(%3.0f) labsize(2.8)) xscale(range(0 58)) ///
+>          xtitle("Percent of responding presenters", size(2.8)) ///
+>          legend(order(2 "Ranked first" 1 "Ranked second or third") rows(1) po
+> sition(6) $LEGOPT) ///
+>          graphregion(color(white)) plotregion(margin(l=0)) ///
+>          ysize(4.2) xsize(7.2)
+
+. figsave, name(fig28_venue_pressures)
+  figure -> 04_figures/fig28_venue_pressures.png
+
+. restore
+
+. 
+. * --- compare the ranking with what the receipts panel actually recorded ----
+. * 30_venues writes out/venue_closure_reasons.csv. If it has not been run, the
+. * comparison is skipped rather than guessed at.
+. capture confirm file `"${OUT}/venue_closure_reasons.csv"'
+
+. if _rc == 0 {
+.     preserve
+.     import delimited using "${OUT}/venue_closure_reasons.csv", clear varnames
+> (1) case(preserve)
+(encoding automatically selected: ISO-8859-1)
+(3 vars, 9 obs)
+.     quietly summarize n_closures, meanonly
+.     local NCLOS = r(sum)
+.     quietly summarize n_closures if inlist(reason_category, "sale_of_property
+> ", ///
+>         "rent_increase", "lease_expiration", "redevelopment"), meanonly
+.     local NPROP = r(sum)
+.     quietly summarize n_closures if reason_category == "covid", meanonly
+.     local NCOVID = r(sum)
+.     quietly summarize n_closures if reason_category == "permit_regulatory", m
+> eanonly
+.     local NPERM = r(sum)
+.     restore
+.     cpct, key(census_closures_property_share) value(`=100*`NPROP'/`NCLOS'') /
+> //
+>         source("01_evidence/08_venues_ecosystem/venue_timeline.csv") ///
+>         note("Share of the `NCLOS' dated Austin venue closures in the 30_venu
+> es tracking panel attributed to a real-estate cause - sale of the property, a
+>  rent increase, lease expiration or redevelopment. It equals the pandemic sha
+> re (`NCOVID' closures) and it AGREES with the census ranking, in which presen
+> ters put property tax first. Regulatory causes account for only `NPERM' closu
+> res, which also matches the mid-pack rank the census gives ordinances and per
+> mitting. The one item that does not line up is talent costs, ranked second by
+>  presenters but recorded as the cause of no closure at all - the receipts pan
+> el has no talent-cost field, so that is untested rather than contradicted. Bo
+> th sources are small and neither is a probability sample.")
+. }
+
+. else {
+.     display as text "  venue_closure_reasons.csv absent - run 30_venues.do fi
+> rst for the closure comparison."
+. }
+
+. 
+. 
+. * ================================================ 8. CAVEATS, ON THE RECORD 
+> ==
+. * Registered so they travel with the numbers into the report rather than livi
+> ng
+. * only in this file.
+. 
+. numadd, key(census_caveat_selfselected) value(1) formatted("self-selected con
+> venience sample") ///
+>     unit("flag") source("`SRC'") ///
+>     note("The 2022 Greater Austin Music Census recruited online through commu
+> nity partners between 15 July and 12 September 2022. It is not a probability 
+> sample of any population. Every percentage in this module is a share of the r
+> espondents who answered a given item, and nothing more.")
+
+. numadd, key(census_caveat_noweights) value(1) formatted("no survey weights") 
+> ///
+>     unit("flag") source("`SRC'") ///
+>     note("The release carries no design or post-stratification weights, so no
+>  statistic here is a population estimate, and no standard error or margin of 
+> error is computed anywhere in this module. Chi-squared tests and logits descr
+> ibe association among respondents; their p-values assume simple random sampli
+> ng, which does not hold.")
+
+. numadd, key(census_caveat_nofollowup) value(1) formatted("single 2022 snapsho
+> t") ///
+>     unit("flag") source("`SRC'") ///
+>     note("One cross-section with no comparable follow-up. Austin appears in t
+> he Sound Music Cities 2023-24 cohort roster but published no later report, so
+>  nothing here can speak to change since 2022.")
+
+. numadd, key(census_caveat_notacs) value(1) formatted("not comparable with ACS
+>  or PUMS") ///
+>     unit("flag") source("`SRC'") ///
+>     note("Do not set these percentages beside the ACS, PUMS, OEWS or QCEW fig
+> ures elsewhere in this report as though they measure the same population. The
+>  census population is self-defined participation in the Austin music ecosyste
+> m; the federal series measure occupation or industry in probability samples o
+> f households and establishments.")
+
+. numadd, key(census_caveat_2014comparison) value(1) formatted("2014 comparison
+> s are directional") ///
+>     unit("flag") source("`SRC'") ///
+>     note("Where the 2014 census asked a comparable question, the comparison r
+> uns between two different self-selected samples eight years apart, with respo
+> nse falling from 3,968 to about 2,260 and 2022 outreach running through estab
+> lished community partners. The 2022 report itself calls these directional shi
+> fts, not estimates.")
+
+. numadd, key(census_caveat_nodollarincome) value(1) formatted("no dollar incom
+> e variable") ///
+>     unit("flag") source("`SRC'") ///
+>     note("The instrument contains no dollar-denominated income question of an
+> y kind - annual, monthly or per gig. The share-of-income scale used in sectio
+> n 3 is ordinal and within-music. The only dollar quantity collected from crea
+> tives is business spending, which is a cost.")
+
+. numadd, key(census_caveat_slide41) value(1) formatted("published slide 41 mis
+> labels four bars") ///
+>     unit("flag") source("`SRC'") ///
+>     note("Two published sources disagree about which income source goes with 
+> which value. The microdata, the Socrata column dictionary for dataset an3p-3y
+> qx and the five-segment distributions on Data Appendix slide 40 all agree tha
+> t the 2022 shares reporting any income from a source are: local live 92.4, to
+> uring 75.3, recordings and royalties 70.7, studio work 57.8, merchandise 56.1
+> , songwriting 51.0, teaching 41.0. Data Appendix slide 41 plots the same seve
+> n values but labels four of them differently, reading merchandise 71.0, recor
+> dings 58.0, teaching 56.0 and studio 41.0. This module follows the microdata 
+> and slide 40, which are two independent sources against slide 41 alone. Anyon
+> e quoting a 2014-to-2022 change in these shares should note that the 2014 bar
+> s appear only on slide 41 and cannot be checked against microdata.")
+
+. numadd, key(census_caveat_rowcount) value(2227) formatted("2,227 rows, not 2,
+> 260") ///
+>     unit("flag") source("`SRC'") ///
+>     note("The published microdata file carries 2,227 respondent rows; the Sum
+> mary Report and Data Appendix headline 2,260. The 33-row difference is undocu
+> mented in the release. All shares in this module use the 2,227-row file, so t
+> hey can sit a few tenths of a point away from a published percentage even whe
+> re the underlying counts agree.")
+
+. 
+. display as text _newline "80_census_microdata.do complete"
+
+80_census_microdata.do complete
+
+. 
+end of do-file
