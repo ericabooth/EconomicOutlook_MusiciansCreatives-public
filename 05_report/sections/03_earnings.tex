@@ -46,8 +46,8 @@ study's 2025 base. Housing dollars use the survey's housing factor, ADJHSG,
 in the same position. There is no merge on survey year and no year-specific
 deflator, because the survey factor has already removed the inflation inside
 the 2020 to 2024 window and applying a second one would remove it twice.} and
-apply two population definitions, each carried through to both sides of every
-comparison it enters. We compute the medians and the earnings regression on
+uses one of two population definitions, each carried through to both sides of
+every comparison it enters. We compute the medians and the earnings regression on
 the positive-earnings base, employed adults aged 18 to 64 with personal
 earnings above zero. We compute the self-employment share, the health-coverage
 rates, the hours and weeks figures, and the earnings-threshold shares on the
@@ -170,8 +170,8 @@ difference.
 To probe whether the raw gap comes from age, education, hours or geography
 rather than from something specific to music, we estimate a weighted least
 squares regression of log personal earnings on an indicator for music
-occupations, with the usual demographic and labor-supply controls and metro
-fixed effects.\footnote{The fitted equation is
+occupations, with controls for age, sex, education, usual hours and weeks
+worked, and an indicator for each metro area.\footnote{The fitted equation is
 \[
 \ln y_i = \alpha + \beta\,\mathrm{music}_i
   + \gamma_1 \mathrm{age}_i + \gamma_2 \mathrm{age}_i^{2}
@@ -300,8 +300,8 @@ employed Austin workers on the same base;
 \$25,000 against \NPumsAustinAllworkLtTwoFivek; and
 \NPumsAustinMusLtFiveZerok\ (\NPumsAustinMusLtFiveZerokMoe) earn under
 \$50,000 against \NPumsAustinAllworkLtFiveZerok. Measured against the
-threshold the 2013 Austin Music Census used to define low income, restated
-to today's prices,\footnote{The 2013 threshold is the \$10,000 line the
+\$10,000 line the 2014 Austin Music Census drew for 2013 music income,
+restated to today's prices,\footnote{The 2013 threshold is the \$10,000 line the
 2014 Austin Music Census applied to its respondents' 2013 pre-tax music
 income. Titan Music Group, LLC, for the City of Austin Economic Development
 Department, Music and Entertainment Division, \textit{The Austin Music
@@ -386,8 +386,8 @@ respondents who hold both, so those two shares do not sum to HICOV.}
 Private coverage runs the other way: \NPumsAustinMusPrivcov\
 (\NPumsAustinMusPrivcovMoe) of Austin musicians hold private insurance
 against \NPumsAustinAllworkPrivcov\ for the wider workforce, so the
-any-coverage parity holds up on the strength of public coverage and of
-Austin's music-specific nonprofit health infrastructure rather than on
+any-coverage parity rests on public coverage, and possibly on Austin's
+music-specific nonprofit health infrastructure, rather than on
 employer-sponsored plans.
 
 The 2022 Greater Austin Music Census reports that 84 percent of its
@@ -428,11 +428,11 @@ Among Texas households with a working adult, musician households and other
 working households rent at close to the same rate: about 41 percent of
 musician households are renters, against 39 percent of working households as
 a whole.\footnote{Renter shares are weighted-household ratios computed from
-the ACS 2020--2024 five-year Texas PUMS housing extract, using registered
-renter and owner weighted counts, so the two shares are computed on
+the ACS 2020--2024 five-year Texas PUMS housing extract, using weighted
+renter and owner household counts, so the two shares are computed on
 comparable denominators; the small difference is well inside the musician
-margin. Age composition is also similar: median age of the two household
-references is close, so tenure differences do not reduce to a
+margin. Age composition is also similar: the median age of the householder
+is close in the two groups, so tenure differences do not reduce to a
 younger-therefore-not-yet-owning composition effect at the level the
 household file can measure. The Austin metro sub-cell is too small to
 publish tenure shares for.} \emph{Among renter households}, musician
