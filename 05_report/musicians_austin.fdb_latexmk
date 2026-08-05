@@ -1,9 +1,9 @@
 # Fdb version 3
-["xdvipdfmx"] 1785935478 "musicians_austin.xdv" "musicians_austin.pdf" "musicians_austin" 1785935484
-  "musicians_austin.xdv" 1785935478 3589564 a2802ba54c3db38cea808d0c180432b9 "xelatex"
+["xdvipdfmx"] 1785935864 "musicians_austin.xdv" "musicians_austin.pdf" "musicians_austin" 1785935870
+  "musicians_austin.xdv" 1785935863 3588220 e48f4b380fc01c4d2ce102c9f8a6b637 "xelatex"
   (generated)
   "musicians_austin.pdf"
-["xelatex"] 1785935474 "musicians_austin.tex" "musicians_austin.xdv" "musicians_austin" 1785935484
+["xelatex"] 1785935860 "musicians_austin.tex" "musicians_austin.xdv" "musicians_austin" 1785935870
   "../04_figures//fig02_earnings_gap.png" 1785782678 248447 a30440438f9921d0dc587d583c081e3a ""
   "../04_figures//fig03_selfemp_share.png" 1785782678 215292 308b9a6c24b10caa4fd6f72e5400a7c6 ""
   "../04_figures//fig04_earnings_distribution.png" 1785782678 205220 faebed9cf652df752f1bd6f204f47a30 ""
@@ -223,23 +223,23 @@
   "/usr/local/texlive/2022/texmf-var/web2c/xetex/xelatex.fmt" 1664308787 5419892 7321aefd7377ff89b241e26bc7241e9e ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
   "canonical_numbers.tex" 1785782678 266193 d92d04f4ca21eb01484610ba657035c5 ""
-  "musicians_austin.aux" 1785935478 46533 ab7af53cd0ed95aef2e3a3b2708a26dd "xelatex"
-  "musicians_austin.out" 1785935478 18060 280a25987f6b62c4657d063104ff0db5 "xelatex"
+  "musicians_austin.aux" 1785935863 46533 95027e5a9a048b9eb46653fd7299de66 "xelatex"
+  "musicians_austin.out" 1785935863 18060 280a25987f6b62c4657d063104ff0db5 "xelatex"
   "musicians_austin.tex" 1785782678 1633 0426f67d8917c2af1a6b6b280816c01d ""
   "sections/00_title.tex" 1785906813 3863 f42851f3ca46f882f213ce8b0ce6ad04 ""
   "sections/01_summary.tex" 1785905741 13877 3d1478d88dcb84fb3110a81624817c6c ""
-  "sections/02_measurement.tex" 1785935464 29649 8d8370da401c6a93248a5417ae2b89dd ""
-  "sections/03_earnings.tex" 1785905804 31137 ff8756badf9fa33f1f133ccd6650fed6 ""
+  "sections/02_measurement.tex" 1785935802 29538 01b08f8e60b2ba35571a03622046cd35 ""
+  "sections/03_earnings.tex" 1785935805 31102 cdeccede66105c9eca2aed318dcba6b0 ""
   "sections/04_costs.tex" 1785905843 21768 46fec73af968fc6aeb5409bbefd12cda ""
   "sections/05_payroll_to_gig.tex" 1785905863 15545 f57ad2b8a05149ca8f2ad5e1476160a3 ""
   "sections/065_census.tex" 1785906837 20894 71dbcfb82d44cfd1123b09f82e3c3514 ""
-  "sections/06_venues.tex" 1785906223 34896 d137fcc642a9c46e3973ceec17c8aab6 ""
+  "sections/06_venues.tex" 1785935807 34827 93d11fecfe6e7e4fa3a43d7b68d0b870 ""
   "sections/07_city_money.tex" 1785906241 18083 883f607a2b2e4c58837170ef93bedacf ""
-  "sections/08_state_national.tex" 1785906863 22778 f4a8fbc9365890f96b54e1a8341202ac ""
-  "sections/09_lessons.tex" 1785906302 13697 7ae39737db622c85c5fd23881ac5728c ""
-  "sections/10_next_steps.tex" 1785906332 8805 0ce4568bf104c1af9a0aa43c418f3d38 ""
+  "sections/08_state_national.tex" 1785935808 22767 9c46299e1d5d27b8b0df2293784d9fb7 ""
+  "sections/09_lessons.tex" 1785935822 13558 9213d4d38c0431b55b733ff6b10ff7fd ""
+  "sections/10_next_steps.tex" 1785935824 8753 7e605382c3aa02534a776cbd1824a8f6 ""
   "sections/A1_technical_appendix.tex" 1785906381 36540 a2d81a693d9e08bd164b759f9e679875 ""
-  "sections/A2_references.tex" 1785906698 87782 e4df9c741714fdbad657c0b3c1d73c3d ""
+  "sections/A2_references.tex" 1785935834 87781 90e80ae438b0840668f7d62060c8f9cf ""
   "style/austinmusic.sty" 1785782678 8062 2e9586a3aa70d60425b44e7c41cf16b7 ""
   (generated)
   "musicians_austin.aux"
