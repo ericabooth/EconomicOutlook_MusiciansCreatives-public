@@ -1,9 +1,9 @@
 # Fdb version 3
-["xdvipdfmx"] 1785906887 "musicians_austin.xdv" "musicians_austin.pdf" "musicians_austin" 1785906893
-  "musicians_austin.xdv" 1785906887 3589476 50239f7475abe6c06ddf90e45fbf2968 "xelatex"
+["xdvipdfmx"] 1785935478 "musicians_austin.xdv" "musicians_austin.pdf" "musicians_austin" 1785935484
+  "musicians_austin.xdv" 1785935478 3589564 a2802ba54c3db38cea808d0c180432b9 "xelatex"
   (generated)
   "musicians_austin.pdf"
-["xelatex"] 1785906883 "musicians_austin.tex" "musicians_austin.xdv" "musicians_austin" 1785906893
+["xelatex"] 1785935474 "musicians_austin.tex" "musicians_austin.xdv" "musicians_austin" 1785935484
   "../04_figures//fig02_earnings_gap.png" 1785782678 248447 a30440438f9921d0dc587d583c081e3a ""
   "../04_figures//fig03_selfemp_share.png" 1785782678 215292 308b9a6c24b10caa4fd6f72e5400a7c6 ""
   "../04_figures//fig04_earnings_distribution.png" 1785782678 205220 faebed9cf652df752f1bd6f204f47a30 ""
@@ -223,12 +223,12 @@
   "/usr/local/texlive/2022/texmf-var/web2c/xetex/xelatex.fmt" 1664308787 5419892 7321aefd7377ff89b241e26bc7241e9e ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
   "canonical_numbers.tex" 1785782678 266193 d92d04f4ca21eb01484610ba657035c5 ""
-  "musicians_austin.aux" 1785906887 46527 a013e3965c5866bbde24a6f77d5a31b3 "xelatex"
-  "musicians_austin.out" 1785906887 18027 f81d7869b1f02be50169044e64185547 "xelatex"
+  "musicians_austin.aux" 1785935478 46533 ab7af53cd0ed95aef2e3a3b2708a26dd "xelatex"
+  "musicians_austin.out" 1785935478 18060 280a25987f6b62c4657d063104ff0db5 "xelatex"
   "musicians_austin.tex" 1785782678 1633 0426f67d8917c2af1a6b6b280816c01d ""
   "sections/00_title.tex" 1785906813 3863 f42851f3ca46f882f213ce8b0ce6ad04 ""
   "sections/01_summary.tex" 1785905741 13877 3d1478d88dcb84fb3110a81624817c6c ""
-  "sections/02_measurement.tex" 1785906153 29643 3e9c2922fabf3e2d7c9f8931cb93c778 ""
+  "sections/02_measurement.tex" 1785935464 29649 8d8370da401c6a93248a5417ae2b89dd ""
   "sections/03_earnings.tex" 1785905804 31137 ff8756badf9fa33f1f133ccd6650fed6 ""
   "sections/04_costs.tex" 1785905843 21768 46fec73af968fc6aeb5409bbefd12cda ""
   "sections/05_payroll_to_gig.tex" 1785905863 15545 f57ad2b8a05149ca8f2ad5e1476160a3 ""

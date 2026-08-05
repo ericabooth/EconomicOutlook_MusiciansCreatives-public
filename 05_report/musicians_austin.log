@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.27)  5 AUG 2026 00:14
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.27)  5 AUG 2026 08:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1424,15 +1424,15 @@ LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <8> not available
  [51] [52] [53] [54] [55] [56] [57] [58])
 [59] (./musicians_austin.aux)
 Package rerunfilecheck Info: File `musicians_austin.out' has not changed.
-(rerunfilecheck)             Checksum: F81D7869B1F02BE50169044E64185547;18027.
+(rerunfilecheck)             Checksum: 280A25987F6B62C4657D063104FF0DB5;18060.
  ) 
 Here is how much of TeX's memory you used:
  34987 strings out of 476179
  754302 string characters out of 5809544
- 1324106 words of memory out of 5000000
+ 1323140 words of memory out of 5000000
  55068 multiletter control sequences out of 15000+600000
  474866 words of font info for 105 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  105i,12n,113p,1317b,1283s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on musicians_austin.xdv (59 pages, 3589476 bytes).
+Output written on musicians_austin.xdv (59 pages, 3589564 bytes).
