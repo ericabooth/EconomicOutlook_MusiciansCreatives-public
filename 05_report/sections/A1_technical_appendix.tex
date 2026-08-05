@@ -6,8 +6,8 @@
 This appendix records how to rerun the analysis, how the estimates and
 regressions are specified, and where the evidence runs out. Every method in
 this appendix names the Stata do-file that produced it, so a reader can open
-the file, read the code, and reproduce the number. All do-files sit in
-\texttt{03\_analysis/stata/} and the merged number ledger sits in
+the file, read the code, and reproduce the number. All do-files are in
+\texttt{03\_analysis/stata/}, and the merged number ledger is at
 \texttt{03\_analysis/out/canonical\_numbers.csv}.
 
 \subsection{Reproducing this study}
@@ -15,7 +15,7 @@ the file, read the code, and reproduce the number. All do-files sit in
 The analysis folder is self-contained: a reader can copy it to another machine
 and rerun it without editing a path, because every path resolves relative to
 the project root, which the setup file \texttt{\_setup.do} locates by
-searching upward for a known sentinel file. Outside data files sit in
+searching upward for a known sentinel file. Outside data files are stored in
 \texttt{03\_analysis/data/} rather than at referenced absolute paths.
 Rebuilding the study from raw data takes three commands, run in order from
 the analysis folder.
@@ -44,7 +44,8 @@ figures and registered numbers in Sections~\ref{sec:earnings} through
 \texttt{40\_city\_money.do} for the city funds,
 \texttt{50\_state\_national.do} for the state and national comparison,
 \texttt{60\_cost\_of\_living.do} for the cost-of-living series, and
-\texttt{80\_census\_microdata.do} for the 2022 music census and finishes by calling
+\texttt{80\_census\_microdata.do} for the 2022 music census.
+\texttt{run\_all.do} finishes by calling
 \texttt{build\_numbers.do}, so the number macros need no separate command.
 \texttt{run\_all.do} does not call the quasi-experimental module
 \texttt{70\_quasi\_experiments.do}, which is the sole source of every quantity
@@ -147,7 +148,7 @@ squares, controlling for age and age squared, sex, educational attainment,
 usual hours worked, weeks worked and metro fixed effects, among employed
 Texans aged 18 to 64 with positive earnings, with standard errors from the
 80 replicate weights. The coefficient is \NPumsRegMusicCoef\ (standard error
-\NPumsRegMusicSe), a difference of \NPumsRegMusicPctgap. The full table sits
+\NPumsRegMusicSe), a difference of \NPumsRegMusicPctgap. The full table is
 at \texttt{03\_analysis/out/tables/table\_earnings\_regression.csv} and the
 regression runs in \texttt{10\_pums\_earnings.do}.
 
@@ -343,7 +344,7 @@ denominator.\footnote{Nonemployer Statistics documentation at
 \url{https://www.census.gov/programs-surveys/nonemployer-statistics.html};
 Vintage 2025 state and county estimates at
 \url{https://www.census.gov/programs-surveys/popest.html}. This branch of
-the analysis lives in \texttt{20\_wages\_industry.do}.}
+the analysis runs in \texttt{20\_wages\_industry.do}.}
 
 Per-resident state support is computed twice from the same denominator,
 \(a_s = A_s\,d_{y(A_s)}/N_s\) for the authorised amount and
@@ -357,7 +358,7 @@ Regional Price Parity gaps are
 \(g_m = \mathrm{RPP}^{\mathrm{hous}}_m - \mathrm{RPP}^{\mathrm{all}}_m\),
 and Consumer Price Index gaps are differences between two series rebased on
 the same year. Both are in index points and neither is a percentage. Both
-sit in \texttt{60\_cost\_of\_living.do}.
+are computed in \texttt{60\_cost\_of\_living.do}.
 
 Every measure in this block is an arithmetic ratio of published quantities,
 so none carries a sampling error of its own, though the rent share inherits
@@ -505,8 +506,8 @@ and no margin of error exists for any of them.\footnote{Sound Music Cities
 and the City of Austin Music \& Entertainment Division, \emph{2022 Greater
 Austin Music Census}, summary report at
 \url{https://www.austinmusiccensus.org/s/2022-Greater-Austin-Music-Census-SUMMARY-REPORT-v13-optimized.pdf};
-the respondent-level microdata sit on the City of Austin's open data portal
-as dataset \texttt{an3p-3yqx} at \url{https://data.austintexas.gov/}.} The
+the respondent-level microdata are published on the City of Austin's open
+data portal as dataset \texttt{an3p-3yqx} at \url{https://data.austintexas.gov/}.} The
 census-file estimates all run in \texttt{80\_census\_microdata.do}.
 
 Independence between two survey items is tested with Pearson's chi-squared,
@@ -527,7 +528,7 @@ The retention regression is a logit,
 estimated by maximum likelihood on the \NCensusLogitN\ respondents who
 answered every item in the equation, with the quoted quantity the odds
 ratio \(e^{\hat\delta_{\mathrm{renter}}}\). An odds ratio is not a ratio of
-probabilities and sits further from one than the probability ratio does
+probabilities and is further from one than the probability ratio is
 when the outcome is common, as it is here. Three nested models appear in
 the exported table. The logit runs in \texttt{80\_census\_microdata.do}.
 

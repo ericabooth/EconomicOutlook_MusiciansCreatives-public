@@ -525,3 +525,33 @@ ALSO: two different occupation groups appear in the new orientation table and ar
 which prevents an apples-to-oranges read:
  - `pums_austin_share_of_tx_musicians` = musicians and singers only (OCCP 2752), Austin weighted 2,126
  - `pums_metro_*_music_medpernp` = music occupations pooled (OCCP 2751 + 2752), Austin weighted 2,553
+
+## 2026-08-05 — Full-paper editorial pass (clarity, de-caveat, partner care)
+- Sentence-level clarity edit across 00_title and sections 01–10, A1, A2:
+  fixed elliptical/truncated sentences (e.g. title abstract "The report reads
+  mainly musicians" -> "is mainly about musicians"; summary "the author makes
+  no claim beyond that..." rewritten), split three overlong summary
+  paragraphs, removed metaphorical-location verbs (sit/carry/live) per
+  clearwriter, glossed the event-study log-point figure (-54 log points ≈
+  -42%).
+- Corrections found during the pass: 065_census spending footnote listed
+  "travel" as an instrument category; the computed ledger and fig27 use "web
+  and social media" — fixed. 03_earnings said "2013 Austin Music Census" for
+  the 2014 fielding's $10,000 line — fixed. 08_state "5 of 152 recipients
+  recipients" macro duplication — fixed. UT Support Austin Musicians
+  attribution: dropped "Prof. Eric Drott et al." (project's own team page
+  names no lead; body + A2 now cite institutionally).
+- A2 references de-caveated: removed access/verification parentheticals
+  (paywalled, image-only, "URL not recorded", Cloudflare/403, search-summary,
+  "verify before use"); kept substantive scope notes (excludes self-employed,
+  participation gaps, basis changes). Filled congress.gov URLs for H.R.
+  7763/5664. Full provenance detail remains in
+  03_analysis/out/source_inventory.csv.
+- Partner-care additions (SMC + UT): new cohort paragraph in 02_measurement
+  printing the 15 registered NCitycensusIncome* macros (first use) with a
+  comparability footnote; cohort framing sentence in 065 intro; open-microdata
+  credit line after the spending rebuild; complement-not-replace passage after
+  the three-source paragraph in 02; "adoption not design" line in
+  10_next_steps; 09_lessons now cross-references the fifteen-city list.
+- Rebuilt: 59 pp (was 60), zero LaTeX errors, zero overfull boxes; visual QA
+  on pp. 1–8, 27–34, 40–44, 52–59.

@@ -32,8 +32,10 @@ adults aged 18 to 64 with positive earnings (developed in Section~\ref{sec:earni
 weeks, matching the Austin workforce on both. Across employed Texans, a model
 that holds age, sex, education, hours, weeks and metro area fixed still places
 music occupations \NPumsRegMusicPctgap\ below otherwise similar workers, so
-schedule length is not where the gap comes from. That figure is an association
-among the characteristics the survey records, not the cost of choosing music.
+schedule length is not where the gap comes from. That figure describes an
+association among the characteristics the survey records; it does not estimate
+what a given worker would give up by choosing music.
+
 Comparing Austin with other large Texas metros requires a broader occupation
 definition, because Musicians and Singers alone yield too few records for a
 Houston or Dallas-Fort Worth cell. On the broader music-occupation definition
@@ -41,9 +43,9 @@ Houston or Dallas-Fort Worth cell. On the broader music-occupation definition
 \NPumsMetroAustinMusicMedpernp, against \NPumsMetroDfwMusicMedpernp\ in
 Dallas-Fort Worth and \NPumsMetroHoustonMusicMedpernp\ in Houston. Austin has
 the lowest point estimate, but the Austin sample is small and the margins
-overlap in both pairwise comparisons, so the ordering is not statistically firm;
-the author makes no claim beyond that no comparison here supports the assumption
-that Austin pays musicians better than the other large Texas metros.
+overlap in both pairwise comparisons, so the ordering is not statistically firm.
+These comparisons support one narrow conclusion: nothing in them shows Austin
+paying musicians better than the other large Texas metros.
 
 \subsection*{Most of this workforce is self-employed, which is why the official numbers miss it}
 
@@ -65,7 +67,9 @@ outside the sampling frame. Program documentation:
 irregular to annualise from an hourly rate.} That survey records
 \NEmpPayrollMusiciansAustinLast\ musician jobs in the Austin metro in 2025, a
 count much smaller than the household survey implies because self-employed
-musicians never enter the payroll survey at all (see Section~\ref{sec:payroll}). The City of Austin bought a
+musicians never enter the payroll survey at all (see Section~\ref{sec:payroll}).
+
+The City of Austin bought a
 third series, from the Creative Vitality Suite database, which combines federal
 wage data with self-employment records and so does count self-employed
 earnings.\footnote{City of Austin open data,
@@ -100,14 +104,15 @@ the city added
 \NVenueCitywidePermitsPctTwoZeroOneNineTwoZeroTwoFive\ more permit locations
 over the period; the tracked rooms held
 \NVenuePanelShareTwoZeroOneNine\ of citywide receipts in 2019 and
-\NVenuePanelShareTwoZeroTwoFive\ in 2025. Once each venue's own trend and
-seasonality are absorbed, live-music rooms and other bars trade
-indistinguishably on log monthly receipts after March 2020, an average
-difference of \NVenueDidPct\ with a 95 percent interval running from about 14
-percent below to about 17 percent above the rest of the market
-(Section~\ref{sec:venues}). The aggregate decline is therefore explained by
-which rooms exist, not by weaker per-room trade among survivors. What changed is which
-rooms exist: \NVenueExitsTwoZeroTwoZeroTwoZeroTwoSixCore\ exits from the tracked
+\NVenuePanelShareTwoZeroTwoFive\ in 2025.
+
+Once each venue's own trend and seasonality are absorbed, monthly receipts at
+live-music rooms are statistically indistinguishable from receipts at other
+bars after March 2020: the estimated average difference is \NVenueDidPct, with
+a 95 percent interval running from about 14 percent below to about 17 percent
+above the rest of the market (Section~\ref{sec:venues}). The aggregate decline
+therefore comes from which rooms exist, not from weaker per-room trade among
+the survivors: \NVenueExitsTwoZeroTwoZeroTwoZeroTwoSixCore\ exits from the tracked
 panel from 2020 onward were core live-music rooms, and the panel's net additions
 since 2016 come to \NVenueNetAddsTwoZeroOneSixTwoZeroTwoSix\ rooms against
 \NVenueNetAddsTwoZeroZeroSevenTwoZeroOneFive\ over the previous nine years, a
@@ -139,13 +144,13 @@ Housing tenure separates the Austin-retention answer more sharply than any other
 characteristic tested:
 \NCensusStayHousingTenureHomeowner\ of homeowners expected to stay against
 \NCensusStayHousingTenureRenter\ of renters, with years of experience the next
-strongest discriminant (Section~\ref{sec:census}). Most respondents who did not
-say yes to Austin answered ``unsure'' rather than ``no.''
+sharpest divider (Section~\ref{sec:census}). Most respondents who did not
+answer yes to the Austin question chose ``unsure'' rather than ``no.''
 
 \subsection*{Austin and Texas have built real music programs; the record shows how small and uneven they are}
 
-The left column is what the record shows has been built, the right what the same
-record shows about size and reach.
+The left column lists what the public record shows has been built; the right
+column lists what the same record shows about size and reach.
 
 \vspace{3pt}
 {\footnotesize
@@ -157,22 +162,24 @@ record shows about size and reach.
 \midrule
 Austin runs a dedicated public fund for musicians, financed by a fixed share of
 hotel-tax revenue rather than by an annual appropriation.
-& The fund is \NCityLmfShareOfHotFyTwoFive\ of city hotel-tax revenue, and
-historic preservation draws \NCityHpToLmfRatioFyTwoFive\ as much from the same
-tax, because it draws on hotel-tax money beyond the equal share of the 2019
+& The fund receives \NCityLmfShareOfHotFyTwoFive\ of city hotel-tax revenue.
+Historic preservation draws \NCityHpToLmfRatioFyTwoFive\ as much from the same
+tax, because it receives hotel-tax money beyond the equal share of the 2019
 increase the ordinance gave each fund (see Section~\ref{sec:city}). \\
 \rowrule
-Texas is the only state compared here that subsidises operating music venues,
-and in the one rebate round with a published total it awarded its full annual
-dedication.
-& Through the same state office, Texas has dedicated moving-image money against
-music money for the 2026--27 biennium at \NTxFilmMusicRatio\ (see Section~\ref{sec:state}). \\
+Texas is the only state compared here that subsidises the operation of music
+venues, and in the one rebate round with a published total it awarded the full
+amount the state dedicates to the program each year.
+& Through the same state office, Texas dedicated moving-image money and music
+money for the 2026--27 biennium at a ratio of \NTxFilmMusicRatio\ (see
+Section~\ref{sec:state}). \\
 \rowrule
 Federal shuttered-venue grants brought \NSvogAustinTotal\ in nominal award
 dollars to Austin-area recipients, a one-off federal program in which motion
-picture theatre operators took slightly more than live venues did (see Section~\ref{sec:state}).
-& Neither the 2017 extended-hours pilot nor the 2024 venue grants left a
-detectable mark on venue receipts (see Section~\ref{sec:venues}). \\
+picture theatre operators received slightly more than live venues did (see Section~\ref{sec:state}).
+& Neither the city's 2017 pilot extending closing hours at five Red River
+venues nor its 2024 Live Music Fund venue grants left a detectable mark on
+venue receipts (see Section~\ref{sec:venues}). \\
 \rowrule
 Health coverage among Austin musicians is \NPumsAustinMusHicov\
 (\NPumsAustinMusHicovMoe), indistinguishable within that margin from
