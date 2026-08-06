@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.27)  5 AUG 2026 08:11
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.27)  5 AUG 2026 08:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1295,28 +1295,15 @@ File: ../04_figures//fig08_metro_nonemployer.png Graphic file (type bmp)
  [19]) (./sections/06_venues.tex [20]
 File: ../04_figures//fig09_venue_receipts_index.png Graphic file (type bmp)
 <../04_figures//fig09_venue_receipts_index.png>
- [21]
 File: ../04_figures//fig11_venue_supply.png Graphic file (type bmp)
 <../04_figures//fig11_venue_supply.png>
- [22] [23]
+ [21] [22] [23]
 File: ../04_figures//fig10_venue_map.png Graphic file (type bmp)
 <../04_figures//fig10_venue_map.png>
 File: ../04_figures//fig10b_district_map.png Graphic file (type bmp)
 <../04_figures//fig10b_district_map.png>
-
-Underfull \hbox (badness 2726) in paragraph at lines 357--357
-[][][][]\TU/Charter(0)/m/n/8 The timeline lists 36 closures Austin live-music v
-enue closures dated between January 2015 and June 2026, coded by pri-
- []
-
-
-Underfull \hbox (badness 1270) in paragraph at lines 357--357
-\TU/Charter(0)/m/n/8 Austin, plus follow-up items from \TU/Charter(0)/m/it/8 Do
-512 \TU/Charter(0)/m/n/8 and \TU/Charter(0)/m/it/8 Texas Monthly\TU/Charter(0)/
-m/n/8 , compiled for this study and released as the project evidence file
- []
-
-[24] [25] [26]) (./sections/065_census.tex [27]
+ [24] [25]
+[26]) (./sections/065_census.tex [27]
 File: ../04_figures//fig26_retention_split.png Graphic file (type bmp)
 <../04_figures//fig26_retention_split.png>
  [28] [29]
@@ -1326,7 +1313,7 @@ File: ../04_figures//fig27_cost_of_working.png Graphic file (type bmp)
 (./sections/07_city_money.tex
 File: ../04_figures//fig12_hot_allocation.png Graphic file (type bmp)
 <../04_figures//fig12_hot_allocation.png>
- [31]
+ [31] [32]
 File: ../04_figures//fig13_lmf_flow.png Graphic file (type bmp)
 <../04_figures//fig13_lmf_flow.png>
 
@@ -1335,7 +1322,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--110
 Budget expense (yeeq-kk6v) and revenue (5rhv-xasu) extracts,
  []
 
-[32]
+[33]
 File: ../04_figures//fig14_lmf_cohorts.png Graphic file (type bmp)
 <../04_figures//fig14_lmf_cohorts.png>
 
@@ -1383,10 +1370,9 @@ Underfull \hbox (badness 1917) in paragraph at lines 200--201
  []|\TU/Charter(0)/m/n/8 Not published|
  []
 
-[33] [34]) (./sections/08_state_national.tex
+[34] [35]) (./sections/08_state_national.tex
 File: ../04_figures//fig15_film_vs_music.png Graphic file (type bmp)
 <../04_figures//fig15_film_vs_music.png>
- [35]
 File: ../04_figures//fig16_state_percapita.png Graphic file (type bmp)
 <../04_figures//fig16_state_percapita.png>
  [36] [37]
@@ -1395,9 +1381,9 @@ File: ../04_figures//fig17_bea_arts.png Graphic file (type bmp)
  [38]
 File: ../04_figures//fig18_svog_metro.png Graphic file (type bmp)
 <../04_figures//fig18_svog_metro.png>
- [39])
-(./sections/09_lessons.tex [40] [41]) (./sections/10_next_steps.tex [42]
-[43]) (./sections/A1_technical_appendix.tex [44] [45] [46] [47] [48] [49]
+ [39] [40])
+(./sections/09_lessons.tex [41] [42]) (./sections/10_next_steps.tex [43]
+[44]) (./sections/A1_technical_appendix.tex [45] [46] [47] [48] [49] [50]
 Underfull \hbox (badness 1400) in paragraph at lines 560--560
 [][][][]\TU/Charter(0)/m/n/8 Comptroller portal at [][]$[] [] [] [] [] [] [] []
  [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] [] 
@@ -1418,21 +1404,18 @@ ching runs in \TU/lmtt/m/n/8 30_venues.do \TU/Charter(0)/m/n/8 and uses a curat
 ed venue list at
  []
 
-[50]) (./sections/A2_references.tex
-LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <8> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 6.
- [51] [52] [53] [54] [55] [56] [57] [58])
-[59] (./musicians_austin.aux)
+[51]) (./sections/A2_references.tex [52] [53] [54] [55] [56] [57] [58] [59])
+[60] (./musicians_austin.aux)
 Package rerunfilecheck Info: File `musicians_austin.out' has not changed.
 (rerunfilecheck)             Checksum: 280A25987F6B62C4657D063104FF0DB5;18060.
  ) 
 Here is how much of TeX's memory you used:
- 34987 strings out of 476179
- 754302 string characters out of 5809544
- 1323140 words of memory out of 5000000
- 55068 multiletter control sequences out of 15000+600000
+ 34985 strings out of 476179
+ 754313 string characters out of 5809544
+ 1308141 words of memory out of 5000000
+ 55067 multiletter control sequences out of 15000+600000
  474866 words of font info for 105 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  105i,12n,113p,1317b,1283s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on musicians_austin.xdv (59 pages, 3589564 bytes).
+Output written on musicians_austin.xdv (60 pages, 3588220 bytes).
